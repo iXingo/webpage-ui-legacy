@@ -113,7 +113,7 @@ class App extends Component {
       
       <div>
         <ThemeProvider theme={theme}>
-            <SignIn></SignIn>
+            <SignIn onLogin={this.handleLogin}></SignIn>
             <NavHeader> </NavHeader>
             <Banner></Banner>
             <PostHeader></PostHeader>
