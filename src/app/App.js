@@ -23,17 +23,17 @@ import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
 
 import { Layout, notification } from 'antd';
-import NavHeader from '../component/NavHeader';
-import Banner from '../component/Banner';
-import TextImage from '../component/TextImage';
-import Segment from '../component/Segment';
-import CardRow from '../component/CardRow';
-import PostList from '../component/PostList';
-import PriceList from '../component/PriceList';
-import ContentInfo from '../component/ContentInfo';
-import ContactInfo from '../component/ContactInfo';
-import PostHeader from '../component/PostHeader';
-import ImageText from '../component/ImageText';
+import NavHeader from '../components/NavHeader';
+import Banner from '../components/Banner';
+import TextImage from '../components/TextImage';
+import Segment from '../components/Segment';
+import CardRow from '../components/CardRow';
+import PostList from '../components/PostList';
+import PriceList from '../components/PriceList';
+import ContentInfo from '../components/ContentInfo';
+import ContactInfo from '../components/ContactInfo';
+import PostHeader from '../components/PostHeader';
+import ImageText from '../components/ImageText';
 import { SignIn } from '../pages';
 
 
