@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Nav from 'react-bootstrap/Nav'
 import './index.css'
-import {Link} from 'react-router-dom';
 
 class NavHeader extends Component {
 
