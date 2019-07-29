@@ -9,6 +9,9 @@ import {
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 
+import theme from '../theme';
+import { ThemeProvider } from '@material-ui/styles';
+
 import PollList from '../poll/PollList';
 import NewPoll from '../poll/NewPoll';
 import Login from '../user/login/Login';
@@ -20,17 +23,18 @@ import LoadingIndicator from '../common/LoadingIndicator';
 import PrivateRoute from '../common/PrivateRoute';
 
 import { Layout, notification } from 'antd';
-import NavHeader from '../Component/NavHeader';
-import Banner from '../Component/Banner';
-import TextImage from '../Component/TextImage';
-import Segment from '../Component/Segment';
-import CardRow from '../Component/CardRow';
-import PostList from '../Component/PostList';
-import PriceList from '../Component/PriceList';
-import ContentInfo from '../Component/ContentInfo';
-import ContactInfo from '../Component/ContactInfo';
-import PostHeader from '../Component/PostHeader';
-import ImageText from '../Component/ImageText';
+import NavHeader from '../component/NavHeader';
+import Banner from '../component/Banner';
+import TextImage from '../component/TextImage';
+import Segment from '../component/Segment';
+import CardRow from '../component/CardRow';
+import PostList from '../component/PostList';
+import PriceList from '../component/PriceList';
+import ContentInfo from '../component/ContentInfo';
+import ContactInfo from '../component/ContactInfo';
+import PostHeader from '../component/PostHeader';
+import ImageText from '../component/ImageText';
+import { SignIn } from '../pages';
 
 
 const { Content } = Layout;
@@ -106,46 +110,50 @@ class App extends Component {
       return <LoadingIndicator />
     }
     return (
+      
       <div>
-        <NavHeader> </NavHeader>
-        <Banner></Banner>
-        <PostHeader></PostHeader>
-        <ImageText></ImageText>
-        <TextImage></TextImage>
-        <Segment></Segment>
-        <CardRow></CardRow>
-        <PostList isAuthenticated={this.state.isAuthenticated} 
-                  currentUser={this.state.currentUser} handleLogout={this.handleLogout}>       
-        </PostList>
-        <ContentInfo></ContentInfo>
-        <PriceList></PriceList>
-        <ContactInfo></ContactInfo>
+        <ThemeProvider theme={theme}>
+            <SignIn></SignIn>
+            <NavHeader> </NavHeader>
+            <Banner></Banner>
+            <PostHeader></PostHeader>
+            <ImageText></ImageText>
+            <TextImage></TextImage>
+            <Segment></Segment>
+            <CardRow></CardRow>
+            <PostList isAuthenticated={this.state.isAuthenticated} 
+                      currentUser={this.state.currentUser} handleLogout={this.handleLogout}>       
+            </PostList>
+            <ContentInfo></ContentInfo>
+            <PriceList></PriceList>
+            <ContactInfo></ContactInfo>
 
-        <Layout className="app-container">
-          <AppHeader isAuthenticated={this.state.isAuthenticated} 
-            currentUser={this.state.currentUser} 
-            onLogout={this.handleLogout} />
+            <Layout className="app-container">
+              <AppHeader isAuthenticated={this.state.isAuthenticated} 
+                currentUser={this.state.currentUser} 
+                onLogout={this.handleLogout} />
 
-          <Content className="app-content">
-            <div className="container">
-              <Switch>      
-                <Route exact path="/" 
-                  render={(props) => <PollList isAuthenticated={this.state.isAuthenticated} 
-                      currentUser={this.state.currentUser} handleLogout={this.handleLogout} {...props} />}>
-                </Route>
-                <Route path="/login" 
-                  render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
-                <Route path="/signup" component={Signup}></Route>
-                <Route path="/users/:username" 
-                  render={(props) => <Profile isAuthenticated={this.state.isAuthenticated} currentUser={this.state.currentUser} {...props}  />}>
-                </Route>
-                <PrivateRoute authenticated={this.state.isAuthenticated} path="/poll/new" component={NewPoll} handleLogout={this.handleLogout}></PrivateRoute>
-                <Route component={NotFound}></Route>
-              </Switch>
-            </div>
-          </Content>
-        </Layout>
-        </div>
+              <Content className="app-content">
+                <div className="container">
+                  <Switch>      
+                    <Route exact path="/" 
+                      render={(props) => <PollList isAuthenticated={this.state.isAuthenticated} 
+                          currentUser={this.state.currentUser} handleLogout={this.handleLogout} {...props} />}>
+                    </Route>
+                    <Route path="/login" 
+                      render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
+                    <Route path="/signup" component={Signup}></Route>
+                    <Route path="/users/:username" 
+                      render={(props) => <Profile isAuthenticated={this.state.isAuthenticated} currentUser={this.state.currentUser} {...props}  />}>
+                    </Route>
+                    <PrivateRoute authenticated={this.state.isAuthenticated} path="/poll/new" component={NewPoll} handleLogout={this.handleLogout}></PrivateRoute>
+                    <Route component={NotFound}></Route>
+                  </Switch>
+                </div>
+              </Content>
+            </Layout>
+        </ThemeProvider>
+      </div>
     );
   }
 }
