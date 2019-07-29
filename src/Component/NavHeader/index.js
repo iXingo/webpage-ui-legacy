@@ -8,10 +8,10 @@ class NavHeader extends Component {
         return (
         <div>
             <Nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
-            <div class="container">
-                <a class="py-2" href="#">
+            <div className="container">
+                <a className="py-2" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mx-auto">
+                        stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="d-block mx-auto">
                         <circle cx="12" cy="12" r="10"></circle>
                         <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
                         <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
@@ -21,10 +21,10 @@ class NavHeader extends Component {
                         <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
                     </svg>
                 </a>
-                <a class="navbar-brand js-scroll-trigger mx-1" href="#page-top">星狗网</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                <a className="navbar-brand js-scroll-trigger mx-1" href="#page-top">星狗网</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse" id="navbarResponsive">

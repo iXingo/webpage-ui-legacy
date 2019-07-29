@@ -117,3 +117,21 @@ export function getUserVotedPolls(username, page, size) {
         method: 'GET'
     });
 }
+
+export function getUserCreatedPosts(username, page, size) {
+    page = page || 0;
+    size = size || 10;
+
+    return request({
+        url: API_BASE_URL + "/users/" + username + "/posts?page=" + page + "&size=" + size,
+        method: 'GET'
+    });
+}
+
+
+export function getAllPosts() {
+    return request({
+        url: API_BASE_URL + "/posts/all",
+        method: 'GET'
+    });
+}

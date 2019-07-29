@@ -114,7 +114,9 @@ class App extends Component {
         <TextImage></TextImage>
         <Segment></Segment>
         <CardRow></CardRow>
-        <PostList></PostList>
+        <PostList isAuthenticated={this.state.isAuthenticated} 
+                  currentUser={this.state.currentUser} handleLogout={this.handleLogout}>       
+        </PostList>
         <ContentInfo></ContentInfo>
         <PriceList></PriceList>
         <ContactInfo></ContactInfo>
