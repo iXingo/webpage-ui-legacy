@@ -9,34 +9,29 @@ import {
   IconButton,
   TextField,
   Link,
+  FormHelperText,
+  Checkbox,
   Typography
 } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { SvgIcon } from '@material-ui/core';
 import { notification } from 'antd';
-import { login } from '../../util/APIUtils';
+import { signup, checkUsernameAvailability, checkEmailAvailability } from '../../util/APIUtils';
 import { ACCESS_TOKEN } from '../../constants';
 
-
-
-const FacebookIcon = () => {
-  return (
-    <SvgIcon>
-      <path d="M9.53144612,22.005 L9.53144612,13.0552149 L6.44166667,13.0552149 L6.44166667,9.49875 L9.53144612,9.49875 L9.53144612,6.68484375 C9.53144612,5.19972656 9.95946769,4.04680661 10.8155103,3.22608401 C11.6715529,2.4053613 12.808485,1.995 14.2263057,1.995 C15.3766134,1.995 16.3129099,2.04710915 17.0351961,2.15132812 L17.0351961,5.3169726 L15.1090998,5.3169726 C14.3868137,5.3169726 13.8919142,5.47330073 13.6244006,5.78595698 C13.4103902,6.04650407 13.3033846,6.46337874 13.3033846,7.03658198 L13.3033846,9.49875 L16.71418,9.49875 L16.2326559,13.0552149 L13.3033846,13.0552149 L13.3033846,22.005 L9.53144612,22.005 Z" />
-    </SvgIcon>
-  );
-}
-
-const GoogleIcon = () => {
-  return (
-    <SvgIcon>
-      <path d="M21,12.2177419 C21,13.9112905 20.6311475,15.4233869 19.8934426,16.7540323 C19.1557377,18.0846776 18.1168031,19.1249998 16.7766393,19.875 C15.4364756,20.6250002 13.8934424,21 12.147541,21 C10.4999998,21 8.97540984,20.5947579 7.57377049,19.7842742 C6.17213115,18.9737905 5.05942604,17.8790323 4.23565574,16.5 C3.41188543,15.1209677 3,13.6209679 3,12 C3,10.3790321 3.41188543,8.87903226 4.23565574,7.5 C5.05942604,6.12096774 6.17213115,5.02620949 7.57377049,4.21572581 C8.97540984,3.40524212 10.4999998,3 12.147541,3 C14.5327871,3 16.5737705,3.78629051 18.2704918,5.35887097 L15.7991803,7.71774194 C15.0122953,6.96774175 14.0655738,6.52016129 12.9590164,6.375 C11.9262295,6.22983871 10.9057375,6.375 9.89754098,6.81048387 C8.88934445,7.24596774 8.07786904,7.89919355 7.46311475,8.77016129 C6.79918033,9.71370968 6.46721311,10.7903228 6.46721311,12 C6.46721311,13.0403228 6.72540984,13.9899192 7.24180328,14.8487903 C7.75819672,15.7076615 8.4467215,16.3971776 9.30737705,16.9173387 C10.1680326,17.4374998 11.1147541,17.6975806 12.147541,17.6975806 C13.2540984,17.6975806 14.2254096,17.455645 15.0614754,16.9717742 C15.7254098,16.5846772 16.2786885,16.0645161 16.7213115,15.4112903 C17.0409838,14.8790321 17.2499998,14.3467744 17.3483607,13.8145161 L12.147541,13.8145161 L12.147541,10.6935484 L20.852459,10.6935484 C20.9508199,11.2258066 21,11.7338712 21,12.2177419 Z" />
-    </SvgIcon>
-  );
-}
-
 const schema = {
-  usernameOrEmail: {
+  name: {
+    presence: { allowEmpty: false, message: 'is required' },
+    length: {
+      maximum: 32
+    }
+  },
+  username: {
+    presence: { allowEmpty: false, message: 'is required' },
+    length: {
+      maximum: 32
+    }
+  },
+  email: {
     presence: { allowEmpty: false, message: 'is required' },
     email: true,
     length: {
@@ -48,6 +43,10 @@ const schema = {
     length: {
       maximum: 128
     }
+  },
+  policy: {
+    presence: { allowEmpty: false, message: 'is required' },
+    checked: true
   }
 };
 
@@ -128,26 +127,24 @@ const useStyles = makeStyles(theme => ({
   title: {
     marginTop: theme.spacing(3)
   },
-  socialButtons: {
-    marginTop: theme.spacing(3)
-  },
-  socialIcon: {
-    marginRight: theme.spacing(1)
-  },
-  sugestion: {
-    marginTop: theme.spacing(2)
-  },
   textField: {
     marginTop: theme.spacing(2)
   },
-  signInButton: {
+  policy: {
+    marginTop: theme.spacing(1),
+    display: 'flex',
+    alignItems: 'center'
+  },
+  policyCheckbox: {
+    marginLeft: '-14px'
+  },
+  signUpButton: {
     margin: theme.spacing(2, 0)
   }
 }));
 
-const SignIn = (props) => {
+const SignUp = props => {
 
-  const signInProps = props;
   const { history } = props;
 
   const classes = useStyles();
@@ -169,13 +166,8 @@ const SignIn = (props) => {
     }));
   }, [formState.values]);
 
-  const handleBack = () => {
-    history.goBack();
-  };
-
   const handleChange = event => {
     event.persist();
-
     setFormState(formState => ({
       ...formState,
       values: {
@@ -190,30 +182,68 @@ const SignIn = (props) => {
         [event.target.name]: true
       }
     }));
+    
+  };
+  const handleBack = () => {
+    history.goBack();
   };
 
-  const handleSignIn = event => {
+  const handleSignUp = event => {
     event.preventDefault();
-    // history.push('/');
+    history.push('/');
     const values = formState.values;
-    const loginRequest = Object.assign({}, values);
-    login(loginRequest)
-      .then(response => {
-        localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-        props.handleLogin();
-      }).catch(error => {
-        if (error.status === 401) {
-          notification.error({
-            message: 'Posting App',
-            description: 'Your Username or Password is incorrect. Please try again!'
-          });
-        } else {
-          notification.error({
-            message: 'Posting App',
+    const signupRequest = Object.assign({}, values);
+    const { username, email } = formState.values;
+    checkEmailAvailability (email)
+          .then(response => {
+            if(response.available) {
+              notification.success({
+                message: 'Polling App',
+                description: "Your eamil is available",
+              });          
+              // history.push("/sign-in");
+            } else {
+              notification.error({
+                message: 'Polling App',
+                description: "Email is already registered",
+              }); 
+              history.push("/sign-up");         
+            // history.push("/sign-in");
+            }
+        }).catch(error => {
+          history.push("/sign-up");
+        });
+
+    checkUsernameAvailability(username)
+        .then(response => {
+            if(response.available) {
+              notification.success({
+                message: 'Polling App',
+                description: "Your name is available",
+              }); 
+            } else {
+              notification.error({
+                message: 'Polling App',
+                description: "Email is already registered",
+              }); 
+              history.push("/sign-up");
+            }
+        }).catch(error => {
+          history.push("/sign-up");
+        });
+    signup(signupRequest)
+    .then(response => {
+        notification.success({
+            message: 'Polling App',
+            description: "Thank you! You're successfully registered. Please Login to continue!",
+        });          
+        history.push("/sign-in");
+    }).catch(error => {
+        notification.error({
+            message: 'Polling App',
             description: error.message || 'Sorry! Something went wrong. Please try again!'
-          });
-        }
-      });
+        });
+    });
   };
 
   const hasError = field =>
@@ -236,15 +266,15 @@ const SignIn = (props) => {
                 className={classes.quoteText}
                 variant="h1"
               >
-                Welcome to xindog.com. 
-                Meet the best instant.
+                Hella narwhal Cosby sweater McSweeney's, salvia kitsch before
+                they sold out High Life.
               </Typography>
               <div className={classes.person}>
                 <Typography
                   className={classes.name}
                   variant="body1"
                 >
-                  Shawn Wang
+                  Takamaru Ayako
                 </Typography>
                 <Typography
                   className={classes.bio}
@@ -271,67 +301,60 @@ const SignIn = (props) => {
             <div className={classes.contentBody}>
               <form
                 className={classes.form}
-                onSubmit={handleSignIn}
+                onSubmit={handleSignUp}
               >
                 <Typography
                   className={classes.title}
                   variant="h2"
                 >
-                  Sign in
+                  Create new account
                 </Typography>
                 <Typography
                   color="textSecondary"
                   gutterBottom
                 >
-                  Sign in with social media
-                </Typography>
-                <Grid
-                  className={classes.socialButtons}
-                  container
-                  spacing={2}
-                >
-                  <Grid item>
-                    <Button
-                      color="primary"
-                      onClick={handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
-                      <FacebookIcon className={classes.socialIcon} />
-                      Login with Facebook
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button
-                      onClick={handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
-                      <GoogleIcon className={classes.socialIcon} />
-                      Login with Google
-                    </Button>
-                  </Grid>
-                </Grid>
-                <Typography
-                  align="center"
-                  className={classes.sugestion}
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  or login with email address
+                  Use your email to create new account
                 </Typography>
                 <TextField
                   className={classes.textField}
-                  error={hasError('usernameOrEmail')}
+                  error={hasError('name')}
                   fullWidth
                   helperText={
-                    hasError('usernameOrEmail') ? formState.errors.usernameOrEmail[0] : null
+                    hasError('name') ? formState.errors.name[0] : null
                   }
-                  label="Email address"
-                  name="usernameOrEmail"
+                  label="Your Name"
+                  name="name"
                   onChange={handleChange}
                   type="text"
-                  value={formState.values.usernameOrEmail || ''}
+                  value={formState.values.name || ''}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.textField}
+                  error={hasError('username')}
+                  fullWidth
+                  helperText={
+                    hasError('username') ? formState.errors.username[0] : null
+                  }
+                  label="Nick name"
+                  name="username"
+                  onChange={handleChange}
+                  type="text"
+                  value={formState.values.username || ''}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.textField}
+                  error={hasError('email')}
+                  fullWidth
+                  helperText={
+                    hasError('email') ? formState.errors.email[0] : null
+                  }
+                  label="Email address"
+                  name="email"
+                  onChange={handleChange}
+                  type="text"
+                  value={formState.values.email || ''}
                   variant="outlined"
                 />
                 <TextField
@@ -348,8 +371,38 @@ const SignIn = (props) => {
                   value={formState.values.password || ''}
                   variant="outlined"
                 />
+                <div className={classes.policy}>
+                  <Checkbox
+                    checked={formState.values.policy || false}
+                    className={classes.policyCheckbox}
+                    color="primary"
+                    name="policy"
+                    onChange={handleChange}
+                  />
+                  <Typography
+                    className={classes.policyText}
+                    color="textSecondary"
+                    variant="body1"
+                  >
+                    I have read the{' '}
+                    <Link
+                      color="primary"
+                      component={RouterLink}
+                      to="#"
+                      underline="always"
+                      variant="h6"
+                    >
+                      Terms and Conditions
+                    </Link>
+                  </Typography>
+                </div>
+                {hasError('policy') && (
+                  <FormHelperText error>
+                    {formState.errors.policy[0]}
+                  </FormHelperText>
+                )}
                 <Button
-                  className={classes.signInButton}
+                  className={classes.signUpButton}
                   color="primary"
                   disabled={!formState.isValid}
                   fullWidth
@@ -357,19 +410,19 @@ const SignIn = (props) => {
                   type="submit"
                   variant="contained"
                 >
-                  Sign in now
+                  Sign up now
                 </Button>
                 <Typography
                   color="textSecondary"
                   variant="body1"
                 >
-                  Don't have an account?{' '}
+                  Have an account?{' '}
                   <Link
                     component={RouterLink}
-                    to="/sign-up"
+                    to="/sign-in"
                     variant="h6"
                   >
-                    Sign up
+                    Sign in
                   </Link>
                 </Typography>
               </form>
@@ -381,8 +434,8 @@ const SignIn = (props) => {
   );
 };
 
-SignIn.propTypes = {
+SignUp.propTypes = {
   history: PropTypes.object
 };
 
-export default SignIn;
+export default withRouter(SignUp);
