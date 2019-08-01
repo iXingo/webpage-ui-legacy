@@ -74,18 +74,18 @@ export default class App extends Component {
     this.props.history.push(redirectTo);
     
     notification[notificationType]({
-      message: 'Xindog.com APP',
+      message: '星狗网Web App',
       description: description,
     });
   }
 
   handleLogin() {
     notification.success({
-      message: 'Xindog.com APP',
-      description: "You're successfully logged in.",
+      message: '星狗网Web App',
+      description: "恭喜您！您已经成功登录。",
     });
     this.loadCurrentUser();
-    this.props.history.push("/");
+    this.props.history.push("/blog");
   }
 
   render() {

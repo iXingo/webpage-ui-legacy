@@ -17,7 +17,8 @@ import {
   SignUp as SignUpPage,
   SignIn as SignInPage,
   NotFound as NotFoundPage,
-  Agreement as AgreementPage
+  Agreement as AgreementPage,
+  Blog as BlogPage
 } from './pages';
 
 class Routes extends Component {
@@ -32,7 +33,7 @@ class Routes extends Component {
         <Redirect
           exact
           from="/"
-          to="/sign-in"
+          to="/blog"
         />
         {/* <RouteWithLayout
           component={DashboardView}
@@ -76,6 +77,13 @@ class Routes extends Component {
           layout={MainLayout}
           path="/settings"
         /> */
+        <RouteWithLayout
+          component={BlogPage}
+          exact
+          layout={MainLayout}
+          path="/blog"
+          {...this.props}
+        />}
         <RouteWithLayout
           component={SignUpPage}
           exact

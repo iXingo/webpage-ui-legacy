@@ -82,7 +82,7 @@ export function checkEmailAvailability(email) {
 
 export function getCurrentUser() {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("No access token set.");
+        return Promise.reject("登录凭证实效或者未设置！");
     }
 
     return request({

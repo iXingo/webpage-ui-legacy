@@ -204,13 +204,13 @@ const SignIn = (props) => {
       }).catch(error => {
         if (error.status === 401) {
           notification.error({
-            message: 'Posting App',
-            description: 'Your Username or Password is incorrect. Please try again!'
+            message: '星狗网Web App',
+            description: '少年，您的用户名或者密码不正确，请检查！'
           });
         } else {
           notification.error({
-            message: 'Posting App',
-            description: error.message || 'Sorry! Something went wrong. Please try again!'
+            message: '星狗网Web App',
+            description: error.message || '对不起，好像发生了什么事情，请您稍后重试！'
           });
         }
       });
@@ -236,8 +236,13 @@ const SignIn = (props) => {
                 className={classes.quoteText}
                 variant="h1"
               >
-                Welcome to xindog.com. 
-                Meet the best instant.
+                程序人生的
+              </Typography>
+              <Typography
+                className={classes.quoteText}
+                variant="h1"
+              >
+                寂静，欢喜
               </Typography>
               <div className={classes.person}>
                 <Typography
