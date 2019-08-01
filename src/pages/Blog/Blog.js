@@ -17,10 +17,11 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import Markdown from '../../util/Markdown';
-import post1 from './blog-post.1.md';
-import post2 from './blog-post.2.md';
-import post3 from './blog-post.3.md';
+// import post1 from './blog-post.1.md';
+// import post2 from './blog-post.2.md';
+// import post3 from './blog-post.3.md';
 import { getAllPosts } from '../../util/APIUtils';
+import Post from '../Blog';
 
 
 function MadeWithLove() {
@@ -153,38 +154,12 @@ const archives = [
 
 const social = ['GitHub', 'Twitter', 'Facebook'];
 
-const posts = [];
+// const posts = [];
 
 
 const Blog = props => {
 
   const classes = useStyles();
-
-  const loadPostList = (props) => {
-    let promise;
-    if(props.username) {
-        if(props.type === 'USER_CREATED_POSTS') {
-            promise = getAllPosts();
-        } else if (props.type === 'GET_ALL_POSTS') {
-            promise = getAllPosts();                               
-        }
-    } else {
-        promise = getAllPosts();
-    }
-  
-     if(!promise) {
-        return;
-    }
-  
-    promise            
-    .then(response => {
-      posts.concat(response);
-    }).catch(error => {
-  
-    });  
-  
-  }
-
 
   return (
     <React.Fragment>
@@ -295,11 +270,12 @@ const Blog = props => {
                 From the Firehose
               </Typography>
               <Divider />
-              {posts.map(post => (
+              {/* {posts.map(post => (
                 <Markdown className={classes.markdown} key={post.substring(0, 40)}>
                   {post}
                 </Markdown>
-              ))}
+			  ))} */}
+			  <Post {...props}></Post>
             </Grid>
             {/* End main content */}
             {/* Sidebar */}

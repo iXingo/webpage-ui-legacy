@@ -33,7 +33,7 @@ class Routes extends Component {
         <Redirect
           exact
           from="/"
-          to="/blog"
+          to="/sign-in"
         />
         {/* <RouteWithLayout
           component={DashboardView}
