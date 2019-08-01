@@ -388,7 +388,7 @@ const SignUp = props => {
                     <Link
                       color="primary"
                       component={RouterLink}
-                      to="#"
+                      to="/user-agreement"
                       underline="always"
                       variant="h6"
                     >

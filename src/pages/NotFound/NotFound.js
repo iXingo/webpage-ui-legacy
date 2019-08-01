@@ -38,8 +38,7 @@ const NotFound = () => {
               404: 你来到了知识的荒原上
             </Typography>
             <Typography variant="subtitle2">
-              You either tried some shady route or you came here by mistake.
-              Whichever it is, try using the navigation
+              您当前访问的页面不存在, 或者已经被系统管理员汪师傅永久或者临时删除/转移, 您可以尝试联系汪师傅以获得关于此页面的详细帮助.
             </Typography>
             <img
               alt="Under development"
