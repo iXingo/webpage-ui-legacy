@@ -14,9 +14,9 @@ import {
   // Icons as IconsView,
   // Account as AccountView,
   // Settings as SettingsView,
-  SignUp as SignUpView,
-  SignIn as SignInView,
-  // NotFound as NotFoundView
+  SignUp as SignUpPage,
+  SignIn as SignInPage,
+  NotFound as NotFoundPage
 } from './pages';
 
 class Routes extends Component {
@@ -76,25 +76,26 @@ class Routes extends Component {
           path="/settings"
         /> */
         <RouteWithLayout
-          component={SignUpView}
+          component={SignInPage}
           exact
           layout={MinimalLayout}
           path="/sign-up"
           {...this.props}
         />}
         <RouteWithLayout
-          component={SignInView}
+          component={SignInPage}
           exact
           layout={MinimalLayout}
           path="/sign-in"
           {...this.props}
         />
-        {/* { <RouteWithLayout
-          component={NotFoundView}
+        { <RouteWithLayout
+          component={NotFoundPage}
           exact
           layout={MinimalLayout}
           path="/not-found"
-        />} */}
+          {...this.props}
+        />}
         <Redirect to="/not-found" /> 
       </Switch>
     );
