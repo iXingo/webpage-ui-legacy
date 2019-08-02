@@ -3,6 +3,7 @@ import ReactMarkdown from 'markdown-to-jsx';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import CodeBlock from './CodeBlock';
 
 const styles = theme => ({
   listItem: {
@@ -25,6 +26,7 @@ const options = {
         </li>
       )),
     },
+    // code: CodeBlock,
   },
 };
 

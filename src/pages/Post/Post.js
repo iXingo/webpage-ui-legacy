@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { getAllPosts } from '../../util/APIUtils';
-// import Markdown from '../../util/Markdown';
-import { makeStyles } from '@material-ui/core/styles';
 import ReactMarkdown  from 'react-markdown';
 import CodeBlock from "./CodeBlock";
 
@@ -81,7 +79,10 @@ class Post extends Component {
     render() {
         return (
             this.state.posts.map(post => (
-                <ReactMarkdown source={post.content}  renderers={{ code: CodeBlock }} key={post.id}/>                
+                <ReactMarkdown source={post.content}  renderers={{ 
+                    code: CodeBlock, 
+                }}
+                key={post.id}/>                
             ))
         );
     }
