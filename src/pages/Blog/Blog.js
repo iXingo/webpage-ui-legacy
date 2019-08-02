@@ -16,12 +16,12 @@ import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
-import Markdown from '../../util/Markdown';
+import { Link as RouterLink, withRouter } from 'react-router-dom';
+
 // import post1 from './blog-post.1.md';
 // import post2 from './blog-post.2.md';
 // import post3 from './blog-post.3.md';
-import { getAllPosts } from '../../util/APIUtils';
-import Post from '../Blog';
+import Post from '../Post';
 
 
 function MadeWithLove() {
@@ -275,7 +275,7 @@ const Blog = props => {
                   {post}
                 </Markdown>
 			  ))} */}
-			  <Post {...props}></Post>
+			        <Post {...props}></Post>
             </Grid>
             {/* End main content */}
             {/* Sidebar */}
@@ -328,4 +328,4 @@ const Blog = props => {
 };
 
 
-export default Blog;
+export default withRouter(Blog);

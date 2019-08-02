@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Avatar, Icon } from 'antd';
-import { Link } from 'react-router-dom';
 import { getAllPosts } from '../../util/APIUtils';
-import Markdown from '../util/Markdown';
+// import Markdown from '../../util/Markdown';
+import { makeStyles } from '@material-ui/core/styles';
+import ReactMarkdown  from 'react-markdown';
 
 
 class Post extends Component {
@@ -16,46 +16,31 @@ class Post extends Component {
             totalElements: 0,
             totalPages: 0,
             last: true,
-            currentVotes: [],
             isLoading: false
         };
-        this.loadPollList = this.loadPollList.bind(this);
+        this.loadPostList = this.loadPostList.bind(this);
         this.handleLoadMore = this.handleLoadMore.bind(this);
     }
 
-    loadPost() {
-        let promise;
-        if(this.props.username) {
-            if(this.props.type === 'USER_CREATED_POLLS') {
-                promise = getAllPolls(); 
-            } else if (this.props.type === 'USER_VOTED_POLLS') {
-                promise = getAllPolls();                               
-            }
-        } else {
-            promise = getAllPolls();
-        }
 
+    loadPostList() {
+        let promise = getAllPosts();;
         if(!promise) {
             return;
         }
-
         this.setState({
             isLoading: true
         });
-
         promise            
         .then(response => {
-            const polls = this.state.polls.slice();
-            const currentVotes = this.state.currentVotes.slice();
-
+            const posts = this.state.posts.slice();
             this.setState({
-                polls: polls.concat(response.content),
+                posts: posts.concat(response),
                 page: response.page,
                 size: response.size,
                 totalElements: response.totalElements,
                 totalPages: response.totalPages,
                 last: response.last,
-                currentVotes: currentVotes.concat(Array(response.content.length).fill(null)),
                 isLoading: false
             })
         }).catch(error => {
@@ -67,7 +52,7 @@ class Post extends Component {
     }
 
     componentDidMount() {
-        this.loadPollList();
+        this.loadPostList();
     }
 
     componentDidUpdate(nextProps) {
@@ -83,23 +68,25 @@ class Post extends Component {
                 currentVotes: [],
                 isLoading: false
             });    
-            this.loadPollList();
+            this.loadPostList();
         }
     }
 
     handleLoadMore() {
-        this.loadPollList(this.state.page + 1);
+        this.loadPostList();
     }
 
     render() {
-        
         return (
             this.state.posts.map(post => (
-                <Markdown className={classes.markdown} key={post.substring(0, 40)}>
-                  {post}
-                </Markdown>
+                // className={this.classes.markdown}
+                // <Markdown  key={post.id}>
+                //   {post.content}
+                // </Markdown>
+                <ReactMarkdown source={post.content} escape={false}></ReactMarkdown>
             ))
         );
+    }
             
 }
 
