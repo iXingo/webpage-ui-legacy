@@ -27,9 +27,9 @@ const Profile = props => {
   const classes = useStyles();
 
   const user = {
-    name: 'Shawn Wang',
+    name: '星狗网 | 邂逅好时光',
     avatar: '/images/avatars/000_.png',
-    bio: 'NVIDIA Architect'
+    bio: '程序人生的寂静，欢喜。'
   };
 
   return (

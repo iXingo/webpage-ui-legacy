@@ -54,7 +54,10 @@ class Post extends Component {
     }
 
     componentDidMount() {
-        this.loadPostList();
+      if(!this.props.isAuthenticated){
+        this.props.loadCurrentUser();
+      }
+      this.loadPostList();
     }
 
     componentDidUpdate(nextProps) {

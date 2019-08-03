@@ -18,6 +18,9 @@ body {
   }
 }
 
+img {
+  width: 100%;
+}
 li{
   font-size: 16px;
   letter-spacing: -0.05px;

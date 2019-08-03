@@ -16,6 +16,8 @@ import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
+import DateRangeIcon from '@material-ui/icons/DateRange';
+
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import Post from '../Post';
 import PostCard from '../../components/PostCard'
@@ -97,6 +99,11 @@ const useStyles = makeStyles(theme => ({
   sidebarSection: {
     marginTop: theme.spacing(3),
   },
+  icon: {
+    fontSize: 20,
+    margin: 'auto',
+    textAlign: 'center',
+  },
 
   footer: {
     backgroundColor: "#3f51b5",
@@ -121,16 +128,16 @@ const sections = [
 
 const featuredPosts = [
   {
-    title: 'Featured post',
+    title: '演示文章',
     date: 'Nov 12',
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
   },
   {
-    title: 'Post title',
+    title: '这是一篇演示文章',
     date: 'Nov 11',
     description:
-      'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
   },
 ];
 
@@ -221,7 +228,7 @@ const Blog = props => {
                     今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。
                   </Typography>
                   <Link variant="subtitle1" href="#">
-                    查看全文
+                    查看全文...
                   </Link>
                 </div>
               </Grid>
@@ -241,13 +248,13 @@ const Blog = props => {
                           {post.title}
                         </Typography>
                         <Typography variant="subtitle1" color="textSecondary">
-                          {post.date}
+                        <DateRangeIcon className={classes.icon} />{post.date}
                         </Typography>
                         <Typography variant="subtitle1" paragraph>
                           {post.description}
                         </Typography>
                         <Typography variant="subtitle1" color="primary">
-                          Continue reading...
+                          查看全文...
                         </Typography>
                       </CardContent>
                     </div>

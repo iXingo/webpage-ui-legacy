@@ -44,43 +44,44 @@ const Sidebar = props => {
   const classes = useStyles();
 
   const pages = [
+    
     {
-      title: 'Dashboard',
-      href: '/dashboard',
-      icon: <DashboardIcon />
-    },
-    {
-      title: 'Users',
-      href: '/users',
-      icon: <PeopleIcon />
-    },
-    {
-      title: '博客',
+      title: '博    客',
       href: '/blog',
       icon: <ShoppingBasketIcon />
     },
     {
-      title: '好友',
+      title: '好    友',
       href: '/friends',
       icon: <PeopleIcon />
     },
     {
-      title: '卡片',
+      title: '卡    片',
       href: '/card',
       icon: <ImageIcon />
     },
     {
-      title: '登录',
+      title: '科    普',
+      href: '/dashboard',
+      icon: <DashboardIcon />
+    },
+    {
+      title: '有    趣',
+      href: '/users',
+      icon: <PeopleIcon />
+    },
+    {
+      title: '登    录',
       href: '/sign-in',
       icon: <AccountBoxIcon />
     },
     {
-      title: '注册',
+      title: '注    册',
       href: '/sign-up',
       icon: <LockOpenIcon />
     },
     {
-      title: 'Settings',
+      title: '设    置',
       href: '/settings',
       icon: <SettingsIcon />
     }
