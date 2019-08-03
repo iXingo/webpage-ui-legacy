@@ -214,14 +214,15 @@ const Blog = props => {
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
                   <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                    Title of a longer featured blog post
+                    星狗网（再一次）正式上线
                   </Typography>
                   <Typography variant="h5" color="inherit" paragraph>
-                    Multiple lines of text that form the lede, informing new readers quickly and
-                    efficiently about what&apos;s most interesting in this post&apos;s contents.
+                    2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。
+                    这些年折折腾腾，也没搞出来，当然也没写出什么有意思的东西。
+                    今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。
                   </Typography>
                   <Link variant="subtitle1" href="#">
-                    Continue reading…
+                    查看全文
                   </Link>
                 </div>
               </Grid>

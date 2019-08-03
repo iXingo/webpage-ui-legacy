@@ -20,6 +20,7 @@ import {
   Agreement as AgreementPage,
   Blog as BlogPage
 } from './pages';
+import {CardPaper as CardPage} from './components';
 
 class Routes extends Component {
 
@@ -77,6 +78,13 @@ class Routes extends Component {
           layout={MainLayout}
           path="/settings"
         /> */
+        <RouteWithLayout
+          component={CardPage}
+          exact
+          layout={MainLayout}
+          path="/card"
+          {...this.props}
+        />}
         <RouteWithLayout
           component={BlogPage}
           exact
