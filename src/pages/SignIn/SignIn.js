@@ -281,13 +281,13 @@ const SignIn = (props) => {
                   className={classes.title}
                   variant="h2"
                 >
-                  Sign in
+                  登录
                 </Typography>
                 <Typography
                   color="textSecondary"
                   gutterBottom
                 >
-                  Sign in with social media
+                  使用社交媒体账号登录【开发中】
                 </Typography>
                 <Grid
                   className={classes.socialButtons}
@@ -302,7 +302,7 @@ const SignIn = (props) => {
                       variant="contained"
                     >
                       <FacebookIcon className={classes.socialIcon} />
-                      Login with Facebook
+                      使用QQ账号登录
                     </Button>
                   </Grid>
                   <Grid item>
@@ -312,7 +312,7 @@ const SignIn = (props) => {
                       variant="contained"
                     >
                       <GoogleIcon className={classes.socialIcon} />
-                      Login with Google
+                      使用Google账号登录
                     </Button>
                   </Grid>
                 </Grid>
@@ -322,7 +322,7 @@ const SignIn = (props) => {
                   color="textSecondary"
                   variant="body1"
                 >
-                  or login with email address
+                  或者使用邮箱账号登录
                 </Typography>
                 <TextField
                   className={classes.textField}
@@ -331,7 +331,7 @@ const SignIn = (props) => {
                   helperText={
                     hasError('usernameOrEmail') ? formState.errors.usernameOrEmail[0] : null
                   }
-                  label="Email address"
+                  label="邮箱账户地址"
                   name="usernameOrEmail"
                   onChange={handleChange}
                   type="text"
@@ -345,7 +345,7 @@ const SignIn = (props) => {
                   helperText={
                     hasError('password') ? formState.errors.password[0] : null
                   }
-                  label="Password"
+                  label="密码"
                   name="password"
                   onChange={handleChange}
                   type="password"
@@ -361,19 +361,19 @@ const SignIn = (props) => {
                   type="submit"
                   variant="contained"
                 >
-                  Sign in now
+                  立即登录
                 </Button>
                 <Typography
                   color="textSecondary"
                   variant="body1"
                 >
-                  Don't have an account?{' '}
+                  还没有账号?{' '}
                   <Link
                     component={RouterLink}
                     to="/sign-up"
                     variant="h6"
                   >
-                    Sign up
+                    注册
                   </Link>
                 </Typography>
               </form>

@@ -17,11 +17,8 @@ import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
-
-// import post1 from './blog-post.1.md';
-// import post2 from './blog-post.2.md';
-// import post3 from './blog-post.3.md';
 import Post from '../Post';
+import PostCard from '../../components/PostCard'
 
 
 function MadeWithLove() {
@@ -100,6 +97,7 @@ const useStyles = makeStyles(theme => ({
   sidebarSection: {
     marginTop: theme.spacing(3),
   },
+
   footer: {
     backgroundColor: "#3f51b5",
     color: theme.palette.primary,
@@ -167,7 +165,7 @@ const Blog = props => {
       <CssBaseline />
       <Container maxWidth="lg">
         <Toolbar className={classes.toolbar}>
-          <Button size="small">Subscribe</Button>
+          <Button size="small">订阅</Button>
           <Typography
             component="h2"
             variant="h5"
@@ -176,13 +174,13 @@ const Blog = props => {
             noWrap
             className={classes.toolbarTitle}
           >
-            Blog
+            星狗网
           </Typography>
           <IconButton>
             <SearchIcon />
           </IconButton>
           <Button variant="outlined" size="small">
-            Sign up
+            搜索
           </Button>
         </Toolbar>
         <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
@@ -230,6 +228,7 @@ const Blog = props => {
             </Grid>
           </Paper>
           {/* End main featured post */}
+          <PostCard />
           {/* Sub featured posts */}
           <Grid container spacing={4} className={classes.cardGrid}>
             {featuredPosts.map(post => (
@@ -264,6 +263,7 @@ const Blog = props => {
               </Grid>
             ))}
           </Grid>
+          
           {/* End sub featured posts */}
           <Grid container spacing={5} className={classes.mainGrid}>
             {/* Main content */}

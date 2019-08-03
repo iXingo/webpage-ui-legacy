@@ -60,11 +60,6 @@ const Sidebar = props => {
       icon: <ShoppingBasketIcon />
     },
     {
-      title: '登录',
-      href: '/sign-up',
-      icon: <LockOpenIcon />
-    },
-    {
       title: '好友',
       href: '/friends',
       icon: <PeopleIcon />
@@ -78,6 +73,11 @@ const Sidebar = props => {
       title: '登录',
       href: '/sign-in',
       icon: <AccountBoxIcon />
+    },
+    {
+      title: '注册',
+      href: '/sign-up',
+      icon: <LockOpenIcon />
     },
     {
       title: 'Settings',

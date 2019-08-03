@@ -219,12 +219,12 @@ const SignUp = props => {
             if(response.available) {
               notification.success({
                 message: 'Polling App',
-                description: "Your name is available",
+                description: "恭喜，您的Id可用",
               }); 
             } else {
               notification.error({
                 message: 'Polling App',
-                description: "Email is already registered",
+                description: "用户名已经被别人占用啦",
               }); 
               history.push("/sign-up");
             }
@@ -235,13 +235,13 @@ const SignUp = props => {
     .then(response => {
         notification.success({
             message: 'Polling App',
-            description: "Thank you! You're successfully registered. Please Login to continue!",
+            description: "谢谢！ 您已经成功注册！ 现在可以登录啦！",
         });          
         history.push("/sign-in");
     }).catch(error => {
         notification.error({
             message: 'Polling App',
-            description: error.message || 'Sorry! Something went wrong. Please try again!'
+            description: error.message || '对不起，好像发生了一些错误，请您稍后再试！'
         });
     });
   };
@@ -266,21 +266,20 @@ const SignUp = props => {
                 className={classes.quoteText}
                 variant="h1"
               >
-                Hella narwhal Cosby sweater McSweeney's, salvia kitsch before
-                they sold out High Life.
+                程序人生的寂静欢喜
               </Typography>
               <div className={classes.person}>
                 <Typography
                   className={classes.name}
                   variant="body1"
                 >
-                  Takamaru Ayako
+                  Copyright 2019
                 </Typography>
                 <Typography
                   className={classes.bio}
                   variant="body2"
                 >
-                  Manager at inVision
+                  Designed by Shawn Wang at Pudong New Area in Shanghai
                 </Typography>
               </div>
             </div>
@@ -307,13 +306,13 @@ const SignUp = props => {
                   className={classes.title}
                   variant="h2"
                 >
-                  Create new account
+                  建立新账户
                 </Typography>
                 <Typography
                   color="textSecondary"
                   gutterBottom
                 >
-                  Use your email to create new account
+                  使用您的邮箱地址建立新的账号
                 </Typography>
                 <TextField
                   className={classes.textField}
@@ -322,7 +321,7 @@ const SignUp = props => {
                   helperText={
                     hasError('name') ? formState.errors.name[0] : null
                   }
-                  label="Your Name"
+                  label="我们怎么称呼你（昵称）"
                   name="name"
                   onChange={handleChange}
                   type="text"
@@ -336,7 +335,7 @@ const SignUp = props => {
                   helperText={
                     hasError('username') ? formState.errors.username[0] : null
                   }
-                  label="Nick name"
+                  label="用户名（Id）"
                   name="username"
                   onChange={handleChange}
                   type="text"
@@ -350,7 +349,7 @@ const SignUp = props => {
                   helperText={
                     hasError('email') ? formState.errors.email[0] : null
                   }
-                  label="Email address"
+                  label="邮箱地址"
                   name="email"
                   onChange={handleChange}
                   type="text"
@@ -364,7 +363,7 @@ const SignUp = props => {
                   helperText={
                     hasError('password') ? formState.errors.password[0] : null
                   }
-                  label="Password"
+                  label="密码"
                   name="password"
                   onChange={handleChange}
                   type="password"
@@ -384,7 +383,7 @@ const SignUp = props => {
                     color="textSecondary"
                     variant="body1"
                   >
-                    I have read the{' '}
+                    我已经阅读并且同意{' '}
                     <Link
                       color="primary"
                       component={RouterLink}
@@ -392,7 +391,7 @@ const SignUp = props => {
                       underline="always"
                       variant="h6"
                     >
-                      Terms and Conditions
+                      星狗网用户协议
                     </Link>
                   </Typography>
                 </div>
@@ -410,19 +409,19 @@ const SignUp = props => {
                   type="submit"
                   variant="contained"
                 >
-                  Sign up now
+                  立即注册
                 </Button>
                 <Typography
                   color="textSecondary"
                   variant="body1"
                 >
-                  Have an account?{' '}
+                  已经有账号了?{' '}
                   <Link
                     component={RouterLink}
                     to="/sign-in"
                     variant="h6"
                   >
-                    Sign in
+                    登录
                   </Link>
                 </Typography>
               </form>

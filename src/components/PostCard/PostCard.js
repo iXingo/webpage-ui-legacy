@@ -1,10 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
-import Container from '@material-ui/core/Container';
-
-import PropTypes from 'prop-types';
-import clsx from 'clsx';
-
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
@@ -12,9 +7,6 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
-// import { Section } from '@material-ui/core';
-import AlignItemsList from '../AlignItemsList';
-import HeaderUnit from '../HeaderUnit';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -89,6 +81,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
+  postCard: {
+    marginBottom: theme.spacing(4),
+  },
   section: {
     margin: '0 auto',
     padding: theme.spacing(3),
@@ -101,18 +96,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const CardPaper = props => {
-  const { className, size, color, ...rest } = props;
-
-  const classes = useStyles();
-
-  return (
-    <React.Fragment>
-    <HeaderUnit />
-    <Container maxWidth="lg" className={classes.container}>
-    <Grid container spacing={4} className={classes.cardGrid} >
-        <Grid item  >
-        <CardActionArea component="a" href="#">
+export default function PostCard(props) {
+    const { className, size, color, ...rest } = props;
+  
+    const classes = useStyles();
+  
+    return (
+        <CardActionArea component="a" href="#" className={classes.postCard}>
             <Card className={classes.card}>
             <Hidden xsDown>
                 <CardMedia
@@ -141,18 +131,5 @@ const CardPaper = props => {
             </div>
             </Card>
         </CardActionArea>
-        </Grid>
-    </Grid>
-    <div className={classes.section}>
-      <AlignItemsList></AlignItemsList>
-      <AlignItemsList></AlignItemsList>
-      <AlignItemsList></AlignItemsList>
-    </div>
-    </Container>
-    </React.Fragment>
-  );
-};
-
-
-
-export default CardPaper;
+    );
+}
