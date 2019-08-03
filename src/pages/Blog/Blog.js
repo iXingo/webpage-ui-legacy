@@ -101,7 +101,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
   },
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#3f51b5",
+    color: theme.palette.primary,
     marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
   },
@@ -312,9 +313,9 @@ const Blog = props => {
         </main>
       </Container>
       {/* Footer */}
-      <footer className={classes.footer}>
+      {/* <footer className={classes.footer}>
         <Container maxWidth="lg">
-          <Typography variant="h6" align="center" gutterBottom>
+          <Typography variant="h6" align="center" gutterBottom >
             Footer
           </Typography>
           <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
@@ -322,7 +323,7 @@ const Blog = props => {
           </Typography>
           <MadeWithLove />
         </Container>
-      </footer>
+      </footer> */}
       {/* End footer */}
     </React.Fragment>
   );

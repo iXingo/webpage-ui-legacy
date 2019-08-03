@@ -20,7 +20,8 @@ import {
   Agreement as AgreementPage,
   Blog as BlogPage
 } from './pages';
-import {CardPaper as CardPage} from './components';
+import { CardPaper as CardPage} from './components';
+import { Album as AlbumPage} from './components';
 
 class Routes extends Component {
 
@@ -83,6 +84,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/card"
+          {...this.props}
+        />}
+        <RouteWithLayout
+          component={AlbumPage}
+          exact
+          layout={MainLayout}
+          path="/album"
           {...this.props}
         />}
         <RouteWithLayout
