@@ -96,7 +96,7 @@ const useStyles = makeStyles(theme => ({
     height: '100%',
     width: "100%",
   },
-  read:{
+  read: {
     paddingTop: theme.spacing(10)
   }
 }));
@@ -108,47 +108,47 @@ const CardPaper = props => {
 
   return (
     <React.Fragment>
-    <HeaderUnit />
-    <Container maxWidth="lg" className={classes.container}>
-    <Grid container spacing={4} className={classes.cardGrid} >
-        <Grid item  >
-        <CardActionArea component="a" href="#">
-            <Card className={classes.card}>
-            <Hidden xsDown>
-                <CardMedia
-                className={classes.cardMedia}
-                image="https://source.unsplash.com/random"
-                title="Image title"
-                />
-            </Hidden>
-            <div className={classes.cardDetails}>
-                <CardContent>
-                <Typography component="h1" variant="h5">
-                    标题
+      <HeaderUnit />
+      <Container maxWidth="lg" className={classes.container}>
+        <Grid container spacing={4} className={classes.cardGrid} >
+          <Grid item  >
+            <CardActionArea component="a" href="#">
+              <Card className={classes.card}>
+                <Hidden xsDown>
+                  <CardMedia
+                    className={classes.cardMedia}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  />
+                </Hidden>
+                <div className={classes.cardDetails}>
+                  <CardContent>
+                    <Typography component="h1" variant="h5">
+                      标题
                 </Typography>
-                <Typography variant="subtitle2" paragraph color="textSecondary">
-                    2019年8月3日
+                    <Typography variant="subtitle2" paragraph color="textSecondary">
+                      2019年8月3日
                 </Typography>
-                <Typography variant="subtitle2" paragraph>
-                    2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。
-                    这些年折折腾腾，也没搞出来，当然也没写出什么有意思的东西。
-                    今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。
+                    <Typography variant="subtitle2" paragraph>
+                      2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。
+                      这些年折折腾腾，也没搞出来，当然也没写出什么有意思的东西。
+                      今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。
                 </Typography>
-                <Typography variant="subtitle2" color="primary" className={classes.read}>
-                    继续阅读...
+                    <Typography variant="subtitle2" color="primary" className={classes.read}>
+                      继续阅读...
                 </Typography>
-                </CardContent>
-            </div>
-            </Card>
-        </CardActionArea>
+                  </CardContent>
+                </div>
+              </Card>
+            </CardActionArea>
+          </Grid>
         </Grid>
-    </Grid>
-    <div className={classes.section}>
-      <AlignItemsList></AlignItemsList>
-      <AlignItemsList></AlignItemsList>
-      <AlignItemsList></AlignItemsList>
-    </div>
-    </Container>
+        <div className={classes.section}>
+          <AlignItemsList></AlignItemsList>
+          <AlignItemsList></AlignItemsList>
+          <AlignItemsList></AlignItemsList>
+        </div>
+      </Container>
     </React.Fragment>
   );
 };
