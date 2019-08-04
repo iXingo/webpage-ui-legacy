@@ -198,14 +198,14 @@ const SignUp = props => {
           .then(response => {
             if(response.available) {
               notification.success({
-                message: 'Polling App',
-                description: "Your eamil is available",
+                message: '星狗网Web App',
+                description: "恭喜！您的邮箱可用",
               });          
               // history.push("/sign-in");
             } else {
               notification.error({
-                message: 'Polling App',
-                description: "Email is already registered",
+                message: '星狗网',
+                description: "告诉您一个坏消息，您当前邮箱已经被注册！",
               }); 
               history.push("/sign-up");         
             // history.push("/sign-in");
@@ -218,12 +218,12 @@ const SignUp = props => {
         .then(response => {
             if(response.available) {
               notification.success({
-                message: 'Polling App',
+                message: '星狗网Web App',
                 description: "恭喜，您的Id可用",
               }); 
             } else {
               notification.error({
-                message: 'Polling App',
+                message: '星狗网Web App',
                 description: "用户名已经被别人占用啦",
               }); 
               history.push("/sign-up");
@@ -234,13 +234,13 @@ const SignUp = props => {
     signup(signupRequest)
     .then(response => {
         notification.success({
-            message: 'Polling App',
+            message: '星狗网Web App',
             description: "谢谢！ 您已经成功注册！ 现在可以登录啦！",
         });          
         history.push("/sign-in");
     }).catch(error => {
         notification.error({
-            message: 'Polling App',
+            message: '星狗网Web App',
             description: error.message || '对不起，好像发生了一些错误，请您稍后再试！'
         });
     });
@@ -321,7 +321,7 @@ const SignUp = props => {
                   helperText={
                     hasError('name') ? formState.errors.name[0] : null
                   }
-                  label="我们怎么称呼你（昵称）"
+                  label="我们该如何称呼你（昵称）"
                   name="name"
                   onChange={handleChange}
                   type="text"
@@ -335,7 +335,7 @@ const SignUp = props => {
                   helperText={
                     hasError('username') ? formState.errors.username[0] : null
                   }
-                  label="用户名（Id）"
+                  label="用户名（用户Id）"
                   name="username"
                   onChange={handleChange}
                   type="text"

@@ -114,16 +114,16 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const sections = [
-  'Technology',
-  'Design',
-  'Culture',
-  'Business',
-  'Politics',
-  'Opinion',
-  'Science',
-  'Health',
-  'Style',
-  'Travel',
+  '科技',
+  '生活',
+  '前端',
+  '后端',
+  '算法',
+  '好友',
+  '职场',
+  '兴趣',
+  '新闻',
+  '见闻',
 ];
 
 const featuredPosts = [

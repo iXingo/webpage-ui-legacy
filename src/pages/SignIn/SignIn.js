@@ -283,11 +283,12 @@ const SignIn = (props) => {
                 >
                   登录
                 </Typography>
+
                 <Typography
                   color="textSecondary"
                   gutterBottom
                 >
-                  使用社交媒体账号登录【开发中】
+                  为什么要登录？登录后可以进行评论以及可以获得更佳的个性化体验。
                 </Typography>
                 <Grid
                   className={classes.socialButtons}
@@ -371,9 +372,17 @@ const SignIn = (props) => {
                   <Link
                     component={RouterLink}
                     to="/sign-up"
-                    variant="h6"
+                    variant="body1"
                   >
                     注册
+                  </Link>
+                    忘记密码?{' '}
+                  <Link
+                    component={RouterLink}
+                    to="/sign-up"
+                    variant="h6"
+                  >
+                    找回密码
                   </Link>
                 </Typography>
               </form>

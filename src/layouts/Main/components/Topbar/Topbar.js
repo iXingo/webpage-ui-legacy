@@ -36,9 +36,9 @@ const Topbar = props => {
         <RouterLink to="/">
           <img
             alt="Logo"
-            src="/images/logos/logo--white.svg"
+            src="/images/logos/logo.png"
           />
-        </RouterLink>星狗网
+        </RouterLink>
         <div className={classes.flexGrow} />
         <Hidden mdDown>
           <IconButton color="inherit">

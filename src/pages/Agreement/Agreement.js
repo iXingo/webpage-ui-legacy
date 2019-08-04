@@ -42,7 +42,7 @@ const NotFound = () => {
       <Grid
         container
         justify="center"
-        spacing={4}
+        spacing={12}
         lg={12}
         xs={12}
         sm={12}
