@@ -170,7 +170,7 @@ const Blog = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Toolbar className={classes.toolbar}>
           <Button size="small">订阅</Button>
           <Typography
