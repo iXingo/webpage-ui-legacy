@@ -16,7 +16,6 @@ import {
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import { notification } from 'antd';
 import { signup, checkUsernameAvailability, checkEmailAvailability } from '../../util/APIUtils';
-import { ACCESS_TOKEN } from '../../constants';
 
 const schema = {
   name: {
