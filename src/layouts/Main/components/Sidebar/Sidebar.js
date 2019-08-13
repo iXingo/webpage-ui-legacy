@@ -11,6 +11,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import SettingsIcon from '@material-ui/icons/Settings';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import PeopleIcon from '@material-ui/icons/People';
+import EventNoteIcon from '@material-ui/icons/EventNote';
 
 import { Profile, SidebarNav, UpgradePlan } from './components';
 
@@ -47,7 +48,7 @@ const Sidebar = props => {
     {
       title: '博    客',
       href: '/blog',
-      icon: <ShoppingBasketIcon />
+      icon: <EventNoteIcon />
     },
     {
       title: '好    友',
@@ -60,8 +61,8 @@ const Sidebar = props => {
       icon: <ImageIcon />
     },
     {
-      title: '科    普',
-      href: '/dashboard',
+      title: '服    务',
+      href: '/products',
       icon: <DashboardIcon />
     },
     {

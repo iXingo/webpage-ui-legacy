@@ -18,6 +18,7 @@ import {
   SignIn as SignInPage,
   NotFound as NotFoundPage,
   Agreement as AgreementPage,
+  ProductList as ProductListPage,
   Blog as BlogPage
 } from './pages';
 import { CardPaper as CardPage} from './components';
@@ -37,7 +38,7 @@ class Routes extends Component {
           from="/"
           to="/sign-in"
         />
-        {/* <RouteWithLayout
+        {/*<RouteWithLayout
           component={DashboardView}
           exact
           layout={MainLayout}
@@ -78,35 +79,41 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/settings"
-        /> */
+        /> */ }
+        <RouteWithLayout
+          component={ProductListPage}
+          exact
+          layout={MainLayout}
+          path="/products"
+        />
         <RouteWithLayout
           component={CardPage}
           exact
           layout={MainLayout}
           path="/card"
           {...this.props}
-        />}
+        />
         <RouteWithLayout
           component={AlbumPage}
           exact
           layout={MainLayout}
           path="/album"
           {...this.props}
-        />}
+        />
         <RouteWithLayout
           component={BlogPage}
           exact
           layout={MainLayout}
           path="/blog"
           {...this.props}
-        />}
+        />
         <RouteWithLayout
           component={SignUpPage}
           exact
           layout={MainLayout}
           path="/sign-up"
           {...this.props}
-        />}
+        />
         <RouteWithLayout
           component={SignInPage}
           exact
@@ -114,20 +121,20 @@ class Routes extends Component {
           path="/sign-in"
           {...this.props}
         />
-        { <RouteWithLayout
+        <RouteWithLayout
           component={NotFoundPage}
           exact
           layout={MainLayout}
           path="/not-found"
           {...this.props}
-        />}
-                { <RouteWithLayout
+        />
+        <RouteWithLayout
           component={AgreementPage}
           exact
           layout={MainLayout}
           path="/user-agreement"
           {...this.props}
-        />}
+        />
         <Redirect to="/not-found" /> 
       </Switch>
     );
