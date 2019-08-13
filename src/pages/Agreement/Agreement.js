@@ -15,6 +15,7 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import Button from '@material-ui/core/Button';
+import TypeWriter from 'react-typewriter';
 
 
 
@@ -53,6 +54,7 @@ const NotFound = () => {
           item
         >
           <div className={classes.content}>
+          <TypeWriter typing={1}>
             <Typography variant="h1"><AssignmentIndIcon color="primary" style={{ fontSize: 40, paddingBottom: 10}}/>User Agreement</Typography>
             <Typography variant="h3"><DesktopWindowsIcon color="primary" style={{ fontSize: 25, paddingRight:5 }}/>Who we are </Typography>
             <Typography paragraph>Our website address is: http://www.wang-xin.cn.</Typography>
@@ -100,6 +102,7 @@ const NotFound = () => {
             <Typography paragraph>What automated decision making and/or profiling we do with user data</Typography>
             <Typography paragraph>What automated decision making and/or profiling we do with user data</Typography>
             <Typography paragraph>Industry regulatory disclosure requirements</Typography>
+            </TypeWriter>
             <Button variant="contained" fullWidth color="primary" className={classes.button}>
                 <Link
                     component={RouterLink}

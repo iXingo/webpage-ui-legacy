@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(/images/auth.jpg)',
+    backgroundImage: 'url(/images/sign/psb.jpeg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
@@ -80,7 +80,8 @@ const useStyles = makeStyles(theme => ({
     flexBasis: '600px'
   },
   quoteText: {
-    color: theme.palette.white,
+    // color: theme.palette.white,
+    color : '#3f51b5',
     fontWeight: 300
   },
   name: {
@@ -235,13 +236,13 @@ const SignIn = (props) => {
                 className={classes.quoteText}
                 variant="h1"
               >
-                程序人生的
+                汪师傅，
               </Typography>
               <Typography
                 className={classes.quoteText}
                 variant="h1"
               >
-                寂静，欢喜
+                程序人生的寂静，欢喜
               </Typography>
               <div className={classes.person}>
                 <Typography
