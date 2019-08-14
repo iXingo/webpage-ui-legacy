@@ -52,7 +52,7 @@ const schema = {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
-    height: '100%'
+    height: '80vh'
   },
   grid: {
     height: '100%'
@@ -68,7 +68,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(/images/auth.jpg)',
+    backgroundImage: 'url(/images/sign/sign-up.jpg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
@@ -78,15 +78,18 @@ const useStyles = makeStyles(theme => ({
     flexBasis: '600px'
   },
   quoteText: {
-    color: theme.palette.white,
+    // color: theme.palette.white,
+    color : '#3f51b5',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
-    color: theme.palette.white
+    // color: theme.palette.white
+    color : '#3f51b5',
   },
   bio: {
-    color: theme.palette.white
+    // color: theme.palette.white
+    color : '#3f51b5',
   },
   contentContainer: {},
   content: {
@@ -261,24 +264,30 @@ const SignUp = props => {
         >
           <div className={classes.quote}>
             <div className={classes.quoteInner}>
+             <Typography
+                className={classes.quoteText}
+                variant="h1"
+              >
+                汪师傅:
+              </Typography>
               <Typography
                 className={classes.quoteText}
                 variant="h1"
               >
-                程序人生的寂静欢喜
+                看见，好时光
               </Typography>
               <div className={classes.person}>
                 <Typography
                   className={classes.name}
                   variant="body1"
                 >
-                  Copyright 2019
+                  &copy;Copyright 2019
                 </Typography>
                 <Typography
                   className={classes.bio}
                   variant="body2"
                 >
-                  Designed by Shawn Wang at Pudong New Area in Shanghai
+                  Designed by Shawn Wang in Pudong New Area
                 </Typography>
               </div>
             </div>

@@ -19,10 +19,12 @@ import {
   NotFound as NotFoundPage,
   Agreement as AgreementPage,
   ProductList as ProductListPage,
+  ResetPasswd as ResetPasswdPage,
   Blog as BlogPage
 } from './pages';
 import { CardPaper as CardPage} from './components';
 import { Album as AlbumPage} from './components';
+import ResetPasswd from './pages/ResetPasswd/ResetPasswd';
 
 class Routes extends Component {
 
@@ -126,6 +128,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/not-found"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={ResetPasswdPage}
+          exact
+          layout={MainLayout}
+          path="/reset_passwd"
           {...this.props}
         />
         <RouteWithLayout

@@ -54,7 +54,7 @@ const schema = {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
-    height: '100%'
+    height: '80vh'
   },
   grid: {
     height: '100%'
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(/images/sign/psb.jpeg)',
+    backgroundImage: 'url(/images/sign/sign-in.jpeg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'
@@ -398,7 +398,7 @@ const SignIn = (props) => {
                     忘记密码?{' '}
                   <Link
                     component={RouterLink}
-                    to="/sign-up"
+                    to="/reset_passwd"
                     variant="h6"
                   >
                     找回密码
