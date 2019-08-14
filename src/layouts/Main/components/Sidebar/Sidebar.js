@@ -54,8 +54,8 @@ const Sidebar = props => {
       icon: <PeopleIcon />
     },
     {
-      title: '卡    片',
-      href: '/card',
+      title: '计    划',
+      href: '/project',
       icon: <ImageIcon />
     },
     {

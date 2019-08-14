@@ -92,7 +92,7 @@ class Routes extends Component {
           component={CardPage}
           exact
           layout={MainLayout}
-          path="/card"
+          path="/project"
           {...this.props}
         />
         <RouteWithLayout
@@ -133,14 +133,14 @@ class Routes extends Component {
         <RouteWithLayout
           component={ResetPasswdPage}
           exact
-          layout={MainLayout}
+          layout={MinimalLayout}
           path="/reset_passwd"
           {...this.props}
         />
         <RouteWithLayout
           component={AgreementPage}
           exact
-          layout={MainLayout}
+          layout={MinimalLayout}
           path="/user-agreement"
           {...this.props}
         />

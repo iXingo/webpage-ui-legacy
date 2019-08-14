@@ -320,7 +320,7 @@ const SignUp = props => {
                   color="textSecondary"
                   gutterBottom
                 >
-                  使用您的邮箱地址建立新的账号
+                  使用您的电子邮箱以在星狗网建立新的账号
                 </Typography>
                 <TextField
                   className={classes.textField}
@@ -423,7 +423,7 @@ const SignUp = props => {
                   color="textSecondary"
                   variant="body1"
                 >
-                  已经有账号了?{' '}
+                  已有账号?{' '}
                   <Link
                     component={RouterLink}
                     to="/sign-in"

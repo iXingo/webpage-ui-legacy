@@ -93,7 +93,55 @@ const useStyles = makeStyles(theme => ({
   },
   read: {
     paddingTop: theme.spacing(10)
-  }
+  },
+  root: {
+    backgroundColor: theme.palette.background.default,
+    // height: '600'
+  },
+  grid: {
+    height: '100%'
+  },
+  quoteContainer: {
+    [theme.breakpoints.down('md')]: {
+      display: 'none'
+    }
+  },
+  quote: {
+    backgroundColor: theme.palette.neutral,
+    height: '200',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundImage: 'url(/images/sign/sign-up.jpg)',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center'
+  },
+  quoteInner: {
+    textAlign: 'center',
+    flexBasis: '600px',
+    padding: theme.spacing(8)
+  },
+  quoteText: {
+    // color: theme.palette.white,
+    color : '#3f51b5',
+    fontWeight: 300
+  },
+  name: {
+    marginTop: theme.spacing(3),
+    // color: theme.palette.white
+    color : '#3f51b5',
+  },
+  bio: {
+    // color: theme.palette.white
+    color : '#3f51b5',
+  },
+  contentContainer: {},
+  content: {
+    // height: '35vh',
+    display: 'flex',
+    flexDirection: 'column'
+  },
 }));
 
 const CardPaper = props => {
@@ -103,7 +151,56 @@ const CardPaper = props => {
 
   return (
     <React.Fragment>
-      <HeaderUnit />
+      <div className={classes.root}>
+        <div className={classes.quote}>
+            <div className={classes.quoteInner}>
+                <Typography
+                className={classes.quoteText}
+                variant="h1"
+                >
+                汪师傅:
+                </Typography>
+                <Typography
+                className={classes.quoteText}
+                variant="h1"
+                >
+                看见，好时光
+                </Typography>
+                <div className={classes.person}>
+                <Typography
+                    className={classes.name}
+                    variant="body1"
+                >
+                    &copy;Copyright 2019
+                </Typography>
+                <Typography
+                    className={classes.bio}
+                    variant="body2"
+                >
+                    Designed by Shawn Wang in Pudong New Area
+                </Typography>
+                </div>
+            </div>
+        </div>
+        <div className={classes.content}>
+          <HeaderUnit />
+        </div>
+        <div className={classes.content}>
+          <HeaderUnit />
+        </div>
+        <div className={classes.content}>
+          <HeaderUnit />
+        </div>
+        <div className={classes.content}>
+          <HeaderUnit />
+        </div>
+        <div className={classes.content}>
+          <HeaderUnit />
+        </div>
+        <div className={classes.content}>
+          <HeaderUnit />
+        </div>
+      </div>
       <Container maxWidth="lg" className={classes.container}>
         <Grid container spacing={4} className={classes.cardGrid} >
           <Grid item  >

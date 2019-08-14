@@ -27,7 +27,7 @@ const Profile = props => {
   const classes = useStyles();
 
   const user = {
-    name: '星狗网 | 邂逅好时光',
+    name: '星狗网 | 看见，好时光',
     avatar: '/images/avatars/000_.png',
     bio: '程序人生的寂静，欢喜。'
   };

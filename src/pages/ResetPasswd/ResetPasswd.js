@@ -99,10 +99,10 @@ const useStyles = makeStyles(theme => ({
   },
   signUpButton:{
     margin: theme.spacing(4, 0),
-    width: '40%'
+    width: '70%'
   },
   field: {
-    width: '40%'
+    width: '70%'
   }
 }));
 
