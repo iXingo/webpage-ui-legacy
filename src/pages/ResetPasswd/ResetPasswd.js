@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
   },
   contentContainer: {},
   content: {
-    height: '100%',
+    height: '35vh',
     display: 'flex',
     flexDirection: 'column'
   },
