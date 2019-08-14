@@ -5,3 +5,5 @@ export { default as CardPaper } from './CardPaper';
 export { default as Album } from './Album';
 export { default as AlignItemsList } from './AlignItemsList';
 export { default as PostCard } from './PostCard';
+export { default as SummaryCard } from './SummaryCard';
+export { default as Subscribe } from './Subscribe';

@@ -21,6 +21,8 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import Post from '../Post';
 import PostCard from '../../components/PostCard'
+import SummaryCard from '../../components/SummaryCard';
+import Subscribe from '../../components/Subscribe';
 
 
 
@@ -90,9 +92,15 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     fontSize: 20,
-    margin: 'auto',
     textAlign: 'center',
   },
+  tips : {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  
 
   footer: {
     backgroundColor: "#3f51b5",
@@ -161,7 +169,8 @@ const Blog = props => {
       <CssBaseline />
       <Container maxWidth="xl">
         <Toolbar className={classes.toolbar}>
-          <Button size="small">订阅</Button>
+          {/* <Button size="small">订阅</Button> */}
+          <Subscribe />
           <Typography
             component="h2"
             variant="h5"
@@ -237,7 +246,9 @@ const Blog = props => {
                           {post.title}
                         </Typography>
                         <Typography variant="subtitle1" color="textSecondary">
-                        <DateRangeIcon className={classes.icon} />{post.date}
+                        <div className={classes.tips}>
+                          <DateRangeIcon className={classes.icon} />{post.date}
+                        </div>
                         </Typography>
                         <Typography variant="subtitle1" paragraph>
                           {post.description}
@@ -259,7 +270,14 @@ const Blog = props => {
               </Grid>
             ))}
           </Grid>
-          
+          <Grid container spacing={4} className={classes.cardGrid}>
+              <Grid item xs={12} md={6}>
+                <SummaryCard></SummaryCard>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <SummaryCard></SummaryCard>
+              </Grid>
+          </Grid>
           {/* End sub featured posts */}
           <Grid container spacing={5} className={classes.mainGrid}>
             {/* Main content */}
