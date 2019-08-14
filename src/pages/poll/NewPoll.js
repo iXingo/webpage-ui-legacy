@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { createPoll } from '../util/APIUtils';
-import { MAX_CHOICES, POLL_QUESTION_MAX_LENGTH, POLL_CHOICE_MAX_LENGTH } from '../constants';
+import { createPoll } from '../../util/APIUtils';
+import { MAX_CHOICES, POLL_QUESTION_MAX_LENGTH, POLL_CHOICE_MAX_LENGTH } from '../../constants';
 import './NewPoll.css';  
 import { Form, Input, Button, Icon, Select, Col, notification } from 'antd';
 const Option = Select.Option;
