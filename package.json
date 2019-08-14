@@ -7,7 +7,6 @@
     "@material-ui/icons": "^4.2.1",
     "@material-ui/styles": "^4.3.0",
     "antd": "^3.2.2",
-    "bootstrap": "^4.3.1",
     "install": "^0.13.0",
     "markdown-to-jsx": "^6.10.2",
     "npm": "^6.10.2",
