@@ -86,10 +86,12 @@ const useStyles = makeStyles(theme => ({
   },
   name: {
     marginTop: theme.spacing(3),
-    color: theme.palette.white
+    // color: theme.palette.white,
+    color : '#3f51b5',
   },
   bio: {
-    color: theme.palette.white
+    // color: theme.palette.white,
+    color : '#3f51b5',
   },
   contentContainer: {},
   content: {
@@ -130,7 +132,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3)
   },
   socialButtons: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(3),
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   socialIcon: {
     marginRight: theme.spacing(1)
@@ -143,7 +149,13 @@ const useStyles = makeStyles(theme => ({
   },
   signInButton: {
     margin: theme.spacing(2, 0)
-  }
+  },
+  tips:{
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
 }));
 
 const SignIn = (props) => {
@@ -236,7 +248,7 @@ const SignIn = (props) => {
                 className={classes.quoteText}
                 variant="h1"
               >
-                汪师傅，
+                汪师傅:
               </Typography>
               <Typography
                 className={classes.quoteText}
@@ -255,7 +267,7 @@ const SignIn = (props) => {
                   className={classes.bio}
                   variant="body2"
                 >
-                  Manager at inVision
+                  Designed by Shawn Wang in Pudong New Area
                 </Typography>
               </div>
             </div>
@@ -365,6 +377,7 @@ const SignIn = (props) => {
                 >
                   立即登录
                 </Button>
+                <div className={classes.tips}>
                 <Typography
                   color="textSecondary"
                   variant="body1"
@@ -377,6 +390,11 @@ const SignIn = (props) => {
                   >
                     注册
                   </Link>
+                  </Typography>
+                  <Typography
+                  color="textSecondary"
+                  variant="body1"
+                >
                     忘记密码?{' '}
                   <Link
                     component={RouterLink}
@@ -386,6 +404,7 @@ const SignIn = (props) => {
                     找回密码
                   </Link>
                 </Typography>
+                </div>
               </form>
             </div>
           </div>

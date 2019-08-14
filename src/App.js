@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 import { ThemeProvider } from '@material-ui/styles';
 import validate from 'validate.js';
 
@@ -14,14 +13,14 @@ import { getCurrentUser } from './util/APIUtils';
 import { ACCESS_TOKEN } from './constants';
 import { notification } from 'antd';
 
-const browserHistory = createBrowserHistory();
 
 validate.validators = {
   ...validate.validators,
   ...validators
 };
 
-export default class App extends Component {
+class App extends Component {
+
 
   constructor(props) {
     super(props);
@@ -42,6 +41,7 @@ export default class App extends Component {
   }
 
   loadCurrentUser() {
+    let { history } = this.props;
     this.setState({
       isLoading: true
     });
@@ -52,6 +52,7 @@ export default class App extends Component {
         isAuthenticated: true,
         isLoading: false
       });
+      history.push("/blog");
     }).catch(error => {
       this.setState({
         isLoading: false
@@ -85,21 +86,24 @@ export default class App extends Component {
       description: "恭喜您！您已经成功登录。",
     });
     this.loadCurrentUser();
-    this.props.history.push("/blog");
   }
 
   render() {
+    const { history } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <Router history={browserHistory}>
+        <Router history={history}>
           <Routes isAuthenticated={this.state.isAuthenticated} 
                   currentUser={this.state.currentUser} 
                   handleLogin={this.handleLogin} 
                   handleLogout={this.handleLogout}
                   loadCurrentUser = {this.loadCurrentUser}
+                  
                   {...this.props}/>
         </Router>
       </ThemeProvider>
     );
   }
 }
+
+export default App;
