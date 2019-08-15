@@ -72,7 +72,7 @@ const SummaryCard = props => {
       />
       <CardMedia
         className={classes.media}
-        image="/images/sign/psb.jpeg"
+        image="/images/sign/sign-in.jpeg"
         title="Paella dish"
       />
       <CardContent>
