@@ -52,7 +52,7 @@ const schema = {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
-    height: '80vh'
+    height: theme.spacing(80)
   },
   grid: {
     height: '100%'
@@ -391,7 +391,7 @@ const SignUp = props => {
                     color="textSecondary"
                     variant="body1"
                   >
-                    我已经阅读并且同意{' '}
+                    我已经认真阅读并且同意{' '}
                     <Link
                       color="primary"
                       component={RouterLink}

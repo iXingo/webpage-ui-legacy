@@ -126,13 +126,13 @@ const sections = [
 const featuredPosts = [
   {
     title: '演示文章',
-    date: 'Nov 12',
+    date: '2019年8月15日',
     description:
       '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
   },
   {
     title: '这是一篇演示文章',
-    date: 'Nov 11',
+    date: '2019年8月15日',
     description:
       '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
   },

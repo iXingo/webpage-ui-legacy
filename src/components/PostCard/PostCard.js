@@ -62,7 +62,7 @@ const useStyles = makeStyles(theme => ({
   },
   cardMedia: {
     width: '60%',
-    height: 300,
+    // height: 300,
   },
   markdown: {
     ...theme.typography.body2,
@@ -91,7 +91,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
   },
   read:{
-    paddingTop: theme.spacing(10)
+    paddingTop: theme.spacing(5)
   }
 }));
 
