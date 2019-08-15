@@ -18,7 +18,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
-    height: '80vh'
+    height: theme.spacing(80)
   },
   grid: {
     height: '100%'
