@@ -86,7 +86,7 @@ const Topbar = props => {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="搜一搜…"
+              placeholder="星狗一下             你就知道"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,

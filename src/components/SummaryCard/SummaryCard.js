@@ -59,7 +59,7 @@ const SummaryCard = props => {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            汪欣
           </Avatar>
         }
         action={
