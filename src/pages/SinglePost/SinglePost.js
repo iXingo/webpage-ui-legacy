@@ -200,7 +200,7 @@ const RestPasswd = props => {
                  <Typography
                     className={classes.author}
                     paragraph
-                 >作者简介：汪欣 <Verify/>，南京航空航天大学 软件工程硕士， NVIDIA中国Architect。
+                 >作者简介：汪欣 <Verify/>，南京航空航天大学 软件工程 硕士， NVIDIA中国Architect。
                  </Typography>
                 
                 <Divider />

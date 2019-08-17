@@ -33,6 +33,7 @@ const Tag = props => {
         avatar={<Avatar alt="Natacha" src="/images/avatars/000_.png" />}
         label="Deletable Chip"
         className={classes.chip}
+        color="primary"
       />
     </div>
   );
