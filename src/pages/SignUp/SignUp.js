@@ -281,7 +281,7 @@ const SignUp = props => {
                   className={classes.name}
                   variant="body1"
                 >
-                  &copy;Copyright 2019
+                  &copy; Copyright 2019
                 </Typography>
                 <Typography
                   className={classes.bio}
@@ -320,7 +320,7 @@ const SignUp = props => {
                   color="textSecondary"
                   gutterBottom
                 >
-                  使用您的电子邮箱以在星狗网建立新的账号
+                  使用您的电子邮箱以在星狗网建立新的账户
                 </Typography>
                 <TextField
                   className={classes.textField}
@@ -343,7 +343,7 @@ const SignUp = props => {
                   helperText={
                     hasError('username') ? formState.errors.username[0] : null
                   }
-                  label="用户名（用户Id）"
+                  label="用户名（用户ID）"
                   name="username"
                   onChange={handleChange}
                   type="text"

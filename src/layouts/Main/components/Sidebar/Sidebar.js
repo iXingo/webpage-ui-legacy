@@ -104,6 +104,7 @@ const Sidebar = props => {
           pages={pages}
         />
         <UpgradePlan />
+
       </div>
     </Drawer>
   );

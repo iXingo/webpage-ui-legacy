@@ -67,8 +67,8 @@ const SummaryCard = props => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title="我的青春消亡史"
+        subheader="2016年8月12日"
       />
       <CardMedia
         className={classes.media}
@@ -82,10 +82,10 @@ const SummaryCard = props => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
+        <IconButton aria-label="收藏">
           <FavoriteIcon />
         </IconButton>
-        <IconButton aria-label="share">
+        <IconButton aria-label="分享">
           <ShareIcon />
         </IconButton>
         <IconButton
@@ -94,7 +94,7 @@ const SummaryCard = props => {
           })}
           onClick={handleExpandClick}
           aria-expanded={expanded}
-          aria-label="show more"
+          aria-label="查看全文"
         >
           <ExpandMoreIcon />
         </IconButton>

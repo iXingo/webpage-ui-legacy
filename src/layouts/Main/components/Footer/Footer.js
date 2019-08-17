@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(4),
     // paddingTop: theme.spacing(8)
-  }
+  },
 }));
 
 const Footer = props => {
@@ -23,7 +23,7 @@ const Footer = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <TypeWriter typing={1}>
+	  <TypeWriter typing={1}>
 		<Typography variant="body1">
 			&copy;{' '}
 			<Link

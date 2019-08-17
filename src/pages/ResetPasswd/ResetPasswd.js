@@ -138,7 +138,7 @@ const RestPasswd = props => {
                     className={classes.name}
                     variant="body1"
                 >
-                    &copy;Copyright 2019
+                    &copy; Copyright 2019
                 </Typography>
                 <Typography
                     className={classes.bio}

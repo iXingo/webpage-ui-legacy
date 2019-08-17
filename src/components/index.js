@@ -7,3 +7,5 @@ export { default as AlignItemsList } from './AlignItemsList';
 export { default as PostCard } from './PostCard';
 export { default as SummaryCard } from './SummaryCard';
 export { default as Subscribe } from './Subscribe';
+export { default as Verify } from './Verify';
+export { default as Author } from './Author';
