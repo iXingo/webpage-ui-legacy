@@ -20,7 +20,7 @@ const Verify = props => {
   
     return (
         <a target="_blank" href="//verified.weibo.com/verify">
-            <i title="微博个人认证 " className={classes.verified}>
+            <i title="星狗网认证作者" className={classes.verified}>
             </i>
         </a>
     );

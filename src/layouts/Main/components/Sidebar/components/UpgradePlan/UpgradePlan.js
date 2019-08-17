@@ -49,24 +49,25 @@ const UpgradePlan = props => {
           gutterBottom
           variant="h6"
         >
-          Upgrade to PRO
+          开源网站
         </Typography>
         <Typography
           align="center"
           variant="body2"
         >
-          Upgrade to Devias Kit PRO and get even more components
+          星狗网为开源程序。 基于前后端分离架构构建，源代码已经在Github上开源。
         </Typography>
       </div>
       <div className={classes.actions}>
         <Button
           color="primary"
           component="a"
-          href="https://devias.io/products/devias-kit-pro"
+          href="https://github.com/iXingo/WebPageUI.git"
           variant="contained"
         >
-          Upgrade
+          Github
         </Button>
+        
       </div>
     </div>
   );

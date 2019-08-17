@@ -20,6 +20,7 @@ import {
   Agreement as AgreementPage,
   ProductList as ProductListPage,
   ResetPasswd as ResetPasswdPage,
+  SinglePost as SinglePostPage,
   Blog as BlogPage
 } from './pages';
 import { CardPaper as CardPage} from './components';
@@ -121,6 +122,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/sign-in"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={SinglePostPage}
+          exact
+          layout={MinimalLayout}
+          path="/post"
           {...this.props}
         />
         <RouteWithLayout

@@ -23,7 +23,7 @@ import Post from '../Post';
 import PostCard from '../../components/PostCard'
 import SummaryCard from '../../components/SummaryCard';
 import Subscribe from '../../components/Subscribe';
-import { Verify, Author } from '../../components';
+import { Verify, Tag } from '../../components';
 
 
 
@@ -284,7 +284,7 @@ const Blog = props => {
             {/* Main content */}
             <Grid item xs={12} md={8}>
               <Typography variant="h6" gutterBottom>
-                <Author />
+                <Tag />
               </Typography>
               <Divider />
               {/* {posts.map(post => (

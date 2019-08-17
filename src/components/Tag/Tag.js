@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Author = props => {
+const Tag = props => {
   const classes = useStyles();
 
   function handleDelete() {
@@ -32,7 +32,6 @@ const Author = props => {
       <Chip
         avatar={<Avatar alt="Natacha" src="/images/avatars/000_.png" />}
         label="Deletable Chip"
-        onDelete={handleDelete}
         className={classes.chip}
       />
     </div>
@@ -40,4 +39,4 @@ const Author = props => {
 }
 
 
-export default Author;
+export default Tag;
