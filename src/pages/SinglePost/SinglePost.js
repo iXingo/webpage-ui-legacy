@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import validate from 'validate.js';
 import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import Divider from '@material-ui/core/Divider';
 import Post from '../Post';
-import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
+import Chip from '@material-ui/core/Chip';
 
 import {
   Typography,
@@ -33,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   },
   quote: {
     backgroundColor: theme.palette.neutral,
-    height: '750px',
+    height: '600px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -88,8 +86,11 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(3),
     display: 'flex',
     justifyContent: 'center',
-    flexGrow:1,
-    margin: 'auto',
+    // flexGrow:1,
+    // margin: 'auto',
+    // padding: theme.spacing(3),
+    padding: '0 30px',
+    textAlign: 'justify'
   },
   title:{
     color : '#3f51b5',
@@ -102,9 +103,15 @@ const useStyles = makeStyles(theme => ({
   tags: {
       display: 'flex',
       alignItems: 'center',
+      flexWrap: 'wrap',
   },
   author:{
       margin: '20px 0',
+  },
+  posttime: {
+    padding: '15px 0',
+  },
+  singlepost:{
   }
 }));
 
@@ -173,7 +180,7 @@ const RestPasswd = props => {
             </div>
         </div>
         <div className={classes.content}>
-            <Grid container spacing={6} className={classes.mainGrid}>
+            <Grid container spacing={5} className={classes.mainGrid}>
             {/* Main content */}
             <Grid item xs={12} md={8} className={classes.singlepost}>
                 <Typography
@@ -200,9 +207,13 @@ const RestPasswd = props => {
                  <Typography
                     className={classes.author}
                     paragraph
-                 >作者简介：汪欣 <Verify/>，南京航空航天大学 软件工程 硕士， NVIDIA中国Architect。
+                 >作者简介：<strong>汪欣</strong> <Verify/>，南京航空航天大学 软件工程 硕士， NVIDIA中国Architect。
                  </Typography>
-                
+                 <Typography
+                    className={classes.posttime}
+                    variant="caption"
+                 >发布时间：2019年4月23日21分36秒345毫秒
+                 </Typography>
                 <Divider />
               <Typography variant="h6" gutterBottom className={classes.tags}>本文标签：
                 {tags.map(post => (
