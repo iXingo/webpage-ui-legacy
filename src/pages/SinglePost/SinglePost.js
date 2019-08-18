@@ -8,7 +8,6 @@ import Post from '../Post';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
 import Chip from '@material-ui/core/Chip';
-
 import {
   Typography,
 } from '@material-ui/core';
@@ -83,7 +82,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   mainGrid: {
-    marginTop: theme.spacing(3),
+    marginTop: 20,
     display: 'flex',
     justifyContent: 'center',
     // flexGrow:1,
@@ -100,18 +99,22 @@ const useStyles = makeStyles(theme => ({
   field: {
     width: '70%'
   },
+  abstrat: {
+    margin: '20px 0',
+  },
   tags: {
       display: 'flex',
       alignItems: 'center',
       flexWrap: 'wrap',
   },
   author:{
-      margin: '20px 0',
+      margin: '10px 0',
   },
   posttime: {
     padding: '15px 0',
   },
-  singlepost:{
+  post:{
+      paddingTop: 20
   }
 }));
 
@@ -187,12 +190,12 @@ const RestPasswd = props => {
                     className={classes.title}
                     variant="h1"
                 >
-                这是汪师傅的一个示例文章
+                《我的青春消亡史》之“上海一年”
                 </Typography>
                 <Typography
                     className={classes.author}
                     variant="h5"
-                >本文作者：
+                ><strong>本文作者：</strong>
                 <Chip
                     icon={<FaceIcon />}
                     label={name}
@@ -207,26 +210,38 @@ const RestPasswd = props => {
                  <Typography
                     className={classes.author}
                     paragraph
-                 >作者简介：<strong>汪欣</strong> <Verify/>，南京航空航天大学 软件工程 硕士， NVIDIA中国Architect。
-                 </Typography>
-                 <Typography
-                    className={classes.posttime}
-                    variant="caption"
-                 >发布时间：2019年4月23日21分36秒345毫秒
+                 ><strong>作者简介：</strong><strong>汪欣</strong> <Verify/>，南京航空航天大学 软件工程 硕士，现任NVIDIA中国Architect。
                  </Typography>
                 <Divider />
-              <Typography variant="h6" gutterBottom className={classes.tags}>本文标签：
+                <Typography paragraph gutterBottom className={classes.abstrat}><strong>本文摘要：</strong>
+                站在地铁2号线的轨道线前，来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。
+                </Typography>
+                
+                <Typography variant="h6" gutterBottom className={classes.tags}><strong>本文标签：</strong>
                 {tags.map(post => (
                      <Tag></Tag>
                 ))}
-              </Typography>
+                </Typography>
+                <Typography
+                    className={classes.tip}
+                    paragraph
+                 ><strong>阅读提示：</strong>全文共 <strong>32546</strong> 字，阅读完毕预计需要 <strong>20</strong> 分钟。
+                 </Typography>
               <Divider />
+                <Typography
+                    className={classes.posttime}
+                    variant="caption"
+                 ><strong>发布时间：</strong>2019年4月23日21分36秒345毫秒
+                 </Typography>
+                 <Divider />
               {/* {posts.map(post => (
                 <Markdown className={classes.markdown} key={post.substring(0, 40)}>
                   {post}
                 </Markdown>
-			  ))} */}
+              ))} */}
+                <div className={classes.post}>
 			        <Post {...props}></Post>
+                </div>
             </Grid>
             {/* <PostContent></PostContent> */}
             </Grid>
