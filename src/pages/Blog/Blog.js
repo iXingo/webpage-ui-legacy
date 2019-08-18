@@ -283,9 +283,6 @@ const Blog = props => {
           <Grid container spacing={5} className={classes.mainGrid}>
             {/* Main content */}
             <Grid item xs={12} md={8}>
-              <Typography variant="h6" gutterBottom>
-                <Tag />
-              </Typography>
               <Divider />
               {/* {posts.map(post => (
                 <Markdown className={classes.markdown} key={post.substring(0, 40)}>

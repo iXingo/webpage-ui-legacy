@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
         width: 14,
         height: 14,
         verticalAlign: -2,
-        backgroundPosition: '0 -75px',
+        backgroundPosition: '0 -50px',
     }
   }));
 

@@ -8,6 +8,8 @@ import Post from '../Post';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+
 import {
   Typography,
 } from '@material-ui/core';
@@ -109,6 +111,16 @@ const useStyles = makeStyles(theme => ({
   },
   author:{
       margin: '10px 0',
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+  },
+  avatar : {
+      display: 'inline-block',
+      marginRight: 10
+  },
+  verified:{
+      marginRight: 10
   },
   posttime: {
     padding: '15px 0',
@@ -133,22 +145,14 @@ const RestPasswd = props => {
 
   const tags  = [
     {
-      id: 1,
-      tag: '科技',
+        "id": 2,
+        "name": "Wang Xin"
     },
     {
-        id: 2,
-        tag: '示例',
-    },
-    {
-        id: 3,
-        tag: '汪师傅',
-    },
-    {
-        id: 4,
-        tag: '第一个',
-    },
-  ];
+        "id": 1,
+        "name": "Shawn Wang"
+    }
+  ];   
 
   return (
     <div className={classes.root}>
@@ -210,7 +214,9 @@ const RestPasswd = props => {
                  <Typography
                     className={classes.author}
                     paragraph
-                 ><strong>作者简介：</strong><strong>汪欣</strong> <Verify/>，南京航空航天大学 软件工程 硕士，现任NVIDIA中国Architect。
+                 ><strong>作者简介：</strong>
+                 <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar} />  
+                 <strong>  汪欣</strong> <Verify/>&nbsp;&nbsp;南京航空航天大学 软件工程 硕士，现任NVIDIA中国Architect。
                  </Typography>
                 <Divider />
                 <Typography paragraph gutterBottom className={classes.abstrat}><strong>本文摘要：</strong>
@@ -218,8 +224,8 @@ const RestPasswd = props => {
                 </Typography>
                 
                 <Typography variant="h6" gutterBottom className={classes.tags}><strong>本文标签：</strong>
-                {tags.map(post => (
-                     <Tag></Tag>
+                {tags.map(tag => (
+                     <Tag tag={tag}></Tag>
                 ))}
                 </Typography>
                 <Typography
