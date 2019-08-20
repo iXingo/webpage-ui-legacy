@@ -25,6 +25,8 @@ import {
 } from './pages';
 import { CardPaper as CardPage} from './components';
 import { Album as AlbumPage} from './components';
+import { Head } from './components';
+
 import ResetPasswd from './pages/ResetPasswd/ResetPasswd';
 
 class Routes extends Component {
@@ -150,6 +152,13 @@ class Routes extends Component {
           exact
           layout={MinimalLayout}
           path="/user-agreement"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={Head}
+          exact
+          layout={MinimalLayout}
+          path="/head"
           {...this.props}
         />
         <Redirect to="/not-found" /> 
