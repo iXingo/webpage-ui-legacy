@@ -101,6 +101,7 @@ const Head = propd => {
     <React.Fragment>
       <CssBaseline />
         {/* Hero unit */}
+        <img src='images/img/undraw_to_the_moon_v1mv.svg'/>
         <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
             轻轻地， 改变一切。
         </Typography>
