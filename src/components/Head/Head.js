@@ -6,7 +6,6 @@ import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -19,6 +18,10 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
+import CardMedia from '@material-ui/core/CardMedia';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
   root:{
@@ -35,13 +38,13 @@ const useStyles = makeStyles(theme => ({
   },
   avatar: {
     margin: 'auto',
-    width: 200,
-    height: 200,
+    width: 150,
+    height: 150,
   },
   bigAvatar: {
     margin: 10,
-    width: 200,
-    height: 200,
+    width: 150,
+    height: 150,
   },
   name: {
     textAlign: 'center',
@@ -62,6 +65,19 @@ const useStyles = makeStyles(theme => ({
     flex: 1,
     color: 'white'
   },
+  pro:{
+    marginTop: 64,
+    marginBottom: 20,
+    fontSize: 54,
+    textAlign: 'center',
+    padding: 10,
+    fontWeight: 300
+  },
+  subpro : {
+    fontSize: 16,
+    textAlign: 'center',
+    fontWeight: 300
+  }
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -82,7 +98,21 @@ const Head = propd => {
   }
 
   return (
-    <div className ={classes.root}>
+    <React.Fragment>
+      <CssBaseline />
+        {/* Hero unit */}
+        <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
+            轻轻地， 改变一切。
+        </Typography>
+        <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
+              Something short and leading about the collection below—its contents, the creator, etc.
+        </Typography>
+        <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
+              Something short and leading about the collection below—its contents, the creator, etc.
+              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+              entirely.
+        </Typography>
+        <div className ={classes.root}>
         <Card className={classes.card}>
             <CardActionArea>
                 <Grid container justify="center" alignItems="center" className={classes.avatar}>
@@ -179,6 +209,7 @@ const Head = propd => {
         </CardActions>
         </Card>
     </div>
+    </React.Fragment>
   );
 }
 
