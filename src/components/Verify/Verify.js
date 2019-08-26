@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
         height: 14,
         verticalAlign: -2,
         backgroundPosition: '0 -50px',
+        marginLeft: 2,
     }
   }));
 

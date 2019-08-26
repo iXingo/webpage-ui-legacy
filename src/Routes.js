@@ -109,7 +109,7 @@ class Routes extends Component {
           component={BlogPage}
           exact
           layout={MainLayout}
-          path="/blog"
+          path="/index"
           {...this.props}
         />
         <RouteWithLayout

@@ -45,7 +45,7 @@ const Sidebar = props => {
     
     {
       title: '博    客',
-      href: '/blog',
+      href: '/index',
       icon: <EventNoteIcon />
     },
     {
