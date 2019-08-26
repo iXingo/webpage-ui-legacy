@@ -106,12 +106,12 @@ const Head = propd => {
             轻轻地， 改变一切。
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
-              Something short and leading about the collection below—its contents, the creator, etc.
+              很明显，这是一个简介。很明显，这是一个简介。很明显，这是一个简介。
         </Typography>
         <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
-              Something short and leading about the collection below—its contents, the creator, etc.
-              Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-              entirely.
+              这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
+              这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
+              这是一个非常非常长的简介文本，使用中文来进行测试。
         </Typography>
         <div className ={classes.root}>
         <Card className={classes.card}>
