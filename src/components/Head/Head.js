@@ -70,13 +70,26 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 20,
     fontSize: 54,
     textAlign: 'center',
+    justifyContent: 'center',
     padding: 10,
-    fontWeight: 300
+    fontWeight: 300,
+    lineHeight : '50px',
   },
   subpro : {
     fontSize: 16,
     textAlign: 'center',
     fontWeight: 300
+  },
+  grid :{
+    textAlign: 'center',
+    justifyContent: 'center',
+    padding: 20
+  },
+  headimage: {
+    height: 360,
+    backgroundImage : 'url(images/img/undraw_to_the_moon_v1mv.svg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundPositionX: 'center',
   }
 }));
 
@@ -101,19 +114,19 @@ const Head = propd => {
     <React.Fragment>
       <CssBaseline />
         {/* Hero unit */}
-        <Grid container>
-          <Grid item>
-            <img src='images/img/undraw_to_the_moon_v1mv.svg'/>
+        <Grid container >
+          <Grid container item xs={12} md={12} className={classes.headimage} />
+          <Grid item xs={12} md={12} className={classes.grid}>
             <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-                轻轻地， 改变一切。
+              他， 改变了我，影响了我。
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid  item xs={12} md={12} className={classes.grid}>
             <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
                   很明显，这是一个简介。很明显，这是一个简介。很明显，这是一个简介。
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid  item xs={12} md={12} className={classes.grid}>
             <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
                   这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
                   这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
