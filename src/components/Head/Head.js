@@ -101,18 +101,26 @@ const Head = propd => {
     <React.Fragment>
       <CssBaseline />
         {/* Hero unit */}
-        <img src='images/img/undraw_to_the_moon_v1mv.svg'/>
-        <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-            轻轻地， 改变一切。
-        </Typography>
-        <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
-              很明显，这是一个简介。很明显，这是一个简介。很明显，这是一个简介。
-        </Typography>
-        <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
-              这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
-              这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
-              这是一个非常非常长的简介文本，使用中文来进行测试。
-        </Typography>
+        <Grid container>
+          <Grid item>
+            <img src='images/img/undraw_to_the_moon_v1mv.svg'/>
+            <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
+                轻轻地， 改变一切。
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
+                  很明显，这是一个简介。很明显，这是一个简介。很明显，这是一个简介。
+            </Typography>
+          </Grid>
+          <Grid item>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subpro}>
+                  这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
+                  这是一个非常非常长的简介文本，使用中文来进行测试。这是一个非常非常长的简介文本，使用中文来进行测试。
+                  这是一个非常非常长的简介文本，使用中文来进行测试。
+            </Typography>
+          </Grid>
+        </Grid>
         <div className ={classes.root}>
         <Card className={classes.card}>
             <CardActionArea>
