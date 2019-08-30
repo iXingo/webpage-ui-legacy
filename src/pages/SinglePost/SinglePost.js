@@ -187,7 +187,7 @@ const RestPasswd = props => {
             </div>
         </div>
         <div className={classes.content}>
-            <Grid container spacing={5} className={classes.mainGrid}>
+            <Grid container className={classes.mainGrid}>
             {/* Main content */}
             <Grid item xs={12} md={8} className={classes.singlepost}>
                 <Typography
