@@ -21,14 +21,11 @@ import {
   ProductList as ProductListPage,
   ResetPasswd as ResetPasswdPage,
   SinglePost as SinglePostPage,
+  Friend as FriendPage,
   Blog as BlogPage
 } from './pages';
 import { CardPaper as CardPage} from './components';
 import { Album as AlbumPage} from './components';
-import { Head } from './components';
-
-import ResetPasswd from './pages/ResetPasswd/ResetPasswd';
-
 class Routes extends Component {
 
   constructor(props) {
@@ -155,10 +152,10 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={Head}
+          component={Friend}
           exact
           layout={MinimalLayout}
-          path="/head"
+          path="/friends"
           {...this.props}
         />
         <Redirect to="/not-found" /> 

@@ -9,4 +9,3 @@ export { default as SummaryCard } from './SummaryCard';
 export { default as Subscribe } from './Subscribe';
 export { default as Verify } from './Verify';
 export { default as Tag } from './Tag';
-export { default as Head } from './Head';
