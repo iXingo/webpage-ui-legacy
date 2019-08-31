@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
@@ -14,7 +14,7 @@ import {
   Typography,
 } from '@material-ui/core';
 
-import { Author, Verify, Tag } from '../../components';
+import { Verify, Tag } from '../../components';
 
 
 const useStyles = makeStyles(theme => ({

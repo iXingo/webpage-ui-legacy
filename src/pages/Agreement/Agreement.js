@@ -15,7 +15,6 @@ import DescriptionIcon from '@material-ui/icons/Description';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import Button from '@material-ui/core/Button';
-import TypeWriter from 'react-typewriter';
 
 
 

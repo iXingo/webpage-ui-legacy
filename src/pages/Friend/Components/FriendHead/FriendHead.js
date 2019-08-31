@@ -1,12 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -91,18 +85,11 @@ const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const Head = propd => {
+const FriendHead = props => {
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
 
-  function handleClickOpen() {
-    setOpen(true);
-  }
-
-  function handleClose() {
-    setOpen(false);
-  }
 
   return (
     <React.Fragment>
@@ -128,60 +115,8 @@ const Head = propd => {
             </Typography>
           </Grid>
         </Grid>
-        <div className ={classes.root}>
-          <Card className={classes.card}>
-            <CardActionArea>
-              <Grid container justify="center" alignItems="center" className={classes.avatar}>
-                <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.bigAvatar} />
-              </Grid>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2" className={classes.name}>
-                  汪欣
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.intro}>
-                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions className={classes.button}>
-              <Button size="small" color="primary">
-                查看
-              </Button>
-              <Button size="small" color="primary">
-                分享
-              </Button>
-            </CardActions>
-          </Card>
-
-          <Card className={classes.card}>
-            <CardActionArea>
-              <Grid container justify="center" alignItems="center" className={classes.avatar}>
-                <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.bigAvatar} />
-              </Grid>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2" className={classes.name}>
-                  肖恩王
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p" className={classes.intro}>
-                  Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                  across all continents except Antarctica
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions className={classes.button}>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-
-    </div>
     </React.Fragment>
   );
 }
 
-export default Head;
+export default FriendHead;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { getAllFriends } from '../../util/APIUtils';
-import Friend from './PostContent';
+import { getAllFriends } from '../../../../util/APIUtils';
+import People from '../People';
 
 class FriendList extends Component {
 
@@ -30,9 +30,9 @@ class FriendList extends Component {
         });
         promise            
         .then(response => {
-            const posts = this.state.posts.slice();
+            const friends = this.state.friends.slice();
             this.setState({
-                posts: posts.concat(response),
+                friends: friends.concat(response),
                 page: response.page,
                 size: response.size,
                 totalElements: response.totalElements,
@@ -65,7 +65,6 @@ class FriendList extends Component {
                 totalElements: 0,
                 totalPages: 0,
                 last: true,
-                currentVotes: [],
                 isLoading: false
             });    
             this.loadFriendList();
@@ -78,8 +77,8 @@ class FriendList extends Component {
 
     render() {
         return (
-            this.state.posts.map(post => (
-              <Friend post={post} {...this.props}></Friend>         
+            this.state.friends.map(friend => (
+              <People friend={friend} {...this.props}></People>         
             ))
         );
     }

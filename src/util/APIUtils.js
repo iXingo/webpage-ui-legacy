@@ -135,3 +135,10 @@ export function getAllPosts() {
         method: 'GET'
     });
 }
+
+export function getAllFriends() {
+    return request({
+        url: API_BASE_URL + "/friends/all",
+        method: 'GET'
+    });
+}
