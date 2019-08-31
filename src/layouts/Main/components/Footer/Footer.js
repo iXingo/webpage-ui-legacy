@@ -19,22 +19,14 @@ const Footer = props => {
   const classes = useStyles();
 
   return (
-    <div
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
+    <div {...rest} className={clsx(classes.root, className)}>
 	  <TypeWriter typing={1}>
 		<Typography variant="body1">
 			&copy;{' '}
-			<Link
-			component="a"
-			href="http://shawn.wang/"
-			target="_blank"
-			style={{paddingRight: 5}}
-			>
-			Shawn Wang
+			<Link component="a" href="http://shawn.wang/" target="_blank" style={{paddingRight: 5}}>
+				Shawn Wang
 			</Link>
-			{' '} 星狗网 | 看见，好时光。
+				星狗网 | 看见，好时光。
 		</Typography>
 		<Typography variant="caption" display="block">
 			&copy; Copyright 2019. All rights Reserved. Created with love by Shawn Wang at NVIDIA.

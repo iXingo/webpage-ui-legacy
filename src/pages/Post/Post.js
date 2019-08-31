@@ -21,7 +21,7 @@ class Post extends Component {
 
 
     loadPostList() {
-        let promise = getAllPosts();;
+        let promise = getAllPosts();
         if(!promise) {
             return;
         }

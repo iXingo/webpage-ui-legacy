@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { getAllFriends } from '../../../../util/APIUtils';
-import People from '../People';
+import FriendContent from '../FriendContent';
+import { mergeClasses } from '@material-ui/styles';
 
 class FriendList extends Component {
 
@@ -21,7 +22,7 @@ class FriendList extends Component {
 
 
     loadFriendList() {
-        let promise = getAllFriends();;
+        let promise = getAllFriends();
         if(!promise) {
             return;
         }
@@ -29,22 +30,22 @@ class FriendList extends Component {
             isLoading: true
         });
         promise            
-        .then(response => {
-            const friends = this.state.friends.slice();
-            this.setState({
-                friends: friends.concat(response),
-                page: response.page,
-                size: response.size,
-                totalElements: response.totalElements,
-                totalPages: response.totalPages,
-                last: response.last,
-                isLoading: false
-            })
-        }).catch(error => {
-            this.setState({
-                isLoading: false
-            })
-        });  
+            .then(response => {
+                const friends = this.state.friends.slice();
+                this.setState({
+                    friends: friends.concat(response),
+                    page: response.page,
+                    size: response.size,
+                    totalElements: response.totalElements,
+                    totalPages: response.totalPages,
+                    last: response.last,
+                    isLoading: false
+                })
+            }).catch(error => {
+                this.setState({
+                    isLoading: false
+                })
+            });  
         
     }
 
@@ -78,7 +79,7 @@ class FriendList extends Component {
     render() {
         return (
             this.state.friends.map(friend => (
-              <People friend={friend} {...this.props}></People>         
+              <FriendContent friend={friend} {...this.props}></FriendContent>         
             ))
         );
     }
