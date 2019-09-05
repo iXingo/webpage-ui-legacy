@@ -1,2 +1,2 @@
-export { default as PostHead } from './PostHead';
-export { default as PostBody } from './PostBody';
+export { default as PostMain } from './PostMain';
+export { default as PostContent } from './PostContent';

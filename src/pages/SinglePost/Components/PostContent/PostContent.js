@@ -90,22 +90,24 @@ const useStyles = makeStyles(theme => ({
         letterSpacing: '0.33px',
         lineHeight: '13px',
         textTransform: 'uppercase'
-      }
-    
+      },
+    root :{
+      marginTop: 20
+    }
 }));
 
 
 
-const PostBody = props => {
+const PostContent = props => {
     const classes = useStyles();
-    console.log(props.post);
     return (
-      <div className={classes} >
-        <ReactMarkdown source={props.post.content}  renderers={{ code: CodeBlock, }}
-                    //    key={props.post.id}   
+      <div className={classes.root} >
+        <ReactMarkdown source={props.post.content}  
+                       renderers={{ code: CodeBlock, }}
+                       key={props.post.id}   
         />
       </div>
     );
 }
 
-export default PostBody;
+export default PostContent;

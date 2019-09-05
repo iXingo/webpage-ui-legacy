@@ -14,6 +14,7 @@ import {
 } from '@material-ui/core';
 
 import { Verify, Tag } from '../../../../components';
+import PostContent from '../PostContent';
 
 
 const useStyles = makeStyles(theme => ({
@@ -187,59 +188,62 @@ const PostHead = props => {
         </div>
         <div className={classes.content}>
             <Grid container className={classes.mainGrid}>
-            {/* Main content */}
-            <Grid item xs={12} md={8} className={classes.singlepost}>
-                <Typography
-                    className={classes.title}
-                    variant="h1"
-                >
-                《我的青春消亡史》之“上海一年”
-                </Typography>
-                <Typography
-                    className={classes.author}
-                    variant="h5"
-                ><strong>本文作者：</strong>
-                <Chip
-                    icon={<FaceIcon />}
-                    label={name}
-                    clickable
-                    className={classes.chip}
-                    color="primary"
-                    deleteIcon={<DoneIcon />}
-                    variant="outlined"
-                />
-                </Typography>
-                
-                 <Typography
-                    className={classes.author}
-                    paragraph
-                 ><strong>作者简介：</strong>
-                 <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar} />  
-                 <strong>  汪欣</strong> <Verify/>&nbsp;&nbsp;南京航空航天大学 软件工程 硕士，现任NVIDIA中国Architect。
-                 </Typography>
+              {/* Main content */}
+              <Grid item xs={12} md={8} className={classes.singlepost}>
+                  <Typography
+                      className={classes.title}
+                      variant="h1"
+                  >
+                  《我的青春消亡史》之“上海一年”
+                  </Typography>
+                  <Typography
+                      className={classes.author}
+                      variant="h5"
+                  ><strong>本文作者：</strong>
+                  <Chip
+                      icon={<FaceIcon />}
+                      label={name}
+                      clickable
+                      className={classes.chip}
+                      color="primary"
+                      deleteIcon={<DoneIcon />}
+                      variant="outlined"
+                  />
+                  </Typography>
+                  
+                  <Typography
+                      className={classes.author}
+                      paragraph
+                  ><strong>作者简介：</strong>
+                  <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar} />  
+                  <strong>  汪欣</strong> <Verify/>&nbsp;&nbsp;南京航空航天大学 软件工程 硕士，现任NVIDIA中国Architect。
+                  </Typography>
+                  <Divider />
+                  <Typography paragraph gutterBottom className={classes.abstrat}><strong>本文摘要：</strong>
+                  站在地铁2号线的轨道线前，来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。
+                  </Typography>
+                  
+                  <Typography variant="h6" gutterBottom className={classes.tags}><strong>本文标签：</strong>
+                  {tags.map(tag => (
+                      <Tag tag={tag}></Tag>
+                  ))}
+                  </Typography>
+                  <Typography
+                      className={classes.tip}
+                      paragraph
+                  ><strong>阅读提示：</strong>全文共 <strong>32546</strong> 字，阅读完毕预计需要 <strong>20</strong> 分钟。
+                  </Typography>
                 <Divider />
-                <Typography paragraph gutterBottom className={classes.abstrat}><strong>本文摘要：</strong>
-                站在地铁2号线的轨道线前，来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。
-                </Typography>
-                
-                <Typography variant="h6" gutterBottom className={classes.tags}><strong>本文标签：</strong>
-                {tags.map(tag => (
-                     <Tag tag={tag}></Tag>
-                ))}
-                </Typography>
-                <Typography
-                    className={classes.tip}
-                    paragraph
-                 ><strong>阅读提示：</strong>全文共 <strong>32546</strong> 字，阅读完毕预计需要 <strong>20</strong> 分钟。
-                 </Typography>
-              <Divider />
-                <Typography
-                    className={classes.posttime}
-                    variant="caption"
-                 ><strong>发布时间：</strong>2019年4月23日21分36秒345毫秒
-                 </Typography>
-                 <Divider />
-            </Grid>
+                  <Typography
+                      className={classes.posttime}
+                      variant="caption"
+                  ><strong>发布时间：</strong>2019年4月23日21分36秒345毫秒
+                  </Typography>
+                  <Divider />
+              </Grid>
+              <Grid item xs={12} md={8} className={classes.singlepost}>
+                  <PostContent post={props.post} {...props}> </PostContent>
+              </Grid>
             </Grid>
         </div>
     </div>

@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import { getPost } from '../../util/APIUtils';
-import { PostBody, PostHead } from './Components';
+import { PostMain } from './Components';
 
 class SinglePost extends Component {
-
-    _isMounted = false;
 
     constructor(props) {
         super(props);
         this.state = {
-            post: [],
+            post: "",
             isLoading: false
         };
         this.loadPost = this.loadPost.bind(this);
@@ -26,14 +24,10 @@ class SinglePost extends Component {
         });
         promise            
         .then(response => {
-            const post = this.state.post.slice();
-            const postResponse = response;
-            if (this._isMounted) {
             this.setState({
-                post: post.concat(postResponse),
+                post: response,
                 isLoading: false
             })
-        }
         }).catch(error => {
             this.setState({
                 isLoading: false
@@ -43,7 +37,6 @@ class SinglePost extends Component {
     }
 
     componentDidMount() {
-      this._isMounted = true;
       if(!this.props.isAuthenticated){
         this.props.loadCurrentUser();
       }
@@ -52,18 +45,11 @@ class SinglePost extends Component {
       
     }
 
-
-    componentWillUnmount() {
-        this._isMounted = false;
-        console.log("Unmount");
-    }
-
-
     componentDidUpdate(nextProps) {
         if(this.props.isAuthenticated !== nextProps.isAuthenticated) {
             // Reset State
             this.setState({
-                post: [],
+                post: "",
                 isLoading: false
             });    
             this.loadPost();
@@ -72,14 +58,9 @@ class SinglePost extends Component {
 
     render() {
         const {post} = this.state;
-        const posts = [];
-        post.map(postResponse => {
-            posts.push(<PostBody post={postResponse} {...this.props}></PostBody>) 
-        })
         return (
             <div>
-            <PostHead></PostHead>
-            {posts}
+            <PostMain post={post} {...this.props}></PostMain>
             </div> 
         );
     }

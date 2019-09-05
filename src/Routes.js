@@ -123,7 +123,7 @@ class Routes extends Component {
         <RouteWithLayout
           component={SinglePostPage}
           exact
-          layout={MainLayout}
+          layout={MinimalLayout}
           path="/post/:id"
           {...this.props}
         />
