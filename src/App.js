@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/styles';
 import validate from 'validate.js';
 import theme from './theme';
@@ -40,7 +40,6 @@ class App extends Component {
   }
 
   loadCurrentUser() {
-    let { history } = this.props;
     this.setState({
       isLoading: true
     });
@@ -51,7 +50,6 @@ class App extends Component {
         isAuthenticated: true,
         isLoading: false
       });
-      history.push("/index");
     }).catch(error => {
       this.setState({
         isLoading: false
@@ -80,28 +78,34 @@ class App extends Component {
   }
 
   handleLogin() {
+    let { history } = this.props;
     notification.success({
       message: '星狗网Web App',
       description: "恭喜您！您已经成功登录。",
     });
     this.loadCurrentUser();
+    if(history.location.pathname !== "/sign-in"){
+      history.push(history.location.pathname);
+    }else{
+      history.push("/index");
+    }
+    console.log(history);
+    // history.go();
   }
 
   render() {
     const { history } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <BrowserRouter history={history}>
-          <Routes isAuthenticated={this.state.isAuthenticated} 
+        <Routes isAuthenticated={this.state.isAuthenticated} 
                   currentUser={this.state.currentUser} 
                   handleLogin={this.handleLogin} 
                   handleLogout={this.handleLogout}
                   loadCurrentUser = {this.loadCurrentUser}
                   {...this.props}/>
-        </BrowserRouter>
       </ThemeProvider>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
