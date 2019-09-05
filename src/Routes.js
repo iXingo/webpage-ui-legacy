@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Switch, Redirect } from 'react-router-dom';
+import { Switch, Redirect, withRouter } from 'react-router-dom';
 import { RouteWithLayout } from './components';
 import { Main as MainLayout, Minimal as MinimalLayout } from './layouts';
 
@@ -32,11 +32,7 @@ class Routes extends Component {
   render () {
     return (
       <Switch>
-        <Redirect
-          exact
-          from="/"
-          to="/sign-in"
-        />
+        
         {/*<RouteWithLayout
           component={DashboardView}
           exact
@@ -79,6 +75,11 @@ class Routes extends Component {
           layout={MainLayout}
           path="/settings"
         /> */ }
+        <Redirect
+          exact
+          from="/"
+          to="/sign-in"
+        />
         <RouteWithLayout
           component={ProductListPage}
           exact
@@ -161,4 +162,4 @@ class Routes extends Component {
   }
 };
 
-export default Routes;
+export default withRouter(Routes);

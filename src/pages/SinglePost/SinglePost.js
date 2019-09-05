@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getPost } from '../../util/APIUtils';
 import { PostMain } from './Components';
 
+
 class SinglePost extends Component {
 
     constructor(props) {
@@ -40,7 +41,7 @@ class SinglePost extends Component {
       if(!this.props.isAuthenticated){
         this.props.loadCurrentUser();
       }
-      const { match: { params } } = this.props;
+      const { computedMatch: { params } } = this.props;
       this.loadPost(params.id);
       
     }
@@ -52,7 +53,8 @@ class SinglePost extends Component {
                 post: "",
                 isLoading: false
             });    
-            this.loadPost();
+            const { computedMatch: { params } } = this.props;
+            this.loadPost(params.id);
         }
     }
 
