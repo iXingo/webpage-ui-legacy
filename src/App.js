@@ -51,7 +51,7 @@ class App extends Component {
         isAuthenticated: true,
         isLoading: false
       });
-      history.push("/blog");
+      history.push("/index");
     }).catch(error => {
       this.setState({
         isLoading: false
