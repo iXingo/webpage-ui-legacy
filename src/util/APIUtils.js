@@ -142,3 +142,11 @@ export function getAllFriends() {
         method: 'GET'
     });
 }
+
+
+export function getPost(id) {
+    return request({
+        url: API_BASE_URL +"/posts/" + id,
+        method: 'GET'
+    });
+}

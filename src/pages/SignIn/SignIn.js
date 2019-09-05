@@ -398,7 +398,7 @@ const SignIn = (props) => {
                     忘记密码?{' '}
                   <Link
                     component={RouterLink}
-                    to="/reset_passwd"
+                    to="/post/7856791868999282688"
                     variant="h6"
                   >
                     找回密码

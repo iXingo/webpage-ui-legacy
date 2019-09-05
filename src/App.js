@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from '@material-ui/styles';
 import validate from 'validate.js';
-
 import theme from './theme';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import './assets/scss/index.scss';
@@ -92,15 +91,14 @@ class App extends Component {
     const { history } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <Router history={history}>
+        <BrowserRouter history={history}>
           <Routes isAuthenticated={this.state.isAuthenticated} 
                   currentUser={this.state.currentUser} 
                   handleLogin={this.handleLogin} 
                   handleLogout={this.handleLogout}
                   loadCurrentUser = {this.loadCurrentUser}
-                  
                   {...this.props}/>
-        </Router>
+        </BrowserRouter>
       </ThemeProvider>
     );
   }
