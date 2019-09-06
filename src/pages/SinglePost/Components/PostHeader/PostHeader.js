@@ -121,7 +121,7 @@ const useStyles = makeStyles(theme => ({
     },
     post:{
         paddingTop: 20
-    }
+    },
   }));
 
 

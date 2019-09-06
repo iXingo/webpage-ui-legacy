@@ -2,6 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
+    root: {
+        paddingRight: 10,
+    },
     verified: {
         display: 'inline-block',
         backgroundImage: 'url(/images/icon/icon.png)',
@@ -20,7 +23,7 @@ const Verify = props => {
     const classes = useStyles();
   
     return (
-        <a target="_blank" href="//verified.weibo.com/verify">
+        <a target="_blank" href="//verified.weibo.com/verify" className={classes.root}>
             <i title="星狗网认证作者" className={classes.verified}>
             </i>
         </a>

@@ -40,6 +40,7 @@ class App extends Component {
   }
 
   loadCurrentUser() {
+    let { history } = this.props;
     this.setState({
       isLoading: true
     });
@@ -52,8 +53,9 @@ class App extends Component {
       });
     }).catch(error => {
       this.setState({
-        isLoading: false
-      });  
+        isLoading: false,
+      });
+      history.push("/not-found"); 
     });
   }
 

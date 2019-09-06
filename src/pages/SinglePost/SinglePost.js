@@ -17,6 +17,7 @@ class SinglePost extends Component {
 
     loadPost(id) {
         let promise = getPost(id);
+        let { history } = this.props;
         if(!promise) {
             return;
         }
@@ -28,11 +29,15 @@ class SinglePost extends Component {
             this.setState({
                 post: response,
                 isLoading: false
-            })
+            });
+            if(response.code == 400){
+                history.push("/not-found"); 
+            }
         }).catch(error => {
             this.setState({
                 isLoading: false
-            })
+            }),
+            history.push("/not-found"); 
         });  
         
     }
