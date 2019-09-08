@@ -143,7 +143,7 @@ const RestPasswd = props => {
                     className={classes.bio}
                     variant="body2"
                 >
-                    Designed by Shawn Wang in Pudong New Area
+                    Designed by Shawn Wang in Pudong New Area.
                 </Typography>
                 </div>
             </div>
