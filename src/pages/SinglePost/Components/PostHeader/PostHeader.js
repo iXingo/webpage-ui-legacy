@@ -128,7 +128,6 @@ const useStyles = makeStyles(theme => ({
 const PostHeader = props => {
 
     const { history, post } = props;
-    const { createdBy } = props.post;
     const classes = useStyles();
 
     if(!props.post.createdBy) return <Instagram />;
@@ -137,7 +136,7 @@ const PostHeader = props => {
                 <Typography className={classes.title} variant="h1">
                       {props.post.title}
                 </Typography>
-                <Typography className={classes.author} variant="h5">
+                {/* <Typography className={classes.author} variant="h5">
                       <strong>本文作者：</strong>
                   <Chip
                       icon={<FaceIcon />}
@@ -148,7 +147,7 @@ const PostHeader = props => {
                       deleteIcon={<DoneIcon />}
                       variant="outlined"
                   />
-                </Typography>
+                </Typography> */}
                   
                 <Typography className={classes.author} paragraph>
                       <strong>作者简介：</strong>
@@ -169,7 +168,7 @@ const PostHeader = props => {
                 </Typography>
                 <Divider />
                 <Typography className={classes.posttime}variant="caption">
-                  <strong>发布时间：</strong>{props.post.creationDateTime}
+                  作者使用{props.post.source}于格林威治时间<strong>{props.post.creationDateTime}</strong>发布。
                 </Typography>
             <Divider />
         </div>
