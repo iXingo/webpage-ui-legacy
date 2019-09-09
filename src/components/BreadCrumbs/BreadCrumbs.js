@@ -34,21 +34,13 @@ const Breadcrumbs = props => {
     <Paper elevation={0} className={classes.root}>
       <Breadcrumbs aria-label="breadcrumb">
         <Link color="inherit" href="/" onClick={handleClick} className={classes.link}>
-          <HomeIcon className={classes.icon} />
-          星狗网
+          <HomeIcon className={classes.icon} />星狗网
         </Link>
-        <Link
-          color="inherit"
-          href="/getting-started/installation/"
-          onClick={handleClick}
-          className={classes.link}
-        >
-          <WhatshotIcon className={classes.icon} />
-          博客
+        <Link color="inherit" href="/getting-started/installation/" onClick={handleClick} className={classes.link}>
+          <WhatshotIcon className={classes.icon} />博客
         </Link>
         <Typography color="textPrimary" className={classes.link}>
-          <GrainIcon className={classes.icon} />
-           文章
+          <GrainIcon className={classes.icon} />文章
         </Typography>
       </Breadcrumbs>
     </Paper>

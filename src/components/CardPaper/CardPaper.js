@@ -153,34 +153,14 @@ const CardPaper = props => {
     <React.Fragment>
       <div className={classes.root}>
         <div className={classes.quote}>
-            <div className={classes.quoteInner}>
-                <Typography
-                className={classes.quoteText}
-                variant="h1"
-                >
-                汪师傅:
-                </Typography>
-                <Typography
-                className={classes.quoteText}
-                variant="h1"
-                >
-                看见，好时光
-                </Typography>
-                <div className={classes.person}>
-                <Typography
-                    className={classes.name}
-                    variant="body1"
-                >
-                    &copy;Copyright 2019
-                </Typography>
-                <Typography
-                    className={classes.bio}
-                    variant="body2"
-                >
-                    Designed by Shawn Wang in Pudong New Area
-                </Typography>
-                </div>
+          <div className={classes.quoteInner}>
+            <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
+            <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
+            <div className={classes.person}>
+              <Typography className={classes.name} variant="body1">&copy;Copyright 2019</Typography>
+              <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area</Typography>
             </div>
+          </div>
         </div>
         <div className={classes.content}>
           <HeaderUnit />
@@ -207,28 +187,18 @@ const CardPaper = props => {
             <CardActionArea component="a" href="#">
               <Card className={classes.card}>
                 <Hidden xsDown>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                  />
+                  <CardMedia className={classes.cardMedia} image="https://source.unsplash.com/random" title="Image title"/>
                 </Hidden>
                 <div className={classes.cardDetails}>
                   <CardContent>
-                    <Typography component="h1" variant="h5">
-                      标题
-                </Typography>
-                    <Typography variant="subtitle2" paragraph color="textSecondary">
-                      2019年8月3日
-                </Typography>
+                    <Typography component="h1" variant="h5">标题</Typography>
+                    <Typography variant="subtitle2" paragraph color="textSecondary">2019年8月3日</Typography>
                     <Typography variant="subtitle2" paragraph>
                       2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。
                       这些年折折腾腾，也没搞出来，当然也没写出什么有意思的东西。
                       今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。
-                </Typography>
-                    <Typography variant="subtitle2" color="primary" className={classes.read}>
-                      继续阅读...
-                </Typography>
+                    </Typography>
+                    <Typography variant="subtitle2" color="primary" className={classes.read}>继续阅读...</Typography>
                   </CardContent>
                 </div>
               </Card>
