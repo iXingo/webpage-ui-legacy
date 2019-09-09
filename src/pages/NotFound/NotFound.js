@@ -5,7 +5,7 @@ import { Grid, Typography } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   root: {
     padding: theme.spacing(4),
-    height: '80vh'
+    height: 720
   },
   content: {
     paddingTop: 150,
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 50,
     display: 'inline-block',
     maxWidth: '100%',
-    width: 560
+    height: 400
   }
 }));
 
