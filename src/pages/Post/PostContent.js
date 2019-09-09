@@ -97,14 +97,12 @@ const useStyles = makeStyles(theme => ({
 
 
 const PostContent = props => {
-    const classes = useStyles();
-    return (
-      <div className={classes} >
-        <ReactMarkdown source={props.post.content}  renderers={{ code: CodeBlock, }}
-                       key={props.post.id}   
-        />
-      </div>
-    );
+  const classes = useStyles();
+  return (
+    <div className={classes} >
+      <ReactMarkdown source={props.post.content}  renderers={{ code: CodeBlock, }} key={props.post.id} />
+    </div>
+  );
 }
 
 export default PostContent;
