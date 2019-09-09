@@ -55,7 +55,7 @@ class App extends Component {
       this.setState({
         isLoading: false,
       });
-      history.push("/not-found"); 
+      history.push("/sign-in"); 
     });
   }
 

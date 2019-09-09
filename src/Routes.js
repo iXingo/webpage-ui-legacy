@@ -14,6 +14,7 @@ import {
   SignUp as SignUpPage,
   SignIn as SignInPage,
   NotFound as NotFoundPage,
+  NotAuth as NotAuthPage,
   Agreement as AgreementPage,
   ProductList as ProductListPage,
   ResetPasswd as ResetPasswdPage,
@@ -154,6 +155,13 @@ class Routes extends Component {
           exact
           layout={MinimalLayout}
           path="/friends"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={NotAuthPage}
+          exact
+          layout={MinimalLayout}
+          path="/please-login"
           {...this.props}
         />
         <Redirect to="/not-found" /> 

@@ -7,5 +7,7 @@ export { default as ProductList } from './ProductList';
 export { default as ResetPasswd } from './ResetPasswd';
 export { default as SinglePost } from './SinglePost';
 export { default as Friend } from './Friend';
+export { default as NotAuth } from './NotAuth';
+
 
 // export { default as Dashboard } from './Dashboard';
