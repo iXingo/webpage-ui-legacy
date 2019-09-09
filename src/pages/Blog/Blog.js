@@ -243,20 +243,14 @@ const Blog = props => {
                   <Card className={classes.card}>
                     <div className={classes.cardDetails}>
                       <CardContent>
-                        <Typography component="h2" variant="h5">
-                          {post.title}
-                        </Typography>
+                        <Typography component="h2" variant="h5">{post.title}</Typography>
                         <Typography variant="subtitle1" color="textSecondary">
-                        <div className={classes.tips}>
-                          <DateRangeIcon className={classes.icon} />{post.date}
-                        </div>
+                          <div className={classes.tips}>
+                            <DateRangeIcon className={classes.icon} />{post.date}
+                          </div>
                         </Typography>
-                        <Typography variant="subtitle1" paragraph>
-                          {post.description}
-                        </Typography>
-                        <Typography variant="subtitle1" color="primary">
-                          查看全文...
-                        </Typography>
+                        <Typography variant="subtitle1" paragraph>{post.description}</Typography>
+                        <Typography variant="subtitle1" color="primary">查看全文...</Typography>
                       </CardContent>
                     </div>
                     <Hidden xsDown>

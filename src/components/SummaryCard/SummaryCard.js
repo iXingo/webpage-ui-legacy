@@ -58,9 +58,7 @@ const SummaryCard = props => {
     <Card className={classes.card}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            汪欣
-          </Avatar>
+          <Avatar aria-label="recipe" className={classes.avatar}>汪欣</Avatar>
         }
         action={
           <IconButton aria-label="settings">
@@ -70,11 +68,7 @@ const SummaryCard = props => {
         title="我的青春消亡史"
         subheader="2016年8月12日"
       />
-      <CardMedia
-        className={classes.media}
-        image="/images/sign/sign-in.jpeg"
-        title="Paella dish"
-      />
+      <CardMedia className={classes.media} image="/images/sign/sign-in.jpeg" title="Paella dish"/>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           This impressive paella is a perfect party dish and a fun meal to cook together with your
@@ -82,12 +76,8 @@ const SummaryCard = props => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="收藏">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="分享">
-          <ShareIcon />
-        </IconButton>
+        <IconButton aria-label="收藏"><FavoriteIcon /></IconButton>
+        <IconButton aria-label="分享"><ShareIcon /></IconButton>
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
@@ -103,8 +93,7 @@ const SummaryCard = props => {
         <CardContent>
           <Typography paragraph>Method:</Typography>
           <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
+            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10minutes.
           </Typography>
           <Typography paragraph>
             Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high

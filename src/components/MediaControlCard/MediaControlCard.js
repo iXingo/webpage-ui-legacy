@@ -43,12 +43,8 @@ export default function                                                         
     <Card className={classes.card}>
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5">
-            Live From Space
-          </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            Mac Miller
-          </Typography>
+          <Typography component="h5" variant="h5">Live From Space</Typography>
+          <Typography variant="subtitle1" color="textSecondary">Mac Miller</Typography>
         </CardContent>
         <div className={classes.controls}>
           <IconButton aria-label="previous">
