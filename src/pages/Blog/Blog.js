@@ -24,6 +24,7 @@ import PostCard from '../../components/PostCard'
 import SummaryCard from '../../components/SummaryCard';
 import Subscribe from '../../components/Subscribe';
 import { Verify, Tag } from '../../components';
+import NotAuth from '../NotAuth';
 
 
 
@@ -165,6 +166,7 @@ const Blog = props => {
 
   const classes = useStyles();
 
+  if(!props.isAuthenticated) return <NotAuth />;
   return (
     <React.Fragment>
       <CssBaseline />

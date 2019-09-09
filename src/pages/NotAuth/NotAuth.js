@@ -47,7 +47,7 @@ const NotFound = () => {
             <img
               alt="Please login"
               className={classes.image}
-              src="/images/undraw_page_not_found_su7k.svg"
+              src="/images/img/undraw_coding_6mjf.svg"
             />
           </div>
         </Grid>

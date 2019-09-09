@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Topbar = props => {
-  const { className, onSidebarOpen, ...rest } = props;
+  const { className, onSidebarOpen, handleLogout, ...rest } = props;
 
   const classes = useStyles();
 
@@ -86,7 +86,7 @@ const Topbar = props => {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="星狗一下             你就知道"
+              placeholder="星狗一下               你就知道"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
@@ -106,6 +106,7 @@ const Topbar = props => {
           <IconButton
             className={classes.signOutButton}
             color="inherit"
+            onClick={handleLogout}
           >
             <InputIcon />
           </IconButton>
