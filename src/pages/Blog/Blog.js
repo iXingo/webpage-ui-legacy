@@ -23,6 +23,7 @@ import Post from '../Post';
 import PostCard from '../../components/PostCard'
 import SummaryCard from '../../components/SummaryCard';
 import Subscribe from '../../components/Subscribe';
+import Carousel from '../../components/Carousel';
 import { Verify, Tag } from '../../components';
 import NotAuth from '../NotAuth';
 
@@ -233,6 +234,7 @@ const Blog = props => {
               </Grid>
             </Grid>
           </Paper>
+          <Carousel></Carousel>
           {/* End main featured post */}
           <PostCard />
           {/* Sub featured posts */}

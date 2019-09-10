@@ -164,8 +164,8 @@ const PostHeader = props => {
           <strong>阅读提示：</strong>全文共 <strong>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.post.readTime}</strong> 分钟。
         </Typography>
         <Divider />
-        <Typography className={classes.posttime}variant="caption">
-          作者使用{props.post.source}于格林威治时间<strong>{props.post.creationDateTime}</strong>发布。
+        <Typography className={classes.posttime} variant="caption">
+          作者<strong>{props.post.createdBy.name}</strong>使用<strong>{props.post.source}</strong>发表于格林威治时间<strong>{props.post.creationDateTime}</strong>。
         </Typography>
         <Divider />
       </div>
