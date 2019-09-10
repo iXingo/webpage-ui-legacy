@@ -136,15 +136,15 @@ const PostHeader = props => {
           {props.post.title}
         </Typography>
         <Typography className={classes.author} variant="h5">
-              <strong>本文作者：</strong>
+          <strong>本文作者：</strong>
           <Chip
-              icon={<FaceIcon />}
-              label={props.post.createdBy.name}
-              clickable
-              className={classes.chip}
-              color="primary"
-              deleteIcon={<DoneIcon />}
-              variant="outlined"
+            icon={<FaceIcon />}
+            label={props.post.createdBy.name}
+            clickable
+            className={classes.chip}
+            color="primary"
+            deleteIcon={<DoneIcon />}
+            variant="outlined"
           />
         </Typography>         
         <Typography className={classes.author} paragraph>
