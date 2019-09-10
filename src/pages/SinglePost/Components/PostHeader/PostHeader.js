@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundImage: 'url(/images/blog/UNADJUSTEDNONRAW_thumb_f6f.jpg)',
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center'
@@ -149,7 +148,7 @@ const PostHeader = props => {
         </Typography>         
         <Typography className={classes.author} paragraph>
           <strong>作者简介：</strong>
-          <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar} />  
+          <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar} />  
           <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
         </Typography>
         <Divider />

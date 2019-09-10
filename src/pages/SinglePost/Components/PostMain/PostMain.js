@@ -143,7 +143,7 @@ const PostHead = props => {
 
   return (
     <div className={classes.root}>
-        <div className={classes.quote}>
+        <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
             <div className={classes.quoteInner}>
                 <Typography
                 className={classes.quoteText}
