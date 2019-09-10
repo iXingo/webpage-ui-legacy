@@ -129,12 +129,11 @@ const PostHeader = props => {
 
     const { history, post } = props;
     const classes = useStyles();
-
     if(!props.post.createdBy) return <Instagram />;
     return (
         <div>
                 <Typography className={classes.title} variant="h1">
-                      {props.post.title}
+                  {props.post.title}
                 </Typography>
                 {/* <Typography className={classes.author} variant="h5">
                       <strong>本文作者：</strong>
@@ -150,9 +149,9 @@ const PostHeader = props => {
                 </Typography> */}
                   
                 <Typography className={classes.author} paragraph>
-                      <strong>作者简介：</strong>
-                      <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar} />  
-                      <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
+                  <strong>作者简介：</strong>
+                  <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar} />  
+                  <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
                 </Typography>
                 <Divider />
                 <Typography paragraph gutterBottom className={classes.abstrat}><strong>本文摘要：</strong>
@@ -160,7 +159,7 @@ const PostHeader = props => {
                 </Typography> 
                 <Typography variant="h6" gutterBottom className={classes.tags}><strong>本文标签：</strong>
                   {props.post.tags.map(tag => (
-                      <Tag tag={tag}></Tag>
+                    <Tag tag={tag}></Tag>
                   ))}
                 </Typography>
                 <Typography className={classes.tip} paragraph>
