@@ -143,47 +143,27 @@ const PostHead = props => {
 
   return (
     <div className={classes.root}>
-        <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
-            <div className={classes.quoteInner}>
-                <Typography
-                className={classes.quoteText}
-                variant="h1"
-                >
-                汪师傅:
-                </Typography>
-                <Typography
-                className={classes.quoteText}
-                variant="h1"
-                >
-                看见，好时光
-                </Typography>
-                <div className={classes.person}>
-                <Typography
-                    className={classes.name}
-                    variant="body1"
-                >
-                    &copy; Copyright 2019
-                </Typography>
-                <Typography
-                    className={classes.bio}
-                    variant="body2"
-                >
-                    Designed by Shawn Wang in Pudong New Area
-                </Typography>
-                </div>
-            </div>
+      <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
+        <div className={classes.quoteInner}>
+          <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
+          <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
+          <div className={classes.person}>
+            <Typography className={classes.name} variant="body1">&copy; Copyright 2019</Typography>
+            <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area</Typography>
+          </div>
         </div>
-        <div className={classes.content}>
-            <Grid container className={classes.mainGrid}>
-              {/* Main content */}
-              <Grid item xs={12} md={8} className={classes.singlepost}>
-                  <PostHeader post={props.post} {...props}></PostHeader>
-              </Grid>
-              <Grid item xs={12} md={8} className={classes.singlepost}>
-                  <PostContent post={props.post} {...props}> </PostContent>
-              </Grid>
-            </Grid>
-        </div>
+      </div>
+      <div className={classes.content}>
+        <Grid container className={classes.mainGrid}>
+          {/* Main content */}
+          <Grid item xs={12} md={8} className={classes.singlepost}>
+            <PostHeader post={props.post} {...props}></PostHeader>
+          </Grid>
+          <Grid item xs={12} md={8} className={classes.singlepost}>
+            <PostContent post={props.post} {...props}> </PostContent>
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 };
