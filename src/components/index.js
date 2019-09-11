@@ -9,4 +9,5 @@ export { default as SummaryCard } from './SummaryCard';
 export { default as Subscribe } from './Subscribe';
 export { default as Verify } from './Verify';
 export { default as Tag } from './Tag';
+export { default as MarqueeText } from './MarqueeText';
 export { default as Carousel } from './Carousel';

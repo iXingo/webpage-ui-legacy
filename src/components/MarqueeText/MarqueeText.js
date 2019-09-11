@@ -1,5 +1,7 @@
 import Marquee from 'react-marquee';
 import React from 'react';
+import { makeStyles } from '@material-ui/styles';
+
 
 const useStyles = makeStyles(theme => ({
     marque: {
