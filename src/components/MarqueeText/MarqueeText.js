@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => ({
         height: theme.spacing(3),
         textAlign: 'center',
         justifyContent : 'center',
+        height: 18
     }
   }));
 
