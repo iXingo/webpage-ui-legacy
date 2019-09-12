@@ -13,27 +13,27 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: '我的青春消亡史',
     imgPath:
       'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
   },
   {
-    label: 'Bird',
+    label: 'Python讲解',
     imgPath:
       'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
   },
   {
-    label: 'Bali, Indonesia',
+    label: '测试文章',
     imgPath:
       'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
   },
   {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
+    label: '每个人',
     imgPath:
       'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
   },
   {
-    label: 'Goč, Serbia',
+    label: '这实验室',
     imgPath:
       'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
   },
@@ -49,10 +49,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: 50,
     paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: '#3f51b5',
   },
   img: {
-    height: '100%',
+    height: 360,
     display: 'block',
     // maxWidth: 400,
     overflow: 'hidden',
@@ -80,9 +80,7 @@ function Carousel() {
 
   return (
     <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
-      </Paper>
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -97,6 +95,9 @@ function Carousel() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+      <Paper square elevation={0} className={classes.header}>
+        <Typography variant="h1"style={{color: 'white'}}>{tutorialSteps[activeStep].label}</Typography>
+      </Paper>
       <MobileStepper
         steps={maxSteps}
         position="static"

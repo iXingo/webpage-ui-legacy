@@ -206,6 +206,7 @@ const Blog = props => {
         </Toolbar>
         <main>
           {/* Main featured post */}
+          <Carousel></Carousel>
           <Paper className={classes.mainFeaturedPost}>
             {/* Increase the priority of the hero background image */}
             {
@@ -234,7 +235,7 @@ const Blog = props => {
               </Grid>
             </Grid>
           </Paper>
-          <Carousel></Carousel>
+          
           {/* End main featured post */}
           <PostCard />
           {/* Sub featured posts */}
