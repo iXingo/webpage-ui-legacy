@@ -160,7 +160,7 @@ class Routes extends Component {
         <RouteWithLayout
           component={NotAuthPage}
           exact
-          layout={MinimalLayout}
+          layout={MainLayout}
           path="/please-login"
           {...this.props}
         />

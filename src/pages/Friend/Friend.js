@@ -4,6 +4,7 @@ import FriendHead from './Components/FriendHead';
 import FriendList from './Components/FriendList';
 import { mergeClasses } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
+import NotAuth from '../NotAuth';
 
 const useStyles = makeStyles(theme => ({
   root:{
@@ -16,6 +17,7 @@ const useStyles = makeStyles(theme => ({
 const Friend = props => {
 
   const classes = useStyles();
+  if(!props.isAuthenticated) return <NotAuth />;
 
   return (
     <div>

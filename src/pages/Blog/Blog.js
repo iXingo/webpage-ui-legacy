@@ -26,6 +26,8 @@ import Subscribe from '../../components/Subscribe';
 import Carousel from '../../components/Carousel';
 import { Verify, Tag } from '../../components';
 import NotAuth from '../NotAuth';
+import { MarqueeText }  from '../../components';
+
 
 
 
@@ -205,6 +207,7 @@ const Blog = props => {
           ))}
         </Toolbar>
         <main>
+          <MarqueeText></MarqueeText>
           {/* Main featured post */}
           <Carousel></Carousel>
           <Paper className={classes.mainFeaturedPost}>
