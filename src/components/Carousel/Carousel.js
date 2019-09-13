@@ -52,11 +52,14 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#3f51b5',
   },
   img: {
-    height: 360,
+    // height: 360,
     display: 'block',
     // maxWidth: 400,
     overflow: 'hidden',
     // width: '100%',
+    width: '100%', 
+    height: 'auto',
+    maxWidth: '100%',
   },
 }));
 
