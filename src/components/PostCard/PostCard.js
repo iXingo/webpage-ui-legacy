@@ -117,7 +117,7 @@ const PostCard = props => {
               </Hidden>
               <div className={classes.cardDetails}>
                 <CardContent>
-                <Typography component="h1" variant="h3">我的青春消亡史之上海一年</Typography>
+                <Typography component="h1" variant="h3" style={{color:'#3f51b5'}}>我的青春消亡史之上海一年</Typography>
                 <Typography variant="subtitle2" paragraph color="textSecondary">2019年8月3日</Typography>
                 <Typography variant="subtitle2" paragraph>
                     2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。
