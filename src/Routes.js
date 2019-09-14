@@ -153,7 +153,7 @@ class Routes extends Component {
         <RouteWithLayout
           component={FriendPage}
           exact
-          layout={MinimalLayout}
+          layout={MainLayout}
           path="/friends"
           {...this.props}
         />

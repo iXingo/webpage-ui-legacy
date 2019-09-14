@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
-import PostContent from '../PostContent';
-import PostHeader from '../PostHeader';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -120,7 +119,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const PostHead = props => {
+const Profile = props => {
 
   const { history } = props;
   const classes = useStyles();
@@ -142,23 +141,12 @@ const PostHead = props => {
           </div>
         </div>
       </div>
-      <div className={classes.content}>
-        <Grid container className={classes.mainGrid}>
-          {/* Main content */}
-          <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostHeader post={props.post} {...props}></PostHeader>
-          </Grid>
-          <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostContent post={props.post} {...props}> </PostContent>
-          </Grid>
-        </Grid>
-      </div>
     </div>
   );
 };
 
-PostHead.propTypes = {
+Profile.propTypes = {
   history: PropTypes.object
 };
 
-export default PostHead;
+export default Profile;

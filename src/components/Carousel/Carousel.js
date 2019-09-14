@@ -15,7 +15,7 @@ const tutorialSteps = [
   {
     label: '我的青春消亡史',
     imgPath:
-      'http://localhost:3000/images/banner/banner.png',
+      'http://localhost:3000/images/banner/wangxin.png',
   },
   {
     label: 'Python讲解',

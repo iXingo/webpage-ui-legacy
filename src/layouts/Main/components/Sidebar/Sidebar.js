@@ -44,7 +44,7 @@ const Sidebar = props => {
   const pages = [
     
     {
-      title: '博    客',
+      title: '首    页',
       href: '/index',
       icon: <EventNoteIcon />
     },

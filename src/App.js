@@ -11,6 +11,7 @@ import Routes from './Routes';
 import { getCurrentUser } from './util/APIUtils';
 import { ACCESS_TOKEN } from './constants';
 import { notification } from 'antd';
+import { ScrollToTop} from './common'
 
 
 validate.validators = {
@@ -99,12 +100,14 @@ class App extends Component {
     const { history } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <Routes isAuthenticated={this.state.isAuthenticated} 
-                  currentUser={this.state.currentUser} 
-                  handleLogin={this.handleLogin} 
-                  handleLogout={this.handleLogout}
-                  loadCurrentUser = {this.loadCurrentUser}
-                  {...this.props}/>
+        <ScrollToTop>
+          <Routes isAuthenticated={this.state.isAuthenticated} 
+                    currentUser={this.state.currentUser} 
+                    handleLogin={this.handleLogin} 
+                    handleLogout={this.handleLogout}
+                    loadCurrentUser = {this.loadCurrentUser}
+                    {...this.props}/>
+        </ScrollToTop>
       </ThemeProvider>
     );
   }

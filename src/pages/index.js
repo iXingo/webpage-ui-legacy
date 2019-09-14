@@ -8,6 +8,7 @@ export { default as ResetPasswd } from './ResetPasswd';
 export { default as SinglePost } from './SinglePost';
 export { default as Friend } from './Friend';
 export { default as NotAuth } from './NotAuth';
+export { default as Profile } from './Profile';
 
 
 // export { default as Dashboard } from './Dashboard';
