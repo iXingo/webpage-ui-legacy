@@ -15,27 +15,27 @@ const tutorialSteps = [
   {
     label: '我的青春消亡史',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/600x200/?text=Loading...1',
   },
   {
     label: 'Python讲解',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/600x200/?text=https://xindog.com2',
   },
   {
     label: '测试文章',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+      'https://via.placeholder.com/600x200/?text=Loading...3',
   },
   {
     label: '每个人',
     imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/600x200/?text=https://xindog.com4',
   },
   {
     label: '这实验室',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://via.placeholder.com/600x200/?text=Loading...5',
   },
 ];
 
@@ -43,13 +43,15 @@ const useStyles = makeStyles(theme => ({
   root: {
     maxWidth: '100%',
     flexGrow: 1,
+    paddingBottom: 24,
   },
   header: {
     display: 'flex',
     alignItems: 'center',
-    height: 50,
+    height: 36,
     paddingLeft: theme.spacing(4),
     backgroundColor: '#3f51b5',
+    justifyContent: 'space-between'
   },
   img: {
     // height: 360,
@@ -61,6 +63,12 @@ const useStyles = makeStyles(theme => ({
     height: 'auto',
     maxWidth: '100%',
   },
+  button: {
+    width: 210,
+    backgroundColor: '#3f51b5',
+    color: 'white',
+    height: '100%',
+  }
 }));
 
 function Carousel() {
@@ -99,26 +107,28 @@ function Carousel() {
         ))}
       </AutoPlaySwipeableViews>
       <Paper square elevation={0} className={classes.header}>
-        <Typography variant="h1"style={{color: 'white'}}>{tutorialSteps[activeStep].label}</Typography>
-      </Paper>
-      <MobileStepper
+        <Typography style={{color: 'white'}}>{tutorialSteps[activeStep].label}</Typography>
+        <MobileStepper
         steps={maxSteps}
         position="static"
         variant="text"
         activeStep={activeStep}
+        className={classes.button}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
+          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} style={{color: 'white'}}>
             下一个
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+          <Button size="small" onClick={handleBack} disabled={activeStep === 0} style={{color: 'white'}}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
             上一个
           </Button>
         }
       />
+      </Paper>
+      
     </div>
   );
 }

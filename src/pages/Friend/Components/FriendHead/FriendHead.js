@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
   },
   headimage: {
-    height: 450,
+    height: 320,
     backgroundImage : 'url(images/img/undraw_programming_2svr.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPositionX: 'center',
