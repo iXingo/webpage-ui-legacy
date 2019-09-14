@@ -37,6 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbarTitle: {
     flex: 1,
+    color: '#3f51b5'
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
@@ -163,7 +164,7 @@ const social = ['GitHub', 'Twitter', 'Facebook'];
 // const posts = [];
 
 
-const Blog = props => {
+const Home = props => {
 
   const classes = useStyles();
 
@@ -177,7 +178,7 @@ const Blog = props => {
           <Subscribe />
           <Typography
             component="h2"
-            variant="h5"
+            variant="h4"
             color="inherit"
             align="center"
             noWrap
@@ -342,4 +343,4 @@ const Blog = props => {
 };
 
 
-export default withRouter(Blog);
+export default withRouter(Home);

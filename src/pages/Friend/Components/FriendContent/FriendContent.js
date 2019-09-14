@@ -8,6 +8,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 const useStyles = makeStyles(theme => ({
     root:{
@@ -90,6 +95,14 @@ const useStyles = makeStyles(theme => ({
   const People = props => {
     const classes = useStyles();
     const { friend } = props;
+
+    const [open, setOpen] = React.useState(false);
+    const handleClickOpen = () => {
+      setOpen(true);
+    };
+    const handleClose = () => {
+      setOpen(false);
+    };
     return (
       <div className ={classes.root}>
         <Card className={classes.card}>
@@ -107,10 +120,35 @@ const useStyles = makeStyles(theme => ({
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.button}>
-            <Button size="small" color="primary">查看</Button>
+            <Button size="small" color="primary" onClick={handleClickOpen}>查看</Button>
             <Button size="small" color="primary">分享</Button>
           </CardActions>
         </Card>
+        <div>
+          <div>
+            <Dialog
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">{"好友"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  您暂时没有权限查看这篇博文。
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose} color="primary">
+                  知道了
+                </Button>
+                <Button onClick={handleClose} color="primary" autoFocus>
+                  取消
+                </Button>
+              </DialogActions>
+            </Dialog>
+          </div>
+        </div>
       </div>
     );
   }

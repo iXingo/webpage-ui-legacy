@@ -15,27 +15,27 @@ const tutorialSteps = [
   {
     label: '我的青春消亡史',
     imgPath:
-      'https://via.placeholder.com/600x200/?text=Loading...1',
+      'http://localhost:3000/images/banner/banner.png',
   },
   {
     label: 'Python讲解',
     imgPath:
-      'https://via.placeholder.com/600x200/?text=https://xindog.com2',
+      'http://localhost:3000/images/banner/shanghai.png',
   },
   {
     label: '测试文章',
     imgPath:
-      'https://via.placeholder.com/600x200/?text=Loading...3',
+      'http://localhost:3000/images/banner/shanghai2.png',
   },
   {
     label: '每个人',
     imgPath:
-      'https://via.placeholder.com/600x200/?text=https://xindog.com4',
+      'http://localhost:3000/images/banner/friends.png',
   },
   {
     label: '这实验室',
     imgPath:
-      'https://via.placeholder.com/600x200/?text=Loading...5',
+      'http://localhost:3000/images/banner/apian.png',
   },
 ];
 
@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '100%',
   },
   button: {
-    width: 210,
+    width: 200,
     backgroundColor: '#3f51b5',
     color: 'white',
     height: '100%',
@@ -88,6 +88,9 @@ function Carousel() {
   function handleStepChange(step) {
     setActiveStep(step);
   }
+  function clickImg(){
+    alert("这是一个图片！");
+  }
 
   return (
     <div className={classes.root}>
@@ -101,7 +104,7 @@ function Carousel() {
         {tutorialSteps.map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <img className={classes.img} src={step.imgPath} alt={step.label} />
+              <img className={classes.img} src={step.imgPath} alt={step.label} onClick={clickImg}/>
             ) : null}
           </div>
         ))}
@@ -116,14 +119,14 @@ function Carousel() {
         className={classes.button}
         nextButton={
           <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1} style={{color: 'white'}}>
-            下一个
+            前进
             {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
           </Button>
         }
         backButton={
           <Button size="small" onClick={handleBack} disabled={activeStep === 0} style={{color: 'white'}}>
             {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            上一个
+            后退
           </Button>
         }
       />

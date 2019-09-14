@@ -20,7 +20,7 @@ import {
   ResetPasswd as ResetPasswdPage,
   SinglePost as SinglePostPage,
   Friend as FriendPage,
-  Blog as BlogPage
+  Home as HomePage
 } from './pages';
 import { CardPaper as CardPage} from './components';
 import { Album as AlbumPage} from './components';
@@ -102,7 +102,7 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={BlogPage}
+          component={HomePage}
           exact
           layout={MainLayout}
           path="/index"
