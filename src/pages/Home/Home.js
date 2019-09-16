@@ -18,13 +18,12 @@ import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import Post from '../Post';
 import PostCard from '../../components/PostCard'
 import SummaryCard from '../../components/SummaryCard';
 import Subscribe from '../../components/Subscribe';
 import Carousel from '../../components/Carousel';
-import { Verify, Tag } from '../../components';
 import NotAuth from '../NotAuth';
 import { MarqueeText }  from '../../components';
 

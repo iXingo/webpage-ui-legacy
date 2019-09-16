@@ -122,13 +122,7 @@ const useStyles = makeStyles(theme => ({
 
 const PostHead = props => {
 
-  const { history } = props;
   const classes = useStyles();
-
-  const handleBack = () => {
-    history.goBack();
-  };
-
 
   return (
     <div className={classes.root}>

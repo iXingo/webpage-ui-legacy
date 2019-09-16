@@ -145,7 +145,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const CardPaper = props => {
-  const { className, size, color, ...rest } = props;
 
   const classes = useStyles();
 

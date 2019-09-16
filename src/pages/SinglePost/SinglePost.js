@@ -30,13 +30,13 @@ class SinglePost extends Component {
                 post: response,
                 isLoading: false
             });
-            if(response.code == 400){
+            if(response.code === 400){
                 history.push("/not-found"); 
             }
         }).catch(error => {
             this.setState({
                 isLoading: false
-            }),
+            });
             history.push("/not-found"); 
         });  
         

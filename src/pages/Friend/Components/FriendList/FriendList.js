@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { getAllFriends } from '../../../../util/APIUtils';
 import FriendContent from '../FriendContent';
-import { mergeClasses } from '@material-ui/styles';
 
 class FriendList extends Component {
 

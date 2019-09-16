@@ -100,10 +100,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const PostCard = props => {
-    const { className, size, color, history, ...rest } = props;
   
     const classes = useStyles();
-
     const clickCard = () => {
     }
   

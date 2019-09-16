@@ -97,7 +97,6 @@ class App extends Component {
   }
 
   render() {
-    const { history } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <ScrollToTop>

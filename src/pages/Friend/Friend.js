@@ -2,7 +2,7 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FriendHead from './Components/FriendHead';
 import FriendList from './Components/FriendList';
-import { mergeClasses } from '@material-ui/styles';
+// import { mergeClasses } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
 import NotAuth from '../NotAuth';
 

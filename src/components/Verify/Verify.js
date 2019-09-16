@@ -18,12 +18,12 @@ const useStyles = makeStyles(theme => ({
   }));
 
 const Verify = props => {
-    const { className, ...rest } = props;
-  
+
     const classes = useStyles();
   
     return (
-        <a target="_blank" href="//verified.weibo.com/verify" className={classes.root}>
+        // <a target="_blank" href="http://verified.weibo.com/verify" className={classes.root}>
+        <a target="_blank" href="http://verified.weibo.com/verify" className={classes.root}>
             <i title="星狗网认证作者" className={classes.verified}>
             </i>
         </a>

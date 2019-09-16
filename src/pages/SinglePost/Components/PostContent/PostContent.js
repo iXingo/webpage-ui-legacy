@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import palette from '../../../../theme/palette';
 import ReactMarkdown  from 'react-markdown';

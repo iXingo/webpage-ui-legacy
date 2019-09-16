@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import Divider from '@material-ui/core/Divider';
 import FaceIcon from '@material-ui/icons/Face';
@@ -126,7 +125,6 @@ const useStyles = makeStyles(theme => ({
 
 const PostHeader = props => {
 
-    const { history, post } = props;
     const classes = useStyles();
     if(!props.post.createdBy) return <Instagram />;
     return (

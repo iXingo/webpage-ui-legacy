@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Slide from '@material-ui/core/Slide';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 const useStyles = makeStyles(theme => ({
@@ -81,15 +80,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
+// const Transition = React.forwardRef(function Transition(props, ref) {
+//     return <Slide direction="up" ref={ref} {...props} />;
+// });
 
 const FriendHead = props => {
   const classes = useStyles();
-
-  const [open, setOpen] = React.useState(false);
-
 
   return (
     <React.Fragment>
