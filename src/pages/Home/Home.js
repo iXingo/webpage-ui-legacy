@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
@@ -105,7 +106,21 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  
+  cardGrids: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  cards: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  cardMedias: {
+    paddingTop: '56.25%', // 16:9
+  },
+  cardContents: {
+    flexGrow: 1,
+  },
 
   footer: {
     backgroundColor: "#3f51b5",
@@ -127,6 +142,9 @@ const sections = [
   '新闻',
   '见闻',
 ];
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 
 const featuredPosts = [
   {
@@ -271,6 +289,36 @@ const Home = props => {
               </Grid>
             ))}
           </Grid>
+          {/* End hero unit */}
+          <Grid container spacing={4} className={classes.cardGrids}>
+            {cards.map(card => (
+              <Grid item key={card} xs={12} sm={6} md={4}>
+                <Card className={classes.cards}>
+                  <CardMedia
+                    className={classes.cardMedias}
+                    image="https://source.unsplash.com/random"
+                    title="Image title"
+                  />
+                  <CardContent className={classes.cardContents}>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe the content.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small" color="primary">
+                      View
+                    </Button>
+                    <Button size="small" color="primary">
+                      Edit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
           <Grid container spacing={4} className={classes.cardGrid}>
               <Grid item xs={12} md={6}>
                 <SummaryCard></SummaryCard>
@@ -289,7 +337,7 @@ const Home = props => {
                   {post}
                 </Markdown>
 			  ))} */}
-			        <Post {...props}></Post>
+			        {/* <Post {...props}></Post> */}
             </Grid>
             {/* End main content */}
             {/* Sidebar */}
