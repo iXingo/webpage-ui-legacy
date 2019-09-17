@@ -80,6 +80,13 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
+          component={SinglePostPage}
+          exact
+          layout={MinimalLayout}
+          path="/post/i/:id"
+          {...this.props}
+        />
+        <RouteWithLayout
           component={NotFoundPage}
           exact
           layout={MainLayout}
