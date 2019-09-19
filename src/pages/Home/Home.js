@@ -51,11 +51,11 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     backgroundColor: theme.palette.grey[800],
     color: theme.palette.common.white,
-    marginBottom: theme.spacing(4),
     backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
+    marginBottom: theme.spacing(2),
   },
   overlay: {
     position: 'absolute',
@@ -107,8 +107,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-start',
   },
   cardGrids: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
+    // paddingTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
   },
   cards: {
     height: '100%',
@@ -260,7 +260,7 @@ const Home = props => {
           {/* End main featured post */}
           <PostCard />
           {/* Sub featured posts */}
-          <Grid container spacing={4} className={classes.cardGrid}>
+          <Grid container spacing={4}>
             {featuredPosts.map(post => (
               <Grid item key={post.title} xs={12} md={6}>
                 <CardActionArea component="a" href="#">
