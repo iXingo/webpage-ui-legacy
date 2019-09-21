@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
   toolbarTitle: {
     flex: 1,
-    color: '#3f51b5'
+    color: '#1a73e8'
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
@@ -123,7 +123,7 @@ const useStyles = makeStyles(theme => ({
   },
 
   footer: {
-    backgroundColor: "#3f51b5",
+    backgroundColor: "#1a73e8",
     color: theme.palette.primary,
     marginTop: theme.spacing(8),
     padding: theme.spacing(6, 0),
@@ -267,7 +267,7 @@ const Home = props => {
                   <Card className={classes.card}>
                     <div className={classes.cardDetails}>
                       <CardContent>
-                        <Typography component="h2" variant="h4" style={{color:'#3f51b5'}}>{post.title}</Typography>
+                        <Typography component="h2" variant="h4" style={{color:'#1a73e8'}}>{post.title}</Typography>
                         <Typography variant="subtitle1" color="textSecondary">
                           <div className={classes.tips}>
                             <DateRangeIcon className={classes.icon} />{post.date}

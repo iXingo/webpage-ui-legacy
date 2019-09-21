@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Typography } from '@material-ui/core';
 
-
-
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
@@ -35,17 +33,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#3f51b5',
+    color : '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#3f51b5',
+    color : '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#3f51b5',
+    color : '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -82,7 +80,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'justify'
   },
   title:{
-    color : '#3f51b5',
+    color : '#1a73e8',
     textAlign: 'center',
     margin: '30px 0'
   },

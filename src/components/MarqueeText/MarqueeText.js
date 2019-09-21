@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     marque: {
         fontSize: 16,
         color: 'white',
-        backgroundColor: '#3f51b5',
+        backgroundColor: '#1a73e8',
         // height: theme.spacing(3),
         textAlign: 'center',
         justifyContent : 'center',
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     prefix: {
       height: 18,
       padding: '0 10px',
-      color: '#3f51b5',
+      color: '#1a73e8',
       background: 'darkgrey',
     }
   }));

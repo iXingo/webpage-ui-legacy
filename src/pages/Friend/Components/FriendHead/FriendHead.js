@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     marginTop: 20,
     fontSize: 18,
-    color: '#3f51b5',
+    color: '#1a73e8',
   },
   button: {
     justifyContent:'center',
@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
     padding: 10,
     fontWeight: 300,
     lineHeight : '50px',
-    color: '#3f51b5',
+    color: '#1a73e8',
   },
   subpro : {
     textAlign: 'center',

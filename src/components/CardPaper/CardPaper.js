@@ -124,17 +124,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#3f51b5',
+    color : '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#3f51b5',
+    color : '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#3f51b5',
+    color : '#1a73e8',
   },
   contentContainer: {},
   content: {

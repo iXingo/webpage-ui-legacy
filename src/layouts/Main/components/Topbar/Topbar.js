@@ -13,7 +13,12 @@ import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    boxShadow: 'none',
+    boxShadow: '0 2px 6px 0 rgba(å0,0,0,.12), inset 0 -1px 0 0 #dadce0',
+    backgroundColor: '#1a73e8'
+  },
+  logo: {
+    height: 36,
+    width: 132
   },
   flexGrow: {
     flexGrow: 1
@@ -77,6 +82,7 @@ const Topbar = props => {
           <img
             alt="Logo"
             src="/images/logos/logo.png"
+            className={classes.logo}
           />
         </RouterLink>bata0.9.1
         <div className={classes.flexGrow} />

@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     height: 36,
     paddingLeft: theme.spacing(4),
-    backgroundColor: '#3f51b5',
+    backgroundColor: '#1a73e8',
     justifyContent: 'space-between'
   },
   img: {
@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     width: 200,
-    backgroundColor: '#3f51b5',
+    backgroundColor: '#1a73e8',
     color: 'white',
     height: '100%',
   }
