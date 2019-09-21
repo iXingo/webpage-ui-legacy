@@ -20,7 +20,7 @@ const Subscribe = props => {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button variant="outlined"  size="small" color="primary" onClick={handleClickOpen} >
         订阅
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">

@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     height: 36,
-    width: 132
+    width: 120
   },
   flexGrow: {
     flexGrow: 1

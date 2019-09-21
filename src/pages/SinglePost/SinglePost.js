@@ -33,6 +33,7 @@ class SinglePost extends Component {
             if(response.code === 400){
                 history.push("/not-found"); 
             }
+            document.title = this.state.post.title + " | 星狗网";
         }).catch(error => {
             this.setState({
                 isLoading: false

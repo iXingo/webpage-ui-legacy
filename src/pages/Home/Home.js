@@ -122,6 +122,19 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
   },
 
+  main: {
+    alignItems: 'center',
+    justifyContent: 'space-betwwen',
+    padding: 40, 
+    color: '#1a73e8',
+  },
+  mainImg: {
+    height: 320,
+    maxHeight: 400,
+    padding: 15
+
+  },
+
   footer: {
     backgroundColor: "#1a73e8",
     color: theme.palette.primary,
@@ -257,6 +270,23 @@ const Home = props => {
             </Grid>
           </Paper>
           
+          <Grid container spacing={3} className={classes.main}>
+            <Grid item xs={12} md={6}>
+              <Typography overline gutterBottom variant='h2' color="primary">
+                Android 10 is here!
+              </Typography>
+              <Typography overline gutterBottom variant='h5'>
+                Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation, support new protections for user privacy and security, enhance your apps with improved connectivity APIs, high-performance codecs, better biometrics, foldables support, and much more!
+              </Typography>
+              <Button variant="outlined" size="small" color="primary">
+                查看更多
+              </Button>
+            </Grid>
+            <Grid item md={6}>
+              <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
+            </Grid>
+          </Grid>
+
           {/* End main featured post */}
           <PostCard />
           {/* Sub featured posts */}
