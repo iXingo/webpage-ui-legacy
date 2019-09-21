@@ -15,12 +15,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import DateRangeIcon from '@material-ui/icons/DateRange';
-
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import SendIcon from '@material-ui/icons/Send';
 import { withRouter } from 'react-router-dom';
-import Post from '../Post';
 import PostCard from '../../components/PostCard'
 import SummaryCard from '../../components/SummaryCard';
 import Subscribe from '../../components/Subscribe';
@@ -125,7 +129,11 @@ const useStyles = makeStyles(theme => ({
   main: {
     alignItems: 'center',
     justifyContent: 'space-betwwen',
-    padding: 40, 
+    padding: theme.spacing(3),
+    [theme.breakpoints.up('md')]: {
+      padding: theme.spacing(6),
+      paddingRight: 0,
+    },
     color: '#1a73e8',
   },
   mainImg: {
@@ -133,6 +141,9 @@ const useStyles = makeStyles(theme => ({
     maxHeight: 400,
     padding: 15
 
+  },
+  list: {
+    marginBottom: theme.spacing(2),
   },
 
   footer: {
@@ -251,6 +262,7 @@ const Home = props => {
               />
             }
             <div className={classes.overlay} />
+
             <Grid container>
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
@@ -270,22 +282,53 @@ const Home = props => {
             </Grid>
           </Paper>
           
-          <Grid container spacing={3} className={classes.main}>
-            <Grid item xs={12} md={6}>
-              <Typography overline gutterBottom variant='h2' color="primary">
-                Android 10 is here!
-              </Typography>
-              <Typography overline gutterBottom variant='h5'>
-                Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation, support new protections for user privacy and security, enhance your apps with improved connectivity APIs, high-performance codecs, better biometrics, foldables support, and much more!
-              </Typography>
-              <Button variant="outlined" size="small" color="primary">
-                查看更多
-              </Button>
+          <Paper>
+            <Grid container className={classes.main}>
+              <Grid item xs={12} md={6}>
+                <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
+                  汪师傅的会客厅！
+                </Typography>
+                <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}}>
+                  Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation, support new protections for user privacy and security, enhance your apps with improved connectivity APIs, high-performance codecs, better biometrics, foldables support, and much more!
+                </Typography>
+                <Button variant="outlined" size="large" color="primary">
+                  查看更多
+                </Button>
+              </Grid>
+              <Grid item md={6}>
+                <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
+              </Grid>
             </Grid>
-            <Grid item md={6}>
-              <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
-            </Grid>
-          </Grid>
+          </Paper>
+
+          <Paper className={classes.list}>
+            <List>
+              <ListItem >
+                <ListItemIcon>
+                  <SendIcon />
+                </ListItemIcon>
+                <ListItemText>
+                  Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation!
+                </ListItemText>
+                <ListItemSecondaryAction>
+                <SendIcon />
+                </ListItemSecondaryAction>
+              </ListItem>
+              <Divider></Divider>
+              <ListItem >
+                <ListItemIcon>
+                  <SendIcon />
+                </ListItemIcon>
+                <ListItemText>
+                  Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation!
+                </ListItemText>
+                <ListItemSecondaryAction>
+                  <SendIcon />
+                </ListItemSecondaryAction>
+              </ListItem>
+            </List>
+          </Paper>
+          
 
           {/* End main featured post */}
           <PostCard />
