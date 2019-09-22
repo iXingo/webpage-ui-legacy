@@ -94,33 +94,38 @@ const useStyles = makeStyles(theme => ({
 
   const People = props => {
     const classes = useStyles();
-    const { friend } = props;
+    const { friend, history } = props;
 
     const [open, setOpen] = React.useState(false);
-    const handleClickOpen = () => {
-      setOpen(true);
+
+    const handleClickOpen = event  => {
+      event.preventDefault();
+      const id = friend.id;
+      console.log('/friend/'+ id);
+      history.push('/friend/'+ id);
     };
     const handleClose = () => {
       setOpen(false);
     };
+
     return (
       <div className ={classes.root}>
         <Card className={classes.card}>
           <CardActionArea>
             <Grid container justify="center" alignItems="center" className={classes.avatar}>
-                <Avatar alt="Remy Sharp" src={friend.pictureUrl} className={classes.bigAvatar} />
+              <Avatar alt="Remy Sharp" src={friend.pictureUrl} className={classes.bigAvatar} />
             </Grid>
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2" className={classes.name}>
-                  {friend.name}
+                {friend.name}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p" className={classes.intro}>
-                  {friend.description}
+                {friend.description}
               </Typography>
             </CardContent>
           </CardActionArea>
           <CardActions className={classes.button}>
-            <Button size="small" color="primary" onClick={handleClickOpen}>查看</Button>
+            <Button size="small" color="primary" value={friend.id} onClick={handleClickOpen} >查看</Button>
             <Button size="small" color="primary">分享</Button>
           </CardActions>
         </Card>
@@ -139,11 +144,8 @@ const useStyles = makeStyles(theme => ({
                 </DialogContentText>
               </DialogContent>
               <DialogActions>
-                <Button onClick={handleClose} color="primary">
+                <Button onClick={handleClickOpen} value={friend.id} color="primary">
                   知道了
-                </Button>
-                <Button onClick={handleClose} color="primary" autoFocus>
-                  取消
                 </Button>
               </DialogActions>
             </Dialog>
