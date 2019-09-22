@@ -36,6 +36,9 @@ const FeaturedCardReversed = props => {
         <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
       </Grid>
       <Grid item xs={12} md={6} className={classes.text}>
+        <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='inherit'>
+          新闻视角
+        </Typography>
         <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color='inherit'>
           汪师傅的会客厅！
         </Typography>

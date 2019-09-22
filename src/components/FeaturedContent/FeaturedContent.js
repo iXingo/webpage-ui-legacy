@@ -29,8 +29,8 @@ const useStyles = makeStyles(theme => ({
       padding: theme.spacing(6),
       paddingRight: 0,
     },
-    color: '#f7f9fa',
-    backgroundColor: 'primary',
+    color: 'white',
+    backgroundColor: '#1a73e8',
   },
   mainImg: {
     height: 320,
@@ -58,6 +58,9 @@ const FeaturedCardReversed = props => {
         <Grid item  xs={12} md={6}>
           <Grid container className={classes.main}>
             <Grid item xs={12} md={6}>
+              <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='textSecondary'>
+                新闻视角
+              </Typography>
               <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
                 汪师傅的会客厅！
               </Typography>
@@ -76,13 +79,16 @@ const FeaturedCardReversed = props => {
         <Grid item xs={12} md={6}>
         <Grid container className={classes.reverse}>
             <Grid item xs={12} md={6}>
-              <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
+              <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='inherit'>
+                新闻视角
+              </Typography>
+              <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color='inherit'>
                 汪师傅的会客厅！
               </Typography>
-              <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}} color="textSecondary">
+              <Typography overline gutterBottom variant='h5' style={{padding: '30px 0', color: '#8EB2F4'}} >
                 Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation, support new protections for user privacy and security, enhance your apps with improved connectivity APIs, high-performance codecs, better biometrics, foldables support, and much more!
               </Typography>
-              <Button variant="outlined" size="large" color="primary">
+              <Button variant="outlined" size="large" color="inherit">
                 查看更多
               </Button>
             </Grid>
