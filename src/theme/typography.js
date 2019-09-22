@@ -7,7 +7,7 @@ export default {
     fontSize: '35px',
     letterSpacing: '-0.24px',
     lineHeight: '40px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   h2: {
     color: palette.text.primary,
@@ -15,7 +15,7 @@ export default {
     fontSize: '29px',
     letterSpacing: '-0.24px',
     lineHeight: '32px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   h3: {
     color: palette.text.primary,
@@ -23,7 +23,7 @@ export default {
     fontSize: '24px',
     letterSpacing: '-0.06px',
     lineHeight: '28px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   h4: {
     color: palette.text.primary,
@@ -31,7 +31,7 @@ export default {
     fontSize: '20px',
     letterSpacing: '-0.06px',
     lineHeight: '24px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   h5: {
     color: palette.text.primary,
@@ -39,7 +39,7 @@ export default {
     fontSize: '16px',
     letterSpacing: '-0.05px',
     lineHeight: '20px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   h6: {
     color: palette.text.primary,
@@ -47,14 +47,14 @@ export default {
     fontSize: '14px',
     letterSpacing: '-0.05px',
     lineHeight: '20px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   subtitle1: {
     color: palette.text.primary,
     fontSize: '16px',
     letterSpacing: '-0.05px',
     lineHeight: '25px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   subtitle2: {
     color: palette.text.secondary,
@@ -62,7 +62,7 @@ export default {
     fontSize: '14px',
     letterSpacing: '-0.05px',
     lineHeight: '21px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   body1: {
     color: palette.text.primary,
@@ -70,7 +70,7 @@ export default {
     letterSpacing: '-0.05px',
     lineHeight: '21px',
     fontWeight: 300,
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   body2: {
     color: palette.text.secondary,
@@ -78,19 +78,19 @@ export default {
     letterSpacing: '-0.04px',
     lineHeight: '18px',
     fontWeight: 300,
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   button: {
     color: palette.text.primary,
     fontSize: '14px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   caption: {
     color: palette.text.secondary,
     fontSize: '11px',
     letterSpacing: '0.33px',
     lineHeight: '13px',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   overline: {
     color: palette.text.secondary,
@@ -99,6 +99,6 @@ export default {
     letterSpacing: '0.33px',
     lineHeight: '13px',
     textTransform: 'uppercase',
-    fontFamily :'12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   }
 };
