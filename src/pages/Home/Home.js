@@ -15,22 +15,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import DateRangeIcon from '@material-ui/icons/DateRange';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import SendIcon from '@material-ui/icons/Send';
 import { withRouter } from 'react-router-dom';
 import PostCard from '../../components/PostCard'
 import SummaryCard from '../../components/SummaryCard';
 import Subscribe from '../../components/Subscribe';
 import Carousel from '../../components/Carousel';
 import NotAuth from '../NotAuth';
-import { MarqueeText }  from '../../components';
+import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent}  from '../../components';
 
 
 
@@ -125,26 +119,10 @@ const useStyles = makeStyles(theme => ({
   cardContents: {
     flexGrow: 1,
   },
-
-  main: {
-    alignItems: 'center',
-    justifyContent: 'space-betwwen',
-    padding: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
-    color: '#1a73e8',
-  },
-  mainImg: {
-    height: 320,
-    maxHeight: 400,
-    padding: 15
-
-  },
   list: {
     marginBottom: theme.spacing(2),
   },
+
 
   footer: {
     backgroundColor: "#1a73e8",
@@ -262,7 +240,6 @@ const Home = props => {
               />
             }
             <div className={classes.overlay} />
-
             <Grid container>
               <Grid item md={6}>
                 <div className={classes.mainFeaturedPostContent}>
@@ -282,52 +259,21 @@ const Home = props => {
             </Grid>
           </Paper>
           
-          <Paper>
-            <Grid container className={classes.main}>
-              <Grid item xs={12} md={6}>
-                <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
-                  汪师傅的会客厅！
-                </Typography>
-                <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}}>
-                  Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation, support new protections for user privacy and security, enhance your apps with improved connectivity APIs, high-performance codecs, better biometrics, foldables support, and much more!
-                </Typography>
-                <Button variant="outlined" size="large" color="primary">
-                  查看更多
-                </Button>
-              </Grid>
-              <Grid item md={6}>
-                <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
-              </Grid>
-            </Grid>
+          <Paper className={classes.list}>
+            <FeaturedCard></FeaturedCard>
           </Paper>
 
           <Paper className={classes.list}>
-            <List>
-              <ListItem >
-                <ListItemIcon>
-                  <SendIcon />
-                </ListItemIcon>
-                <ListItemText>
-                  Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation!
-                </ListItemText>
-                <ListItemSecondaryAction>
-                <SendIcon />
-                </ListItemSecondaryAction>
-              </ListItem>
-              <Divider></Divider>
-              <ListItem >
-                <ListItemIcon>
-                  <SendIcon />
-                </ListItemIcon>
-                <ListItemText>
-                  Get your apps ready for the latest version of Android! Build new experiences with dark theme and gesture navigation!
-                </ListItemText>
-                <ListItemSecondaryAction>
-                  <SendIcon />
-                </ListItemSecondaryAction>
-              </ListItem>
-            </List>
+            <FeaturedCardReversed></FeaturedCardReversed>
           </Paper>
+
+          <Paper className={classes.list}>
+            <FeaturedList></FeaturedList>
+          </Paper>
+
+          <div className={classes.list}>
+            <FeaturedContent></FeaturedContent>
+          </div>
           
 
           {/* End main featured post */}

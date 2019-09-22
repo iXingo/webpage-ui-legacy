@@ -11,3 +11,7 @@ export { default as Verify } from './Verify';
 export { default as Tag } from './Tag';
 export { default as MarqueeText } from './MarqueeText';
 export { default as Carousel } from './Carousel';
+export { default as FeaturedCard } from './FeaturedCard';
+export { default as FeaturedList } from './FeaturedList';
+export { default as FeaturedCardReversed } from './FeaturedCardReversed';
+export { default as FeaturedContent} from './FeaturedContent';

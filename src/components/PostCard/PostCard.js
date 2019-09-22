@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     // height: 300,
   },
   postCard: {
-    marginBottom: theme.spacing(4),
+    marginBottom: theme.spacing(2),
   },
   read:{
     paddingTop: theme.spacing(5)
