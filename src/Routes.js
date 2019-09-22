@@ -12,6 +12,7 @@ import {
   ResetPasswd as ResetPasswdPage,
   SinglePost as SinglePostPage,
   Friend as FriendPage,
+  SingleFriend as SingleFriendPage,
   Home as HomePage
 } from './pages';
 import { CardPaper as CardPage} from './components';
@@ -80,10 +81,10 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={SinglePostPage}
+          component={SingleFriendPage}
           exact
           layout={MinimalLayout}
-          path="/post/i/:id"
+          path="/friend/:id"
           {...this.props}
         />
         <RouteWithLayout

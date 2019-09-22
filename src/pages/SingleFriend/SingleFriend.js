@@ -47,7 +47,7 @@ class SingleFriend extends Component {
       this.props.loadCurrentUser();
     }
     const { computedMatch: { params } } = this.props;
-    this.loadPost(params.id);
+    this.loadFriend(params.id);
     
   }
 
@@ -59,17 +59,17 @@ class SingleFriend extends Component {
           isLoading: false
       });    
       const { computedMatch: { params } } = this.props;
-      this.loadPost(params.id);
+      this.loadFriend(params.id);
     }
   }
 
   render() {
-      const {post} = this.state;
-      return (
-        <div>
-          <FriendMain fiend={friend} {...this.props}></FriendMain>
-        </div> 
-      );
+    const {friend} = this.state;
+    return (
+      <div>
+        <FriendMain friend={friend} {...this.props}></FriendMain>
+      </div> 
+    );
   }
             
 }
