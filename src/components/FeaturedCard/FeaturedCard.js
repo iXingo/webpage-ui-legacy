@@ -43,7 +43,7 @@ const FeaturedCard = props => {
         </Button>
       </Grid>
       <Grid item md={6}>
-        <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
+        <img alt="Cover" className={classes.mainImg} src="http://localhost:3000/images/img/undraw_special_event_4aj8.svg" />
       </Grid>
     </Grid>
   );
