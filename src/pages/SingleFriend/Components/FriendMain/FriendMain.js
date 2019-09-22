@@ -15,65 +15,23 @@ const useStyles = makeStyles(theme => ({
   grid: {
     height: '100%'
   },
-  quoteContainer: {
-    [theme.breakpoints.down('md')]: {
-      display: 'none'
-    }
-  },
-  quote: {
-    backgroundColor: theme.palette.neutral,
-    height: '600px',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundImage: 'url(/images/blog/UNADJUSTEDNONRAW_thumb_f6f.jpg)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  },
-  quoteInner: {
-    textAlign: 'center',
-    flexBasis: '540px'
-  },
-  quoteText: {
-    // color: theme.palette.white,
-    color : '#1a73e8',
-    fontWeight: 300
-  },
-  name: {
-    marginTop: theme.spacing(3),
-    // color: theme.palette.white
-    color : '#1a73e8',
-  },
-  bio: {
-    // color: theme.palette.white
-    color : '#1a73e8',
-  },
-  contentContainer: {},
+
   content: {
     display: 'flex',
     flexDirection: 'column'
   },
-  contentHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingTop: theme.spacing(5),
-    paddingBototm: theme.spacing(2),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2)
-  },
-  logoImage: {
-    marginLeft: theme.spacing(4)
-  },
-  contentBody: {
-    flexGrow: 1,
-    display: 'flex',
-    alignItems: 'center',
-    [theme.breakpoints.down('md')]: {
-      justifyContent: 'center'
-    }
-  },
   mainGrid: {
+    display: 'flex',
+    justifyContent: 'center',
+    // flexGrow:1,
+    // margin: 'auto',
+    // padding: theme.spacing(3),
+    padding: '0 16px',
+    textAlign: 'justify',
+    backgroundColor: '#1a73e8',
+
+  },
+  contentGrid: {
     marginTop: 20,
     display: 'flex',
     justifyContent: 'center',
@@ -81,43 +39,15 @@ const useStyles = makeStyles(theme => ({
     // margin: 'auto',
     // padding: theme.spacing(3),
     padding: '0 16px',
-    textAlign: 'justify'
-  },
-  title:{
-    color : '#1a73e8',
-    textAlign: 'center',
-    margin: '30px 0'
-  },
-  field: {
-    width: '70%'
-  },
-  abstrat: {
-    margin: '20px 0',
-  },
-  tags: {
-      display: 'flex',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-  },
-  author:{
-      margin: '10px 0',
-      display: 'flex',
-      alignItems: 'center',
-      flexWrap: 'wrap',
-  },
-  avatar : {
-      display: 'inline-block',
-      marginRight: 10
-  },
-  verified:{
-      marginRight: 10
+    textAlign: 'justify',
+    backgroundColor: 'paimary',
   },
   friendtime: {
     padding: '15px 0',
   },
   friend:{
       paddingTop: 20
-  }
+  },
 }));
 
 const FriendMain = props => {
@@ -132,6 +62,8 @@ const FriendMain = props => {
           <Grid item xs={12} md={8} className={classes.singlefriend}>
             <FriendHeader friend={props.friend} {...props}></FriendHeader>
           </Grid>
+        </Grid>
+        <Grid container className={classes.contentGrid}>
           <Grid item xs={12} md={8} className={classes.singlefriend}>
             <FriendContent friend={props.friend} {...props}></FriendContent>
           </Grid>

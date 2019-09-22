@@ -8,17 +8,20 @@ const useStyles = makeStyles(theme => ({
   main: {
     alignItems: 'center',
     justifyContent: 'space-betwwen',
-    padding: theme.spacing(3),
+    padding: '24px 24px 0',
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6),
+      padding: theme.spacing(0),
       paddingRight: 0,
     },
     color: '#1a73e8',
   },
+  profile: {
+    color: 'white',
+  },
   mainImg: {
-    height: 450,
-    maxHeight: 400,
-    padding: 15
+    height: '100%',
+    // maxHeight: 512,
+    padding: '0 15px 0',
 
   },
 }));
@@ -31,17 +34,17 @@ const FriendHeader = props => {
 
   return (
     <Grid container className={classes.main}>
-      <Grid item xs={12} md={5}>
-        <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='textSecondary'>
+      <Grid item xs={12} md={5} className={classes.profile}>
+        <Typography overline gutterBottom variant='h5' style={{padding: '10px 0' , color: '#8EB2F4'}} >
           好友
         </Typography>
-        <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
+        <Typography overline gutterBottom variant='h2' style={{padding: '10px 0', color: 'white'}} >
           {friend.name}
         </Typography>
-        <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}} color="textSecondary">
+        <Typography overline gutterBottom variant='h5' style={{padding: '30px 0',color: 'white' }} >
           {friend.description}
         </Typography>
-        <Button variant="outlined" size="large" color="primary">
+        <Button variant="outlined" size="large" color="inherit">
           查看更多
         </Button>
       </Grid>
