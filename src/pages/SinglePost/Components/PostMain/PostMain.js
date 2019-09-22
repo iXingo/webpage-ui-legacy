@@ -120,7 +120,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const PostHead = props => {
+const PostMain = props => {
 
   const classes = useStyles();
 
@@ -151,8 +151,8 @@ const PostHead = props => {
   );
 };
 
-PostHead.propTypes = {
+PostMain.propTypes = {
   history: PropTypes.object
 };
 
-export default PostHead;
+export default PostMain;

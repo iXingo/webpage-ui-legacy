@@ -150,3 +150,10 @@ export function getPost(id) {
         method: 'GET'
     });
 }
+
+export function getFriend(id) {
+    return request({
+        url: API_BASE_URL +"/friends/" + id,
+        method: 'GET'
+    });
+}

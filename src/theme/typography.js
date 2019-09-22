@@ -35,7 +35,7 @@ export default {
   },
   h5: {
     color: palette.text.primary,
-    fontWeight: 300,
+    fontWeight: 500,
     fontSize: '16px',
     letterSpacing: '-0.05px',
     lineHeight: '20px',
@@ -43,8 +43,16 @@ export default {
   },
   h6: {
     color: palette.text.primary,
-    fontWeight: 300,
+    fontWeight: 500,
     fontSize: '14px',
+    letterSpacing: '-0.05px',
+    lineHeight: '20px',
+    fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
+  },
+  subtitle: {
+    color: palette.text.primary,
+    fontWeight: 300,
+    fontSize: '16px',
     letterSpacing: '-0.05px',
     lineHeight: '20px',
     fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
