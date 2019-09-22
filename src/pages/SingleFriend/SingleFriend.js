@@ -32,7 +32,7 @@ class SingleFriend extends Component {
       if(response.code === 400){
           history.push("/not-found"); 
       }
-      document.title = this.state.friend.title + " | 星狗网";
+      document.title = "好友：" + this.state.friend.name + " | 星狗网";
     }).catch(error => {
       this.setState({
           isLoading: false
