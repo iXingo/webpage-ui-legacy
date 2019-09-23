@@ -15,16 +15,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
-import Divider from '@material-ui/core/Divider';
 import Container from '@material-ui/core/Container';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import { withRouter } from 'react-router-dom';
-import PostCard from '../../components/PostCard'
-import SummaryCard from '../../components/SummaryCard';
-import Subscribe from '../../components/Subscribe';
-import Carousel from '../../components/Carousel';
+import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
+  SummaryCard, Carousel, Subscribe, PostCard
+}  from '../../components';
 import NotAuth from '../NotAuth';
-import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent}  from '../../components';
 
 
 
@@ -160,27 +157,6 @@ const featuredPosts = [
     description:'这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
   },
 ];
-
-// const posts = [post1, post2, post3];
-
-const archives = [
-  'March 2020',
-  'February 2020',
-  'January 2020',
-  'December 2019',
-  'November 2019',
-  'October 2019',
-  'September 2019',
-  'August 2019',
-  'July 2019',
-  'June 2019',
-  'May 2019',
-  'April 2019',
-];
-
-const social = ['GitHub', 'Twitter', 'Facebook'];
-
-// const posts = [];
 
 
 const Home = props => {
@@ -318,40 +294,6 @@ const Home = props => {
               <Grid item xs={12} md={6}>
                 <SummaryCard></SummaryCard>
               </Grid>
-          </Grid>
-          {/* End sub featured posts */}
-          <Grid container spacing={5} className={classes.mainGrid}>
-            <Grid item xs={12} md={8}>
-              <Divider />
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Paper elevation={0} className={classes.sidebarAboutBox}>
-                <Typography variant="h6" gutterBottom>
-                  About
-                </Typography>
-                <Typography>
-                  Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit
-                  amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
-                </Typography>
-              </Paper>
-              <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-                Archives
-              </Typography>
-              {archives.map(archive => (
-                <Link display="block" variant="body1" href="#" key={archive}>
-                  {archive}
-                </Link>
-              ))}
-              <Typography variant="h6" gutterBottom className={classes.sidebarSection}>
-                Social
-              </Typography>
-              {social.map(network => (
-                <Link display="block" variant="body1" href="#" key={network}>
-                  {network}
-                </Link>
-              ))}
-            </Grid>
-            {/* End sidebar */}
           </Grid>
         </main>
       </Container>

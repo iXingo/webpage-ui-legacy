@@ -9,13 +9,13 @@ import {
   NotAuth as NotAuthPage,
   Agreement as AgreementPage,
   ProductList as ProductListPage,
+  Project as ProjectPage,
   ResetPasswd as ResetPasswdPage,
   SinglePost as SinglePostPage,
   Friend as FriendPage,
   SingleFriend as SingleFriendPage,
   Home as HomePage
 } from './pages';
-import { CardPaper as CardPage} from './components';
 import { Album as AlbumPage} from './components';
 
 class Routes extends Component {
@@ -34,7 +34,7 @@ class Routes extends Component {
           path="/products"
         />
         <RouteWithLayout
-          component={CardPage}
+          component={ProjectPage}
           exact
           layout={MainLayout}
           path="/projects"
