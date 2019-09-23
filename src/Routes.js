@@ -19,11 +19,6 @@ import { CardPaper as CardPage} from './components';
 import { Album as AlbumPage} from './components';
 
 class Routes extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render () {
     return (
       <Switch>

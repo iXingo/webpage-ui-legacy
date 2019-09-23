@@ -23,7 +23,7 @@ const Verify = props => {
   
     return (
         // <a target="_blank" href="http://verified.weibo.com/verify" className={classes.root}>
-        <a target="_blank" href="http://verified.weibo.com/verify" className={classes.root}>
+        <a target="_blank" rel='noreferrer noopener' href="http://verified.weibo.com/verify" className={classes.root}>
             <i title="星狗网认证作者" className={classes.verified}>
             </i>
         </a>

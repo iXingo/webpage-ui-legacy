@@ -32,7 +32,7 @@ class SingleFriend extends Component {
       if(response.code === 400){
           history.push("/not-found"); 
       }
-      document.title = "好友：" + this.state.friend.name + " | 星狗网";
+      document.title = "好友: " + this.state.friend.name + " | 星狗网";
     }).catch(error => {
       this.setState({
           isLoading: false
@@ -64,7 +64,7 @@ class SingleFriend extends Component {
   }
 
   render() {
-    const {friend} = this.state;
+    const { friend } = this.state;
     return (
       <div>
         <FriendMain friend={friend} {...this.props}></FriendMain>

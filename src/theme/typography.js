@@ -77,7 +77,6 @@ export default {
     fontSize: '14px',
     letterSpacing: '-0.05px',
     lineHeight: '21px',
-    fontWeight: 300,
     fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   body2: {
@@ -85,7 +84,6 @@ export default {
     fontSize: '12px',
     letterSpacing: '-0.04px',
     lineHeight: '18px',
-    fontWeight: 300,
     fontFamily :'Roboto, Noto Sans,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif',
   },
   button: {
