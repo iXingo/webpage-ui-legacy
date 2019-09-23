@@ -161,9 +161,13 @@ const featuredPosts = [
 
 const Home = props => {
 
+  const { currentUser } = props;
   const classes = useStyles();
 
-  if(!props.isAuthenticated) return <NotAuth />;
+  if(!currentUser){
+    return <NotAuth />;
+  }
+
   return (
     <React.Fragment>
       <CssBaseline />

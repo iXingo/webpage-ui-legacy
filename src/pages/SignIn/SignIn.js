@@ -16,6 +16,7 @@ import { SvgIcon } from '@material-ui/core';
 import { notification } from 'antd';
 import { login } from '../../util/APIUtils';
 import { ACCESS_TOKEN } from '../../constants';
+import Home from '../Home';
 
 
 
@@ -160,7 +161,17 @@ const useStyles = makeStyles(theme => ({
 
 const SignIn = (props) => {
 
-  const { history } = props;
+  const { history, currentUser } = props;
+  if(currentUser){
+
+    
+    const notificationType="success";
+    notification[notificationType]({
+      message: '星狗网Web App',
+      description: '您已经成功',
+    });
+    history.push('/index');
+  }
 
   const classes = useStyles();
 
