@@ -55,7 +55,7 @@ const Sidebar = props => {
     },
     {
       title: '计    划',
-      href: '/project',
+      href: '/projects',
       icon: <ImageIcon />
     },
     {

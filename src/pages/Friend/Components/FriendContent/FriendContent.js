@@ -4,7 +4,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
+// import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -31,13 +31,13 @@ const useStyles = makeStyles(theme => ({
     },
     avatar: {
       margin: 'auto',
-      width: 150,
-      height: 150,
+      width: 300,
+      height: 300,
     },
     bigAvatar: {
       margin: 10,
-      width: 150,
-      height: 150,
+      width: 300,
+      height: 300,
     },
     name: {
       textAlign: 'center',
@@ -110,7 +110,7 @@ const useStyles = makeStyles(theme => ({
 
     return (
       <div className ={classes.root}>
-        <Card className={classes.card}>
+        <Card className={classes.card} value={friend.id} onClick={handleClickOpen}>
           <CardActionArea>
             <Grid container justify="center" alignItems="center" className={classes.avatar}>
               <Avatar alt="Remy Sharp" src={friend.pictureUrl} className={classes.bigAvatar} />
@@ -124,10 +124,10 @@ const useStyles = makeStyles(theme => ({
               </Typography>
             </CardContent>
           </CardActionArea>
-          <CardActions className={classes.button}>
+          {/* <CardActions className={classes.button}>
             <Button size="small" color="primary" value={friend.id} onClick={handleClickOpen} >查看</Button>
             <Button size="small" color="primary">分享</Button>
-          </CardActions>
+          </CardActions> */}
         </Card>
         <div>
           <div>

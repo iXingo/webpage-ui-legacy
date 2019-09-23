@@ -303,40 +303,13 @@ const SignIn = (props) => {
                 >
                   为什么要登录？登录后可以进行评论以及可以获得更佳的个性化体验。
                 </Typography>
-                <Grid
-                  className={classes.socialButtons}
-                  container
-                  spacing={2}
-                >
-                  <Grid item>
-                    <Button
-                      color="primary"
-                      onClick={handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
-                      <FacebookIcon className={classes.socialIcon} />
-                      使用QQ账号登录
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button
-                      onClick={handleSignIn}
-                      size="large"
-                      variant="contained"
-                    >
-                      <GoogleIcon className={classes.socialIcon} />
-                      使用Google账号登录
-                    </Button>
-                  </Grid>
-                </Grid>
                 <Typography
                   align="center"
                   className={classes.sugestion}
                   color="textSecondary"
                   variant="body1"
                 >
-                  或者使用邮箱账号登录
+                  使用邮箱账号登录
                 </Typography>
                 <TextField
                   className={classes.textField}
@@ -377,6 +350,7 @@ const SignIn = (props) => {
                 >
                   立即登录
                 </Button>
+                
                 <div className={classes.tips}>
                 <Typography
                   color="textSecondary"
@@ -405,6 +379,33 @@ const SignIn = (props) => {
                   </Link>
                 </Typography>
                 </div>
+                <Grid
+                  className={classes.socialButtons}
+                  container
+                  spacing={2}
+                >
+                  <Grid item>
+                    <Button
+                      color="primary"
+                      onClick={handleSignIn}
+                      size="large"
+                      variant="contained"
+                    >
+                      <FacebookIcon className={classes.socialIcon} />
+                      使用QQ账号登录
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button
+                      onClick={handleSignIn}
+                      size="large"
+                      variant="contained"
+                    >
+                      <GoogleIcon className={classes.socialIcon} />
+                      使用Google账号登录
+                    </Button>
+                  </Grid>
+                </Grid>
               </form>
             </div>
           </div>
