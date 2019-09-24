@@ -7,19 +7,12 @@ import SearchIcon from '@material-ui/icons/Search';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Hidden from '@material-ui/core/Hidden';
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
-import DateRangeIcon from '@material-ui/icons/DateRange';
 import { withRouter } from 'react-router-dom';
 import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
-  SummaryCard, Carousel, Subscribe, PostCard
+  SummaryCard, Carousel, Subscribe, PostCard, MediaCard, SmallPostCard
 }  from '../../components';
 import NotAuth from '../NotAuth';
 
@@ -234,61 +227,13 @@ const Home = props => {
           {/* Sub featured posts */}
           <Grid container spacing={4}>
             {featuredPosts.map(post => (
-              <Grid item key={post.title} xs={12} md={6}>
-                <CardActionArea component="a" href="#">
-                  <Card className={classes.card}>
-                    <div className={classes.cardDetails}>
-                      <CardContent>
-                        <Typography component="h2" variant="h4" style={{color:'#1a73e8'}}>{post.title}</Typography>
-                        <Typography variant="subtitle1" color="textSecondary">
-                          <div className={classes.tips}>
-                            <DateRangeIcon className={classes.icon} />{post.date}
-                          </div>
-                        </Typography>
-                        <Typography variant="subtitle1" paragraph>{post.description}</Typography>
-                        <Typography variant="subtitle1" color="primary">查看全文...</Typography>
-                      </CardContent>
-                    </div>
-                    <Hidden xsDown>
-                      <CardMedia
-                        className={classes.cardMedia}
-                        image="https://source.unsplash.com/random"
-                        title="Image title"
-                      />
-                    </Hidden>
-                  </Card>
-                </CardActionArea>
-              </Grid>
+              <SmallPostCard></SmallPostCard>
             ))}
           </Grid>
           {/* End hero unit */}
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
-                <Card className={classes.cards}>
-                  <CardMedia
-                    className={classes.cardMedias}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
-                  />
-                  <CardContent className={classes.cardContents}>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      Heading
-                    </Typography>
-                    <Typography>
-                      This is a media card. You can use this section to describe the content.
-                    </Typography>
-                  </CardContent>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      View
-                    </Button>
-                    <Button size="small" color="primary">
-                      Edit
-                    </Button>
-                  </CardActions>
-                </Card>
-              </Grid>
+              <MediaCard card={card} {...props}></MediaCard>
             ))}
           </Grid>
           <Grid container spacing={4} className={classes.cardGrid}>
