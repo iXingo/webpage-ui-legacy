@@ -227,7 +227,7 @@ const Home = props => {
           {/* Sub featured posts */}
           <Grid container spacing={4}>
             {featuredPosts.map(post => (
-              <SmallPostCard></SmallPostCard>
+              <SmallPostCard post={post} {...props}></SmallPostCard>
             ))}
           </Grid>
           {/* End hero unit */}
