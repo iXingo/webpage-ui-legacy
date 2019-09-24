@@ -168,7 +168,7 @@ const SignIn = (props) => {
     const notificationType="success";
     notification[notificationType]({
       message: '星狗网Web App',
-      description: '您已经成功',
+      description: '您已经是登录状态啦！不需要登录哦～为您跳转到到首页看看吧～',
     });
     history.push('/index');
   }
