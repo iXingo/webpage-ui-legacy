@@ -72,6 +72,7 @@ const Topbar = props => {
 
   const [notifications] = useState([]);
 
+
   return (
     <AppBar
       {...rest}
@@ -112,7 +113,7 @@ const Topbar = props => {
           <IconButton
             className={classes.signOutButton}
             color="inherit"
-            onClick={handleLogout}
+            onClick={props.handleLogout}
           >
             <InputIcon />
           </IconButton>

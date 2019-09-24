@@ -35,7 +35,7 @@ const tutorialSteps = [
   {
     label: '这实验室',
     imgPath:
-      'http://localhost:3000/images/banner/apian.png',
+      'http://wpimg.ixingo.cn/wp-content/uploads/2015/07/new.jpg',
   },
 ];
 
