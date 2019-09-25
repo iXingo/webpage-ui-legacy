@@ -77,9 +77,7 @@ const FriendMain = props => {
           </Grid>
         </Grid>
       </div>
-      <Grid item xs={12} md={8} className={classes.singlefriend}>
-                          <MediaSection riend={props.friend} {...props}/>
-          </Grid>
+        <MediaSection riend={props.friend} {...props}/>
     </div>
   );
 };
