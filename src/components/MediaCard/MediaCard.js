@@ -55,19 +55,16 @@ const MediaCarcd = props => {
           title="Image title"
         />
         <CardContent className={classes.cardContents}>
-          <Typography gutterBottom variant="h5" component="h2">
-            Heading
+          <Typography gutterBottom variant="h4" component="h2" color="primary">
+            Python从入门到精通
           </Typography>
-          <Typography>
+          <Typography variant="h5" >
             This is a media card. You can use this section to describe the content.
           </Typography>
         </CardContent>
         <CardActions>
           <Button size="small" color="primary">
-            View
-          </Button>
-          <Button size="small" color="primary">
-            Edit
+            查看全文
           </Button>
         </CardActions>
       </Card>
