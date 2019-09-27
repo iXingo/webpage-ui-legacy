@@ -34,35 +34,42 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
   },
   cardMedias: {
-    paddingTop: '56.25%', // 16:9
+    // paddingTop: '56.25%', // 16:9
+    paddingTop: '48%', // 16:9
+    height: 180,
+    verticalAlign: 'middle',
   },
   cardContents: {
     flexGrow: 1,
+    padding: 20,
   },
+  summary :{
+    padding: '30px 0',
+  }
 }));
 
 
-const MediaCarcd = props => {
+const BigMediaCarcd = props => {
 
   const classes = useStyles();
 
   return (
-    <Grid item key={props.card} xs={12} sm={6} md={4}>
+    <Grid item key={props.card} xs={12} sm={6} md={6}>
       <Card className={classes.cards}>
         <CardMedia
           className={classes.cardMedias}
-          image="https://source.unsplash.com/random"
+          image="https://developers.google.cn/site-assets/images/news/android-app-bundles-graphic_720.png"
           title="Image title"
         />
         <CardContent className={classes.cardContents}>
-          <Typography gutterBottom variant="h4" component="h2" color="primary">
+          <Typography gutterBottom variant="h3" component="h2" color="primary">
             Python从入门到精通
           </Typography>
-          <Typography variant="h5" >
-            This is a media card. You can use this section to describe the content.
+          <Typography variant="h5" className={classes.summary}>
+          Developer Student Clubs train thousands of student developers globally and work with their communities to solve real-life problems. University students who lead a DSC gain access to Google technology, events, and mentorship while training their local community through fun meetups, project building activities, and global competitions.
           </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions className={classes.cardContents}>
           <Button size="small" color="primary">
             查看全文
           </Button>
@@ -73,4 +80,4 @@ const MediaCarcd = props => {
 }
 
 
-export default MediaCarcd;
+export default BigMediaCarcd;

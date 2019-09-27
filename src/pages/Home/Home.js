@@ -12,7 +12,7 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
-  SummaryCard, Carousel, Subscribe, PostCard, MediaCard, SmallPostCard
+  SummaryCard, Carousel, Subscribe, PostCard, MediaCard, BigMediaCard, SmallPostCard, Title
 }  from '../../components';
 import NotAuth from '../NotAuth';
 
@@ -236,6 +236,15 @@ const Home = props => {
               <MediaCard card={card} {...props}></MediaCard>
             ))}
           </Grid>
+
+          <Title/>
+
+          <Grid container spacing={4} className={classes.cardGrids}>
+            {cards.map(card => (
+              <BigMediaCard card={card} {...props}></BigMediaCard>
+            ))}
+          </Grid>
+
           <Grid container spacing={4} className={classes.cardGrid}>
               <Grid item xs={12} md={6}>
                 <SummaryCard></SummaryCard>

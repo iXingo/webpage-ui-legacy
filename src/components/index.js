@@ -16,5 +16,8 @@ export { default as FeaturedCardReversed } from './FeaturedCardReversed';
 export { default as FeaturedContent} from './FeaturedContent';
 export { default as SideBar } from './SideBar';
 export { default as MediaCard } from './MediaCard';
+export { default as BigMediaCard } from './BigMediaCard';
 export { default as SmallPostCard } from './SmallPostCard';
 export { default as MediaSection } from './MediaSection';
+export { default as Title } from './Title';
+
