@@ -85,7 +85,7 @@ const Topbar = props => {
             src="/images/logos/logo.png"
             className={classes.logo}
           />
-        </RouterLink>bata0.9.1
+        </RouterLink>测试版 Beta 0.9.1
         <div className={classes.flexGrow} />
         <Hidden mdDown>
         <div className={classes.search}>

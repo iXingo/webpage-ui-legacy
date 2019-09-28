@@ -34,8 +34,9 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'center'
   },
   quoteInner: {
+    paddingTop: 420,
     textAlign: 'center',
-    flexBasis: '540px'
+    flexBasis: 540,
   },
   quoteText: {
     // color: theme.palette.white,
