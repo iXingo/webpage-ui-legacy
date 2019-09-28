@@ -25,25 +25,39 @@ const useStyles = makeStyles(theme => ({
 
 
 const FeaturedCard = props => {
+  const { history } = props;
   const classes = useStyles();
+  const card = {
+    type: ' 汪师傅和他的朋友们',
+    title: '汪师傅的会客厅！',
+    date: '2019年8月15日',
+    description:'不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
+    imgUrl: '/images/img/undraw_special_event_4aj8.svg',
+    url: '/friends'
+};
+
+  const clickUrl = ()=> {
+    history.push(card.url);
+  };
 
   return (
     <Grid container className={classes.main}>
       <Grid item xs={12} md={6}>
         <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='textSecondary'>
-          新闻视角
+          {card.type}
         </Typography>
         <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
-          汪师傅的会客厅！
+          {card.title}
         </Typography>
         <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}} color="textSecondary">
-          2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。 这些年折折腾腾，也没搞出来，当然也没写出什么有意思的东西。 今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。        </Typography>
-        <Button variant="outlined" size="large" color="primary">
+          {card.description}
+        </Typography>
+        <Button variant="outlined" size="large" color="primary" onClick={clickUrl}>
           查看更多...
         </Button>
       </Grid>
       <Grid item md={6}>
-        <img alt="Cover" className={classes.mainImg} src="http://localhost:3000/images/img/undraw_special_event_4aj8.svg" />
+        <img alt="Cover" className={classes.mainImg} src={card.imgUrl} />
       </Grid>
     </Grid>
   );

@@ -15,22 +15,22 @@ const tutorialSteps = [
   {
     label: '我的青春消亡史',
     imgPath:
-      'http://localhost:3000/images/banner/wangxin.png',
+      '/images/banner/wangxin.png',
   },
   {
     label: 'Python讲解',
     imgPath:
-      'http://localhost:3000/images/banner/shanghai.png',
+      '/images/banner/shanghai.png',
   },
   {
     label: '测试文章',
     imgPath:
-      'http://localhost:3000/images/banner/shanghai2.png',
+      '/images/banner/shanghai2.png',
   },
   {
     label: '每个人',
     imgPath:
-      'http://localhost:3000/images/banner/friends.png',
+      '/images/banner/friends.png',
   },
   {
     label: '这实验室',
