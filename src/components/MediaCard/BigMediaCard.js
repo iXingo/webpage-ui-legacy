@@ -71,7 +71,7 @@ const BigMediaCarcd = props => {
         </CardContent>
         <CardActions className={classes.cardContents}>
           <Button size="small" color="primary">
-            查看全文
+            查看全文...
           </Button>
         </CardActions>
       </Card>

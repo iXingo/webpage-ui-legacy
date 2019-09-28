@@ -65,7 +65,15 @@ const MediaCarcd = props => {
             Python从入门到精通
           </Typography>
           <Typography variant="h5" className={classes.summary}>
-          Developer Student Clubs train thousands of student developers globally and work with their communities to solve real-life problems. University students who lead a DSC gain access to Google technology, events, and mentorship while training their local community through fun meetups, project building activities, and global competitions.
+            NVIDIA Super系列显卡正式发布！】全新 GeForce RTX SUPER系列核心更多、时钟频率更高，其性能较 RTX 20 系列提升最高可达 25%。
+            T CORES：
+            依托于专用光线追踪硬件，可实现真实的阴影、反射、折射和全局照明。
+            TENSOR CORES：
+            人工智能正在推动着有史以来最伟大的技术革命，Turing 将其带入了个人图形计算领域。您可以通过体验 NVIDIA DLSS 给游戏带来的巨大性能提升，来感受 AI 计算的强悍之处。
+            新一代着色技术：
+            可变速率着色集中处理细节丰富的区域，从而提高性能。Mesh Shader 的高级几何处理能力支持每个场景中更多的对象，因而能够渲染更复杂的环境。
+            并发处理：
+            同步浮点和整数处理使 Turing GPU 能够更有效地处理当今游戏大作更为繁重的运算任务。
           </Typography>
         </CardContent>
         <CardActions>
