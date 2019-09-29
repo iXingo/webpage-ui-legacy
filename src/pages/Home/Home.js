@@ -227,12 +227,14 @@ const Home = props => {
           <Carousel></Carousel>
           
           
-          <Paper className={classes.list}>
-            <FeaturedCard card={card1} {...props}></FeaturedCard>
-          </Paper>
+          
 
           <Paper className={classes.list}>
             <FeaturedCardReversed card={card2} {...props}></FeaturedCardReversed>
+          </Paper>
+
+          <Paper className={classes.list}>
+            <FeaturedCard card={card1} {...props}></FeaturedCard>
           </Paper>
 
           <Paper className={classes.list}>
