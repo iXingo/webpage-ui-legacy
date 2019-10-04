@@ -28,25 +28,31 @@ const useStyles = makeStyles(theme => ({
 
 
 const FeaturedCardReversed = props => {
+  const { card, history } = props;
   const classes = useStyles();
+  const url = card.url;
+
+  const clickUrl = ()=> {
+    history.push(url);
+  };
 
   return (
     <Grid container className={classes.main}>
       <Grid item md={6}>
-        <img alt="Cover" className={classes.mainImg} src="images/img/undraw_special_event_4aj8.svg" />
+        <img alt="Cover" className={classes.mainImg} src="https://developer.android.google.cn/images/home/design-illustration.svg" />
       </Grid>
       <Grid item xs={12} md={6} className={classes.text}>
         <Typography overline gutterBottom variant='h5' style={{padding: '10px 0', color: '#8EB2F4'}} >
-          新闻视角
+          {card.type}
         </Typography>
         <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color='inherit'>
-          汪师傅的会客厅！
+          {card.title}
         </Typography>
         <Typography overline gutterBottom variant='h5' style={{padding: '30px 0', color: '#8EB2F4'}} >
-          2013年注册第一个域名，申请的第一个主机，配置第一个WordPress程序开始，就一直想从前端和后端搭建写一个博客。 这些年折折腾腾，也没搞出来，当然也没写出什么有意思的东西。 今天，我再次出发，在这个网站（再次）开始我的博客生涯，头也不回的开始我的程序人生。
+          {card.description}
         </Typography>
-        <Button variant="outlined" size="large" color="inherit">
-          查看更多
+        <Button variant="outlined" size="large" color="inherit" onClick={clickUrl}>
+          查看更多...
         </Button>
       </Grid>
     </Grid>

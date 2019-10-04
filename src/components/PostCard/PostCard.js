@@ -36,11 +36,11 @@ const PostCard = props => {
   
     return (
       <div>
-        <Link component={RouterLink} to="/post/7858346724015390720" >
+        <Link component={RouterLink} to="/post/7866307276669779968" >
           <CardActionArea component="a" href="#" className={classes.postCard} onClick={clickCard}>
             <Card className={classes.card}>
               <Hidden xsDown>
-                  <CardMedia className={classes.cardMedia} image="http://localhost:3000/images/blog/UNADJUSTEDNONRAW_thumb_f6f.jpg" title="Image title"/>
+                  <CardMedia className={classes.cardMedia} image="/images/blog/UNADJUSTEDNONRAW_thumb_f6f.jpg" title="Image title"/>
               </Hidden>
               <div className={classes.cardDetails}>
                 <CardContent>

@@ -45,21 +45,21 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
   },
   title: {
-    marginLeft: theme.spacing(2),
-    flex: 1,
-    color: 'white'
+    paddingTop: 20,
+    textAlign: 'center',
+    justifyContent: 'center',
   },
   pro:{
-    marginTop: 64,
-    marginBottom: 20,
+    // marginTop: 64,
+    // marginBottom: 20,
     fontSize: 54,
     textAlign: 'center',
     justifyContent: 'center',
-    padding: 10,
     fontWeight: 300,
     lineHeight : '50px',
     color: '#1a73e8',
   },
+
   subpro : {
     textAlign: 'center',
     fontWeight: 300
@@ -93,9 +93,12 @@ const FriendHead = props => {
         {/* Hero unit */}
         <Grid container className={classes.mainGrid}>
           <Grid container item xs={12} md={12} className={classes.headimage} />
-          <Grid item xs={10} md={8} className={classes.grid}>
+          <Grid item xs={10} md={8} className={classes.title}>
             <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-              他们，正影响着我。
+              他们，
+            </Typography>
+            <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
+              正影响着我。
             </Typography>
           </Grid>
           <Grid  item xs={10} md={8} className={classes.grid}>

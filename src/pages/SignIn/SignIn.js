@@ -16,6 +16,10 @@ import { SvgIcon } from '@material-ui/core';
 import { notification } from 'antd';
 import { login } from '../../util/APIUtils';
 import { ACCESS_TOKEN } from '../../constants';
+<<<<<<< HEAD
+=======
+// import Home from '../Home';
+>>>>>>> 8df112454202d69f706494952f3f14b295ec2c3c
 
 
 
@@ -167,7 +171,7 @@ const SignIn = (props) => {
     const notificationType="success";
     notification[notificationType]({
       message: '星狗网Web App',
-      description: '您已经成功',
+      description: '您已经是登录状态啦！不需要登录哦～为您跳转到到首页看看吧～',
     });
     history.push('/index');
   }

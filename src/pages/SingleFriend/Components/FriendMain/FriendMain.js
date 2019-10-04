@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import FriendContent from '../FriendContent';
 import FriendHeader from '../FriendHeader';
-import { FeaturedCard }  from '../../../../components';
+import { FeaturedCard, MediaSection}  from '../../../../components';
 import Paper from '@material-ui/core/Paper';
 
 
@@ -58,12 +58,14 @@ const FriendMain = props => {
 
   return (
     <div className={classes.root}>
+      
       <div className={classes.content}>
         <Grid container className={classes.mainGrid}>
           {/* Main content */}
           <Grid item xs={12} md={8} className={classes.singlefriend}>
             <FriendHeader friend={props.friend} {...props}></FriendHeader>
           </Grid>
+          
         </Grid>
         
         <Grid container className={classes.contentGrid}>
@@ -75,6 +77,7 @@ const FriendMain = props => {
           </Grid>
         </Grid>
       </div>
+        <MediaSection riend={props.friend} {...props}/>
     </div>
   );
 };

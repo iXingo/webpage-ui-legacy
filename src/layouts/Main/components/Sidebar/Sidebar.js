@@ -79,10 +79,16 @@ const Sidebar = props => {
       icon: <LockOpenIcon />
     },
     {
-      title: '设    置',
+      title: '关    于',
+      href: '/about',
+      icon: <SettingsIcon />
+    },
+    {
+      title: ' 个人中心',
       href: '/settings',
       icon: <SettingsIcon />
-    }
+    },
+    
   ];
 
   return (
