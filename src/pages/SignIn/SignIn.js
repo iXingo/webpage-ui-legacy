@@ -16,10 +16,7 @@ import { SvgIcon } from '@material-ui/core';
 import { notification } from 'antd';
 import { login } from '../../util/APIUtils';
 import { ACCESS_TOKEN } from '../../constants';
-<<<<<<< HEAD
-=======
 // import Home from '../Home';
->>>>>>> 8df112454202d69f706494952f3f14b295ec2c3c
 
 
 
