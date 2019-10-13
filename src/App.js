@@ -64,7 +64,7 @@ class App extends Component {
     this.loadCurrentUser();
   }
 
-  handleLogout(redirectTo="/", notificationType="success", description="您已经成功推出登录！") {
+  handleLogout(redirectTo="/", notificationType="success", description="您已经成功退出登录！") {
     localStorage.removeItem(ACCESS_TOKEN);
 
     this.setState({
