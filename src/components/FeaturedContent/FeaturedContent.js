@@ -59,7 +59,7 @@ const FeaturedCardReversed = props => {
           <Grid container className={classes.main}>
             <Grid item xs={12} md={6}>
               <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='textSecondary'>
-                新闻视角
+                封面故事
               </Typography>
               <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
                 汪师傅的会客厅！
@@ -79,7 +79,7 @@ const FeaturedCardReversed = props => {
         <Grid container className={classes.reverse}>
             <Grid item xs={12} md={6}>
               <Typography overline gutterBottom variant='h5' style={{padding: '10px 0', color: '#8EB2F4'}} >
-                新闻视角
+                技术历程
               </Typography>
               <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color='inherit'>
                 汪师傅的会客厅！
