@@ -84,7 +84,7 @@ class App extends Component {
     let { history } = this.props;
     notification.success({
       message: '星狗网Web App',
-      description: "恭喜您！您已经成功登录。",
+      description: "恭喜您！您已经成功登录！",
     });
     this.loadCurrentUser();
     if(history.location.pathname !== "/sign-in"){
