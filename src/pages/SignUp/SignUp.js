@@ -226,7 +226,7 @@ const SignUp = props => {
             } else {
               notification.error({
                 message: '星狗网Web App',
-                description: "用户名已经被别人占用啦",
+                description: "用户名已经被别人占用啦,再选择一个吧～",
               }); 
               history.push("/sign-up");
             }
