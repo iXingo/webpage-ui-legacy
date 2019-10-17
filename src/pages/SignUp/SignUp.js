@@ -221,12 +221,12 @@ const SignUp = props => {
             if(response.available) {
               notification.success({
                 message: '星狗网Web App',
-                description: "恭喜，您的Id可用",
+                description: "恭喜您，您的Id可用～",
               }); 
             } else {
               notification.error({
                 message: '星狗网Web App',
-                description: "用户名已经被别人占用啦",
+                description: "用户名已经被别人占用啦～再选一个吧～",
               }); 
               history.push("/sign-up");
             }
