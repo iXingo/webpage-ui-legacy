@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     background: 'url(http://wpimg.ixingo.cn/wp-content/uploads/2015/01/IMG_5126.png)',
     backgroundSize: 'cover',
     width: '100%',
-    height: 640
+    height: 800
   },
   profile: {
     color: 'white',
@@ -35,9 +35,9 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     display: 'flex',
     flexDirection: 'column',
-    paddingTop: theme.spacing(6),
+    padding: '48px 24px 0',
     [theme.breakpoints.up('md')]: {
-      paddingTop: theme.spacing(6),
+      padding: '48px 24px 0',
       // paddingTop: 20,
     },
   },
