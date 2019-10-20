@@ -17,11 +17,12 @@ const useStyles = makeStyles(theme => ({
   button: {
     color: colors.blueGrey[800],
     padding: '10px 8px',
-    justifyContent: 'flex-start',
+    // justifyContent: 'flex-start',
     textTransform: 'none',
     letterSpacing: 0,
     width: '100%',
-    fontWeight: theme.typography.fontWeightMedium
+    fontWeight: theme.typography.fontWeightMedium,
+    justifyContent: 'center',
   },
   icon: {
     color: theme.palette.icon,

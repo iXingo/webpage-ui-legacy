@@ -84,7 +84,7 @@ const Sidebar = props => {
       icon: <SettingsIcon />
     },
     {
-      title: ' 个人中心',
+      title: '设    置',
       href: '/settings',
       icon: <SettingsIcon />
     },
