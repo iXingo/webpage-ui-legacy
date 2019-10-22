@@ -113,7 +113,7 @@ const Topbar = props => {
           <IconButton
             className={classes.signOutButton}
             color="inherit"
-            onClick={props.handleLogout}
+            onClick={ handleLogout }
           >
             <InputIcon />
           </IconButton>
