@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import FriendContent from '../FriendContent';
 import FriendHeader from '../FriendHeader';
-import { FeaturedCard, MediaSection}  from '../../../../components';
+import { FeaturedCard }  from '../../../../components';
 import Paper from '@material-ui/core/Paper';
 
 
@@ -77,7 +77,6 @@ const FriendMain = props => {
           </Grid>
         </Grid>
       </div>
-        <MediaSection riend={props.friend} {...props}/>
     </div>
   );
 };

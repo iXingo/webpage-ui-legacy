@@ -5,9 +5,9 @@ import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ImageIcon from '@material-ui/icons/Image';
-import AccountBoxIcon from '@material-ui/icons/AccountBox';
+// import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import SettingsIcon from '@material-ui/icons/Settings';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
+// import LockOpenIcon from '@material-ui/icons/LockOpen';
 import PeopleIcon from '@material-ui/icons/People';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 
@@ -68,16 +68,16 @@ const Sidebar = props => {
       href: '/users',
       icon: <PeopleIcon />
     },
-    {
-      title: '登    录',
-      href: '/sign-in',
-      icon: <AccountBoxIcon />
-    },
-    {
-      title: '注    册',
-      href: '/sign-up',
-      icon: <LockOpenIcon />
-    },
+    // {
+    //   title: '登    录',
+    //   href: '/sign-in',
+    //   icon: <AccountBoxIcon />
+    // },
+    // {
+    //   title: '注    册',
+    //   href: '/sign-up',
+    //   icon: <LockOpenIcon />
+    // },
     {
       title: '关    于',
       href: '/about',

@@ -14,6 +14,7 @@ import {
   SinglePost as SinglePostPage,
   Friend as FriendPage,
   SingleFriend as SingleFriendPage,
+  About as AboutPage,
   Home as HomePage
 } from './pages';
 import { Album as AlbumPage} from './components';
@@ -115,6 +116,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/please-login"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={AboutPage}
+          exact
+          layout={MainLayout}
+          path="/about"
           {...this.props}
         />
         <Redirect to="/not-found" /> 
