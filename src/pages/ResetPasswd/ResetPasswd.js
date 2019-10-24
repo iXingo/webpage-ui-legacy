@@ -124,13 +124,13 @@ const RestPasswd = props => {
                 className={classes.quoteText}
                 variant="h1"
                 >
-                汪师傅:
+                  汪师傅:
                 </Typography>
                 <Typography
                 className={classes.quoteText}
                 variant="h1"
                 >
-                看见，好时光
+                  看见，好时光
                 </Typography>
                 <div className={classes.person}>
                 <Typography
