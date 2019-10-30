@@ -239,8 +239,8 @@ const SignIn = (props) => {
       });
   };
 
-  const hasError = field =>
-    formState.touched[field] && formState.errors[field] ? true : false;
+  const hasError = field =>formState.touched[field] && formState.errors[field] ? true : false;
+  document.title ="星狗网 | 登录星狗网， 看见好时光";
 
   return (
     <div className={classes.root}>

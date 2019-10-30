@@ -97,6 +97,7 @@ class App extends Component {
   }
 
   render() {
+    document.title ="星狗网 | 看见，好时光。";
     return (
       <ThemeProvider theme={theme}>
         <ScrollToTop>
