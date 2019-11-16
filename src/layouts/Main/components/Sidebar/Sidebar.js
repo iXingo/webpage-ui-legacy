@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/styles';
 import { Divider, Drawer } from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ImageIcon from '@material-ui/icons/Image';
-// import AccountBoxIcon from '@material-ui/icons/AccountBox';
+import ExploreIcon from '@material-ui/icons/Explore';
 import SettingsIcon from '@material-ui/icons/Settings';
 // import LockOpenIcon from '@material-ui/icons/LockOpen';
 import PeopleIcon from '@material-ui/icons/People';
@@ -64,9 +64,9 @@ const Sidebar = props => {
       icon: <DashboardIcon />
     },
     {
-      title: '有    趣',
+      title: '发    现',
       href: '/users',
-      icon: <PeopleIcon />
+      icon: <ExploreIcon />
     },
     // {
     //   title: '登    录',
