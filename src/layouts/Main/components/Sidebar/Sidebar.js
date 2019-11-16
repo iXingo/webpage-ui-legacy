@@ -7,7 +7,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import ImageIcon from '@material-ui/icons/Image';
 import ExploreIcon from '@material-ui/icons/Explore';
 import SettingsIcon from '@material-ui/icons/Settings';
-// import LockOpenIcon from '@material-ui/icons/LockOpen';
+import InfoIcon from '@material-ui/icons/Info';
 import PeopleIcon from '@material-ui/icons/People';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 
@@ -81,7 +81,7 @@ const Sidebar = props => {
     {
       title: '关    于',
       href: '/about',
-      icon: <SettingsIcon />
+      icon: <InfoIcon />
     },
     {
       title: '设    置',
