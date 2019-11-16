@@ -3,6 +3,9 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Typography, Button, colors } from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -65,7 +68,7 @@ const UpgradePlan = props => {
           href="https://github.com/iXingo/WebPageUI.git"
           variant="contained"
         >
-          Github
+          <GitHubIcon /> &nbsp;&nbsp;Github
         </Button>
         
       </div>

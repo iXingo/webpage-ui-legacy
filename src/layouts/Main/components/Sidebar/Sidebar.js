@@ -10,7 +10,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import InfoIcon from '@material-ui/icons/Info';
 import PeopleIcon from '@material-ui/icons/People';
 import EventNoteIcon from '@material-ui/icons/EventNote';
-
+import FiberNewIcon from '@material-ui/icons/FiberNew';
 import { Profile, SidebarNav, UpgradePlan } from './components';
 
 const useStyles = makeStyles(theme => ({
@@ -52,6 +52,11 @@ const Sidebar = props => {
       title: '好    友',
       href: '/friends',
       icon: <PeopleIcon />
+    },
+    {
+      title: '新    闻',
+      href: '/news',
+      icon: <FiberNewIcon />
     },
     {
       title: '计    划',
