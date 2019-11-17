@@ -2,6 +2,7 @@
   "name": "xindog-web-app",
   "version": "1.0.0",
   "private": true,
+  "homepage":".",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
     "@material-ui/icons": "^4.5.1",
@@ -11,7 +12,7 @@
     "markdown-to-jsx": "^6.10.2",
     "npm": "^6.10.2",
     "prop-types": "^15.7.2",
-    "react": "^16.5.2",
+    "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.10",
     "react-content-loader": "^4.2.2",
     "react-dom": "^16.5.2",
