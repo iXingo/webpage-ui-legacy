@@ -15,6 +15,7 @@ import {
   Friend as FriendPage,
   SingleFriend as SingleFriendPage,
   About as AboutPage,
+  News as NewsPage,
   Home as HomePage
 } from './pages';
 import { Album as AlbumPage} from './components';
@@ -67,6 +68,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/sign-in"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={NewsPage}
+          exact
+          layout={MainLayout}
+          path="/news"
           {...this.props}
         />
         <RouteWithLayout
