@@ -199,7 +199,7 @@ const News = props => {
         </Toolbar>
         
         <main>
-          <MarqueeText></MarqueeText>
+          
           {/* Main featured post */}
           <Carousel></Carousel>
 

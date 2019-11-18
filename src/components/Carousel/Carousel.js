@@ -8,6 +8,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import { MarqueeText }  from '../../components';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -109,6 +110,8 @@ function Carousel() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
+      <MarqueeText></MarqueeText>
+
       <Paper square elevation={0} className={classes.header}>
         <Typography style={{color: 'white'}}>{tutorialSteps[activeStep].label}</Typography>
         <MobileStepper
