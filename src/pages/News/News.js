@@ -7,7 +7,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
@@ -122,18 +122,6 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const sections = [
-  '科技',
-  '生活',
-  '前端',
-  '后端',
-  '算法',
-  '好友',
-  '职场',
-  '兴趣',
-  '新闻',
-  '见闻',
-];
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -200,7 +188,7 @@ const News = props => {
             noWrap
             className={classes.toolbarTitle}
           >
-            星狗网
+            <img src="images/icon/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
           </Typography>
           {/* <IconButton>
             <SearchIcon />
@@ -209,27 +197,11 @@ const News = props => {
             搜索
           </Button>
         </Toolbar>
-        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-          {sections.map(section => (
-            <Link
-              color="inherit"
-              noWrap
-              key={section}
-              variant="body2"
-              href="#"
-              className={classes.toolbarLink}
-            >
-              {section}
-            </Link>
-          ))}
-        </Toolbar>
+        
         <main>
           <MarqueeText></MarqueeText>
           {/* Main featured post */}
           <Carousel></Carousel>
-          
-          
-          
 
           <Paper className={classes.list}>
             <FeaturedCardReversed card={card2} {...props}></FeaturedCardReversed>
