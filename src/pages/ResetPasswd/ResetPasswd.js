@@ -98,10 +98,10 @@ const useStyles = makeStyles(theme => ({
   },
   signUpButton:{
     margin: theme.spacing(4, 0),
-    width: '70%'
+    width: '80%'
   },
   field: {
-    width: '70%'
+    width: '80%'
   }
 }));
 
@@ -154,7 +154,9 @@ const RestPasswd = props => {
                 <ArrowBackIcon />
                 </IconButton>
             </div>
+            
             <div className={classes.reset}>
+                <Typography variant="h6">请您勿需担心，关于您和您的一切都不会丢失。</Typography>
                 <TextField className={classes.field}
                     id="standard-full-width"
                     label="请输入您注册星狗网所使用的邮箱"
