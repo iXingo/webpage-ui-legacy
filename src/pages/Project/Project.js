@@ -139,6 +139,25 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
+const projects = [
+  {
+    "name": "合影计划",
+    "description": "相见时难别亦难。此计划的目的是珍惜每一次相聚的时光，与汪师傅一起合影，一起留下相聚的难忘瞬间。",
+    "involveUrl": ""
+  },
+  {
+    "name": "好友列传",
+    "description": "相见时难别亦难。此计划的目的是珍惜每一次相聚的时光，与汪师傅一起合影，一起留下相聚的难忘瞬间。",
+    "involveUrl": ""
+  },
+  {
+    "name": "一声问候",
+    "description": "相见时难别亦难。此计划的目的是珍惜每一次相聚的时光，与汪师傅一起合影，一起留下相聚的难忘瞬间。",
+    "involveUrl": ""
+  }
+]
+
 const Project = props => {
 
   const classes = useStyles();
@@ -156,24 +175,10 @@ const Project = props => {
             </div>
           </div>
         </div>
-        <div className={classes.content}>
-          <HeaderUnit />
-        </div>
-        <div className={classes.content}>
-          <HeaderUnit />
-        </div>
-        <div className={classes.content}>
-          <HeaderUnit />
-        </div>
-        <div className={classes.content}>
-          <HeaderUnit />
-        </div>
-        <div className={classes.content}>
-          <HeaderUnit />
-        </div>
-        <div className={classes.content}>
-          <HeaderUnit />
-        </div>
+        {projects.map(project => (
+            <HeaderUnit project={project} {...props} />
+        ))
+        }
       </div>
       <Container maxWidth="lg" className={classes.container}>
         <PostCard></PostCard>

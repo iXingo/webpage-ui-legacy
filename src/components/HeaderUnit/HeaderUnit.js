@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-
+import { withRouter } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
@@ -41,7 +41,9 @@ const useStyles = makeStyles(theme => ({
 
 
 
-export default function HeaderUnit() {
+const HeaderUnit = props => {
+
+    const { project } = props;
     const classes = useStyles();
   
     return (
@@ -49,11 +51,10 @@ export default function HeaderUnit() {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              合影计划
+              {project.name}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              相见时难别亦难。
-              此计划的目的是珍惜每一次相聚的时光，与汪师傅一起合影，一起留下相聚的难忘瞬间。
+              {project.description}
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
@@ -74,3 +75,6 @@ export default function HeaderUnit() {
       </React.Fragment>
     );
 }
+
+
+export default withRouter(HeaderUnit);
