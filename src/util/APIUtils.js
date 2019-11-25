@@ -118,12 +118,14 @@ export function getUserVotedPolls(username, page, size) {
     });
 }
 
+
+// Posts Related Data
 export function getUserCreatedPosts(username, page, size) {
     page = page || 0;
     size = size || 10;
 
     return request({
-        url: API_BASE_URL + "/users/" + username + "/posts?page=" + page + "&size=" + size,
+        url: API_BASE_URL + "/user/" + username + "/post?page=" + page + "&size=" + size,
         method: 'GET'
     });
 }
@@ -131,14 +133,7 @@ export function getUserCreatedPosts(username, page, size) {
 
 export function getAllPosts() {
     return request({
-        url: API_BASE_URL + "/posts/all",
-        method: 'GET'
-    });
-}
-
-export function getAllFriends() {
-    return request({
-        url: API_BASE_URL + "/friends/all",
+        url: API_BASE_URL + "/post/all",
         method: 'GET'
     });
 }
@@ -146,14 +141,33 @@ export function getAllFriends() {
 
 export function getPost(id) {
     return request({
-        url: API_BASE_URL +"/posts/" + id,
+        url: API_BASE_URL +"/post/" + id,
+        method: 'GET'
+    });
+}
+
+
+
+// Friend related data
+export function getAllFriends() {
+    return request({
+        url: API_BASE_URL + "/friend/all",
         method: 'GET'
     });
 }
 
 export function getFriend(id) {
     return request({
-        url: API_BASE_URL +"/friends/" + id,
+        url: API_BASE_URL +"/friend/" + id,
+        method: 'GET'
+    });
+}
+
+
+// News related data
+export function getNews(id) {
+    return request({
+        url: API_BASE_URL +"/news/" + id,
         method: 'GET'
     });
 }
