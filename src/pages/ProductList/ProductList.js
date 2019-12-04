@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductList = () => {
+const ProductList = props => {
   
   const classes = useStyles();
   const [products] = useState(mockData);
