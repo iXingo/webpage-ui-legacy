@@ -34,6 +34,7 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/products"
+          {...this.props}
         />
         <RouteWithLayout
           component={ProjectPage}

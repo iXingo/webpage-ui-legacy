@@ -72,6 +72,11 @@ class App extends Component {
       });
       return;
     }
+
+    notification[notificationType]({
+      message: '星狗网Web App',
+      description: description + "下次再见啦！亲爱的" + this.state.currentUser.name + " 同学~",
+    });
     localStorage.removeItem(ACCESS_TOKEN);
 
     this.setState({
@@ -81,17 +86,14 @@ class App extends Component {
 
     this.props.history.push(redirectTo);
     
-    notification[notificationType]({
-      message: '星狗网Web App',
-      description: description,
-    });
+    
   }
 
   handleLogin() {
     let { history } = this.props;
     notification.success({
       message: '星狗网Web App',
-      description: "恭喜您！您已经成功登录！",
+      description: "欢迎回来！恭喜您！您已经成功登录！",
     });
     this.loadCurrentUser();
     if(history.location.pathname !== "/sign-in"){
