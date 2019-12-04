@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import { useMediaQuery } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
+
 
 import { Sidebar, Topbar, Footer } from './components';
 
@@ -55,6 +57,7 @@ const Main = props => {
         onClose={handleSidebarClose}
         open={shouldOpenSidebar}
         variant={isDesktop ? 'persistent' : 'temporary'}
+        {...props}
       />
       <main className={classes.content}>
         {children}
@@ -68,4 +71,4 @@ Main.propTypes = {
   children: PropTypes.node
 };
 
-export default Main;
+export default withRouter(Main);

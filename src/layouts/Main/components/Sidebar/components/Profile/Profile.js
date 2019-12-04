@@ -4,6 +4,8 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Avatar, Typography } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,41 +24,64 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Profile = props => {
-  const { className, ...rest } = props;
+  const { className, currentUser, ...rest } = props;
 
   const classes = useStyles();
 
   const user = {
-    name: '星狗网 | 看见，好时光',
+    name: '请登录',
     avatar: '/images/avatars/000_.png',
-    bio: '程序人生的寂静，欢喜。'
+    bio: '点击头像以进行登陆'
   };
-
-  return (
-    <div
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
-      <Avatar
-        alt="Person"
-        className={classes.avatar}
-        component={RouterLink}
-        src={user.avatar}
-        to="/settings"
-      />
-      <Typography
-        className={classes.name}
-        variant="h4"
+  if(!currentUser){
+    return (
+      <div
+        {...rest}
+        className={clsx(classes.root, className)}
       >
-        {user.name}
-      </Typography>
-      <Typography variant="body2">{user.bio}</Typography>
-    </div>
-  );
+        <Avatar
+          alt="Person"
+          className={classes.avatar}
+          component={RouterLink}
+          src={user.avatar}
+          to="/sign-in"
+        />
+        <Typography
+          className={classes.name}
+          variant="h4"
+        >
+          {user.name}
+        </Typography>
+        <Typography variant="body2">{user.bio}</Typography>
+      </div>
+    );
+  }else{
+    return (
+      <div
+        {...rest}
+        className={clsx(classes.root, className)}
+      >
+        <Avatar
+          alt="Person"
+          className={classes.avatar}
+          component={RouterLink}
+          src={currentUser.headUrl}
+          to="/index"
+        />
+        <Typography
+          className={classes.name}
+          variant="h4"
+        >
+          {currentUser.name}
+        </Typography>
+        <Typography variant="body2">欢迎回来, {currentUser.name}</Typography>
+      </div>
+    );
+  }
 };
 
 Profile.propTypes = {
   className: PropTypes.string
 };
 
-export default Profile;
+export default withRouter(Profile);

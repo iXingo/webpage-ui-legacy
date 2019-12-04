@@ -13,6 +13,7 @@ import EventNoteIcon from '@material-ui/icons/EventNote';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
 import { Profile, SidebarNav, UpgradePlan } from './components';
 
+
 const useStyles = makeStyles(theme => ({
   drawer: {
     width: 240,
@@ -108,7 +109,7 @@ const Sidebar = props => {
         {...rest}
         className={clsx(classes.root, className)}
       >
-        <Profile />
+        <Profile {...props}/>
         <Divider className={classes.divider} />
         <SidebarNav
           className={classes.nav}
