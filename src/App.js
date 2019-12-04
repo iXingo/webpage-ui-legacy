@@ -65,6 +65,13 @@ class App extends Component {
   }
 
   handleLogout(redirectTo="/", notificationType="success", description="您已经成功退出登录！") {
+    if(!this.state.currentUser){
+      notification[notificationType]({
+        message: '星狗网Web App',
+        description: "您还未登录, 请您先登录!",
+      });
+      return;
+    }
     localStorage.removeItem(ACCESS_TOKEN);
 
     this.setState({

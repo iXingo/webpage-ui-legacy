@@ -30,7 +30,7 @@ const Profile = props => {
 
   const user = {
     name: '请登录',
-    avatar: '/images/avatars/000_.png',
+    avatar: 'http://img.ixingo.cn/default_head_pic.png',
     bio: '点击头像以进行登陆'
   };
   if(!currentUser){

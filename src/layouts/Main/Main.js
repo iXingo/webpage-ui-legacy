@@ -52,7 +52,7 @@ const Main = props => {
         [classes.shiftContent]: isDesktop
       })}
     >
-      <Topbar onSidebarOpen={handleSidebarOpen} />
+      <Topbar onSidebarOpen={handleSidebarOpen} context={props}/>
       <Sidebar
         onClose={handleSidebarClose}
         open={shouldOpenSidebar}

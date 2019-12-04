@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Topbar = props => {
-  const { className, onSidebarOpen, handleLogout, ...rest } = props;
+  const { className, onSidebarOpen, context, ...rest } = props;
 
   const classes = useStyles();
 
@@ -113,7 +113,8 @@ const Topbar = props => {
           <IconButton
             className={classes.signOutButton}
             color="inherit"
-            onClick={ handleLogout }
+            onClick={ context.handleLogout }
+            label="退出登录"
           >
             <InputIcon />
           </IconButton>
