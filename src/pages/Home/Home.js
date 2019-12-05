@@ -14,10 +14,6 @@ import { withRouter } from 'react-router-dom';
 import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
   SummaryCard, Carousel, Subscribe, PostCard, MediaCard, BigMediaCard, SmallPostCard, Title
 }  from '../../components';
-// import NotAuth from '../NotAuth';
-
-
-
 
 const useStyles = makeStyles(theme => ({
   toolbar: {
@@ -188,112 +184,9 @@ const Home = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="xl">
-        <Toolbar className={classes.toolbar}>
-          {/* <Button size="small">订阅</Button> */}
-          <Subscribe />
-          <Typography
-            component="h2"
-            variant="h4"
-            color="inherit"
-            align="center"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            星狗网
-          </Typography>
-          {/* <IconButton>
-            <SearchIcon />
-          </IconButton> */}
-          <Button variant="outlined" size="small">
-            搜索
-          </Button>
-        </Toolbar>
-        <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
-          {sections.map(section => (
-            <Link
-              color="inherit"
-              noWrap
-              key={section}
-              variant="body2"
-              href="#"
-              className={classes.toolbarLink}
-            >
-              {section}
-            </Link>
-          ))}
-        </Toolbar>
-        <main>
-          <MarqueeText></MarqueeText>
-          {/* Main featured post */}
-          <Carousel></Carousel>
-          
-          
-          
-
-          <Paper className={classes.list}>
-            <FeaturedCardReversed card={card2} {...props}></FeaturedCardReversed>
-          </Paper>
-
-          <Paper className={classes.list}>
-            <FeaturedCard card={card1} {...props}></FeaturedCard>
-          </Paper>
-
-          <Paper className={classes.list}>
-            <FeaturedList></FeaturedList>
-          </Paper>
-
-          <div className={classes.list}>
-            <FeaturedContent></FeaturedContent>
-          </div>
-          
-
-          {/* End main featured post */}
-          <PostCard />
-          {/* Sub featured posts */}
-          <Grid container spacing={4}>
-            {featuredPosts.map(post => (
-              <SmallPostCard post={post} {...props}></SmallPostCard>
-            ))}
-          </Grid>
-          {/* End hero unit */}
-          <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
-              <MediaCard card={card} {...props}></MediaCard>
-            ))}
-          </Grid>
-
-          <Title/>
-
-          <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
-              <BigMediaCard card={card} {...props}></BigMediaCard>
-            ))}
-          </Grid>
-
-          <Grid container spacing={4} className={classes.cardGrid}>
-              <Grid item xs={12} md={6}>
-                <SummaryCard></SummaryCard>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <SummaryCard></SummaryCard>
-              </Grid>
-          </Grid>
-        </main>
-      </Container>
-      {/* Footer */}
-      {/* <footer className={classes.footer}>
-        <Container maxWidth="lg">
-          <Typography variant="h6" align="center" gutterBottom >
-            Footer
-          </Typography>
-          <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-            Something here to give the footer a purpose!
-          </Typography>
-          <MadeWithLove />
-        </Container>
-      </footer> */}
-      {/* End footer */}
+      <Paper>
+        
+      </Paper>
     </React.Fragment>
   );
 };

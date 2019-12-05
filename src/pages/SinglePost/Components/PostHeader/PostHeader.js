@@ -163,11 +163,11 @@ const PostHeader = props => {
       <Typography variant="h6" className={classes.tip}>
         <strong>阅读提示：</strong>全文共 <strong>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.post.readTime}</strong> 分钟。
       </Typography>
-      <Divider />
+      <Divider style={{margin: "5px 0"}}/>
       <Typography variant="caption" className={classes.posttime} >
-        作者<strong>{props.post.createdBy.name}</strong>使用<strong>{props.post.source}</strong>发表于格林威治时间<strong>{props.post.creationDateTime}</strong>。
+        作者<strong style={{color : '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong style={{color : '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong style={{color : '#1a73e8'}}>{props.post.creationDateTime}</strong>。
       </Typography>
-      <Divider />
+      <Divider style={{margin: "5px 0"}}/>
     </div>
   );
 

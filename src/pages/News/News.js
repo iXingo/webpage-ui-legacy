@@ -179,7 +179,7 @@ const News = props => {
       <Container maxWidth="xl">
         <Toolbar className={classes.toolbar}>
           {/* <Button size="small">订阅</Button> */}
-          <Subscribe />
+          {/* <Subscribe /> */}
           <Typography
             component="h2"
             variant="h4"
@@ -193,9 +193,9 @@ const News = props => {
           {/* <IconButton>
             <SearchIcon />
           </IconButton> */}
-          <Button variant="outlined" size="small">
+          {/* <Button variant="outlined" size="small">
             搜索
-          </Button>
+          </Button> */}
         </Toolbar>
         
         <main>
