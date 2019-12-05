@@ -7,6 +7,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import Divider from '@material-ui/core/Divider';
+
 // import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
@@ -22,10 +24,12 @@ import { FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent,
 const useStyles = makeStyles(theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    dispaly: 'flex'
   },
   toolbarTitle: {
     flex: 1,
-    color: '#1a73e8'
+    color: '#1a73e8',
+    dispaly: 'block'
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
@@ -180,16 +184,30 @@ const News = props => {
         <Toolbar className={classes.toolbar}>
           {/* <Button size="small">订阅</Button> */}
           {/* <Subscribe /> */}
-          <Typography
-            component="h2"
-            variant="h4"
-            color="inherit"
-            align="center"
-            noWrap
-            className={classes.toolbarTitle}
-          >
-            <img src="images/icon/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
-          </Typography>
+          <div>
+            <Typography
+              component="h2"
+              variant="h4"
+              color="inherit"
+              align="center"
+              noWrap
+              className={classes.toolbarTitle}
+            >
+              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
+            </Typography>
+          </div>
+          <div>
+            <Typography
+              component="h2"
+              variant="h4"
+              color="inherit"
+              align="center"
+              noWrap
+              className={classes.toolbarTitle}
+            >
+              星狗新闻， 记录生活记录我
+            </Typography>
+          </div>
           {/* <IconButton>
             <SearchIcon />
           </IconButton> */}
