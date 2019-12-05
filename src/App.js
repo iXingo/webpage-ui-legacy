@@ -67,14 +67,14 @@ class App extends Component {
   handleLogout(redirectTo="/", notificationType="success", description="您已经成功退出登录！") {
     if(!this.state.currentUser){
       notification[notificationType]({
-        message: '星狗网Web App',
+        message: '星狗网 Web App',
         description: "您还未登录, 请您先登录!",
       });
       return;
     }
 
     notification[notificationType]({
-      message: '星狗网Web App',
+      message: '星狗网 Web App',
       description: description + "下次再见啦！亲爱的" + this.state.currentUser.name + " 同学~",
     });
     localStorage.removeItem(ACCESS_TOKEN);
@@ -92,7 +92,7 @@ class App extends Component {
   handleLogin() {
     let { history } = this.props;
     notification.success({
-      message: '星狗网Web App',
+      message: '星狗网 Web App',
       description: "欢迎回来！恭喜您！您已经成功登录！",
     });
     this.loadCurrentUser();
