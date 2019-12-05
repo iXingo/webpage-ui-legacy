@@ -39,7 +39,7 @@ const Topbar = props => {
             src="/images/logos/logo.png"
             className={classes.logo}
           />
-        </RouterLink>测试版 Beta 0.9.1
+        </RouterLink>测试版 Beta 测试版 Beta 2019.12.05.0.1
         <div className={classes.flexGrow} />
         <Hidden lgUp>
           <IconButton

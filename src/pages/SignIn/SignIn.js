@@ -167,7 +167,7 @@ const SignIn = (props) => {
     
     const notificationType="success";
     notification[notificationType]({
-      message: '星狗网Web App',
+      message: '星狗网 Web App',
       description: '您已经是登录状态啦！不需要登录哦～为您跳转到到首页看看吧～',
     });
     history.push('/index');
@@ -227,12 +227,12 @@ const SignIn = (props) => {
       }).catch(error => {
         if (error.status === 401) {
           notification.error({
-            message: '星狗网Web App',
+            message: '星狗网 Web App',
             description: '少年，您的用户名或者密码不正确，请检查！'
           });
         } else {
           notification.error({
-            message: '星狗网Web App',
+            message: '星狗网 Web App',
             description: error.message || '对不起，好像发生了什么事情，请您稍后重试！'
           });
         }
