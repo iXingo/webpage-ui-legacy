@@ -1,19 +1,18 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
+// import Toolbar from '@material-ui/core/Toolbar';
 // import IconButton from '@material-ui/core/IconButton';
 // import SearchIcon from '@material-ui/icons/Search';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 // import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
-import Container from '@material-ui/core/Container';
+// import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
-import { MarqueeText, FeaturedPost, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
-  SummaryCard, Carousel, Subscribe, PostCard, MediaCard, BigMediaCard, SmallPostCard, Title
+import { FeaturedPost
 }  from '../../components';
 
 const useStyles = makeStyles(theme => ({
@@ -210,7 +209,7 @@ const Home = props => {
           </Grid>
         </Grid>
       </div>
-      <FeaturedPost></FeaturedPost>
+      {/* <FeaturedPost></FeaturedPost> */}
     </React.Fragment>
   );
 };

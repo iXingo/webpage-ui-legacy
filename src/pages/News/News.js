@@ -7,14 +7,14 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 
 // import Link from '@material-ui/core/Link';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 import { FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
-  SummaryCard, Carousel, Subscribe, PostCard, MediaCard, BigMediaCard, SmallPostCard, Title
+  SummaryCard, Carousel, PostCard, MediaCard, BigMediaCard, SmallPostCard, Title
 }  from '../../components';
 // import NotAuth from '../NotAuth';
 
