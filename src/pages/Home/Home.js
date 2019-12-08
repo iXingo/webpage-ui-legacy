@@ -21,23 +21,25 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '160px 60px'
+    padding: '160px 10px 120px'
   },
   firstLine: { 
     fontSize: 48,
     color: 'white',
-    padding: 10
+    padding: 10,
   },
   secondLine: {
     fontSize: 20,
     margin: 'auto',
-    paddingTop: 20
+    paddingTop: 20,
+    lineHeight: 1
   },
   thirdLine: {
     margin: 'auto',
     fontSize: 18,
     color: 'white',
-    paddingTop: 80
+    paddingTop: 80,
+    lineHeight: 1
   },
   svgIcon: {
     height: 30,
@@ -104,7 +106,8 @@ const Home = props => {
       <Container className={classes.mainTitle}>
         <div className={classes.main}>
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-            星狗网：   看见，好时光
+            星狗网：
+            看见，好时光
           </Typography>
           <Typography variant="subtitle1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
           　　最美丽的月色，总是出自荒芜的山谷。最厚重的文物，总是出自无字的旷野。最可笑的假话，总是振振有词。最可耻的诬陷，总是彬彬有礼。最不洁的目光，总在监察道德。最不通的文人，总在咬文嚼字。最勇猛的将士，总是柔声细语。最无聊的书籍，总是艰涩难读。最兴奋的相晤，总是昔日敌手。最愤恨的切割，总是早年好友。最动听的讲述，总是出自小人之口。最纯粹的孤独，总是属于大师 之门。最低俗 的交情被日夜的酒水浸泡着，越泡越大。最典雅的友谊被矜持的水笔描画着，越描越淡。
