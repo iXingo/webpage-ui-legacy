@@ -18,7 +18,7 @@ import HeaderUnit from '../HeaderUnit';
 
 
 
-class Post extends Component {
+class FeaturedPost extends Component {
 
     constructor(props) {
       super(props);

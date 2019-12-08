@@ -50,14 +50,14 @@ const Sidebar = props => {
       icon: <EventNoteIcon />
     },
     {
-      title: '好    友',
-      href: '/friends',
-      icon: <PeopleIcon />
-    },
-    {
       title: '新    闻',
       href: '/news',
       icon: <FiberNewIcon />
+    },
+    {
+      title: '好    友',
+      href: '/friends',
+      icon: <PeopleIcon />
     },
     {
       title: '计    划',

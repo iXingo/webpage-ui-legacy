@@ -5,19 +5,20 @@ import Toolbar from '@material-ui/core/Toolbar';
 // import IconButton from '@material-ui/core/IconButton';
 // import SearchIcon from '@material-ui/icons/Search';
 import Paper from '@material-ui/core/Paper';
+// import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
-import { MarqueeText, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
+import { MarqueeText, FeaturedPost, FeaturedList, FeaturedCard, FeaturedCardReversed, FeaturedContent, 
   SummaryCard, Carousel, Subscribe, PostCard, MediaCard, BigMediaCard, SmallPostCard, Title
 }  from '../../components';
 
 const useStyles = makeStyles(theme => ({
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
+  mainTitle: {
+    marginTop: theme.spacing(16)
   },
   toolbarTitle: {
     flex: 1,
@@ -184,9 +185,32 @@ const Home = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Paper>
-        
-      </Paper>
+      <div className={classes.mainTitle}>
+        <Typography variant="h1" gutterBottom color="primary" align="center">
+          星狗网 ｜ 看见，好时光
+        </Typography>
+        <Typography variant="h4" gutterBottom color="black" align="center">
+          与其在别处仰望， 不如在这里并肩。
+        </Typography>
+        <Typography variant="subtitle1" gutterBottom color="textSecondary" align="center">
+          A professional kit that comes with ready-to-use Material-UI© components developed with one common goal in mind, help you build faster & beautiful applications. Each component is fully customizable, responsive and easy to integrate.
+        </Typography>
+      </div>
+      <div className={classes.heroButtons}>
+        <Grid container spacing={2} justify="center">
+          <Grid item>
+            <Button variant="contained" color="primary">
+              新闻网 2011-2019
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button variant="outlined" color="primary">
+              好友 2011-2019
+            </Button>
+          </Grid>
+        </Grid>
+      </div>
+      <FeaturedPost></FeaturedPost>
     </React.Fragment>
   );
 };

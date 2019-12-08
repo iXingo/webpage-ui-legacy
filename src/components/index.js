@@ -14,6 +14,7 @@ export { default as FeaturedCard } from './FeaturedCard';
 export { default as FeaturedList } from './FeaturedList';
 export { default as FeaturedCardReversed } from './FeaturedCardReversed';
 export { default as FeaturedContent} from './FeaturedContent';
+export { default as FeaturedPost } from './FeaturedPost';
 export { default as SideBar } from './SideBar';
 export { default as MediaCard } from './MediaCard';
 export { default as BigMediaCard } from './BigMediaCard';
