@@ -7,113 +7,43 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 // import Paper from '@material-ui/core/Paper';
 // import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
-import Grid from '@material-ui/core/Grid';
+// import Grid from '@material-ui/core/Grid';
 // import Link from '@material-ui/core/Link';
-import Button from '@material-ui/core/Button';
-// import Container from '@material-ui/core/Container';
+// import Button from '@material-ui/core/Button';
+import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   mainTitle: {
-    marginTop: theme.spacing(16)
+    background: 'url(https://github.githubassets.com/images/modules/site/heroes/simple-codelines.svg), #2b3137',
+    width: '100%',
+    maxWidth: '100%',
+    color: 'hsla(0,0%,100%,.6)',
   },
-  toolbarTitle: {
-    flex: 1,
-    color: '#1a73e8'
+  main: {
+    padding: '160px 60px'
   },
-  toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto',
+  firstLine: { 
+    fontSize: 48,
+    color: 'white',
+    padding: 10
   },
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
-  },
-  mainFeaturedPost: {
-    position: 'relative',
-    backgroundColor: theme.palette.grey[800],
-    color: theme.palette.common.white,
-    backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    marginBottom: theme.spacing(2),
-  },
-  overlay: {
-    position: 'absolute',
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
-    backgroundColor: 'rgba(0,0,0,.3)',
-  },
-  mainFeaturedPostContent: {
-    position: 'relative',
-    padding: theme.spacing(3),
-    [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(6),
-      paddingRight: 0,
-    },
-  },
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-  card: {
-    display: 'flex',
-  },
-  cardDetails: {
-    flex: 1,
-  },
-  cardMedia: {
-    width: 160,
-  },
-  markdown: {
-    ...theme.typography.body2,
-    padding: theme.spacing(3, 0),
-  },
-  sidebarAboutBox: {
-    padding: theme.spacing(2),
-    backgroundColor: theme.palette.grey[200],
-  },
-  sidebarSection: {
-    marginTop: theme.spacing(3),
-  },
-  icon: {
+  secondLine: {
     fontSize: 20,
-    textAlign: 'center',
+    margin: 'auto',
+    paddingTop: 20
   },
-  tips : {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
+  thirdLine: {
+    margin: 'auto',
+    fontSize: 18,
+    color: 'white',
+    paddingTop: 80
   },
-  cardGrids: {
-    // paddingTop: theme.spacing(8),
-    marginBottom: theme.spacing(2),
-  },
-  cards: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedias: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContents: {
-    flexGrow: 1,
-  },
-  list: {
-    marginBottom: theme.spacing(2),
-  },
+  svgIcon: {
+    height: 30,
+    width: 30
+  }
 
-
-  footer: {
-    backgroundColor: "#1a73e8",
-    color: theme.palette.primary,
-    marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0),
-  },
 }));
 
 
@@ -153,7 +83,11 @@ const useStyles = makeStyles(theme => ({
 //   imgUrl: 'http://localhost:3000/images/img/undraw_special_event_4aj8.svg',
 //   url: '/friends',
 // };
-
+const SvgIcon = () => {
+  return (
+  <svg style={{width:20, height:20}} xmlns="http://www.w3.org/2000/svg" class="jumbotron-followup-icon ml-1 jumbotron-link-followup-icon ml-1" viewBox="0 0 40 40"><path d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z" fill="currentColor" fill-rule="evenodd"></path></svg>
+  );
+}
 
 const Home = props => {
 
@@ -167,31 +101,19 @@ const Home = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className={classes.mainTitle}>
-        <Typography variant="h1" gutterBottom color="primary" align="center">
-          星狗网 ｜ 看见，好时光
-        </Typography>
-        <Typography variant="h4" gutterBottom color="black" align="center">
-          与其在别处仰望， 不如在这里并肩。
-        </Typography>
-        <Typography variant="subtitle1" gutterBottom color="textSecondary" align="center">
-          A professional kit that comes with ready-to-use Material-UI© components developed with one common goal in mind, help you build faster & beautiful applications. Each component is fully customizable, responsive and easy to integrate.
-        </Typography>
-      </div>
-      <div className={classes.heroButtons}>
-        <Grid container spacing={2} justify="center">
-          <Grid item>
-            <Button variant="contained" color="primary">
-              新闻网 2011-2019
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button variant="outlined" color="primary">
-              好友 2011-2019
-            </Button>
-          </Grid>
-        </Grid>
-      </div>
+      <Container className={classes.mainTitle}>
+        <div className={classes.main}>
+          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+            星狗网：   看见，好时光
+          </Typography>
+          <Typography variant="subtitle1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
+          　　最美丽的月色，总是出自荒芜的山谷。最厚重的文物，总是出自无字的旷野。最可笑的假话，总是振振有词。最可耻的诬陷，总是彬彬有礼。最不洁的目光，总在监察道德。最不通的文人，总在咬文嚼字。最勇猛的将士，总是柔声细语。最无聊的书籍，总是艰涩难读。最兴奋的相晤，总是昔日敌手。最愤恨的切割，总是早年好友。最动听的讲述，总是出自小人之口。最纯粹的孤独，总是属于大师 之门。最低俗 的交情被日夜的酒水浸泡着，越泡越大。最典雅的友谊被矜持的水笔描画着，越描越淡。
+          </Typography>
+          <Typography variant="h4" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+            <SvgIcon /> 与其在别处仰望， 不如在这里并肩。
+          </Typography>
+        </div>
+      </Container>
     </React.Fragment>
   );
 };
