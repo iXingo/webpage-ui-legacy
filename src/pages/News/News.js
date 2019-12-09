@@ -205,7 +205,7 @@ const News = props => {
               noWrap
               className={classes.toolbarTitle}
             >
-              星狗新闻， 记录生活记录我
+              我关心的就是头条
             </Typography>
           </div>
           {/* <IconButton>

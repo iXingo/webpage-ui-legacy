@@ -22,7 +22,6 @@ const useStyles = makeStyles(theme => ({
     padding: 15
   },
   text:{
-    paddingRight: 48
   },
 }));
 
