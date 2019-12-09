@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
-import { ContentTitle, PictureText } from '../../components';
+import { ContentTitle, PicturePicture, PictureText, PictureItems, TextPicture } from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -88,6 +88,41 @@ const useStyles = makeStyles(theme => ({
 //   imgUrl: 'http://localhost:3000/images/img/undraw_special_event_4aj8.svg',
 //   url: '/friends',
 // };
+
+const picturePictureContent ={
+	image1: 'https://github.githubassets.com/images/modules/site/product-illo/img-actions.png',
+	title1: '新闻现场',
+	subtitle1: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
+
+	image2: 'https://github.githubassets.com/images/modules/site/product-illo/img-actions.png',
+	title2: '新闻现场',
+	subtitle2: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
+}
+
+
+const title1 ={
+  main: '新闻现场',
+  title: '正在身边发生的故事。',
+	content: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。'
+}
+
+const title2 ={
+	main: '汪师傅和他的朋友们',
+	title: '正在身边那些有趣的人。',
+	content: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。'
+}
+
+
+
+const imageItems ={
+	image: 'https://github.githubassets.com/images/modules/site/home-illo-team.svg',
+	title1: '正在身边那些有趣的人。',
+  content1: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
+  title2: '正在身边那些有趣的人。',
+  content2: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
+  title3: '正在身边那些有趣的人。',
+	content3: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
+}
 const SvgIcon = () => {
   return (
   <svg style={{width:20, height:20}} xmlns="http://www.w3.org/2000/svg" class="jumbotron-followup-icon ml-1 jumbotron-link-followup-icon ml-1" viewBox="0 0 40 40"><path d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z" fill="currentColor" fill-rule="evenodd"></path></svg>
@@ -122,8 +157,17 @@ const Home = props => {
           </Typography>   
         </div>
       </Container>
-      <ContentTitle></ContentTitle>
-      <PictureText></PictureText>
+      <ContentTitle context={title1} />
+      <PicturePicture context={picturePictureContent} {...props} />
+
+      <ContentTitle context={title2} />
+      <PictureText context={picturePictureContent} {...props} />
+
+      <ContentTitle context={title2} />
+      <TextPicture context={picturePictureContent} {...props} />
+
+      <ContentTitle context={title1} />
+      <PictureItems context={imageItems} {...props} />
       {/* <Grid container spacing={4} className={classes.cardGrid}>
               <Grid item xs={3} md={2}>
                 <SummaryCard></SummaryCard>

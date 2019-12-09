@@ -54,7 +54,7 @@ const About = props => {
   
     return (
       <div className={classes.root}>
-        <MediaSection riend={props.friend} {...props}/>
+        <MediaSection friend={props.friend} {...props}/>
       </div>
     );
   };

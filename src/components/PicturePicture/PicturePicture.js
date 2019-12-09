@@ -53,18 +53,27 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const PictureText = props => {
+const PicturePicture = props =>  {
 
   const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-			<Grid container justify="center" alignItems='center' className={classes.content}>
+			<Grid container justify="center" className={classes.content}>
 				<Grid item xs={12} md={4} >
 					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
+					<div className={classes.main}>
+						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+              {props.context.title1}
+						</Typography>
+						<Typography paragraph gutterBottom color="inherit" align="center" className={classes.firstLine}>
+              {props.context.subtitle1}
+						</Typography>
+					</div>
 				</Grid>
 				<Grid item xs={12} md={4} >
+					<img className={classes.picture} src={props.context.image2} alt='Xindog APP'/>
 					<div className={classes.main}>
 						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
               {props.context.title2}
@@ -80,4 +89,4 @@ const PictureText = props => {
 };
 
 
-export default withRouter(PictureText);
+export default withRouter(PicturePicture);

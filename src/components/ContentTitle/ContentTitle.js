@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '60px 10px 10px'
+    padding: '100px 10px 10px'
   },
   firstLine: { 
     fontSize: 16,
@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     fontSize: 20,
     paddingTop: 20,
+    fontWeight: 300,
     lineHeight: 1
   },
   svgIcon: {
@@ -57,15 +58,15 @@ const Home = props => {
       <Container className={classes.mainTitle}>
         <div className={classes.main}>
           <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-            新闻现场
+            {props.context.main}
           </Typography>
           <TypeWriter typing={0.5}>
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-            正在身边发生的故事.
+            {props.context.title}
           </Typography>
           </TypeWriter>
           <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-            <SvgIcon /> 寻常巷陌, 熙熙攘攘. 故事每天发生, 抓住每一个不一样的瞬间.
+            <SvgIcon /> {props.context.content}
           </Typography>   
         </div>
       </Container>
