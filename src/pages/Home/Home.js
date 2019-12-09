@@ -105,13 +105,13 @@ const picturePictureContent ={
 
 const title1 ={
   main: '新闻现场',
-  title: '正在身边发生的故事。',
+  title: '正在发生的，故事。',
 	content: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。'
 }
 
 const title2 ={
 	main: '汪师傅和他的朋友们',
-	title: '正在身边那些有趣的人。',
+	title: '那些， 有趣的人。',
 	content: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。'
 }
 
