@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
     width: 30
 	},
 	content: {
-		margin: '0 20px',
+		padding: '0 20px'
 	},
 	picture: {
 		height: 500,
