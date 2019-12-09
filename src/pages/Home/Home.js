@@ -42,7 +42,10 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     fontSize: 18,
     paddingTop: 80,
-    lineHeight: 1
+    lineHeight: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   svgIcon: {
     height: 30,
@@ -141,7 +144,7 @@ const Home = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={3000}>
+      <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={2000}>
         <Container className={classes.mainTitle}>
           <div className={classes.main}>
             <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
