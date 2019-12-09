@@ -21,4 +21,8 @@ export { default as BigMediaCard } from './BigMediaCard';
 export { default as SmallPostCard } from './SmallPostCard';
 export { default as MediaSection } from './MediaSection';
 export { default as Title } from './Title';
+export { default as ContentTitle } from './ContentTitle';
+export { default as PictureText } from './PictureText';
+export { default as TextPicture } from './TextPicture';
+
 

@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
+import { ContentTitle, PictureText } from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -121,6 +122,16 @@ const Home = props => {
           </Typography>   
         </div>
       </Container>
+      <ContentTitle></ContentTitle>
+      <PictureText></PictureText>
+      {/* <Grid container spacing={4} className={classes.cardGrid}>
+              <Grid item xs={3} md={2}>
+                <SummaryCard></SummaryCard>
+              </Grid>
+              <Grid item xs={3} md={2}>
+                <SummaryCard></SummaryCard>
+              </Grid>
+          </Grid> */}
     </React.Fragment>
   );
 };
