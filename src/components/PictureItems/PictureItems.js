@@ -38,7 +38,10 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20,
     color: 'black',
     fontWeight: 300,
-    lineHeight: 1
+    lineHeight: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   svgIcon: {
     height: 30,

@@ -119,11 +119,11 @@ const title2 ={
 
 const imageItems ={
 	image: 'https://github.githubassets.com/images/modules/site/home-illo-team.svg',
-	title1: '正在身边那些有趣的人。',
+	title1: '那些有趣的人。',
   content1: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
-  title2: '正在身边那些有趣的人。',
+  title2: '那些有趣的人。',
   content2: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
-  title3: '正在身边那些有趣的人。',
+  title3: '那些有趣的人。',
 	content3: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
 }
 const SvgIcon = () => {
@@ -144,7 +144,7 @@ const Home = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={2000}>
+      <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
         <Container className={classes.mainTitle}>
           <div className={classes.main}>
             <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
