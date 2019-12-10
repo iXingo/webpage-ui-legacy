@@ -161,7 +161,7 @@ const Home = props => {
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
               星狗网
             </Typography>
-            <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+            <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
               程序人生的寂静欢喜
             </Typography>
             <TypeWriter typing={0.5}>
