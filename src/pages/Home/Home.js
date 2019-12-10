@@ -29,21 +29,27 @@ const useStyles = makeStyles(theme => ({
   main: {
     padding: '160px 10px 120px'
   },
-  firstLine: { 
+  website: { 
     fontSize: 48,
     color: 'white',
     // padding: 10,
     lineHeight: 1.5,
   },
+  firstLine: { 
+    fontSize: 30,
+    color: 'white',
+    // padding: 10,
+    lineHeight: 1.5,
+  },
   secondLine: {
-    fontSize: 18,
+    fontSize: 16,
     margin: 'auto',
     paddingTop: 20,
     lineHeight: 1.5,
   },
   thirdLine: {
     margin: 'auto',
-    fontSize: 18,
+    fontSize: 14,
     paddingTop: 80,
     lineHeight: 1.5,
     display: 'flex',
@@ -152,7 +158,7 @@ const Home = props => {
       <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
         <Container className={classes.mainTitle}>
           <div className={classes.main}>
-          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
               星狗网
             </Typography>
             <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
