@@ -28,11 +28,15 @@ const useStyles = makeStyles(theme => ({
     lineHeight: 1
   },
   thirdLine: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     margin: 'auto',
     fontSize: 20,
     paddingTop: 20,
     fontWeight: 300,
-    lineHeight: 1
+    lineHeight: 1,
+
   },
   svgIcon: {
     height: 30,
