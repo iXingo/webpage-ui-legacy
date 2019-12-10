@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     padding: 10,
   },
   secondLine: {
-    fontSize: 48,
+    fontSize: 36,
     margin: 'auto',
     color: 'black',
     paddingTop: 20,
