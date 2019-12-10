@@ -102,11 +102,11 @@ const useStyles = makeStyles(theme => ({
 // };
 
 const picturePictureContent ={
-	image1: 'https://github.githubassets.com/images/modules/site/product-illo/img-actions.png',
+	image1: '/images/img/homepage/undraw_online_everywhere_cd90.svg',
 	title1: '新闻现场',
 	subtitle1: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
 
-	image2: 'https://github.githubassets.com/images/modules/site/product-illo/img-actions.png',
+	image2: '/images/img/homepage/undraw_dev_focus_b9xo.svg',
 	title2: '新闻现场',
 	subtitle2: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
 }
@@ -115,13 +115,13 @@ const picturePictureContent ={
 const title1 ={
   main: '新闻现场',
   title: '正在发生的，故事。',
-	content: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。'
+	content: '我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。'
 }
 
 const title2 ={
 	main: '汪师傅和他的朋友们',
 	title: '那些， 有趣的人。',
-	content: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。'
+  content: '寻常巷陌， 熙熙攘攘。 故事每天发生， 时间总在流逝， 抓住每一个平凡的瞬间。 在某个阳光明媚的下午， 慢慢回想， 那些点点滴滴再次在脑海中缓缓延展。'
 }
 
 

@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
 		padding: '20px 20px 0'
 	},
 	picture: {
-    height: '100%',
+    // height: '100%',
     padding: 15
   },
   items:{

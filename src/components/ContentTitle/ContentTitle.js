@@ -37,7 +37,8 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20,
     fontWeight: 300,
     lineHeight: 1.5,
-    textAlign: 'center'
+    textAlign: 'center',
+    maxWidth: 450
   },
   svgIcon: {
     height: 30,
@@ -47,11 +48,11 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const SvgIcon = () => {
-  return (
-  <svg style={{width:20, height:20}} xmlns="http://www.w3.org/2000/svg" class="jumbotron-followup-icon ml-1 jumbotron-link-followup-icon ml-1" viewBox="0 0 40 40"><path d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z" fill="currentColor" fill-rule="evenodd"></path></svg>
-  );
-}
+// const SvgIcon = () => {
+//   return (
+//   <svg style={{width:20, height:20}} xmlns="http://www.w3.org/2000/svg" class="jumbotron-followup-icon ml-1 jumbotron-link-followup-icon ml-1" viewBox="0 0 40 40"><path d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z" fill="currentColor" fill-rule="evenodd"></path></svg>
+//   );
+// }
 
 const Home = props => {
 
@@ -71,7 +72,7 @@ const Home = props => {
           </Typography>
           {/* </TypeWriter> */}
           <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-            <SvgIcon /> {props.context.content}
+             {props.context.content}
           </Typography>   
         </div>
       </Container>

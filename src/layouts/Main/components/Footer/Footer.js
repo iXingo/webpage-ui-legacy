@@ -29,10 +29,14 @@ const Footer = props => {
 				星狗网 | 看见，好时光。
 		</Typography>
 		<Typography variant="caption" display="block">
-			&copy; Copyright 2019. All rights Reserved. Created with love by Shawn Wang at NVIDIA.
+			&copy; Copyright 2020. All rights Reserved. Created with love by Shawn Wang at NVIDIA.
 		</Typography>
 		<Typography variant="caption" display="block">
 			A Material Design Full Stack App Powered by Spring Boot, Spring Security, JWT, MySQL, Redis, React, Bootstrap and Ant Design. 
+		</Typography>
+		<Typography variant="caption" display="block">
+			&copy; Copyright 2020. 所有权利保留。本网站由汪师傅进行开发维护， 所有权利与解释权归汪师傅所有，未经允许或授权， 严禁转载与分发。
+			所有权利是指本网站所上载的信息与内容，网站源代码不包含在此项权利申明中，开发者可以在合法范围内自由分发，修改以及商业使用。
 		</Typography>
       </TypeWriter>
     </div>
