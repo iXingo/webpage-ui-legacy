@@ -36,7 +36,7 @@ const PostCard = props => {
   
     return (
       <div>
-        <Link component={RouterLink} to="/post/7866307276669779968" >
+        <Link component={RouterLink} to="/post/7866307276669779968" underline="none">
           <CardActionArea component="a" href="#" className={classes.postCard} onClick={clickCard}>
             <Card className={classes.card}>
               <Hidden xsDown>

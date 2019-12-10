@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
+import { Link as RouterLink } from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Divider } from '@material-ui/core';
+import { Divider, Link } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -39,6 +39,11 @@ const useStyles = makeStyles(theme => ({
   },
   cardContent: {
     flexGrow: 1,
+  },
+  readmore: {
+    display: 'flex',
+    justifyContent: 'space-between',
+ 
   },
   footer: {
     backgroundColor: theme.palette.background.paper,
@@ -76,13 +81,13 @@ const PictureContentLine = props =>{
                     </Typography>
                   </CardContent>
                   <Divider></Divider>
-                  <CardActions>
-                    <Button size="small" color="primary">
-                      ReadMore
-                    </Button>
-                    <Button size="small" color="primary">
-                      ->
-                    </Button>
+                  <CardActions className={classes.readmore}>
+                      <Typography size="small" color="primary">
+                        <Link  color="primary" component={RouterLink} to="/index" underline="hover" variant="h6">查看全文...</Link>
+                      </Typography>
+                      <Typography size="small" color="primary">
+                      <Link  color="primary" component={RouterLink} to="/index" underline="hover" variant="h6">→</Link>
+                      </Typography>
                   </CardActions>
                 </Card>
               </Grid>
