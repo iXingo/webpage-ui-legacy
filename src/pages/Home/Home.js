@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   firstLine: { 
     fontSize: 48,
     color: 'white',
-    padding: 10,
+    // padding: 10,
     lineHeight: 1.5,
   },
   secondLine: {

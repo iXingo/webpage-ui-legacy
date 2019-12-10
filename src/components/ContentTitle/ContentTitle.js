@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: 'auto',
-    fontSize: 20,
+    fontSize: 16,
     paddingTop: 20,
     fontWeight: 300,
     lineHeight: 1.5,
