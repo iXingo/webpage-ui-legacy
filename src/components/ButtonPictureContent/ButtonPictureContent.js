@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   firstLine: { 
     fontSize: 16,
     color: 'black',
-    fontWeight: 300,
+    fontWeight: 500,
     lineHeight: 1.5,
   },
   secondLine: {
@@ -97,7 +97,7 @@ const ButtonPictureContent = props =>  {
                 </Typography>
               </div>
               <div className={classes.main}>
-                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
                   {props.context.title2}
                 </Typography>
                 <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>

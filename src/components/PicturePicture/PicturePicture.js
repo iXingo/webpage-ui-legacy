@@ -16,12 +16,16 @@ const useStyles = makeStyles(theme => ({
   main: {
     padding: '10px 10px 10px'
   },
-  firstLine: { 
-    fontSize: 16,
+  firstLine: {
+    margin: 'auto',
+    fontSize: 20,
+    paddingTop: 20,
     color: 'black',
-    fontWeight: 300,
-    padding: 10,
+    fontWeight: 500,
     lineHeight: 1.5,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   secondLine: {
     fontSize: 48,
@@ -31,12 +35,11 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 300,
     lineHeight: 1.5,
   },
-  thirdLine: {
-    margin: 'auto',
-    fontSize: 20,
-    paddingTop: 20,
+  thirdLine: { 
+    fontSize: 16,
     color: 'black',
     fontWeight: 300,
+    padding: 10,
     lineHeight: 1.5,
   },
   svgIcon: {
@@ -68,10 +71,10 @@ const PicturePicture = props =>  {
           <Grid item xs={12} md={4} className={classes.grid}>
             <img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
             <div className={classes.main}>
-              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
                 {props.context.title1}
               </Typography>
-              <Typography paragraph gutterBottom color="inherit" align="center" className={classes.firstLine}>
+              <Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
                 {props.context.subtitle1}
               </Typography>
             </div>
@@ -79,10 +82,10 @@ const PicturePicture = props =>  {
           <Grid item xs={12} md={4} className={classes.grid}>
             <img className={classes.picture} src={props.context.image2} alt='Xindog APP'/>
             <div className={classes.main}>
-              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
                 {props.context.title2}
               </Typography>
-              <Typography paragraph gutterBottom color="inherit" align="center" className={classes.firstLine}>
+              <Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
                 {props.context.subtitle2}
               </Typography>
             </div>
