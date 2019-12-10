@@ -19,13 +19,14 @@ const useStyles = makeStyles(theme => ({
   firstLine: { 
     fontSize: 16,
     padding: 10,
+    lineHeight: 1.5,
   },
   secondLine: {
     fontSize: 36,
     margin: 'auto',
     color: 'black',
     paddingTop: 20,
-    lineHeight: 1
+    lineHeight: 1.5,
   },
   thirdLine: {
     display: 'flex',

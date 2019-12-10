@@ -33,18 +33,19 @@ const useStyles = makeStyles(theme => ({
     fontSize: 48,
     color: 'white',
     padding: 10,
+    lineHeight: 1.5,
   },
   secondLine: {
-    fontSize: 20,
+    fontSize: 18,
     margin: 'auto',
     paddingTop: 20,
-    lineHeight: 1
+    lineHeight: 1.5,
   },
   thirdLine: {
     margin: 'auto',
     fontSize: 18,
     paddingTop: 80,
-    lineHeight: 1,
+    lineHeight: 1.5,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center'
@@ -151,9 +152,11 @@ const Home = props => {
       <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
         <Container className={classes.mainTitle}>
           <div className={classes.main}>
+          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+              星狗网
+            </Typography>
             <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-              星狗网：
-              看见，好时光
+              程序人生的寂静欢喜
             </Typography>
             <TypeWriter typing={0.5}>
             <Typography variant="subtitle1" gutterBottom color="inherit" align="center" className={classes.secondLine}>

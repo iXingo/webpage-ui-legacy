@@ -28,12 +28,13 @@ const useStyles = makeStyles(theme => ({
     fontSize: 18,
     color: 'black',
     fontWeight: 500,
+    lineHeight: 1.5,
   },
   secondLine: {
     fontSize: 14,
     color: 'black',
     fontWeight: 300,
-    lineHeight: 1,
+    lineHeight: 1.5,
     marginBottom: 0
   },
   thirdLine: {
@@ -42,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20,
     color: 'black',
     fontWeight: 300,
-    lineHeight: 1,
+    lineHeight: 1.5,
   },
   svgIcon: {
     height: 30,
