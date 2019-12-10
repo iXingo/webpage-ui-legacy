@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
-import TypeWriter from 'react-typewriter';
+// import TypeWriter from 'react-typewriter';
 
 
 const useStyles = makeStyles(theme => ({
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '100px 10px 10px'
+    padding: '160px 10px 20px'
   },
   firstLine: { 
     fontSize: 16,
@@ -35,8 +35,8 @@ const useStyles = makeStyles(theme => ({
     fontSize: 20,
     paddingTop: 20,
     fontWeight: 300,
-    lineHeight: 1,
-
+    lineHeight: 1.5,
+    textAlign: 'center'
   },
   svgIcon: {
     height: 30,
@@ -64,11 +64,11 @@ const Home = props => {
           <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
             {props.context.main}
           </Typography>
-          <TypeWriter typing={0.5}>
+          {/* <TypeWriter typing={0.5}> */}
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
             {props.context.title}
           </Typography>
-          </TypeWriter>
+          {/* </TypeWriter> */}
           <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
             <SvgIcon /> {props.context.content}
           </Typography>   

@@ -47,7 +47,10 @@ const useStyles = makeStyles(theme => ({
 	},
 	picture: {
 		height: 500,
-	}
+  },
+  grid: {
+    padding: 10
+  }
 
 }));
 
@@ -61,7 +64,7 @@ const PicturePicture = props =>  {
       <CssBaseline />
       <Grow in={true}>
         <Grid container justify="center" className={classes.content}>
-          <Grid item xs={12} md={4} >
+          <Grid item xs={12} md={4} className={classes.grid}>
             <img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
             <div className={classes.main}>
               <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
@@ -72,7 +75,7 @@ const PicturePicture = props =>  {
               </Typography>
             </div>
           </Grid>
-          <Grid item xs={12} md={4} >
+          <Grid item xs={12} md={4} className={classes.grid}>
             <img className={classes.picture} src={props.context.image2} alt='Xindog APP'/>
             <div className={classes.main}>
               <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.thirdLine}>

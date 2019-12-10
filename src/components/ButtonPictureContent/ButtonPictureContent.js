@@ -2,11 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import { Paper } from '@material-ui/core';
-// import Container from '@material-ui/core/Container';
-
 
 
 const useStyles = makeStyles(theme => ({
@@ -16,25 +14,22 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '20px 20px 20px',
-    margin: 10,
-    boxShadow: '0 2px 6px 0 rgba(å0,0,0,.12), inset 0 -1px 0 0 #dadce0',
-    alignItems: 'center'
-  },
-  paper:{
-    alignItems: 'center'
+    padding: 5,
+    marginBottom: 50
+
   },
   firstLine: { 
-    fontSize: 18,
+    fontSize: 16,
     color: 'black',
-    fontWeight: 500,
+    fontWeight: 300,
   },
   secondLine: {
     fontSize: 14,
+    margin: 'auto',
     color: 'black',
+    paddingTop: 10,
     fontWeight: 300,
-    lineHeight: 1,
-    marginBottom: 0
+    lineHeight: 1
   },
   thirdLine: {
     margin: 'auto',
@@ -49,36 +44,49 @@ const useStyles = makeStyles(theme => ({
     width: 30
 	},
 	content: {
-		padding: '20px 20px 0'
-	},
-	picture: {
-    height: '100%',
-    padding: 15
+    padding: '20px 20px 0',
   },
-  items:{
-    height: '100%',
-    padding: 15,
+	picture: {
+		height: 500,
+  },
+  buttonContent: {
+    padding: '20px 32px',
+    fontSize: 14,
+    color: '#1074e7',
+    backgroundColor: 'hsla(0,0%,100%,0)',
+    borderColor: 'rgba(16,116,231,.5)',
+    whiteSpace: 'nowrap',
+    verticalAlign: 'middle',
+    cursor: 'pointer',
+    border: '1px solid #1074e7',
+    borderRadius: 3,
+    transition: '.2s',
+  },
+  button: {
     justifyContent: 'center',
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+    margin: '0 auto',
+    textAlign: 'center'
+  }, 
 
 }));
 
 
-const PictureItems = props =>  {
+const ButtonPictureContent = props =>  {
 
   const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-			<Grid container justify="center" alignItems="center" className={classes.content}>
-				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
-				</Grid>
-				<Grid item xs={12} md={4} >
-          <div className={classes.items}>
-            <Paper className={classes.paper}>
+        <div className={classes.button}>
+          <Button className={classes.buttonContent}>
+            那些平凡之中的主角   →
+          </Button>
+        </div>
+        <Grid container justify="center" alignItems="center" className={classes.content}>
+          <Grid item xs={12} md={4}>
+            <div className={classes.items}>
               <div className={classes.main}>
                 <Typography variant="h6" gutterBottom color="inherit"  className={classes.firstLine}>
                   {props.context.title1}
@@ -87,8 +95,6 @@ const PictureItems = props =>  {
                   {props.context.content1}
                 </Typography>
               </div>
-            </Paper>
-            <Paper className={classes.paper}>
               <div className={classes.main}>
                 <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
                   {props.context.title2}
@@ -97,23 +103,15 @@ const PictureItems = props =>  {
                   {props.context.content2}
                 </Typography>
               </div>
-            </Paper>
-            <Paper className={classes.paper}>
-              <div className={classes.main}>
-                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.title3}
-                </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
-                  {props.context.content3}
-                </Typography>
-              </div>
-            </Paper>
-          </div>
-				</Grid>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={4} >
+					  <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
+				  </Grid>
 			</Grid>
     </React.Fragment>
   );
 };
 
 
-export default withRouter(PictureItems);
+export default withRouter(ButtonPictureContent);

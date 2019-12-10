@@ -27,6 +27,8 @@ export { default as TextPicture } from './TextPicture';
 export { default as PicturePicture } from './PicturePicture';
 export { default as PictureItems } from './PictureItems';
 export { default as PictureContentLine } from './PictureContentLine';
+export { default as ButtonPictureContent } from './ButtonPictureContent';
+
 
 
 
