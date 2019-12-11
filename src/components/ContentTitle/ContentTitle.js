@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 //   );
 // }
 
-const Home = props => {
+const ContentTitle = props => {
 
   const classes = useStyles();
 
@@ -82,4 +82,4 @@ const Home = props => {
 };
 
 
-export default withRouter(Home);
+export default withRouter(ContentTitle);

@@ -22,6 +22,7 @@ export { default as SmallPostCard } from './SmallPostCard';
 export { default as MediaSection } from './MediaSection';
 export { default as Title } from './Title';
 export { default as ContentTitle } from './ContentTitle';
+export { default as ContentLink } from './ContentLink';
 export { default as PictureText } from './PictureText';
 export { default as TextPicture } from './TextPicture';
 export { default as PicturePicture } from './PicturePicture';
