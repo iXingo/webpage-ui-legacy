@@ -163,7 +163,7 @@ const Home = props => {
               星狗网
             </Typography>
             <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
-              程序人生的寂静欢喜
+              程序人生的寂静欢喜。
             </Typography>
             <TypeWriter typing={0.5}>
             <Typography variant="subtitle1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
