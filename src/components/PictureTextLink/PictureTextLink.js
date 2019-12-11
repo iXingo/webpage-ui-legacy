@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import Link from '@material-ui/core/Link';
 
 
 
@@ -22,18 +22,14 @@ const useStyles = makeStyles(theme => ({
     fontSize: 20,
     paddingTop: 20,
     color: 'black',
-    fontWeight: 500,
+    padding: 10,
     lineHeight: 1.5,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   secondLine: {
     fontSize: 48,
     margin: 'auto',
     color: 'black',
     paddingTop: 20,
-    fontWeight: 300,
     lineHeight: 1.5,
   },
   thirdLine: { 
@@ -66,11 +62,8 @@ const useStyles = makeStyles(theme => ({
     borderRadius: 3,
     transition: '.2s',
   },
-  button: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: '0 auto',
-    textAlign: 'center'
+  link: {
+    padding: 10,
   }, 
 
 
@@ -84,23 +77,19 @@ const PictureText = props => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className={classes.button}>
-        <Button className={classes.buttonContent}>
-          那些平凡之中的主角   →
-        </Button>
-      </div>
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
 					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
 				</Grid>
 				<Grid item xs={12} md={4} >
 					<div className={classes.main}>
-						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+						<Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
               {props.context.title2}
 						</Typography>
-						<Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+						<Typography paragraph gutterBottom color="inherit" className={classes.thirdLine}>
               {props.context.subtitle2}
 						</Typography>
+            <Link to="/index" className={classes.link}>那些平凡之中的主角   →</Link>
 					</div>
 				</Grid>
 			</Grid>

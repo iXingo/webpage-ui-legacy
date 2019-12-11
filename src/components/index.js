@@ -24,6 +24,7 @@ export { default as Title } from './Title';
 export { default as ContentTitle } from './ContentTitle';
 export { default as ContentLink } from './ContentLink';
 export { default as PictureText } from './PictureText';
+export { default as PictureTextLink } from './PictureTextLink';
 export { default as TextPicture } from './TextPicture';
 export { default as PicturePicture } from './PicturePicture';
 export { default as PictureItems } from './PictureItems';

@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grow from '@material-ui/core/Grow';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,13 +33,13 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     color: 'black',
     paddingTop: 20,
-    fontWeight: 300,
+    fontWeight: 500,
     lineHeight: 1.5,
   },
   thirdLine: { 
     fontSize: 16,
     color: 'black',
-    fontWeight: 300,
+    fontWeight: 500,
     padding: 10,
     lineHeight: 1.5,
   },
@@ -54,7 +55,26 @@ const useStyles = makeStyles(theme => ({
   },
   grid: {
     padding: 30
-  }
+  },
+  buttonContent: {
+    padding: '12px 32px',
+    fontSize: 14,
+    color: '#1074e7',
+    backgroundColor: 'hsla(0,0%,100%,0)',
+    borderColor: 'rgba(16,116,231,.5)',
+    whiteSpace: 'nowrap',
+    verticalAlign: 'middle',
+    cursor: 'pointer',
+    border: '1px solid #1074e7',
+    borderRadius: 3,
+    transition: '.2s',
+  },
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto',
+    textAlign: 'center'
+  }, 
 
 }));
 
@@ -77,6 +97,11 @@ const PicturePicture = props =>  {
               <Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
                 {props.context.subtitle1}
               </Typography>
+              <div className={classes.button}>
+                <Button className={classes.buttonContent}>
+                  那些平凡之中的主角   →
+                </Button>
+              </div>
             </div>
           </Grid>
           <Grid item xs={12} md={4} className={classes.grid}>
@@ -88,6 +113,11 @@ const PicturePicture = props =>  {
               <Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
                 {props.context.subtitle2}
               </Typography>
+              <div className={classes.button}>
+                <Button className={classes.buttonContent}>
+                  那些平凡之中的主角   →
+                </Button>
+              </div>
             </div>
           </Grid>
         </Grid>
