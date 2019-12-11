@@ -16,15 +16,16 @@ const useStyles = makeStyles(theme => ({
     padding: 5,
     marginBottom: 50,
     color: 'white',
-    justifyContent: 'cenetr',
-    alignItems: 'center',
-    verticalAlign: 'middle'
-
   },
   items:{
-    backgroundColor: '#032f62',
+    backgroundColor: '#1a73e8',
     color: 'white',
-    height: 600
+    height: 500,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: 30,
   },
   firstLine: { 
     fontSize: 16,
@@ -53,12 +54,12 @@ const useStyles = makeStyles(theme => ({
     width: 30
 	},
 	content: {
-    padding: '20px 20px 0',
+    padding: '20px 0 0',
     marginTop: 45,
   },
 	picture: {
     // height: 500,
-    marginLeft: -80
+    // marginLeft: -40
   },
   buttonContent: {
     padding: '20px 32px',
@@ -112,7 +113,7 @@ const CardPicture = props =>  {
             </div>
           </Grid>
           <Grid item xs={12} md={4} >
-					  <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
+					  <img className={classes.picture} src='https://github.githubassets.com/images/modules/enterprise/stripe-customer-story-callout.png' alt='Xindog APP'/>
 				  </Grid>
 			</Grid>
     </React.Fragment>
