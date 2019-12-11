@@ -15,7 +15,7 @@ import { withRouter } from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
 import Slide from '@material-ui/core/Slide';
 import { ContentTitle, PicturePicture, PictureText, PictureItems, TextPicture,
-  PictureContentLine, ButtonPictureContent
+  PictureContentLine, ButtonPictureContent, CardPicture
  } from '../../components';
 
 
@@ -196,6 +196,8 @@ const Home = props => {
 
       <ContentTitle context={title2} />
       <ButtonPictureContent context={imageItems} {...props}  /> 
+      <CardPicture context={imageItems} {...props}  /> 
+
       {/* <Grid container spacing={4} className={classes.cardGrid}>
               <Grid item xs={3} md={2}>
                 <SummaryCard></SummaryCard>
