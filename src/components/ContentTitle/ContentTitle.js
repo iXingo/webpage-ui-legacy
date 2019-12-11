@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     fontSize: 16,
     paddingTop: 20,
+    paddingBottom: 40,
     fontWeight: 300,
     lineHeight: 1.5,
     textAlign: 'center',

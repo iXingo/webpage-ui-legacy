@@ -15,8 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   main: {
     padding: 5,
-    marginBottom: 50
-
+    marginBottom: 50,
   },
   firstLine: { 
     fontSize: 16,
@@ -46,6 +45,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	content: {
     padding: '20px 20px 0',
+    marginTop: 45,
   },
 	picture: {
 		// height: 500,
