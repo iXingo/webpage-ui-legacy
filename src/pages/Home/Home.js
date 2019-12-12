@@ -14,8 +14,8 @@ import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
 import Slide from '@material-ui/core/Slide';
-import { ContentTitle, PicturePicture, PictureText, PictureItems, TextPicture,
-  PictureContentLine, ButtonPictureContent, CardPicture, PictureTextLink
+import { ContentTitle, ContentTitleReversed, PicturePicture, PictureText, PictureItems, TextPicture,
+  PictureContentLine, ButtonPictureContent, CardPicture, PictureTextLink, TextPictureLink
  } from '../../components';
 
 
@@ -191,29 +191,29 @@ const Home = props => {
       <PicturePicture context={picturePictureContent} {...props} />
       
 
-      <ContentTitle context={title2} />
+      <ContentTitleReversed context={title2} />
       <PictureText context={picturePictureContent} {...props} />
 
       <ContentTitle context={title2} />
       <TextPicture context={picturePictureContent} {...props} />
 
-      <ContentTitle context={title1} />
+      <ContentTitleReversed context={title1} />
       <PictureItems context={imageItems} {...props} />
 
       <ContentTitle context={title2} />
       <PictureContentLine />
 
-      <ContentTitle context={title2} />
+      <ContentTitleReversed context={title2} />
       <ButtonPictureContent context={imageItems} {...props}  />
 
       <ContentTitle context={title2} /> 
       <CardPicture context={imageItems} {...props}  /> 
 
-      <ContentTitle context={title2} /> 
+      <ContentTitleReversed context={title2} /> 
       <PictureTextLink context={picturePictureContent} {...props}  /> 
 
       <ContentTitle context={title2} /> 
-      <PictureTextLink context={pictureContent} {...props}  /> 
+      <TextPictureLink context={pictureContent} {...props}  /> 
 
       
 
