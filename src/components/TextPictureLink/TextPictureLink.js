@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const PictureTextLink = props => {
+const TextPictureLink = props => {
 
   const classes = useStyles();
 
@@ -79,9 +79,6 @@ const PictureTextLink = props => {
     <React.Fragment>
       <CssBaseline />
 			<Grid container justify="center" alignItems='center' className={classes.content}>
-				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
-				</Grid>
 				<Grid item xs={12} md={4} >
 					<div className={classes.main}>
 						<Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
@@ -93,10 +90,13 @@ const PictureTextLink = props => {
             <Link to="/index" className={classes.link}>那些平凡之中的主角   →</Link>
 					</div>
 				</Grid>
+        <Grid item xs={12} md={4} >
+					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
+				</Grid>
 			</Grid>
     </React.Fragment>
   );
 };
 
 
-export default withRouter(PictureTextLink);
+export default withRouter(TextPictureLink);

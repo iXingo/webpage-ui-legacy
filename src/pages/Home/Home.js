@@ -136,6 +136,15 @@ const imageItems ={
 	content3: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
 }
 
+const pictureContent ={
+	image1: '/images/img/homepage/undraw_team_ih79.svg',
+	title1: '新闻现场',
+	subtitle1: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
+
+	image2: '/images/img/homepage/undraw_dev_focus_b9xo.svg',
+	title2: '新闻现场',
+	subtitle2: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
+}
 
 const SvgIcon = () => {
   return (
@@ -202,6 +211,9 @@ const Home = props => {
 
       <ContentTitle context={title2} /> 
       <PictureTextLink context={picturePictureContent} {...props}  /> 
+
+      <ContentTitle context={title2} /> 
+      <PictureTextLink context={pictureContent} {...props}  /> 
 
       
 
