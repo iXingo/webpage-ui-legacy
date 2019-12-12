@@ -64,6 +64,7 @@ const useStyles = makeStyles(theme => ({
   },
   link: {
     padding: 10,
+    fontSize: 14,
   }, 
 
 
