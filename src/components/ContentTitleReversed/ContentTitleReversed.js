@@ -13,10 +13,11 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '100%',
     color: 'hsla(0,0%,100%,.6)',
     backgroundColor: '#1a73e8',
-    marginBottom: 30
+    // marginBottom: 30
   },
   main: {
-    padding: '160px 10px 0'
+    padding: '80px 10px 0',
+    // marginTop: 80,
   },
   firstLine: { 
     fontSize: 16,

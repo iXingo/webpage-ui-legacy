@@ -90,7 +90,7 @@ const PictureTextLink = props => {
 						<Typography paragraph gutterBottom color="inherit" className={classes.thirdLine}>
               {props.context.subtitle2}
 						</Typography>
-            <Link to="/index" className={classes.link}>那些平凡之中的主角   →</Link>
+            <Link to="/index" hover="none" className={classes.link}>那些平凡之中的主角   →</Link>
 					</div>
 				</Grid>
 			</Grid>
