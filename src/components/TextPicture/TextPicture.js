@@ -38,8 +38,7 @@ const useStyles = makeStyles(theme => ({
   },
   thirdLine: { 
     fontSize: 16,
-    color: 'black',
-    fontWeight: 300,
+    fontWeight: 500,
     padding: 10,
     lineHeight: 1.5,
   },
@@ -70,7 +69,7 @@ const PictureText = props => {
 						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
               {props.context.title2}
 						</Typography>
-						<Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+						<Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
               {props.context.subtitle2}
 						</Typography>
 					</div>

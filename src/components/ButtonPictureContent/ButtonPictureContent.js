@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 50,
   },
   firstLine: { 
-    fontSize: 16,
+    fontSize: 18,
     color: 'black',
     fontWeight: 500,
     lineHeight: 1.5,
@@ -26,9 +26,8 @@ const useStyles = makeStyles(theme => ({
   secondLine: {
     fontSize: 14,
     margin: 'auto',
-    color: 'black',
     paddingTop: 10,
-    fontWeight: 300,
+    fontWeight: 500,
     lineHeight: 1.5,
   },
   thirdLine: {
@@ -36,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 20,
     paddingTop: 20,
     color: 'black',
-    fontWeight: 300,
+    fontWeight: 500,
     lineHeight: 1.5,
   },
   svgIcon: {
@@ -92,7 +91,7 @@ const ButtonPictureContent = props =>  {
                 <Typography variant="h6" gutterBottom color="inherit"  className={classes.firstLine}>
                   {props.context.title1}
                 </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
                   {props.context.content1}
                 </Typography>
               </div>
@@ -100,7 +99,7 @@ const ButtonPictureContent = props =>  {
                 <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
                   {props.context.title2}
                 </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
                   {props.context.content2}
                 </Typography>
               </div>

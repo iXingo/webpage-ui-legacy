@@ -34,8 +34,6 @@ const useStyles = makeStyles(theme => ({
   },
   thirdLine: { 
     fontSize: 16,
-    color: 'black',
-    fontWeight: 300,
     padding: 10,
     lineHeight: 1.5,
   },
@@ -84,7 +82,7 @@ const TextPictureLink = props => {
 						<Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
               {props.context.title2}
 						</Typography>
-						<Typography paragraph gutterBottom color="inherit" className={classes.thirdLine}>
+						<Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
               {props.context.subtitle2}
 						</Typography>
             <Link to="/index" className={classes.link}>那些平凡之中的主角   →</Link>

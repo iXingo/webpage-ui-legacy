@@ -38,7 +38,6 @@ const useStyles = makeStyles(theme => ({
   },
   thirdLine: { 
     fontSize: 16,
-    color: 'black',
     fontWeight: 500,
     padding: 10,
     lineHeight: 1.5,
@@ -94,7 +93,7 @@ const PicturePicture = props =>  {
               <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
                 {props.context.title1}
               </Typography>
-              <Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
                 {props.context.subtitle1}
               </Typography>
               <div className={classes.button}>
@@ -110,7 +109,7 @@ const PicturePicture = props =>  {
               <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
                 {props.context.title2}
               </Typography>
-              <Typography paragraph gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
                 {props.context.subtitle2}
               </Typography>
               <div className={classes.button}>

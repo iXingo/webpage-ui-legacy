@@ -99,10 +99,6 @@ const CardPicture = props =>  {
   return (
     <React.Fragment>
       <CssBaseline />
-        <Typography variant="h1" gutterBottom color="textSecondary" align="center" className={classes.title}>
-            {/* {props.context.main} */}
-            从第一次， 到每一次
-        </Typography>
         <Grid container justify="center" alignItems="center" className={classes.content}>
           <Grid item xs={12} md={4}>
             <div className={classes.items}>

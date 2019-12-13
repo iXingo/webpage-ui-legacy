@@ -76,7 +76,7 @@ const PictureContentLine = props =>{
                     <Typography gutterBottom variant="h4" component="h2">
                       Russell Keith-Magee
                     </Typography>
-                    <Typography>
+                    <Typography color="textSecondary">
                       Russell Keith-Magee created BeeWare to fill a gap in his own process. Today, BeeWare is the go-to project for supporting Python on every platform.
                     </Typography>
                   </CardContent>

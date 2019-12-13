@@ -32,8 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
   secondLine: {
     fontSize: 14,
-    color: 'black',
-    fontWeight: 300,
+    fontWeight: 500,
     lineHeight: 1.5,
     marginBottom: 0
   },
@@ -42,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 20,
     paddingTop: 20,
     color: 'black',
-    fontWeight: 300,
+    fontWeight: 500,
     lineHeight: 1.5,
   },
   svgIcon: {
@@ -85,7 +84,7 @@ const PictureItems = props =>  {
                 <Typography variant="h6" gutterBottom color="inherit"  className={classes.firstLine}>
                   {props.context.title1}
                 </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
                   {props.context.content1}
                 </Typography>
               </div>
@@ -95,7 +94,7 @@ const PictureItems = props =>  {
                 <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
                   {props.context.title2}
                 </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
                   {props.context.content2}
                 </Typography>
               </div>
@@ -105,7 +104,7 @@ const PictureItems = props =>  {
                 <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
                   {props.context.title3}
                 </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
                   {props.context.content3}
                 </Typography>
               </div>
