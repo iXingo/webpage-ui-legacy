@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import { withRouter } from 'react-router-dom';
+import { Link as RouterLink, withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
@@ -89,7 +89,7 @@ const PictureTextLink = props => {
 						<Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
               {props.context.subtitle2}
 						</Typography>
-            <Link to="/index" hover="none" className={classes.link}>那些平凡之中的主角   →</Link>
+            <Link component={RouterLink} to="/post/7866307276669779968" hover="none" className={classes.link}>那些平凡之中的主角   →</Link>
 					</div>
 				</Grid>
 			</Grid>
