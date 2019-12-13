@@ -102,15 +102,14 @@ const useStyles = makeStyles(theme => ({
 // };
 
 const picturePictureContent ={
-	image1: '/images/img/homepage/undraw_online_everywhere_cd90.svg',
+	image1: '/images/img/homepage/masterwang2019.png',
 	title1: '新闻现场',
-	subtitle1: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
+	subtitle1: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-	image2: '/images/img/homepage/undraw_dev_focus_b9xo.svg',
+	image2: '/images/img/homepage/2019.png',
 	title2: '新闻现场',
-	subtitle2: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
+	subtitle2: '也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，'
 }
-
 
 const title1 ={
   main: '新闻现场',
