@@ -186,6 +186,11 @@ const Home = props => {
       </Slide>
 
 
+
+      <ContentTitle context={title2} /> 
+      <PictureTextLink context={picturePictureContent} {...props}  /> 
+
+      
       <ContentTitle context={title1} />
       <PicturePicture context={picturePictureContent} {...props} />
       
@@ -208,8 +213,7 @@ const Home = props => {
       <ContentTitle context={title2} /> 
       <CardPicture context={imageItems} {...props}  /> 
 
-      <ContentTitle context={title2} /> 
-      <PictureTextLink context={picturePictureContent} {...props}  /> 
+
 
       <ContentTitle context={title2} /> 
       <TextPictureLink context={pictureContent} {...props}  /> 
