@@ -104,24 +104,24 @@ const CardPicture = props =>  {
             <div className={classes.items}>
               <div className={classes.main}>
                 <Typography variant="h6" gutterBottom color="inherit"  className={classes.firstLine}>
-                  {props.context.title1}
+                  {props.context.titleOne}
                 </Typography>
                 <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
-                  {props.context.content1}
+                  {props.context.contentOne}
                 </Typography>
               </div>
               <div className={classes.main}>
                 <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.title2}
+                  {props.context.titleTwo}
                 </Typography>
                 <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
-                  {props.context.content2}
+                  {props.context.contentTwo}
                 </Typography>
               </div>
             </div>
           </Grid>
           <Grid item xs={12} md={4} >
-					  <img className={classes.picture} src='https://github.githubassets.com/images/modules/enterprise/stripe-customer-story-callout.png' alt='Xindog APP'/>
+					  <img className={classes.picture} src={props.context.picture} alt={props.context.title}/>
 				  </Grid>
 			</Grid>
     </React.Fragment>

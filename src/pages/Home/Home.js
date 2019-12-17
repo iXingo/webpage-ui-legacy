@@ -190,11 +190,9 @@ const Home = props => {
       <ContentTitle context={firstContent} /> 
       <PictureTextLink context={picturePictureContent} {...props}  /> 
 
-      
       <ContentTitle context={title1} />
       <PicturePicture context={picturePictureContent} {...props} />
       
-
       <ContentTitle context={firstContent} />
       <PictureText context={picturePictureContent} {...props} />
 
@@ -213,21 +211,9 @@ const Home = props => {
       <ContentTitle context={firstContent} /> 
       <CardPicture context={imageItems} {...props}  /> 
 
-
-
       <ContentTitle context={firstContent} /> 
       <TextPictureLink context={pictureContent} {...props}  /> 
 
-      
-
-      {/* <Grid container spacing={4} className={classes.cardGrid}>
-              <Grid item xs={3} md={2}>
-                <SummaryCard></SummaryCard>
-              </Grid>
-              <Grid item xs={3} md={2}>
-                <SummaryCard></SummaryCard>
-              </Grid>
-          </Grid> */}
     </React.Fragment>
   );
 };

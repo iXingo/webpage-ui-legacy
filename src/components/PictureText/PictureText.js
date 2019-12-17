@@ -85,20 +85,20 @@ const PictureText = props => {
       <CssBaseline />
       <div className={classes.button}>
         <Button className={classes.buttonContent}>
-          那些平凡之中的主角   →
+        {props.context.linkText}   →
         </Button>
       </div>
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
+					<img className={classes.picture} src={props.context.picture} alt='Xindog APP'/>
 				</Grid>
 				<Grid item xs={12} md={4} >
 					<div className={classes.main}>
 						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-              {props.context.title2}
+              {props.context.title}
 						</Typography>
 						<Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-              {props.context.subtitle2}
+              {props.context.content}
 						</Typography>
 					</div>
 				</Grid>

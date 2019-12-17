@@ -69,24 +69,24 @@ const PictureContentLine = props =>{
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image="https://source.unsplash.com/random"
-                    title="Image title"
+                    image={card.picture}
+                    title={card.title}
                   />
                   <CardContent className={classes.cardContent}>
                     <Typography gutterBottom variant="h4" component="h2">
-                      Russell Keith-Magee
+                      {card.title}
                     </Typography>
                     <Typography color="textSecondary">
-                      Russell Keith-Magee created BeeWare to fill a gap in his own process. Today, BeeWare is the go-to project for supporting Python on every platform.
+                      {card.content}
                     </Typography>
                   </CardContent>
                   <Divider></Divider>
                   <CardActions className={classes.readmore}>
                       <Typography size="small" color="primary">
-                        <Link  color="primary" component={RouterLink} to="/index" underline="hover" variant="h6">查看全文...</Link>
+                        <Link  color="primary" component={RouterLink} to={card.link} underline="hover" variant="h6">查看全文...</Link>
                       </Typography>
                       <Typography size="small" color="primary">
-                      <Link  color="primary" component={RouterLink} to="/index" underline="hover" variant="h6">→</Link>
+                      <Link  color="primary" component={RouterLink} to={card.link} underline="hover" variant="h6">→</Link>
                       </Typography>
                   </CardActions>
                 </Card>

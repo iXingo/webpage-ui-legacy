@@ -67,15 +67,15 @@ const PictureText = props => {
 				<Grid item xs={12} md={4} >
 					<div className={classes.main}>
 						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-              {props.context.title2}
+              {props.context.title}
 						</Typography>
 						<Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-              {props.context.subtitle2}
+              {props.context.content}
 						</Typography>
 					</div>
 				</Grid>
         <Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
+					<img className={classes.picture} src={props.context.picture} alt={props.context.title}/>
 				</Grid>
 			</Grid>
     </React.Fragment>

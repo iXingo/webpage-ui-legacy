@@ -75,37 +75,37 @@ const PictureItems = props =>  {
       <CssBaseline />
 			<Grid container justify="center" alignItems="center" className={classes.content}>
 				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
+					<img className={classes.picture} src={props.context.picture} alt='Xindog APP'/>
 				</Grid>
 				<Grid item xs={12} md={4} >
           <div className={classes.items}>
             <Paper className={classes.paper}>
               <div className={classes.main}>
                 <Typography variant="h6" gutterBottom color="inherit"  className={classes.firstLine}>
-                  {props.context.title1}
+                  {props.context.titleOne}
                 </Typography>
                 <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                  {props.context.content1}
+                  {props.context.contentOne}
                 </Typography>
               </div>
             </Paper>
             <Paper className={classes.paper}>
               <div className={classes.main}>
                 <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.title2}
+                  {props.context.titleTwo}
                 </Typography>
                 <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                  {props.context.content2}
+                  {props.context.contentTwo}
                 </Typography>
               </div>
             </Paper>
             <Paper className={classes.paper}>
               <div className={classes.main}>
                 <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.title3}
+                  {props.context.titleThree}
                 </Typography>
                 <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                  {props.context.content3}
+                  {props.context.contentThree}
                 </Typography>
               </div>
             </Paper>
