@@ -79,17 +79,17 @@ const PictureTextLink = props => {
       <CssBaseline />
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
+					<img className={classes.picture} src={props.context.picture} alt={props.context.textTitle}/>
 				</Grid>
 				<Grid item xs={12} md={4} >
-					<div className={classes.main}>
+					<div className={classes.textMain}>
 						<Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-              {props.context.title2}
+              {props.context.textTitle}
 						</Typography>
 						<Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
-              {props.context.subtitle2}
+              {props.context.textContent}
 						</Typography>
-            <Link component={RouterLink} to="/post/7866307276669779968" hover="none" className={classes.link}>那些平凡之中的主角   →</Link>
+            <Link component={RouterLink} to={props.context.textUrl} hover="none" className={classes.link}>{props.context.textLink}   →</Link>
 					</div>
 				</Grid>
 			</Grid>

@@ -88,33 +88,33 @@ const PicturePicture = props =>  {
       <Grow in={true}>
         <Grid container justify="center" className={classes.content}>
           <Grid item xs={12} md={4} className={classes.grid}>
-            <img className={classes.picture} src={props.context.image1} alt='Xindog APP'/>
-            <div className={classes.main}>
+            <img className={classes.picture} src={props.context.imageLeft} alt='Xindog APP'/>
+            <div className={classes.mainLeft}>
               <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-                {props.context.title1}
+                {props.context.titleLeft}
               </Typography>
               <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-                {props.context.subtitle1}
+                {props.context.contentLeft}
               </Typography>
               <div className={classes.button}>
                 <Button className={classes.buttonContent}>
-                  那些平凡之中的主角   →
+                  {props.context.linkTextLeft}   →
                 </Button>
               </div>
             </div>
           </Grid>
           <Grid item xs={12} md={4} className={classes.grid}>
-            <img className={classes.picture} src={props.context.image2} alt='Xindog APP'/>
-            <div className={classes.main}>
+            <img className={classes.picture} src={props.context.imageRight} alt='Xindog APP'/>
+            <div className={classes.mainRight}>
               <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-                {props.context.title2}
+                {props.context.titleRight}
               </Typography>
               <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-                {props.context.subtitle2}
+                {props.context.contentRight}
               </Typography>
               <div className={classes.button}>
                 <Button className={classes.buttonContent}>
-                  那些平凡之中的主角   →
+                  {props.context.linkTextRight}   →
                 </Button>
               </div>
             </div>

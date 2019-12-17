@@ -66,11 +66,11 @@ const ContentLink = props => {
       <Container className={classes.mainTitle}>
         <div className={classes.main}>
           <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-            {props.context.main}
+            {props.context.titile}
           </Typography>
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-            <Link component={RouterLink}  to="/reset-passwd">
-                {props.context.title}    →
+            <Link component={RouterLink}  to={props.context.contentUrl}>
+                {props.context.content}    →
             </Link>
           </Typography>  
         </div>

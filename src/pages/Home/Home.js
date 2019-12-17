@@ -101,10 +101,10 @@ const useStyles = makeStyles(theme => ({
 //   url: '/friends',
 // };
 
-const picturePictureContent ={
-	image1: '/images/img/homepage/masterwang2019.png',
-	title1: '新闻现场',
-	subtitle1: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+const firstContent ={
+	main: '/images/img/homepage/masterwang2019.png',
+	title: '新闻现场',
+	content: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
 	image2: '/images/img/homepage/hello.png',
 	title2: '上海， 这一年。',
@@ -187,7 +187,7 @@ const Home = props => {
 
 
 
-      <ContentTitle context={title2} /> 
+      <ContentTitle context={firstContent} /> 
       <PictureTextLink context={picturePictureContent} {...props}  /> 
 
       
@@ -195,27 +195,27 @@ const Home = props => {
       <PicturePicture context={picturePictureContent} {...props} />
       
 
-      <ContentTitle context={title2} />
+      <ContentTitle context={firstContent} />
       <PictureText context={picturePictureContent} {...props} />
 
-      <ContentTitle context={title2} />
+      <ContentTitle context={firstContent} />
       <TextPicture context={picturePictureContent} {...props} />
 
-      <ContentTitle context={title1} />
+      <ContentTitle context={firstContent} />
       <PictureItems context={imageItems} {...props} />
 
-      <ContentTitle context={title2} />
+      <ContentTitle context={firstContent} />
       <PictureContentLine />
 
-      <ContentTitle context={title2} />
+      <ContentTitle context={firstContent} />
       <ButtonPictureContent context={imageItems} {...props}  />
 
-      <ContentTitle context={title2} /> 
+      <ContentTitle context={firstContent} /> 
       <CardPicture context={imageItems} {...props}  /> 
 
 
 
-      <ContentTitle context={title2} /> 
+      <ContentTitle context={firstContent} /> 
       <TextPictureLink context={pictureContent} {...props}  /> 
 
       
