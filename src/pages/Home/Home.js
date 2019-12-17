@@ -102,13 +102,18 @@ const useStyles = makeStyles(theme => ({
 // };
 
 const firstContent ={
-	main: '/images/img/homepage/masterwang2019.png',
-	title: '新闻现场',
+  
+  main: '汪师傅这一年',
+  title: '2019过去了， 我很想念他',
 	content: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-	image2: '/images/img/homepage/hello.png',
-	title2: '上海， 这一年。',
-	subtitle2: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  '
+	picture: '/images/img/homepage/hello.png',
+	titleLeft: '上海， 这一年。',
+  contentLeft: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  
+	titleRight: '上海， 这一年。',
+	contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  '
+
 }
 
 const title1 ={
@@ -188,31 +193,31 @@ const Home = props => {
 
 
       <ContentTitle context={firstContent} /> 
-      <PictureTextLink context={picturePictureContent} {...props}  /> 
+      <PictureTextLink context={firstContent} {...props}  /> 
 
       <ContentTitle context={title1} />
-      <PicturePicture context={picturePictureContent} {...props} />
+      <PicturePicture context={firstContent} {...props} />
       
       <ContentTitle context={firstContent} />
-      <PictureText context={picturePictureContent} {...props} />
+      <PictureText context={firstContent} {...props} />
 
       <ContentTitle context={firstContent} />
-      <TextPicture context={picturePictureContent} {...props} />
+      <TextPicture context={firstContent} {...props} />
 
       <ContentTitle context={firstContent} />
-      <PictureItems context={imageItems} {...props} />
+      <PictureItems context={firstContent} {...props} />
 
       <ContentTitle context={firstContent} />
       <PictureContentLine />
 
       <ContentTitle context={firstContent} />
-      <ButtonPictureContent context={imageItems} {...props}  />
+      <ButtonPictureContent context={firstContent} {...props}  />
 
       <ContentTitle context={firstContent} /> 
-      <CardPicture context={imageItems} {...props}  /> 
+      <CardPicture context={firstContent} {...props}  /> 
 
       <ContentTitle context={firstContent} /> 
-      <TextPictureLink context={pictureContent} {...props}  /> 
+      <TextPictureLink context={firstContent} {...props}  /> 
 
     </React.Fragment>
   );
