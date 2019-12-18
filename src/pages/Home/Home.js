@@ -208,7 +208,7 @@ const Home = props => {
       <PictureItems context={firstContent} {...props} />
 
       <ContentTitle context={firstContent} />
-      <PictureContentLine />
+      <PictureContentLine context={firstContent} {...props}  />
 
       <ContentTitle context={firstContent} />
       <ButtonPictureContent context={firstContent} {...props}  />
