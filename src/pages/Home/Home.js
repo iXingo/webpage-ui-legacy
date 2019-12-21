@@ -144,7 +144,7 @@ const fourthSection ={
 	title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
-  linkText: '在一行行代码一封封邮件前开始了沪漂的生活',
+  linkText: '在一行行代码一封封邮',
 
 }
 
@@ -189,13 +189,13 @@ const Home = props => {
       </Slide>
 
       <PictureTextLink context={firstSection} {...props}  /> 
-      <PicturePicture context={secondSection} {...props} />
       <PictureItems context={fourthSection} {...props} />
-      <PictureText context={thirdSection} {...props} />
-      <TextPicture context={fourthSection} {...props} />
-      <PictureContentLine context={fourthSection} {...props}  />
-      <ButtonPictureContent context={fourthSection} {...props}  />
+      <PicturePicture context={secondSection} {...props} />
       <CardPicture context={fourthSection} {...props}  /> 
+      <PictureText context={thirdSection} {...props} />
+      <PictureContentLine context={fourthSection} {...props}  />
+      <TextPicture context={fourthSection} {...props} />
+      <ButtonPictureContent context={fourthSection} {...props}  />
       <TextPictureLink context={fourthSection} {...props}  /> 
 
     </React.Fragment>
