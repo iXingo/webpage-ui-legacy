@@ -114,12 +114,12 @@ const secondSection ={
 	titleLeft: '上海， 这一年。',
   contentLeft: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
-  linkTextLeft: '在一行行代码一封封邮件前开始了沪漂的生活',
+  linkTextLeft: '在一行行代码一封封邮件前',
 
-  imageRight: '/images/img/homepage/hello.png',
+  imageRight: '/images/img/homepage/masterwang2019.png',
 	titleRight: '上海， 这一年。',
   contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
-  linkTextRight: '在一行行代码一封封邮件前开始了沪漂的生活',
+  linkTextRight: '在一行行代码一封封邮件前',
 }
 
 const thirdSection ={
@@ -131,7 +131,7 @@ const thirdSection ={
 	title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
-  linkText: '在一行行代码一封封邮件前开始了沪漂的生活',
+  linkText: '在一行行代码一封封邮件前',
 
 }
 
@@ -140,7 +140,7 @@ const fourthSection ={
   sectionTitle: '2019过去了， 我很想念他',
 	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-	image: '/images/img/homepage/hello.png',
+	image: '/images/img/homepage/masterwang2019.png',
 	title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
@@ -190,9 +190,9 @@ const Home = props => {
 
       <PictureTextLink context={firstSection} {...props}  /> 
       <PicturePicture context={secondSection} {...props} />
+      <PictureItems context={fourthSection} {...props} />
       <PictureText context={thirdSection} {...props} />
       <TextPicture context={fourthSection} {...props} />
-      <PictureItems context={fourthSection} {...props} />
       <PictureContentLine context={fourthSection} {...props}  />
       <ButtonPictureContent context={fourthSection} {...props}  />
       <CardPicture context={fourthSection} {...props}  /> 

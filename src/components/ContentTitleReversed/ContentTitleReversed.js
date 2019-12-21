@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '100%',
     color: 'hsla(0,0%,100%,.6)',
     backgroundColor: '#1a73e8',
+    marginTop: 80
     // marginBottom: 30
   },
   main: {
@@ -70,15 +71,15 @@ const ContentTitleReversed = props => {
       <Container className={classes.mainTitle}>
         <div className={classes.main}>
           <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-            {props.context.main}
+            {props.context.sectionMain}
           </Typography>
           {/* <TypeWriter typing={0.5}> */}
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-            {props.context.title}
+            {props.context.sectionTitle}
           </Typography>
           {/* </TypeWriter> */}
           <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-             {props.context.content}
+             {props.context.sectionContent}
           </Typography>   
         </div>
       </Container>

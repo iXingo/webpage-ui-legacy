@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import { Paper } from '@material-ui/core';
-import { ContentTitle } from '../../components';
+import { ContentTitleReversed } from '../../components';
 
 
 
@@ -73,7 +73,7 @@ const PictureItems = props =>  {
   return (
     <React.Fragment>
       <CssBaseline />
-      <ContentTitle context={props.context} /> 
+      <ContentTitleReversed context={props.context} /> 
 			<Grid container justify="center" alignItems="center" className={classes.content}>
 				<Grid item xs={12} md={4} >
 					<img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
