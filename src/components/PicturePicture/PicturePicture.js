@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
 		// height: 500,
   },
   grid: {
-    padding: 30
+    padding: 0
   },
   buttonContent: {
     padding: '12px 32px',

@@ -119,7 +119,6 @@ const secondSection ={
   imageRight: '/images/img/homepage/hello.png',
 	titleRight: '上海， 这一年。',
   contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
-  linkUrl: '',
   linkTextRight: '在一行行代码一封封邮件前开始了沪漂的生活',
 }
 
