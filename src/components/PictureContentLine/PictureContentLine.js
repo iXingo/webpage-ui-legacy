@@ -10,6 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Divider, Link } from '@material-ui/core';
+import { ContentTitle } from '../../components';
+
 
 const useStyles = makeStyles(theme => ({
   icon: {
@@ -61,39 +63,40 @@ const PictureContentLine = props =>{
   return (
     <React.Fragment>
       <CssBaseline />
-        <Container className={classes.cardGrid} maxWidth="md">
-          {/* End hero unit */}
-          <Grid container spacing={4}>
-            {cards.map(card => (
-              <Grid item key={card} xs={12} sm={6} md={3}>
-                <Card className={classes.card}>
-                  <CardMedia
-                    className={classes.cardMedia}
-                    image={card.picture}
-                    title={card.title}
-                  />
-                  <CardContent className={classes.cardContent}>
-                    <Typography gutterBottom variant="h4" component="h2">
-                      {card.title}
+      <ContentTitle context={props.context} /> 
+      <Container className={classes.cardGrid} maxWidth="md">
+        {/* End hero unit */}
+        <Grid container spacing={4}>
+          {cards.map(card => (
+            <Grid item key={card} xs={12} sm={6} md={3}>
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image={card.picture}
+                  title={card.title}
+                />
+                <CardContent className={classes.cardContent}>
+                  <Typography gutterBottom variant="h4" component="h2">
+                    {card.title}
+                  </Typography>
+                  <Typography color="textSecondary">
+                    {card.content}
+                  </Typography>
+                </CardContent>
+                <Divider></Divider>
+                <CardActions className={classes.readmore}>
+                    <Typography size="small" color="primary">
+                      <Link  color="primary" component={RouterLink} to={card.link} underline="hover" variant="h6">查看全文...</Link>
                     </Typography>
-                    <Typography color="textSecondary">
-                      {card.content}
+                    <Typography size="small" color="primary">
+                    <Link  color="primary" component={RouterLink} to={card.link} underline="hover" variant="h6">→</Link>
                     </Typography>
-                  </CardContent>
-                  <Divider></Divider>
-                  <CardActions className={classes.readmore}>
-                      <Typography size="small" color="primary">
-                        <Link  color="primary" component={RouterLink} to={card.link} underline="hover" variant="h6">查看全文...</Link>
-                      </Typography>
-                      <Typography size="small" color="primary">
-                      <Link  color="primary" component={RouterLink} to={card.link} underline="hover" variant="h6">→</Link>
-                      </Typography>
-                  </CardActions>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Container>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
     </React.Fragment>
   );
 }

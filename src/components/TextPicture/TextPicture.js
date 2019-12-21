@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-// import Container from '@material-ui/core/Container';
+import { ContentTitle } from '../../components';
 
 
 
@@ -63,6 +63,7 @@ const PictureText = props => {
   return (
     <React.Fragment>
       <CssBaseline />
+      <ContentTitle context={props.context} /> 
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
 					<div className={classes.main}>
@@ -75,7 +76,7 @@ const PictureText = props => {
 					</div>
 				</Grid>
         <Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.picture} alt={props.context.title}/>
+					<img className={classes.picture} src={props.context.image} alt={props.context.title}/>
 				</Grid>
 			</Grid>
     </React.Fragment>

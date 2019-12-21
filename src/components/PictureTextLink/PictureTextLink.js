@@ -80,7 +80,7 @@ const PictureTextLink = props => {
       <ContentTitle context={props.context} /> 
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.picture} alt={props.context.textTitle}/>
+					<img className={classes.picture} src={props.context.image} alt={props.context.textTitle}/>
 				</Grid>
 				<Grid item xs={12} md={4} >
 					<div className={classes.textMain}>

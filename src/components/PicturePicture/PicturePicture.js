@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
+import { ContentTitle } from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -85,6 +86,7 @@ const PicturePicture = props =>  {
   return (
     <React.Fragment>
       <CssBaseline />
+      <ContentTitle context={props.context} /> 
       <Grow in={true}>
         <Grid container justify="center" className={classes.content}>
           <Grid item xs={12} md={4} className={classes.grid}>

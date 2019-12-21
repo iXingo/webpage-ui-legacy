@@ -1,20 +1,12 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-// import Toolbar from '@material-ui/core/Toolbar';
-// import IconButton from '@material-ui/core/IconButton';
-// import SearchIcon from '@material-ui/icons/Search';
-// import Paper from '@material-ui/core/Paper';
-// import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
-// import Grid from '@material-ui/core/Grid';
-// import Link from '@material-ui/core/Link';
-// import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import { withRouter } from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
 import Slide from '@material-ui/core/Slide';
-import { ContentTitle,  PicturePicture, PictureText, PictureItems, TextPicture,
+import { PicturePicture, PictureText, PictureItems, TextPicture,
   PictureContentLine, ButtonPictureContent, CardPicture, PictureTextLink, TextPictureLink
  } from '../../components';
 
@@ -27,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '160px 10px 120px'
+    padding: '100px 10px 36px'
   },
   website: { 
     fontSize: 48,
@@ -101,21 +93,59 @@ const useStyles = makeStyles(theme => ({
 //   url: '/friends',
 // };
 
-const firstTitle ={
-  
+const firstSection ={
   sectionMain: '汪师傅这一年',
   sectionTitle: '2019过去了， 我很想念他',
-	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-	picture: '/images/img/homepage/hello.png',
+	image: '/images/img/homepage/hello.png',
 	textTitle: '上海， 这一年。',
   textContent: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
+  linkText: '在一行行代码一封封邮件',
+}
+
+const secondSection ={
+  sectionMain: '汪师傅这一年',
+  sectionTitle: '2019过去了， 我很想念他',
+	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+	imageLeft: '/images/img/homepage/hello.png',
+	titleLeft: '上海， 这一年。',
+  contentLeft: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkTextLeft: '在一行行代码一封封邮件前开始了沪漂的生活',
+
+  imageRight: '/images/img/homepage/hello.png',
+	titleRight: '上海， 这一年。',
+  contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkTextRight: '在一行行代码一封封邮件前开始了沪漂的生活',
+}
+
+const thirdSection ={
+  sectionMain: '汪师傅这一年',
+  sectionTitle: '2019过去了， 我很想念他',
+	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+	image: '/images/img/homepage/hello.png',
+	title: '上海， 这一年。',
+  content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
   linkText: '在一行行代码一封封邮件前开始了沪漂的生活',
 
-  
-	titleRight: '上海， 这一年。',
-	contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  '
+}
+
+const fourthSection ={
+  sectionMain: '汪师傅这一年',
+  sectionTitle: '2019过去了， 我很想念他',
+	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+	image: '/images/img/homepage/hello.png',
+	title: '上海， 这一年。',
+  content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkText: '在一行行代码一封封邮件前开始了沪漂的生活',
 
 }
 
@@ -159,34 +189,15 @@ const Home = props => {
       </Container>
       </Slide>
 
-
-
-      
-      <PictureTextLink context={firstTitle} {...props}  /> 
-
-      <ContentTitle context={firstTitle} />
-      <PicturePicture context={firstTitle} {...props} />
-      
-      <ContentTitle context={firstTitle} />
-      <PictureText context={firstTitle} {...props} />
-
-      <ContentTitle context={firstTitle} />
-      <TextPicture context={firstTitle} {...props} />
-
-      <ContentTitle context={firstTitle} />
-      <PictureItems context={firstTitle} {...props} />
-
-      <ContentTitle context={firstTitle} />
-      <PictureContentLine context={firstTitle} {...props}  />
-
-      <ContentTitle context={firstTitle} />
-      <ButtonPictureContent context={firstTitle} {...props}  />
-
-      <ContentTitle context={firstTitle} /> 
-      <CardPicture context={firstTitle} {...props}  /> 
-
-      <ContentTitle context={firstTitle} /> 
-      <TextPictureLink context={firstTitle} {...props}  /> 
+      <PictureTextLink context={firstSection} {...props}  /> 
+      <PicturePicture context={secondSection} {...props} />
+      <PictureText context={thirdSection} {...props} />
+      <TextPicture context={fourthSection} {...props} />
+      <PictureItems context={fourthSection} {...props} />
+      <PictureContentLine context={fourthSection} {...props}  />
+      <ButtonPictureContent context={fourthSection} {...props}  />
+      <CardPicture context={fourthSection} {...props}  /> 
+      <TextPictureLink context={fourthSection} {...props}  /> 
 
     </React.Fragment>
   );

@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import { ContentTitle } from '../../components';
 
 
 
@@ -76,6 +77,7 @@ const TextPictureLink = props => {
   return (
     <React.Fragment>
       <CssBaseline />
+      <ContentTitle context={props.context} /> 
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
 					<div className={classes.main}>
@@ -89,7 +91,7 @@ const TextPictureLink = props => {
 					</div>
 				</Grid>
         <Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.picture} alt={props.context.title}/>
+					<img className={classes.picture} src={props.context.image} alt={props.context.title}/>
 				</Grid>
 			</Grid>
     </React.Fragment>
