@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import { Link as RouterLink, withRouter } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-
+import { ContentTitle } from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -77,6 +77,7 @@ const PictureTextLink = props => {
   return (
     <React.Fragment>
       <CssBaseline />
+      <ContentTitle context={props.context} /> 
 			<Grid container justify="center" alignItems='center' className={classes.content}>
 				<Grid item xs={12} md={4} >
 					<img className={classes.picture} src={props.context.picture} alt={props.context.textTitle}/>
@@ -89,7 +90,7 @@ const PictureTextLink = props => {
 						<Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
               {props.context.textContent}
 						</Typography>
-            <Link component={RouterLink} to={props.context.textUrl} hover="none" className={classes.link}>{props.context.textLink}   →</Link>
+            <Link component={RouterLink} to={props.context.linkUrl} hover="none" className={classes.link}>{props.context.linkText}   →</Link>
 					</div>
 				</Grid>
 			</Grid>

@@ -101,53 +101,22 @@ const useStyles = makeStyles(theme => ({
 //   url: '/friends',
 // };
 
-const firstContent ={
+const firstTitle ={
   
-  main: '汪师傅这一年',
-  title: '2019过去了， 我很想念他',
-	content: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+  sectionMain: '汪师傅这一年',
+  sectionTitle: '2019过去了， 我很想念他',
+	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
 	picture: '/images/img/homepage/hello.png',
-	titleLeft: '上海， 这一年。',
-  contentLeft: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+	textTitle: '上海， 这一年。',
+  textContent: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkText: '在一行行代码一封封邮件前开始了沪漂的生活',
+
   
 	titleRight: '上海， 这一年。',
 	contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  '
 
-}
-
-const title1 ={
-  main: '新闻现场',
-  title: '正在发生的，故事。',
-	content: '我不断地寻找油腻的师姐在哪里， 额， 不， 是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。'
-}
-
-const title2 ={
-	main: '汪师傅和他的朋友们',
-	title: '那些， 有趣的人。',
-  content: '寻常巷陌， 熙熙攘攘。 故事每天发生， 时间总在流逝， 抓住每一个平凡的瞬间。 在某个阳光明媚的下午， 慢慢回想， 那些点点滴滴再次在脑海中缓缓延展。'
-}
-
-
-
-const imageItems ={
-	image: 'https://github.githubassets.com/images/modules/site/home-illo-team.svg',
-	title1: '那些有趣的人。',
-  content1: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
-  title2: '那些有趣的人。',
-  content2: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
-  title3: '那些有趣的人。',
-	content3: '寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。寻常巷陌， 熙熙攘攘。 故事每天发生，抓住每一个不一样的瞬间。',
-}
-
-const pictureContent ={
-	image1: '/images/img/homepage/undraw_team_ih79.svg',
-	title1: '新闻现场',
-	subtitle1: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
-
-	image2: '/images/img/homepage/undraw_dev_focus_b9xo.svg',
-	title2: '新闻现场',
-	subtitle2: 'Build, test, deploy, and run CI/CD the way you want in the same place you manage code. Trigger Actions from any GitHub event to any available API. Build your own Actions in the language of your choice.',
 }
 
 const SvgIcon = () => {
@@ -192,32 +161,32 @@ const Home = props => {
 
 
 
-      <ContentTitle context={firstContent} /> 
-      <PictureTextLink context={firstContent} {...props}  /> 
-
-      <ContentTitle context={title1} />
-      <PicturePicture context={firstContent} {...props} />
       
-      <ContentTitle context={firstContent} />
-      <PictureText context={firstContent} {...props} />
+      <PictureTextLink context={firstTitle} {...props}  /> 
 
-      <ContentTitle context={firstContent} />
-      <TextPicture context={firstContent} {...props} />
+      <ContentTitle context={firstTitle} />
+      <PicturePicture context={firstTitle} {...props} />
+      
+      <ContentTitle context={firstTitle} />
+      <PictureText context={firstTitle} {...props} />
 
-      <ContentTitle context={firstContent} />
-      <PictureItems context={firstContent} {...props} />
+      <ContentTitle context={firstTitle} />
+      <TextPicture context={firstTitle} {...props} />
 
-      <ContentTitle context={firstContent} />
-      <PictureContentLine context={firstContent} {...props}  />
+      <ContentTitle context={firstTitle} />
+      <PictureItems context={firstTitle} {...props} />
 
-      <ContentTitle context={firstContent} />
-      <ButtonPictureContent context={firstContent} {...props}  />
+      <ContentTitle context={firstTitle} />
+      <PictureContentLine context={firstTitle} {...props}  />
 
-      <ContentTitle context={firstContent} /> 
-      <CardPicture context={firstContent} {...props}  /> 
+      <ContentTitle context={firstTitle} />
+      <ButtonPictureContent context={firstTitle} {...props}  />
 
-      <ContentTitle context={firstContent} /> 
-      <TextPictureLink context={firstContent} {...props}  /> 
+      <ContentTitle context={firstTitle} /> 
+      <CardPicture context={firstTitle} {...props}  /> 
+
+      <ContentTitle context={firstTitle} /> 
+      <TextPictureLink context={firstTitle} {...props}  /> 
 
     </React.Fragment>
   );
