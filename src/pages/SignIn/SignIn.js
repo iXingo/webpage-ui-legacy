@@ -12,7 +12,7 @@ import {
   Typography
 } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { SvgIcon } from '@material-ui/core';
+// import { SvgIcon } from '@material-ui/core';
 import { notification } from 'antd';
 import { login } from '../../util/APIUtils';
 import { ACCESS_TOKEN } from '../../constants';

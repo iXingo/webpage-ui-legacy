@@ -55,14 +55,13 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between'
   },
   img: {
-    // height: 360,
-    display: 'block',
     // maxWidth: 400,
     overflow: 'hidden',
     // width: '100%',
     width: '100%', 
     height: 'auto',
     maxWidth: '100%',
+    minHeight: 240
   },
   button: {
     width: 200,

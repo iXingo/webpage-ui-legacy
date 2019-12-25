@@ -196,18 +196,6 @@ const News = props => {
               <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
             </Typography>
           </div>
-          <div>
-            <Typography
-              component="h2"
-              variant="h4"
-              color="inherit"
-              align="center"
-              noWrap
-              className={classes.toolbarTitle}
-            >
-              我关心的就是头条
-            </Typography>
-          </div>
           {/* <IconButton>
             <SearchIcon />
           </IconButton> */}
