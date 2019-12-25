@@ -98,7 +98,7 @@ const firstSection ={
   sectionTitle: '2019过去了， 我很想念他',
 	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-	image: 'https://img.ixingo.cn/homepage/hello.png',
+	image: 'https://img.ixingo.cn/hello.png',
 	textTitle: '上海， 这一年。',
   textContent: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
