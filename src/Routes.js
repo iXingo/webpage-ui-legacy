@@ -27,7 +27,7 @@ class Routes extends Component {
         <Redirect
           exact
           from="/"
-          to="/sign-in"
+          to="/index"
         />
         <RouteWithLayout
           component={ProductListPage}
