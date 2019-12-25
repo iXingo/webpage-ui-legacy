@@ -68,7 +68,7 @@ const SummaryCard = props => {
         title="我的青春消亡史"
         subheader="2016年8月12日"
       />
-      <CardMedia className={classes.media} image="/images/sign/sign-in.jpeg" title="Paella dish"/>
+      <CardMedia className={classes.media} image="https://img.ixingo.cn/sign-up.jpg" title="Paella dish"/>
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
           This impressive paella is a perfect party dish and a fun meal to cook together with your

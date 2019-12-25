@@ -20,7 +20,7 @@ const Tag = props => {
   return (
     <div className={classes.root}>
       <Chip
-        avatar={<Avatar alt="Natacha" src="/images/avatars/000_.png" />}
+        avatar={<Avatar alt="Natacha" src="https://img.ixingo.cn/000_.png" />}
         label={props.tag.name}
         className={classes.chip}
         color="primary"

@@ -136,7 +136,7 @@ const featuredPosts = [
     title: '演示文章',
     date: '2019年9月15日',
     description:'这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
-    imgUrl: 'http://localhost:3000/images/img/undraw_special_event_4aj8.svg',
+    imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
     url: '/friends',
   },
   {
@@ -144,7 +144,7 @@ const featuredPosts = [
     title: '这是一篇演示文章',
     date: '2019年10月15日',
     description:'这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
-    imgUrl: 'http://localhost:3000/images/img/undraw_special_event_4aj8.svg',
+    imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
     url: '/friends',
   },
 ];
@@ -154,7 +154,7 @@ const card1 = {
     title: '汪师傅的会客厅！',
     date: '2019年11月15日',
     description:'不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
-    imgUrl: 'http://localhost:3000/images/img/undraw_special_event_4aj8.svg',
+    imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
     url: '/friends',
 };
 
@@ -163,7 +163,7 @@ const card2 = {
   title: '汪师傅的编程小课堂！',
   date: '2019年12月15日',
   description:'不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
-  imgUrl: 'http://localhost:3000/images/img/undraw_special_event_4aj8.svg',
+  imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
   url: '/friends',
 };
 

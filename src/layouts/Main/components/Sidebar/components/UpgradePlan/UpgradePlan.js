@@ -43,7 +43,7 @@ const UpgradePlan = props => {
       <div className={classes.media}>
         <img
           alt="开源网站"
-          src="/images/undraw_resume_folder_2_arse.svg"
+          src="https://img.ixingo.cn/undraw_resume_folder_2_arse.svg"
         />
       </div>
       <div className={classes.content}>

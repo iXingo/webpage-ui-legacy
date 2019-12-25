@@ -34,7 +34,7 @@ export default function AlignItemsList() {
     <List className={classes.root}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/images/avatars/000_.png" className={classes.avatar}/>
+          <Avatar alt="Remy Sharp" src="https://img.ixingo.cn/000_.png" className={classes.avatar}/>
         </ListItemAvatar>
         <ListItemText className={classes.listItem}
           primary="Brunch this weekend?"
@@ -56,7 +56,7 @@ export default function AlignItemsList() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="/images/avatars/000_.png" className={classes.avatar}/>
+          <Avatar alt="Travis Howard" src="https://img.ixingo.cn/000_.png" className={classes.avatar}/>
         </ListItemAvatar>
         <ListItemText className={classes.listItem}
           primary="Summer BBQ"
@@ -78,7 +78,7 @@ export default function AlignItemsList() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Cindy Baker" src="/images/avatars/000_.png" className={classes.avatar}/>
+          <Avatar alt="Cindy Baker" src="https://img.ixingo.cn/000_.png" className={classes.avatar}/>
         </ListItemAvatar>
         <ListItemText className={classes.listItem}
           primary="Oui Oui"

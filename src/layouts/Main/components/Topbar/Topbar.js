@@ -82,7 +82,7 @@ const Topbar = props => {
         <RouterLink to="/">
           <img
             alt="Logo"
-            src="/images/logos/logo.png"
+            src="https://img.ixingo.cn/logo.png"
             className={classes.logo}
           />
         </RouterLink>测试版 Beta 2019.12051

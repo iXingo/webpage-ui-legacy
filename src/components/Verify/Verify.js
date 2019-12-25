@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
     },
     verified: {
         display: 'inline-block',
-        backgroundImage: 'url(/images/icon/icon.png)',
+        backgroundImage: 'url(https://img.ixingo.cn/icon.png)',
         backgroundRepeat: 'no-repeat',
         width: 14,
         height: 14,
