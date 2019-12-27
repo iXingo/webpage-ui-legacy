@@ -70,13 +70,17 @@ div::-webkit-scrollbar-button {
   }
 }
 
-img {
+p img {
   width: 100%;
   /* box-shadow: 0 0 3px 1px rgba(51, 51, 51, 0.5); */
   transition: 0.3s;
 }
-img:hover {
+p img:hover {
   box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5);
+}
+
+img {
+  width: 100%;
 }
 li{
   font-size: 16px;
