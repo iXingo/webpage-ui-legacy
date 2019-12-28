@@ -136,11 +136,11 @@ const thirdSection ={
 }
 
 const fourthSection ={
-  sectionMain: '汪师傅这一年',
-  sectionTitle: '2019过去了， 我很想念他',
+  sectionMain: '工作这一年',
+  sectionTitle: '第一个， 完全工作的一年',
 	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-	image: 'https://img.ixingo.cn/masterwang2019.png',
+	image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
 	title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
@@ -178,7 +178,7 @@ const Home = props => {
             </Typography>
             <TypeWriter typing={0.5}>
             <Typography variant="subtitle1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-              有时候，我在思考，也许孤独是永恒的吧。一个的命运啊， 当然要靠自我的奋斗，还需要考虑到历史的行程。
+              在这个漫长的人生做一些简单的思考。
             </Typography>
             </TypeWriter>
             <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>

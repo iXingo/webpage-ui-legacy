@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundImage: 'url(https://img.ixingo.cn/sign-up.jpg)',
+    backgroundImage: 'url(https://img.ixingo.cn/sign-in.jpg)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center'

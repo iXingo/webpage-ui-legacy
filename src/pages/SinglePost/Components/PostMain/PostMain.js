@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: 'center'
   },
   quoteInner: {
-    paddingTop: 420,
+    paddingTop: 500,
     textAlign: 'center',
     flexBasis: 540,
   },
@@ -118,6 +118,11 @@ const useStyles = makeStyles(theme => ({
   },
   post:{
       paddingTop: 20
+  },
+  copyright: {
+    backgroundColor: '#1a73e8',
+    color: 'white',
+    fontSize: 12,
   }
 }));
 
@@ -132,8 +137,8 @@ const PostMain = props => {
           {/* <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
           <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography> */}
           <div className={classes.person}>
-            <Typography className={classes.name} variant="body1">&copy; Copyright 2019</Typography>
-            <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area</Typography>
+            <Typography className={classes.name} variant="body1"><span className={classes.copyright}>&copy; Copyright 2020</span></Typography>
+            <Typography className={classes.bio} variant="body2"><span className={classes.copyright}>Designed by Shawn Wang in Pudong New Area.</span></Typography>
           </div>
         </div>
       </div>

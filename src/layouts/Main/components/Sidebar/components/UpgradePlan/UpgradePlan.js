@@ -58,7 +58,7 @@ const UpgradePlan = props => {
           align="center"
           variant="body2"
         >
-          星狗网为开源程序。 基于前后端分离架构构建，源代码已经在Github上开源。
+          星狗网为开源程序。 基于前后端分离架构构建，源代码已经在Github上开源（尚未完工）。
         </Typography>
       </div>
       <div className={classes.actions}>

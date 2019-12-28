@@ -34,12 +34,12 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     margin: 'auto',
     fontSize: 16,
-    paddingTop: 20,
+    paddingTop: 40,
     paddingBottom: 40,
     fontWeight: 500,
     lineHeight: 1.5,
     textAlign: 'center',
-    maxWidth: 450
+    maxWidth: 500
   },
   svgIcon: {
     height: 30,
