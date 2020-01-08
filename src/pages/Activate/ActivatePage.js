@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 50,
     display: 'inline-block',
     maxWidth: '100%',
-    height: 200
+    height: 300
   }
 }));
 
@@ -45,7 +45,7 @@ const ActivatePage = props =>  {
               <Typography variant="h1">用户激活成功！</Typography>
               <Typography variant="subtitle2">根据提示， 就可畅游星狗网。</Typography>
               <Typography variant="subtitle2">{props.info.data}</Typography>
-              <img alt="Under development" className={classes.image} src="https://img.ixingo.cn/undraw_page_not_found_su7k.svg"/>
+              <img alt="Under development" className={classes.image} src="https://img.ixingo.cn/undraw_chore_list_iof3.svg"/>
             </div>
           </Grid>
         </Grid>
@@ -60,7 +60,7 @@ const ActivatePage = props =>  {
               <Typography variant="h1">用户激活失败！</Typography>
               <Typography variant="subtitle2">还差一步， 就可畅游星狗网。</Typography>
               <Typography variant="subtitle2">{props.info.data}</Typography>
-              <img alt="Under development" className={classes.image} src="https://img.ixingo.cn/undraw_page_not_found_su7k.svg"/>
+              <img alt="Under development" className={classes.image} src="https://img.ixingo.cn/undraw_chore_list_iof3.svg"/>
             </div>
           </Grid>
         </Grid>
