@@ -82,11 +82,18 @@ export function checkEmailAvailability(email) {
 
 export function getCurrentUser() {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
-        return Promise.reject("登录凭证实效或者未设置！");
+        return Promise.reject("登录凭证失效或者未设置！");
     }
 
     return request({
         url: API_BASE_URL + "/user/me",
+        method: 'GET'
+    });
+}
+
+export function userActivate(email, activateCode) {
+    return request({
+        url: API_BASE_URL + "/user/activate?email="+email+ "&activeCode="+activateCode,
         method: 'GET'
     });
 }

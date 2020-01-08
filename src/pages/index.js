@@ -13,4 +13,5 @@ export { default as Profile } from './Profile';
 export { default as SingleFriend } from './SingleFriend';
 export { default as About } from './About';
 export { default as News } from './News';
+export { default as Activate } from './Activate';
 

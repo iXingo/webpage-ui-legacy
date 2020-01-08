@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Typography, Link } from '@material-ui/core';
-import TypeWriter from 'react-typewriter';
 
 
 const useStyles = makeStyles(theme => ({
@@ -20,7 +19,6 @@ const Footer = props => {
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
-	  <TypeWriter typing={1}>
 	  <Typography variant="body1">
 		    [ICP证:  皖ICP备15011098号]{'     '}
 	  </Typography>
@@ -44,7 +42,6 @@ const Footer = props => {
 		<Typography variant="caption" display="block">
 			本网站构建并托管于百度智能云BCC， 静态文件使用七牛云进行CDN加速， 短信服务由腾讯云提供支持， DNS域名解析服务由阿里云万网提供， 微信公众号平台基于新浪云SAE进行构建。
 		</Typography>
-      </TypeWriter>
     </div>
   );
 };

@@ -16,7 +16,9 @@ import {
   SingleFriend as SingleFriendPage,
   About as AboutPage,
   News as NewsPage,
-  Home as HomePage
+  Home as HomePage,
+  Activate as ActivatePage
+
 } from './pages';
 import { Album as AlbumPage} from './components';
 
@@ -132,6 +134,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/about"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={ActivatePage}
+          exact
+          layout={MinimalLayout}
+          path="/activate"
           {...this.props}
         />
         <Redirect to="/not-found" /> 
