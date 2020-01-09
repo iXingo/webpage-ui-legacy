@@ -121,6 +121,12 @@ const useStyles = makeStyles(theme => ({
   post:{
       paddingTop: 20
   },
+  info: {
+    fontWeight: 300
+  },
+  strong : {
+    fontWeight: 'bold',
+  }
 }));
 
 
@@ -148,11 +154,11 @@ const PostHeader = props => {
       <Typography variant="h6" className={classes.author}>
         <strong>作者简介：</strong>
         <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar} />  
-        <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
+        <strong>  {props.post.createdBy.name}</strong> <Verify/><span className={classes.info}>{props.post.createdBy.verifiedContent}</span>
       </Typography>
       <Divider />
       <Typography variant="h6" gutterBottom className={classes.abstrat}>
-        <strong>本文摘要：</strong>{props.post.summary}
+        <strong>本文摘要：</strong><span className={classes.info}>{props.post.summary}</span>
       </Typography> 
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
@@ -161,7 +167,7 @@ const PostHeader = props => {
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>
-        <strong>阅读提示：</strong>全文共 <strong>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.post.readTime}</strong> 分钟。
+        <strong>阅读提示：</strong><span className={classes.info}>全文共 <strong className={classes.strong}>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong className={classes.strong}>{props.post.readTime}</strong> 分钟</span>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
       <Typography variant="caption" className={classes.posttime} >

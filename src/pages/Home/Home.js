@@ -94,9 +94,9 @@ const useStyles = makeStyles(theme => ({
 // };
 
 const firstSection ={
-  sectionMain: '汪师傅这一年',
+  sectionMain: '汪师傅的2020年',
   sectionTitle: '2019过去了， 我很想念他',
-	sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+	sectionContent: '2020年又过去了， 多少有些失望。很明显这一年， 没有什么新闻',
 
 	image: 'https://img.ixingo.cn/undraw_new_decade_n4qd.svg',
 	textTitle: '上海， 这一年。',

@@ -43,7 +43,7 @@ const ActivatePage = props =>  {
           <Grid item lg={6} xs={12}>
             <div className={classes.content}>
               <Typography variant="h1">用户激活成功！</Typography>
-              <Typography variant="subtitle2">根据提示， 就可畅游星狗网。</Typography>
+              <Typography variant="subtitle2">根据提示， 即可畅游星狗网。</Typography>
               <Typography variant="subtitle2">{props.info.data}</Typography>
               <img alt="Under development" className={classes.image} src="https://img.ixingo.cn/undraw_chore_list_iof3.svg"/>
             </div>
@@ -58,7 +58,7 @@ const ActivatePage = props =>  {
           <Grid item lg={6} xs={12}>
             <div className={classes.content}>
               <Typography variant="h1">用户激活失败！</Typography>
-              <Typography variant="subtitle2">还差一步， 就可畅游星狗网。</Typography>
+              <Typography variant="subtitle2">还差一步， 即可畅游星狗网。</Typography>
               <Typography variant="subtitle2">{props.info.data}</Typography>
               <img alt="Under development" className={classes.image} src="https://img.ixingo.cn/undraw_chore_list_iof3.svg"/>
             </div>
