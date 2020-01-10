@@ -9,6 +9,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {Instagram} from "react-content-loader";
+import { withRouter } from 'react-router-dom';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -50,10 +52,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const BigMediaCarcd = props => {
+const BigMediaCard = props => {
 
   const classes = useStyles();
-  const { posts } = props;
+
+  const { posts, history } = props;
+
+  const openPost = id => {
+    console.log('/post/'+id);
+    history.push('/post/'+id);
+  };
+
   if(!posts){
     return <Instagram />;
   }
@@ -77,7 +86,7 @@ const BigMediaCarcd = props => {
               </Typography>
             </CardContent>
             <CardActions className={classes.cardContents}>
-              <Button size="small" color="primary">
+              <Button size="small" color="primary" onClick={() => openPost(String(post.id))}>
                 查看全文...
               </Button>
             </CardActions>
@@ -89,4 +98,4 @@ const BigMediaCarcd = props => {
 };
 
 
-export default BigMediaCarcd;
+export default withRouter(BigMediaCard);
