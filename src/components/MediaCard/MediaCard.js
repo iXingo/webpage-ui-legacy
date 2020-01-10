@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const BigMediaCard = props => {
+const MediaCard = props => {
 
   const classes = useStyles();
 
@@ -98,4 +98,4 @@ const BigMediaCard = props => {
 };
 
 
-export default withRouter(BigMediaCard);
+export default withRouter(MediaCard);
