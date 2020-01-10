@@ -11,6 +11,7 @@ import InfoIcon from '@material-ui/icons/Info';
 import PeopleIcon from '@material-ui/icons/People';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
+import MenuBookIcon from '@material-ui/icons/MenuBook';
 import { Profile, SidebarNav, UpgradePlan } from './components';
 
 
@@ -53,6 +54,11 @@ const Sidebar = props => {
       title: '新    闻',
       href: '/news',
       icon: <FiberNewIcon />
+    },
+    {
+      title: '博    文',
+      href: '/posts',
+      icon: <MenuBookIcon />
     },
     {
       title: '好    友',
