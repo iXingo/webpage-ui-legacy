@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Typography, Link } from '@material-ui/core';
-import TypeWriter from 'react-typewriter';
+// import TypeWriter from 'react-typewriter';
 
 
 const useStyles = makeStyles(theme => ({
