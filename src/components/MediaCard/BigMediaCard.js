@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   
   cardGrids: {
     // paddingTop: theme.spacing(8),
-    marginBottom: theme.spacing(2),
+    padding: theme.spacing(2),
   },
   cards: {
     height: '100%',
@@ -58,31 +58,35 @@ const BigMediaCarcd = props => {
     return <Instagram />;
   }
 
-  return (posts.map(post => (
-    <Grid item key={props.card} xs={12} sm={6} md={6} className={classes.cardGrid}>
-      <Card className={classes.cards}>
-        <CardMedia
-          className={classes.cardMedias}
-          image= {post.picUrl}
-          title= {post.title}
-        />
-        <CardContent className={classes.cardContents}>
-          <Typography gutterBottom variant="h3" component="h2" color="primary">
-            {post.title}
-          </Typography>
-          <Typography variant="h5" className={classes.summary}>
-            {post.summary}
-          </Typography>
-        </CardContent>
-        <CardActions className={classes.cardContents}>
-          <Button size="small" color="primary">
-            查看全文...
-          </Button>
-        </CardActions>
-      </Card>
+  return (
+    <Grid container>
+      {posts.map(post => (
+        <Grid item key={props.card} xs={12} md={6} className={classes.cardGrids}>
+          <Card className={classes.cards}>
+            <CardMedia
+              className={classes.cardMedias}
+              image= {post.picUrl}
+              title= {post.title}
+            />
+            <CardContent className={classes.cardContents}>
+              <Typography gutterBottom variant="h3" component="h2" color="primary">
+                {post.title}
+              </Typography>
+              <Typography variant="h5" className={classes.summary}>
+                {post.summary}
+              </Typography>
+            </CardContent>
+            <CardActions className={classes.cardContents}>
+              <Button size="small" color="primary">
+                查看全文...
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+      ))}
     </Grid>
-  )));
-}
+  );
+};
 
 
 export default BigMediaCarcd;

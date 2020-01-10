@@ -193,7 +193,7 @@ const News = props => {
               noWrap
               className={classes.toolbarTitle}
             >
-              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
+              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
             </Typography>
           </div>
           {/* <IconButton>
@@ -207,22 +207,22 @@ const News = props => {
         <main>
           
           {/* Main featured post */}
-          <Carousel></Carousel>
+          <Carousel/>
 
           <Paper className={classes.list}>
-            <FeaturedCardReversed card={card2} {...props}></FeaturedCardReversed>
+            <FeaturedCardReversed card={card2} {...props}/>
           </Paper>
 
           <Paper className={classes.list}>
-            <FeaturedCard card={card1} {...props}></FeaturedCard>
+            <FeaturedCard card={card1} {...props}/>
           </Paper>
 
           <Paper className={classes.list}>
-            <FeaturedList></FeaturedList>
+            <FeaturedList/>
           </Paper>
 
           <div className={classes.list}>
-            <FeaturedContent></FeaturedContent>
+            <FeaturedContent/>
           </div>
           
 
@@ -231,13 +231,13 @@ const News = props => {
           {/* Sub featured posts */}
           <Grid container spacing={4}>
             {featuredPosts.map(post => (
-              <SmallPostCard post={post} {...props}></SmallPostCard>
+              <SmallPostCard post={post} {...props}/>
             ))}
           </Grid>
           {/* End hero unit */}
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
-              <MediaCard card={card} {...props}></MediaCard>
+              <MediaCard card={card} {...props}/>
             ))}
           </Grid>
 
@@ -245,16 +245,16 @@ const News = props => {
 
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
-              <BigMediaCard card={card} {...props}></BigMediaCard>
+              <BigMediaCard card={card} {...props}/>
             ))}
           </Grid>
 
           <Grid container spacing={4} className={classes.cardGrid}>
               <Grid item xs={12} md={6}>
-                <SummaryCard></SummaryCard>
+                <SummaryCard/>
               </Grid>
               <Grid item xs={12} md={6}>
-                <SummaryCard></SummaryCard>
+                <SummaryCard/>
               </Grid>
           </Grid>
         </main>

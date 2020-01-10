@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     paddingTop: 40,
     paddingBottom: 40,
-    fontWeight: 500,
+    fontWeight: 300,
     lineHeight: 1.5,
     textAlign: 'center',
     maxWidth: 500

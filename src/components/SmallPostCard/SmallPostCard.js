@@ -9,7 +9,7 @@ import Hidden from '@material-ui/core/Hidden';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import {NotFound} from "../../pages";
+import {Instagram} from "react-content-loader";
 
 
 
@@ -51,7 +51,7 @@ const SmallPostCard = props => {
   const classes = useStyles();
   const { posts } = props;
   if(!posts){
-    return <NotFound/>;
+    return <Instagram/>;
   }
   return (posts.map( post => (
     <Grid item key={post.title} xs={12} md={6} className={classes.cardGrid}>
