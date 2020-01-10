@@ -9,6 +9,7 @@ import Hidden from '@material-ui/core/Hidden';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
+import {NotFound} from "../../pages";
 
 
 
@@ -48,9 +49,12 @@ const useStyles = makeStyles(theme => ({
 
 const SmallPostCard = props => {
   const classes = useStyles();
-  const { post } = props;
-  return (
-    <Grid item key={post.title} xs={12} md={6}>
+  const { posts } = props;
+  if(!posts){
+    return <NotFound/>;
+  }
+  return (posts.map( post => (
+    <Grid item key={post.title} xs={12} md={6} className={classes.cardGrid}>
       <CardActionArea component="a" href="#">
         <Card className={classes.card}>
           <div className={classes.cardDetails}>
@@ -75,7 +79,7 @@ const SmallPostCard = props => {
         </Card>
       </CardActionArea>
     </Grid>
-  );
+  )));
 }
 
 export default SmallPostCard;

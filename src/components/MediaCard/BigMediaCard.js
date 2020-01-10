@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import {Instagram} from "react-content-loader";
 
 
 const useStyles = makeStyles(theme => ({
@@ -52,21 +53,25 @@ const useStyles = makeStyles(theme => ({
 const BigMediaCarcd = props => {
 
   const classes = useStyles();
+  const { posts } = props;
+  if(!posts){
+    return <Instagram />;
+  }
 
-  return (
-    <Grid item key={props.card} xs={12} sm={6} md={6}>
+  return (posts.map(post => (
+    <Grid item key={props.card} xs={12} sm={6} md={6} className={classes.cardGrid}>
       <Card className={classes.cards}>
         <CardMedia
           className={classes.cardMedias}
-          image="https://developers.google.cn/site-assets/images/news/android-app-bundles-graphic_720.png"
-          title="Image title"
+          image= {post.picUrl}
+          title= {post.title}
         />
         <CardContent className={classes.cardContents}>
           <Typography gutterBottom variant="h3" component="h2" color="primary">
-            Python从入门到精通
+            {post.title}
           </Typography>
           <Typography variant="h5" className={classes.summary}>
-          Developer Student Clubs train thousands of student developers globally and work with their communities to solve real-life problems. University students who lead a DSC gain access to Google technology, events, and mentorship while training their local community through fun meetups, project building activities, and global competitions.
+            {post.summary}
           </Typography>
         </CardContent>
         <CardActions className={classes.cardContents}>
@@ -76,7 +81,7 @@ const BigMediaCarcd = props => {
         </CardActions>
       </Card>
     </Grid>
-  );
+  )));
 }
 
 

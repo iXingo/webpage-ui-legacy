@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import { Typography } from '@material-ui/core';
-import PostContent from '../PostContent';
+import PostContent from '../PostPage';
 import PostHeader from '../PostHeader';
 
 

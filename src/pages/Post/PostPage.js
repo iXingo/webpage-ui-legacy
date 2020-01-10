@@ -1,8 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import palette from '../../theme/palette';
-import ReactMarkdown  from 'react-markdown';
-import CodeBlock from "./CodeBlock";
+import BigMediaCarcd from "../../components/MediaCard";
 
 
 const useStyles = makeStyles(theme => ({
@@ -96,13 +95,13 @@ const useStyles = makeStyles(theme => ({
 
 
 
-const PostContent = props => {
+const PostPage = props => {
   const classes = useStyles();
   return (
     <div className={classes} >
-      <ReactMarkdown source={props.post.content}  renderers={{ code: CodeBlock, }} key={props.post.id} />
+      <BigMediaCarcd posts={props.posts}/>
     </div>
   );
-}
+};
 
-export default PostContent;
+export default PostPage;

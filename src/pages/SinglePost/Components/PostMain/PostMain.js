@@ -146,7 +146,7 @@ const PostMain = props => {
         <Grid container className={classes.mainGrid}>
           {/* Main content */}
           <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostHeader post={props.post} {...props}></PostHeader>
+            <PostHeader post={props.post} {...props}/>
           </Grid>
           <Grid item xs={12} md={8} className={classes.singlepost}>
             <PostContent post={props.post} {...props}> </PostContent>

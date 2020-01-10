@@ -163,7 +163,7 @@ const PostHeader = props => {
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
         {props.post.tags.map(tag => (
-          <Tag tag={tag}></Tag>
+          <Tag tag={tag}/>
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>

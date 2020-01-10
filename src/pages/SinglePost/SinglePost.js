@@ -68,7 +68,7 @@ class SinglePost extends Component {
     const { post } = this.state;
     return (
       <div>
-        <PostMain post={post} {...this.props}></PostMain>
+        <PostMain post={post} {...this.props}/>
       </div> 
     );
   }

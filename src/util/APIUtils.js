@@ -138,9 +138,9 @@ export function getUserCreatedPosts(username, page, size) {
 }
 
 
-export function getAllPosts() {
+export function getAllPosts(page, size) {
     return request({
-        url: API_BASE_URL + "/post/all",
+        url: API_BASE_URL + "/post/all?page=" + page + "&size=" + size,
         method: 'GET'
     });
 }

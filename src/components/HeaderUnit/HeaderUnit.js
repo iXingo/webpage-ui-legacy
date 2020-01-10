@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { notification } from 'antd';
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -43,8 +45,25 @@ const useStyles = makeStyles(theme => ({
 
 const HeaderUnit = props => {
 
-    const { project } = props;
+    const { project, history } = props;
     const classes = useStyles();
+
+    const joinProject = (name) => {
+      const notificationType="success";
+      notification[notificationType]({
+        message: '星狗网 Web App',
+        description: '加入计划'+ name +'成功！',
+      });
+    };
+
+    const inspectProject = (name) => {
+      const notificationType="success";
+      history.push("/index");
+      notification[notificationType]({
+        message: '星狗网 Web App',
+        description: '正在查看'+ name,
+      });
+    };
   
     return (
       <React.Fragment>
@@ -53,18 +72,18 @@ const HeaderUnit = props => {
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
               {project.name}
             </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            <Typography variant="h5" align="center" color={"textSecondary"} paragraph>
               {project.description}
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
                 <Grid item>
-                  <Button variant="contained" color="primary">
+                  <Button variant="contained" color="primary" onClick={() => joinProject(project.name)}>
                     加入该计划
                   </Button>
                 </Grid>
                 <Grid item>
-                  <Button variant="outlined" color="primary">
+                  <Button variant="outlined" color="primary" onClick={() => inspectProject(project.name)}>
                     查看计划介绍
                   </Button>
                 </Grid>
@@ -74,7 +93,7 @@ const HeaderUnit = props => {
         </div>
       </React.Fragment>
     );
-}
+};
 
 
 export default withRouter(HeaderUnit);

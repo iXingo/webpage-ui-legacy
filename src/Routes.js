@@ -17,6 +17,7 @@ import {
   About as AboutPage,
   News as NewsPage,
   Home as HomePage,
+  Post as PostsPage,
   Activate as ActivatePage
 
 } from './pages';
@@ -86,6 +87,13 @@ class Routes extends Component {
           layout={MinimalLayout}
           path="/post/:id"
           {...this.props}
+        />
+        <RouteWithLayout
+            component={PostsPage}
+            exact
+            layout={MainLayout}
+            path="/posts"
+            {...this.props}
         />
         <RouteWithLayout
           component={SingleFriendPage}

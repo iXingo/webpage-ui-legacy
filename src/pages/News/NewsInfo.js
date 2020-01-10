@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { getAllPosts } from '../../util/APIUtils';
 import News  from '.'
-import PostContent from './PostContent';
+import PostContent from './PostPage';
 
 class NewsInfo extends Component {
 
@@ -79,9 +79,10 @@ class NewsInfo extends Component {
 
     render() {
         return (
-            this.state.news.map(new => (
-              <News news={new} {...this.props}></News>         
-            ))
+            <a/>
+            // this.state.news.map( new => (
+            //   <News news={new} {...this.props}/>
+            // ));
         );
     }
             
