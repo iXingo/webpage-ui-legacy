@@ -22,9 +22,9 @@ const Friend = props => {
   return (
     <div>
       <CssBaseline />
-      <FriendHead {...props}></FriendHead>
+      <FriendHead {...props}/>
       <div className={classes.root}>
-        <FriendList {...props}></FriendList>
+        <FriendList {...props}/>
       </div>
     </div>
   );
