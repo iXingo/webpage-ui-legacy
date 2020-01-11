@@ -21,9 +21,6 @@ const Footer = props => {
   return (
     <div {...rest} className={clsx(classes.root, className)}>
 	  <Typography variant="body1">
-		    [ICP证:  皖ICP备15011098号]{'     '}
-	  </Typography>
-	  <Typography variant="body1">
 			&copy;{' '}
 			<Link component="a" href="http://shawn.wang/" target="_blank" style={{paddingRight: 5}}>
 				Shawn Wang
@@ -43,6 +40,9 @@ const Footer = props => {
 	  <Typography variant="caption" display="block">
 	    本网站构建并托管于百度智能云BCC， 静态文件使用七牛云进行CDN加速， 短信服务由腾讯云提供支持， DNS域名解析服务由阿里云万网提供， 微信公众号平台基于新浪云SAE进行构建。
 	  </Typography>
+		<Typography variant="caption" style={{marginTop: 10, color: 'black', fontSize: 12}}>
+			ICP证:  皖ICP备15011098号
+		</Typography>
     </div>
   );
 };
