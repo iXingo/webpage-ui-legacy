@@ -1,9 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
-import ButtonBase from '@material-ui/core/ButtonBase';
 import AccessAlarmIcon from '@material-ui/icons/AccessAlarm';
 
 
@@ -50,7 +49,7 @@ export default function ComplexGrid() {
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography variant="body2" style={{ cursor: 'pointer' }}>
+                <Typography variant="body2" style={{cursor: 'pointer'}}>
                   Remove
                 </Typography>
               </Grid>

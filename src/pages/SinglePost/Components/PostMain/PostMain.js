@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
-import { Typography } from '@material-ui/core';
+import {Typography} from '@material-ui/core';
 import PostContent from '../PostContent';
 import PostHeader from '../PostHeader';
 
@@ -38,17 +38,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -84,8 +84,8 @@ const useStyles = makeStyles(theme => ({
     padding: '0 16px',
     textAlign: 'justify'
   },
-  title:{
-    color : '#1a73e8',
+  title: {
+    color: '#1a73e8',
     textAlign: 'center',
     margin: '30px 0'
   },
@@ -96,28 +96,28 @@ const useStyles = makeStyles(theme => ({
     margin: '20px 0',
   },
   tags: {
-      display: 'flex',
-      alignItems: 'center',
-      flexWrap: 'wrap',
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
-  author:{
-      margin: '10px 0',
-      display: 'flex',
-      alignItems: 'center',
-      flexWrap: 'wrap',
+  author: {
+    margin: '10px 0',
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
-  avatar : {
-      display: 'inline-block',
-      marginRight: 10
+  avatar: {
+    display: 'inline-block',
+    marginRight: 10
   },
-  verified:{
-      marginRight: 10
+  verified: {
+    marginRight: 10
   },
   posttime: {
     padding: '15px 0',
   },
-  post:{
-      paddingTop: 20
+  post: {
+    paddingTop: 20
   },
   copyright: {
     backgroundColor: '#1a73e8',

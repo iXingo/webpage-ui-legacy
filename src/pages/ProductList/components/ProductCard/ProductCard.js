@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Typography,
-  Grid,
-  Divider
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Card, CardActions, CardContent, Divider, Grid, Typography} from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import GetAppIcon from '@material-ui/icons/GetApp';
 
@@ -40,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ProductCard = props => {
-  const { className, product, ...rest } = props;
+  const {className, product, ...rest} = props;
 
   const classes = useStyles();
 
@@ -57,17 +50,17 @@ const ProductCard = props => {
           {product.description}
         </Typography>
       </CardContent>
-      <Divider />
+      <Divider/>
       <CardActions>
         <Grid container justify="space-between">
           <Grid className={classes.statsItem} item>
-            <AccessTimeIcon className={classes.statsIcon} />
+            <AccessTimeIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
               Updated 2hr ago
             </Typography>
           </Grid>
           <Grid className={classes.statsItem} item>
-            <GetAppIcon className={classes.statsIcon} />
+            <GetAppIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
               {product.totalDownloads} Downloads
             </Typography>

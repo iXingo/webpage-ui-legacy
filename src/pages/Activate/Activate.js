@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { userActivate } from '../../util/APIUtils';
+import React, {Component} from 'react';
+import {userActivate} from '../../util/APIUtils';
 import ActivatePage from './ActivatePage'
 
 class Activate extends Component {
@@ -7,10 +7,10 @@ class Activate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        code: -1,
-        message: "",
-        data: "",
-        isLoading: false
+      code: -1,
+      message: "",
+      data: "",
+      isLoading: false
     };
     this.activateUser = this.activateUser.bind(this);
   }
@@ -18,46 +18,46 @@ class Activate extends Component {
 
   activateUser(email, activateCode) {
     let promise = userActivate(email, activateCode);
-    let { history } = this.props;
-    if(!promise) {
-        return;
+    let {history} = this.props;
+    if (!promise) {
+      return;
     }
     this.setState({
-        isLoading: true
+      isLoading: true
     });
-    promise            
-    .then(response => {
+    promise
+      .then(response => {
         this.setState({
-            code: response.code,
-            message: response.message,
-            data: response.data,
-            isLoading: false
+          code: response.code,
+          message: response.message,
+          data: response.data,
+          isLoading: false
         });
-    }).catch(error => {
-        this.setState({
-            isLoading: false
-        });
-        history.push("/not-found"); 
-    });  
-      
+      }).catch(error => {
+      this.setState({
+        isLoading: false
+      });
+      history.push("/not-found");
+    });
+
   }
 
   componentDidMount() {
-    const { computedMatch: { params } } = this.props;
+    const {computedMatch: {params}} = this.props;
     this.activateUser(params.email, params.activateCode);
   }
 
   componentDidUpdate(nextProps) {
-    if(this.props.isAuthenticated !== nextProps.isAuthenticated) {
-        // Reset State
-        this.setState({
-          code: -1,
-          message: "",
-          data: "",
-          isLoading: false
-        });    
-        const { computedMatch: { params } } = this.props;
-        this.activateUser(params.email, params.activateCode);
+    if (this.props.isAuthenticated !== nextProps.isAuthenticated) {
+      // Reset State
+      this.setState({
+        code: -1,
+        message: "",
+        data: "",
+        isLoading: false
+      });
+      const {computedMatch: {params}} = this.props;
+      this.activateUser(params.email, params.activateCode);
     }
   }
 
@@ -66,12 +66,11 @@ class Activate extends Component {
     return (
       <div>
         <ActivatePage info={info} {...this.props}></ActivatePage>
-      </div> 
+      </div>
     );
   }
-            
-}
 
+}
 
 
 export default Activate;

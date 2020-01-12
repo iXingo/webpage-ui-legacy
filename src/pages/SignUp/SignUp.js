@@ -1,50 +1,41 @@
-import React, { useState, useEffect } from 'react';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link as RouterLink, withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import validate from 'validate.js';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Grid,
-  Button,
-  IconButton,
-  TextField,
-  Link,
-  FormHelperText,
-  Checkbox,
-  Typography
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, Checkbox, FormHelperText, Grid, IconButton, Link, TextField, Typography} from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import { notification } from 'antd';
-import { signup, checkUsernameAvailability, checkEmailAvailability } from '../../util/APIUtils';
+import {notification} from 'antd';
+import {checkEmailAvailability, checkUsernameAvailability, signup} from '../../util/APIUtils';
 
 const schema = {
   name: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     length: {
       maximum: 32
     }
   },
   username: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     length: {
       maximum: 32
     }
   },
   email: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     email: true,
     length: {
       maximum: 64
     }
   },
   password: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     length: {
       maximum: 128
     }
   },
   policy: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     checked: true
   }
 };
@@ -79,17 +70,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -147,7 +138,7 @@ const useStyles = makeStyles(theme => ({
 
 const SignUp = props => {
 
-  const { history } = props;
+  const {history} = props;
 
   const classes = useStyles();
 
@@ -184,7 +175,7 @@ const SignUp = props => {
         [event.target.name]: true
       }
     }));
-    
+
   };
   const handleBack = () => {
     history.goBack();
@@ -195,61 +186,61 @@ const SignUp = props => {
     history.push('/');
     const values = formState.values;
     const signupRequest = Object.assign({}, values);
-    const { username, email } = formState.values;
-    checkEmailAvailability (email)
-          .then(response => {
-            if(response.available) {
-              notification.success({
-                message: '星狗网 Web App',
-                description: "恭喜！您的邮箱可用",
-              });          
-              // history.push("/sign-in");
-            } else {
-              notification.error({
-                message: '星狗网 Web App',
-                description: "告诉您一个坏消息，那就是: 您当前邮箱已经被注册！",
-              }); 
-              history.push("/sign-up");         
-            // history.push("/sign-in");
-            }
-        }).catch(error => {
+    const {username, email} = formState.values;
+    checkEmailAvailability(email)
+      .then(response => {
+        if (response.available) {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "恭喜！您的邮箱可用",
+          });
+          // history.push("/sign-in");
+        } else {
+          notification.error({
+            message: '星狗网 Web App',
+            description: "告诉您一个坏消息，那就是: 您当前邮箱已经被注册！",
+          });
           history.push("/sign-up");
-        });
+          // history.push("/sign-in");
+        }
+      }).catch(error => {
+      history.push("/sign-up");
+    });
 
     checkUsernameAvailability(username)
-        .then(response => {
-            if(response.available) {
-              notification.success({
-                message: '星狗网 Web App',
-                description: "恭喜您，您的Id可用～",
-              }); 
-            } else {
-              notification.error({
-                message: '星狗网 Web App',
-                description: "用户名很受欢迎, 已经被别人占用啦，再选择一个吧～",
-              }); 
-              history.push("/sign-up");
-            }
-        }).catch(error => {
+      .then(response => {
+        if (response.available) {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "恭喜您，您的Id可用～",
+          });
+        } else {
+          notification.error({
+            message: '星狗网 Web App',
+            description: "用户名很受欢迎, 已经被别人占用啦，再选择一个吧～",
+          });
           history.push("/sign-up");
-        });
+        }
+      }).catch(error => {
+      history.push("/sign-up");
+    });
     signup(signupRequest)
-    .then(response => {
+      .then(response => {
         notification.success({
-            message: '星狗网 Web App',
-            description: "谢谢！您已经成功注册！现在可以登录啦！",
-        });          
-        history.push("/sign-in");
-    }).catch(error => {
-        notification.error({
-            message: '星狗网 Web App',
-            description: error.message || '对不起，好像发生了一些错误，请您稍后再试！'
+          message: '星狗网 Web App',
+          description: "谢谢！您已经成功注册！现在可以登录啦！",
         });
+        history.push("/sign-in");
+      }).catch(error => {
+      notification.error({
+        message: '星狗网 Web App',
+        description: error.message || '对不起，好像发生了一些错误，请您稍后再试！'
+      });
     });
   };
 
-  const hasError = field =>formState.touched[field] && formState.errors[field] ? true : false;
-  document.title ="星狗网 | 加入星狗网， 看见好时光";
+  const hasError = field => formState.touched[field] && formState.errors[field] ? true : false;
+  document.title = "星狗网 | 加入星狗网， 看见好时光";
 
   return (
     <div className={classes.root}>
@@ -264,7 +255,7 @@ const SignUp = props => {
         >
           <div className={classes.quote}>
             <div className={classes.quoteInner}>
-             <Typography
+              <Typography
                 className={classes.quoteText}
                 variant="h1"
               >
@@ -302,7 +293,7 @@ const SignUp = props => {
           <div className={classes.content}>
             <div className={classes.contentHeader}>
               <IconButton onClick={handleBack}>
-                <ArrowBackIcon />
+                <ArrowBackIcon/>
               </IconButton>
             </div>
             <div className={classes.contentBody}>

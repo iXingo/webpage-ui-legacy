@@ -1,13 +1,8 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import {
-  IconButton,
-  TextField,
-  Typography,
-  Button
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, IconButton, TextField, Typography} from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -44,17 +39,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -87,7 +82,7 @@ const useStyles = makeStyles(theme => ({
   textField: {
     marginTop: theme.spacing(2)
   },
-  reset:{
+  reset: {
     marginTop: theme.spacing(6),
     paddingLeft: '16px',
     paddingRight: '16px',
@@ -96,7 +91,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     flexDirection: 'column',
   },
-  signUpButton:{
+  signUpButton: {
     margin: theme.spacing(4, 0),
     width: '80%'
   },
@@ -105,9 +100,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const RestPasswd = props => {
+const ResetPasswd = props => {
 
-  const { history } = props;
+  const {history} = props;
 
   const classes = useStyles();
 
@@ -118,74 +113,74 @@ const RestPasswd = props => {
 
   return (
     <div className={classes.root}>
-        <div className={classes.quote}>
-            <div className={classes.quoteInner}>
-                <Typography
-                className={classes.quoteText}
-                variant="h1"
-                >
-                  汪师傅:
-                </Typography>
-                <Typography
-                className={classes.quoteText}
-                variant="h1"
-                >
-                  看见，好时光
-                </Typography>
-                <div className={classes.person}>
-                <Typography
-                    className={classes.name}
-                    variant="body1"
-                >
-                    &copy; Copyright 2020
-                </Typography>
-                <Typography
-                    className={classes.bio}
-                    variant="body2"
-                >
-                    Designed by Shawn Wang in Pudong New Area.
-                </Typography>
-                </div>
-            </div>
+      <div className={classes.quote}>
+        <div className={classes.quoteInner}>
+          <Typography
+            className={classes.quoteText}
+            variant="h1"
+          >
+            汪师傅:
+          </Typography>
+          <Typography
+            className={classes.quoteText}
+            variant="h1"
+          >
+            看见，好时光
+          </Typography>
+          <div className={classes.person}>
+            <Typography
+              className={classes.name}
+              variant="body1"
+            >
+              &copy; Copyright 2020
+            </Typography>
+            <Typography
+              className={classes.bio}
+              variant="body2"
+            >
+              Designed by Shawn Wang in Pudong New Area.
+            </Typography>
+          </div>
         </div>
-        <div className={classes.content}>
-            <div className={classes.contentHeader}>
-                <IconButton onClick={handleBack}>
-                <ArrowBackIcon />
-                </IconButton>
-            </div>
-            
-            <div className={classes.reset}>
-                <Typography variant="h6">请您勿需担心，关于您和您的一切都不会丢失。</Typography>
-                <TextField className={classes.field}
-                    id="standard-full-width"
-                    label="请输入您注册星狗网所使用的邮箱"
-                    InputProps={{
-                    startAdornment: (
-                        <InputAdornment position="start">
-                        <AccountCircle />
-                        </InputAdornment>
-                    ),
-                    }}
-                />
-                <Button
-                  className={classes.signUpButton}
-                  color="primary"
-                  fullWidth
-                  size="large"
-                  type="submit"
-                  variant="contained"
-                >
-                  立即找回密码
-                </Button>
-            </div>
+      </div>
+      <div className={classes.content}>
+        <div className={classes.contentHeader}>
+          <IconButton onClick={handleBack}>
+            <ArrowBackIcon/>
+          </IconButton>
         </div>
+
+        <div className={classes.reset}>
+          <Typography variant="h6">请您勿需担心，关于您和您的一切都不会丢失。</Typography>
+          <TextField className={classes.field}
+                     id="standard-full-width"
+                     label="请输入您注册星狗网所使用的邮箱"
+                     InputProps={{
+                       startAdornment: (
+                         <InputAdornment position="staßrt">
+                           <AccountCircle/>
+                         </InputAdornment>
+                       ),
+                     }}
+          />
+          <Button
+            className={classes.signUpButton}
+            color="primary"
+            fullWidth
+            size="large"
+            type="submit"
+            variant="contained"
+          >
+            立即找回密码
+          </Button>
+        </div>
+      </div>
     </div>
   );
 };
 
-RestPasswd.propTypes = {
+ResetPasswd.propTypes = {
   history: PropTypes.object
 };
 
-export default withRouter(RestPasswd);
+export default withRouter(ResetPasswd);

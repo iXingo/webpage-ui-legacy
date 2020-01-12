@@ -1,7 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import palette from '../../../../theme/palette';
-import ReactMarkdown  from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
 import CodeBlock from "../../../../components/CodeBlock";
 
 
@@ -91,23 +91,22 @@ const useStyles = makeStyles(theme => ({
     lineHeight: '13px',
     textTransform: 'uppercase'
   },
-  root :{
+  root: {
     marginTop: 20
   }
 }));
 
 
-
 const PostContent = props => {
   const classes = useStyles();
   return (
-    <div className={classes.root} >
-      <ReactMarkdown source={props.post.content}  
-                      renderers={{ code: CodeBlock, }}
-                      key={props.post.id}   
+    <div className={classes.root}>
+      <ReactMarkdown source={props.post.content}
+                     renderers={{code: CodeBlock,}}
+                     key={props.post.id}
       />
     </div>
   );
-}
+};
 
 export default PostContent;

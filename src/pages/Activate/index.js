@@ -1,2 +1,2 @@
-export { default }  from './Activate';
+export {default} from './Activate';
 

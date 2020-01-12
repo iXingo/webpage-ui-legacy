@@ -1,13 +1,13 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import Divider from '@material-ui/core/Divider';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import {Typography} from '@material-ui/core';
-import { Verify, Tag } from '../../../../components';
-import { Instagram } from 'react-content-loader'
+import {Tag, Verify} from '../../../../components';
+import {Instagram} from 'react-content-loader'
 
 
 const useStyles = makeStyles(theme => ({
@@ -40,17 +40,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -86,8 +86,8 @@ const useStyles = makeStyles(theme => ({
     padding: '0 30px',
     textAlign: 'justify'
   },
-  title:{
-    color : '#1a73e8',
+  title: {
+    color: '#1a73e8',
     textAlign: 'center',
     margin: '30px 0'
   },
@@ -98,33 +98,33 @@ const useStyles = makeStyles(theme => ({
     margin: '20px 0',
   },
   tags: {
-      display: 'flex',
-      alignItems: 'center',
-      flexWrap: 'wrap',
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
-  author:{
-      margin: '10px 0',
-      display: 'flex',
-      alignItems: 'center',
-      flexWrap: 'wrap',
+  author: {
+    margin: '10px 0',
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
-  avatar : {
-      display: 'inline-block',
-      marginRight: 10
+  avatar: {
+    display: 'inline-block',
+    marginRight: 10
   },
-  verified:{
-      marginRight: 10
+  verified: {
+    marginRight: 10
   },
   posttime: {
     padding: '15px 0',
   },
-  post:{
-      paddingTop: 20
+  post: {
+    paddingTop: 20
   },
   info: {
     fontWeight: 300
   },
-  strong : {
+  strong: {
     fontWeight: 'bold',
   }
 }));
@@ -133,7 +133,7 @@ const useStyles = makeStyles(theme => ({
 const PostHeader = props => {
 
   const classes = useStyles();
-  if(!props.post.createdBy) return <Instagram />;
+  if (!props.post.createdBy) return <Instagram/>;
   return (
     <div>
       <Typography className={classes.title} variant="h1">
@@ -142,24 +142,25 @@ const PostHeader = props => {
       <Typography className={classes.author} variant="h5">
         <strong>本文作者：</strong>
         <Chip
-          icon={<FaceIcon />}
+          icon={<FaceIcon/>}
           label={props.post.createdBy.name}
           clickable
           className={classes.chip}
           color="primary"
-          deleteIcon={<DoneIcon />}
+          deleteIcon={<DoneIcon/>}
           variant="outlined"
         />
-      </Typography>         
+      </Typography>
       <Typography variant="h6" className={classes.author}>
         <strong>作者简介：</strong>
-        <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar} />  
-        <strong>  {props.post.createdBy.name}</strong> <Verify/><span className={classes.info}>{props.post.createdBy.verifiedContent}</span>
+        <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar}/>
+        <strong>  {props.post.createdBy.name}</strong> <Verify/><span
+        className={classes.info}>{props.post.createdBy.verifiedContent}</span>
       </Typography>
-      <Divider />
+      <Divider/>
       <Typography variant="h6" gutterBottom className={classes.abstrat}>
         <strong>本文摘要：</strong><span className={classes.info}>{props.post.summary}</span>
-      </Typography> 
+      </Typography>
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
         {props.post.tags.map(tag => (
@@ -167,16 +168,20 @@ const PostHeader = props => {
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>
-        <strong>阅读提示：</strong><span className={classes.info}>全文共 <strong className={classes.strong}>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong className={classes.strong}>{props.post.readTime}</strong> 分钟</span>。
+        <strong>阅读提示：</strong><span className={classes.info}>全文共 <strong
+        className={classes.strong}>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong
+        className={classes.strong}>{props.post.readTime}</strong> 分钟</span>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
-      <Typography variant="caption" className={classes.posttime} >
-        作者<strong style={{color : '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong style={{color : '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong style={{color : '#1a73e8'}}>{props.post.creationDateTime}</strong>。
+      <Typography variant="caption" className={classes.posttime}>
+        作者<strong style={{color: '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong
+        style={{color: '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong
+        style={{color: '#1a73e8'}}>{props.post.creationDateTime}</strong>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
     </div>
   );
 
-}
+};
 
 export default PostHeader;

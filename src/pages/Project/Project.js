@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
 import AlignItemsList from '../../components/AlignItemsList';
@@ -119,17 +119,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   bio: {
     // color: theme.palette.white
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -156,7 +156,7 @@ const projects = [
     "description": "相见时难别亦难。此计划的目的是珍惜每一次相聚的时光，与汪师傅一起合影，一起留下相聚的难忘瞬间。",
     "involveUrl": ""
   }
-]
+];
 
 const Project = props => {
 
@@ -171,12 +171,13 @@ const Project = props => {
             <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
             <div className={classes.person}>
               <Typography className={classes.name} variant="body1">&copy;Copyright 2019</Typography>
-              <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area.</Typography>
+              <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New
+                Area.</Typography>
             </div>
           </div>
         </div>
         {projects.map(project => (
-            <HeaderUnit project={project} {...props} />
+          <HeaderUnit project={project} {...props} />
         ))
         }
       </div>

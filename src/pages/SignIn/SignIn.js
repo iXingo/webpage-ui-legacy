@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link as RouterLink, withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import validate from 'validate.js';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Grid,
-  Button,
-  IconButton,
-  TextField,
-  Link,
-  Typography
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, Grid, IconButton, Link, TextField, Typography} from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 // import { SvgIcon } from '@material-ui/core';
-import { notification } from 'antd';
-import { login } from '../../util/APIUtils';
-import { ACCESS_TOKEN } from '../../constants';
+import {notification} from 'antd';
+import {login} from '../../util/APIUtils';
+import {ACCESS_TOKEN} from '../../constants';
 // import Home from '../Home';
-
 
 
 // const FacebookIcon = () => {
@@ -38,14 +30,14 @@ import { ACCESS_TOKEN } from '../../constants';
 
 const schema = {
   usernameOrEmail: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     email: true,
     length: {
       maximum: 64
     }
   },
   password: {
-    presence: { allowEmpty: false, message: 'is required' },
+    presence: {allowEmpty: false, message: 'is required'},
     length: {
       maximum: 128
     }
@@ -82,17 +74,17 @@ const useStyles = makeStyles(theme => ({
   },
   quoteText: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
     fontWeight: 300
   },
   name: {
     marginTop: theme.spacing(3),
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   bio: {
     // color: theme.palette.white,
-    color : '#1a73e8',
+    color: '#1a73e8',
   },
   contentContainer: {},
   content: {
@@ -151,7 +143,7 @@ const useStyles = makeStyles(theme => ({
   signInButton: {
     margin: theme.spacing(2, 0)
   },
-  tips:{
+  tips: {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
@@ -161,11 +153,11 @@ const useStyles = makeStyles(theme => ({
 
 const SignIn = (props) => {
 
-  const { history, currentUser } = props;
-  if(currentUser){
+  const {history, currentUser} = props;
+  if (currentUser) {
 
-    
-    const notificationType="success";
+
+    const notificationType = "success";
     notification[notificationType]({
       message: '星狗网 Web App',
       description: '您已经是登录状态啦！不需要登录哦～为您跳转到到首页看看吧～',
@@ -225,22 +217,22 @@ const SignIn = (props) => {
         localStorage.setItem(ACCESS_TOKEN, response.accessToken);
         props.handleLogin();
       }).catch(error => {
-        if (error.status === 401) {
-          notification.error({
-            message: '星狗网 Web App',
-            description: '少年，您的用户名或者密码不正确，请检查！'
-          });
-        } else {
-          notification.error({
-            message: '星狗网 Web App',
-            description: error.message || '对不起，好像发生了什么事情，请您稍后重试！'
-          });
-        }
-      });
+      if (error.status === 401) {
+        notification.error({
+          message: '星狗网 Web App',
+          description: '少年，您的用户名或者密码不正确，请检查！'
+        });
+      } else {
+        notification.error({
+          message: '星狗网 Web App',
+          description: error.message || '对不起，好像发生了什么事情，请您稍后重试！'
+        });
+      }
+    });
   };
 
-  const hasError = field =>formState.touched[field] && formState.errors[field] ? true : false;
-  document.title ="星狗网 | 登录星狗网， 看见好时光";
+  const hasError = field => formState.touched[field] && formState.errors[field] ? true : false;
+  document.title = "星狗网 | 登录星狗网， 看见好时光";
 
   return (
     <div className={classes.root}>
@@ -293,7 +285,7 @@ const SignIn = (props) => {
           <div className={classes.content}>
             <div className={classes.contentHeader}>
               <IconButton onClick={handleBack}>
-                <ArrowBackIcon />
+                <ArrowBackIcon/>
               </IconButton>
             </div>
             <div className={classes.contentBody}>
@@ -361,34 +353,34 @@ const SignIn = (props) => {
                 >
                   立即登录
                 </Button>
-                
+
                 <div className={classes.tips}>
-                <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
-                  还没有账号?{' '}
-                  <Link
-                    component={RouterLink}
-                    to="/sign-up"
+                  <Typography
+                    color="textSecondary"
                     variant="body1"
                   >
-                    注册
-                  </Link>
+                    还没有账号?{' '}
+                    <Link
+                      component={RouterLink}
+                      to="/sign-up"
+                      variant="body1"
+                    >
+                      注册
+                    </Link>
                   </Typography>
                   <Typography
-                  color="textSecondary"
-                  variant="body1"
-                >
-                    忘记密码?{' '}
-                  <Link
-                    component={RouterLink}
-                    to="/reset-passwd"
-                    variant="h6"
+                    color="textSecondary"
+                    variant="body1"
                   >
-                    找回密码
-                  </Link>
-                </Typography>
+                    忘记密码?{' '}
+                    <Link
+                      component={RouterLink}
+                      to="/reset-passwd"
+                      variant="h6"
+                    >
+                      找回密码
+                    </Link>
+                  </Typography>
                 </div>
                 <Grid
                   className={classes.socialButtons}

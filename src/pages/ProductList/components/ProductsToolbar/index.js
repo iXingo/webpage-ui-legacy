@@ -1,1 +1,1 @@
-export { default } from './ProductsToolbar';
+export {default} from './ProductsToolbar';

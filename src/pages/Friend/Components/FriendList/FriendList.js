@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { getAllFriends } from '../../../../util/APIUtils';
+import React, {Component} from 'react';
+import {getAllFriends} from '../../../../util/APIUtils';
 import FriendContent from '../FriendContent';
 
 class FriendList extends Component {
@@ -7,13 +7,13 @@ class FriendList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        friends: [],
-        page: 0,
-        size: 10,
-        totalElements: 0,
-        totalPages: 0,
-        last: true,
-        isLoading: false
+      friends: [],
+      page: 0,
+      size: 10,
+      totalElements: 0,
+      totalPages: 0,
+      last: true,
+      isLoading: false
     };
     this.loadFriendList = this.loadFriendList.bind(this);
     this.handleLoadMore = this.handleLoadMore.bind(this);
@@ -22,13 +22,13 @@ class FriendList extends Component {
 
   loadFriendList() {
     let promise = getAllFriends();
-    if(!promise) {
+    if (!promise) {
       return;
     }
     this.setState({
       isLoading: true
     });
-    promise            
+    promise
       .then(response => {
         const friends = this.state.friends.slice();
         this.setState({
@@ -41,21 +41,21 @@ class FriendList extends Component {
           isLoading: false
         })
       }).catch(error => {
-        this.setState({
-            isLoading: false
-        })
-      });    
+      this.setState({
+        isLoading: false
+      })
+    });
   }
 
   componentDidMount() {
-    if(!this.props.isAuthenticated){
+    if (!this.props.isAuthenticated) {
       this.props.loadCurrentUser();
     }
     this.loadFriendList();
   }
 
   componentDidUpdate(nextProps) {
-    if(this.props.isAuthenticated !== nextProps.isAuthenticated) {
+    if (this.props.isAuthenticated !== nextProps.isAuthenticated) {
       // Reset State
       this.setState({
         friends: [],
@@ -65,7 +65,7 @@ class FriendList extends Component {
         totalPages: 0,
         last: true,
         isLoading: false
-      });    
+      });
       this.loadFriendList();
     }
   }
@@ -77,13 +77,12 @@ class FriendList extends Component {
   render() {
     return (
       this.state.friends.map(friend => (
-        <FriendContent friend={friend} {...this.props}></FriendContent>         
+        <FriendContent friend={friend} {...this.props}></FriendContent>
       ))
     );
   }
-            
-}
 
+}
 
 
 export default FriendList;

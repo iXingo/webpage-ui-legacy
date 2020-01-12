@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {getAllPosts} from '../../util/APIUtils';
 import PostPage from "./PostPage";
+
 class Post extends Component {
 
   constructor(props) {
@@ -23,7 +24,7 @@ class Post extends Component {
     this.setState({
       page: this.state.page + 1,
     });
-    let promise = getAllPosts(this.state.page,this.state.size);
+    let promise = getAllPosts(this.state.page, this.state.size);
     if (!promise) {
       return;
     }
@@ -78,7 +79,7 @@ class Post extends Component {
 
   render() {
     return (
-        <PostPage posts={this.state.posts} {...this.props}/>
+      <PostPage posts={this.state.posts} {...this.props}/>
     );
   }
 
