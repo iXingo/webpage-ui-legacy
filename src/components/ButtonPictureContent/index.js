@@ -1,1 +1,1 @@
-export { default } from './ButtonPictureContent';
+export {default} from './ButtonPictureContent';

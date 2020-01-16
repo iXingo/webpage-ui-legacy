@@ -97,9 +97,9 @@ const useStyles = makeStyles(theme => ({
 const PostPage = props => {
   const classes = useStyles();
   return (
-    <div className={classes}>
-      <BigMediaCarcd posts={props.posts}/>
-    </div>
+      <div className={classes}>
+        <BigMediaCarcd posts={props.posts}/>
+      </div>
   );
 };
 

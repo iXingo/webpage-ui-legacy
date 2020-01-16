@@ -1,1 +1,1 @@
-export { default } from './MediaControlCard';
+export {default} from './MediaControlCard';

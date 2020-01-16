@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _q = _interopRequireDefault(require("refractor/lang/q.js"));
 
-;
+
 var _default = _q.default;
 exports.default = _default;

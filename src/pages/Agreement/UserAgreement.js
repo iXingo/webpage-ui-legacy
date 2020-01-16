@@ -31,35 +31,35 @@ export default function ComplexGrid() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Paper className={classes.paper}>
-        <Grid xl={12} xs={12} sm={12} container spacing={2}>
-          <Grid item>
-            <AccessAlarmIcon/>
-          </Grid>
-          <Grid item xs={12} sm container>
-            <Grid item xs container direction="column" spacing={2}>
-              <Grid item xs>
-                <Typography variant="h1">用户协议</Typography>
-                <Typography variant="body2" gutterBottom>
-                  Full resolution 1920x1080 • JPEG
-                </Typography>
-                <Typography variant="body2" color="textSecondary">
-                  ID: 1030114
-                </Typography>
+      <div className={classes.root}>
+        <Paper className={classes.paper}>
+          <Grid xl={12} xs={12} sm={12} container spacing={2}>
+            <Grid item>
+              <AccessAlarmIcon/>
+            </Grid>
+            <Grid item xs={12} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid item xs>
+                  <Typography variant="h1">用户协议</Typography>
+                  <Typography variant="body2" gutterBottom>
+                    Full resolution 1920x1080 • JPEG
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    ID: 1030114
+                  </Typography>
+                </Grid>
+                <Grid item>
+                  <Typography variant="body2" style={{cursor: 'pointer'}}>
+                    Remove
+                  </Typography>
+                </Grid>
               </Grid>
               <Grid item>
-                <Typography variant="body2" style={{cursor: 'pointer'}}>
-                  Remove
-                </Typography>
+                <Typography variant="subtitle1">$19.00</Typography>
               </Grid>
             </Grid>
-            <Grid item>
-              <Typography variant="subtitle1">$19.00</Typography>
-            </Grid>
           </Grid>
-        </Grid>
-      </Paper>
-    </div>
+        </Paper>
+      </div>
   );
 }

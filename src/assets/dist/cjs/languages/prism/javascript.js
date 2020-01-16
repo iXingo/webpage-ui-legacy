@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _javascript = _interopRequireDefault(require("refractor/lang/javascript.js"));
 
-;
+
 var _default = _javascript.default;
 exports.default = _default;

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _php = _interopRequireDefault(require("refractor/lang/php.js"));
 
-;
+
 var _default = _php.default;
 exports.default = _default;

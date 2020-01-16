@@ -1,1 +1,1 @@
-export { default } from './ContentTitleReversed';
+export {default} from './ContentTitleReversed';

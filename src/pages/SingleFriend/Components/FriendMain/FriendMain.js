@@ -56,27 +56,27 @@ const FriendMain = props => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+      <div className={classes.root}>
 
-      <div className={classes.content}>
-        <Grid container className={classes.mainGrid}>
-          {/* Main content */}
-          <Grid item xs={12} md={8} className={classes.singlefriend}>
-            <FriendHeader friend={props.friend} {...props}></FriendHeader>
+        <div className={classes.content}>
+          <Grid container className={classes.mainGrid}>
+            {/* Main content */}
+            <Grid item xs={12} md={8} className={classes.singlefriend}>
+              <FriendHeader friend={props.friend} {...props}/>
+            </Grid>
+
           </Grid>
 
-        </Grid>
-
-        <Grid container className={classes.contentGrid}>
-          <Grid item xs={12} md={8} className={classes.singlefriend}>
-            <Paper>
-              <FeaturedCard></FeaturedCard>
-            </Paper>
-            <FriendContent friend={props.friend} {...props}></FriendContent>
+          <Grid container className={classes.contentGrid}>
+            <Grid item xs={12} md={8} className={classes.singlefriend}>
+              <Paper>
+                <FeaturedCard/>
+              </Paper>
+              <FriendContent friend={props.friend} {...props}/>
+            </Grid>
           </Grid>
-        </Grid>
+        </div>
       </div>
-    </div>
   );
 };
 

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _asm = _interopRequireDefault(require("refractor/lang/asm6502.js"));
 
-;
+
 var _default = _asm.default;
 exports.default = _default;

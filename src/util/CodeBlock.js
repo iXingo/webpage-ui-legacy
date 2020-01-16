@@ -26,10 +26,10 @@
 // export default CodeBlock;
 
 
-import React, { PureComponent } from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from '../assets/dist/esm/styles/hljs';
+import {atomOneDark} from '../assets/dist/esm/styles/hljs';
 
 class CodeBlock extends PureComponent {
   static propTypes = {
@@ -42,11 +42,11 @@ class CodeBlock extends PureComponent {
   };
 
   render() {
-    const { language, value } = this.props;
+    const {language, value} = this.props;
     return (
-      <SyntaxHighlighter language={language} style={atomOneDark}>
-        {value}
-      </SyntaxHighlighter>
+        <SyntaxHighlighter language={language} style={atomOneDark}>
+          {value}
+        </SyntaxHighlighter>
     );
   }
 }

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _verilog = _interopRequireDefault(require("refractor/lang/verilog.js"));
 
-;
+
 var _default = _verilog.default;
 exports.default = _default;

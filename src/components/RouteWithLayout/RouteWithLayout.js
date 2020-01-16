@@ -1,19 +1,19 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 const RouteWithLayout = props => {
-  const { layout: Layout, component: Component, ...rest } = props;
+  const {layout: Layout, component: Component, ...rest} = props;
 
   return (
-    <Route
-      {...rest}
-      render={matchProps => (
-        <Layout {...props}>
-          <Component {...matchProps} {...rest} />
-        </Layout>
-      )}
-    />
+      <Route
+          {...rest}
+          render={matchProps => (
+              <Layout {...props}>
+                <Component {...matchProps} {...rest} />
+              </Layout>
+          )}
+      />
   );
 };
 

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _http = _interopRequireDefault(require("refractor/lang/http.js"));
 
-;
+
 var _default = _http.default;
 exports.default = _default;

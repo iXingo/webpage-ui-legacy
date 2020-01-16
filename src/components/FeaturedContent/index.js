@@ -1,1 +1,1 @@
-export { default } from './FeaturedContent.js'
+export {default} from './FeaturedContent.js'

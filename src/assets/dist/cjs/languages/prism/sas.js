@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _sas = _interopRequireDefault(require("refractor/lang/sas.js"));
 
-;
+
 var _default = _sas.default;
 exports.default = _default;

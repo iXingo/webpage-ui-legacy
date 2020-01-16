@@ -9,6 +9,7 @@ import _inherits from "@babel/runtime/helpers/inherits";
 import _defineProperty from "@babel/runtime/helpers/defineProperty";
 import React from 'react';
 import highlight from './highlight';
+
 export default (function (options) {
   var loader = options.loader,
       isLanguageRegistered = options.isLanguageRegistered,
@@ -17,133 +18,133 @@ export default (function (options) {
       noAsyncLoadingLanguages = options.noAsyncLoadingLanguages;
 
   var ReactAsyncHighlighter =
-  /*#__PURE__*/
-  function (_React$PureComponent) {
-    _inherits(ReactAsyncHighlighter, _React$PureComponent);
+      /*#__PURE__*/
+      function (_React$PureComponent) {
+        _inherits(ReactAsyncHighlighter, _React$PureComponent);
 
-    function ReactAsyncHighlighter() {
-      _classCallCheck(this, ReactAsyncHighlighter);
+        function ReactAsyncHighlighter() {
+          _classCallCheck(this, ReactAsyncHighlighter);
 
-      return _possibleConstructorReturn(this, _getPrototypeOf(ReactAsyncHighlighter).apply(this, arguments));
-    }
-
-    _createClass(ReactAsyncHighlighter, [{
-      key: "componentDidUpdate",
-      value: function componentDidUpdate() {
-        if (!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
-          this.loadLanguage();
-        }
-      }
-    }, {
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        var _this = this;
-
-        if (!ReactAsyncHighlighter.astGeneratorPromise) {
-          ReactAsyncHighlighter.loadAstGenerator();
+          return _possibleConstructorReturn(this, _getPrototypeOf(ReactAsyncHighlighter).apply(this, arguments));
         }
 
-        if (!ReactAsyncHighlighter.astGenerator) {
-          ReactAsyncHighlighter.astGeneratorPromise.then(function () {
-            _this.forceUpdate();
-          });
-        }
-
-        if (!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
-          this.loadLanguage();
-        }
-      }
-    }, {
-      key: "loadLanguage",
-      value: function loadLanguage() {
-        var _this2 = this;
-
-        var language = this.props.language;
-
-        if (language === 'text') {
-          return;
-        }
-
-        ReactAsyncHighlighter.loadLanguage(language).then(function () {
-          _this2.forceUpdate();
-        });
-      }
-    }, {
-      key: "normalizeLanguage",
-      value: function normalizeLanguage(language) {
-        return ReactAsyncHighlighter.isSupportedLanguage(language) ? language : 'text';
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        return React.createElement(ReactAsyncHighlighter.highlightInstance, _extends({}, this.props, {
-          language: this.normalizeLanguage(this.props.language),
-          astGenerator: ReactAsyncHighlighter.astGenerator
-        }));
-      }
-    }], [{
-      key: "preload",
-      value: function preload() {
-        return ReactAsyncHighlighter.loadAstGenerator();
-      }
-    }, {
-      key: "loadLanguage",
-      value: function () {
-        var _loadLanguage = _asyncToGenerator(
-        /*#__PURE__*/
-        _regeneratorRuntime.mark(function _callee(language) {
-          var languageLoader;
-          return _regeneratorRuntime.wrap(function _callee$(_context) {
-            while (1) {
-              switch (_context.prev = _context.next) {
-                case 0:
-                  languageLoader = languageLoaders[language];
-
-                  if (!(typeof languageLoader === 'function')) {
-                    _context.next = 5;
-                    break;
-                  }
-
-                  return _context.abrupt("return", languageLoader(ReactAsyncHighlighter.registerLanguage));
-
-                case 5:
-                  throw new Error("Language ".concat(language, " not supported"));
-
-                case 6:
-                case "end":
-                  return _context.stop();
-              }
+        _createClass(ReactAsyncHighlighter, [{
+          key: "componentDidUpdate",
+          value: function componentDidUpdate() {
+            if (!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
+              this.loadLanguage();
             }
-          }, _callee, this);
-        }));
+          }
+        }, {
+          key: "componentDidMount",
+          value: function componentDidMount() {
+            var _this = this;
 
-        return function loadLanguage(_x) {
-          return _loadLanguage.apply(this, arguments);
-        };
-      }()
-    }, {
-      key: "isSupportedLanguage",
-      value: function isSupportedLanguage(language) {
-        return ReactAsyncHighlighter.isRegistered(language) || typeof languageLoaders[language] === 'function';
-      }
-    }, {
-      key: "loadAstGenerator",
-      value: function loadAstGenerator() {
-        ReactAsyncHighlighter.astGeneratorPromise = loader().then(function (astGenerator) {
-          ReactAsyncHighlighter.astGenerator = astGenerator;
+            if (!ReactAsyncHighlighter.astGeneratorPromise) {
+              ReactAsyncHighlighter.loadAstGenerator();
+            }
 
-          if (registerLanguage) {
-            ReactAsyncHighlighter.languages.forEach(function (language, name) {
-              return registerLanguage(astGenerator, name, language);
+            if (!ReactAsyncHighlighter.astGenerator) {
+              ReactAsyncHighlighter.astGeneratorPromise.then(function () {
+                _this.forceUpdate();
+              });
+            }
+
+            if (!ReactAsyncHighlighter.isRegistered(this.props.language) && languageLoaders) {
+              this.loadLanguage();
+            }
+          }
+        }, {
+          key: "loadLanguage",
+          value: function loadLanguage() {
+            var _this2 = this;
+
+            var language = this.props.language;
+
+            if (language === 'text') {
+              return;
+            }
+
+            ReactAsyncHighlighter.loadLanguage(language).then(function () {
+              _this2.forceUpdate();
             });
           }
-        });
-        return ReactAsyncHighlighter.astGeneratorPromise;
-      }
-    }]);
+        }, {
+          key: "normalizeLanguage",
+          value: function normalizeLanguage(language) {
+            return ReactAsyncHighlighter.isSupportedLanguage(language) ? language : 'text';
+          }
+        }, {
+          key: "render",
+          value: function render() {
+            return React.createElement(ReactAsyncHighlighter.highlightInstance, _extends({}, this.props, {
+              language: this.normalizeLanguage(this.props.language),
+              astGenerator: ReactAsyncHighlighter.astGenerator
+            }));
+          }
+        }], [{
+          key: "preload",
+          value: function preload() {
+            return ReactAsyncHighlighter.loadAstGenerator();
+          }
+        }, {
+          key: "loadLanguage",
+          value: function () {
+            var _loadLanguage = _asyncToGenerator(
+                /*#__PURE__*/
+                _regeneratorRuntime.mark(function _callee(language) {
+                  var languageLoader;
+                  return _regeneratorRuntime.wrap(function _callee$(_context) {
+                    while (1) {
+                      switch (_context.prev = _context.next) {
+                        case 0:
+                          languageLoader = languageLoaders[language];
 
-    return ReactAsyncHighlighter;
-  }(React.PureComponent);
+                          if (!(typeof languageLoader === 'function')) {
+                            _context.next = 5;
+                            break;
+                          }
+
+                          return _context.abrupt("return", languageLoader(ReactAsyncHighlighter.registerLanguage));
+
+                        case 5:
+                          throw new Error("Language ".concat(language, " not supported"));
+
+                        case 6:
+                        case "end":
+                          return _context.stop();
+                      }
+                    }
+                  }, _callee, this);
+                }));
+
+            return function loadLanguage(_x) {
+              return _loadLanguage.apply(this, arguments);
+            };
+          }()
+        }, {
+          key: "isSupportedLanguage",
+          value: function isSupportedLanguage(language) {
+            return ReactAsyncHighlighter.isRegistered(language) || typeof languageLoaders[language] === 'function';
+          }
+        }, {
+          key: "loadAstGenerator",
+          value: function loadAstGenerator() {
+            ReactAsyncHighlighter.astGeneratorPromise = loader().then(function (astGenerator) {
+              ReactAsyncHighlighter.astGenerator = astGenerator;
+
+              if (registerLanguage) {
+                ReactAsyncHighlighter.languages.forEach(function (language, name) {
+                  return registerLanguage(astGenerator, name, language);
+                });
+              }
+            });
+            return ReactAsyncHighlighter.astGeneratorPromise;
+          }
+        }]);
+
+        return ReactAsyncHighlighter;
+      }(React.PureComponent);
 
   _defineProperty(ReactAsyncHighlighter, "astGenerator", null);
 

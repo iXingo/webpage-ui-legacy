@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _parser = _interopRequireDefault(require("refractor/lang/parser.js"));
 
-;
+
 var _default = _parser.default;
 exports.default = _default;

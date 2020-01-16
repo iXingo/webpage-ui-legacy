@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _pug = _interopRequireDefault(require("refractor/lang/pug.js"));
 
-;
+
 var _default = _pug.default;
 exports.default = _default;

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _yaml = _interopRequireDefault(require("refractor/lang/yaml.js"));
 
-;
+
 var _default = _yaml.default;
 exports.default = _default;

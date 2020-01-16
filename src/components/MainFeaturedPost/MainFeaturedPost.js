@@ -1,19 +1,15 @@
-
-
-
-
 const MainFeaturedPost = props => {
-    return (
+  return (
       <Paper className={classes.mainFeaturedPost}>
         {/* Increase the priority of the hero background image */}
         {
           <img
-            style={{ display: 'none' }}
-            src="https://source.unsplash.com/user/erondu"
-            alt="background"
+              style={{display: 'none'}}
+              src="https://source.unsplash.com/user/erondu"
+              alt="background"
           />
         }
-        <div className={classes.overlay} />
+        <div className={classes.overlay}/>
         <Grid container>
           <Grid item md={6}>
             <div className={classes.mainFeaturedPostContent}>
@@ -32,8 +28,8 @@ const MainFeaturedPost = props => {
           </Grid>
         </Grid>
       </Paper>
-    );
-}
+  );
+};
 
 
 export default MainFeaturedPost;

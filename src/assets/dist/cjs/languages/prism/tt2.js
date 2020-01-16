@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _tt = _interopRequireDefault(require("refractor/lang/tt2.js"));
 
-;
+
 var _default = _tt.default;
 exports.default = _default;

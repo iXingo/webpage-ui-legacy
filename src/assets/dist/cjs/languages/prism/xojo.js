@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _xojo = _interopRequireDefault(require("refractor/lang/xojo.js"));
 
-;
+
 var _default = _xojo.default;
 exports.default = _default;

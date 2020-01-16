@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _twig = _interopRequireDefault(require("refractor/lang/twig.js"));
 
-;
+
 var _default = _twig.default;
 exports.default = _default;

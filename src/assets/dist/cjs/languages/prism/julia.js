@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _julia = _interopRequireDefault(require("refractor/lang/julia.js"));
 
-;
+
 var _default = _julia.default;
 exports.default = _default;

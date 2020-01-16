@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _kotlin = _interopRequireDefault(require("refractor/lang/kotlin.js"));
 
-;
+
 var _default = _kotlin.default;
 exports.default = _default;

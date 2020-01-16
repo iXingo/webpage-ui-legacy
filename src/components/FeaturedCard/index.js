@@ -1,1 +1,1 @@
-export { default } from './FeaturedCard.js';
+export {default} from './FeaturedCard.js';

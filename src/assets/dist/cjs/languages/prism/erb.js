@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _erb = _interopRequireDefault(require("refractor/lang/erb.js"));
 
-;
+
 var _default = _erb.default;
 exports.default = _default;

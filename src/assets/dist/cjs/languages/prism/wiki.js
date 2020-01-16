@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _wiki = _interopRequireDefault(require("refractor/lang/wiki.js"));
 
-;
+
 var _default = _wiki.default;
 exports.default = _default;

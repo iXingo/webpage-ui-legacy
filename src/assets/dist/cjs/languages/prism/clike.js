@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _clike = _interopRequireDefault(require("refractor/lang/clike.js"));
 
-;
+
 var _default = _clike.default;
 exports.default = _default;

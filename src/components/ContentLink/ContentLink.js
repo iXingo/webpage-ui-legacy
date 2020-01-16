@@ -1,10 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import {Link as RouterLink, withRouter} from 'react-router-dom';
 // import TypeWriter from 'react-typewriter';
 
 
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   main: {
     padding: '160px 10px 20px'
   },
-  firstLine: { 
+  firstLine: {
     fontSize: 12,
     padding: 10,
     lineHeight: 1.5,
@@ -61,21 +61,21 @@ const ContentLink = props => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container className={classes.mainTitle}>
-        <div className={classes.main}>
-          <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-            {props.context.titile}
-          </Typography>
-          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-            <Link component={RouterLink}  to={props.context.contentUrl}>
-                {props.context.content}    →
-            </Link>
-          </Typography>  
-        </div>
-      </Container>
-    </React.Fragment>
+      <React.Fragment>
+        <CssBaseline/>
+        <Container className={classes.mainTitle}>
+          <div className={classes.main}>
+            <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
+              {props.context.titile}
+            </Typography>
+            <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
+              <Link component={RouterLink} to={props.context.contentUrl}>
+                {props.context.content} →
+              </Link>
+            </Typography>
+          </div>
+        </Container>
+      </React.Fragment>
   );
 };
 

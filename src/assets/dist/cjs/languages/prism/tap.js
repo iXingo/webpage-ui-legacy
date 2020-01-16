@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _tap = _interopRequireDefault(require("refractor/lang/tap.js"));
 
-;
+
 var _default = _tap.default;
 exports.default = _default;

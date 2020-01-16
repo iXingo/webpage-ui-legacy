@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _powershell = _interopRequireDefault(require("refractor/lang/powershell.js"));
 
-;
+
 var _default = _powershell.default;
 exports.default = _default;

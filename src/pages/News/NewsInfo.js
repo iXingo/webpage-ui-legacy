@@ -28,18 +28,18 @@ class NewsInfo extends Component {
       isLoading: true
     });
     promise
-      .then(response => {
-        const news = this.state.news.slice();
-        this.setState({
-          news: news.concat(response),
-          page: response.page,
-          size: response.size,
-          totalElements: response.totalElements,
-          totalPages: response.totalPages,
-          last: response.last,
-          isLoading: false
-        })
-      }).catch(error => {
+        .then(response => {
+          const news = this.state.news.slice();
+          this.setState({
+            news: news.concat(response),
+            page: response.page,
+            size: response.size,
+            totalElements: response.totalElements,
+            totalPages: response.totalPages,
+            last: response.last,
+            isLoading: false
+          })
+        }).catch(error => {
       this.setState({
         isLoading: false
       })
@@ -77,10 +77,10 @@ class NewsInfo extends Component {
 
   render() {
     return (
-      <a/>
-      // this.state.news.map( new => (
-      //   <News news={new} {...this.props}/>
-      // ));
+        <a/>
+        // this.state.news.map( new => (
+        //   <News news={new} {...this.props}/>
+        // ));
     );
   }
 

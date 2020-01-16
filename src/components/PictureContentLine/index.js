@@ -1,1 +1,1 @@
-export { default } from './PictureContentLine';
+export {default} from './PictureContentLine';

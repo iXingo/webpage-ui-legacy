@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _liquid = _interopRequireDefault(require("refractor/lang/liquid.js"));
 
-;
+
 var _default = _liquid.default;
 exports.default = _default;

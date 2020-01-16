@@ -1,1 +1,1 @@
-export { default } from './PictureItems';
+export {default} from './PictureItems';

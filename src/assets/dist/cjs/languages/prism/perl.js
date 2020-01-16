@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _perl = _interopRequireDefault(require("refractor/lang/perl.js"));
 
-;
+
 var _default = _perl.default;
 exports.default = _default;

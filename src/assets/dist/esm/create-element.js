@@ -1,6 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import _objectSpread from "@babel/runtime/helpers/objectSpread";
 import React from 'react';
+
 export function createStyleObject(classNames) {
   var elementStyle = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
   var stylesheet = arguments.length > 2 ? arguments[2] : undefined;
@@ -8,9 +9,11 @@ export function createStyleObject(classNames) {
     return _objectSpread({}, styleObject, stylesheet[className]);
   }, elementStyle);
 }
+
 export function createClassNameString(classNames) {
   return classNames.join(' ');
 }
+
 export function createChildren(stylesheet, useInlineStyles) {
   var childrenCount = 0;
   return function (children) {
@@ -25,6 +28,7 @@ export function createChildren(stylesheet, useInlineStyles) {
     });
   };
 }
+
 export default function createElement(_ref) {
   var node = _ref.node,
       stylesheet = _ref.stylesheet,

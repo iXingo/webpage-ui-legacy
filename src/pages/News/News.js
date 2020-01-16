@@ -185,89 +185,89 @@ const News = props => {
   // }
 
   return (
-    <React.Fragment>
-      <CssBaseline/>
-      <Container maxWidth="xl">
-        <Toolbar className={classes.toolbar}>
-          {/* <Button size="small">订阅</Button> */}
-          {/* <Subscribe /> */}
-          <div>
-            <Typography
-              component="h2"
-              variant="h4"
-              color="inherit"
-              align="center"
-              noWrap
-              className={classes.toolbarTitle}
-            >
-              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
-            </Typography>
-          </div>
-          {/* <IconButton>
+      <React.Fragment>
+        <CssBaseline/>
+        <Container maxWidth="xl">
+          <Toolbar className={classes.toolbar}>
+            {/* <Button size="small">订阅</Button> */}
+            {/* <Subscribe /> */}
+            <div>
+              <Typography
+                  component="h2"
+                  variant="h4"
+                  color="inherit"
+                  align="center"
+                  noWrap
+                  className={classes.toolbarTitle}
+              >
+                <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
+              </Typography>
+            </div>
+            {/* <IconButton>
             <SearchIcon />
           </IconButton> */}
-          {/* <Button variant="outlined" size="small">
+            {/* <Button variant="outlined" size="small">
             搜索
           </Button> */}
-        </Toolbar>
+          </Toolbar>
 
-        <main>
+          <main>
 
-          {/* Main featured post */}
-          <Carousel/>
+            {/* Main featured post */}
+            <Carousel/>
 
-          <Paper className={classes.list}>
-            <FeaturedCardReversed card={card2} {...props}/>
-          </Paper>
+            <Paper className={classes.list}>
+              <FeaturedCardReversed card={card2} {...props}/>
+            </Paper>
 
-          <Paper className={classes.list}>
-            <FeaturedCard card={card1} {...props}/>
-          </Paper>
+            <Paper className={classes.list}>
+              <FeaturedCard card={card1} {...props}/>
+            </Paper>
 
-          <Paper className={classes.list}>
-            <FeaturedList/>
-          </Paper>
+            <Paper className={classes.list}>
+              <FeaturedList/>
+            </Paper>
 
-          <div className={classes.list}>
-            <FeaturedContent/>
-          </div>
+            <div className={classes.list}>
+              <FeaturedContent/>
+            </div>
 
 
-          {/* End main featured post */}
-          <PostCard/>
-          {/* Sub featured posts */}
-          <Grid container spacing={4}>
-            {featuredPosts.map(post => (
-              <SmallPostCard post={post} {...props}/>
-            ))}
-          </Grid>
-          {/* End hero unit */}
-          <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
-              <MediaCard card={card} {...props}/>
-            ))}
-          </Grid>
-
-          <Title/>
-
-          <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
-              <BigMediaCard card={card} {...props}/>
-            ))}
-          </Grid>
-
-          <Grid container spacing={4} className={classes.cardGrid}>
-            <Grid item xs={12} md={6}>
-              <SummaryCard/>
+            {/* End main featured post */}
+            <PostCard/>
+            {/* Sub featured posts */}
+            <Grid container spacing={4}>
+              {featuredPosts.map(post => (
+                  <SmallPostCard post={post} {...props}/>
+              ))}
             </Grid>
-            <Grid item xs={12} md={6}>
-              <SummaryCard/>
+            {/* End hero unit */}
+            <Grid container spacing={4} className={classes.cardGrids}>
+              {cards.map(card => (
+                  <MediaCard card={card} {...props}/>
+              ))}
             </Grid>
-          </Grid>
-        </main>
-      </Container>
-      {/* Footer */}
-      {/* <footer className={classes.footer}>
+
+            <Title/>
+
+            <Grid container spacing={4} className={classes.cardGrids}>
+              {cards.map(card => (
+                  <BigMediaCard card={card} {...props}/>
+              ))}
+            </Grid>
+
+            <Grid container spacing={4} className={classes.cardGrid}>
+              <Grid item xs={12} md={6}>
+                <SummaryCard/>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <SummaryCard/>
+              </Grid>
+            </Grid>
+          </main>
+        </Container>
+        {/* Footer */}
+        {/* <footer className={classes.footer}>
         <Container maxWidth="lg">
           <Typography variant="h6" align="center" gutterBottom >
             Footer
@@ -278,8 +278,8 @@ const News = props => {
           <MadeWithLove />
         </Container>
       </footer> */}
-      {/* End footer */}
-    </React.Fragment>
+        {/* End footer */}
+      </React.Fragment>
   );
 };
 

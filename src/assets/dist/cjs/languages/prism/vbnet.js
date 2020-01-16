@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _vbnet = _interopRequireDefault(require("refractor/lang/vbnet.js"));
 
-;
+
 var _default = _vbnet.default;
 exports.default = _default;

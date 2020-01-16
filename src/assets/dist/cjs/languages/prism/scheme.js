@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _scheme = _interopRequireDefault(require("refractor/lang/scheme.js"));
 
-;
+
 var _default = _scheme.default;
 exports.default = _default;

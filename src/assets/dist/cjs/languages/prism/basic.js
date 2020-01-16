@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _basic = _interopRequireDefault(require("refractor/lang/basic.js"));
 
-;
+
 var _default = _basic.default;
 exports.default = _default;

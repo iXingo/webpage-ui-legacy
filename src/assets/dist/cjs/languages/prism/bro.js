@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _bro = _interopRequireDefault(require("refractor/lang/bro.js"));
 
-;
+
 var _default = _bro.default;
 exports.default = _default;

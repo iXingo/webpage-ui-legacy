@@ -1,8 +1,8 @@
-import { colors } from '@material-ui/core';
+import {colors} from '@material-ui/core';
 
 const white = '#FFFFFF';
 const black = '#000000';
-const main =  '#1a73e8';
+const main = '#1a73e8';
 
 export default {
   black,

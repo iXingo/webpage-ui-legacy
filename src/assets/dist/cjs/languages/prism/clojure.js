@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _clojure = _interopRequireDefault(require("refractor/lang/clojure.js"));
 
-;
+
 var _default = _clojure.default;
 exports.default = _default;

@@ -20,13 +20,13 @@ const Friend = props => {
   if (!props.isAuthenticated) return <NotAuth/>;
 
   return (
-    <div>
-      <CssBaseline/>
-      <FriendHead {...props}/>
-      <div className={classes.root}>
-        <FriendList {...props}/>
+      <div>
+        <CssBaseline/>
+        <FriendHead {...props}/>
+        <div className={classes.root}>
+          <FriendList {...props}/>
+        </div>
       </div>
-    </div>
   );
 };
 

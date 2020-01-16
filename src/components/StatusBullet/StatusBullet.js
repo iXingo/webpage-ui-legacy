@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,22 +43,22 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const StatusBullet = props => {
-  const { className, size, color, ...rest } = props;
+  const {className, size, color, ...rest} = props;
 
   const classes = useStyles();
 
   return (
-    <span
-      {...rest}
-      className={clsx(
-        {
-          [classes.root]: true,
-          [classes[size]]: size,
-          [classes[color]]: color
-        },
-        className
-      )}
-    />
+      <span
+          {...rest}
+          className={clsx(
+              {
+                [classes.root]: true,
+                [classes[size]]: size,
+                [classes[color]]: color
+              },
+              className
+          )}
+      />
   );
 };
 

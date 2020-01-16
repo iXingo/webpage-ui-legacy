@@ -1,1 +1,1 @@
-export { default } from './PictureText';
+export {default} from './PictureText';

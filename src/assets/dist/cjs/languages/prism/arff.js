@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _arff = _interopRequireDefault(require("refractor/lang/arff.js"));
 
-;
+
 var _default = _arff.default;
 exports.default = _default;

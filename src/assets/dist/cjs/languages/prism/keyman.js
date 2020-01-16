@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _keyman = _interopRequireDefault(require("refractor/lang/keyman.js"));
 
-;
+
 var _default = _keyman.default;
 exports.default = _default;

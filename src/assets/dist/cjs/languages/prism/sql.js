@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _sql = _interopRequireDefault(require("refractor/lang/sql.js"));
 
-;
+
 var _default = _sql.default;
 exports.default = _default;

@@ -1,12 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import { Paper } from '@material-ui/core';
-import { ContentTitleReversed } from '../../components';
-
+import {Paper} from '@material-ui/core';
+import {ContentTitleReversed} from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -21,10 +20,10 @@ const useStyles = makeStyles(theme => ({
     boxShadow: '0 2px 6px 0 rgba(å0,0,0,.12), inset 0 -1px 0 0 #dadce0',
     alignItems: 'center'
   },
-  paper:{
+  paper: {
     alignItems: 'center'
   },
-  firstLine: { 
+  firstLine: {
     fontSize: 18,
     color: 'black',
     fontWeight: 500,
@@ -47,16 +46,16 @@ const useStyles = makeStyles(theme => ({
   svgIcon: {
     height: 30,
     width: 30
-	},
-	content: {
+  },
+  content: {
     padding: '20px 20px 0',
     backgroundColor: '#1a73e8',
-	},
-	picture: {
+  },
+  picture: {
     // height: '100%',
     padding: 15
   },
-  items:{
+  items: {
     height: '100%',
     padding: 15,
     justifyContent: 'center',
@@ -66,54 +65,54 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const PictureItems = props =>  {
+const PictureItems = props => {
 
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <ContentTitleReversed context={props.context} /> 
-			<Grid container justify="center" alignItems="center" className={classes.content}>
-				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
-				</Grid>
-				<Grid item xs={12} md={4} >
-          <div className={classes.items}>
-            <Paper className={classes.paper}>
-              <div className={classes.main}>
-                <Typography variant="h6" gutterBottom color="inherit"  className={classes.firstLine}>
-                  {props.context.titleOne}
-                </Typography>
-                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                  {props.context.contentOne}
-                </Typography>
-              </div>
-            </Paper>
-            <Paper className={classes.paper}>
-              <div className={classes.main}>
-                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.titleTwo}
-                </Typography>
-                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                  {props.context.contentTwo}
-                </Typography>
-              </div>
-            </Paper>
-            <Paper className={classes.paper}>
-              <div className={classes.main}>
-                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.titleThree}
-                </Typography>
-                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                  {props.context.contentThree}
-                </Typography>
-              </div>
-            </Paper>
-          </div>
-				</Grid>
-			</Grid>
-    </React.Fragment>
+      <React.Fragment>
+        <CssBaseline/>
+        <ContentTitleReversed context={props.context}/>
+        <Grid container justify="center" alignItems="center" className={classes.content}>
+          <Grid item xs={12} md={4}>
+            <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <div className={classes.items}>
+              <Paper className={classes.paper}>
+                <div className={classes.main}>
+                  <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                    {props.context.titleOne}
+                  </Typography>
+                  <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
+                    {props.context.contentOne}
+                  </Typography>
+                </div>
+              </Paper>
+              <Paper className={classes.paper}>
+                <div className={classes.main}>
+                  <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                    {props.context.titleTwo}
+                  </Typography>
+                  <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
+                    {props.context.contentTwo}
+                  </Typography>
+                </div>
+              </Paper>
+              <Paper className={classes.paper}>
+                <div className={classes.main}>
+                  <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                    {props.context.titleThree}
+                  </Typography>
+                  <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
+                    {props.context.contentThree}
+                  </Typography>
+                </div>
+              </Paper>
+            </div>
+          </Grid>
+        </Grid>
+      </React.Fragment>
   );
 };
 

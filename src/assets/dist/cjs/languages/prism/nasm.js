@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _nasm = _interopRequireDefault(require("refractor/lang/nasm.js"));
 
-;
+
 var _default = _nasm.default;
 exports.default = _default;

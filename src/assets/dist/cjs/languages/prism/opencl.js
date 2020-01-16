@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _opencl = _interopRequireDefault(require("refractor/lang/opencl.js"));
 
-;
+
 var _default = _opencl.default;
 exports.default = _default;

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _autohotkey = _interopRequireDefault(require("refractor/lang/autohotkey.js"));
 
-;
+
 var _default = _autohotkey.default;
 exports.default = _default;

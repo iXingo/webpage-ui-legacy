@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _vim = _interopRequireDefault(require("refractor/lang/vim.js"));
 
-;
+
 var _default = _vim.default;
 exports.default = _default;

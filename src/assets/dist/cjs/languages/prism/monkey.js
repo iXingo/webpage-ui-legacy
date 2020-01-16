@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _monkey = _interopRequireDefault(require("refractor/lang/monkey.js"));
 
-;
+
 var _default = _monkey.default;
 exports.default = _default;

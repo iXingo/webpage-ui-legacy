@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _icon = _interopRequireDefault(require("refractor/lang/icon.js"));
 
-;
+
 var _default = _icon.default;
 exports.default = _default;

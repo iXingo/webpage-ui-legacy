@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
-import { createBrowserHistory } from 'history';
+import {createBrowserHistory} from 'history';
 
 const browserHistory = createBrowserHistory();
 
 ReactDOM.render(
-    <BrowserRouter history={browserHistory} >
-       <App />
+    <BrowserRouter history={browserHistory}>
+      <App/>
     </BrowserRouter>,
     document.getElementById('root')
 );

@@ -1,1 +1,1 @@
-export { default } from './SmallPostCard.js';
+export {default} from './SmallPostCard.js';

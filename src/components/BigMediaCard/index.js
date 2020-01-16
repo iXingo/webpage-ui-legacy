@@ -1,1 +1,1 @@
-export { default } from './BigMediaCard.js';
+export {default} from './BigMediaCard.js';

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _mizar = _interopRequireDefault(require("refractor/lang/mizar.js"));
 
-;
+
 var _default = _mizar.default;
 exports.default = _default;

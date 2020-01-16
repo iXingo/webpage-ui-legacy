@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _wasm = _interopRequireDefault(require("refractor/lang/wasm.js"));
 
-;
+
 var _default = _wasm.default;
 exports.default = _default;

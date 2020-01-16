@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 // import CardActions from '@material-ui/core/CardActions';
@@ -10,7 +10,6 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import {Instagram} from "react-content-loader";
-
 
 
 const useStyles = makeStyles(theme => ({
@@ -49,37 +48,37 @@ const useStyles = makeStyles(theme => ({
 
 const SmallPostCard = props => {
   const classes = useStyles();
-  const { posts } = props;
-  if(!posts){
+  const {posts} = props;
+  if (!posts) {
     return <Instagram/>;
   }
-  return (posts.map( post => (
-    <Grid item key={post.title} xs={12} md={6} className={classes.cardGrid}>
-      <CardActionArea component="a" href="#">
-        <Card className={classes.card}>
-          <div className={classes.cardDetails}>
-            <CardContent>
-              <Typography component="h2" variant="h4" style={{color:'#1a73e8'}}>{post.title}</Typography>
-              <Typography variant="subtitle1" color="textSecondary">
-                <div className={classes.tips}>
-                  <DateRangeIcon className={classes.icon} />{post.date}
-                </div>
-              </Typography>
-              <Typography variant="subtitle1" paragraph>{post.description}</Typography>
-              <Typography variant="subtitle1" color="primary">查看全文...</Typography>
-            </CardContent>
-          </div>
-          <Hidden xsDown>
-            <CardMedia
-              className={classes.cardMedia}
-              image="https://source.unsplash.com/random"
-              title="Image title"
-            />
-          </Hidden>
-        </Card>
-      </CardActionArea>
-    </Grid>
+  return (posts.map(post => (
+      <Grid item key={post.title} xs={12} md={6} className={classes.cardGrid}>
+        <CardActionArea component="a" href="#">
+          <Card className={classes.card}>
+            <div className={classes.cardDetails}>
+              <CardContent>
+                <Typography component="h2" variant="h4" style={{color: '#1a73e8'}}>{post.title}</Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  <div className={classes.tips}>
+                    <DateRangeIcon className={classes.icon}/>{post.date}
+                  </div>
+                </Typography>
+                <Typography variant="subtitle1" paragraph>{post.description}</Typography>
+                <Typography variant="subtitle1" color="primary">查看全文...</Typography>
+              </CardContent>
+            </div>
+            <Hidden xsDown>
+              <CardMedia
+                  className={classes.cardMedia}
+                  image="https://source.unsplash.com/random"
+                  title="Image title"
+              />
+            </Hidden>
+          </Card>
+        </CardActionArea>
+      </Grid>
   )));
-}
+};
 
 export default SmallPostCard;

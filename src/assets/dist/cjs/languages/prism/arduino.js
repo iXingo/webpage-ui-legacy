@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _arduino = _interopRequireDefault(require("refractor/lang/arduino.js"));
 
-;
+
 var _default = _arduino.default;
 exports.default = _default;

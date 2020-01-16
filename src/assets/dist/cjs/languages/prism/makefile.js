@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _makefile = _interopRequireDefault(require("refractor/lang/makefile.js"));
 
-;
+
 var _default = _makefile.default;
 exports.default = _default;

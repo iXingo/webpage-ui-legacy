@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _applescript = _interopRequireDefault(require("refractor/lang/applescript.js"));
 
-;
+
 var _default = _applescript.default;
 exports.default = _default;

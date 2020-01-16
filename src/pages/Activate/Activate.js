@@ -26,14 +26,14 @@ class Activate extends Component {
       isLoading: true
     });
     promise
-      .then(response => {
-        this.setState({
-          code: response.code,
-          message: response.message,
-          data: response.data,
-          isLoading: false
-        });
-      }).catch(error => {
+        .then(response => {
+          this.setState({
+            code: response.code,
+            message: response.message,
+            data: response.data,
+            isLoading: false
+          });
+        }).catch(error => {
       this.setState({
         isLoading: false
       });
@@ -64,9 +64,9 @@ class Activate extends Component {
   render() {
     const info = this.state;
     return (
-      <div>
-        <ActivatePage info={info} {...this.props}></ActivatePage>
-      </div>
+        <div>
+          <ActivatePage info={info} {...this.props}/>
+        </div>
     );
   }
 

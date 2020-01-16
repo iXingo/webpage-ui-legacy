@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _brainfuck = _interopRequireDefault(require("refractor/lang/brainfuck.js"));
 
-;
+
 var _default = _brainfuck.default;
 exports.default = _default;

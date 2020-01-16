@@ -1,9 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 // import TypeWriter from 'react-typewriter';
 
 
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     padding: '80px 10px 0',
     // marginTop: 80,
   },
-  firstLine: { 
+  firstLine: {
     fontSize: 16,
     padding: 10,
     lineHeight: 1.5,
@@ -66,24 +66,24 @@ const ContentTitleReversed = props => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <Container className={classes.mainTitle}>
-        <div className={classes.main}>
-          <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-            {props.context.sectionMain}
-          </Typography>
-          {/* <TypeWriter typing={0.5}> */}
-          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-            {props.context.sectionTitle}
-          </Typography>
-          {/* </TypeWriter> */}
-          <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-             {props.context.sectionContent}
-          </Typography>   
-        </div>
-      </Container>
-    </React.Fragment>
+      <React.Fragment>
+        <CssBaseline/>
+        <Container className={classes.mainTitle}>
+          <div className={classes.main}>
+            <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
+              {props.context.sectionMain}
+            </Typography>
+            {/* <TypeWriter typing={0.5}> */}
+            <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
+              {props.context.sectionTitle}
+            </Typography>
+            {/* </TypeWriter> */}
+            <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+              {props.context.sectionContent}
+            </Typography>
+          </div>
+        </Container>
+      </React.Fragment>
   );
 };
 

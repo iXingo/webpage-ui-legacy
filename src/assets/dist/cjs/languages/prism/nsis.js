@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _nsis = _interopRequireDefault(require("refractor/lang/nsis.js"));
 
-;
+
 var _default = _nsis.default;
 exports.default = _default;

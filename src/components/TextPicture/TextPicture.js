@@ -1,11 +1,10 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import { withRouter } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import { ContentTitle } from '../../components';
-
+import {ContentTitle} from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -36,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     fontWeight: 300,
     lineHeight: 1.5,
   },
-  thirdLine: { 
+  thirdLine: {
     fontSize: 16,
     fontWeight: 500,
     padding: 10,
@@ -45,13 +44,13 @@ const useStyles = makeStyles(theme => ({
   svgIcon: {
     height: 30,
     width: 30
-	},
-	content: {
-		padding: '20px 20px 0'
-	},
-	picture: {
-		// height: 500,
-	}
+  },
+  content: {
+    padding: '20px 20px 0'
+  },
+  picture: {
+    // height: 500,
+  }
 
 }));
 
@@ -61,25 +60,25 @@ const PictureText = props => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <ContentTitle context={props.context} /> 
-			<Grid container justify="center" alignItems='center' className={classes.content}>
-				<Grid item xs={12} md={4} >
-					<div className={classes.main}>
-						<Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-              {props.context.title}
-						</Typography>
-						<Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-              {props.context.content}
-						</Typography>
-					</div>
-				</Grid>
-        <Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image} alt={props.context.title}/>
-				</Grid>
-			</Grid>
-    </React.Fragment>
+      <React.Fragment>
+        <CssBaseline/>
+        <ContentTitle context={props.context}/>
+        <Grid container justify="center" alignItems='center' className={classes.content}>
+          <Grid item xs={12} md={4}>
+            <div className={classes.main}>
+              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+                {props.context.title}
+              </Typography>
+              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+                {props.context.content}
+              </Typography>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
+          </Grid>
+        </Grid>
+      </React.Fragment>
   );
 };
 

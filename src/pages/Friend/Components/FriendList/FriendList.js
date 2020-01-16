@@ -29,18 +29,18 @@ class FriendList extends Component {
       isLoading: true
     });
     promise
-      .then(response => {
-        const friends = this.state.friends.slice();
-        this.setState({
-          friends: friends.concat(response),
-          page: response.page,
-          size: response.size,
-          totalElements: response.totalElements,
-          totalPages: response.totalPages,
-          last: response.last,
-          isLoading: false
-        })
-      }).catch(error => {
+        .then(response => {
+          const friends = this.state.friends.slice();
+          this.setState({
+            friends: friends.concat(response),
+            page: response.page,
+            size: response.size,
+            totalElements: response.totalElements,
+            totalPages: response.totalPages,
+            last: response.last,
+            isLoading: false
+          })
+        }).catch(error => {
       this.setState({
         isLoading: false
       })
@@ -76,9 +76,9 @@ class FriendList extends Component {
 
   render() {
     return (
-      this.state.friends.map(friend => (
-        <FriendContent friend={friend} {...this.props}></FriendContent>
-      ))
+        this.state.friends.map(friend => (
+            <FriendContent friend={friend} {...this.props}/>
+        ))
     );
   }
 

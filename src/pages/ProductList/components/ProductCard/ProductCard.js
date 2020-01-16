@@ -38,36 +38,36 @@ const ProductCard = props => {
   const classes = useStyles();
 
   return (
-    <Card {...rest} className={clsx(classes.root, className)}>
-      <CardContent>
-        <div className={classes.imageContainer}>
-          <img alt="Product" className={classes.image} src={product.imageUrl}/>
-        </div>
-        <Typography align="center" gutterBottom variant="h4">
-          {product.title}
-        </Typography>
-        <Typography align="center" variant="body1">
-          {product.description}
-        </Typography>
-      </CardContent>
-      <Divider/>
-      <CardActions>
-        <Grid container justify="space-between">
-          <Grid className={classes.statsItem} item>
-            <AccessTimeIcon className={classes.statsIcon}/>
-            <Typography display="inline" variant="body2">
-              Updated 2hr ago
-            </Typography>
+      <Card {...rest} className={clsx(classes.root, className)}>
+        <CardContent>
+          <div className={classes.imageContainer}>
+            <img alt="Product" className={classes.image} src={product.imageUrl}/>
+          </div>
+          <Typography align="center" gutterBottom variant="h4">
+            {product.title}
+          </Typography>
+          <Typography align="center" variant="body1">
+            {product.description}
+          </Typography>
+        </CardContent>
+        <Divider/>
+        <CardActions>
+          <Grid container justify="space-between">
+            <Grid className={classes.statsItem} item>
+              <AccessTimeIcon className={classes.statsIcon}/>
+              <Typography display="inline" variant="body2">
+                Updated 2hr ago
+              </Typography>
+            </Grid>
+            <Grid className={classes.statsItem} item>
+              <GetAppIcon className={classes.statsIcon}/>
+              <Typography display="inline" variant="body2">
+                {product.totalDownloads} Downloads
+              </Typography>
+            </Grid>
           </Grid>
-          <Grid className={classes.statsItem} item>
-            <GetAppIcon className={classes.statsIcon}/>
-            <Typography display="inline" variant="body2">
-              {product.totalDownloads} Downloads
-            </Typography>
-          </Grid>
-        </Grid>
-      </CardActions>
-    </Card>
+        </CardActions>
+      </Card>
   );
 };
 

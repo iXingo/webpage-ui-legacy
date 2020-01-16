@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _erlang = _interopRequireDefault(require("refractor/lang/erlang.js"));
 
-;
+
 var _default = _erlang.default;
 exports.default = _default;

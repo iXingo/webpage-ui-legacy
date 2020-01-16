@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _groovy = _interopRequireDefault(require("refractor/lang/groovy.js"));
 
-;
+
 var _default = _groovy.default;
 exports.default = _default;

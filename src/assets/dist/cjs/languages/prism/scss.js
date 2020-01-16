@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _scss = _interopRequireDefault(require("refractor/lang/scss.js"));
 
-;
+
 var _default = _scss.default;
 exports.default = _default;

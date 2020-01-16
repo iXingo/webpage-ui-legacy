@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _processing = _interopRequireDefault(require("refractor/lang/processing.js"));
 
-;
+
 var _default = _processing.default;
 exports.default = _default;

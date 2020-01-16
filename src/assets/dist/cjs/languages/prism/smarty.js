@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _smarty = _interopRequireDefault(require("refractor/lang/smarty.js"));
 
-;
+
 var _default = _smarty.default;
 exports.default = _default;

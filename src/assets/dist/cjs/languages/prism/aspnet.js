@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _aspnet = _interopRequireDefault(require("refractor/lang/aspnet.js"));
 
-;
+
 var _default = _aspnet.default;
 exports.default = _default;

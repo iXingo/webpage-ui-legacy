@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _ruby = _interopRequireDefault(require("refractor/lang/ruby.js"));
 
-;
+
 var _default = _ruby.default;
 exports.default = _default;

@@ -53,9 +53,9 @@ const About = props => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <MediaSection friend={props.friend} {...props}/>
-    </div>
+      <div className={classes.root}>
+        <MediaSection friend={props.friend} {...props}/>
+      </div>
   );
 };
 

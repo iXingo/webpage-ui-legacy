@@ -163,33 +163,33 @@ const Project = props => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <div className={classes.root}>
-        <div className={classes.quote}>
-          <div className={classes.quoteInner}>
-            <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
-            <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
-            <div className={classes.person}>
-              <Typography className={classes.name} variant="body1">&copy;Copyright 2019</Typography>
-              <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New
-                Area.</Typography>
+      <React.Fragment>
+        <div className={classes.root}>
+          <div className={classes.quote}>
+            <div className={classes.quoteInner}>
+              <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
+              <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
+              <div className={classes.person}>
+                <Typography className={classes.name} variant="body1">&copy;Copyright 2019</Typography>
+                <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New
+                  Area.</Typography>
+              </div>
             </div>
           </div>
+          {projects.map(project => (
+              <HeaderUnit project={project} {...props} />
+          ))
+          }
         </div>
-        {projects.map(project => (
-          <HeaderUnit project={project} {...props} />
-        ))
-        }
-      </div>
-      <Container maxWidth="lg" className={classes.container}>
-        <PostCard></PostCard>
-        <div className={classes.section}>
-          <AlignItemsList></AlignItemsList>
-          <AlignItemsList></AlignItemsList>
-          <AlignItemsList></AlignItemsList>
-        </div>
-      </Container>
-    </React.Fragment>
+        <Container maxWidth="lg" className={classes.container}>
+          <PostCard/>
+          <div className={classes.section}>
+            <AlignItemsList/>
+            <AlignItemsList/>
+            <AlignItemsList/>
+          </div>
+        </Container>
+      </React.Fragment>
   );
 };
 

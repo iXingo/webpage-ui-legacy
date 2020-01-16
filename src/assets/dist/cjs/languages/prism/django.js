@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _django = _interopRequireDefault(require("refractor/lang/django.js"));
 
-;
+
 var _default = _django.default;
 exports.default = _default;

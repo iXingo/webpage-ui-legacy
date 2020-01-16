@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import React, {useState} from 'react';
+import {Link as RouterLink} from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { fade, makeStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Badge, Hidden, IconButton } from '@material-ui/core';
+import {fade, makeStyles} from '@material-ui/core/styles';
+import {AppBar, Badge, Hidden, IconButton, Toolbar} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/NotificationsOutlined';
 import InputIcon from '@material-ui/icons/Input';
@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Topbar = props => {
-  const { className, onSidebarOpen, context, ...rest } = props;
+  const {className, onSidebarOpen, context, ...rest} = props;
 
   const classes = useStyles();
 
@@ -74,61 +74,61 @@ const Topbar = props => {
 
 
   return (
-    <AppBar
-      {...rest}
-      className={clsx(classes.root, className)}
-    >
-      <Toolbar>
-        <RouterLink to="/">
-          <img
-            alt="Logo"
-            src="https://img.ixingo.cn/logo.png"
-            className={classes.logo}
-          />
-        </RouterLink>测试版 Beta 2019.12051
-        <div className={classes.flexGrow} />
-        <Hidden mdDown>
-        <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="星狗一下               你就知道"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
+      <AppBar
+          {...rest}
+          className={clsx(classes.root, className)}
+      >
+        <Toolbar>
+          <RouterLink to="/">
+            <img
+                alt="Logo"
+                src="https://img.ixingo.cn/logo.png"
+                className={classes.logo}
             />
-        </div>
-          <IconButton color="inherit">
-            <Badge
-              badgeContent={notifications.length}
-              color="primary"
-              variant="dot"
+          </RouterLink>测试版 Beta 2019.12051
+          <div className={classes.flexGrow}/>
+          <Hidden mdDown>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon/>
+              </div>
+              <InputBase
+                  placeholder="星狗一下               你就知道"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{'aria-label': 'search'}}
+              />
+            </div>
+            <IconButton color="inherit">
+              <Badge
+                  badgeContent={notifications.length}
+                  color="primary"
+                  variant="dot"
+              >
+                <NotificationsIcon/>
+              </Badge>
+            </IconButton>
+            <IconButton
+                className={classes.signOutButton}
+                color="inherit"
+                onClick={context.handleLogout}
+                label="退出登录"
             >
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-          <IconButton
-            className={classes.signOutButton}
-            color="inherit"
-            onClick={ context.handleLogout }
-            label="退出登录"
-          >
-            <InputIcon />
-          </IconButton>
-        </Hidden>
-        <Hidden lgUp>
-          <IconButton
-            color="inherit"
-            onClick={onSidebarOpen}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Hidden>
-      </Toolbar>
-    </AppBar>
+              <InputIcon/>
+            </IconButton>
+          </Hidden>
+          <Hidden lgUp>
+            <IconButton
+                color="inherit"
+                onClick={onSidebarOpen}
+            >
+              <MenuIcon/>
+            </IconButton>
+          </Hidden>
+        </Toolbar>
+      </AppBar>
   );
 };
 

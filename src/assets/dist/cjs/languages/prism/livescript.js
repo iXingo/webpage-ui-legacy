@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _livescript = _interopRequireDefault(require("refractor/lang/livescript.js"));
 
-;
+
 var _default = _livescript.default;
 exports.default = _default;

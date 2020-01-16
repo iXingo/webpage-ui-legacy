@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/styles';
+import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
+import {ThemeProvider} from '@material-ui/styles';
 import validate from 'validate.js';
 import theme from './theme';
 import 'react-perfect-scrollbar/dist/css/styles.css';
@@ -8,10 +8,10 @@ import './assets/scss/index.scss';
 import './index.css';
 import validators from './common/validators';
 import Routes from './Routes';
-import { getCurrentUser } from './util/APIUtils';
-import { ACCESS_TOKEN } from './constants';
-import { notification } from 'antd';
-import { ScrollToTop} from './common'
+import {getCurrentUser} from './util/APIUtils';
+import {ACCESS_TOKEN} from './constants';
+import {notification} from 'antd';
+import {ScrollToTop} from './common'
 
 
 validate.validators = {
@@ -28,16 +28,16 @@ class App extends Component {
       currentUser: null,
       isAuthenticated: false,
       isLoading: false
-    }
+    };
     this.handleLogout = this.handleLogout.bind(this);
     this.loadCurrentUser = this.loadCurrentUser.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
 
     notification.config({
       placement: 'topRight',
-      top: 70, 
+      top: 70,
       duration: 3,
-    });    
+    });
   }
 
   loadCurrentUser() {
@@ -46,13 +46,13 @@ class App extends Component {
       isLoading: true
     });
     getCurrentUser()
-    .then(response => {
-      this.setState({
-        currentUser: response,
-        isAuthenticated: true,
-        isLoading: false
-      });
-    }).catch(error => {
+        .then(response => {
+          this.setState({
+            currentUser: response,
+            isAuthenticated: true,
+            isLoading: false
+          });
+        }).catch(error => {
       this.setState({
         isLoading: false,
       });
@@ -64,8 +64,8 @@ class App extends Component {
     this.loadCurrentUser();
   }
 
-  handleLogout(redirectTo="/", notificationType="success", description="您已经成功退出登录！") {
-    if(!this.state.currentUser){
+  handleLogout(redirectTo = "/", notificationType = "success", description = "您已经成功退出登录！") {
+    if (!this.state.currentUser) {
       notification[notificationType]({
         message: '星狗网 Web App',
         description: "您还未登录, 请您先登录!",
@@ -85,20 +85,20 @@ class App extends Component {
     });
 
     this.props.history.push(redirectTo);
-    
-    
+
+
   }
 
   handleLogin() {
-    let { history } = this.props;
+    let {history} = this.props;
     notification.success({
       message: '星狗网 Web App',
       description: "欢迎回来！恭喜您！您已经成功登录！",
     });
     this.loadCurrentUser();
-    if(history.location.pathname !== "/sign-in"){
+    if (history.location.pathname !== "/sign-in") {
       history.push(history.location.pathname);
-    }else{
+    } else {
       history.push("/index");
     }
     console.log(history);
@@ -106,18 +106,18 @@ class App extends Component {
   }
 
   render() {
-    document.title ="星狗网 | 看见，好时光";
+    document.title = "星狗网 | 看见，好时光";
     return (
-      <ThemeProvider theme={theme}>
-        <ScrollToTop>
-          <Routes isAuthenticated={this.state.isAuthenticated} 
-                    currentUser={this.state.currentUser} 
-                    handleLogin={this.handleLogin} 
+        <ThemeProvider theme={theme}>
+          <ScrollToTop>
+            <Routes isAuthenticated={this.state.isAuthenticated}
+                    currentUser={this.state.currentUser}
+                    handleLogin={this.handleLogin}
                     handleLogout={this.handleLogout}
-                    loadCurrentUser = {this.loadCurrentUser}
+                    loadCurrentUser={this.loadCurrentUser}
                     {...this.props}/>
-        </ScrollToTop>
-      </ThemeProvider>
+          </ScrollToTop>
+        </ThemeProvider>
     );
   }
 }

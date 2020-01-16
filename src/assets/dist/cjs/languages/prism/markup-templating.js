@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _markupTemplating = _interopRequireDefault(require("refractor/lang/markup-templating.js"));
 
-;
+
 var _default = _markupTemplating.default;
 exports.default = _default;

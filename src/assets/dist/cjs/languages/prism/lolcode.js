@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _lolcode = _interopRequireDefault(require("refractor/lang/lolcode.js"));
 
-;
+
 var _default = _lolcode.default;
 exports.default = _default;

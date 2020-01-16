@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _haml = _interopRequireDefault(require("refractor/lang/haml.js"));
 
-;
+
 var _default = _haml.default;
 exports.default = _default;

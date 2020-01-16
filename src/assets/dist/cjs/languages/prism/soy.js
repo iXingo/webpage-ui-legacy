@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _soy = _interopRequireDefault(require("refractor/lang/soy.js"));
 
-;
+
 var _default = _soy.default;
 exports.default = _default;

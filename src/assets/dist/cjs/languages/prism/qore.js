@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _qore = _interopRequireDefault(require("refractor/lang/qore.js"));
 
-;
+
 var _default = _qore.default;
 exports.default = _default;

@@ -1,1 +1,1 @@
-export { default } from './MediaSection.js';
+export {default} from './MediaSection.js';

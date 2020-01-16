@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _diff = _interopRequireDefault(require("refractor/lang/diff.js"));
 
-;
+
 var _default = _diff.default;
 exports.default = _default;

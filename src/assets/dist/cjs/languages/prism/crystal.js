@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _crystal = _interopRequireDefault(require("refractor/lang/crystal.js"));
 
-;
+
 var _default = _crystal.default;
 exports.default = _default;

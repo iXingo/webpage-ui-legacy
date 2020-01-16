@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles, useTheme } from '@material-ui/styles';
-import { useMediaQuery } from '@material-ui/core';
-import { withRouter } from 'react-router-dom';
+import {makeStyles, useTheme} from '@material-ui/styles';
+import {useMediaQuery} from '@material-ui/core';
+import {withRouter} from 'react-router-dom';
 
 
-import { Sidebar, Topbar, Footer } from './components';
+import {Footer, Sidebar, Topbar} from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Main = props => {
-  const { children } = props;
+  const {children} = props;
 
   const classes = useStyles();
   const theme = useTheme();
@@ -46,24 +46,24 @@ const Main = props => {
   const shouldOpenSidebar = isDesktop ? true : openSidebar;
 
   return (
-    <div
-      className={clsx({
-        [classes.root]: true,
-        [classes.shiftContent]: isDesktop
-      })}
-    >
-      <Topbar onSidebarOpen={handleSidebarOpen} context={props}/>
-      <Sidebar
-        onClose={handleSidebarClose}
-        open={shouldOpenSidebar}
-        variant={isDesktop ? 'persistent' : 'temporary'}
-        {...props}
-      />
-      <main className={classes.content}>
-        {children}
-        <Footer />
-      </main>
-    </div>
+      <div
+          className={clsx({
+            [classes.root]: true,
+            [classes.shiftContent]: isDesktop
+          })}
+      >
+        <Topbar onSidebarOpen={handleSidebarOpen} context={props}/>
+        <Sidebar
+            onClose={handleSidebarClose}
+            open={shouldOpenSidebar}
+            variant={isDesktop ? 'persistent' : 'temporary'}
+            {...props}
+        />
+        <main className={classes.content}>
+          {children}
+          <Footer/>
+        </main>
+      </div>
   );
 };
 

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _smalltalk = _interopRequireDefault(require("refractor/lang/smalltalk.js"));
 
-;
+
 var _default = _smalltalk.default;
 exports.default = _default;

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _elm = _interopRequireDefault(require("refractor/lang/elm.js"));
 
-;
+
 var _default = _elm.default;
 exports.default = _default;

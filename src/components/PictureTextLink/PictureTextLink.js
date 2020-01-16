@@ -1,11 +1,11 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import { Link as RouterLink, withRouter } from 'react-router-dom';
+import {Link as RouterLink, withRouter} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import { ContentTitle } from '../../components';
+import {ContentTitle} from '../../components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20,
     lineHeight: 1.5,
   },
-  thirdLine: { 
+  thirdLine: {
     fontSize: 16,
     fontWeight: 500,
     padding: 10,
@@ -41,12 +41,12 @@ const useStyles = makeStyles(theme => ({
   svgIcon: {
     height: 30,
     width: 30
-	},
-	content: {
-		padding: '20px 20px 0'
-	},
-	picture: {
-		// height: 500,
+  },
+  content: {
+    padding: '20px 20px 0'
+  },
+  picture: {
+    // height: 500,
   },
   buttonContent: {
     padding: '12px 32px',
@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   link: {
     padding: 10,
     fontSize: 14,
-  }, 
+  },
 
 
 }));
@@ -75,26 +75,27 @@ const PictureTextLink = props => {
   const classes = useStyles();
 
   return (
-    <React.Fragment>
-      <CssBaseline />
-      <ContentTitle context={props.context} /> 
-			<Grid container justify="center" alignItems='center' className={classes.content}>
-				<Grid item xs={12} md={4} >
-					<img className={classes.picture} src={props.context.image} alt={props.context.textTitle}/>
-				</Grid>
-				<Grid item xs={12} md={4} >
-					<div className={classes.textMain}>
-						<Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-              {props.context.textTitle}
-						</Typography>
-						<Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
-              {props.context.textContent}
-						</Typography>
-            <Link component={RouterLink} to={props.context.linkUrl} hover="none" className={classes.link}>{props.context.linkText}   →</Link>
-					</div>
-				</Grid>
-			</Grid>
-    </React.Fragment>
+      <React.Fragment>
+        <CssBaseline/>
+        <ContentTitle context={props.context}/>
+        <Grid container justify="center" alignItems='center' className={classes.content}>
+          <Grid item xs={12} md={4}>
+            <img className={classes.picture} src={props.context.image} alt={props.context.textTitle}/>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <div className={classes.textMain}>
+              <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                {props.context.textTitle}
+              </Typography>
+              <Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
+                {props.context.textContent}
+              </Typography>
+              <Link component={RouterLink} to={props.context.linkUrl} hover="none"
+                    className={classes.link}>{props.context.linkText} →</Link>
+            </div>
+          </Grid>
+        </Grid>
+      </React.Fragment>
   );
 };
 

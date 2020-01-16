@@ -1,14 +1,14 @@
 .polls-container {
     max-width: 600px;
-    margin: 0 auto;    
-    margin-top: 20px; 
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .poll-content {
     margin-bottom: 30px;
     padding: 20px 15px 20px 15px;
     letter-spacing: .01em;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
 }
 
 .poll-question {
@@ -55,7 +55,7 @@
 
 .vote-button:hover {
     color: #1890ff;
-    border-color: #1890ff;    
+    border-color: #1890ff;
 }
 
 .vote-button[disabled], .vote-button[disabled]:hover, .vote-button[disabled]:focus {
@@ -113,12 +113,12 @@
 
 .cv-choice-percent-chart {
     position: absolute;
-    background: #E1E8ED;    
+    background: #E1E8ED;
     top: 0;
     left: 0;
     height: 100%;
     border-radius: .35em;
-    transition: all .3s cubic-bezier(0.5,1.2,.5,1.2);
+    transition: all .3s cubic-bezier(0.5, 1.2, .5, 1.2);
     opacity: 1;
 }
 
@@ -152,7 +152,7 @@
     width: 48px;
     height: 48px;
     line-height: 48px;
-    border-radius: 24px;    
+    border-radius: 24px;
 }
 
 .poll-creator-avatar > * {
@@ -165,18 +165,18 @@
     font-weight: 500;
     color: rgba(0, 0, 0, 0.85);
     margin-top: 4px;
-    display: inline-block;    
+    display: inline-block;
     margin-right: 8px;
 }
 
 .poll-creator-username {
     color: #657786;
     font-size: 15px;
-    display: inline-block;  
+    display: inline-block;
 }
 
 .poll-creation-date {
-    display: block; 
+    display: block;
     color: #657786;
     font-size: 13px;
     margin-top: 2px;

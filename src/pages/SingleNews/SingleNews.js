@@ -25,16 +25,16 @@ class SinglePost extends Component {
       isLoading: true
     });
     promise
-      .then(response => {
-        this.setState({
-          post: response,
-          isLoading: false
-        });
-        if (response.code === 400) {
-          history.push("/not-found");
-        }
-        document.title = this.state.post.title + " | 星狗网";
-      }).catch(error => {
+        .then(response => {
+          this.setState({
+            post: response,
+            isLoading: false
+          });
+          if (response.code === 400) {
+            history.push("/not-found");
+          }
+          document.title = this.state.post.title + " | 星狗网";
+        }).catch(error => {
       this.setState({
         isLoading: false
       });
@@ -67,9 +67,9 @@ class SinglePost extends Component {
   render() {
     const {post} = this.state;
     return (
-      <div>
-        <PostMain post={post} {...this.props}></PostMain>
-      </div>
+        <div>
+          <PostMain post={post} {...this.props}/>
+        </div>
     );
   }
 

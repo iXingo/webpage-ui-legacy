@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _stylus = _interopRequireDefault(require("refractor/lang/stylus.js"));
 
-;
+
 var _default = _stylus.default;
 exports.default = _default;

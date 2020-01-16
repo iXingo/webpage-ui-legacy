@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _apacheconf = _interopRequireDefault(require("refractor/lang/apacheconf.js"));
 
-;
+
 var _default = _apacheconf.default;
 exports.default = _default;

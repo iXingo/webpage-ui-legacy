@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { AppBar, Toolbar,  Hidden, IconButton } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {AppBar, Hidden, IconButton, Toolbar} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles(() => ({
@@ -21,37 +21,37 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Topbar = props => {
-  const { className, onSidebarOpen, handleLogout, ...rest } = props;
+  const {className, onSidebarOpen, handleLogout, ...rest} = props;
 
   const classes = useStyles();
 
   return (
-    <AppBar
-      {...rest}
-      className={clsx(classes.root, className)}
-      color="primary"
-      position="fixed"
-    >
-      <Toolbar>
-        <RouterLink to="/">
-          <img
-            alt="Logo"
-            src="https://img.ixingo.cn/logo.png"
-            className={classes.logo}
-          />
-        </RouterLink>测试版 Beta
-        <div className={classes.flexGrow} />
-        <Hidden lgUp>
-          <IconButton
-            color="inherit"
-            onClick={onSidebarOpen}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Hidden>
-      </Toolbar>
-      
-    </AppBar>
+      <AppBar
+          {...rest}
+          className={clsx(classes.root, className)}
+          color="primary"
+          position="fixed"
+      >
+        <Toolbar>
+          <RouterLink to="/">
+            <img
+                alt="Logo"
+                src="https://img.ixingo.cn/logo.png"
+                className={classes.logo}
+            />
+          </RouterLink>测试版 Beta
+          <div className={classes.flexGrow}/>
+          <Hidden lgUp>
+            <IconButton
+                color="inherit"
+                onClick={onSidebarOpen}
+            >
+              <MenuIcon/>
+            </IconButton>
+          </Hidden>
+        </Toolbar>
+
+      </AppBar>
   );
 };
 

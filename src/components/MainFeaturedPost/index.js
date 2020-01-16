@@ -1,1 +1,1 @@
-export { default } from './MainFeaturedPost.js';
+export {default} from './MainFeaturedPost.js';

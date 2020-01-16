@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _lisp = _interopRequireDefault(require("refractor/lang/lisp.js"));
 
-;
+
 var _default = _lisp.default;
 exports.default = _default;

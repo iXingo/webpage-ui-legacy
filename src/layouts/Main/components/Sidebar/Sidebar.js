@@ -1,8 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Divider, Drawer } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Divider, Drawer} from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ImageIcon from '@material-ui/icons/Image';
 import ExploreIcon from '@material-ui/icons/Explore';
@@ -12,7 +12,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
-import { Profile, SidebarNav, UpgradePlan } from './components';
+import {Profile, SidebarNav, UpgradePlan} from './components';
 
 
 const useStyles = makeStyles(theme => ({
@@ -39,46 +39,46 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Sidebar = props => {
-  const { open, variant, onClose, className, ...rest } = props;
+  const {open, variant, onClose, className, ...rest} = props;
 
   const classes = useStyles();
 
   const pages = [
-    
+
     {
       title: '首    页',
       href: '/index',
-      icon: <EventNoteIcon />
+      icon: <EventNoteIcon/>
     },
     {
       title: '新    闻',
       href: '/news',
-      icon: <FiberNewIcon />
+      icon: <FiberNewIcon/>
     },
     {
       title: '博    文',
       href: '/posts',
-      icon: <MenuBookIcon />
+      icon: <MenuBookIcon/>
     },
     {
       title: '好    友',
       href: '/friends',
-      icon: <PeopleIcon />
+      icon: <PeopleIcon/>
     },
     {
       title: '计    划',
       href: '/projects',
-      icon: <ImageIcon />
+      icon: <ImageIcon/>
     },
     {
       title: '服    务',
       href: '/products',
-      icon: <DashboardIcon />
+      icon: <DashboardIcon/>
     },
     {
       title: '发    现',
       href: '/users',
-      icon: <ExploreIcon />
+      icon: <ExploreIcon/>
     },
     // {
     //   title: '登    录',
@@ -93,38 +93,38 @@ const Sidebar = props => {
     {
       title: '关    于',
       href: '/about',
-      icon: <InfoIcon />
+      icon: <InfoIcon/>
     },
     {
       title: '设    置',
       href: '/settings',
-      icon: <SettingsIcon />
+      icon: <SettingsIcon/>
     },
-    
+
   ];
 
   return (
-    <Drawer
-      anchor="left"
-      classes={{ paper: classes.drawer }}
-      onClose={onClose}
-      open={open}
-      variant={variant}
-    >
-      <div
-        {...rest}
-        className={clsx(classes.root, className)}
+      <Drawer
+          anchor="left"
+          classes={{paper: classes.drawer}}
+          onClose={onClose}
+          open={open}
+          variant={variant}
       >
-        <Profile {...props}/>
-        <Divider className={classes.divider} />
-        <SidebarNav
-          className={classes.nav}
-          pages={pages}
-        />
-        <UpgradePlan />
+        <div
+            {...rest}
+            className={clsx(classes.root, className)}
+        >
+          <Profile {...props}/>
+          <Divider className={classes.divider}/>
+          <SidebarNav
+              className={classes.nav}
+              pages={pages}
+          />
+          <UpgradePlan/>
 
-      </div>
-    </Drawer>
+        </div>
+      </Drawer>
   );
 };
 

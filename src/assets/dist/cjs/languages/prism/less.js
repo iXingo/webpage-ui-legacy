@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _less = _interopRequireDefault(require("refractor/lang/less.js"));
 
-;
+
 var _default = _less.default;
 exports.default = _default;

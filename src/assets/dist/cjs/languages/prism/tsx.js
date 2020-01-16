@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _tsx = _interopRequireDefault(require("refractor/lang/tsx.js"));
 
-;
+
 var _default = _tsx.default;
 exports.default = _default;

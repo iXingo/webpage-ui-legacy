@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _oz = _interopRequireDefault(require("refractor/lang/oz.js"));
 
-;
+
 var _default = _oz.default;
 exports.default = _default;

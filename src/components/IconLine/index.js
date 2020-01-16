@@ -1,1 +1,1 @@
-export { default } from './IconLine'
+export {default} from './IconLine'

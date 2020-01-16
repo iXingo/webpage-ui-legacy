@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _mel = _interopRequireDefault(require("refractor/lang/mel.js"));
 
-;
+
 var _default = _mel.default;
 exports.default = _default;

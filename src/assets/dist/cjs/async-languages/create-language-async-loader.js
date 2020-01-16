@@ -13,35 +13,35 @@ var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/
 
 var _default = function _default(name, loader) {
   return (
-    /*#__PURE__*/
-    function () {
-      var _ref = (0, _asyncToGenerator2.default)(
       /*#__PURE__*/
-      _regenerator.default.mark(function _callee(registerLanguage) {
-        var module;
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                _context.next = 2;
-                return loader();
+      function () {
+        var _ref = (0, _asyncToGenerator2.default)(
+            /*#__PURE__*/
+            _regenerator.default.mark(function _callee(registerLanguage) {
+              var module;
+              return _regenerator.default.wrap(function _callee$(_context) {
+                while (1) {
+                  switch (_context.prev = _context.next) {
+                    case 0:
+                      _context.next = 2;
+                      return loader();
 
-              case 2:
-                module = _context.sent;
-                registerLanguage(name, module.default || module);
+                    case 2:
+                      module = _context.sent;
+                      registerLanguage(name, module.default || module);
 
-              case 4:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
+                    case 4:
+                    case "end":
+                      return _context.stop();
+                  }
+                }
+              }, _callee, this);
+            }));
 
-      return function (_x) {
-        return _ref.apply(this, arguments);
-      };
-    }()
+        return function (_x) {
+          return _ref.apply(this, arguments);
+        };
+      }()
   );
 };
 

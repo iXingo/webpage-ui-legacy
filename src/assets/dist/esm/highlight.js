@@ -1,6 +1,7 @@
 import _objectWithoutProperties from "@babel/runtime/helpers/objectWithoutProperties";
 import React from 'react';
 import createElement from './create-element';
+
 var newLineRegex = /\n/g;
 
 function getNewLines(str) {
@@ -26,9 +27,9 @@ function LineNumbers(_ref2) {
       codeStyle = _ref2.codeStyle,
       _ref2$containerStyle = _ref2.containerStyle,
       containerStyle = _ref2$containerStyle === void 0 ? {
-    float: 'left',
-    paddingRight: '10px'
-  } : _ref2$containerStyle,
+        float: 'left',
+        paddingRight: '10px'
+      } : _ref2$containerStyle,
       _ref2$numberStyle = _ref2.numberStyle,
       numberStyle = _ref2$numberStyle === void 0 ? {} : _ref2$numberStyle,
       startingLineNumber = _ref2.startingLineNumber;
@@ -222,8 +223,8 @@ export default function (defaultAstGenerator, defaultStyle) {
         customStyle = _ref6$customStyle === void 0 ? {} : _ref6$customStyle,
         _ref6$codeTagProps = _ref6.codeTagProps,
         codeTagProps = _ref6$codeTagProps === void 0 ? {
-      style: style['code[class*="language-"]']
-    } : _ref6$codeTagProps,
+          style: style['code[class*="language-"]']
+        } : _ref6$codeTagProps,
         _ref6$useInlineStyles = _ref6.useInlineStyles,
         useInlineStyles = _ref6$useInlineStyles === void 0 ? true : _ref6$useInlineStyles,
         _ref6$showLineNumbers = _ref6.showLineNumbers,

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _properties = _interopRequireDefault(require("refractor/lang/properties.js"));
 
-;
+
 var _default = _properties.default;
 exports.default = _default;

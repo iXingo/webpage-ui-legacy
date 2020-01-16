@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _python = _interopRequireDefault(require("refractor/lang/python.js"));
 
-;
+
 var _default = _python.default;
 exports.default = _default;

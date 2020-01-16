@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _roboconf = _interopRequireDefault(require("refractor/lang/roboconf.js"));
 
-;
+
 var _default = _roboconf.default;
 exports.default = _default;

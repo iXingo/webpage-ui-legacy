@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _bash = _interopRequireDefault(require("refractor/lang/bash.js"));
 
-;
+
 var _default = _bash.default;
 exports.default = _default;

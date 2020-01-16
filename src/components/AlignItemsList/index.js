@@ -1,1 +1,1 @@
-export { default } from  './AlignItemsList';
+export {default} from './AlignItemsList';

@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _nix = _interopRequireDefault(require("refractor/lang/nix.js"));
 
-;
+
 var _default = _nix.default;
 exports.default = _default;

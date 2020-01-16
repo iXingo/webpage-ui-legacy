@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _nim = _interopRequireDefault(require("refractor/lang/nim.js"));
 
-;
+
 var _default = _nim.default;
 exports.default = _default;

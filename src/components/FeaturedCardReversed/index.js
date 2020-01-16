@@ -1,1 +1,1 @@
-export { default } from './FeaturedCardReversed.js';
+export {default} from './FeaturedCardReversed.js';

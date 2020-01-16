@@ -9,6 +9,6 @@ exports.default = void 0;
 
 var _csp = _interopRequireDefault(require("refractor/lang/csp.js"));
 
-;
+
 var _default = _csp.default;
 exports.default = _default;
