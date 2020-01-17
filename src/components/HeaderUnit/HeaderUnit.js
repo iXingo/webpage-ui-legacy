@@ -50,7 +50,7 @@ const HeaderUnit = props => {
     const notificationType = "success";
     notification[notificationType]({
       message: '星狗网 Web App',
-      description: '加入计划' + name + '成功！',
+      description: '加入计划【' + name + '】成功！',
     });
   };
 
@@ -59,7 +59,7 @@ const HeaderUnit = props => {
     history.push("/index");
     notification[notificationType]({
       message: '星狗网 Web App',
-      description: '正在查看' + name,
+      description: '您正在查看【' + name + '】计划！',
     });
   };
 
