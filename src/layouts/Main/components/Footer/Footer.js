@@ -8,7 +8,8 @@ import {Link, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(4),
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
     // paddingTop: theme.spacing(8)
   },
 }));
