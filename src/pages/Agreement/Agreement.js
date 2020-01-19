@@ -4,16 +4,12 @@ import {Grid, Link, Typography} from '@material-ui/core';
 import {Link as RouterLink} from 'react-router-dom';
 
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
-import DesktopWindowsIcon from '@material-ui/icons/DesktopWindows';
-import SaveIcon from '@material-ui/icons/Save';
 import CollectionsIcon from '@material-ui/icons/Collections';
 import ChatIcon from '@material-ui/icons/Chat';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
-import TimelapseIncon from '@material-ui/icons/Timelapse';
 import DevicesIcon from '@material-ui/icons/Devices';
 import DescriptionIcon from '@material-ui/icons/Description';
 import DoneAllIcon from '@material-ui/icons/DoneAll';
-import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import Button from '@material-ui/core/Button';
 
 
