@@ -18,7 +18,8 @@ import {
   SignIn as SignInPage,
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
-  SinglePost as SinglePostPage
+  SinglePost as SinglePostPage,
+  Privacy as PrivacyPage
 } from './pages';
 
 class Routes extends Component {
@@ -120,6 +121,13 @@ class Routes extends Component {
               layout={MinimalLayout}
               path="/user-agreement"
               {...this.props}
+          />
+          <RouteWithLayout
+            component={PrivacyPage}
+            exact
+            layout={MinimalLayout}
+            path="/privacy"
+            {...this.props}
           />
           <RouteWithLayout
               component={FriendPage}

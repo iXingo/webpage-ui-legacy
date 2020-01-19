@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
   },
   content: {
     paddingTop: 0,
-    margin: 21,
+    margin: 12,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start'
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     // textAlign: 'center'
   },
   button: {
-    margin: theme.spacing(4),
+    marginTop: theme.spacing(4),
   },
   items: {
     display: 'flex',
@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const NotFound = () => {
+const Agreement = () => {
   const classes = useStyles();
 
   return (
@@ -555,7 +555,7 @@ const NotFound = () => {
                 variant="h5"
                 style={{color: "white"}}
               >
-                我已经认证阅读并且同意
+                我已经认真阅读并且同意
               </Link>
             </Button>
           </div>
@@ -566,4 +566,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default Agreement;

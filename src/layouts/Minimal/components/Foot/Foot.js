@@ -31,10 +31,10 @@ const Foot = props => {
     <div {...rest} className={clsx(classes.root, className)}>
       <div className={classes.footCopyright}>
         <Typography variant="body1" className={classes.footer}>
-          <a href={"http://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>关于星狗</a> |
-          <a href={"http://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>About Xindog</a> |
-          服务协议 |
-          隐私政策 |
+          <a href={"http://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>关于星狗</a> |&nbsp;
+          <a href={"http://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>About Xindog</a> |&nbsp;
+          <a href={"http://www.ixingo.com.cn/user-agreement"} style={{color:'white', textDecoration:'underline'}}>服务协议</a> |&nbsp;
+          <a href={"http://www.ixingo.com.cn/privacy"} style={{color:'white', textDecoration:'underline'}}>隐私政策</a> |&nbsp;
           开放平台 |
           商务洽谈
         </Typography>
