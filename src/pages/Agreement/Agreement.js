@@ -552,10 +552,10 @@ const NotFound = () => {
               <Link
                 component={RouterLink}
                 to="/sign-up"
-                variant="h6"
+                variant="h5"
                 style={{color: "white"}}
               >
-                阅读完毕
+                我已经认证阅读并且同意
               </Link>
             </Button>
           </div>
