@@ -25,7 +25,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'rows',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
   item: {
     display: 'flex',
@@ -60,7 +62,7 @@ const Copyright = () => {
             <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary" style={{fontSize: 40}}/>
               版权保护投诉指引
             </Typography>
-            <Typography variant="h3" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               【首部及导言】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -73,7 +75,7 @@ const Copyright = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               一、【通知程序】
             </Typography>
             <Typography paragraph className={classes.item}>

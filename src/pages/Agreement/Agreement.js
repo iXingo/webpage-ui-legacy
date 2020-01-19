@@ -33,7 +33,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'rows',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
   item: {
     display: 'flex',
@@ -64,7 +66,7 @@ const Agreement = () => {
             <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary" style={{fontSize: 40}}/>
               星狗网用户协议
             </Typography>
-            <Typography variant="h3" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               【首部及导言】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -81,7 +83,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               一、【协议的范围】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -147,7 +149,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               五、【按现状提供服务】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -159,7 +161,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               六、【自备设备】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -171,7 +173,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               七、【广告】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -183,7 +185,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               八、【服务费用】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -199,7 +201,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               九、【第三方提供的产品或服务】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -210,7 +212,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十、【基于软件提供服务】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -250,7 +252,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十一、【知识产权声明】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -266,7 +268,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十二、【用户违法违规行为】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -315,7 +317,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十三、【遵守当地法律监管】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -328,7 +330,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十四、【用户发送、传播的内容与投诉处理】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -350,7 +352,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十五、【不可抗力及其他免责事由】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -396,7 +398,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十六、【协议的生效与变更】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -412,7 +414,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               七、【广告】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -425,7 +427,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十七、【服务的变更、中断、终止】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -459,7 +461,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               七、【广告】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -472,7 +474,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十八、【管辖与法律适用】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -497,7 +499,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十九、【未成年人使用条款】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -528,7 +530,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               二十、【其他】
             </Typography>
             <Typography paragraph className={classes.item}>

@@ -33,7 +33,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'rows',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: theme.spacing(1),
+    paddingBottom: theme.spacing(1),
   },
   item: {
     display: 'flex',
@@ -64,7 +66,7 @@ const Privacy = () => {
             <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary" style={{fontSize: 40}}/>
               星狗网隐私政策
             </Typography>
-            <Typography variant="h3" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               引言
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -96,7 +98,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               一、【我们收集的信息】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -248,7 +250,7 @@ const Privacy = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               五、【您如何管理自己的信息】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -270,7 +272,7 @@ const Privacy = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               六、【我们分享的信息】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -300,7 +302,7 @@ const Privacy = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               七、【我们可能基于以下目的披露您的个人信息】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -316,7 +318,7 @@ const Privacy = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               八、【我们可能向您发送的信息】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -337,7 +339,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               九、【存储信息的地点和期限】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -366,7 +368,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十、【信息安全】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -387,7 +389,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十一、【广告】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -397,7 +399,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十二、【未成年人保护】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -416,7 +418,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十三、【适用范围】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -435,7 +437,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十四、【联系我们】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -456,7 +458,7 @@ const Privacy = () => {
             </Typography>
 
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十五、【变更】
             </Typography>
             <Typography paragraph className={classes.item}>
