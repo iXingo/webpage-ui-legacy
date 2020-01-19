@@ -31,12 +31,12 @@ const Foot = props => {
     <div {...rest} className={clsx(classes.root, className)}>
       <div className={classes.footCopyright}>
         <Typography variant="body1" className={classes.footer}>
-          <a href={"http://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>关于星狗</a> |&nbsp;
-          <a href={"http://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>About Xindog</a> |&nbsp;
-          <a href={"http://www.ixingo.com.cn/user-agreement"} style={{color:'white', textDecoration:'underline'}}>服务协议</a> |&nbsp;
-          <a href={"http://www.ixingo.com.cn/privacy"} style={{color:'white', textDecoration:'underline'}}>隐私政策</a> |&nbsp;
-          开放平台 |
-          商务洽谈
+          <a href={"https://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>关于星狗</a> |&nbsp;
+          <a href={"https://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>About Xindog</a> |&nbsp;
+          <a href={"https://www.ixingo.com.cn/user-agreement"} style={{color:'white', textDecoration:'underline'}}>服务协议</a> |&nbsp;
+          <a href={"https://www.ixingo.com.cn/privacy"} style={{color:'white', textDecoration:'underline'}}>隐私政策</a> |&nbsp;
+          <a href={"https://github.com/iXingo/WebPageUI.git"} style={{color:'white', textDecoration:'underline'}}>开放平台</a> |&nbsp;
+          <a href={"https://weibo.com/ixingo"} style={{color:'white', textDecoration:'underline'}}>商务洽谈</a> |&nbsp;
         </Typography>
         <Typography variant="body1" className={classes.footer}>
           安徽互联网举报中心 |
