@@ -35,15 +35,16 @@ const Foot = props => {
           <a href={"https://www.ixingo.com.cn/about"} style={{color:'white', textDecoration:'underline'}}>About Xindog</a> |&nbsp;
           <a href={"https://www.ixingo.com.cn/user-agreement"} style={{color:'white', textDecoration:'underline'}}>服务协议</a> |&nbsp;
           <a href={"https://www.ixingo.com.cn/privacy"} style={{color:'white', textDecoration:'underline'}}>隐私政策</a> |&nbsp;
+          <a href={"https://www.ixingo.com.cn/copyright"} style={{color:'white', textDecoration:'underline'}}>版权保护投诉指引</a> |&nbsp;
           <a href={"https://github.com/iXingo/WebPageUI.git"} style={{color:'white', textDecoration:'underline'}}>开放平台</a> |&nbsp;
           <a href={"https://weibo.com/ixingo"} style={{color:'white', textDecoration:'underline'}}>商务洽谈</a>&nbsp;
         </Typography>
         <Typography variant="body1" className={classes.footer}>
-          <a href={"http://www.ah12377.cn/"} style={{color:'white', textDecoration:'underline'}}>安徽互联网举报中心</a> |&nbsp;
+          <a href={"http://www.ah12377.cn/"} style={{color:'white', textDecoration:'underline'}}>安徽省互联网和不良信息举报平台</a> |&nbsp;
           <a href={"http://gat.ah.gov.cn/"} style={{color:'white', textDecoration:'underline'}}>安徽省公安厅</a> |&nbsp;
-          <a href={"https://www.ixingo.com.cn"} style={{color:'white', textDecoration:'underline'}}>网站首页</a> |&nbsp;
-          <a href={"https://www.ixingo.com.cn/copyright"} style={{color:'white', textDecoration:'underline'}}>版权保护投诉指引</a> |&nbsp;
           <a href={"https://ahca.miit.gov.cn/"} style={{color:'white', textDecoration:'underline'}}>安徽省通信管理局</a>&nbsp;
+          <a href={"https://www.ixingo.com.cn"} style={{color:'white', textDecoration:'underline'}}>网站首页</a> |&nbsp;
+
         </Typography>
         <Typography variant="body1" className={classes.footer}>
           ICP证: 皖ICP备15011098号
