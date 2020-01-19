@@ -49,10 +49,13 @@ const Foot = props => {
           ICP证: 皖ICP备15011098号
         </Typography>
         <Typography variant="body1" className={classes.footer}>
+          违法和不良信息举报电话：12321
+        </Typography>
+        <Typography variant="body1" className={classes.footer}>
           星狗网络&nbsp;&nbsp;版权所有
         </Typography>
         <Typography variant="body1" className={classes.footer}>
-          违法和不良信息举报电话：12321
+          Copyright 2018 - 2020 iXingo. All Rights Reserved
         </Typography>
       </div>
     </div>
