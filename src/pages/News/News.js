@@ -8,7 +8,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 // import Link from '@material-ui/core/Link';
-// import Button from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
 import {
@@ -22,7 +22,8 @@ import {
   PostCard,
   SmallPostCard,
   SummaryCard,
-  Title
+  Title,
+  Subscribe
 } from '../../components';
 // import Divider from '@material-ui/core/Divider';
 // import NotAuth from '../NotAuth';
@@ -31,12 +32,10 @@ import {
 const useStyles = makeStyles(theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
-    dispaly: 'flex'
   },
   toolbarTitle: {
     flex: 1,
     color: '#1a73e8',
-    dispaly: 'block'
   },
   toolbarSecondary: {
     justifyContent: 'space-between',
@@ -190,7 +189,7 @@ const News = props => {
         <Container maxWidth="xl">
           <Toolbar className={classes.toolbar}>
             {/* <Button size="small">订阅</Button> */}
-            {/* <Subscribe /> */}
+             <Subscribe />
             <div>
               <Typography
                   component="h2"
@@ -204,11 +203,11 @@ const News = props => {
               </Typography>
             </div>
             {/* <IconButton>
-            <SearchIcon />
-          </IconButton> */}
-            {/* <Button variant="outlined" size="small">
-            搜索
-          </Button> */}
+            <SearchIcon />*/}
+          {/*</IconButton> */}
+            <Button variant="outlined" size="small">
+              搜索
+            </Button>
           </Toolbar>
 
           <main>

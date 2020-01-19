@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   quote: {
     backgroundColor: theme.palette.neutral,
-    height: '600px',
+    height: '640px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

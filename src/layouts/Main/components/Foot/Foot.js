@@ -11,6 +11,8 @@ const useStyles = makeStyles(theme => ({
   },
   footCopyright:{
     paddingTop: 20,
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
     paddingBottom: 20,
     backgroundColor: '#1a73e8'
   },
