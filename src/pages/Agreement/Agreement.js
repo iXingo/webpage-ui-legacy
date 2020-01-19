@@ -413,20 +413,6 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-
-            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
-              七、【广告】
-            </Typography>
-            <Typography paragraph className={classes.item}>
-
-              7.1您同意星狗可以自行或由第三方通过短信、电子邮件或电子信息等多种方式向您发送、展示广告或其他信息（包括商业与非商业信息），广告或其他信息的具体发送及展示形式、频次及内容等以星狗实际提供为准。
-              <br/>
-
-              7.2星狗将依照相关法律法规要求开展广告业务。您同意，对本服务中出现的广告，您应审慎判断其真实性和可靠性，除法律明确规定外，您应对因该广告而实施的行为负责。
-              <br/>
-            </Typography>
-
-
             <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               十七、【服务的变更、中断、终止】
             </Typography>
@@ -457,19 +443,6 @@ const Agreement = () => {
               <br/>
 
               17.5您有责任自行备份存储在本服务中的数据。如果您的服务被终止，星狗有权从服务器上永久地删除您的数据,法律法规另有规定的除外。服务中止或终止后，星狗没有义务向您提供或返还数据。
-              <br/>
-            </Typography>
-
-
-            <Typography variant="h4" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
-              七、【广告】
-            </Typography>
-            <Typography paragraph className={classes.item}>
-
-              7.1您同意星狗可以自行或由第三方通过短信、电子邮件或电子信息等多种方式向您发送、展示广告或其他信息（包括商业与非商业信息），广告或其他信息的具体发送及展示形式、频次及内容等以星狗实际提供为准。
-              <br/>
-
-              7.2星狗将依照相关法律法规要求开展广告业务。您同意，对本服务中出现的广告，您应审慎判断其真实性和可靠性，除法律明确规定外，您应对因该广告而实施的行为负责。
               <br/>
             </Typography>
 
