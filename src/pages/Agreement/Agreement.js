@@ -61,12 +61,10 @@ const Agreement = () => {
           item
         >
           <div className={classes.content}>
-            <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary"
-                                                                                  style={{fontSize: 40}}/>
+            <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary" style={{fontSize: 40}}/>
               星狗网用户协议
             </Typography>
-            <Typography variant="h3" className={classes.items}><ChatIcon color="primary"
-                                                                         style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h3" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               【首部及导言】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -95,10 +93,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h4" className={classes.items}><ContactMailIcon color="primary" style={{
-              fontSize: 25,
-              paddingRight: 5
-            }}/>
+            <Typography variant="h4" className={classes.items}><ContactMailIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               二、【帐号与密码安全】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -110,8 +105,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h4" className={classes.items}><DevicesIcon color="primary"
-                                                                            style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><DevicesIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               三、【用户个人信息保护】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -137,10 +131,7 @@ const Agreement = () => {
             </Typography>
 
 
-            <Typography variant="h4" className={classes.items}><DescriptionIcon color="primary" style={{
-              fontSize: 25,
-              paddingRight: 5
-            }}/>
+            <Typography variant="h4" className={classes.items}><DescriptionIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               四、【使用本服务的方式】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -156,8 +147,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary"
-                                                                            style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               五、【按现状提供服务】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -169,8 +159,7 @@ const Agreement = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary"
-                                                                            style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h3" className={classes.items}><DoneAllIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               六、【自备设备】
             </Typography>
             <Typography paragraph className={classes.item}>

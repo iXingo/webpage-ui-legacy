@@ -61,12 +61,10 @@ const Privacy = () => {
           item
         >
           <div className={classes.content}>
-            <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary"
-                                                                                  style={{fontSize: 40}}/>
+            <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary" style={{fontSize: 40}}/>
               星狗网隐私政策
             </Typography>
-            <Typography variant="h3" className={classes.items}><ChatIcon color="primary"
-                                                                         style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h3" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
               引言
             </Typography>
             <Typography paragraph className={classes.item}>

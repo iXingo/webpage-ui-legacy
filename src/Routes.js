@@ -19,7 +19,8 @@ import {
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
   SinglePost as SinglePostPage,
-  Privacy as PrivacyPage
+  Privacy as PrivacyPage,
+  Copyright as CopyrightPage
 } from './pages';
 
 class Routes extends Component {
@@ -127,6 +128,13 @@ class Routes extends Component {
             exact
             layout={MinimalLayout}
             path="/privacy"
+            {...this.props}
+          />
+          <RouteWithLayout
+            component={CopyrightPage}
+            exact
+            layout={MinimalLayout}
+            path="/copyright"
             {...this.props}
           />
           <RouteWithLayout
