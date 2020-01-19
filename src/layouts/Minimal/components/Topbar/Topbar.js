@@ -3,8 +3,9 @@ import {Link as RouterLink} from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
-import {AppBar, Hidden, IconButton, Toolbar} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import {AppBar,  Toolbar} from '@material-ui/core';
+// import {AppBar, Hidden, IconButton, Toolbar} from '@material-ui/core';
+// import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -41,14 +42,14 @@ const Topbar = props => {
             />
           </RouterLink>测试版 Beta
           <div className={classes.flexGrow}/>
-          <Hidden lgUp>
-            <IconButton
-                color="inherit"
-                onClick={onSidebarOpen}
-            >
-              <MenuIcon/>
-            </IconButton>
-          </Hidden>
+          {/*<Hidden lgUp>*/}
+          {/*  <IconButton*/}
+          {/*      color="inherit"*/}
+          {/*      onClick={onSidebarOpen}*/}
+          {/*  >*/}
+          {/*    <MenuIcon/>*/}
+          {/*  </IconButton>*/}
+          {/*</Hidden>*/}
         </Toolbar>
 
       </AppBar>
