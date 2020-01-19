@@ -19,6 +19,7 @@ import {
   FeaturedContent,
   FeaturedList,
   MediaCard,
+  MainFeaturedPost,
   PostCard,
   SmallPostCard,
   SummaryCard,
@@ -215,6 +216,11 @@ const News = props => {
             {/* Main featured post */}
             <Carousel/>
 
+
+            <Paper className={classes.list}>
+              <MainFeaturedPost card={card1} {...props}/>
+            </Paper>
+
             <Paper className={classes.list}>
               <FeaturedCardReversed card={card2} {...props}/>
             </Paper>
@@ -222,6 +228,7 @@ const News = props => {
             <Paper className={classes.list}>
               <FeaturedCard card={card1} {...props}/>
             </Paper>
+
 
             <Paper className={classes.list}>
               <FeaturedList/>
