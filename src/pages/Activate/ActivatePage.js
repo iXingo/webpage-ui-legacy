@@ -9,8 +9,8 @@ const useStyles = makeStyles(theme => ({
   content: {
     paddingTop: 100,
     textAlign: 'center',
-    marginTop: 120,
-    marginBottom: 120
+    marginTop: 72,
+    marginBottom: 72
   },
   image: {
     marginTop: 50,
