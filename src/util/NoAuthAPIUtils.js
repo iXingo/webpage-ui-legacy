@@ -19,9 +19,9 @@ const request = (options) => {
       );
 };
 
-export function getAllPosts() {
-  return request({
-    url: API_BASE_URL + "/posts/all",
-    method: 'GET'
-  });
-}
+// export function getAllPosts() {
+//   return request({
+//     url: API_BASE_URL + "/posts/all",
+//     method: 'GET'
+//   });
+// }
