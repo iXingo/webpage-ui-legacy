@@ -170,7 +170,6 @@ export function getFriend(id) {
 }
 
 
-// News related data
 export function getNews(id) {
   return request({
     url: API_BASE_URL + "/news/" + id,
