@@ -28,16 +28,16 @@ const MarqueeText = props => {
   const classes = useStyles();
 
   return (
-      <div className={classes.marque}>
-        <Verify></Verify>
-        <div className={classes.prefix}>
-          NEWS:
-        </div>
-        <Marquee loop={true} hoverToStop={true} text="
+    <div className={classes.marque}>
+      <Verify></Verify>
+      <div className={classes.prefix}>
+        NEWS:
+      </div>
+      <Marquee loop={true} hoverToStop={true} text="
           😃 您当前登录的是星狗网。 🌹️ 星狗网是南京航空航天大学计算机科学与技术学院软件工程专业学生汪欣搭建的一个专注于资讯、娱乐、生活、心情技术分享新兴网络平台。
           😋️ 您当前登录的是星狗网。 🇨🇳️ 星狗网是南京航空航天大学计算机科学与技术学院软件工程专业学生汪欣搭建的一个专注于资讯、娱乐、生活、心情技术分享新兴网络平台。
         "/>
-      </div>
+    </div>
   );
 };
 export default MarqueeText;

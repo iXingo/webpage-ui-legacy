@@ -18,14 +18,14 @@ const Tag = props => {
   const classes = useStyles();
 
   return (
-      <div className={classes.root}>
-        <Chip
-            avatar={<Avatar alt="Natacha" src="https://img.ixingo.cn/000_.png"/>}
-            label={props.tag.name}
-            className={classes.chip}
-            color="primary"
-        />
-      </div>
+    <div className={classes.root}>
+      <Chip
+        avatar={<Avatar alt="Natacha" src="https://img.ixingo.cn/000_.png"/>}
+        label={props.tag.name}
+        className={classes.chip}
+        color="primary"
+      />
+    </div>
   );
 };
 

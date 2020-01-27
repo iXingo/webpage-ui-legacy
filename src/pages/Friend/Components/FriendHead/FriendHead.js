@@ -94,33 +94,33 @@ const FriendHead = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        {/* Hero unit */}
-        <Grid container className={classes.mainGrid}>
-          <Grid container item xs={12} md={12} className={classes.headimage}/>
-          <Grid item xs={10} md={8} className={classes.title}>
-            <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-              他们，
-            </Typography>
-            <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-              正影响着汪师傅。
-            </Typography>
-          </Grid>
-          <Grid item xs={10} md={8} className={classes.grid}>
-            <Typography variant="h3" align="center" color="textSecondary" paragraph className={classes.subpro}>
-              人生得一知己足矣， 斯世当以同怀视之。
-            </Typography>
-          </Grid>
-          <Grid item xs={10} md={8} className={classes.grid}>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subtext}>
-              不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。
-              走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。
-              现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。
-            </Typography>
-          </Grid>
+    <React.Fragment>
+      <CssBaseline/>
+      {/* Hero unit */}
+      <Grid container className={classes.mainGrid}>
+        <Grid container item xs={12} md={12} className={classes.headimage}/>
+        <Grid item xs={10} md={8} className={classes.title}>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
+            他们，
+          </Typography>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
+            正影响着汪师傅。
+          </Typography>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={10} md={8} className={classes.grid}>
+          <Typography variant="h3" align="center" color="textSecondary" paragraph className={classes.subpro}>
+            人生得一知己足矣， 斯世当以同怀视之。
+          </Typography>
+        </Grid>
+        <Grid item xs={10} md={8} className={classes.grid}>
+          <Typography variant="h5" align="center" color="textSecondary" paragraph className={classes.subtext}>
+            不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。
+            走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。
+            现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。
+          </Typography>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

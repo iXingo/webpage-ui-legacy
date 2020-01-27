@@ -41,25 +41,25 @@ const FeaturedCard = props => {
   };
 
   return (
-      <Grid container className={classes.main}>
-        <Grid item xs={12} md={6}>
-          <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='textSecondary'>
-            {card.type}
-          </Typography>
-          <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
-            {card.title}
-          </Typography>
-          <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}} color="textSecondary">
-            {card.description}
-          </Typography>
-          <Button variant="outlined" size="large" color="primary" onClick={clickUrl}>
-            查看更多...
-          </Button>
-        </Grid>
-        <Grid item md={6}>
-          <img alt="Cover" className={classes.mainImg} src={card.imgUrl}/>
-        </Grid>
+    <Grid container className={classes.main}>
+      <Grid item xs={12} md={6}>
+        <Typography overline gutterBottom variant='h5' style={{padding: '10px 0'}} color='textSecondary'>
+          {card.type}
+        </Typography>
+        <Typography overline gutterBottom variant='h2' style={{padding: '10px 0'}} color="primary">
+          {card.title}
+        </Typography>
+        <Typography overline gutterBottom variant='h5' style={{padding: '30px 0'}} color="textSecondary">
+          {card.description}
+        </Typography>
+        <Button variant="outlined" size="large" color="primary" onClick={clickUrl}>
+          查看更多...
+        </Button>
       </Grid>
+      <Grid item md={6}>
+        <img alt="Cover" className={classes.mainImg} src={card.imgUrl}/>
+      </Grid>
+    </Grid>
   );
 };
 

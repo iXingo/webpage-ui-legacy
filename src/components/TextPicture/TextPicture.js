@@ -60,25 +60,25 @@ const PictureText = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitle context={props.context}/>
-        <Grid container justify="center" alignItems='center' className={classes.content}>
-          <Grid item xs={12} md={4}>
-            <div className={classes.main}>
-              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-                {props.context.title}
-              </Typography>
-              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-                {props.context.content}
-              </Typography>
-            </div>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
-          </Grid>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitle context={props.context}/>
+      <Grid container justify="center" alignItems='center' className={classes.content}>
+        <Grid item xs={12} md={4}>
+          <div className={classes.main}>
+            <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+              {props.context.title}
+            </Typography>
+            <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+              {props.context.content}
+            </Typography>
+          </div>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={12} md={4}>
+          <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

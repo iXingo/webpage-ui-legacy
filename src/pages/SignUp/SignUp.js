@@ -166,9 +166,9 @@ const SignUp = props => {
       values: {
         ...formState.values,
         [event.target.name]:
-            event.target.type === 'checkbox'
-                ? event.target.checked
-                : event.target.value
+          event.target.type === 'checkbox'
+            ? event.target.checked
+            : event.target.value
       },
       touched: {
         ...formState.touched,
@@ -188,50 +188,50 @@ const SignUp = props => {
     const signupRequest = Object.assign({}, values);
     const {username, email} = formState.values;
     checkEmailAvailability(email)
-        .then(response => {
-          if (response.available) {
-            notification.success({
-              message: '星狗网 Web App',
-              description: "恭喜！您的邮箱可用",
-            });
-            // history.push("/sign-in");
-          } else {
-            notification.error({
-              message: '星狗网 Web App',
-              description: "告诉您一个坏消息，那就是: 您当前邮箱已经被注册！",
-            });
-            history.push("/sign-up");
-            // history.push("/sign-in");
-          }
-        }).catch(error => {
+      .then(response => {
+        if (response.available) {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "恭喜！您的邮箱可用",
+          });
+          // history.push("/sign-in");
+        } else {
+          notification.error({
+            message: '星狗网 Web App',
+            description: "告诉您一个坏消息，那就是: 您当前邮箱已经被注册！",
+          });
+          history.push("/sign-up");
+          // history.push("/sign-in");
+        }
+      }).catch(error => {
       history.push("/sign-up");
     });
 
     checkUsernameAvailability(username)
-        .then(response => {
-          if (response.available) {
-            notification.success({
-              message: '星狗网 Web App',
-              description: "恭喜您，您的Id可用～",
-            });
-          } else {
-            notification.error({
-              message: '星狗网 Web App',
-              description: "用户名很受欢迎, 已经被别人占用啦，再选择一个吧～",
-            });
-            history.push("/sign-up");
-          }
-        }).catch(error => {
+      .then(response => {
+        if (response.available) {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "恭喜您，您的Id可用～",
+          });
+        } else {
+          notification.error({
+            message: '星狗网 Web App',
+            description: "用户名很受欢迎, 已经被别人占用啦，再选择一个吧～",
+          });
+          history.push("/sign-up");
+        }
+      }).catch(error => {
       history.push("/sign-up");
     });
     signup(signupRequest)
-        .then(response => {
-          notification.success({
-            message: '星狗网 Web App',
-            description: "谢谢！您已经成功注册！现在可以登录啦！",
-          });
-          history.push("/sign-in");
-        }).catch(error => {
+      .then(response => {
+        notification.success({
+          message: '星狗网 Web App',
+          description: "谢谢！您已经成功注册！现在可以登录啦！",
+        });
+        history.push("/sign-in");
+      }).catch(error => {
       notification.error({
         message: '星狗网 Web App',
         description: error.message || '对不起，好像发生了一些错误，请您稍后再试！'
@@ -243,192 +243,192 @@ const SignUp = props => {
   document.title = "星狗网 | 加入星狗网， 看见好时光";
 
   return (
-      <div className={classes.root}>
+    <div className={classes.root}>
+      <Grid
+        className={classes.grid}
+        container
+      >
         <Grid
-            className={classes.grid}
-            container
+          className={classes.quoteContainer}
+          item
+          lg={6}
         >
-          <Grid
-              className={classes.quoteContainer}
-              item
-              lg={6}
-          >
-            <div className={classes.quote}>
-              <div className={classes.quoteInner}>
+          <div className={classes.quote}>
+            <div className={classes.quoteInner}>
+              <Typography
+                className={classes.quoteText}
+                variant="h1"
+              >
+                汪师傅:
+              </Typography>
+              <Typography
+                className={classes.quoteText}
+                variant="h1"
+              >
+                看见，好时光
+              </Typography>
+              <div className={classes.person}>
                 <Typography
-                    className={classes.quoteText}
-                    variant="h1"
+                  className={classes.name}
+                  variant="body1"
                 >
-                  汪师傅:
+                  &copy; Copyright 2020
                 </Typography>
                 <Typography
-                    className={classes.quoteText}
-                    variant="h1"
+                  className={classes.bio}
+                  variant="body2"
                 >
-                  看见，好时光
+                  Designed by Shawn Wang in Pudong New Area.
                 </Typography>
-                <div className={classes.person}>
-                  <Typography
-                      className={classes.name}
-                      variant="body1"
-                  >
-                    &copy; Copyright 2020
-                  </Typography>
-                  <Typography
-                      className={classes.bio}
-                      variant="body2"
-                  >
-                    Designed by Shawn Wang in Pudong New Area.
-                  </Typography>
-                </div>
               </div>
             </div>
-          </Grid>
-          <Grid
-              className={classes.content}
-              item
-              lg={6}
-              xs={12}
-          >
-            <div className={classes.content}>
-              <div className={classes.contentHeader}>
-                <IconButton onClick={handleBack}>
-                  <ArrowBackIcon/>
-                </IconButton>
-              </div>
-              <div className={classes.contentBody}>
-                <form
-                    className={classes.form}
-                    onSubmit={handleSignUp}
+          </div>
+        </Grid>
+        <Grid
+          className={classes.content}
+          item
+          lg={6}
+          xs={12}
+        >
+          <div className={classes.content}>
+            <div className={classes.contentHeader}>
+              <IconButton onClick={handleBack}>
+                <ArrowBackIcon/>
+              </IconButton>
+            </div>
+            <div className={classes.contentBody}>
+              <form
+                className={classes.form}
+                onSubmit={handleSignUp}
+              >
+                <Typography
+                  className={classes.title}
+                  variant="h2"
                 >
+                  建立新账户
+                </Typography>
+                <Typography
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  使用您的电子邮箱以在星狗网建立新的账户
+                </Typography>
+                <TextField
+                  className={classes.textField}
+                  error={hasError('name')}
+                  fullWidth
+                  helperText={
+                    hasError('name') ? formState.errors.name[0] : null
+                  }
+                  label="我们该如何称呼你（昵称）"
+                  name="name"
+                  onChange={handleChange}
+                  type="text"
+                  value={formState.values.name || ''}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.textField}
+                  error={hasError('username')}
+                  fullWidth
+                  helperText={
+                    hasError('username') ? formState.errors.username[0] : null
+                  }
+                  label="用户名（用户ID）"
+                  name="username"
+                  onChange={handleChange}
+                  type="text"
+                  value={formState.values.username || ''}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.textField}
+                  error={hasError('email')}
+                  fullWidth
+                  helperText={
+                    hasError('email') ? formState.errors.email[0] : null
+                  }
+                  label="邮箱地址"
+                  name="email"
+                  onChange={handleChange}
+                  type="text"
+                  value={formState.values.email || ''}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.textField}
+                  error={hasError('password')}
+                  fullWidth
+                  helperText={
+                    hasError('password') ? formState.errors.password[0] : null
+                  }
+                  label="密码"
+                  name="password"
+                  onChange={handleChange}
+                  type="password"
+                  value={formState.values.password || ''}
+                  variant="outlined"
+                />
+                <div className={classes.policy}>
+                  <Checkbox
+                    checked={formState.values.policy || false}
+                    className={classes.policyCheckbox}
+                    color="primary"
+                    name="policy"
+                    onChange={handleChange}
+                  />
                   <Typography
-                      className={classes.title}
-                      variant="h2"
+                    className={classes.policyText}
+                    color="textSecondary"
+                    variant="body1"
                   >
-                    建立新账户
-                  </Typography>
-                  <Typography
-                      color="textSecondary"
-                      gutterBottom
-                  >
-                    使用您的电子邮箱以在星狗网建立新的账户
-                  </Typography>
-                  <TextField
-                      className={classes.textField}
-                      error={hasError('name')}
-                      fullWidth
-                      helperText={
-                        hasError('name') ? formState.errors.name[0] : null
-                      }
-                      label="我们该如何称呼你（昵称）"
-                      name="name"
-                      onChange={handleChange}
-                      type="text"
-                      value={formState.values.name || ''}
-                      variant="outlined"
-                  />
-                  <TextField
-                      className={classes.textField}
-                      error={hasError('username')}
-                      fullWidth
-                      helperText={
-                        hasError('username') ? formState.errors.username[0] : null
-                      }
-                      label="用户名（用户ID）"
-                      name="username"
-                      onChange={handleChange}
-                      type="text"
-                      value={formState.values.username || ''}
-                      variant="outlined"
-                  />
-                  <TextField
-                      className={classes.textField}
-                      error={hasError('email')}
-                      fullWidth
-                      helperText={
-                        hasError('email') ? formState.errors.email[0] : null
-                      }
-                      label="邮箱地址"
-                      name="email"
-                      onChange={handleChange}
-                      type="text"
-                      value={formState.values.email || ''}
-                      variant="outlined"
-                  />
-                  <TextField
-                      className={classes.textField}
-                      error={hasError('password')}
-                      fullWidth
-                      helperText={
-                        hasError('password') ? formState.errors.password[0] : null
-                      }
-                      label="密码"
-                      name="password"
-                      onChange={handleChange}
-                      type="password"
-                      value={formState.values.password || ''}
-                      variant="outlined"
-                  />
-                  <div className={classes.policy}>
-                    <Checkbox
-                        checked={formState.values.policy || false}
-                        className={classes.policyCheckbox}
-                        color="primary"
-                        name="policy"
-                        onChange={handleChange}
-                    />
-                    <Typography
-                        className={classes.policyText}
-                        color="textSecondary"
-                        variant="body1"
-                    >
-                      我已经认真阅读并且同意{' '}
-                      <Link
-                          color="primary"
-                          component={RouterLink}
-                          to="/user-agreement"
-                          underline="always"
-                          variant="h6"
-                      >
-                        星狗网用户协议
-                      </Link>
-                    </Typography>
-                  </div>
-                  {hasError('policy') && (
-                      <FormHelperText error>
-                        {formState.errors.policy[0]}
-                      </FormHelperText>
-                  )}
-                  <Button
-                      className={classes.signUpButton}
-                      color="primary"
-                      disabled={!formState.isValid}
-                      fullWidth
-                      size="large"
-                      type="submit"
-                      variant="contained"
-                  >
-                    立即注册
-                  </Button>
-                  <Typography
-                      color="textSecondary"
-                      variant="body1"
-                  >
-                    已有账号?{' '}
+                    我已经认真阅读并且同意{' '}
                     <Link
-                        component={RouterLink}
-                        to="/sign-in"
-                        variant="h6"
+                      color="primary"
+                      component={RouterLink}
+                      to="/user-agreement"
+                      underline="always"
+                      variant="h6"
                     >
-                      登录
+                      星狗网用户协议
                     </Link>
                   </Typography>
-                </form>
-              </div>
+                </div>
+                {hasError('policy') && (
+                  <FormHelperText error>
+                    {formState.errors.policy[0]}
+                  </FormHelperText>
+                )}
+                <Button
+                  className={classes.signUpButton}
+                  color="primary"
+                  disabled={!formState.isValid}
+                  fullWidth
+                  size="large"
+                  type="submit"
+                  variant="contained"
+                >
+                  立即注册
+                </Button>
+                <Typography
+                  color="textSecondary"
+                  variant="body1"
+                >
+                  已有账号?{' '}
+                  <Link
+                    component={RouterLink}
+                    to="/sign-in"
+                    variant="h6"
+                  >
+                    登录
+                  </Link>
+                </Typography>
+              </form>
             </div>
-          </Grid>
+          </div>
         </Grid>
-      </div>
+      </Grid>
+    </div>
   );
 };
 

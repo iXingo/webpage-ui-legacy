@@ -35,43 +35,43 @@ const UpgradePlan = props => {
   const classes = useStyles();
 
   return (
-      <div
-          {...rest}
-          className={clsx(classes.root, className)}
-      >
-        <div className={classes.media}>
-          <img
-              alt="开源网站"
-              src="https://img.ixingo.cn/undraw_resume_folder_2_arse.svg"
-          />
-        </div>
-        <div className={classes.content}>
-          <Typography
-              align="center"
-              gutterBottom
-              variant="h6"
-          >
-            开源网站
-          </Typography>
-          <Typography
-              align="center"
-              variant="body2"
-          >
-            星狗网为开源程序。 基于前后端分离架构构建，源代码已经在Github上开源（尚未完工）。
-          </Typography>
-        </div>
-        <div className={classes.actions}>
-          <Button
-              color="primary"
-              component="a"
-              href="https://github.com/iXingo/WebPageUI.git"
-              variant="contained"
-          >
-            <GitHubIcon/> &nbsp;&nbsp;Github
-          </Button>
-
-        </div>
+    <div
+      {...rest}
+      className={clsx(classes.root, className)}
+    >
+      <div className={classes.media}>
+        <img
+          alt="开源网站"
+          src="https://img.ixingo.cn/undraw_resume_folder_2_arse.svg"
+        />
       </div>
+      <div className={classes.content}>
+        <Typography
+          align="center"
+          gutterBottom
+          variant="h6"
+        >
+          开源网站
+        </Typography>
+        <Typography
+          align="center"
+          variant="body2"
+        >
+          星狗网为开源程序。 基于前后端分离架构构建，源代码已经在Github上开源（尚未完工）。
+        </Typography>
+      </div>
+      <div className={classes.actions}>
+        <Button
+          color="primary"
+          component="a"
+          href="https://github.com/iXingo/WebPageUI.git"
+          variant="contained"
+        >
+          <GitHubIcon/> &nbsp;&nbsp;Github
+        </Button>
+
+      </div>
+    </div>
   );
 };
 

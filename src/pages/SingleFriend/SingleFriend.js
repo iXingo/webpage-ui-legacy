@@ -24,16 +24,16 @@ class SingleFriend extends Component {
       isLoading: true
     });
     promise
-        .then(response => {
-          this.setState({
-            friend: response,
-            isLoading: false
-          });
-          if (response.code === 400) {
-            history.push("/not-found");
-          }
-          document.title = "好友: " + this.state.friend.name + " | 星狗网";
-        }).catch(error => {
+      .then(response => {
+        this.setState({
+          friend: response,
+          isLoading: false
+        });
+        if (response.code === 400) {
+          history.push("/not-found");
+        }
+        document.title = "好友: " + this.state.friend.name + " | 星狗网";
+      }).catch(error => {
       this.setState({
         isLoading: false
       });
@@ -66,9 +66,9 @@ class SingleFriend extends Component {
   render() {
     const {friend} = this.state;
     return (
-        <div>
-          <FriendMain friend={friend} {...this.props}/>
-        </div>
+      <div>
+        <FriendMain friend={friend} {...this.props}/>
+      </div>
     );
   }
 

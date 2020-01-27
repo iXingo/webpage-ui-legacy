@@ -75,27 +75,27 @@ const PictureTextLink = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitle context={props.context}/>
-        <Grid container justify="center" alignItems='center' className={classes.content}>
-          <Grid item xs={12} md={4}>
-            <img className={classes.picture} src={props.context.image} alt={props.context.textTitle}/>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <div className={classes.textMain}>
-              <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                {props.context.textTitle}
-              </Typography>
-              <Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
-                {props.context.textContent}
-              </Typography>
-              <Link component={RouterLink} to={props.context.linkUrl} hover="none"
-                    className={classes.link}>{props.context.linkText} →</Link>
-            </div>
-          </Grid>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitle context={props.context}/>
+      <Grid container justify="center" alignItems='center' className={classes.content}>
+        <Grid item xs={12} md={4}>
+          <img className={classes.picture} src={props.context.image} alt={props.context.textTitle}/>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={12} md={4}>
+          <div className={classes.textMain}>
+            <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+              {props.context.textTitle}
+            </Typography>
+            <Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
+              {props.context.textContent}
+            </Typography>
+            <Link component={RouterLink} to={props.context.linkUrl} hover="none"
+                  className={classes.link}>{props.context.linkText} →</Link>
+          </div>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

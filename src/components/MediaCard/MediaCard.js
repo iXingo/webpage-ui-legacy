@@ -67,32 +67,32 @@ const MediaCard = props => {
   }
 
   return (
-      <Grid container>
-        {posts.map(post => (
-            <Grid item key={props.card} xs={12} md={6} className={classes.cardGrids}>
-              <Card className={classes.cards}>
-                <CardMedia
-                    className={classes.cardMedias}
-                    image={post.picUrl}
-                    title={post.title}
-                />
-                <CardContent className={classes.cardContents}>
-                  <Typography gutterBottom variant="h3" component="h2" color="primary">
-                    {post.title}
-                  </Typography>
-                  <Typography variant="h5" className={classes.summary}>
-                    {post.summary}
-                  </Typography>
-                </CardContent>
-                <CardActions className={classes.cardContents}>
-                  <Button size="small" color="primary" onClick={() => openPost(String(post.id))}>
-                    查看全文...
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-        ))}
-      </Grid>
+    <Grid container>
+      {posts.map(post => (
+        <Grid item key={props.card} xs={12} md={6} className={classes.cardGrids}>
+          <Card className={classes.cards}>
+            <CardMedia
+              className={classes.cardMedias}
+              image={post.picUrl}
+              title={post.title}
+            />
+            <CardContent className={classes.cardContents}>
+              <Typography gutterBottom variant="h3" component="h2" color="primary">
+                {post.title}
+              </Typography>
+              <Typography variant="h5" className={classes.summary}>
+                {post.summary}
+              </Typography>
+            </CardContent>
+            <CardActions className={classes.cardContents}>
+              <Button size="small" color="primary" onClick={() => openPost(String(post.id))}>
+                查看全文...
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+      ))}
+    </Grid>
   );
 };
 

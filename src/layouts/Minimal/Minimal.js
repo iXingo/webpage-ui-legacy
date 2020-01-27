@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
-import {Footer, Foot, Topbar} from './components';
+import {Foot, Footer, Topbar} from './components';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -19,12 +19,12 @@ const Minimal = props => {
   const classes = useStyles();
 
   return (
-      <div className={classes.root}>
-        <Topbar/>
-        <main className={classes.content}>{children}</main>
-        <Foot/>
-        <Footer/>
-      </div>
+    <div className={classes.root}>
+      <Topbar/>
+      <main className={classes.content}>{children}</main>
+      <Foot/>
+      <Footer/>
+    </div>
   );
 };
 

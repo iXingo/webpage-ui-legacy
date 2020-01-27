@@ -98,35 +98,35 @@ const CardPicture = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitle context={props.context}/>
-        <Grid container justify="center" alignItems="center" className={classes.content}>
-          <Grid item xs={12} md={4}>
-            <div className={classes.items}>
-              <div className={classes.main}>
-                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.titleOne}
-                </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
-                  {props.context.contentOne}
-                </Typography>
-              </div>
-              <div className={classes.main}>
-                <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
-                  {props.context.titleTwo}
-                </Typography>
-                <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
-                  {props.context.contentTwo}
-                </Typography>
-              </div>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitle context={props.context}/>
+      <Grid container justify="center" alignItems="center" className={classes.content}>
+        <Grid item xs={12} md={4}>
+          <div className={classes.items}>
+            <div className={classes.main}>
+              <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                {props.context.titleOne}
+              </Typography>
+              <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                {props.context.contentOne}
+              </Typography>
             </div>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
-          </Grid>
+            <div className={classes.main}>
+              <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
+                {props.context.titleTwo}
+              </Typography>
+              <Typography paragraph gutterBottom color="inherit" className={classes.secondLine}>
+                {props.context.contentTwo}
+              </Typography>
+            </div>
+          </div>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={12} md={4}>
+          <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

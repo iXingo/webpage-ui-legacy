@@ -61,21 +61,21 @@ const ContentLink = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <Container className={classes.mainTitle}>
-          <div className={classes.main}>
-            <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-              {props.context.titile}
-            </Typography>
-            <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
-              <Link component={RouterLink} to={props.context.contentUrl}>
-                {props.context.content} →
-              </Link>
-            </Typography>
-          </div>
-        </Container>
-      </React.Fragment>
+    <React.Fragment>
+      <CssBaseline/>
+      <Container className={classes.mainTitle}>
+        <div className={classes.main}>
+          <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
+            {props.context.titile}
+          </Typography>
+          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
+            <Link component={RouterLink} to={props.context.contentUrl}>
+              {props.context.content} →
+            </Link>
+          </Typography>
+        </div>
+      </Container>
+    </React.Fragment>
   );
 };
 

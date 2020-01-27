@@ -45,21 +45,21 @@ class PollList extends Component {
     });
 
     promise
-        .then(response => {
-          const polls = this.state.polls.slice();
-          const currentVotes = this.state.currentVotes.slice();
+      .then(response => {
+        const polls = this.state.polls.slice();
+        const currentVotes = this.state.currentVotes.slice();
 
-          this.setState({
-            polls: polls.concat(response.content),
-            page: response.page,
-            size: response.size,
-            totalElements: response.totalElements,
-            totalPages: response.totalPages,
-            last: response.last,
-            currentVotes: currentVotes.concat(Array(response.content.length).fill(null)),
-            isLoading: false
-          })
-        }).catch(error => {
+        this.setState({
+          polls: polls.concat(response.content),
+          page: response.page,
+          size: response.size,
+          totalElements: response.totalElements,
+          totalPages: response.totalPages,
+          last: response.last,
+          currentVotes: currentVotes.concat(Array(response.content.length).fill(null)),
+          isLoading: false
+        })
+      }).catch(error => {
       this.setState({
         isLoading: false
       })
@@ -122,13 +122,13 @@ class PollList extends Component {
     };
 
     castVote(voteData)
-        .then(response => {
-          const polls = this.state.polls.slice();
-          polls[pollIndex] = response;
-          this.setState({
-            polls: polls
-          });
-        }).catch(error => {
+      .then(response => {
+        const polls = this.state.polls.slice();
+        polls[pollIndex] = response;
+        this.setState({
+          polls: polls
+        });
+      }).catch(error => {
       if (error.status === 401) {
         this.props.handleLogout('/login', 'error', 'You have been logged out. Please login to vote');
       } else {
@@ -144,36 +144,36 @@ class PollList extends Component {
     const pollViews = [];
     this.state.polls.forEach((poll, pollIndex) => {
       pollViews.push(<Poll
-          key={poll.id}
-          poll={poll}
-          currentVote={this.state.currentVotes[pollIndex]}
-          handleVoteChange={(event) => this.handleVoteChange(event, pollIndex)}
-          handleVoteSubmit={(event) => this.handleVoteSubmit(event, pollIndex)}/>)
+        key={poll.id}
+        poll={poll}
+        currentVote={this.state.currentVotes[pollIndex]}
+        handleVoteChange={(event) => this.handleVoteChange(event, pollIndex)}
+        handleVoteSubmit={(event) => this.handleVoteSubmit(event, pollIndex)}/>)
     });
 
     return (
-        <div className="polls-container">
-          {pollViews}
-          {
-            !this.state.isLoading && this.state.polls.length === 0 ? (
-                <div className="no-polls-found">
-                  <span>No Polls Found.</span>
-                </div>
-            ) : null
-          }
-          {
-            !this.state.isLoading && !this.state.last ? (
-                <div className="load-more-polls">
-                  <Button type="dashed" onClick={this.handleLoadMore} disabled={this.state.isLoading}>
-                    <Icon type="plus"/> Load more
-                  </Button>
-                </div>) : null
-          }
-          {
-            this.state.isLoading ?
-                <LoadingIndicator/> : null
-          }
-        </div>
+      <div className="polls-container">
+        {pollViews}
+        {
+          !this.state.isLoading && this.state.polls.length === 0 ? (
+            <div className="no-polls-found">
+              <span>No Polls Found.</span>
+            </div>
+          ) : null
+        }
+        {
+          !this.state.isLoading && !this.state.last ? (
+            <div className="load-more-polls">
+              <Button type="dashed" onClick={this.handleLoadMore} disabled={this.state.isLoading}>
+                <Icon type="plus"/> Load more
+              </Button>
+            </div>) : null
+        }
+        {
+          this.state.isLoading ?
+            <LoadingIndicator/> : null
+        }
+      </div>
     );
   }
 }

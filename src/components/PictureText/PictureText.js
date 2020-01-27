@@ -81,30 +81,30 @@ const PictureText = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitle context={props.context}/>
-        <div className={classes.button}>
-          <Button className={classes.buttonContent}>
-            {props.context.linkText} →
-          </Button>
-        </div>
-        <Grid container justify="center" alignItems='center' className={classes.content}>
-          <Grid item xs={12} md={4}>
-            <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <div className={classes.main}>
-              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-                {props.context.title}
-              </Typography>
-              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-                {props.context.content}
-              </Typography>
-            </div>
-          </Grid>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitle context={props.context}/>
+      <div className={classes.button}>
+        <Button className={classes.buttonContent}>
+          {props.context.linkText} →
+        </Button>
+      </div>
+      <Grid container justify="center" alignItems='center' className={classes.content}>
+        <Grid item xs={12} md={4}>
+          <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={12} md={4}>
+          <div className={classes.main}>
+            <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+              {props.context.title}
+            </Typography>
+            <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+              {props.context.content}
+            </Typography>
+          </div>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

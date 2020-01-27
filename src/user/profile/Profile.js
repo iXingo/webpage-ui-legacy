@@ -27,12 +27,12 @@ class Profile extends Component {
     });
 
     getUserProfile(username)
-        .then(response => {
-          this.setState({
-            user: response,
-            isLoading: false
-          });
-        }).catch(error => {
+      .then(response => {
+        this.setState({
+          user: response,
+          isLoading: false
+        });
+      }).catch(error => {
       if (error.status === 404) {
         this.setState({
           notFound: true,
@@ -76,43 +76,43 @@ class Profile extends Component {
     };
 
     return (
-        <div className="profile">
-          {
-            this.state.user ? (
-                <div className="user-profile">
-                  <div className="user-details">
-                    <div className="user-avatar">
-                      <Avatar className="user-avatar-circle"
-                              style={{backgroundColor: getAvatarColor(this.state.user.name)}}>
-                        {this.state.user.name[0].toUpperCase()}
-                      </Avatar>
-                    </div>
-                    <div className="user-summary">
-                      <div className="full-name">{this.state.user.name}</div>
-                      <div className="username">@{this.state.user.username}</div>
-                      <div className="user-joined">
-                        Joined {formatDate(this.state.user.joinedAt)}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="user-poll-details">
-                    <Tabs defaultActiveKey="1"
-                          animated={false}
-                          tabBarStyle={tabBarStyle}
-                          size="large"
-                          className="profile-tabs">
-                      <TabPane tab={`${this.state.user.pollCount} Polls`} key="1">
-                        <PollList username={this.props.match.params.username} type="USER_CREATED_POLLS"/>
-                      </TabPane>
-                      <TabPane tab={`${this.state.user.voteCount} Votes`} key="2">
-                        <PollList username={this.props.match.params.username} type="USER_VOTED_POLLS"/>
-                      </TabPane>
-                    </Tabs>
+      <div className="profile">
+        {
+          this.state.user ? (
+            <div className="user-profile">
+              <div className="user-details">
+                <div className="user-avatar">
+                  <Avatar className="user-avatar-circle"
+                          style={{backgroundColor: getAvatarColor(this.state.user.name)}}>
+                    {this.state.user.name[0].toUpperCase()}
+                  </Avatar>
+                </div>
+                <div className="user-summary">
+                  <div className="full-name">{this.state.user.name}</div>
+                  <div className="username">@{this.state.user.username}</div>
+                  <div className="user-joined">
+                    Joined {formatDate(this.state.user.joinedAt)}
                   </div>
                 </div>
-            ) : null
-          }
-        </div>
+              </div>
+              <div className="user-poll-details">
+                <Tabs defaultActiveKey="1"
+                      animated={false}
+                      tabBarStyle={tabBarStyle}
+                      size="large"
+                      className="profile-tabs">
+                  <TabPane tab={`${this.state.user.pollCount} Polls`} key="1">
+                    <PollList username={this.props.match.params.username} type="USER_CREATED_POLLS"/>
+                  </TabPane>
+                  <TabPane tab={`${this.state.user.voteCount} Votes`} key="2">
+                    <PollList username={this.props.match.params.username} type="USER_VOTED_POLLS"/>
+                  </TabPane>
+                </Tabs>
+              </div>
+            </div>
+          ) : null
+        }
+      </div>
     );
   }
 }

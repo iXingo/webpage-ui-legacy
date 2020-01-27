@@ -84,46 +84,46 @@ const PicturePicture = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitle context={props.context}/>
-        <Grow in={true}>
-          <Grid container justify="center" className={classes.content}>
-            <Grid item xs={12} md={4} className={classes.grid}>
-              <img className={classes.picture} src={props.context.imageLeft} alt='Xindog APP'/>
-              <div className={classes.mainLeft}>
-                <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-                  {props.context.titleLeft}
-                </Typography>
-                <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-                  {props.context.contentLeft}
-                </Typography>
-                <div className={classes.button}>
-                  <Button className={classes.buttonContent}>
-                    {props.context.linkTextLeft} →
-                  </Button>
-                </div>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitle context={props.context}/>
+      <Grow in={true}>
+        <Grid container justify="center" className={classes.content}>
+          <Grid item xs={12} md={4} className={classes.grid}>
+            <img className={classes.picture} src={props.context.imageLeft} alt='Xindog APP'/>
+            <div className={classes.mainLeft}>
+              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+                {props.context.titleLeft}
+              </Typography>
+              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+                {props.context.contentLeft}
+              </Typography>
+              <div className={classes.button}>
+                <Button className={classes.buttonContent}>
+                  {props.context.linkTextLeft} →
+                </Button>
               </div>
-            </Grid>
-            <Grid item xs={12} md={4} className={classes.grid}>
-              <img className={classes.picture} src={props.context.imageRight} alt='Xindog APP'/>
-              <div className={classes.mainRight}>
-                <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
-                  {props.context.titleRight}
-                </Typography>
-                <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
-                  {props.context.contentRight}
-                </Typography>
-                <div className={classes.button}>
-                  <Button className={classes.buttonContent}>
-                    {props.context.linkTextRight} →
-                  </Button>
-                </div>
-              </div>
-            </Grid>
+            </div>
           </Grid>
-        </Grow>
-      </React.Fragment>
+          <Grid item xs={12} md={4} className={classes.grid}>
+            <img className={classes.picture} src={props.context.imageRight} alt='Xindog APP'/>
+            <div className={classes.mainRight}>
+              <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
+                {props.context.titleRight}
+              </Typography>
+              <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+                {props.context.contentRight}
+              </Typography>
+              <div className={classes.button}>
+                <Button className={classes.buttonContent}>
+                  {props.context.linkTextRight} →
+                </Button>
+              </div>
+            </div>
+          </Grid>
+        </Grid>
+      </Grow>
+    </React.Fragment>
   );
 };
 

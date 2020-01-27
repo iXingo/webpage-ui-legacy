@@ -196,9 +196,9 @@ const SignIn = (props) => {
       values: {
         ...formState.values,
         [event.target.name]:
-            event.target.type === 'checkbox'
-                ? event.target.checked
-                : event.target.value
+          event.target.type === 'checkbox'
+            ? event.target.checked
+            : event.target.value
       },
       touched: {
         ...formState.touched,
@@ -213,10 +213,10 @@ const SignIn = (props) => {
     const values = formState.values;
     const loginRequest = Object.assign({}, values);
     login(loginRequest)
-        .then(response => {
-          localStorage.setItem(ACCESS_TOKEN, response.accessToken);
-          props.handleLogin();
-        }).catch(error => {
+      .then(response => {
+        localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+        props.handleLogin();
+      }).catch(error => {
       if (error.status === 401) {
         notification.error({
           message: '星狗网 Web App',
@@ -235,159 +235,159 @@ const SignIn = (props) => {
   document.title = "星狗网 | 登录星狗网， 看见好时光";
 
   return (
-      <div className={classes.root}>
+    <div className={classes.root}>
+      <Grid
+        className={classes.grid}
+        container
+      >
         <Grid
-            className={classes.grid}
-            container
+          className={classes.quoteContainer}
+          item
+          lg={6}
         >
-          <Grid
-              className={classes.quoteContainer}
-              item
-              lg={6}
-          >
-            <div className={classes.quote}>
-              <div className={classes.quoteInner}>
+          <div className={classes.quote}>
+            <div className={classes.quoteInner}>
+              <Typography
+                className={classes.quoteText}
+                variant="h1"
+              >
+                汪师傅:
+              </Typography>
+              <Typography
+                className={classes.quoteText}
+                variant="h1"
+              >
+                程序人生的寂静，欢喜
+              </Typography>
+              <div className={classes.person}>
                 <Typography
-                    className={classes.quoteText}
-                    variant="h1"
+                  className={classes.name}
+                  variant="body1"
                 >
-                  汪师傅:
+                  Shawn Wang
                 </Typography>
                 <Typography
-                    className={classes.quoteText}
-                    variant="h1"
+                  className={classes.bio}
+                  variant="body2"
                 >
-                  程序人生的寂静，欢喜
+                  Designed by Shawn Wang in Pudong New Area.
                 </Typography>
-                <div className={classes.person}>
-                  <Typography
-                      className={classes.name}
-                      variant="body1"
-                  >
-                    Shawn Wang
-                  </Typography>
-                  <Typography
-                      className={classes.bio}
-                      variant="body2"
-                  >
-                    Designed by Shawn Wang in Pudong New Area.
-                  </Typography>
-                </div>
               </div>
             </div>
-          </Grid>
-          <Grid
-              className={classes.content}
-              item
-              lg={6}
-              xs={12}
-          >
-            <div className={classes.content}>
-              <div className={classes.contentHeader}>
-                <IconButton onClick={handleBack}>
-                  <ArrowBackIcon/>
-                </IconButton>
-              </div>
-              <div className={classes.contentBody}>
-                <form
-                    className={classes.form}
-                    onSubmit={handleSignIn}
+          </div>
+        </Grid>
+        <Grid
+          className={classes.content}
+          item
+          lg={6}
+          xs={12}
+        >
+          <div className={classes.content}>
+            <div className={classes.contentHeader}>
+              <IconButton onClick={handleBack}>
+                <ArrowBackIcon/>
+              </IconButton>
+            </div>
+            <div className={classes.contentBody}>
+              <form
+                className={classes.form}
+                onSubmit={handleSignIn}
+              >
+                <Typography
+                  className={classes.title}
+                  variant="h2"
                 >
-                  <Typography
-                      className={classes.title}
-                      variant="h2"
-                  >
-                    登录
-                  </Typography>
+                  登录
+                </Typography>
 
+                <Typography
+                  color="textSecondary"
+                  gutterBottom
+                >
+                  为什么要登录？登录后可以进行评论以及可以获得更佳的个性化体验。
+                </Typography>
+                <Typography
+                  align="center"
+                  className={classes.sugestion}
+                  color="textSecondary"
+                  variant="body1"
+                >
+                  使用邮箱账号登录
+                </Typography>
+                <TextField
+                  className={classes.textField}
+                  error={hasError('usernameOrEmail')}
+                  fullWidth
+                  helperText={
+                    hasError('usernameOrEmail') ? formState.errors.usernameOrEmail[0] : null
+                  }
+                  label="邮箱账户地址"
+                  name="usernameOrEmail"
+                  onChange={handleChange}
+                  type="text"
+                  value={formState.values.usernameOrEmail || ''}
+                  variant="outlined"
+                />
+                <TextField
+                  className={classes.textField}
+                  error={hasError('password')}
+                  fullWidth
+                  helperText={
+                    hasError('password') ? formState.errors.password[0] : null
+                  }
+                  label="密码"
+                  name="password"
+                  onChange={handleChange}
+                  type="password"
+                  value={formState.values.password || ''}
+                  variant="outlined"
+                />
+                <Button
+                  className={classes.signInButton}
+                  color="primary"
+                  disabled={!formState.isValid}
+                  fullWidth
+                  size="large"
+                  type="submit"
+                  variant="contained"
+                >
+                  立即登录
+                </Button>
+
+                <div className={classes.tips}>
                   <Typography
-                      color="textSecondary"
-                      gutterBottom
+                    color="textSecondary"
+                    variant="body1"
                   >
-                    为什么要登录？登录后可以进行评论以及可以获得更佳的个性化体验。
-                  </Typography>
-                  <Typography
-                      align="center"
-                      className={classes.sugestion}
-                      color="textSecondary"
+                    还没有账号?{' '}
+                    <Link
+                      component={RouterLink}
+                      to="/sign-up"
                       variant="body1"
-                  >
-                    使用邮箱账号登录
+                    >
+                      注册
+                    </Link>
                   </Typography>
-                  <TextField
-                      className={classes.textField}
-                      error={hasError('usernameOrEmail')}
-                      fullWidth
-                      helperText={
-                        hasError('usernameOrEmail') ? formState.errors.usernameOrEmail[0] : null
-                      }
-                      label="邮箱账户地址"
-                      name="usernameOrEmail"
-                      onChange={handleChange}
-                      type="text"
-                      value={formState.values.usernameOrEmail || ''}
-                      variant="outlined"
-                  />
-                  <TextField
-                      className={classes.textField}
-                      error={hasError('password')}
-                      fullWidth
-                      helperText={
-                        hasError('password') ? formState.errors.password[0] : null
-                      }
-                      label="密码"
-                      name="password"
-                      onChange={handleChange}
-                      type="password"
-                      value={formState.values.password || ''}
-                      variant="outlined"
-                  />
-                  <Button
-                      className={classes.signInButton}
-                      color="primary"
-                      disabled={!formState.isValid}
-                      fullWidth
-                      size="large"
-                      type="submit"
-                      variant="contained"
+                  <Typography
+                    color="textSecondary"
+                    variant="body1"
                   >
-                    立即登录
-                  </Button>
-
-                  <div className={classes.tips}>
-                    <Typography
-                        color="textSecondary"
-                        variant="body1"
+                    忘记密码?{' '}
+                    <Link
+                      component={RouterLink}
+                      to="/reset-passwd"
+                      variant="h6"
                     >
-                      还没有账号?{' '}
-                      <Link
-                          component={RouterLink}
-                          to="/sign-up"
-                          variant="body1"
-                      >
-                        注册
-                      </Link>
-                    </Typography>
-                    <Typography
-                        color="textSecondary"
-                        variant="body1"
-                    >
-                      忘记密码?{' '}
-                      <Link
-                          component={RouterLink}
-                          to="/reset-passwd"
-                          variant="h6"
-                      >
-                        找回密码
-                      </Link>
-                    </Typography>
-                  </div>
-                  <Grid
-                      className={classes.socialButtons}
-                      container
-                      spacing={2}
-                  >
-                    {/* <Grid item>
+                      找回密码
+                    </Link>
+                  </Typography>
+                </div>
+                <Grid
+                  className={classes.socialButtons}
+                  container
+                  spacing={2}
+                >
+                  {/* <Grid item>
                     <Button
                       color="primary"
                       onClick={handleSignIn}
@@ -408,13 +408,13 @@ const SignIn = (props) => {
                       使用Google账号登录
                     </Button>
                   </Grid> */}
-                  </Grid>
-                </form>
-              </div>
+                </Grid>
+              </form>
             </div>
-          </Grid>
+          </div>
         </Grid>
-      </div>
+      </Grid>
+    </div>
   );
 };
 

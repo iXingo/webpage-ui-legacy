@@ -53,31 +53,31 @@ const SmallPostCard = props => {
     return <Instagram/>;
   }
   return (posts.map(post => (
-      <Grid item key={post.title} xs={12} md={6} className={classes.cardGrid}>
-        <CardActionArea component="a" href="#">
-          <Card className={classes.card}>
-            <div className={classes.cardDetails}>
-              <CardContent>
-                <Typography component="h2" variant="h4" style={{color: '#1a73e8'}}>{post.title}</Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                  <div className={classes.tips}>
-                    <DateRangeIcon className={classes.icon}/>{post.date}
-                  </div>
-                </Typography>
-                <Typography variant="subtitle1" paragraph>{post.description}</Typography>
-                <Typography variant="subtitle1" color="primary">查看全文...</Typography>
-              </CardContent>
-            </div>
-            <Hidden xsDown>
-              <CardMedia
-                  className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
-                  title="Image title"
-              />
-            </Hidden>
-          </Card>
-        </CardActionArea>
-      </Grid>
+    <Grid item key={post.title} xs={12} md={6} className={classes.cardGrid}>
+      <CardActionArea component="a" href="#">
+        <Card className={classes.card}>
+          <div className={classes.cardDetails}>
+            <CardContent>
+              <Typography component="h2" variant="h4" style={{color: '#1a73e8'}}>{post.title}</Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                <div className={classes.tips}>
+                  <DateRangeIcon className={classes.icon}/>{post.date}
+                </div>
+              </Typography>
+              <Typography variant="subtitle1" paragraph>{post.description}</Typography>
+              <Typography variant="subtitle1" color="primary">查看全文...</Typography>
+            </CardContent>
+          </div>
+          <Hidden xsDown>
+            <CardMedia
+              className={classes.cardMedia}
+              image="https://source.unsplash.com/random"
+              title="Image title"
+            />
+          </Hidden>
+        </Card>
+      </CardActionArea>
+    </Grid>
   )));
 };
 

@@ -74,26 +74,26 @@ const TextPictureLink = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitle context={props.context}/>
-        <Grid container justify="center" alignItems='center' className={classes.content}>
-          <Grid item xs={12} md={4}>
-            <div className={classes.main}>
-              <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                {props.context.title}
-              </Typography>
-              <Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
-                {props.context.content}
-              </Typography>
-              <Link to={props.context.linkUrl} className={classes.link}>{props.context.linkText} →</Link>
-            </div>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
-          </Grid>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitle context={props.context}/>
+      <Grid container justify="center" alignItems='center' className={classes.content}>
+        <Grid item xs={12} md={4}>
+          <div className={classes.main}>
+            <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+              {props.context.title}
+            </Typography>
+            <Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
+              {props.context.content}
+            </Typography>
+            <Link to={props.context.linkUrl} className={classes.link}>{props.context.linkText} →</Link>
+          </div>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={12} md={4}>
+          <img className={classes.picture} src={props.context.image} alt={props.context.title}/>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

@@ -15,12 +15,12 @@ const FriendContent = props => {
   const {friend} = props;
 
   return (
-      <div className={classes.root}>
-        <ReactMarkdown source={friend.story}
-                       renderers={{code: CodeBlock,}}
-                       key={friend.id}
-        />
-      </div>
+    <div className={classes.root}>
+      <ReactMarkdown source={friend.story}
+                     renderers={{code: CodeBlock,}}
+                     key={friend.id}
+      />
+    </div>
   );
 };
 

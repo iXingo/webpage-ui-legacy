@@ -64,32 +64,32 @@ const HeaderUnit = props => {
   };
 
   return (
-      <React.Fragment>
-        <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              {project.name}
-            </Typography>
-            <Typography variant="h5" align="center" color={"textSecondary"} paragraph>
-              {project.description}
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary" onClick={() => joinProject(project.name)}>
-                    加入该计划
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary" onClick={() => inspectProject(project.name)}>
-                    查看计划介绍
-                  </Button>
-                </Grid>
+    <React.Fragment>
+      <div className={classes.heroContent}>
+        <Container maxWidth="sm">
+          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+            {project.name}
+          </Typography>
+          <Typography variant="h5" align="center" color={"textSecondary"} paragraph>
+            {project.description}
+          </Typography>
+          <div className={classes.heroButtons}>
+            <Grid container spacing={2} justify="center">
+              <Grid item>
+                <Button variant="contained" color="primary" onClick={() => joinProject(project.name)}>
+                  加入该计划
+                </Button>
               </Grid>
-            </div>
-          </Container>
-        </div>
-      </React.Fragment>
+              <Grid item>
+                <Button variant="outlined" color="primary" onClick={() => inspectProject(project.name)}>
+                  查看计划介绍
+                </Button>
+              </Grid>
+            </Grid>
+          </div>
+        </Container>
+      </div>
+    </React.Fragment>
   );
 };
 

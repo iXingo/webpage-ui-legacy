@@ -6,14 +6,14 @@ const RouteWithLayout = props => {
   const {layout: Layout, component: Component, ...rest} = props;
 
   return (
-      <Route
-          {...rest}
-          render={matchProps => (
-              <Layout {...props}>
-                <Component {...matchProps} {...rest} />
-              </Layout>
-          )}
-      />
+    <Route
+      {...rest}
+      render={matchProps => (
+        <Layout {...props}>
+          <Component {...matchProps} {...rest} />
+        </Layout>
+      )}
+    />
   );
 };
 

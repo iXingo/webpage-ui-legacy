@@ -70,49 +70,49 @@ const PictureItems = props => {
   const classes = useStyles();
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <ContentTitleReversed context={props.context}/>
-        <Grid container justify="center" alignItems="center" className={classes.content}>
-          <Grid item xs={12} md={4}>
-            <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
-          </Grid>
-          <Grid item xs={12} md={4}>
-            <div className={classes.items}>
-              <Paper className={classes.paper}>
-                <div className={classes.main}>
-                  <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                    {props.context.titleOne}
-                  </Typography>
-                  <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                    {props.context.contentOne}
-                  </Typography>
-                </div>
-              </Paper>
-              <Paper className={classes.paper}>
-                <div className={classes.main}>
-                  <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                    {props.context.titleTwo}
-                  </Typography>
-                  <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                    {props.context.contentTwo}
-                  </Typography>
-                </div>
-              </Paper>
-              <Paper className={classes.paper}>
-                <div className={classes.main}>
-                  <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
-                    {props.context.titleThree}
-                  </Typography>
-                  <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
-                    {props.context.contentThree}
-                  </Typography>
-                </div>
-              </Paper>
-            </div>
-          </Grid>
+    <React.Fragment>
+      <CssBaseline/>
+      <ContentTitleReversed context={props.context}/>
+      <Grid container justify="center" alignItems="center" className={classes.content}>
+        <Grid item xs={12} md={4}>
+          <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>
         </Grid>
-      </React.Fragment>
+        <Grid item xs={12} md={4}>
+          <div className={classes.items}>
+            <Paper className={classes.paper}>
+              <div className={classes.main}>
+                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                  {props.context.titleOne}
+                </Typography>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
+                  {props.context.contentOne}
+                </Typography>
+              </div>
+            </Paper>
+            <Paper className={classes.paper}>
+              <div className={classes.main}>
+                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                  {props.context.titleTwo}
+                </Typography>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
+                  {props.context.contentTwo}
+                </Typography>
+              </div>
+            </Paper>
+            <Paper className={classes.paper}>
+              <div className={classes.main}>
+                <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
+                  {props.context.titleThree}
+                </Typography>
+                <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
+                  {props.context.contentThree}
+                </Typography>
+              </div>
+            </Paper>
+          </div>
+        </Grid>
+      </Grid>
+    </React.Fragment>
   );
 };
 

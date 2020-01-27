@@ -79,7 +79,7 @@ class Post extends Component {
 
   render() {
     return (
-        <PostPage posts={this.state.posts} {...this.props}/>
+      <PostPage posts={this.state.posts} {...this.props}/>
     );
   }
 

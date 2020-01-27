@@ -100,12 +100,12 @@ const useStyles = makeStyles(theme => ({
 const PostContent = props => {
   const classes = useStyles();
   return (
-      <div className={classes.root}>
-        <ReactMarkdown source={props.post.content}
-                       renderers={{code: CodeBlock,}}
-                       key={props.post.id}
-        />
-      </div>
+    <div className={classes.root}>
+      <ReactMarkdown source={props.post.content}
+                     renderers={{code: CodeBlock,}}
+                     key={props.post.id}
+      />
+    </div>
   );
 };
 

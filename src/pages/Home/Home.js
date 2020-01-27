@@ -170,11 +170,11 @@ const fifthSection = {
 
 const SvgIcon = () => {
   return (
-      <svg style={{width: 20, height: 20}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <path
-            d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z"
-            fill="currentColor" fillRule="evenodd"/>
-      </svg>
+    <svg style={{width: 20, height: 20}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+      <path
+        d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z"
+        fill="currentColor" fillRule="evenodd"/>
+    </svg>
   );
 };
 
@@ -189,41 +189,41 @@ const Home = props => {
   // }
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
-          <Container className={classes.mainTitle}>
-            <div className={classes.main}>
-              <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
-                星狗网
+    <React.Fragment>
+      <CssBaseline/>
+      <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
+        <Container className={classes.mainTitle}>
+          <div className={classes.main}>
+            <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
+              星狗网
+            </Typography>
+            <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
+              程序人生的寂静欢喜。
+            </Typography>
+            <TypeWriter typing={0.5}>
+              <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
+                          className={classes.secondLine}>
+                车马很慢，书信很远。一个（伪）文艺派程序员，在这个漫长的人生做一些简单的思考。
               </Typography>
-              <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
-                程序人生的寂静欢喜。
-              </Typography>
-              <TypeWriter typing={0.5}>
-                <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
-                            className={classes.secondLine}>
-                  车马很慢，书信很远。一个（伪）文艺派程序员，在这个漫长的人生做一些简单的思考。
-                </Typography>
-              </TypeWriter>
-              <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
-                <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
-              </Typography>
-            </div>
-          </Container>
-        </Slide>
+            </TypeWriter>
+            <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
+              <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
+            </Typography>
+          </div>
+        </Container>
+      </Slide>
 
-        <PictureTextLink context={firstSection} {...props}  />
-        <PictureItems context={fourthSection} {...props} />
-        <PicturePicture context={secondSection} {...props} />
-        <CardPicture context={fourthSection} {...props}  />
-        <PictureText context={fifthSection} {...props} />
-        <PictureContentLine context={thirdSection} {...props}  />
-        <TextPicture context={fourthSection} {...props} />
-        <ButtonPictureContent context={fourthSection} {...props}  />
-        <TextPictureLink context={fourthSection} {...props}  />
+      <PictureTextLink context={firstSection} {...props}  />
+      <PictureItems context={fourthSection} {...props} />
+      <PicturePicture context={secondSection} {...props} />
+      <CardPicture context={fourthSection} {...props}  />
+      <PictureText context={fifthSection} {...props} />
+      <PictureContentLine context={thirdSection} {...props}  />
+      <TextPicture context={fourthSection} {...props} />
+      <ButtonPictureContent context={fourthSection} {...props}  />
+      <TextPictureLink context={fourthSection} {...props}  />
 
-      </React.Fragment>
+    </React.Fragment>
   );
 };
 

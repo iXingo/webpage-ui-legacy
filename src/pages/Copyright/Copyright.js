@@ -59,10 +59,12 @@ const Copyright = () => {
           item
         >
           <div className={classes.content}>
-            <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary" style={{fontSize: 40}}/>
+            <Typography variant="h1" className={classes.items}><AssignmentIndIcon color="primary"
+                                                                                  style={{fontSize: 40}}/>
               版权保护投诉指引
             </Typography>
-            <Typography variant="h4" className={classes.items}><ChatIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><ChatIcon color="primary"
+                                                                         style={{fontSize: 25, paddingRight: 5}}/>
               【首部及导言】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -75,7 +77,10 @@ const Copyright = () => {
             </Typography>
 
 
-            <Typography variant="h4" className={classes.items}><CollectionsIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><CollectionsIcon color="primary" style={{
+              fontSize: 25,
+              paddingRight: 5
+            }}/>
               一、【通知程序】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -101,7 +106,10 @@ const Copyright = () => {
               <br/>
             </Typography>
 
-            <Typography variant="h4" className={classes.items}><ContactMailIcon color="primary" style={{fontSize: 25, paddingRight: 5}}/>
+            <Typography variant="h4" className={classes.items}><ContactMailIcon color="primary" style={{
+              fontSize: 25,
+              paddingRight: 5
+            }}/>
               二、【反通知程序】
             </Typography>
             <Typography paragraph className={classes.item}>
@@ -111,7 +119,8 @@ const Copyright = () => {
               <br/>
               （二） 要求恢复被删除的作品，或者被断开链接的作品的准确名称和网络地址；
               <br/>
-              （三） 认为不构成侵权的初步证明材料，包括但不限于相关有权机构颁发的对作品享有版权的权属证明、作品首次公开发表或发行日期证明材料、创作手稿、经权威机构签发的作品创作时间戳、作品备案证书等能证明作品提供者拥有相关权利的有效权属证明材料。
+              （三）
+              认为不构成侵权的初步证明材料，包括但不限于相关有权机构颁发的对作品享有版权的权属证明、作品首次公开发表或发行日期证明材料、创作手稿、经权威机构签发的作品创作时间戳、作品备案证书等能证明作品提供者拥有相关权利的有效权属证明材料。
               <br/>
               （反通知的格式可参考附件一）
               <br/>
@@ -125,13 +134,16 @@ const Copyright = () => {
             </Typography>
 
             <Typography variant="body1" className={classes.footer}>
-              <a href={"https://mat1.gtimg.com/www/pdf/2007080103.pdf"} style={{color:'#1a73e8', textDecoration:'underline'}}>《要求删除或断开链接侵权网络内容的通知》【PDF file】</a>
+              <a href={"https://mat1.gtimg.com/www/pdf/2007080103.pdf"}
+                 style={{color: '#1a73e8', textDecoration: 'underline'}}>《要求删除或断开链接侵权网络内容的通知》【PDF file】</a>
             </Typography>
             <Typography variant="body1" className={classes.footer}>
-              <a href={"https://mat1.gtimg.com/www/pdf/2007080102.pdf"} style={{color:'#1a73e8', textDecoration:'underline'}}>《要求恢复被删除或断开链接的网络内容的说明》【PDF file】</a>
+              <a href={"https://mat1.gtimg.com/www/pdf/2007080102.pdf"}
+                 style={{color: '#1a73e8', textDecoration: 'underline'}}>《要求恢复被删除或断开链接的网络内容的说明》【PDF file】</a>
             </Typography>
             <Typography variant="body1" className={classes.footer}>
-              <a href={"https://mat1.gtimg.com/www/pdf/2007080101.pdf"} style={{color:'#1a73e8', textDecoration:'underline'}}>《要求删除或断开链接侵权网络内容的通知》填写说明【PDF file】</a>
+              <a href={"https://mat1.gtimg.com/www/pdf/2007080101.pdf"}
+                 style={{color: '#1a73e8', textDecoration: 'underline'}}>《要求删除或断开链接侵权网络内容的通知》填写说明【PDF file】</a>
             </Typography>
           </div>
 

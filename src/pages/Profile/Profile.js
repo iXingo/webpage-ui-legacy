@@ -121,18 +121,18 @@ const Profile = props => {
   const classes = useStyles();
 
   return (
-      <div className={classes.root}>
-        <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
-          <div className={classes.quoteInner}>
-            <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
-            <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
-            <div className={classes.person}>
-              <Typography className={classes.name} variant="body1">&copy; Copyright 2019</Typography>
-              <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area</Typography>
-            </div>
+    <div className={classes.root}>
+      <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
+        <div className={classes.quoteInner}>
+          <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
+          <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
+          <div className={classes.person}>
+            <Typography className={classes.name} variant="body1">&copy; Copyright 2019</Typography>
+            <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area</Typography>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

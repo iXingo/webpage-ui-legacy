@@ -45,25 +45,25 @@ const Main = props => {
   const shouldOpenSidebar = isDesktop ? true : openSidebar;
 
   return (
-      <div
-          className={clsx({
-            [classes.root]: true,
-            [classes.shiftContent]: isDesktop
-          })}
-      >
-        <Topbar onSidebarOpen={handleSidebarOpen} context={props}/>
-        <Sidebar
-            onClose={handleSidebarClose}
-            open={shouldOpenSidebar}
-            variant={isDesktop ? 'persistent' : 'temporary'}
-            {...props}
-        />
-        <main className={classes.content}>
-          {children}
-          <Foot/>
-          <Footer/>
-        </main>
-      </div>
+    <div
+      className={clsx({
+        [classes.root]: true,
+        [classes.shiftContent]: isDesktop
+      })}
+    >
+      <Topbar onSidebarOpen={handleSidebarOpen} context={props}/>
+      <Sidebar
+        onClose={handleSidebarClose}
+        open={shouldOpenSidebar}
+        variant={isDesktop ? 'persistent' : 'temporary'}
+        {...props}
+      />
+      <main className={classes.content}>
+        {children}
+        <Foot/>
+        <Footer/>
+      </main>
+    </div>
   );
 };
 

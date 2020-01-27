@@ -48,17 +48,17 @@ const StatusBullet = props => {
   const classes = useStyles();
 
   return (
-      <span
-          {...rest}
-          className={clsx(
-              {
-                [classes.root]: true,
-                [classes[size]]: size,
-                [classes[color]]: color
-              },
-              className
-          )}
-      />
+    <span
+      {...rest}
+      className={clsx(
+        {
+          [classes.root]: true,
+          [classes[size]]: size,
+          [classes[color]]: color
+        },
+        className
+      )}
+    />
   );
 };
 

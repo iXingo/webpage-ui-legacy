@@ -74,61 +74,61 @@ const Topbar = props => {
 
 
   return (
-      <AppBar
-          {...rest}
-          className={clsx(classes.root, className)}
-      >
-        <Toolbar>
-          <RouterLink to="/">
-            <img
-                alt="Logo"
-                src="https://img.ixingo.cn/logo.png"
-                className={classes.logo}
-            />
-          </RouterLink>测试版 Beta 2019.12051
-          <div className={classes.flexGrow}/>
-          <Hidden mdDown>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon/>
-              </div>
-              <InputBase
-                  placeholder="星狗一下               你就知道"
-                  classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                  }}
-                  inputProps={{'aria-label': 'search'}}
-              />
+    <AppBar
+      {...rest}
+      className={clsx(classes.root, className)}
+    >
+      <Toolbar>
+        <RouterLink to="/">
+          <img
+            alt="Logo"
+            src="https://img.ixingo.cn/logo.png"
+            className={classes.logo}
+          />
+        </RouterLink>测试版 Beta 2019.12051
+        <div className={classes.flexGrow}/>
+        <Hidden mdDown>
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon/>
             </div>
-            <IconButton color="inherit">
-              <Badge
-                  badgeContent={notifications.length}
-                  color="primary"
-                  variant="dot"
-              >
-                <NotificationsIcon/>
-              </Badge>
-            </IconButton>
-            <IconButton
-                className={classes.signOutButton}
-                color="inherit"
-                onClick={context.handleLogout}
-                label="退出登录"
+            <InputBase
+              placeholder="星狗一下               你就知道"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+              inputProps={{'aria-label': 'search'}}
+            />
+          </div>
+          <IconButton color="inherit">
+            <Badge
+              badgeContent={notifications.length}
+              color="primary"
+              variant="dot"
             >
-              <InputIcon/>
-            </IconButton>
-          </Hidden>
-          <Hidden lgUp>
-            <IconButton
-                color="inherit"
-                onClick={onSidebarOpen}
-            >
-              <MenuIcon/>
-            </IconButton>
-          </Hidden>
-        </Toolbar>
-      </AppBar>
+              <NotificationsIcon/>
+            </Badge>
+          </IconButton>
+          <IconButton
+            className={classes.signOutButton}
+            color="inherit"
+            onClick={context.handleLogout}
+            label="退出登录"
+          >
+            <InputIcon/>
+          </IconButton>
+        </Hidden>
+        <Hidden lgUp>
+          <IconButton
+            color="inherit"
+            onClick={onSidebarOpen}
+          >
+            <MenuIcon/>
+          </IconButton>
+        </Hidden>
+      </Toolbar>
+    </AppBar>
   );
 };
 

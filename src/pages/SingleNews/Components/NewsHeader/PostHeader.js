@@ -129,48 +129,48 @@ const PostHeader = props => {
   const classes = useStyles();
   if (!props.post.createdBy) return <Instagram/>;
   return (
-      <div>
-        <Typography className={classes.title} variant="h1">
-          {props.post.title}
-        </Typography>
-        <Typography className={classes.author} variant="h5">
-          <strong>本文作者：</strong>
-          <Chip
-              icon={<FaceIcon/>}
-              label={props.post.createdBy.name}
-              clickable
-              className={classes.chip}
-              color="primary"
-              deleteIcon={<DoneIcon/>}
-              variant="outlined"
-          />
-        </Typography>
-        <Typography variant="h6" className={classes.author}>
-          <strong>作者简介：</strong>
-          <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar}/>
-          <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
-        </Typography>
-        <Divider/>
-        <Typography variant="h6" gutterBottom className={classes.abstrat}>
-          <strong>本文摘要：</strong>{props.post.summary}
-        </Typography>
-        <Typography variant="h6" gutterBottom className={classes.tags}>
-          <strong>本文标签：</strong>
-          {props.post.tags.map(tag => (
-              <Tag tag={tag}/>
-          ))}
-        </Typography>
-        <Typography variant="h6" className={classes.tip}>
-          <strong>阅读提示：</strong>全文共 <strong>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.post.readTime}</strong> 分钟。
-        </Typography>
-        <Divider style={{margin: "5px 0"}}/>
-        <Typography variant="caption" className={classes.posttime}>
-          作者<strong style={{color: '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong
-            style={{color: '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong
-            style={{color: '#1a73e8'}}>{props.post.creationDateTime}</strong>。
-        </Typography>
-        <Divider style={{margin: "5px 0"}}/>
-      </div>
+    <div>
+      <Typography className={classes.title} variant="h1">
+        {props.post.title}
+      </Typography>
+      <Typography className={classes.author} variant="h5">
+        <strong>本文作者：</strong>
+        <Chip
+          icon={<FaceIcon/>}
+          label={props.post.createdBy.name}
+          clickable
+          className={classes.chip}
+          color="primary"
+          deleteIcon={<DoneIcon/>}
+          variant="outlined"
+        />
+      </Typography>
+      <Typography variant="h6" className={classes.author}>
+        <strong>作者简介：</strong>
+        <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar}/>
+        <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
+      </Typography>
+      <Divider/>
+      <Typography variant="h6" gutterBottom className={classes.abstrat}>
+        <strong>本文摘要：</strong>{props.post.summary}
+      </Typography>
+      <Typography variant="h6" gutterBottom className={classes.tags}>
+        <strong>本文标签：</strong>
+        {props.post.tags.map(tag => (
+          <Tag tag={tag}/>
+        ))}
+      </Typography>
+      <Typography variant="h6" className={classes.tip}>
+        <strong>阅读提示：</strong>全文共 <strong>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.post.readTime}</strong> 分钟。
+      </Typography>
+      <Divider style={{margin: "5px 0"}}/>
+      <Typography variant="caption" className={classes.posttime}>
+        作者<strong style={{color: '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong
+        style={{color: '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong
+        style={{color: '#1a73e8'}}>{props.post.creationDateTime}</strong>。
+      </Typography>
+      <Divider style={{margin: "5px 0"}}/>
+    </div>
   );
 
 };

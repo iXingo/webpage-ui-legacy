@@ -112,70 +112,70 @@ const ResetPasswd = props => {
   };
 
   return (
-      <div className={classes.root}>
-        <div className={classes.quote}>
-          <div className={classes.quoteInner}>
+    <div className={classes.root}>
+      <div className={classes.quote}>
+        <div className={classes.quoteInner}>
+          <Typography
+            className={classes.quoteText}
+            variant="h1"
+          >
+            汪师傅:
+          </Typography>
+          <Typography
+            className={classes.quoteText}
+            variant="h1"
+          >
+            看见，好时光
+          </Typography>
+          <div className={classes.person}>
             <Typography
-                className={classes.quoteText}
-                variant="h1"
+              className={classes.name}
+              variant="body1"
             >
-              汪师傅:
+              &copy; Copyright 2020
             </Typography>
             <Typography
-                className={classes.quoteText}
-                variant="h1"
+              className={classes.bio}
+              variant="body2"
             >
-              看见，好时光
+              Designed by Shawn Wang in Pudong New Area.
             </Typography>
-            <div className={classes.person}>
-              <Typography
-                  className={classes.name}
-                  variant="body1"
-              >
-                &copy; Copyright 2020
-              </Typography>
-              <Typography
-                  className={classes.bio}
-                  variant="body2"
-              >
-                Designed by Shawn Wang in Pudong New Area.
-              </Typography>
-            </div>
-          </div>
-        </div>
-        <div className={classes.content}>
-          <div className={classes.contentHeader}>
-            <IconButton onClick={handleBack}>
-              <ArrowBackIcon/>
-            </IconButton>
-          </div>
-
-          <div className={classes.reset}>
-            <Typography variant="h6">请您勿需担心，关于您和您的一切都不会丢失。</Typography>
-            <TextField className={classes.field}
-                       id="standard-full-width"
-                       label="请输入您注册星狗网所使用的邮箱"
-                       InputProps={{
-                         startAdornment: (
-                             <InputAdornment position="staßrt">
-                               <AccountCircle/>
-                             </InputAdornment>
-                         ),
-                       }}
-            />
-            <Button
-                className={classes.signUpButton}
-                color="primary"
-                fullWidth
-                size="large"
-                type="submit"
-                variant="contained"
-            >
-              立即找回密码
-            </Button>
           </div>
         </div>
       </div>
+      <div className={classes.content}>
+        <div className={classes.contentHeader}>
+          <IconButton onClick={handleBack}>
+            <ArrowBackIcon/>
+          </IconButton>
+        </div>
+
+        <div className={classes.reset}>
+          <Typography variant="h6">请您勿需担心，关于您和您的一切都不会丢失。</Typography>
+          <TextField className={classes.field}
+                     id="standard-full-width"
+                     label="请输入您注册星狗网所使用的邮箱"
+                     InputProps={{
+                       startAdornment: (
+                         <InputAdornment position="staßrt">
+                           <AccountCircle/>
+                         </InputAdornment>
+                       ),
+                     }}
+          />
+          <Button
+            className={classes.signUpButton}
+            color="primary"
+            fullWidth
+            size="large"
+            type="submit"
+            variant="contained"
+          >
+            立即找回密码
+          </Button>
+        </div>
+      </div>
+    </div>
   );
 };
 
