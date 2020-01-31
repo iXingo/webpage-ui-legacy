@@ -46,7 +46,7 @@ const Foot = props => {
           <a href={"https://weibo.com/ixingo"} style={{color: 'white', textDecoration: 'underline'}}>商务洽谈</a> &nbsp;
         </Typography>
         <Typography variant="body1" className={classes.footer}>
-          <a href={"https://www.ixingo.com.cn"} style={{color: 'white', textDecoration: 'underline'}}>网站首页</a> |&nbsp;
+          <a href={"/index"} style={{color: 'white', textDecoration: 'underline'}}>网站首页</a> |&nbsp;
           <a href={"http://www.ah12377.cn/"}
              style={{color: 'white', textDecoration: 'underline'}}>安徽省互联网和不良信息举报平台</a> |&nbsp;
           <a href={"http://gat.ah.gov.cn/"} style={{color: 'white', textDecoration: 'underline'}}>安徽省公安厅</a> |&nbsp;

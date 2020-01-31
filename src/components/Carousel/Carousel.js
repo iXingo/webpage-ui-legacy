@@ -110,7 +110,7 @@ function Carousel() {
           </div>
         ))}
       </AutoPlaySwipeableViews>
-      <MarqueeText></MarqueeText>
+      <MarqueeText/>
 
       <Paper square elevation={0} className={classes.header}>
         <Typography style={{color: 'white'}}>{tutorialSteps[activeStep].label}</Typography>
