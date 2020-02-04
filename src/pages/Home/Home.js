@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
 
 const firstSection = {
   sectionMain: '汪师傅的2020年',
-  sectionTitle: '本站，正在开发测试中',
+  sectionTitle: '情深深雨蒙蒙，本站开发测试中。',
   sectionContent: '所有内容和功能正在不断变化中，欢迎提供意见和建议。',
 
   image: 'https://img.ixingo.cn/undraw_new_decade_n4qd.svg',
@@ -115,7 +115,7 @@ const firstSection = {
 
 const secondSection = {
   sectionMain: '汪师傅这一年',
-  sectionTitle: '2019过去了， 我很想念他',
+  sectionTitle: '年年岁岁花相似， 岁岁年年人不同。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   imageLeft: 'https://img.ixingo.cn/wangxin2019.png',
@@ -167,7 +167,7 @@ const fourthSection = {
 
 const fifthSection = {
   sectionMain: '工作这一年',
-  sectionTitle: '第一个， 完全工作的一年',
+  sectionTitle: '小猪佩奇身上纹， 汪欣初当社会人。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
