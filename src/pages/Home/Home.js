@@ -103,8 +103,8 @@ const useStyles = makeStyles(theme => ({
 
 const firstSection = {
   sectionMain: '汪师傅的2020年',
-  sectionTitle: '2019过去了， 我很想念他',
-  sectionContent: '2020年又过去了， 多少有些失望。很明显这一年， 没有什么新闻',
+  sectionTitle: '本站，正在开发测试中',
+  sectionContent: '所有内容和功能正在不断变化中，欢迎提供意见和建议。',
 
   image: 'https://img.ixingo.cn/undraw_new_decade_n4qd.svg',
   textTitle: '上海， 这一年。',
@@ -153,6 +153,15 @@ const fourthSection = {
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
   linkText: '汪师傅',
+
+  titleOne: '汪师傅',
+  contentOne: '站在地铁2号线的轨道线前',
+
+  titleTwo: '汪师傅',
+  contentTwo: '站在地铁2号线的轨道线前',
+
+  titleThree: '汪师傅',
+  contentThree: '站在地铁2号线的轨道线前',
 
 };
 
