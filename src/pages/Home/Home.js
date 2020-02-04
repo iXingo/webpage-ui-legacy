@@ -200,7 +200,7 @@ const Home = props => {
             <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
               程序人生的寂静欢喜。
             </Typography>
-            <TypeWriter typing={0.5}>
+            <TypeWriter typing={1}>
               <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
                           className={classes.secondLine}>
                 车马很慢，书信很远。一个（伪）文艺派程序员，在这个漫长的人生做一些简单的思考。
