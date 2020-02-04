@@ -116,7 +116,7 @@ const firstSection = {
 const secondSection = {
   sectionMain: '汪师傅这一年',
   sectionTitle: '2019过去了， 我很想念他',
-  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   imageLeft: 'https://img.ixingo.cn/wangxin2019.png',
   titleLeft: '上海， 这一年。',
@@ -133,7 +133,7 @@ const secondSection = {
 const thirdSection = {
   sectionMain: '汪师傅这一年',
   sectionTitle: '2019过去了， 我很想念他',
-  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/wangxin2019.png',
   title: '上海， 这一年。',
@@ -146,7 +146,7 @@ const thirdSection = {
 const fourthSection = {
   sectionMain: '工作这一年',
   sectionTitle: '第一个， 完全工作的一年',
-  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
   title: '上海， 这一年。',
@@ -159,7 +159,7 @@ const fourthSection = {
 const fifthSection = {
   sectionMain: '工作这一年',
   sectionTitle: '第一个， 完全工作的一年',
-  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。我不断地寻找油腻的师姐在哪里，额，不，是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
   title: '上海， 这一年。',
