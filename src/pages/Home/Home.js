@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
 
 const firstSection = {
   sectionMain: '汪师傅的2020年',
-  sectionTitle: '情深深雨蒙蒙，本站开发测试中。',
+  sectionTitle: '小楼昨夜又东风， 本站开发测试中。',
   sectionContent: '所有内容和功能正在不断变化中，欢迎提供意见和建议。',
 
   image: 'https://img.ixingo.cn/undraw_new_decade_n4qd.svg',
@@ -132,7 +132,7 @@ const secondSection = {
 
 const thirdSection = {
   sectionMain: '汪师傅这一年',
-  sectionTitle: '2019过去了， 我很想念他',
+  sectionTitle: '是非成败转头空， 又匆匆。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/wangxin2019.png',
@@ -144,8 +144,8 @@ const thirdSection = {
 };
 
 const fourthSection = {
-  sectionMain: '工作这一年',
-  sectionTitle: '第一个， 完全工作的一年',
+  sectionMain: '汪师傅和他的朋友们',
+  sectionTitle: '今时不与旧日同， 陈年好友情更浓。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
@@ -167,7 +167,7 @@ const fourthSection = {
 
 const fifthSection = {
   sectionMain: '工作这一年',
-  sectionTitle: '小猪佩奇身上纹， 汪欣初当社会人。',
+  sectionTitle: '小猪佩奇身上纹， 汪欣也成社会人。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
@@ -177,6 +177,73 @@ const fifthSection = {
   linkText: '在一行行代码一封封邮',
 };
 
+
+const sixth = {
+  sectionMain: '汪师傅和他的朋友们',
+  sectionTitle: '问君能有几多愁，  今年汪欣要加油。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+  image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
+  title: '上海， 这一年。',
+  content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkText: '汪师傅',
+
+  titleOne: '汪师傅',
+  contentOne: '站在地铁2号线的轨道线前',
+
+  titleTwo: '汪师傅',
+  contentTwo: '站在地铁2号线的轨道线前',
+
+  titleThree: '汪师傅',
+  contentThree: '站在地铁2号线的轨道线前',
+
+};
+
+const seventh = {
+  sectionMain: '汪师傅和他的朋友们',
+  sectionTitle: '皎皎空中孤月轮，  汪欣教你学编程。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+  image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
+  title: '上海， 这一年。',
+  content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkText: '汪师傅',
+
+  titleOne: '汪师傅',
+  contentOne: '站在地铁2号线的轨道线前',
+
+  titleTwo: '汪师傅',
+  contentTwo: '站在地铁2号线的轨道线前',
+
+  titleThree: '汪师傅',
+  contentThree: '站在地铁2号线的轨道线前',
+
+};
+
+
+const eighth = {
+  sectionMain: '汪师傅和他的朋友们',
+  sectionTitle: '夜半无人私语时，  一起研究线程池。',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+  image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
+  title: '上海， 这一年。',
+  content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkText: '汪师傅',
+
+  titleOne: '汪师傅',
+  contentOne: '站在地铁2号线的轨道线前',
+
+  titleTwo: '汪师傅',
+  contentTwo: '站在地铁2号线的轨道线前',
+
+  titleThree: '汪师傅',
+  contentThree: '站在地铁2号线的轨道线前',
+
+};
 const SvgIcon = () => {
   return (
     <svg style={{width: 20, height: 20}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
@@ -228,9 +295,9 @@ const Home = props => {
       <CardPicture context={fourthSection} {...props}  />
       <PictureText context={fifthSection} {...props} />
       <PictureContentLine context={thirdSection} {...props}  />
-      <TextPicture context={fourthSection} {...props} />
-      <ButtonPictureContent context={fourthSection} {...props}  />
-      <TextPictureLink context={fourthSection} {...props}  />
+      <TextPicture context={sixth} {...props} />
+      <ButtonPictureContent context={seventh} {...props}  />
+      <TextPictureLink context={eighth} {...props}  />
 
     </React.Fragment>
   );
