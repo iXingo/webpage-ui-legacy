@@ -132,7 +132,7 @@ const secondSection = {
 
 const thirdSection = {
   sectionMain: '汪师傅这一年',
-  sectionTitle: '是非成败转头空， 又匆匆。',
+  sectionTitle: '东风未肯入东门， 看看今天啥新闻。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/wangxin2019.png',
