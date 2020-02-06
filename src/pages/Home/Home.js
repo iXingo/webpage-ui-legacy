@@ -103,7 +103,7 @@ const useStyles = makeStyles(theme => ({
 
 const firstSection = {
   sectionMain: '汪师傅的2020年',
-  sectionTitle: '小楼昨夜又东风，&nbsp; 本站开发测试中。',
+  sectionTitle: '小楼昨夜又东风，  本站开发测试中。',
   sectionContent: '所有内容和功能正在不断变化中，欢迎提供意见和建议。',
 
   image: 'https://img.ixingo.cn/undraw_new_decade_n4qd.svg',
@@ -115,7 +115,7 @@ const firstSection = {
 
 const secondSection = {
   sectionMain: '汪师傅这一年',
-  sectionTitle: '年年岁岁花相似，&nbsp; 岁岁年年人不同。',
+  sectionTitle: '年年岁岁花相似，  岁岁年年人不同。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   imageLeft: 'https://img.ixingo.cn/wangxin2019.png',
@@ -132,7 +132,7 @@ const secondSection = {
 
 const thirdSection = {
   sectionMain: '汪师傅这一年',
-  sectionTitle: '东风未肯入东门，&nbsp; 看看今天啥新闻。',
+  sectionTitle: '东风未肯入东门，  看看今天啥新闻。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/wangxin2019.png',
@@ -145,7 +145,7 @@ const thirdSection = {
 
 const fourthSection = {
   sectionMain: '汪师傅和他的朋友们',
-  sectionTitle: '今时不与旧日同，&nbsp; 陈年好友情更浓。',
+  sectionTitle: '今时不与旧日同，  陈年好友情更浓。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
@@ -167,7 +167,7 @@ const fourthSection = {
 
 const fifthSection = {
   sectionMain: '工作这一年',
-  sectionTitle: '小猪佩奇身上纹，&nbsp; 汪欣也成社会人。',
+  sectionTitle: '小猪佩奇身上纹，  汪欣也成社会人。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
@@ -180,7 +180,7 @@ const fifthSection = {
 
 const sixth = {
   sectionMain: '汪师傅和他的朋友们',
-  sectionTitle: '问君能有几多愁，&nbsp;  今年汪欣要加油。',
+  sectionTitle: '问君能有几多愁，   今年汪欣要加油。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
@@ -202,7 +202,7 @@ const sixth = {
 
 const seventh = {
   sectionMain: '汪师傅和他的朋友们',
-  sectionTitle: '皎皎空中孤月轮，&nbsp;  汪欣教你学编程。',
+  sectionTitle: '皎皎空中孤月轮，   汪欣教你学编程。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
@@ -225,7 +225,7 @@ const seventh = {
 
 const eighth = {
   sectionMain: '汪师傅和他的朋友们',
-  sectionTitle: '夜半无人私语时，&nbsp;  一起研究线程池。',
+  sectionTitle: '夜半无人私语时，   一起研究线程池。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
   image: 'https://img.ixingo.cn/9A7CA4FE-B8C1-4244-AFC6-FFF83AF34619_1_105_c.jpg',
