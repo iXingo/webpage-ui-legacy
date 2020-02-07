@@ -7,7 +7,7 @@ import {Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    paddingTop: theme.spacing(4),
+    // paddingTop: theme.spacing(4),
   },
   footCopyright: {
     paddingTop: 20,
