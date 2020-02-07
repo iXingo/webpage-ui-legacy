@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '100px 10px 36px'
+    padding: '210px 10px 120px'
   },
   website: {
     fontSize: 48,
