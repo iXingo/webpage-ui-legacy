@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
   },
   thirdLine: {
     fontSize: 16,
-    fontWeight: 500,
+    fontWeight: 400,
     padding: 10,
     lineHeight: 1.5,
   },
