@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
   items: {
     height: '100%',
-    padding: '20px 15px 20px',
+    padding: '-1px 15px 0px',
     justifyContent: 'center',
     alignItems: 'center'
   }

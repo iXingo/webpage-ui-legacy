@@ -51,6 +51,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(6),
   },
+  info: {
+    marginTop: 60
+  }
 }));
 
 
@@ -119,6 +122,9 @@ const PictureContentLine = props => {
             </Grid>
           ))}
         </Grid>
+        <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.info}>
+          * 更多好友信息
+        </Typography>
       </Container>
     </React.Fragment>
   );
