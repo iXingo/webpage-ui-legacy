@@ -32,6 +32,9 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     paddingTop: 20,
     lineHeight: 1.5,
+    [theme.breakpoints.down('md')]: {
+      width: 300,
+    },
   },
   thirdLine: {
     color: 'gainsboro',

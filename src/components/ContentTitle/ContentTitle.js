@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
     color: 'black',
     paddingTop: 20,
     lineHeight: 1.5,
+    [theme.breakpoints.down('md')]: {
+      width: 300,
+    },
   },
   thirdLine: {
     display: 'flex',
