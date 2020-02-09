@@ -321,7 +321,7 @@ const Home = props => {
       <TextPicture context={sixth} {...props} />
       <PictureTextLink context={studySection} {...props}  />
       <ButtonPictureContent context={programmerSection} {...props}  />
-      <img src={"https://img.ixingo.cn/black-wang-xin.png"} style={{width: '100%', paddingTop: 40}}  alt={'wangxin'}/>
+      <img src={"https://img.ixingo.cn/wang-xin-alone.png"} style={{width: '100%', paddingTop: 40}}  alt={'wangxin'}/>
     </React.Fragment>
   );
 };
