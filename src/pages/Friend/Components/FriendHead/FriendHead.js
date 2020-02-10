@@ -101,10 +101,7 @@ const FriendHead = props => {
         <Grid container item xs={12} md={12} className={classes.headimage}/>
         <Grid item xs={10} md={8} className={classes.title}>
           <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-            他们，
-          </Typography>
-          <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
-            正影响着汪师傅。
+            汪师傅和他的朋友们
           </Typography>
         </Grid>
         <Grid item xs={10} md={8} className={classes.grid}>
