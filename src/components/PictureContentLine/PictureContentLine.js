@@ -123,8 +123,8 @@ const PictureContentLine = props => {
           ))}
         </Grid>
         <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.info}>
-          * 更多好友信息请关注 <Link color="primary" component={RouterLink} to={'/friends'} underline="hover"
-                           variant="h6">好友</Link> 频道，当前仅显示最常联系的好友
+          * 更多好友信息请关注<Link color="primary" component={RouterLink} to={'/friends'} underline="hover"
+                           variant="h6">好友</Link>频道，当前仅显示最常联系的好友
         </Typography>
       </Container>
     </React.Fragment>

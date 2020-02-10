@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme => ({
     // margin: 'auto',
     // padding: theme.spacing(3),
     padding: '0 16px',
-    textAlign: 'justify'
+    textAlign: 'justify',
   },
   title: {
     color: '#1a73e8',
@@ -123,7 +123,13 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#1a73e8',
     color: 'white',
     fontSize: 12,
-  }
+  },
+  singlePost: {
+    [theme.breakpoints.up('md')]: {
+      maxWidth: '51%',
+    }
+
+  },
 }));
 
 const PostMain = props => {
@@ -145,10 +151,10 @@ const PostMain = props => {
       <div className={classes.content}>
         <Grid container className={classes.mainGrid}>
           {/* Main content */}
-          <Grid item xs={12} md={8} className={classes.singlepost}>
+          <Grid item xs={12} md={8} className={classes.singlePost}>
             <PostHeader post={props.post} {...props}/>
           </Grid>
-          <Grid item xs={12} md={8} className={classes.singlepost}>
+          <Grid item xs={12} md={8} className={classes.singlePost}>
             <PostContent post={props.post} {...props}> </PostContent>
           </Grid>
         </Grid>
