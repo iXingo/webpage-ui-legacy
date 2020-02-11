@@ -125,7 +125,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 12,
   },
   singlePost: {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.u('md')]: {
       maxWidth: '51%',
     }
 
