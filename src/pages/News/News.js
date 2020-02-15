@@ -33,6 +33,7 @@ import {
 const useStyles = makeStyles(theme => ({
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
+    display: 'flex',
   },
   toolbarTitle: {
     flex: 1,
@@ -190,8 +191,7 @@ const News = props => {
       <Container maxWidth="xl">
         <Toolbar className={classes.toolbar}>
           {/* <Button size="small">订阅</Button> */}
-          <Subscribe/>
-          <div>
+            <Subscribe />
             <Typography
               component="h2"
               variant="h4"
@@ -200,15 +200,14 @@ const News = props => {
               noWrap
               className={classes.toolbarTitle}
             >
-              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
+              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
             </Typography>
-          </div>
-          {/* <IconButton>
-            <SearchIcon />*/}
-          {/*</IconButton> */}
-          <Button variant="outlined" size="small">
-            搜索
-          </Button>
+            {/* <IconButton>
+              <SearchIcon />
+            </IconButton> */}
+            <Button variant="outlined" size="small">
+              搜索
+            </Button>
         </Toolbar>
 
         <main>
