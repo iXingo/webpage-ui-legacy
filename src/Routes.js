@@ -4,6 +4,7 @@ import {Album as AlbumPage, RouteWithLayout} from './components';
 import {Main as MainLayout, Minimal as MinimalLayout} from './layouts';
 import {
   About as AboutPage,
+  AboutMe as AboutMePage,
   Activate as ActivatePage,
   Agreement as AgreementPage,
   Copyright as CopyrightPage,
@@ -156,6 +157,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/about"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={AboutMePage}
+          exact
+          layout={MinimalLayout}
+          path="/about-me"
           {...this.props}
         />
         <RouteWithLayout

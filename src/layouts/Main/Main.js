@@ -5,7 +5,8 @@ import {makeStyles, useTheme} from '@material-ui/styles';
 import {useMediaQuery} from '@material-ui/core';
 import {withRouter} from 'react-router-dom';
 
-import {Foot, Footer, Sidebar, Topbar} from './components';
+import {Sidebar, Topbar} from './components';
+import Footer from "../../components/Footer";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -60,7 +61,6 @@ const Main = props => {
       />
       <main className={classes.content}>
         {children}
-        <Foot/>
         <Footer/>
       </main>
     </div>

@@ -35,6 +35,7 @@ export {default as PictureContentLine} from './PictureContentLine';
 export {default as ButtonPictureContent} from './ButtonPictureContent';
 export {default as CardPicture} from './CardPicture';
 export {default as BigImage} from './BigImage';
+export {default as Footer} from './Footer';
 
 
 

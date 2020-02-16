@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 // import Grid from '@material-ui/core/Grid';
-import {MediaSection} from '../../components';
+import {
+  MediaSection,
+} from '../../components';
 // import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
@@ -54,7 +56,7 @@ const About = props => {
 
   return (
     <div className={classes.root}>
-      <MediaSection friend={props.friend} {...props}/>
+      <MediaSection {...props}/>
     </div>
   );
 };

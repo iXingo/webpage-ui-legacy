@@ -211,7 +211,7 @@ const News = props => {
             </Button>
         </Toolbar>
         <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.newTitle}>
-           小人物的大新闻
+           星狗新闻 ｜ 小人物的大新闻
         </Typography>
         <main>
 
