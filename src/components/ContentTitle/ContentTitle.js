@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '160px 10px 0'
+    padding: '200px 10px 0'
   },
   firstLine: {
     fontSize: 16,

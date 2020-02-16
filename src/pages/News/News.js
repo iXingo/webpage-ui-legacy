@@ -124,8 +124,9 @@ const useStyles = makeStyles(theme => ({
   list: {
     marginBottom: theme.spacing(2),
   },
-
-
+  newTitle : {
+    color: '#1a73e8',
+  },
   footer: {
     backgroundColor: "#1a73e8",
     color: theme.palette.primary,
@@ -200,7 +201,7 @@ const News = props => {
               noWrap
               className={classes.toolbarTitle}
             >
-              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width:200}}></img>
+              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
             </Typography>
             {/* <IconButton>
               <SearchIcon />
@@ -209,7 +210,9 @@ const News = props => {
               搜索
             </Button>
         </Toolbar>
-
+        <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.newTitle}>
+           小人物的大新闻
+        </Typography>
         <main>
 
           {/* Main featured post */}

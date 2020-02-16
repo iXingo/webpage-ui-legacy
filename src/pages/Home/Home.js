@@ -7,6 +7,7 @@ import {withRouter} from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
 import Slide from '@material-ui/core/Slide';
 import {
+  BigImage,
   ButtonPictureContent,
   CardPicture,
   PictureContentLine,
@@ -137,7 +138,7 @@ const newsSection = {
 };
 
 const blogSection = {
-  sectionMain: '汪师傅这一年',
+  sectionMain: '一年又一年',
   sectionTitle: '年年岁岁花相似，  岁岁年年人不同。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
@@ -175,7 +176,7 @@ const workSection = {
 };
 
 const friendSection = {
-  sectionMain: '汪师傅这一年',
+  sectionMain: '汪师傅和他的朋友们',
   sectionTitle: '今时不与旧日同，  陈年好友情更浓。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
@@ -188,7 +189,7 @@ const friendSection = {
 };
 
 const selfSection = {
-  sectionMain: '工作这一年',
+  sectionMain: '我们终将成为社会人',
   sectionTitle: '小猪佩奇身上纹，  汪欣也成社会人。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
@@ -202,11 +203,11 @@ const selfSection = {
 
 
 const sixth = {
-  sectionMain: '汪师傅和他的朋友们',
+  sectionMain: '加油，汪师傅',
   sectionTitle: '问君能有几多愁，   今年汪欣要加油。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-  image: 'https://img.ixingo.cn/undraw_instat_analysis_ajld.svg',
+  image: 'https://img.ixingo.cn/feeling_proud_qne1.svg',
   title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
@@ -224,11 +225,11 @@ const sixth = {
 };
 
 const programmerSection = {
-  sectionMain: '汪师傅和他的朋友们',
+  sectionMain: '一些有趣简单的代码程序',
   sectionTitle: '皎皎空中孤月轮，   汪欣教你学编程。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-  image: 'https://img.ixingo.cn/undraw_hacker_mind_6y85.svg',
+  image: 'https://img.ixingo.cn/undraw_code_review_l1q9.svg',
   title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
@@ -247,11 +248,11 @@ const programmerSection = {
 
 
 const studySection = {
-  sectionMain: '汪师傅和他的朋友们',
+  sectionMain: '学习新知识',
   sectionTitle: '夜半无人私语时，   一起研究线程池。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
 
-  image: 'https://img.ixingo.cn/undraw_code_review_l1q9.svg',
+  image: 'https://img.ixingo.cn/undraw_hacker_mind_6y85.svg',
   title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
   linkUrl: '',
@@ -304,7 +305,7 @@ const Home = props => {
             <TypeWriter typing={1}>
               <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
                           className={classes.secondLine}>
-                车马很慢，书信很远。一个（伪）文艺派程序员，在这个漫长的人生做一些简单的思考。
+                车马很慢，书信很远。一个（伪）文艺派程序员，在这个漫长的人生做一些简单，微不足道的思考。
               </Typography>
             </TypeWriter>
             <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
@@ -321,9 +322,9 @@ const Home = props => {
       <PictureText context={selfSection} {...props} />
       <PictureContentLine context={friendSection} {...props}  />
       <TextPicture context={sixth} {...props} />
-      <PictureTextLink context={studySection} {...props}  />
       <ButtonPictureContent context={programmerSection} {...props}  />
-      <img src={"https://img.ixingo.cn/wang-xin-alone.png"} style={{width: '100%', paddingTop: 40}}  alt={'wangxin'}/>
+      <PictureTextLink context={studySection} {...props}  />
+      <BigImage context={contributionSection} {...props}  />
     </React.Fragment>
   );
 };

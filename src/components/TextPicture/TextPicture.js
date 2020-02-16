@@ -69,7 +69,7 @@ const PictureText = props => {
             <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
               {props.context.title}
             </Typography>
-            <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+            <Typography paragraph gutterBottom color="textSecondary" align="right" className={classes.thirdLine}>
               {props.context.content}
             </Typography>
           </div>

@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '10px 10px 10px'
+    padding: '10px 10px 10px',
   },
   firstLine: {
     margin: 'auto',
@@ -24,9 +24,9 @@ const useStyles = makeStyles(theme => ({
     color: 'black',
     fontWeight: 500,
     lineHeight: 1.5,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center'
+    // display: 'flex',
+    // justifyContent: 'center',
+    // alignItems: 'center'
   },
   secondLine: {
     fontSize: 48,
@@ -98,7 +98,7 @@ const PictureText = props => {
             <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.firstLine}>
               {props.context.title}
             </Typography>
-            <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+            <Typography paragraph gutterBottom color="textSecondary" align="left" className={classes.thirdLine}>
               {props.context.content}
             </Typography>
           </div>

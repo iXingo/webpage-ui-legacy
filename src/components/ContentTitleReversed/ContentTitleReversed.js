@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     // marginBottom: 30
   },
   main: {
-    padding: '80px 10px 0',
+    padding: '200px 10px 0',
     // marginTop: 80,
   },
   firstLine: {
