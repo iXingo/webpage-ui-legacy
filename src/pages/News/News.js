@@ -185,6 +185,7 @@ const News = props => {
   // if(!currentUser){
   //   return <NotAuth />;
   // }
+  document.title = "星狗新闻，小人物的大新闻 | 星狗网， 看见好时光";
 
   return (
     <React.Fragment>
