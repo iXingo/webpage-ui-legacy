@@ -39,7 +39,7 @@ const Footer = props => {
         <div className={classes.footCopyright}>
           <Typography variant="body1" className={classes.footer}>
             <a href={"/about"}
-               style={{color: 'white', textDecoration: 'underline'}}>关于星狗</a> |&nbsp;
+               style={{color: 'white', textDecoration: 'underline'}}>关于星狗网站</a> |&nbsp;
             <a href={"/about-me"}
                style={{color: 'white', textDecoration: 'underline'}}>关于站长@程序员汪师傅</a> |&nbsp;
             <a href={"/user-agreement"}
@@ -72,7 +72,7 @@ const Footer = props => {
             星狗网络&nbsp;&nbsp;版权所有
           </Typography>
           <Typography variant="body1" className={classes.footer}>
-            Copyright 2018 - 2020 iXingo. All Rights Reserved
+            Copyright 2018 - 2020 iXingo. All Rights Reserved. 所有权利保留。本站由@程序员汪师傅开发，设计并维护
           </Typography>
         </div>
       </div>
