@@ -50,7 +50,10 @@ const Footer = props => {
                style={{color: 'white', textDecoration: 'underline'}}>版权保护投诉指引</a> |&nbsp;
             <a href={"https://github.com/iXingo/WebPageUI.git"}
                style={{color: 'white', textDecoration: 'underline'}}>开放平台</a> |&nbsp;
-            <a href={"https://weibo.com/ixingo"} style={{color: 'white', textDecoration: 'underline'}}>商务洽谈</a> &nbsp;
+            <a href={"https://weibo.com/ixingo"}
+               style={{color: 'white', textDecoration: 'underline'}}>商务洽谈</a> &nbsp;
+            <a href={"https://ixingo.com.cn"}
+               style={{color: 'white', textDecoration: 'underline'}}>HTTPS站点</a> &nbsp;
           </Typography>
           <Typography variant="body1" className={classes.footer}>
             <a href={"/index"}
