@@ -57,7 +57,7 @@ const useStyles = makeStyles(theme => ({
 const year2011 = {
   sectionMain: '2011年，故事开始',
   sectionTitle: '2011，初入校园。',
-  sectionContent: '故事不好写。应该怎么写呢。',
+  sectionContent: '2011年，年轻青涩的汪师傅走出家乡，走向校园。',
 
   image: 'https://img.ixingo.cn/wangxin-2011.JPG',
   title: '2011年的汪师傅',
