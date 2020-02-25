@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
 
 
 const year2011 = {
-  sectionMain: '2011年，故事开始',
+  sectionMain: '汪师傅在二零一一',
   sectionTitle: '2011，初入校园。',
   sectionContent: '2011年，年轻青涩的汪师傅走出家乡，走向校园。',
 
@@ -67,7 +67,7 @@ const year2011 = {
 };
 
 const year2012 = {
-  sectionMain: '2012，故事继续',
+  sectionMain: '汪师傅在二零一二',
   sectionTitle: '2012，初见成熟。',
   sectionContent: '2012年，初见成熟。',
 
@@ -79,7 +79,7 @@ const year2012 = {
 };
 
 const year2013 = {
-  sectionMain: '2013年，故事继续',
+  sectionMain: '汪师傅在二零一三',
   sectionTitle: '2013年，初见成熟。',
   sectionContent: '2013年，初见成熟。',
 
