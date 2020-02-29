@@ -75,7 +75,7 @@ class App extends Component {
 
     notification[notificationType]({
       message: '星狗网 Web App',
-      description: description + "下次再见啦！亲爱的 " + this.state.currentUser.name + " 同学~",
+      description: description + "下次再见！亲爱的「" + this.state.currentUser.name + "」同学~",
     });
     localStorage.removeItem(ACCESS_TOKEN);
 
