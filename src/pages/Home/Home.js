@@ -16,7 +16,6 @@ import {
   PictureText,
   PictureTextLink,
   TextPicture,
-  // TextPictureLink
 } from '../../components';
 
 

@@ -124,7 +124,7 @@ const useStyles = makeStyles(theme => ({
   list: {
     marginBottom: theme.spacing(2),
   },
-  newTitle : {
+  newTitle: {
     color: '#1a73e8',
   },
   footer: {
@@ -193,26 +193,26 @@ const News = props => {
       <Container maxWidth="xl">
         <Toolbar className={classes.toolbar}>
           {/* <Button size="small">订阅</Button> */}
-            <Subscribe />
-            <Typography
-              component="h2"
-              variant="h4"
-              color="inherit"
-              align="center"
-              noWrap
-              className={classes.toolbarTitle}
-            >
-              <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
-            </Typography>
-            {/* <IconButton>
+          <Subscribe/>
+          <Typography
+            component="h2"
+            variant="h4"
+            color="inherit"
+            align="center"
+            noWrap
+            className={classes.toolbarTitle}
+          >
+            <img src="https://img.ixingo.cn/news.png" alt="星狗新闻" style={{height: 60, width: 200}}/>
+          </Typography>
+          {/* <IconButton>
               <SearchIcon />
             </IconButton> */}
-            <Button variant="outlined" size="small">
-              搜索
-            </Button>
+          <Button variant="outlined" size="small">
+            搜索
+          </Button>
         </Toolbar>
         <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.newTitle}>
-           星狗新闻 ｜ 小人物的大新闻
+          星狗新闻 ｜ 小人物的大新闻
         </Typography>
         <main>
 

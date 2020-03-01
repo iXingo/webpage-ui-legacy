@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 // import Grid from '@material-ui/core/Grid';
-import {
-  MediaSection,
-  PictureText,
-  TextPicture
-} from '../../components';
+import {MediaSection, PictureText, TextPicture} from '../../components';
 import {Container} from "@material-ui/core";
 // import Paper from '@material-ui/core/Paper';
 
@@ -103,9 +99,9 @@ const AboutMe = props => {
       <MediaSection {...props}/>
 
       <Container>
-        <img src={"https://img.ixingo.cn/wang-xin-1.png"} style={{width: '100%', paddingTop: 40}}  alt={'wangxin'}/>
-        <img src={"https://img.ixingo.cn/wang-xin-2.png"} style={{width: '100%', paddingTop: 20}}  alt={'wangxin'}/>
-        <img src={"https://img.ixingo.cn/wang-xin-3.png"} style={{width: '100%', paddingTop: 20}}  alt={'wangxin'}/>
+        <img src={"https://img.ixingo.cn/wang-xin-1.png"} style={{width: '100%', paddingTop: 40}} alt={'wangxin'}/>
+        <img src={"https://img.ixingo.cn/wang-xin-2.png"} style={{width: '100%', paddingTop: 20}} alt={'wangxin'}/>
+        <img src={"https://img.ixingo.cn/wang-xin-3.png"} style={{width: '100%', paddingTop: 20}} alt={'wangxin'}/>
       </Container>
 
       <TextPicture context={year2011} {...props} />

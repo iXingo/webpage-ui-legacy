@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const  MediaSection = props => {
+const MediaSection = props => {
 
   // const { friend } = props;
   const classes = useStyles();
