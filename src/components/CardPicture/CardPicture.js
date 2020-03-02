@@ -13,10 +13,14 @@ const useStyles = makeStyles(theme => ({
     maxWidth: '100%',
     color: 'hsla(0,0%,100%,.6)',
   },
-  main: {
+  mainOne: {
     padding: 5,
-    marginBottom: 50,
     color: 'white',
+  },
+  mainTwo: {
+    padding: 5,
+    color: 'white',
+    paddingTop: 20,
   },
   items: {
     backgroundColor: '#1a73e8',
@@ -63,7 +67,6 @@ const useStyles = makeStyles(theme => ({
     width: 30
   },
   content: {
-    padding: '20px 0 0',
     marginTop: 45,
   },
   picture: {
@@ -102,9 +105,9 @@ const CardPicture = props => {
       <CssBaseline/>
       <ContentTitle context={props.context}/>
       <Grid container justify="center" alignItems="center" className={classes.content}>
-        <Grid item xs={12} md={4}>
+        <Grid item xs={12} md={4} >
           <div className={classes.items}>
-            <div className={classes.main}>
+            <div className={classes.mainOne}>
               <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
                 {props.context.titleOne}
               </Typography>
@@ -112,7 +115,7 @@ const CardPicture = props => {
                 {props.context.contentOne}
               </Typography>
             </div>
-            <div className={classes.main}>
+            <div className={classes.mainTwo}>
               <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
                 {props.context.titleTwo}
               </Typography>

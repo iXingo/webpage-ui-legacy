@@ -41,11 +41,12 @@ const useStyles = makeStyles(theme => ({
   },
   cardContent: {
     flexGrow: 1,
+    padding: '16px 0 16px'
   },
   readmore: {
     display: 'flex',
     justifyContent: 'space-between',
-
+    padding: '8px 0 8px'
   },
   footer: {
     backgroundColor: theme.palette.background.paper,

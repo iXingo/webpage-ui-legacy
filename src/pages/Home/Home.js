@@ -149,7 +149,7 @@ const blogSection = {
   linkTextRight: '和汪师傅一起回顾2019',
 };
 
-const workSection = {
+const planSection = {
   sectionMain: '汪师傅的New Plan(破烂)',
   sectionTitle: '春风又绿江南岸， 新年搞点新方案。',
   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
@@ -160,14 +160,12 @@ const workSection = {
   linkUrl: '',
   linkText: '汪师傅',
 
-  titleOne: '汪师傅',
-  contentOne: '站在地铁2号线的轨道线前',
+  titleOne: '计划代号：9527【完成星狗网】',
+  contentOne: '完成星狗网前后端的编写。今年第一个计划就是填坑，年前学习了React主要就是完成这个博客，但是发现前端写好真的很难，而且学完React发现对SEO不太友好，但是发现现在百度也可以解析React，所以暂时服务端渲染的事情就不管了，先把这主要的几个模块写完。（前端真的不好写）',
 
-  titleTwo: '汪师傅',
-  contentTwo: '站在地铁2号线的轨道线前',
+  titleTwo: '计划代号：007【加一些有趣的内容】',
+  contentTwo: '其实我还是想做一个技术博主的，但是突然冒出来一个写一写好友故事的奇怪想法，所以把这个也提上日程，写一写平凡的故事。（希望不要写成流水账）其实作为一个资深学渣，写一些严谨的技术架构，算法仿佛对我有些遥远，不希望编程别人博客的搬运工，所以还是准备写一些简单但是有趣的技术文章。（希望最后不要变得复杂又无趣）',
 
-  titleThree: '汪师傅',
-  contentThree: '站在地铁2号线的轨道线前',
 };
 
 const selfSection = {
@@ -313,7 +311,7 @@ const Home = props => {
       <PictureTextLink context={contributionSection} {...props}  />
       <PictureItems context={newsSection} {...props} />
       <PicturePicture context={blogSection} {...props} />
-      <CardPicture context={workSection} {...props}  />
+      <CardPicture context={planSection} {...props}  />
       <PictureText context={selfSection} {...props} />
       <PictureContentLine context={friendSection} {...props}  />
       <TextPicture context={goodSection} {...props} />
