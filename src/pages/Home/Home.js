@@ -298,7 +298,7 @@ const Home = props => {
             <TypeWriter typing={1}>
               <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
                           className={classes.secondLine}>
-                车马很慢，书信很远。一个（伪）文艺派程序员，在这个漫长的人生做一些简单，微不足道的思考。
+                车马很慢，书信很远。汪师傅，一个（伪）文艺派程序员，在这个漫长而复杂的人生做一些短暂简单，且微不足道的思考。
               </Typography>
             </TypeWriter>
             <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
