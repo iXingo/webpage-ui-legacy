@@ -262,6 +262,28 @@ const studySection = {
 
 };
 
+const endSection = {
+  sectionMain: '一些有趣简单的代码程序',
+  sectionTitle: '一曲肝肠断， 天涯何处觅知音',
+  sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
+
+  image: 'https://img.ixingo.cn/undraw_code_review_l1q9.svg',
+  title: '上海， 这一年。',
+  content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  linkUrl: '',
+  linkText: '汪师傅',
+
+  titleOne: '汪师傅',
+  contentOne: '站在地铁2号线的轨道线前',
+
+  titleTwo: '汪师傅',
+  contentTwo: '站在地铁2号线的轨道线前',
+
+  titleThree: '汪师傅',
+  contentThree: '站在地铁2号线的轨道线前',
+
+};
+
 
 const SvgIcon = () => {
   return (
@@ -317,7 +339,7 @@ const Home = props => {
       <TextPicture context={goodSection} {...props} />
       <ButtonPictureContent context={programmerSection} {...props}  />
       <PictureTextLink context={studySection} {...props}  />
-      <BigImage context={contributionSection} {...props}  />
+      <BigImage context={endSection} {...props}  />
     </React.Fragment>
   );
 };
