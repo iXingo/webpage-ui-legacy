@@ -77,7 +77,7 @@ const year2012 = {
 const year2013 = {
   sectionMain: '汪师傅在二零一三',
   sectionTitle: '2013年，初见成熟。',
-  sectionContent: '2013年，初见成熟。',
+  sectionContent: '2013年，。',
 
   image: 'https://img.ixingo.cn/wangxin-2011.JPG',
   title: '2012年的汪师傅',
@@ -98,11 +98,11 @@ const AboutMe = props => {
 
       <MediaSection {...props}/>
 
-      <Container>
-        <img src={"https://img.ixingo.cn/wang-xin-1.png"} style={{width: '100%', paddingTop: 40}} alt={'wangxin'}/>
-        <img src={"https://img.ixingo.cn/wang-xin-2.png"} style={{width: '100%', paddingTop: 20}} alt={'wangxin'}/>
-        <img src={"https://img.ixingo.cn/wang-xin-3.png"} style={{width: '100%', paddingTop: 20}} alt={'wangxin'}/>
-      </Container>
+      {/*<Container>*/}
+      {/*  <img src={"https://img.ixingo.cn/wang-xin-1.png"} style={{width: '100%', paddingTop: 40}} alt={'wangxin'}/>*/}
+      {/*  <img src={"https://img.ixingo.cn/wang-xin-2.png"} style={{width: '100%', paddingTop: 20}} alt={'wangxin'}/>*/}
+      {/*  <img src={"https://img.ixingo.cn/wang-xin-3.png"} style={{width: '100%', paddingTop: 20}} alt={'wangxin'}/>*/}
+      {/*</Container>*/}
 
       <TextPicture context={year2011} {...props} />
       <PictureText context={year2012} {...props} />
