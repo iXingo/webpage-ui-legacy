@@ -36,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     fontWeight: 400,
     padding: 10,
+    color: 'black',
     lineHeight: 1.5,
   },
   svgIcon: {
@@ -87,7 +88,7 @@ const PictureTextLink = props => {
             <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
               {props.context.textTitle}
             </Typography>
-            <Typography paragraph gutterBottom color="textSecondary" className={classes.thirdLine}>
+            <Typography paragraph gutterBottom color="inherit" className={classes.thirdLine}>
               {props.context.textContent}
             </Typography>
             <Link component={RouterLink} to={props.context.linkUrl} hover="none"

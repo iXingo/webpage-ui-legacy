@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 // import Grid from '@material-ui/core/Grid';
 import {MediaSection, PictureText, TextPicture} from '../../components';
-import {Container} from "@material-ui/core";
+// import {Container} from "@material-ui/core";
 // import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({

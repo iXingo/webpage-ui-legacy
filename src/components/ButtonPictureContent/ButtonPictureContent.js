@@ -98,10 +98,10 @@ const ButtonPictureContent = props => {
               </Typography>
             </div>
             <div className={classes.main}>
-              <Typography variant="h5" gutterBottom color="inherit" className={classes.firstLine}>
+              <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>
                 {props.context.titleTwo}
               </Typography>
-              <Typography paragraph gutterBottom color="textSecondary " className={classes.secondLine}>
+              <Typography paragraph gutterBottom color="textSecondary" className={classes.secondLine}>
                 {props.context.contentTwo}
               </Typography>
             </div>
