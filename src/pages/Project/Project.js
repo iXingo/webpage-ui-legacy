@@ -158,6 +158,12 @@ const projects = [
     "description": "加入该计划后您的邮件地址或者短信将在固定周期内（通常是一天）收到汪师傅的问候信息（目前是您当前所在位置的天气报告，后期将会根据实际情况提供更好的问候信息）",
     "pictureUrl": "https://img.ixingo.cn/undraw_weather_notification_4sbo.svg",
     "involveUrl": ""
+  },
+  {
+    "name": "好友相聚",
+    "description": "现在就预约和汪师傅一起聚餐喝茶，老友相聚。（汪师傅现在坐标上海， 当你出差或旅行时可以参加该计划，您将会收到汪师傅在上海的住址和联系信息。）",
+    "pictureUrl": "https://img.ixingo.cn/undraw_special_event_4aj8.svg",
+    "involveUrl": ""
   }
 ];
 

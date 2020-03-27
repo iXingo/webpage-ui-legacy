@@ -84,7 +84,7 @@ class Post extends Component {
     if (this.state.posts.length === 0) return (
       <div>
         <Typography variant='h5'>
-          <Loading type='oval' width={18} height={18} fill='#f44242' />请稍候，汪师傅正在马不停蹄地加载数据中...
+          <Loading type='oval' width={18} height={18} fill='#f44242' />请稍候～ 汪师傅正在为您马不停蹄地、疯狂地读取数据中...
         </Typography>
         <Instagram/>
       </div>

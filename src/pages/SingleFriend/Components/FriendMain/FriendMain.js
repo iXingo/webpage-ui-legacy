@@ -6,6 +6,7 @@ import FriendContent from '../FriendContent';
 import FriendHeader from '../FriendHeader';
 import {FeaturedCard} from '../../../../components';
 import Paper from '@material-ui/core/Paper';
+import Timer from "react-compound-timer";
 
 
 const useStyles = makeStyles(theme => ({
@@ -59,6 +60,7 @@ const FriendMain = props => {
     <div className={classes.root}>
 
       <div className={classes.content}>
+
         <Grid container className={classes.mainGrid}>
           {/* Main content */}
           <Grid item xs={12} md={8} className={classes.singlefriend}>
@@ -72,6 +74,21 @@ const FriendMain = props => {
             <Paper>
               <FeaturedCard/>
             </Paper>
+
+            <Timer
+                initialTime={55000}
+                direction="backward"
+            >
+              {() => (
+                  <React.Fragment>
+                    <Timer.Days /> 天
+                    <Timer.Hours /> 小时
+                    <Timer.Minutes /> 分钟
+                    <Timer.Seconds /> 秒
+                  </React.Fragment>
+              )}
+            </Timer>
+
             <FriendContent friend={props.friend} {...props}/>
           </Grid>
         </Grid>

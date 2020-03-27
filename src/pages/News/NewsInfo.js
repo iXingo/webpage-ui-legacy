@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {getAllPosts} from '../../util/APIUtils';
+import BigMediaCarcd from "../../components/MediaCard/MediaCard";
 
 class NewsInfo extends Component {
 
@@ -67,20 +68,19 @@ class NewsInfo extends Component {
         currentVotes: [],
         isLoading: false
       });
-      this.loadPostList();
+      this.loadNewsList();
     }
   }
 
   handleLoadMore() {
-    this.loadPostList();
+    this.loadNewsList();
   }
 
   render() {
     return (
-      <a/>
-      // this.state.news.map( new => (
-      //   <News news={new} {...this.props}/>
-      // ));
+      this.state.news.map( singleNews => (
+        <BigMediaCarcd posts={singleNews}/>
+      ))
     );
   }
 

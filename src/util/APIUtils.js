@@ -172,7 +172,14 @@ export function getFriend(id) {
 
 export function getNews(id) {
   return request({
-    url: API_BASE_URL + "/news/" + id,
+    url: API_BASE_URL + "/post/news/" + id,
+    method: 'GET'
+  });
+}
+
+export function getProject(id) {
+  return request({
+    url: API_BASE_URL + "/post/project/" + id,
     method: 'GET'
   });
 }

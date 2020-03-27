@@ -70,7 +70,7 @@ const MediaCard = props => {
     <Grid container>
       {posts.map(post => (
         <Grid item key={props.card} xs={12} md={6} className={classes.cardGrids}>
-          <Card className={classes.cards}>
+          <Card className={classes.cards} onClick={() => openPost(String(post.id))}>
             <CardMedia
               className={classes.cardMedias}
               image={post.picUrl}
@@ -85,7 +85,7 @@ const MediaCard = props => {
               </Typography>
             </CardContent>
             <CardActions className={classes.cardContents}>
-              <Button size="small" color="primary" onClick={() => openPost(String(post.id))}>
+              <Button size="small" color="primary">
                 查看全文...
               </Button>
             </CardActions>
