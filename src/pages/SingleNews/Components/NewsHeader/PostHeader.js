@@ -124,20 +124,20 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const PostHeader = props => {
+const NewsHeader = props => {
 
   const classes = useStyles();
-  if (!props.post.createdBy) return <Instagram/>;
+  if (!props.news.createdBy) return <Instagram/>;
   return (
     <div>
       <Typography className={classes.title} variant="h1">
-        {props.post.title}
+        {props.news.title}
       </Typography>
       <Typography className={classes.author} variant="h5">
-        <strong>本文作者：</strong>
+        <strong>新闻报道：</strong>
         <Chip
           icon={<FaceIcon/>}
-          label={props.post.createdBy.name}
+          label={props.news.createdBy.name}
           clickable
           className={classes.chip}
           color="primary"
@@ -147,27 +147,27 @@ const PostHeader = props => {
       </Typography>
       <Typography variant="h6" className={classes.author}>
         <strong>作者简介：</strong>
-        <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar}/>
-        <strong>  {props.post.createdBy.name}</strong> <Verify/>{props.post.createdBy.verifiedContent}
+        <Avatar alt="报道作者" src={props.news.createdBy.headUrl} className={classes.avatar}/>
+        <strong>  {props.news.createdBy.name}</strong> <Verify/>{props.news.createdBy.verifiedContent}
       </Typography>
       <Divider/>
       <Typography variant="h6" gutterBottom className={classes.abstrat}>
-        <strong>本文摘要：</strong>{props.post.summary}
+        <strong>本文摘要：</strong>{props.news.summary}
       </Typography>
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
-        {props.post.tags.map(tag => (
+        {props.news.tags.map(tag => (
           <Tag tag={tag}/>
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>
-        <strong>阅读提示：</strong>全文共 <strong>{props.post.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.post.readTime}</strong> 分钟。
+        <strong>阅读提示：</strong>全文共 <strong>{props.news.wordCount}</strong> 字，阅读完毕预计需要 <strong>{props.news.readTime}</strong> 分钟。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
       <Typography variant="caption" className={classes.posttime}>
-        作者<strong style={{color: '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong
-        style={{color: '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong
-        style={{color: '#1a73e8'}}>{props.post.creationDateTime}</strong>。
+        报道者<strong style={{color: '#1a73e8'}}>{props.news.createdBy.name}</strong>使用<strong
+        style={{color: '#1a73e8'}}>{props.news.source}</strong>发表于格林威治时间<strong
+        style={{color: '#1a73e8'}}>{props.news.creationDateTime}</strong>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
     </div>
@@ -175,4 +175,4 @@ const PostHeader = props => {
 
 };
 
-export default PostHeader;
+export default NewsHeader;

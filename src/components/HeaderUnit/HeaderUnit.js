@@ -73,6 +73,7 @@ const HeaderUnit = props => {
           <Typography variant="h5" align="center" color={"textSecondary"} paragraph>
             {project.description}
           </Typography>
+          <img src={project.pictureUrl} alt={"星狗计划"}/>
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>

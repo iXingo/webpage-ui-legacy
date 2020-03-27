@@ -1,1 +1,1 @@
-export {default} from './PostContent';
+export {default} from './NewsContent';

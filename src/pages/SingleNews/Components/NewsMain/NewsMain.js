@@ -126,13 +126,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const PostMain = props => {
+const NewsMain = props => {
 
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-      <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
+      <div className={classes.quote} style={{backgroundImage: `url(${props.news.picUrl})`,}}>
         <div className={classes.quoteInner}>
           {/* <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
           <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography> */}
@@ -146,10 +146,10 @@ const PostMain = props => {
         <Grid container className={classes.mainGrid}>
           {/* Main content */}
           <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostHeader post={props.post} {...props}/>
+            <PostHeader post={props.news} {...props}/>
           </Grid>
           <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostContent post={props.post} {...props}/>
+            <PostContent post={props.news} {...props}/>
           </Grid>
         </Grid>
       </div>
@@ -157,8 +157,8 @@ const PostMain = props => {
   );
 };
 
-PostMain.propTypes = {
+NewsMain.propTypes = {
   history: PropTypes.object
 };
 
-export default PostMain;
+export default NewsMain;

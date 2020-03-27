@@ -153,7 +153,7 @@ const PostHeader = props => {
       </Typography>
       <Typography variant="h6" className={classes.author}>
         <strong>作者简介：</strong>
-        <Avatar alt="Remy Sharp" src={props.post.createdBy.headUrl} className={classes.avatar}/>
+        <Avatar alt="文章作者" src={props.post.createdBy.headUrl} className={classes.avatar}/>
         <strong>  {props.post.createdBy.name}</strong> <Verify/><span
         className={classes.info}>{props.post.createdBy.verifiedContent}</span>
       </Typography>

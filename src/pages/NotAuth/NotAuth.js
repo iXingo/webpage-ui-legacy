@@ -2,6 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Typography} from '@material-ui/core';
 import Button from "@material-ui/core/Button";
+import {withRouter} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,9 +34,15 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const NotFound = () => {
+const NotFound = props => {
 
   const classes = useStyles();
+  const {history} = props;
+
+  const handlerLogin = () => {
+    history.push("/sign-in");
+  };
+
   return (
     <div className={classes.root}>
       <Grid container justify="center" spacing={4}>
@@ -46,7 +53,7 @@ const NotFound = () => {
             <Typography
               variant="subtitle2">此页面可能记录了一个受保护的资源,系统管理员汪师傅设置了该页面必须在登录条件下才能被访问,您可以尝试联系汪师傅以获得关于此页面的更多详细帮助。
             </Typography>
-            <Button className={classes.buttonContent}>
+            <Button className={classes.buttonContent} onClick={() => handlerLogin()}>
               点此登录 →
             </Button>
             <img alt="Please login" className={classes.image} src="https://img.ixingo.cn/undraw_coding_6mjf.svg"/>
@@ -57,4 +64,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default withRouter(NotFound);

@@ -1,22 +1,22 @@
 import React, {Component} from 'react';
-import {getPost} from '../../util/APIUtils';
-import {PostMain} from './Components';
+import {getNews} from '../../util/APIUtils';
+import {NewsMain} from './Components';
 
 
-class SinglePost extends Component {
+class SingleNews extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      post: "",
+      news: "",
       isLoading: false
     };
-    this.loadPost = this.loadPost.bind(this);
+    this.loadNews = this.loadPost.bind(this);
   }
 
 
-  loadPost(id) {
-    let promise = getPost(id);
+  loadNews(id) {
+    let promise = getNews(id);
     let {history} = this.props;
     if (!promise) {
       return;
@@ -33,7 +33,7 @@ class SinglePost extends Component {
         if (response.code === 400) {
           history.push("/not-found");
         }
-        document.title = this.state.post.title + " | 星狗网";
+        document.title = this.state.news.title + " | 星狗网";
       }).catch(error => {
       this.setState({
         isLoading: false
@@ -48,7 +48,7 @@ class SinglePost extends Component {
       this.props.loadCurrentUser();
     }
     const {computedMatch: {params}} = this.props;
-    this.loadPost(params.id);
+    this.loadNews(params.id);
 
   }
 
@@ -56,19 +56,19 @@ class SinglePost extends Component {
     if (this.props.isAuthenticated !== nextProps.isAuthenticated) {
       // Reset State
       this.setState({
-        post: "",
+        news: "",
         isLoading: false
       });
       const {computedMatch: {params}} = this.props;
-      this.loadPost(params.id);
+      this.loadNews(params.id);
     }
   }
 
   render() {
-    const {post} = this.state;
+    const {news} = this.state;
     return (
       <div>
-        <PostMain post={post} {...this.props}/>
+        <NewsMain news={news} {...this.props}/>
       </div>
     );
   }
@@ -76,4 +76,4 @@ class SinglePost extends Component {
 }
 
 
-export default SinglePost;
+export default SingleNews;

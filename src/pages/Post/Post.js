@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {getAllPosts} from '../../util/APIUtils';
 import PostPage from "./PostPage";
+import {Instagram} from "react-content-loader";
+import Loading from 'react-loading-components';
+import {Typography} from "@material-ui/core";
 
 class Post extends Component {
 
@@ -78,6 +81,14 @@ class Post extends Component {
   }
 
   render() {
+    if (this.state.posts.length === 0) return (
+      <div>
+        <Typography variant='h5'>
+          <Loading type='oval' width={18} height={18} fill='#f44242' />请稍候，汪师傅正在马不停蹄地加载数据中...
+        </Typography>
+        <Instagram/>
+      </div>
+    );
     return (
       <PostPage posts={this.state.posts} {...this.props}/>
     );
