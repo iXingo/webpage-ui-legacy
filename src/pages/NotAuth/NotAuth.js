@@ -39,7 +39,7 @@ const NotFound = props => {
   const classes = useStyles();
   const {history} = props;
 
-  const handlerLogin = () => {
+  const handleLogin = () => {
     history.push("/sign-in");
   };
 
@@ -53,7 +53,7 @@ const NotFound = props => {
             <Typography
               variant="subtitle2">此页面可能记录了一个受保护的资源,系统管理员汪师傅设置了该页面必须在登录条件下才能被访问,您可以尝试联系汪师傅以获得关于此页面的更多详细帮助。
             </Typography>
-            <Button className={classes.buttonContent} onClick={() => handlerLogin()}>
+            <Button className={classes.buttonContent} onClick={() => handleLogin()}>
               点此登录 →
             </Button>
             <img alt="Please login" className={classes.image} src="https://img.ixingo.cn/undraw_coding_6mjf.svg"/>

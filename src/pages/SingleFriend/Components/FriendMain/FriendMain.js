@@ -76,8 +76,8 @@ const FriendMain = props => {
             </Paper>
 
             <Timer
-                initialTime={55000}
-                direction="backward"
+                initialTime={0}
+                direction="forward"
             >
               {() => (
                   <React.Fragment>
