@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import {CountUp} from "../../../../components";
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -53,12 +54,15 @@ const FriendHeader = props => {
         <Typography overline gutterBottom variant='h2' style={{padding: '10px 0', color: 'white'}}>
           {friend.name}
         </Typography>
-        <Typography overline gutterBottom variant='h5' style={{padding: '20px 0', color: '#8EB2F4'}}>
+        <Typography overline gutterBottom variant='h5' style={{padding: '20px 0', color: '#8EB2F4', fontWeight: 300}}>
           {friend.description}
         </Typography>
-        <Button variant="outlined" size="large" color="inherit">
-          查看更多
-        </Button>
+        <Typography overline gutterBottom variant='caption' style={{padding: '20px 0', color: '#8EB2F4', fontWeight: 300}}>
+          【{friend.name}】和 汪师傅 相识大约有：<CountUp />
+        </Typography>
+        {/*<Button variant="outlined" size="large" color="inherit" >*/}
+        {/*  查看更多*/}
+        {/*</Button>*/}
       </Grid>
 
     </Grid>

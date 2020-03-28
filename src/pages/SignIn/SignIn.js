@@ -75,7 +75,7 @@ const useStyles = makeStyles(theme => ({
   quoteText: {
     // color: theme.palette.white,
     color: '#1a73e8',
-    fontWeight: 300
+    fontWeight: 500
   },
   name: {
     marginTop: theme.spacing(3),
@@ -257,7 +257,7 @@ const SignIn = (props) => {
                 className={classes.quoteText}
                 variant="h1"
               >
-                程序人生的寂静，欢喜
+                程序人生的寂静，欢喜。
               </Typography>
               <div className={classes.person}>
                 <Typography

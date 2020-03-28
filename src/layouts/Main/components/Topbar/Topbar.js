@@ -85,7 +85,7 @@ const Topbar = props => {
             src="https://img.ixingo.cn/logo.png"
             className={classes.logo}
           />
-        </RouterLink>测试版 Beta 2019.12051
+        </RouterLink>测试版 Beta版本 Ver 2020.0329101
         <div className={classes.flexGrow}/>
         <Hidden mdDown>
           <div className={classes.search}>

@@ -62,13 +62,13 @@ const MediaSection = props => {
       <Grid container className={classes.main}>
         <Grid item xs={12} md={12} className={classes.center} space={3}>
           <Typography overline gutterBottom variant='h4' style={{padding: '10px 0', color: 'white'}}>
-            愿你行走半生，归来仍是少年
+            愿你行走半生，归来仍是少年。
           </Typography>
           <Typography overline gutterBottom variant='h6' style={{color: '#8EB2F4'}}>
             年少时候的很多期许，都在生活的磨砺中逐渐消失。
           </Typography>
-          <Typography overline gutterBottom variant='h6' style={{color: '#8EB2F4'}}>
-            现在不过是在喧嚣的世界中的潜行者，希望幸福的阳光逐渐照进我逐渐暗淡的生活。
+          <Typography overline gutterBottom variant='h6' style={{color: 'white'}}>
+            生于安徽，求学江苏，搬砖上海。
           </Typography>
           <Divider></Divider>
         </Grid>
