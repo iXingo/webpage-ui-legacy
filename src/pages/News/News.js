@@ -4,7 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
 // import IconButton from '@material-ui/core/IconButton';
 // import SearchIcon from '@material-ui/icons/Search';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 // import Link from '@material-ui/core/Link';
@@ -13,18 +13,8 @@ import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
 import {
   BigMediaCard,
-  Carousel, Expansion,
-  FeaturedCard,
-  FeaturedCardReversed,
-  FeaturedContent,
-  FeaturedList,
-  MainFeaturedPost,
-  MediaCard,
-  PostCard,
-  SmallPostCard,
+  Carousel,
   Subscribe,
-  SummaryCard,
-  Title
 } from '../../components';
 // import Divider from '@material-ui/core/Divider';
 // import NotAuth from '../NotAuth';
@@ -139,42 +129,42 @@ const useStyles = makeStyles(theme => ({
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
-const featuredPosts = [
-  {
-    type: ' 汪师傅和他的朋友们',
-    title: '演示文章',
-    date: '2019年9月15日',
-    description: '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
-    imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
-    url: '/friends',
-  },
-  {
-    type: ' 汪师傅和他的朋友们',
-    title: '这是一篇演示文章',
-    date: '2019年10月15日',
-    description: '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
-    imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
-    url: '/friends',
-  },
-];
-
-const card1 = {
-  type: ' 汪师傅和他的朋友们',
-  title: '汪师傅的会客厅！',
-  date: '2019年11月15日',
-  description: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
-  imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
-  url: '/friends',
-};
-
-const card2 = {
-  type: ' 编程小课堂',
-  title: '汪师傅的编程小课堂！',
-  date: '2019年12月15日',
-  description: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
-  imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
-  url: '/friends',
-};
+// const featuredPosts = [
+//   {
+//     type: ' 汪师傅和他的朋友们',
+//     title: '演示文章',
+//     date: '2019年9月15日',
+//     description: '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
+//     imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
+//     url: '/friends',
+//   },
+//   {
+//     type: ' 汪师傅和他的朋友们',
+//     title: '这是一篇演示文章',
+//     date: '2019年10月15日',
+//     description: '这是汪师傅的星狗网的一篇文章摘要。程序人生的寂静欢喜。',
+//     imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
+//     url: '/friends',
+//   },
+// ];
+//
+// const card1 = {
+//   type: ' 汪师傅和他的朋友们',
+//   title: '汪师傅的会客厅！',
+//   date: '2019年11月15日',
+//   description: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
+//   imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
+//   url: '/friends',
+// };
+//
+// const card2 = {
+//   type: ' 编程小课堂',
+//   title: '汪师傅的编程小课堂！',
+//   date: '2019年12月15日',
+//   description: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。',
+//   imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
+//   url: '/friends',
+// };
 
 
 const News = props => {
@@ -219,47 +209,47 @@ const News = props => {
           {/* Main featured post */}
           <Carousel/>
 
-          <Expansion/>
+          {/*<Expansion/>*/}
 
 
-          <Paper className={classes.list}>
-            <MainFeaturedPost card={card1} {...props}/>
-          </Paper>
+          {/*<Paper className={classes.list}>*/}
+          {/*  <MainFeaturedPost card={card1} {...props}/>*/}
+          {/*</Paper>*/}
 
-          <Paper className={classes.list}>
-            <FeaturedCardReversed card={card2} {...props}/>
-          </Paper>
+          {/*<Paper className={classes.list}>*/}
+          {/*  <FeaturedCardReversed card={card2} {...props}/>*/}
+          {/*</Paper>*/}
 
-          <Paper className={classes.list}>
-            <FeaturedCard card={card1} {...props}/>
-          </Paper>
-
-
-          <Paper className={classes.list}>
-            <FeaturedList/>
-          </Paper>
-
-          <div className={classes.list}>
-            <FeaturedContent/>
-          </div>
+          {/*<Paper className={classes.list}>*/}
+          {/*  <FeaturedCard card={card1} {...props}/>*/}
+          {/*</Paper>*/}
 
 
-          {/* End main featured post */}
-          <PostCard/>
-          {/* Sub featured posts */}
-          <Grid container spacing={4}>
-            {featuredPosts.map(post => (
-              <SmallPostCard post={post} {...props}/>
-            ))}
-          </Grid>
-          {/* End hero unit */}
-          <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
-              <MediaCard card={card} {...props}/>
-            ))}
-          </Grid>
+          {/*<Paper className={classes.list}>*/}
+          {/*  <FeaturedList/>*/}
+          {/*</Paper>*/}
 
-          <Title/>
+          {/*<div className={classes.list}>*/}
+          {/*  <FeaturedContent/>*/}
+          {/*</div>*/}
+
+
+          {/*/!* End main featured post *!/*/}
+          {/*<PostCard/>*/}
+          {/*/!* Sub featured posts *!/*/}
+          {/*<Grid container spacing={4}>*/}
+          {/*  {featuredPosts.map(post => (*/}
+          {/*    <SmallPostCard post={post} {...props}/>*/}
+          {/*  ))}*/}
+          {/*</Grid>*/}
+          {/*/!* End hero unit *!/*/}
+          {/*<Grid container spacing={4} className={classes.cardGrids}>*/}
+          {/*  {cards.map(card => (*/}
+          {/*    <MediaCard card={card} {...props}/>*/}
+          {/*  ))}*/}
+          {/*</Grid>*/}
+
+          {/*<Title/>*/}
 
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
@@ -267,14 +257,14 @@ const News = props => {
             ))}
           </Grid>
 
-          <Grid container spacing={4} className={classes.cardGrid}>
-            <Grid item xs={12} md={6}>
-              <SummaryCard/>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <SummaryCard/>
-            </Grid>
-          </Grid>
+          {/*<Grid container spacing={4} className={classes.cardGrid}>*/}
+          {/*  <Grid item xs={12} md={6}>*/}
+          {/*    <SummaryCard/>*/}
+          {/*  </Grid>*/}
+          {/*  <Grid item xs={12} md={6}>*/}
+          {/*    <SummaryCard/>*/}
+          {/*  </Grid>*/}
+          {/*</Grid>*/}
         </main>
       </Container>
       {/* Footer */}

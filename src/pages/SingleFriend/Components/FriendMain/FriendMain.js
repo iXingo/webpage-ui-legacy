@@ -4,8 +4,6 @@ import {makeStyles} from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import FriendContent from '../FriendContent';
 import FriendHeader from '../FriendHeader';
-import {FeaturedCard} from '../../../../components';
-import Paper from '@material-ui/core/Paper';
 
 
 const useStyles = makeStyles(theme => ({
@@ -70,9 +68,6 @@ const FriendMain = props => {
 
         <Grid container className={classes.contentGrid}>
           <Grid item xs={12} md={8} className={classes.singlefriend}>
-            <Paper>
-              <FeaturedCard/>
-            </Paper>
             <FriendContent friend={props.friend} {...props}/>
           </Grid>
         </Grid>

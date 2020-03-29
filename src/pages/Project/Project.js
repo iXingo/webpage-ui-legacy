@@ -120,7 +120,7 @@ const useStyles = makeStyles(theme => ({
   quoteText: {
     // color: theme.palette.white,
     color: '#1a73e8',
-    fontWeight: 300
+    fontWeight: 500
   },
   name: {
     marginTop: theme.spacing(3),
