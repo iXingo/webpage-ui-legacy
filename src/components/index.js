@@ -37,6 +37,7 @@ export {default as CardPicture} from './CardPicture';
 export {default as BigImage} from './BigImage';
 export {default as Footer} from './Footer';
 export {default as CountUp} from './CountUp';
+export {default as Expansion} from './Expansion';
 
 
 

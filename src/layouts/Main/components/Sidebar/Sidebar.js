@@ -6,12 +6,15 @@ import {Divider, Drawer} from '@material-ui/core';
 import DashboardIcon from '@material-ui/icons/Dashboard';
 import ImageIcon from '@material-ui/icons/Image';
 import ExploreIcon from '@material-ui/icons/Explore';
-import SettingsIcon from '@material-ui/icons/Settings';
 import InfoIcon from '@material-ui/icons/Info';
 import PeopleIcon from '@material-ui/icons/People';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
+import CodeIcon from '@material-ui/icons/Code';
+import SchoolIcon from '@material-ui/icons/School';
+
+
 import {Profile, SidebarNav, UpgradePlan} from './components';
 
 
@@ -56,11 +59,6 @@ const Sidebar = props => {
       icon: <FiberNewIcon/>
     },
     {
-      title: '博    文',
-      href: '/posts',
-      icon: <MenuBookIcon/>
-    },
-    {
       title: '好    友',
       href: '/friends',
       icon: <PeopleIcon/>
@@ -76,10 +74,26 @@ const Sidebar = props => {
       icon: <DashboardIcon/>
     },
     {
+      title: '技    术',
+      href: '/tech',
+      icon: <CodeIcon/>
+    },
+    {
+      title: '教    程',
+      href: '/courses',
+      icon: <SchoolIcon/>
+    },
+    {
+      title: '博    文',
+      href: '/posts',
+      icon: <MenuBookIcon/>
+    },
+    {
       title: '发    现',
-      href: '/users',
+      href: '/explore',
       icon: <ExploreIcon/>
     },
+
     // {
     //   title: '登    录',
     //   href: '/sign-in',
@@ -94,11 +108,6 @@ const Sidebar = props => {
       title: '关    于',
       href: '/about',
       icon: <InfoIcon/>
-    },
-    {
-      title: '设    置',
-      href: '/settings',
-      icon: <SettingsIcon/>
     },
 
   ];

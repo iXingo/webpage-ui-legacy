@@ -13,7 +13,7 @@ import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
 import {
   BigMediaCard,
-  Carousel,
+  Carousel, Expansion,
   FeaturedCard,
   FeaturedCardReversed,
   FeaturedContent,
@@ -218,6 +218,8 @@ const News = props => {
 
           {/* Main featured post */}
           <Carousel/>
+
+          <Expansion/>
 
 
           <Paper className={classes.list}>
