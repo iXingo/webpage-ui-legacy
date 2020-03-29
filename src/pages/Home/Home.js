@@ -179,8 +179,8 @@ const programmerSection = {
   image: 'https://img.ixingo.cn/undraw_code_review_l1q9.svg',
   title: '上海， 这一年。',
   content: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
-  linkUrl: '',
-  linkText: '汪师傅',
+  linkUrl: '/courses',
+  linkText: '汪师傅的程序小课堂',
 
   titleOne: 'Python程序',
   contentOne: '汪师傅会使用简单流行的Python语言如何处理微博、微信、电子邮件、Office等日常生活工作中的应用为你打开学习计算机程序的大门。',
@@ -200,7 +200,7 @@ const studySection = {
   title: '上海， 这一年。',
   textContent: '小的时候你会很难想象你未来将从事的事业，平凡的汪师傅亦是如此。“一个人的命运啊，当然要靠自我奋斗，但是也要考虑到历史的行程”。历史的行程把我带进了计算机软件开发的行业，但是在历史的车轮缓缓碾过时，我还想留下小小的辙痕。在这里，我还想了解的再多一些。',
   linkText: '汪师傅的技术日记',
-  link: '/blog'
+  link: '/tech'
 };
 
 const endSection = {
