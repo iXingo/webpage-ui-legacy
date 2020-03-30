@@ -76,13 +76,18 @@ const useStyles = makeStyles(theme => ({
 const ButtonPictureContent = props => {
 
   const classes = useStyles();
+  const {history} = props;
+
+  const handleLink = url => {
+    history.push(url);
+  };
 
   return (
     <React.Fragment>
       <CssBaseline/>
       <ContentTitle context={props.context}/>
       <div className={classes.button}>
-        <Button className={classes.buttonContent}>
+        <Button className={classes.buttonContent} onClick={()=> handleLink(props.context.linkUrl)}>
           {props.context.linkText} →
         </Button>
       </div>
