@@ -24,9 +24,8 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const Title = props => {
+const UserCard = props => {
   const classes = useStyles();
-
   return (
     <Grid container className={classes.main}>
       <Grid item xs={12} md={8}>
@@ -50,7 +49,7 @@ const Title = props => {
       </Grid>
     </Grid>
   );
-};
+}
 
 
-export default Title;
+export default UserCard;

@@ -9,7 +9,7 @@ import Slide from '@material-ui/core/Slide';
 import {
   BigImage,
   ButtonPictureContent,
-  CardPicture,
+  CardPicture, HoverCard,
   PictureContentLine,
   PictureItems,
   PicturePicture,
@@ -236,6 +236,7 @@ const Home = props => {
   return (
     <React.Fragment>
       <CssBaseline/>
+      <HoverCard></HoverCard>
       <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
         <Container className={classes.mainTitle}>
           <div className={classes.main}>
