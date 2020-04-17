@@ -174,9 +174,18 @@ const PostHeader = props => {
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
       <Typography variant="caption" className={classes.posttime}>
-        作者<strong style={{color: '#1a73e8'}}>{props.post.createdBy.name}</strong>使用<strong
-        style={{color: '#1a73e8'}}>{props.post.source}</strong>发表于格林威治时间<strong
-        style={{color: '#1a73e8'}}>{props.post.creationDateTime}</strong>。
+        作者
+        <strong style={{color: '#1a73e8'}}>
+          {props.post.createdBy.name}
+        </strong>
+        使用
+        <strong style={{color: '#1a73e8'}}>
+          {props.post.source}
+        </strong>
+        发表于格林威治时间
+        <strong style={{color: '#1a73e8'}}>
+          {props.post.creationDateTime}
+        </strong>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
     </div>

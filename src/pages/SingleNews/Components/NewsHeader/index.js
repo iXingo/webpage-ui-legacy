@@ -1,1 +1,1 @@
-export {default} from './PostHeader';
+export {default} from './NewsHeader';
