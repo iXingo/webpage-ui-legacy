@@ -134,6 +134,7 @@ const PostHeader = props => {
 
   const classes = useStyles();
   if (!props.post.createdBy) return <Instagram/>;
+  const date = new Date(props.post.creationDateTime.epochSecond * 1000).toDateString();
   return (
     <div>
       <Typography className={classes.title} variant="h1">
@@ -184,7 +185,8 @@ const PostHeader = props => {
         </strong>
         发表于格林威治时间
         <strong style={{color: '#1a73e8'}}>
-          {props.post.creationDateTime}
+          {/*{props.post.creationDateTime.epochSecond}*/}
+          {date}
         </strong>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>
