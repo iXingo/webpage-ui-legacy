@@ -11,8 +11,8 @@ import {
   Tooltip
 } from '@material-ui/core';
 import SendIcon from '@material-ui/icons/Send';
-import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
-import AttachFileIcon from '@material-ui/icons/AttachFile';
+// import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
+// import AttachFileIcon from '@material-ui/icons/AttachFile';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -53,11 +53,13 @@ const CommentForm = props => {
     event.persist();
 
     setValue(event.target.value);
+    alert(event.target.value);
   };
 
-  const handleAttach = () => {
-    fileInputRef.current.click();
-  };
+  // const handleAttach = () => {
+  //   fileInputRef.current.click();
+  //   alert(fileInputRef.current);
+  // };
 
   return (
     <div
@@ -79,28 +81,29 @@ const CommentForm = props => {
           placeholder="留下评论再走... 帅的人已经评论了, 丑的人还在犹豫!"
         />
       </Paper>
-      <Tooltip title="Send">
+      <Tooltip title="发射">
         <IconButton color={value.length > 0 ? 'primary' : 'default'}>
           <SendIcon />
         </IconButton>
       </Tooltip>
       <Divider className={classes.divider} />
-      <Tooltip title="Attach image">
-        <IconButton
-          edge="end"
-          onClick={handleAttach}
-        >
-          <AddPhotoIcon />
-        </IconButton>
-      </Tooltip>
-      <Tooltip title="Attach file">
-        <IconButton
-          edge="end"
-          onClick={handleAttach}
-        >
-          <AttachFileIcon />
-        </IconButton>
-      </Tooltip>
+      {/*<Tooltip title="发送图片评论">*/}
+      {/*  <IconButton*/}
+      {/*    edge="end"*/}
+      {/*    onClick={handleAttach}*/}
+      {/*    disable = {true}*/}
+      {/*  >*/}
+      {/*    <AddPhotoIcon />*/}
+      {/*  </IconButton>*/}
+      {/*</Tooltip>*/}
+      {/*<Tooltip title="发送图片附件">*/}
+      {/*  <IconButton*/}
+      {/*    edge="end"*/}
+      {/*    onClick={handleAttach}*/}
+      {/*  >*/}
+      {/*    <AttachFileIcon />*/}
+      {/*  </IconButton>*/}
+      {/*</Tooltip>*/}
       <input
         className={classes.fileInput}
         ref={fileInputRef}

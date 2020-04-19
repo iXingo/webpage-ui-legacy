@@ -112,7 +112,7 @@ const post = {
   "comments": [
     {
       "id": 1,
-      "content": "我评论",
+      "content": "第一条评论",
       "source": "星狗网",
       "status": 1,
       "creationDateTime": null,
@@ -122,6 +122,24 @@ const post = {
         "name": "Shawn Wang",
         "sex": null,
         "headUrl": "https://img.ixingo.cn/_head.jpg",
+        "isVerified": 0,
+        "verifiedContent": null,
+        "introduction": null
+      },
+      "replies": null
+    },
+    {
+      "id": 2,
+      "content": "第二条评论",
+      "source": "星狗网",
+      "status": 1,
+      "creationDateTime": null,
+      "commenter": {
+        "id": 7887167873792143360,
+        "username": "shawang",
+        "name": "Shawn Wang",
+        "sex": null,
+        "headUrl": null,
         "isVerified": 0,
         "verifiedContent": null,
         "introduction": null
