@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
-import {Typography} from '@material-ui/core';
+import {Divider, Typography} from '@material-ui/core';
 import PostContent from '../PostContent';
 import PostHeader from '../PostHeader';
+import {FeedCard} from "../../../../components";
 
 
 const useStyles = makeStyles(theme => ({
@@ -128,8 +129,15 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       maxWidth: '51%',
     }
-
   },
+  commentTitle: {
+    marginTop: 20,
+    marginBottom: 20,
+    color: '#1a73e8'
+  },
+  comment: {
+    marginBottom: 20
+  }
 }));
 
 const PostMain = props => {
@@ -156,6 +164,9 @@ const PostMain = props => {
           </Grid>
           <Grid item xs={12} md={8} className={classes.singlePost}>
             <PostContent post={props.post} {...props}> </PostContent>
+            <Divider/>
+            <Typography className={classes.commentTitle} variant="h4" align={"center"}>评论见真知</Typography>
+            <FeedCard className={classes.comment} post={props.post}/>
           </Grid>
         </Grid>
       </div>

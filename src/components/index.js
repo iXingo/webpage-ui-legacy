@@ -40,6 +40,7 @@ export {default as CountUp} from './CountUp';
 export {default as Expansion} from './Expansion';
 export {default as HoverCard} from './HoverCard';
 export {default as UserCard} from './UserCard';
+export {default as FeedCard} from './FeedCard';
 
 
 
