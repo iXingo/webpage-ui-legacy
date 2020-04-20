@@ -12,7 +12,7 @@ const schema = {
   name: {
     presence: {allowEmpty: false, message: '不能为空'},
     length: {
-      maximum: 40,
+      maximum: 20,
       minimum: 4,
     }
   },
