@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import {Paper} from '@material-ui/core';
 import {ContentTitleReversed} from '../../components';
+import Button from "@material-ui/core/Button";
 
 
 const useStyles = makeStyles(theme => ({
@@ -13,6 +14,27 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     maxWidth: '100%',
     color: 'hsla(0,0%,100%,.6)',
+  },
+  buttonContent: {
+    padding: '12px 32px',
+    fontSize: 14,
+    color: 'white',
+    // color: '#1074e7',
+    // backgroundColor: 'hsla(0,0%,100%,0)',
+    // borderColor: 'rgba(16,116,231,.5)',
+    whiteSpace: 'nowrap',
+    verticalAlign: 'middle',
+    cursor: 'pointer',
+    border: '1px solid #FFFFFF',
+    borderRadius: 3,
+    transition: '.2s',
+  },
+  button: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: '0 auto',
+    textAlign: 'center',
+    backgroundColor: '#1a73e8'
   },
   main: {
     padding: '20px 20px 20px',
@@ -69,11 +91,19 @@ const useStyles = makeStyles(theme => ({
 const PictureItems = props => {
 
   const classes = useStyles();
-
+  const {history} = props;
+  const handleLink = url => {
+    history.push(url);
+  };
   return (
     <React.Fragment>
       <CssBaseline/>
       <ContentTitleReversed context={props.context}/>
+      <div className={classes.button}>
+        <Button variant="outlined" color="primary" className={classes.buttonContent} onClick={() => handleLink(props.context.linkUrl)} >
+          {props.context.linkText} →
+        </Button>
+      </div>
       <Grid container justify="center" alignItems="center" className={classes.content}>
         <Grid item xs={12} md={4}>
           <img className={classes.picture} src={props.context.image} alt='Xindog APP'/>

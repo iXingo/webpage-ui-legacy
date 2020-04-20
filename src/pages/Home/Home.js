@@ -91,12 +91,15 @@ const newsSection = {
   sectionTitle: '东风未肯入东门，看看今天啥新闻。',
   sectionContent: '总有一个记忆让我们铭记于心，总有一种力量让我们泪流满面。回顾过去，一起重温那些令人动容的瞬间；展望未来，我们将走得更加铿锵有力。小人物大力量，跟着小人物汪师傅，看看他眼里的大新闻。',
 
+  linkUrl: '/news',
+  linkText: '星狗新闻',
+
   image: 'https://img.ixingo.cn/undraw_steps_ngvm.svg',
 
   titleOne: '分享生活，留住感动',
   contentOne: '汪师傅平淡的生活现在更以新闻显示。',
 
-  titleTwo: '随时随地分享身边的新鲜事儿。',
+  titleTwo: '随时随地分享身边的新鲜事儿',
   contentTwo: '寻常巷陌的新闻，绘声绘色地讲述。',
 
   titleThree: '我们的精神角落',
