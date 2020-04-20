@@ -170,7 +170,7 @@ class Routes extends Component {
           component={ActivatePage}
           exact
           layout={MinimalLayout}
-          path="/activate"
+          path="/activate/:email/:activateCode"
           {...this.props}
         />
         <Redirect to="/not-found"/>

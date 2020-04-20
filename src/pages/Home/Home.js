@@ -56,6 +56,15 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  tipsLine: {
+    fontSize: 12,
+    paddingTop: 16,
+    lineHeight: 1.5,
+    color: "grey",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
   svgIcon: {
     height: 30,
     width: 30
@@ -253,6 +262,9 @@ const Home = props => {
             </TypeWriter>
             <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
               <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
+            </Typography>
+            <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.tipsLine}>
+              ↓ 向下滑动以继续浏览
             </Typography>
           </div>
         </Container>
