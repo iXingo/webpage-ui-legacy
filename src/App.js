@@ -41,7 +41,6 @@ class App extends Component {
   }
 
   loadCurrentUser() {
-    let { history } = this.props;
     this.setState({
       isLoading: true
     });
@@ -56,7 +55,6 @@ class App extends Component {
       this.setState({
         isLoading: false,
       });
-      history.push("/sign-in");
     });
   }
 
@@ -102,7 +100,7 @@ class App extends Component {
       history.push("/index");
     }
     console.log(history);
-    // history.go();
+    history.goBack();
   }
 
   render() {

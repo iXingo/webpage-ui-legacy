@@ -166,8 +166,8 @@ const PostMain = props => {
           <Grid item xs={12} md={8} className={classes.singlePost}>
             <PostContent post={props.post} {...props}> </PostContent>
             <Divider/>
-            <Typography className={classes.commentTitle} variant="h4" align={"center"}>评论见真知</Typography>
-            <CommentForm className={classes.comment}></CommentForm>
+            <Typography className={classes.commentTitle} variant="h4" align={"center"}><strong>评论</strong>见真知</Typography>
+            <CommentForm className={classes.comment}/>
             <FeedCard className={classes.comment} post={props.post}/>
           </Grid>
         </Grid>

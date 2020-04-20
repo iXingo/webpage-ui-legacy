@@ -80,7 +80,7 @@ const Reactions = props => {
         color="textSecondary"
         variant="h6"
       >
-        {likes}
+        {likes}点赞
       </Typography>
       <Button
         className={classes.shareButton}
@@ -88,7 +88,7 @@ const Reactions = props => {
         variant="contained"
       >
         <ShareIcon className={classes.shareIcon} />
-        Share
+        回复
       </Button>
     </div>
   );

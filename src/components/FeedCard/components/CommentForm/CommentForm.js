@@ -53,7 +53,7 @@ const CommentForm = props => {
     event.persist();
 
     setValue(event.target.value);
-    alert(event.target.value);
+    console.log(event.target.value);
   };
 
   // const handleAttach = () => {
@@ -78,11 +78,11 @@ const CommentForm = props => {
           className={classes.input}
           disableUnderline
           onChange={handleChange}
-          placeholder="留下评论再走... 帅的人已经评论了, 丑的人还在犹豫!"
+          placeholder="留下评论再走... 帅的人已经评论了, 而丑的人还在犹豫!"
         />
       </Paper>
       <Tooltip title="发射">
-        <IconButton color={value.length > 0 ? 'primary' : 'default'}>
+        <IconButton color={value.length > 0 ? 'primary' : 'default'} disabled={value.length > 0}>
           <SendIcon />
         </IconButton>
       </Tooltip>

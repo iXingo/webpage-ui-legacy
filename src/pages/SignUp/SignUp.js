@@ -10,32 +10,35 @@ import {checkEmailAvailability, checkUsernameAvailability, signup} from '../../u
 
 const schema = {
   name: {
-    presence: {allowEmpty: false, message: 'is required'},
+    presence: {allowEmpty: false, message: '不能为空'},
     length: {
-      maximum: 32
+      maximum: 40,
+      minimum: 4,
     }
   },
   username: {
-    presence: {allowEmpty: false, message: 'is required'},
+    presence: {allowEmpty: false, message: '不能为空'},
     length: {
-      maximum: 32
+      maximum: 15,
+      minimum: 3,
     }
   },
   email: {
-    presence: {allowEmpty: false, message: 'is required'},
+    presence: {allowEmpty: false, message: '不能为空'},
     email: true,
     length: {
-      maximum: 64
+      maximum: 40
     }
   },
   password: {
-    presence: {allowEmpty: false, message: 'is required'},
+    presence: {allowEmpty: false, message: '不能为空'},
     length: {
-      maximum: 128
+      maximum: 20,
+      minimum: 6,
     }
   },
   policy: {
-    presence: {allowEmpty: false, message: 'is required'},
+    presence: {allowEmpty: false, message: '不能为空! 必须同意服务协议才能注册!'},
     checked: true
   }
 };
