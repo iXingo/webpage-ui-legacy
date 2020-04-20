@@ -263,13 +263,13 @@ const Home = props => {
             <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
               <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
             </Typography>
-            <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.tipsLine}>
-              ↓ 向下滑动以继续浏览
-            </Typography>
+
           </div>
         </Container>
       </Slide>
-
+      <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.tipsLine}>
+        ↓ 向下滑动以继续浏览
+      </Typography>
       <PictureTextLink context={contributionSection} {...props}  />
       <PictureItems context={newsSection} {...props} />
       <PicturePicture context={blogSection} {...props} />
