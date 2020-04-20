@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Grid, Typography} from '@material-ui/core';
+import {Button, Grid, Link, Typography} from '@material-ui/core';
+import {Link as RouterLink} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,7 +45,14 @@ const ActivatePage = props => {
             <div className={classes.content}>
               <Typography variant="h1">用户激活成功！</Typography>
               <Typography variant="subtitle2">根据提示， 即可畅游星狗网。</Typography>
-              <Typography variant="subtitle2">{props.info.data}</Typography>
+              <Typography variant="subtitle2">{props.info.message}</Typography>
+              <Link
+                component={RouterLink}
+                to={props.info.data}
+                variant="h6"
+              >
+                点击这里继续 →
+              </Link>
               <img alt="Under development" className={classes.image}
                    src="https://img.ixingo.cn/undraw_chore_list_iof3.svg"/>
             </div>
@@ -59,8 +67,14 @@ const ActivatePage = props => {
           <Grid item lg={6} xs={12}>
             <div className={classes.content}>
               <Typography variant="h1">用户激活失败！</Typography>
-              <Typography variant="subtitle2">还差一步， 即可畅游星狗网。</Typography>
-              <Typography variant="subtitle2">{props.info.data}</Typography>
+              <Typography variant="subtitle2">{props.info.message}</Typography>
+              <Link
+                component={RouterLink}
+                to={props.info.data}
+                variant="h6"
+              >
+                点击这里继续 →
+              </Link>
               <img alt="Under development" className={classes.image}
                    src="https://img.ixingo.cn/undraw_chore_list_iof3.svg"/>
             </div>

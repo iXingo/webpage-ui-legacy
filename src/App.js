@@ -88,19 +88,20 @@ class App extends Component {
   }
 
   handleLogin() {
-    let {history} = this.props;
+    // let {history} = this.props;
     notification.success({
       message: '星狗网 Web App',
       description: "欢迎回来！恭喜您！您已经成功登录！",
     });
     this.loadCurrentUser();
-    if (history.location.pathname !== "/sign-in") {
-      history.push(history.location.pathname);
-    } else {
-      history.push("/index");
-    }
-    console.log(history);
-    history.goBack();
+    // console.log(history.location);
+    // if (history.location.pathname !== "/sign-in") {
+    //   history.push(history.location.pathname);
+    // } else {
+    //   history.push("/index");
+    // }
+    // console.log(history);
+    // history.goBack();
   }
 
   render() {

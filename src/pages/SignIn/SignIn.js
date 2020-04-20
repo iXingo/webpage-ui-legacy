@@ -215,6 +215,7 @@ const SignIn = (props) => {
     login(loginRequest)
       .then(response => {
         localStorage.setItem(ACCESS_TOKEN, response.accessToken);
+        console.log(history);
         props.handleLogin();
       }).catch(error => {
       if (error.status === 401) {

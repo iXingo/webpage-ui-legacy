@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const NotFound = props => {
+const NotAuth = props => {
 
   const classes = useStyles();
   const {history} = props;
@@ -56,7 +56,7 @@ const NotFound = props => {
             <Button className={classes.buttonContent} onClick={() => handleLogin()}>
               点此登录 →
             </Button>
-            <img alt="Please login" className={classes.image} src="https://img.ixingo.cn/undraw_coding_6mjf.svg"/>
+            <img alt="请登录" className={classes.image} src="https://img.ixingo.cn/undraw_coding_6mjf.svg"/>
           </div>
         </Grid>
       </Grid>
@@ -64,4 +64,4 @@ const NotFound = props => {
   );
 };
 
-export default withRouter(NotFound);
+export default withRouter(NotAuth);

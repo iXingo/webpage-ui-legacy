@@ -99,7 +99,7 @@ class Signup extends Component {
                 size="large"
                 name="name"
                 autoComplete="off"
-                placeholder="Your full name"
+                placeholder="您的全名"
                 value={this.state.name.value}
                 onChange={(event) => this.handleInputChange(event, this.validateName)}/>
             </FormItem>
@@ -111,7 +111,7 @@ class Signup extends Component {
                 size="large"
                 name="username"
                 autoComplete="off"
-                placeholder="A unique username"
+                placeholder="一个独特的名字"
                 value={this.state.username.value}
                 onBlur={this.validateUsernameAvailability}
                 onChange={(event) => this.handleInputChange(event, this.validateUsername)}/>
@@ -126,7 +126,7 @@ class Signup extends Component {
                 name="email"
                 type="email"
                 autoComplete="off"
-                placeholder="Your email"
+                placeholder="您的邮箱"
                 value={this.state.email.value}
                 onBlur={this.validateEmailAvailability}
                 onChange={(event) => this.handleInputChange(event, this.validateEmail)}/>
@@ -140,7 +140,7 @@ class Signup extends Component {
                 name="password"
                 type="password"
                 autoComplete="off"
-                placeholder="A password between 6 to 20 characters"
+                placeholder="密码在6-20个字符之间"
                 value={this.state.password.value}
                 onChange={(event) => this.handleInputChange(event, this.validatePassword)}/>
             </FormItem>
@@ -164,12 +164,12 @@ class Signup extends Component {
     if (name.length < NAME_MIN_LENGTH) {
       return {
         validateStatus: 'error',
-        errorMsg: `Name is too short (Minimum ${NAME_MIN_LENGTH} characters needed.)`
+        errorMsg: `名字太短了, (至少需要 ${NAME_MIN_LENGTH} 个字符~)`
       }
     } else if (name.length > NAME_MAX_LENGTH) {
       return {
         validationStatus: 'error',
-        errorMsg: `Name is too long (Maximum ${NAME_MAX_LENGTH} characters allowed.)`
+        errorMsg: `名字太短了, (至少需要 ${NAME_MAX_LENGTH} 个字符~)`
       }
     } else {
       return {
@@ -183,7 +183,7 @@ class Signup extends Component {
     if (!email) {
       return {
         validateStatus: 'error',
-        errorMsg: 'Email may not be empty'
+        errorMsg: '邮箱不能为空'
       }
     }
 
@@ -191,14 +191,14 @@ class Signup extends Component {
     if (!EMAIL_REGEX.test(email)) {
       return {
         validateStatus: 'error',
-        errorMsg: 'Email not valid'
+        errorMsg: '邮箱格式不正确'
       }
     }
 
     if (email.length > EMAIL_MAX_LENGTH) {
       return {
         validateStatus: 'error',
-        errorMsg: `Email is too long (Maximum ${EMAIL_MAX_LENGTH} characters allowed)`
+        errorMsg: `名字太长了, (最多只能 ${EMAIL_MAX_LENGTH} 个字符~)`
       }
     }
 
@@ -212,12 +212,12 @@ class Signup extends Component {
     if (username.length < USERNAME_MIN_LENGTH) {
       return {
         validateStatus: 'error',
-        errorMsg: `Username is too short (Minimum ${USERNAME_MIN_LENGTH} characters needed.)`
+        errorMsg: `用户名太短了, (至少需要 ${USERNAME_MIN_LENGTH} 个字符~)`
       }
     } else if (username.length > USERNAME_MAX_LENGTH) {
       return {
         validationStatus: 'error',
-        errorMsg: `Username is too long (Maximum ${USERNAME_MAX_LENGTH} characters allowed.)`
+        errorMsg: `用户名太长了, (最多只能 ${USERNAME_MAX_LENGTH} 个字符~)`
       }
     } else {
       return {
@@ -265,7 +265,7 @@ class Signup extends Component {
             username: {
               value: usernameValue,
               validateStatus: 'error',
-              errorMsg: 'This username is already taken'
+              errorMsg: '用户名已经被占用!'
             }
           });
         }
@@ -319,7 +319,7 @@ class Signup extends Component {
             email: {
               value: emailValue,
               validateStatus: 'error',
-              errorMsg: 'This Email is already registered'
+              errorMsg: '邮箱已经被占用!'
             }
           });
         }
@@ -339,12 +339,12 @@ class Signup extends Component {
     if (password.length < PASSWORD_MIN_LENGTH) {
       return {
         validateStatus: 'error',
-        errorMsg: `Password is too short (Minimum ${PASSWORD_MIN_LENGTH} characters needed.)`
+        errorMsg: `密码太短了, (至少需要 ${PASSWORD_MIN_LENGTH} 个字符~)`
       }
     } else if (password.length > PASSWORD_MAX_LENGTH) {
       return {
         validationStatus: 'error',
-        errorMsg: `Password is too long (Maximum ${PASSWORD_MAX_LENGTH} characters allowed.)`
+        errorMsg: `密码太长了, (最多只能 ${PASSWORD_MAX_LENGTH} 个字符~)`
       }
     } else {
       return {
