@@ -142,7 +142,7 @@ const CommentCard = props => {
                 <div className={classes.subheader}>
                   <AccessTimeIcon className={classes.accessTimeIcon} />
                   <Typography variant="body2">
-                    {moment("2020-04-19T03:15:54.615Z").fromNow()}
+                    {moment(comment.creationDateTime).fromNow()}
                   </Typography>
                 </div>
               }
