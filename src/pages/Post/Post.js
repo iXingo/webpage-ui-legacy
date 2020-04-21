@@ -4,6 +4,8 @@ import PostPage from "./PostPage";
 import {Instagram} from "react-content-loader";
 import Loading from 'react-loading-components';
 import {Typography} from "@material-ui/core";
+import {withRouter} from "react-router-dom";
+
 
 class Post extends Component {
 
@@ -97,4 +99,4 @@ class Post extends Component {
 }
 
 
-export default Post;
+export default withRouter(Post);

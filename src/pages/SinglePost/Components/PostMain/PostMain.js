@@ -5,8 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import {Divider, Typography} from '@material-ui/core';
 import PostContent from '../PostContent';
 import PostHeader from '../PostHeader';
-import {FeedCard} from "../../../../components";
-import {CommentForm} from "../../../../components/FeedCard/components";
+import {CommentCard} from "../../../../components";
 
 
 const useStyles = makeStyles(theme => ({
@@ -167,8 +166,7 @@ const PostMain = props => {
             <PostContent post={props.post} {...props}> </PostContent>
             <Divider/>
             <Typography className={classes.commentTitle} variant="h4" align={"center"}><strong>评论</strong>见真知</Typography>
-            <CommentForm className={classes.comment}/>
-            <FeedCard className={classes.comment} post={props.post}/>
+            <CommentCard className={classes.comment} post={props.post} {...props}/>
           </Grid>
         </Grid>
       </div>

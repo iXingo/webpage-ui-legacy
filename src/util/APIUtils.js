@@ -140,7 +140,7 @@ export function getUserCreatedPosts(username, page, size) {
 
 export function getAllPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/all?typeId=1&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
@@ -181,5 +181,13 @@ export function getProject(id) {
   return request({
     url: API_BASE_URL + "/post/project/" + id,
     method: 'GET'
+  });
+}
+
+export function addComment(CommentRequest) {
+  return request({
+    url: API_BASE_URL + "/comment/post",
+    method: 'POST',
+    body: JSON.stringify(CommentRequest)
   });
 }

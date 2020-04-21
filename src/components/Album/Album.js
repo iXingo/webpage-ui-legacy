@@ -13,7 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import FeedCard from "../FeedCard";
+import CommentCard from "../CommentCard";
 
 function MadeWithLove() {
   return (
@@ -136,7 +136,7 @@ export default function Album() {
           </Grid>
         </Container>
       </main>
-      <FeedCard/>
+      <CommentCard/>
       {/* Footer */}
       <footer className={classes.footer}>
         <Typography variant="h6" align="center" gutterBottom>
