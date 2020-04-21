@@ -3,14 +3,11 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import {
-  Typography,
   Button,
-  IconButton,
-  Tooltip,
   colors
 } from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+// import FavoriteIcon from '@material-ui/icons/Favorite';
+// import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
 
 
@@ -38,18 +35,18 @@ const Reactions = props => {
 
   // const [liked, setLiked] = useState(post.liked);
   // const [likes, setLikes] = useState(post.likes);
-  const [liked, setLiked] = useState(true);
-  const [likes, setLikes] = useState(true);
-
-  const handleLike = () => {
-    setLiked(true);
-    setLikes(likes => likes + 1);
-  };
-
-  const handleUnlike = () => {
-    setLiked(false);
-    setLikes(likes => likes - 1);
-  };
+  // const [liked, setLiked] = useState(true);
+  // const [likes, setLikes] = useState(true);
+  //
+  // const handleLike = () => {
+  //   setLiked(true);
+  //   setLikes(likes => likes + 1);
+  // };
+  //
+  // const handleUnlike = () => {
+  //   setLiked(false);
+  //   setLikes(likes => likes - 1);
+  // };
 
   return (
     <div
