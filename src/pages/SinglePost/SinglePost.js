@@ -59,17 +59,17 @@ class SinglePost extends Component {
       .then(response => {
           notification.success({
             message: '星狗网 Web App',
-            description: "评论成功！待审核后为您显示~",
+            description: "评论成功！经审核后可见!",
           });
           console.log(response);
           value = "";
           const newComment =
           {
             "id": response.commentId,
-            "content": commentRequest.content,
+            "content": "【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】: \n"+commentRequest.content,
             "source": "星狗网",
             "status": 1,
-            "creationDateTime": new Date().toDateString(),
+            "creationDateTime": new Date().toUTCString(),
             "commenter": {
               "id": currentUser.id,
               "username": currentUser.username,

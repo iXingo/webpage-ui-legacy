@@ -22,6 +22,7 @@ import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import { Reactions, ReplyBubble, CommentForm } from './components';
 import {Instagram} from "@material-ui/icons";
 import Grow from "@material-ui/core/Grow";
+import SignInCard from "../SignInCard";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -62,7 +63,11 @@ const useStyles = makeStyles(theme => ({
 
 
 const CommentCard = props => {
+
   const { post, handleComment, currentUser, className, ...rest } = props;
+  if(!currentUser) {
+    return <SignInCard {...props}/>;
+  }
   moment.locale();
   console.log(moment.locale("zh-cn"));
   console.log(props);
@@ -137,7 +142,7 @@ const CommentCard = props => {
                   )}
                   <Reactions
                     className={classes.reactions}
-                    post={post}
+                    comment={comment}
                   />
                   <Divider className={classes.divider} />
                   {comment.replies && (

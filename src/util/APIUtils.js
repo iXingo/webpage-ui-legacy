@@ -191,3 +191,11 @@ export function addComment(CommentRequest) {
     body: JSON.stringify(CommentRequest)
   });
 }
+
+export function addReply(replyRequest) {
+  return request({
+    url: API_BASE_URL + "/reply/comment/",
+    method: 'POST',
+    body: JSON.stringify(replyRequest)
+  });
+}

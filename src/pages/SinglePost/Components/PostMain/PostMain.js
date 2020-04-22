@@ -167,7 +167,7 @@ const PostMain = props => {
             <PostContent post={props.post} {...props}> </PostContent>
             <Divider/>
             <Typography className={classes.commentTitle} variant="h4" align={"center"}><strong>评论</strong>见真知</Typography>
-            <CommentCard className={classes.comment} post={props.post} handleComment={handleComment} {...props}/>
+            <CommentCard className={classes.comment} comment={props.post} handleComment={handleComment} {...props}/>
           </Grid>
         </Grid>
       </div>

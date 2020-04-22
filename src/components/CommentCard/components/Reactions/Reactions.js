@@ -32,57 +32,19 @@ const Reactions = props => {
   const { post, className, ...rest } = props;
   const classes = useStyles();
 
-  // const [liked, setLiked] = useState(post.liked);
-  // const [likes, setLikes] = useState(post.likes);
-  // const [liked, setLiked] = useState(true);
-  // const [likes, setLikes] = useState(true);
-  //
-  // const handleLike = () => {
-  //   setLiked(true);
-  //   setLikes(likes => likes + 1);
-  // };
-  //
-  // const handleUnlike = () => {
-  //   setLiked(false);
-  //   setLikes(likes => likes - 1);
-  // };
-
+  const handleReply = () => {
+    alert("暂时无法回复, 功能还在开发中!");
+  }
   return (
     <div
       {...rest}
       className={clsx(classes.root, className)}
     >
-      {/*{liked ? (*/}
-      {/*  <Tooltip title="Unlike">*/}
-      {/*    <IconButton*/}
-      {/*      className={classes.likedButton}*/}
-      {/*      onClick={handleUnlike}*/}
-      {/*      size="small"*/}
-      {/*    >*/}
-      {/*      <FavoriteIcon />*/}
-      {/*    </IconButton>*/}
-      {/*  </Tooltip>*/}
-      {/*) : (*/}
-      {/*  <Tooltip title="Like">*/}
-      {/*    <IconButton*/}
-      {/*      className={classes.likeButton}*/}
-      {/*      onClick={handleLike}*/}
-      {/*      size="small"*/}
-      {/*    >*/}
-      {/*      <FavoriteBorderIcon />*/}
-      {/*    </IconButton>*/}
-      {/*  </Tooltip>*/}
-      {/*)}*/}
-      {/*<Typography*/}
-      {/*  color="textSecondary"*/}
-      {/*  variant="h6"*/}
-      {/*>*/}
-      {/*  {likes}点赞*/}
-      {/*</Typography>*/}
       <Button
         className={classes.replyButton}
         size="small"
         variant="contained"
+        onClick={handleReply}
       >
         <ReplyIcon className={classes.replyIcon}/>
         回复

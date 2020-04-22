@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, { useState} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
@@ -9,7 +9,7 @@ import {
   Paper,
   Tooltip
 } from '@material-ui/core';
-import ReplyIcon from "@material-ui/icons/Reply";
+import CommentIcon from "@material-ui/icons/Comment";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,7 +43,6 @@ const useStyles = makeStyles(theme => ({
 const CommentForm = props => {
   const {post, currentUser, className, handleComment, ...rest} = props;
   const classes = useStyles();
-  const fileInputRef = useRef(null);
   const [value, setValue] = useState('');
   const handleChange = event => {
     event.persist();
@@ -54,6 +53,11 @@ const CommentForm = props => {
   const handle = (value) => {
     handleComment(value);
     setValue("");
+  }
+  const handleKeyDown = event => {
+    if (event.key === 'Enter') {
+      handle(value);
+    }
   }
 
   return (
@@ -73,11 +77,12 @@ const CommentForm = props => {
           className={classes.input}
           disableUnderline
           onChange={handleChange}
-          placeholder="留下评论再走... 帅的人已经评论了, 而丑的人还在犹豫!"
+          placeholder="据说帅的人已经评论了, 而丑的人还在犹豫!"
           value={value}
+          onKeyDown={handleKeyDown}
         />
       </Paper>
-      <Tooltip title="发射">
+      <Tooltip title="评论发射">
         <Button
           className={classes.commentButton}
           size="small"
@@ -86,17 +91,11 @@ const CommentForm = props => {
           disabled={value.length <= 0}
           onClick={() => handle(value)}
         >
-          <ReplyIcon className={classes.commentIcon}/>
+          <CommentIcon className={classes.commentIcon}/>
           评论
         </Button>
       </Tooltip>
-
       <Divider className={classes.divider}/>
-      <input
-        className={classes.fileInput}
-        ref={fileInputRef}
-        type="file"
-      />
     </div>
   );
 };
