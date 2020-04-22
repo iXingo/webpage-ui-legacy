@@ -186,17 +186,13 @@ const SignUp = props => {
 
   const handleSignUp = event => {
     event.preventDefault();
-    history.push('/');
     const values = formState.values;
     const signupRequest = Object.assign({}, values);
     const {username, email} = formState.values;
     checkEmailAvailability(email)
       .then(response => {
         if (response.available) {
-          notification.success({
-            message: '星狗网 Web App',
-            description: "恭喜！您的邮箱可用",
-          });
+          console.log("恭喜！您的邮箱可用");
         } else {
           notification.error({
             message: '星狗网 Web App',
@@ -213,10 +209,7 @@ const SignUp = props => {
     checkUsernameAvailability(username)
       .then(response => {
         if (response.available) {
-          notification.success({
-            message: '星狗网 Web App',
-            description: "恭喜您，您的Id可用～",
-          });
+          console.log("恭喜您，您的Id可用～");
         } else {
           notification.error({
             message: '星狗网 Web App',
@@ -233,7 +226,7 @@ const SignUp = props => {
 
     signup(signupRequest)
       .then(response => {
-        if(response.code===200) {
+        if (response.available) {
           notification.success({
             message: '星狗网 Web App',
             description: "谢谢！您已经成功注册！现在请打开邮箱进行验证吧！",
