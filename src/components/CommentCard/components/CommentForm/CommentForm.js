@@ -3,18 +3,13 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
 import {
-  Avatar,
+  Avatar, Button,
   Divider,
-  IconButton,
   Input,
   Paper,
   Tooltip
 } from '@material-ui/core';
-import CommentIcon from '@material-ui/icons/Comment';
-// import {addComment} from "../../../../util/APIUtils";
-// import {notification} from "antd";
-// import AddPhotoIcon from '@material-ui/icons/AddPhotoAlternate';
-// import AttachFileIcon from '@material-ui/icons/AttachFile';
+import ReplyIcon from "@material-ui/icons/Reply";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,7 +19,8 @@ const useStyles = makeStyles(theme => ({
   paper: {
     flexGrow: 1,
     marginLeft: theme.spacing(2),
-    padding: theme.spacing(0.5, 2)
+    padding: theme.spacing(0.5, 2),
+    marginRight: theme.spacing(2),
   },
   input: {
     width: '100%'
@@ -35,44 +31,30 @@ const useStyles = makeStyles(theme => ({
   },
   fileInput: {
     display: 'none'
+  },
+  commentButton:{
+    marginLeft: 'auto'
+  },
+  commentIcon: {
+    marginRight: theme.spacing(1)
   }
 }));
 
 const CommentForm = props => {
-  const {post, className, handleComment, ...rest} = props;
+  const {post, currentUser, className, handleComment, ...rest} = props;
   const classes = useStyles();
   const fileInputRef = useRef(null);
   const [value, setValue] = useState('');
-
-  const sender = {
-    avatar: 'https://img.ixingo.cn/_head.jpg'
-  };
-
   const handleChange = event => {
     event.persist();
     setValue(event.target.value);
     console.log(event.target.value);
   };
 
-  // const handleComment = (value) => {
-  //   if (!post) {
-  //     notification.success({
-  //       message: '星狗网 Web App',
-  //       description: "评论失败！",
-  //     });
-  //   }
-  //   let commentRequest = {
-  //     postId: post.id,
-  //     content: value
-  //   }
-  //   console.log(value);
-  //   console.log(commentRequest);
-  // };
-
-  // const handleAttach = () => {
-  //   fileInputRef.current.click();
-  //   alert(fileInputRef.current);
-  // };
+  const handle = (value) => {
+    handleComment(value);
+    setValue("");
+  }
 
   return (
     <div
@@ -81,7 +63,7 @@ const CommentForm = props => {
     >
       <Avatar
         alt="Person"
-        src={sender.avatar}
+        src={currentUser.headUrl}
       />{' '}
       <Paper
         className={classes.paper}
@@ -92,14 +74,23 @@ const CommentForm = props => {
           disableUnderline
           onChange={handleChange}
           placeholder="留下评论再走... 帅的人已经评论了, 而丑的人还在犹豫!"
+          value={value}
         />
       </Paper>
       <Tooltip title="发射">
-        <IconButton color={value.length > 0 ? 'primary' : 'default'} disabled={value.length <= 0}
-                    onClick={() => handleComment(value)}>
-          <CommentIcon/>
-        </IconButton>
+        <Button
+          className={classes.commentButton}
+          size="small"
+          variant="contained"
+          color={value.length > 0 ? 'primary' : 'default'}
+          disabled={value.length <= 0}
+          onClick={() => handle(value)}
+        >
+          <ReplyIcon className={classes.commentIcon}/>
+          评论
+        </Button>
       </Tooltip>
+
       <Divider className={classes.divider}/>
       <input
         className={classes.fileInput}

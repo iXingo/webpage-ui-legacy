@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';
+import 'moment/locale/zh-cn';
 import { makeStyles } from '@material-ui/styles';
 import { Avatar, Link, Typography } from '@material-ui/core';
 
@@ -30,8 +31,9 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const CommentBubble = props => {
+const ReplyBubble = props => {
   const { reply, className, ...rest } = props;
+  moment.locale();
 
   const classes = useStyles();
 
@@ -60,7 +62,7 @@ const CommentBubble = props => {
             className={classes.time}
             variant="body2"
           >
-            {moment("2020-04-19T03:15:54.615Z").fromNow()}
+            {moment(reply.creationDateTime).fromNow()}
           </Typography>
         </div>
         <Typography
@@ -74,9 +76,10 @@ const CommentBubble = props => {
   );
 };
 
-CommentBubble.propTypes = {
+ReplyBubble.propTypes = {
   className: PropTypes.string,
-  comment: PropTypes.object.isRequired
+  reply: PropTypes.object.isRequired,
+  comment: PropTypes.any
 };
 
-export default CommentBubble;
+export default ReplyBubble;

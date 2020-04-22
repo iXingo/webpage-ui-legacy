@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
 
 const Reactions = props => {
   const { post, className, ...rest } = props;
-
   const classes = useStyles();
 
   // const [liked, setLiked] = useState(post.liked);
@@ -85,7 +84,7 @@ const Reactions = props => {
         size="small"
         variant="contained"
       >
-        <ReplyIcon className={classes.replyIcon} />
+        <ReplyIcon className={classes.replyIcon}/>
         回复
       </Button>
     </div>

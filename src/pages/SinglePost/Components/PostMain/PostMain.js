@@ -8,6 +8,7 @@ import PostHeader from '../PostHeader';
 import {CommentCard} from "../../../../components";
 
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
@@ -141,7 +142,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const PostMain = props => {
-
+  const { handleComment } = props;
   const classes = useStyles();
 
   return (
@@ -166,7 +167,7 @@ const PostMain = props => {
             <PostContent post={props.post} {...props}> </PostContent>
             <Divider/>
             <Typography className={classes.commentTitle} variant="h4" align={"center"}><strong>评论</strong>见真知</Typography>
-            <CommentCard className={classes.comment} post={props.post} {...props}/>
+            <CommentCard className={classes.comment} post={props.post} handleComment={handleComment} {...props}/>
           </Grid>
         </Grid>
       </div>

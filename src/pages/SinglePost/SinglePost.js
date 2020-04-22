@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {getPost} from '../../util/APIUtils';
+import {addComment, getPost} from '../../util/APIUtils';
 import {PostMain} from './Components';
+import {notification} from "antd";
 
 
 class SinglePost extends Component {
@@ -12,6 +13,7 @@ class SinglePost extends Component {
       isLoading: false
     };
     this.loadPost = this.loadPost.bind(this);
+    this.handleComment = this.handleComment.bind(this);
   }
 
 
@@ -43,6 +45,60 @@ class SinglePost extends Component {
 
   }
 
+  handleComment(value){
+    let {currentUser} = this.props;
+    if(!currentUser){
+      alert("先登录啊~~~");
+      return;
+    }
+    let commentRequest = {
+      postId: this.state.post.id,
+      content: value
+    }
+    addComment(commentRequest)
+      .then(response => {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "评论成功！待审核后为您显示~",
+          });
+          console.log(response);
+          value = "";
+          const newComment =
+          {
+            "id": response.commentId,
+            "content": commentRequest.content,
+            "source": "星狗网",
+            "status": 1,
+            "creationDateTime": new Date().toDateString(),
+            "commenter": {
+              "id": currentUser.id,
+              "username": currentUser.username,
+              "name": currentUser.name,
+              "sex": currentUser.sex,
+              "headUrl": currentUser.headUrl,
+              "isVerified": currentUser.isVerified,
+              "verifiedContent": currentUser.verifiedContent,
+              "introduction": currentUser.introduction
+            },
+            "replies": null
+          };
+          let postWithNewComment = {};
+          postWithNewComment= Object.assign(postWithNewComment, this.state.post);
+          postWithNewComment.comments.push(newComment);
+          this.setState({
+            post: postWithNewComment,
+            isLoading: false
+          });
+        },
+      ).catch(error => {
+      notification.success({
+        message: '星狗网 Web App',
+        description: "评论失败！" + error.message,
+      });
+      console.log(error);
+    });
+  }
+
   componentDidMount() {
     if (!this.props.isAuthenticated) {
       this.props.loadCurrentUser();
@@ -68,7 +124,7 @@ class SinglePost extends Component {
     const {post} = this.state;
     return (
       <div>
-        <PostMain post={post} {...this.props}/>
+        <PostMain post={post} handleComment={this.handleComment} {...this.props}/>
       </div>
     );
   }
