@@ -233,11 +233,18 @@ const SignUp = props => {
 
     signup(signupRequest)
       .then(response => {
-        notification.success({
-          message: '星狗网 Web App',
-          description: "谢谢！您已经成功注册！现在请打开邮箱进行验证吧！",
-        });
-        history.push("/sign-in");
+        if(response.code===200) {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "谢谢！您已经成功注册！现在请打开邮箱进行验证吧！",
+          });
+          history.push("/sign-in");
+        }else{
+          notification.error({
+            message: '星狗网 Web App',
+            description: response.message || '对不起，好像发生了一些错误，请您重新再试！'
+          });
+        }
       }).catch(error => {
         notification.error({
           message: '星狗网 Web App',
