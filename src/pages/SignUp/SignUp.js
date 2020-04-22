@@ -197,17 +197,17 @@ const SignUp = props => {
             message: '星狗网 Web App',
             description: "恭喜！您的邮箱可用",
           });
-          // history.push("/sign-in");
         } else {
           notification.error({
             message: '星狗网 Web App',
             description: "告诉您一个坏消息，那就是: 您当前邮箱已经被注册！",
           });
-          history.push("/sign-up");
-          // history.push("/sign-in");
         }
       }).catch(error => {
-      history.push("/sign-up");
+        notification.error({
+          message: '星狗网 Web App',
+          description: "有错误!" + error.message,
+        });
     });
 
     checkUsernameAvailability(username)
@@ -222,11 +222,15 @@ const SignUp = props => {
             message: '星狗网 Web App',
             description: "用户名很受欢迎, 已经被别人占用啦，再选择一个吧～",
           });
-          history.push("/sign-up");
         }
       }).catch(error => {
-      history.push("/sign-up");
+        notification.error({
+          message: '星狗网 Web App',
+          description: "有错误!" + error.message,
+        });
     });
+
+
     signup(signupRequest)
       .then(response => {
         notification.success({
@@ -235,10 +239,10 @@ const SignUp = props => {
         });
         history.push("/sign-in");
       }).catch(error => {
-      notification.error({
-        message: '星狗网 Web App',
-        description: error.message || '对不起，好像发生了一些错误，请您稍后再试！'
-      });
+        notification.error({
+          message: '星狗网 Web App',
+          description: error.message || '对不起，好像发生了一些错误，请您重新再试！'
+        });
     });
   };
 
