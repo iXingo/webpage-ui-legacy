@@ -10,6 +10,7 @@ import {
   Tooltip
 } from '@material-ui/core';
 import CommentIcon from "@material-ui/icons/Comment";
+import {notification} from "antd";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,6 +52,13 @@ const CommentForm = props => {
   };
 
   const handle = (value) => {
+    if(!value){
+      notification.error({
+        message: '星狗网 Web App',
+        description: "评论不能为空～",
+      });
+      return;
+    }
     handleComment(value);
     setValue("");
   }
@@ -79,6 +87,7 @@ const CommentForm = props => {
           onChange={handleChange}
           placeholder="据说帅的人已经评论了, 而丑的人还在犹豫!"
           value={value}
+          multiline={true}
           onKeyDown={handleKeyDown}
         />
       </Paper>
@@ -95,6 +104,7 @@ const CommentForm = props => {
           评论
         </Button>
       </Tooltip>
+
       <Divider className={classes.divider}/>
     </div>
   );

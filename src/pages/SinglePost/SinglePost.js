@@ -66,8 +66,8 @@ class SinglePost extends Component {
           const newComment =
           {
             "id": response.commentId,
-            "content": "【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】: \n"+commentRequest.content,
-            "source": "星狗网",
+            "content": commentRequest.content + "\n【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】",
+            "source": "默认评论框",
             "status": 1,
             "creationDateTime": new Date().toUTCString(),
             "commenter": {

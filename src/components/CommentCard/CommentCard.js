@@ -40,10 +40,12 @@ const useStyles = makeStyles(theme => ({
     marginRight: 6
   },
   content: {
-    paddingTop: 0
+    paddingTop: theme.spacing(2)
   },
   message: {
-    marginBottom: theme.spacing(2)
+    marginBottom: theme.spacing(2),
+    color: 'black',
+    fontSize: '15px',
   },
   mediaArea: {
     marginBottom: theme.spacing(2)
@@ -58,6 +60,9 @@ const useStyles = makeStyles(theme => ({
   },
   commentForm:{
     marginBottom: theme.spacing(2)
+  },
+  cardHeader:{
+    backgroundColor: '#eee',
   }
 }));
 
@@ -95,6 +100,7 @@ const CommentCard = props => {
                 className={clsx(classes.root, className)}
               >
                 <CardHeader
+                  className ={classes.cardHeader}
                   avatar={
                     <Avatar
                       alt="Person"
@@ -109,7 +115,7 @@ const CommentCard = props => {
                     <div className={classes.subheader}>
                       <AccessTimeIcon className={classes.accessTimeIcon} />
                       <Typography variant="body2">
-                        {moment(comment.creationDateTime).fromNow()}
+                        使用 {comment.source} 评论于 {moment(comment.creationDateTime).fromNow()}
                       </Typography>
                     </div>
                   }
