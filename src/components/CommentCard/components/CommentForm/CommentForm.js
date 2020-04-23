@@ -64,6 +64,7 @@ const CommentForm = props => {
   }
   const handleKeyDown = event => {
     if (event.key === 'Enter') {
+      event.preventDefault();
       handle(value);
     }
   }
