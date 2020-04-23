@@ -9,13 +9,14 @@ import Slide from '@material-ui/core/Slide';
 import {
   BigImage,
   ButtonPictureContent,
-  CardPicture,
+  CardPicture, ContentTitle,
   PictureContentLine,
   PictureItems,
   PicturePicture,
   PictureText,
   PictureTextLink,
   TextPicture,
+  SignedIn
 } from '../../components';
 
 
@@ -224,6 +225,12 @@ const endSection = {
 
 };
 
+const signin = {
+  sectionMain: '登录/注册； 分享你的知识与见闻',
+  sectionTitle: '登录/注册， 岂不美哉？',
+  sectionContent: '话不多说，为什么注册一波呢?'
+}
+
 
 const SvgIcon = () => {
   return (
@@ -282,7 +289,8 @@ const Home = props => {
       <TextPicture context={goodSection} {...props} />
       <ButtonPictureContent context={programmerSection} {...props}  />
       <PictureTextLink context={studySection} {...props}  />
-      <BigImage context={endSection} {...props}  />
+      {/*<BigImage context={endSection} {...props}  />*/}
+      <SignedIn context={signin} {...props} />
     </React.Fragment>
   );
 };
