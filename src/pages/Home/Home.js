@@ -225,9 +225,9 @@ const studySection = {
 // };
 
 const signin = {
-  sectionMain: '登录/注册； 分享你的知识与见闻',
+  sectionMain: '登录/注册, 与汪师傅分享你的知识与见闻',
   sectionTitle: '登录/注册， 岂不美哉？',
-  sectionContent: '话不多说，为什么注册一波呢?'
+  sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
 }
 
 

@@ -29,9 +29,9 @@ const ReturnTop = props => {
   }
 
   return (
-    <div className={classes.returnToTop}>
+    <div className={classes.returnToTop} onClick={scrollToTop}>
       <IconButton className={classes.button} >
-        <ArrowUpwardIcon color="secondary" onClick={scrollToTop}/>
+        <ArrowUpwardIcon color="secondary" />
       </IconButton>
     </div>
   );
