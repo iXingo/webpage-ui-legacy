@@ -86,7 +86,7 @@ const CommentForm = props => {
           className={classes.input}
           disableUnderline
           onChange={handleChange}
-          placeholder="据说帅的人已经评论了, 而丑的人还在犹豫!"
+          placeholder="据说帅气/可爱/美丽的人都已经评论了, 而那些丑的人还正在犹豫!"
           value={value}
           multiline={true}
           onKeyDown={handleKeyDown}
