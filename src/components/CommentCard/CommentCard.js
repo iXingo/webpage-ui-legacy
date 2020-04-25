@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import {withRouter} from "react-router-dom";
 import {
   Card,
@@ -18,11 +18,11 @@ import {
   Divider
 } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-
-import { Reactions, ReplyBubble, CommentForm } from './components';
+import {Reactions, ReplyBubble, CommentForm} from './components';
 import {Instagram} from "@material-ui/icons";
 import Grow from "@material-ui/core/Grow";
 import SignInCard from "../SignInCard";
+import Chip from "@material-ui/core/Chip";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -58,26 +58,50 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2)
   },
-  commentForm:{
+  commentForm: {
     marginBottom: theme.spacing(2)
   },
-  cardHeader:{
+  cardHeader: {
     backgroundColor: '#eee',
+  },
+  badge: {
+    marginLeft: 10
+  },
+  verified: {
+    display: 'inline-block',
+    backgroundImage: 'url(https://img.ixingo.cn/icon.png)',
+    backgroundRepeat: 'no-repeat',
+    width: 14,
+    height: 14,
+    verticalAlign: -2,
+    backgroundPosition: '0 -50px',
+    marginLeft: 2,
+  },
+  veriedIcon : {
+    paddingLeft: 5
   }
-}));
 
+}));
 
 const CommentCard = props => {
 
-  const { post, handleComment, currentUser, className, ...rest } = props;
-  if(!currentUser) {
+  const {post, handleComment, currentUser, className, ...rest} = props;
+  const classes = useStyles();
+
+  const VerifiedCommter = () => {
+    return (
+      <a target="_blank" rel='noreferrer noopener' href="http://www.ixingo.com.cn" className={classes.veriedIcon}>
+        <i title="星狗网认证作者" className={classes.verified}>
+        </i>
+      </a>
+    );
+  }
+
+  if (!currentUser) {
     return <SignInCard {...props}/>;
   }
   moment.locale();
-  console.log(moment.locale("zh-cn"));
-  console.log(props);
-  const classes = useStyles();
-  if(!post || !post.comments){
+  if (!post || !post.comments) {
     return <Instagram/>;
   }
   return (
@@ -90,7 +114,7 @@ const CommentCard = props => {
       {post.comments && (
         <Grow
           in={true}
-          style={{ transformOrigin: '0 0 0' }}
+          style={{transformOrigin: '0 0 0'}}
           timeout={1000}
         >
           <div className={classes.comments}>
@@ -100,7 +124,7 @@ const CommentCard = props => {
                 className={clsx(classes.root, className)}
               >
                 <CardHeader
-                  className ={classes.cardHeader}
+                  className={classes.cardHeader}
                   avatar={
                     <Avatar
                       alt="Person"
@@ -113,21 +137,34 @@ const CommentCard = props => {
                   disableTypography
                   subheader={
                     <div className={classes.subheader}>
-                      <AccessTimeIcon className={classes.accessTimeIcon} />
+                      <AccessTimeIcon className={classes.accessTimeIcon}/>
                       <Typography variant="body2">
                         使用 {comment.source} 评论于 {moment(comment.creationDateTime).fromNow()}
                       </Typography>
                     </div>
                   }
                   title={
-                    <Link
-                      color="textPrimary"
-                      component={RouterLink}
-                      to="/profile/1/timeline"
-                      variant="h6"
-                    >
-                      {comment.commenter.name}
-                    </Link>
+                    <div>
+                      <Link
+                        color="textPrimary"
+                        component={RouterLink}
+                        to="/profile/1/timeline"
+                        variant="h6"
+                      >
+                        {comment.commenter.name}
+                      </Link>
+                      {post.createdBy.id === comment.commenter.id && (
+                        <Chip
+                          size="small"
+                          avatar={<VerifiedCommter/>}
+                          label="本文作者"
+                          clickable
+                          variant="outlined"
+                          color="primary"
+                          className={classes.badge}
+                        />
+                      )}
+                    </div>
                   }
                 />
                 <CardContent className={classes.content}>
@@ -150,7 +187,7 @@ const CommentCard = props => {
                     className={classes.reactions}
                     comment={comment}
                   />
-                  <Divider className={classes.divider} />
+                  <Divider className={classes.divider}/>
                   {comment.replies && (
                     <div className={classes.comments}>
                       {comment.replies.map(reply => (
@@ -164,10 +201,10 @@ const CommentCard = props => {
                   )}
                 </CardContent>
               </Card>
-              ))}
-            </div>
-          </Grow>
-        )}
+            ))}
+          </div>
+        </Grow>
+      )}
     </div>
   );
 };
