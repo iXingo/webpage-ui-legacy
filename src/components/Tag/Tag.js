@@ -1,17 +1,22 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
-
+import LocalOfferOutlinedIcon from '@material-ui/icons/LocalOfferOutlined';
+import {Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
+    marginRight: 10,
+    color: '#1a73e8'
   },
   chip: {
     margin: theme.spacing(1),
   },
+  tags: {
+    color: 'black',
+    fontWeight: 500
+  }
 }));
 
 const Tag = props => {
@@ -19,12 +24,10 @@ const Tag = props => {
 
   return (
     <div className={classes.root}>
-      <Chip
-        avatar={<Avatar alt="Natacha" src="https://img.ixingo.cn/000_.png"/>}
-        label={props.tag.name}
-        className={classes.chip}
-        color="primary"
-      />
+      <LocalOfferOutlinedIcon colorPrimary/>
+      <Typography variant="h6" className={classes.tags}>
+        {props.tag.name}
+      </Typography>
     </div>
   );
 };

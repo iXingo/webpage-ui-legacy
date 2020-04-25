@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
 
   avatar: {
     display: 'inline-block',
-    marginRight: 10
   },
   user: {
     marginTop: 100,
