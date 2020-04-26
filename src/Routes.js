@@ -3,7 +3,7 @@ import {Redirect, Switch, withRouter} from 'react-router-dom';
 import {Album as AlbumPage, RouteWithLayout} from './components';
 import {Main as MainLayout, Minimal as MinimalLayout} from './layouts';
 import {
-  About as AboutPage,
+  // About as AboutPage,
   AboutMe as AboutMePage,
   Activate as ActivatePage,
   Agreement as AgreementPage,
@@ -21,7 +21,8 @@ import {
   SignIn as SignInPage,
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
-  SinglePost as SinglePostPage
+  SinglePost as SinglePostPage,
+  Presentation as PresentationPage
 } from './pages';
 
 class Routes extends Component {
@@ -153,7 +154,7 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={AboutPage}
+          component={PresentationPage}
           exact
           layout={MainLayout}
           path="/about"

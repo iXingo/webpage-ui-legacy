@@ -18,5 +18,7 @@ export {default as Activate} from './Activate';
 export {default as Post} from './Post';
 export {default as Privacy} from './Privacy';
 export {default as Copyright} from './Copyright';
+export {default as Settings} from './Settings';
+export {default as Presentation} from './Presentation';
 
 

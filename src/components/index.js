@@ -42,6 +42,7 @@ export {default as HoverCard} from './HoverCard';
 export {default as UserCard} from './UserCard';
 export {default as CommentCard} from './CommentCard';
 export {default as SignedIn} from './SignedIn';
+export {default as Page} from './Page';
 
 
 
