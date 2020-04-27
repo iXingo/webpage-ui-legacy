@@ -5,9 +5,9 @@
   "homepage": ".",
   "dependencies": {
     "@material-ui/core": "^4.6.1",
-    "@material-ui/icons": "^4.5.1",
+    "@material-ui/icons": "^4.6.1",
     "@material-ui/lab": "^4.0.0-alpha.51",
-    "@material-ui/styles": "^4.6.0",
+    "@material-ui/styles": "^4.6.1",
     "antd": "^3.26.16",
     "axios": "^0.19.2",
     "install": "^0.13.0",
