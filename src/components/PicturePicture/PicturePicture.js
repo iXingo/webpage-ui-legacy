@@ -82,6 +82,15 @@ const useStyles = makeStyles(theme => ({
 const PicturePicture = props => {
 
   const classes = useStyles();
+  const {history} = props;
+
+  const clickLeft = () =>{
+    history.push(props.context.linkUrlLeft);
+  }
+
+  const clickRight = () =>{
+    history.push(props.context.linkUrlRight);
+  }
 
   return (
     <React.Fragment>
@@ -99,7 +108,7 @@ const PicturePicture = props => {
                 {props.context.contentLeft}
               </Typography>
               <div className={classes.button}>
-                <Button className={classes.buttonContent}>
+                <Button className={classes.buttonContent} onClick={clickLeft}>
                   {props.context.linkTextLeft} →
                 </Button>
               </div>
@@ -115,7 +124,7 @@ const PicturePicture = props => {
                 {props.context.contentRight}
               </Typography>
               <div className={classes.button}>
-                <Button className={classes.buttonContent}>
+                <Button className={classes.buttonContent} onClick={clickRight}>
                   {props.context.linkTextRight} →
                 </Button>
               </div>

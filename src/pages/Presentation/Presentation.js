@@ -20,7 +20,7 @@ const Presentation = () => {
   return (
     <Page
       className={classes.root}
-      title="Presentation"
+      title="关于星狗网 | 星狗网, 看见好时光"
     >
       <Header />
       <UserFlows />

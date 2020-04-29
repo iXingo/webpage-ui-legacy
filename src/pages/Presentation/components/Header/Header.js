@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Typography, Grid, Button } from '@material-ui/core';
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -59,27 +60,24 @@ const Header = props => {
           gutterBottom
           variant="h1"
         >
-          Devias React Material Kit - PRO
+          星狗网 - 看见,好时光.
         </Typography>
         <Typography
           align="center"
           component="h2"
           variant="subtitle1"
         >
-          A professional kit that comes with ready-to-use Material-UI©
-          components developed with one common goal in mind, help you build
-          faster &amp; beautiful applications. Each component is fully
-          customizable, responsive and easy to integrate.
+          星狗网是汪欣同学自主开发的一个专注于科技和生活分享的网站，在这里你会看到汪欣同学在关于程序设计（前端，后端，数据处理），工作， 生活和文艺方面的所有分享。欢迎关注@程序员汪师傅 一起交流分享，共同进步！A Material Design Full Stack App built with Spring Boot, Spring Security, JWT, MySQL, Redis, React, Bootstrap and Ant Design.
         </Typography>
         <div className={classes.buttons}>
           <Button
             color="primary"
             component="a"
-            href="https://themes.material-ui.com/themes/devias-kit-pro"
+            href="https://github.com/iXingo/WebPageUI"
             target="_blank"
             variant="contained"
           >
-            Purchase Devias Kit
+            <GitHubIcon style={{marginRight: 10}}/> 查看源码
           </Button>
         </div>
       </div>
@@ -109,7 +107,7 @@ const Header = props => {
               gutterBottom
               variant="h3"
             >
-              30+
+              30+src/pages/Presentation/components/Header/Header.js:178src/pages/Presentation/src/pages/Presentation/components/Header/Header.jssrc/pages/Presentation/components/Header/Header.js:178:178components/Header/Header.js:178
             </Typography>
             <Typography
               color="inherit"

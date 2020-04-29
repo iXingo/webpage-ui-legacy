@@ -114,13 +114,14 @@ const blogSection = {
 
   imageLeft: 'https://img.ixingo.cn/wangxin2019.png',
   titleLeft: '2020， 新一年。',
-  contentLeft: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
-  linkUrl: '',
-  linkTextLeft: '与汪师傅一起展望 2020',
+  contentLeft: '2020年元旦新年，汪师傅分别前往苏州、杭州会晤大学好友Jacob Zhang，Simon Shi以及Justin Qian，共庆新年  ',
+  linkUrlLeft: '/post/79333723029768110088',
+  linkTextLeft: '与汪师傅一起开启 2020',
 
   imageRight: 'https://img.ixingo.cn/masterwang2019.png',
   titleRight: '上海， 这一年。',
-  contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。我还清晰记得第一次站在上海地铁二号线前的迷茫与不知所措，谁也不知道未来会发生什么，只是在一列一列穿行的上海地铁前，在一次次上班和下班的路上，在一群群拥挤的上班族之间，在一行行代码一封封邮件前开始了沪漂的生活。  ',
+  contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。 ',
+  linkUrlRight: '/post/786630727666977996',
   linkTextRight: '与汪师傅一起回顾 2019',
 };
 
