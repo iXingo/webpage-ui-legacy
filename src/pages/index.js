@@ -16,6 +16,7 @@ export {default as AboutMe} from './AboutMe';
 export {default as News} from './News';
 export {default as Activate} from './Activate';
 export {default as Post} from './Post';
+export {default as Tech} from './Tech';
 export {default as Privacy} from './Privacy';
 export {default as Copyright} from './Copyright';
 export {default as Settings} from './Settings';

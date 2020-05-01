@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
 import {ContentTitle} from '../../components';
-import {Link} from "@material-ui/core";
 
 
 const useStyles = makeStyles(theme => ({

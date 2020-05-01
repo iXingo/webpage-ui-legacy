@@ -14,6 +14,7 @@ import {
   NotAuth as NotAuthPage,
   NotFound as NotFoundPage,
   Post as PostsPage,
+  Tech as TechPage,
   Privacy as PrivacyPage,
   ProductList as ProductListPage,
   Project as ProjectPage,
@@ -95,6 +96,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/posts"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={TechPage}
+          exact
+          layout={MainLayout}
+          path="/tech"
           {...this.props}
         />
         <RouteWithLayout
