@@ -3,10 +3,12 @@ import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import {withRouter} from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
 import {ContentTitle} from '../../components';
+import {Link} from "@material-ui/core";
 
 
 const useStyles = makeStyles(theme => ({
@@ -127,6 +129,12 @@ const PicturePicture = props => {
                 <Button className={classes.buttonContent} onClick={clickRight}>
                   {props.context.linkTextRight} →
                 </Button>
+                <RouterLink
+                  color="textPrimary"
+                  component={RouterLink}
+                  to="/profile/1/timeline"
+                  variant="h6">
+                </RouterLink>
               </div>
             </div>
           </Grid>
