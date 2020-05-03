@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getAllPosts} from '../../util/APIUtils';
+import {getAllTechPosts} from '../../util/APIUtils';
 import TechPage from "./TechPage";
 import {Instagram} from "react-content-loader";
 import Loading from 'react-loading-components';
@@ -29,7 +29,7 @@ class Tech extends Component {
     this.setState({
       page: this.state.page + 1,
     });
-    let promise = getAllPosts(this.state.page, this.state.size);
+    let promise = getAllTechPosts(this.state.page, this.state.size);
     if (!promise) {
       return;
     }

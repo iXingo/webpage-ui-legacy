@@ -155,8 +155,6 @@ const SignIn = (props) => {
 
   const {history, currentUser} = props;
   if (currentUser) {
-
-
     const notificationType = "success";
     notification[notificationType]({
       message: '星狗网 Web App',

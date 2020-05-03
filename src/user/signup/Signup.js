@@ -252,7 +252,7 @@ class Signup extends Component {
 
     checkUsernameAvailability(usernameValue)
       .then(response => {
-        if (response.available) {
+        if (response.code===200) {
           this.setState({
             username: {
               value: usernameValue,
@@ -306,7 +306,7 @@ class Signup extends Component {
 
     checkEmailAvailability(emailValue)
       .then(response => {
-        if (response.available) {
+        if (response.code===200) {
           this.setState({
             email: {
               value: emailValue,
