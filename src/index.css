@@ -6,7 +6,7 @@ body {
 
 body::-webkit-scrollbar {
     background-color: #fff;
-    width: 12px
+    width: 16px
 }
 
 /* background of the scrollbar except button or resizer */
