@@ -152,6 +152,13 @@ export function getAllTechPosts(page, size) {
   });
 }
 
+export function getAllCoursePosts(page, size) {
+  return request({
+    url: API_BASE_URL + "/post/all?typeId=3&page=" + page + "&size=" + size,
+    method: 'GET'
+  });
+}
+
 
 export function getPost(id) {
   return request({

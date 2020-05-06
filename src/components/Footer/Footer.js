@@ -104,6 +104,7 @@ const Footer = props => {
         <Typography variant="caption" style={{marginTop: 10, color: 'black', fontSize: 12}}>
           ICP证: 皖ICP备15011098号
         </Typography>
+        <img alt={'星狗网'} src={"https://img.ixingo.cn/pic/LOGO.png"} style={{width:150}}/>
       </div>
     </div>
   );

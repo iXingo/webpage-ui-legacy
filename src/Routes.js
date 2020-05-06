@@ -23,7 +23,8 @@ import {
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
   SinglePost as SinglePostPage,
-  Presentation as PresentationPage
+  Presentation as PresentationPage,
+  Course as CoursePage,
 } from './pages';
 
 class Routes extends Component {
@@ -103,6 +104,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/tech"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={CoursePage}
+          exact
+          layout={MainLayout}
+          path="/courses"
           {...this.props}
         />
         <RouteWithLayout

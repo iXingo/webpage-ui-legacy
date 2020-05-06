@@ -107,7 +107,7 @@ const goodSection = {
 
 };
 
-const TechPage = props => {
+const CoursePage = props => {
   const classes = useStyles();
   return (
     <div className={classes}>
@@ -117,4 +117,4 @@ const TechPage = props => {
   );
 };
 
-export default TechPage;
+export default CoursePage;
