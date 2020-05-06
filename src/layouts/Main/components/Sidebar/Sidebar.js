@@ -93,17 +93,6 @@ const Sidebar = props => {
       href: '/explore',
       icon: <ExploreIcon/>
     },
-
-    // {
-    //   title: '登    录',
-    //   href: '/sign-in',
-    //   icon: <AccountBoxIcon />
-    // },
-    // {
-    //   title: '注    册',
-    //   href: '/sign-up',
-    //   icon: <LockOpenIcon />
-    // },
     {
       title: '关    于',
       href: '/about',
@@ -129,6 +118,7 @@ const Sidebar = props => {
         <SidebarNav
           className={classes.nav}
           pages={pages}
+          onClose={onClose}
         />
         <UpgradePlan/>
 

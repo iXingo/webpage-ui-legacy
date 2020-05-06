@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
 const courseSection = {
 
   image: 'https://developer.android.google.cn/images/home/android-11-preview-hero.svg',
-  title: '皎皎空中孤月轮，汪欣教你学编程。',
+  title: '教程',
   content: '借助计算机程序，我们能够轻松完成一些有趣的事情，但是有的时候计算机程序的编写和学习却不轻松。在这里，汪师傅将和你一起，尝试将这一切变的稍微轻松一些。',
   linkUrl: '',
   linkText: '汪师傅',

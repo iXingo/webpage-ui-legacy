@@ -69,7 +69,7 @@ const MediaCard = props => {
   return (
     <Grid container>
       {posts.map(post => (
-        <Grid item key={props.card} xs={12} md={4} className={classes.cardGrids}>
+        <Grid item key={props.card} xs={12} md={6} className={classes.cardGrids}>
           <Card className={classes.cards} onClick={() => openPost(String(post.id))}>
             <CardMedia
               className={classes.cardMedias}

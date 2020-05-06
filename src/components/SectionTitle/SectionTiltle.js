@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: '30px 0px',
+    padding: '20px 0px',
     backgroundColor: '#07304c',
   },
   mainTitle: {
@@ -55,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     padding: '20px 20px 0'
   },
   picture: {
-    height: 300,
+    height: 260,
   },
   buttonContent: {
     padding: '12px 32px',

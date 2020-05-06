@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
 const techSection = {
 
   image: 'https://developer.android.google.cn/images/home/android-11-preview-hero.svg',
-  title: '夜半无人私语时，一起研究线程池。',
+  title: '技术',
   content: '坦率地说，汪师傅从来不是在人群中技术拔尖的人，但是因为一些原因，汪师傅最终还是走上了技术这条不归路。夜半无人私语时，汪师傅师傅继续在这条道路上摸索前行。',
   linkUrl: '',
   linkText: '汪师傅',

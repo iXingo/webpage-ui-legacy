@@ -1,10 +1,10 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import Container from '@material-ui/core/Container';
 import Typography from '@material-ui/core/Typography';
-import AlignItemsList from '../../components/AlignItemsList';
 import HeaderUnit from '../../components/HeaderUnit';
-import PostCard from '../../components/PostCard';
+// import AlignItemsList from '../../components/AlignItemsList';
+// import Container from '@material-ui/core/Container';
+// import PostCard from '../../components/PostCard';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -190,14 +190,14 @@ const Project = props => {
         ))
         }
       </div>
-      <Container maxWidth="lg" className={classes.container}>
-        <PostCard/>
-        <div className={classes.section}>
-          <AlignItemsList/>
-          <AlignItemsList/>
-          <AlignItemsList/>
-        </div>
-      </Container>
+      {/*<Container maxWidth="lg" className={classes.container}>*/}
+      {/*  <PostCard/>*/}
+      {/*  <div className={classes.section}>*/}
+      {/*    <AlignItemsList/>*/}
+      {/*    <AlignItemsList/>*/}
+      {/*    <AlignItemsList/>*/}
+      {/*  </div>*/}
+      {/*</Container>*/}
     </React.Fragment>
   );
 };
