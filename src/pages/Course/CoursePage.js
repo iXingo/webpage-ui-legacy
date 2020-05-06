@@ -94,14 +94,11 @@ const useStyles = makeStyles(theme => ({
 
 }));
 
-const goodSection = {
-  sectionMain: '加油，汪师傅',
-  sectionTitle: '问君能有几多愁，今年汪欣要加油。',
-  sectionContent: '时间的车轮无情地把我们带进2020时代。2020，一个在小学作文中曾被认为是未来的一年，如今却已经正式走进现实，这一年，汪师傅，加油鸭！',
+const courseSection = {
 
   image: 'https://developer.android.google.cn/images/home/android-11-preview-hero.svg',
-  title: '加油! 汪师傅！',
-  content: '诚然，随着年纪的增长，烦恼也会随之增长，快乐和幸福感也随之减少。我们不得不独自面对残酷的现实和现实世界的纷纷扰扰。世界依旧是这个世界，我们却不是依旧的我们。悲欢离合，阴晴圆缺，在这个山长水远的人世间，砥砺前行。',
+  title: '皎皎空中孤月轮，汪欣教你学编程。',
+  content: '借助计算机程序，我们能够轻松完成一些有趣的事情，但是有的时候计算机程序的编写和学习却不轻松。在这里，汪师傅将和你一起，尝试将这一切变的稍微轻松一些。',
   linkUrl: '',
   linkText: '汪师傅',
 
@@ -111,7 +108,7 @@ const CoursePage = props => {
   const classes = useStyles();
   return (
     <div className={classes}>
-      <SectionTitle  context={goodSection}/>
+      <SectionTitle  context={courseSection}/>
       <BigMediaCarcd posts={props.posts}/>
     </div>
   );
