@@ -21,9 +21,9 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: theme.spacing(3),
+    padding: '24px 0',
     [theme.breakpoints.up('md')]: {
-      padding: theme.spacing(3),
+      padding: 24
       // paddingTop: 20,
     },
   },
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       padding: theme.spacing(0),
     },
-    height: 600,
+    height: 400,
   },
 }));
 
@@ -53,16 +53,16 @@ const FriendHeader = props => {
         <img alt="Cover" className={classes.mainImg} src={friend.pictureUrl}/>
       </Grid>
       <Grid item xs={12} md={5} className={classes.profile}>
-        <Typography overline gutterBottom variant='h5' style={{padding: '10px 0', color: '#8EB2F4'}}>
+        <Typography overline gutterBottom variant='body1' style={{padding: '10px 0', color: '#1a73e8'}}>
           好友
         </Typography>
-        <Typography overline gutterBottom variant='h2' style={{padding: '10px 0', color: 'white'}}>
+        <Typography overline gutterBottom variant='body1' style={{padding: '10px 0', color: 'black', fontSize: 60}}>
           {friend.name}
         </Typography>
-        <Typography overline gutterBottom variant='h5' style={{padding: '20px 0', color: '#8EB2F4', fontWeight: 300}}>
+        <Typography overline gutterBottom variant='h5' style={{padding: '20px 0', color: '#546e7a', fontWeight: 300}}>
           {friend.description}
         </Typography>
-        <Typography overline gutterBottom variant='caption' style={{padding: '20px 0', color: '#8EB2F4', fontWeight: 300}}>
+        <Typography overline gutterBottom variant='caption' style={{padding: '20px 0', color: 'black', fontWeight: 300}}>
           【{friend.name}】和 汪师傅 相识大约有：<CountUp />
         </Typography>
         {/*<Alert severity="success">This is a success message!</Alert>*/}

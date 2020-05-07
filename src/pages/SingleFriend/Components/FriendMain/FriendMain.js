@@ -27,7 +27,8 @@ const useStyles = makeStyles(theme => ({
     // padding: theme.spacing(3),
     padding: '0 16px',
     textAlign: 'justify',
-    backgroundColor: '#1a73e8',
+    // backgroundColor: '#1a73e8',
+    backgroundColor: '#F1F1F1',
 
   },
   contentGrid: {

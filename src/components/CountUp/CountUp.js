@@ -4,7 +4,7 @@ import Timer from "react-compound-timer";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color : 'white',
+    color : 'black',
     fontSize: 16,
     padding: 5,
     fontWeight: 500,
