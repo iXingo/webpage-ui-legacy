@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Profile = props => {
-  const {className, currentUser, ...rest} = props;
+  const {className, onClose, currentUser, ...rest} = props;
 
   const classes = useStyles();
 
@@ -39,11 +39,12 @@ const Profile = props => {
         className={clsx(classes.root, className)}
       >
         <Avatar
-          alt="Person"
+          alt={user.name}
           className={classes.avatar}
           component={RouterLink}
           src={user.avatar}
           to="/sign-in"
+          onClick={onClose}
         />
         <Typography
           className={classes.name}
@@ -66,6 +67,7 @@ const Profile = props => {
           component={RouterLink}
           src={currentUser.headUrl}
           to="/index"
+          onClick={onClose}
         />
         <Typography
           className={classes.name}
