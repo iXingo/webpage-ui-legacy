@@ -16,14 +16,14 @@ import {
   Post as PostsPage,
   Tech as TechPage,
   Privacy as PrivacyPage,
-  ProductList as ProductListPage,
+  // ProductList as ProductListPage,
   Project as ProjectPage,
   ResetPasswd as ResetPasswdPage,
   SignIn as SignInPage,
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
   SinglePost as SinglePostPage,
-  Presentation as PresentationPage,
+  // Presentation as PresentationPage,
   Course as CoursePage,
 } from './pages';
 
@@ -36,13 +36,13 @@ class Routes extends Component {
           from="/"
           to="/index"
         />
-        <RouteWithLayout
-          component={ProductListPage}
-          exact
-          layout={MainLayout}
-          path="/products"
-          {...this.props}
-        />
+        {/*<RouteWithLayout*/}
+        {/*  component={ProductListPage}*/}
+        {/*  exact*/}
+        {/*  layout={MainLayout}*/}
+        {/*  path="/products"*/}
+        {/*  {...this.props}*/}
+        {/*/>*/}
         <RouteWithLayout
           component={ProjectPage}
           exact
@@ -169,13 +169,13 @@ class Routes extends Component {
           path="/please-login"
           {...this.props}
         />
-        <RouteWithLayout
-          component={PresentationPage}
-          exact
-          layout={MainLayout}
-          path="/about"
-          {...this.props}
-        />
+        {/*<RouteWithLayout*/}
+        {/*  component={PresentationPage}*/}
+        {/*  exact*/}
+        {/*  layout={MainLayout}*/}
+        {/*  path="/about"*/}
+        {/*  {...this.props}*/}
+        {/*/>*/}
         <RouteWithLayout
           component={AboutMePage}
           exact
