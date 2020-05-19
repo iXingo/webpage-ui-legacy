@@ -28,6 +28,8 @@ const ProductList = props => {
   const classes = useStyles();
   const [products] = useState(mockData);
 
+  document.title = "汪师傅提供的服务列表 | 看见，好时光";
+
   return (
     <div className={classes.root}>
       <ProductsToolbar/>

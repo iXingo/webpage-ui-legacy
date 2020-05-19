@@ -50,7 +50,7 @@ export default [
     id: uuid(),
     title: '邮件服务',
     description:
-      '汪师傅可以提供基于邮件的推送通知(无需安装客户端,服务端推送,支持定时推送,在一定条件下支持自定义邮件域名)。 应用案例: 汪师傅天气短信服务。',
+      '汪师傅可以提供基于邮件的推送通知(无需安装客户端,服务端推送,支持定时推送,在一定条件下支持自定义邮件域名)。 应用案例: 汪师傅天气邮件服务。',
     imageUrl: 'https://img.ixingo.cn/pic/mail.png',
     totalDownloads: '835',
     url: '/index'
