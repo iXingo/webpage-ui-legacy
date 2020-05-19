@@ -123,8 +123,9 @@ const Topbar = props => {
           <IconButton
             color="inherit"
             onClick={onSidebarOpen}
+            style={{fontSize: 12}}
           >
-            <MenuIcon/>
+            <MenuIcon/> 菜单
           </IconButton>
         </Hidden>
       </Toolbar>
