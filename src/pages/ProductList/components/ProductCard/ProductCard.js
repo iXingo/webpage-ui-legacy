@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
   imageContainer: {
     height: 64,
     width: 64,
-    margin: '0 auto',
+    margin: '25px auto',
     // border: `1px solid ${theme.palette.divider}`,
     borderRadius: '5px',
     overflow: 'hidden',
