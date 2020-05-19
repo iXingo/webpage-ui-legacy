@@ -52,7 +52,7 @@ const Settings = props => {
   }
 
   if (!tabs.find(t => t.value === tab)) {
-    return <Redirect to="/errors/error-404" />;
+    return <Redirect to="/not-found" />;
   }
 
   return (

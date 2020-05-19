@@ -66,7 +66,7 @@ const Profile = props => {
           className={classes.avatar}
           component={RouterLink}
           src={currentUser.headUrl}
-          to="/index"
+          to="/settings/general"
           onClick={onClose}
         />
         <Typography

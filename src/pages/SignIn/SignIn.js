@@ -153,6 +153,8 @@ const useStyles = makeStyles(theme => ({
 
 const SignIn = (props) => {
 
+  const {computedMatch: {params}} = props;
+  console.log('params:'+params['next']);
   const {history, currentUser} = props;
   if (currentUser) {
     const notificationType = "success";
@@ -214,7 +216,7 @@ const SignIn = (props) => {
       .then(response => {
         localStorage.setItem(ACCESS_TOKEN, response.accessToken);
         console.log(history);
-        props.handleLogin();
+        props.handleLogin(params['next']);
       }).catch(error => {
       if (error.status === 401) {
         notification.error({

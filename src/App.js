@@ -36,11 +36,12 @@ class App extends Component {
     notification.config({
       placement: 'topRight',
       top: 70,
-      duration: 3,
+      duration: 4,
     });
   }
 
-  loadCurrentUser() {
+  loadCurrentUser(next) {
+    const {history} = this.props;
     this.setState({
       isLoading: true
     });
@@ -51,10 +52,20 @@ class App extends Component {
           isAuthenticated: true,
           isLoading: false
         });
+        notification.success({
+          message: '星狗网 Web App',
+          description: "欢迎回来！恭喜您！您已经成功登录！",
+        });
+        if(next) {
+          history.push(next);
+        }else{
+          history.push('/index');
+        }
       }).catch(error => {
-      this.setState({
-        isLoading: false,
-      });
+        this.setState({
+          isLoading: false,
+        });
+        console.log(error);
     });
   }
 
@@ -87,21 +98,8 @@ class App extends Component {
 
   }
 
-  handleLogin() {
-    // let {history} = this.props;
-    notification.success({
-      message: '星狗网 Web App',
-      description: "欢迎回来！恭喜您！您已经成功登录！",
-    });
-    this.loadCurrentUser();
-    // console.log(history.location);
-    // if (history.location.pathname !== "/sign-in") {
-    //   history.push(history.location.pathname);
-    // } else {
-    //   history.push("/index");
-    // }
-    // console.log(history);
-    // history.goBack();
+  handleLogin(next) {
+    this.loadCurrentUser(next);
   }
 
   render() {

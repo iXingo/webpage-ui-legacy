@@ -26,6 +26,7 @@ import {
   // Presentation as PresentationPage,
   Course as CoursePage,
 } from './pages';
+import {General, Notifications, Security, Subscription} from "./pages/Settings/components";
 
 class Routes extends Component {
   render() {
@@ -188,6 +189,34 @@ class Routes extends Component {
           exact
           layout={MinimalLayout}
           path="/activate/:email/:activateCode"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={General}
+          exact
+          layout={MainLayout}
+          path="/settings/general"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={Notifications}
+          exact
+          layout={MainLayout}
+          path="/settings/notifications"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={Subscription}
+          exact
+          layout={MainLayout}
+          path="/settings/subscription"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={Security}
+          exact
+          layout={MainLayout}
+          path="/settings/security"
           {...this.props}
         />
         <Redirect to="/not-found"/>
