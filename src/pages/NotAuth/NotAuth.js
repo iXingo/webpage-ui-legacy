@@ -40,7 +40,7 @@ const NotAuth = props => {
   const {history} = props;
 
   const handleLogin = () => {
-    history.push("/sign-in");
+    history.push("/sign-in?next=/posts");
   };
 
   return (
