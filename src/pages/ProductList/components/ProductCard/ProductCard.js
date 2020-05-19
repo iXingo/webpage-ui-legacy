@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     height: 64,
     width: 64,
     margin: '0 auto',
-    border: `1px solid ${theme.palette.divider}`,
+    // border: `1px solid ${theme.palette.divider}`,
     borderRadius: '5px',
     overflow: 'hidden',
     display: 'flex',
@@ -56,13 +56,14 @@ const ProductCard = props => {
           <Grid className={classes.statsItem} item>
             <AccessTimeIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
-              Updated 2hr ago
+              Powered By @程序员汪师傅
             </Typography>
           </Grid>
           <Grid className={classes.statsItem} item>
             <GetAppIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
-              {product.totalDownloads} Downloads
+              {/*{product.totalDownloads} */}
+              查看更多
             </Typography>
           </Grid>
         </Grid>

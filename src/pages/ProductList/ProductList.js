@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Grid, IconButton, Typography} from '@material-ui/core';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import {Grid} from '@material-ui/core';
+// import {Grid, IconButton, Typography} from '@material-ui/core';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 
 import {ProductCard, ProductsToolbar} from './components';
 import mockData from './data';
@@ -39,11 +40,11 @@ const ProductList = props => {
           ))}
         </Grid>
       </div>
-      <div className={classes.pagination}>
-        <Typography variant="caption">1-6 of 20</Typography>
-        <IconButton><ChevronLeftIcon/></IconButton>
-        <IconButton><ChevronRightIcon/></IconButton>
-      </div>
+      {/*<div className={classes.pagination}>*/}
+      {/*  <Typography variant="caption">1-6 of 20</Typography>*/}
+      {/*  <IconButton><ChevronLeftIcon/></IconButton>*/}
+      {/*  <IconButton><ChevronRightIcon/></IconButton>*/}
+      {/*</div>*/}
     </div>
   );
 };
