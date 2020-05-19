@@ -16,7 +16,7 @@ import {
   Post as PostsPage,
   Tech as TechPage,
   Privacy as PrivacyPage,
-  // ProductList as ProductListPage,
+  ProductList as ProductListPage,
   Project as ProjectPage,
   ResetPasswd as ResetPasswdPage,
   SignIn as SignInPage,
@@ -37,13 +37,13 @@ class Routes extends Component {
           from="/"
           to="/index"
         />
-        {/*<RouteWithLayout*/}
-        {/*  component={ProductListPage}*/}
-        {/*  exact*/}
-        {/*  layout={MainLayout}*/}
-        {/*  path="/products"*/}
-        {/*  {...this.props}*/}
-        {/*/>*/}
+        <RouteWithLayout
+          component={ProductListPage}
+          exact
+          layout={MainLayout}
+          path="/services"
+          {...this.props}
+        />
         <RouteWithLayout
           component={ProjectPage}
           exact

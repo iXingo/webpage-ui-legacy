@@ -70,7 +70,7 @@ const Sidebar = props => {
     },
     {
       title: '服    务',
-      href: '/products',
+      href: '/services',
       icon: <DashboardIcon/>
     },
     {
