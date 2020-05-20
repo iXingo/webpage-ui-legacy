@@ -77,13 +77,13 @@ const HeaderUnit = props => {
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
-                <Button variant="contained" color="primary" onClick={() => joinProject(project.name)}>
-                  加入该计划
+                <Button variant="outlined" color="primary" onClick={() => inspectProject(project.name)}>
+                  查看计划介绍
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant="outlined" color="primary" onClick={() => inspectProject(project.name)}>
-                  查看计划介绍
+                <Button variant="contained" color="primary" onClick={() => joinProject(project.name)}>
+                  加入该计划
                 </Button>
               </Grid>
             </Grid>
