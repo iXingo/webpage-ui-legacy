@@ -115,13 +115,13 @@ const blogSection = {
   imageLeft: 'https://img.ixingo.cn/wangxin2019.png',
   titleLeft: '2020， 新一年。',
   contentLeft: '2020年元旦新年，汪师傅分别前往苏州、杭州会晤大学好友Jacob Zhang，Simon Shi以及Justin Qian，共庆新年  ',
-  linkUrlLeft: '/post/79333723029768110088',
+  linkUrlLeft: 'post/7933372302976811008',
   linkTextLeft: '与汪师傅一起开启 2020',
 
   imageRight: 'https://img.ixingo.cn/masterwang2019.png',
   titleRight: '上海， 这一年。',
   contentRight: '站在地铁2号线的轨道线前，地铁轨道来风再一次如约吹在我的脸上，也是已经超过一年了。 ',
-  linkUrlRight: '/post/786630727666977996',
+  linkUrlRight: 'post/7866307276669779968',
   linkTextRight: '与汪师傅一起回顾 2019',
 };
 
