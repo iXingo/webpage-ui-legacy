@@ -48,6 +48,11 @@ const FAQ = props => {
       title: '本站由谁开发?',
       description:
         '本站由 @程序员汪师傅 进行开发并享有版权。'
+    },
+    {
+      title: '本站的美工是谁?',
+      description:
+        '没错,还是 @程序员汪师傅。 当然部分素材来源于 Material UI 以及 https://undraw.co/illustrations; https://www.iconfont.cn/'
     }
   ];
 
