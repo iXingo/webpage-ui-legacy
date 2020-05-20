@@ -125,7 +125,7 @@ const Topbar = props => {
             onClick={onSidebarOpen}
             style={{fontSize: 12}}
           >
-            <MenuIcon/> 菜单
+            <MenuIcon/> 导航
           </IconButton>
         </Hidden>
       </Toolbar>
