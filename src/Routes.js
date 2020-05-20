@@ -23,7 +23,7 @@ import {
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
   SinglePost as SinglePostPage,
-  // Presentation as PresentationPage,
+  Presentation as PresentationPage,
   Course as CoursePage,
 } from './pages';
 import {General, Notifications, Security, Subscription} from "./pages/Settings/components";
@@ -170,13 +170,13 @@ class Routes extends Component {
           path="/please-login"
           {...this.props}
         />
-        {/*<RouteWithLayout*/}
-        {/*  component={PresentationPage}*/}
-        {/*  exact*/}
-        {/*  layout={MainLayout}*/}
-        {/*  path="/about"*/}
-        {/*  {...this.props}*/}
-        {/*/>*/}
+        <RouteWithLayout
+          component={PresentationPage}
+          exact
+          layout={MainLayout}
+          path="/about"
+          {...this.props}
+        />
         <RouteWithLayout
           component={AboutMePage}
           exact

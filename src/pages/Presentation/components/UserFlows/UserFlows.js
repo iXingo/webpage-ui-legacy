@@ -47,13 +47,12 @@ const UserFlows = props => {
             <Typography
               gutterBottom
               variant="h3"
+              style={{width:214}}
             >
-              Complete User Flows
+              皎皎空中孤月轮，汪欣教你学编程。
             </Typography>
             <Typography variant="subtitle2">
-              Not just a set of tools, the package includes the most common use
-              cases of user flows like User Management, Second Level Layout, and
-              many more.
+              借助计算机程序，我们能够轻松完成一些有趣的事情，但是有的时候计算机程序的编写和学习却不轻松。在这里，汪师傅将和你一起，尝试将这一切变的稍微轻松一些。
             </Typography>
           </Grid>
           <Grid
@@ -64,8 +63,8 @@ const UserFlows = props => {
             xs={12}
           >
             <img
-              alt="User flows"
-              src="/images/presentation/user_flows.png"
+              alt="皎皎空中孤月轮，汪欣教你学编程。"
+              src="https://img.ixingo.cn/pic/undraw_pair_programming_njlp.svg"
             />
           </Grid>
         </Grid>

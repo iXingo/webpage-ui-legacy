@@ -34,20 +34,20 @@ const FAQ = props => {
 
   const faqs = [
     {
-      title: 'What do we use for styling our components?',
+      title: '星狗网是用什么技术进行开发的?',
       description:
-        'We use Material-ui\'s hooks api as we think it’s the best way of avoiding clutter.'
+        '星狗网是一个 Material Design 的 Web 应用。 星狗网后端技术使用Java语言进行开发, 并结合流行的Spring Boot, Spring Security开发框架, 使用Json Web Token进行授权验证, 并基于MySQL, Redis作为数据存储基石完成构建。 ' +
+        '星狗网前端采用Javascript语言进行开发, 并结合流行的React框架和Material UI组件, 基于开源项目进行构建。'
     },
     {
-      title:
-        'Are the design files (sketch, figma) included in the Standard Package?',
+      title: '星狗网是如何部署的?',
       description:
-        'No, we offer the design source file only to Standard Plus Sketch & Figma and Extended Package.'
+        '本网站Web服务器, 数据库, 缓存服务器托管于百度智能云BCC， 静态文件与图片存储使用七牛云进行CDN加速， 短信服务由腾讯云提供支持， DNS域名解析服务由阿里云万网提供， 本站微信公众号服务后台基于新浪云SAE进行构建。'
     },
     {
-      title: 'Are you providing support for setting up my project?',
+      title: '本站由谁开发?',
       description:
-        'Yes, we offer email support for all our customers & even skype meetings for our extended license customers.'
+        '本站由 @程序员汪师傅 进行开发并享有版权。'
     }
   ];
 
@@ -61,7 +61,7 @@ const FAQ = props => {
           align="center"
           variant="h3"
         >
-          FAQ
+          关于星狗网
         </Typography>
         <div className={classes.content}>
           <List disablePadding>

@@ -83,9 +83,9 @@ const Header = props => {
       </div>
       <div className={classes.mediaContainer}>
         <img
-          alt="Demos"
+          alt="星狗网"
           className={classes.media}
-          src="/images/presentation/header.jpg"
+          src="https://img.ixingo.cn/pic/play-with-wangxin.png"
         />
       </div>
       <div className={classes.stats}>
@@ -107,13 +107,13 @@ const Header = props => {
               gutterBottom
               variant="h3"
             >
-              30+src/pages/Presentation/components/Header/Header.js:178src/pages/Presentation/src/pages/Presentation/components/Header/Header.jssrc/pages/Presentation/components/Header/Header.js:178:178components/Header/Header.js:178
+              新闻
             </Typography>
             <Typography
               color="inherit"
               variant="body2"
             >
-              Demo Pages
+              汪师傅看到的寻常巷陌
             </Typography>
           </Grid>
           <Grid
@@ -127,13 +127,13 @@ const Header = props => {
               gutterBottom
               variant="h3"
             >
-              UX
+              技术
             </Typography>
             <Typography
               color="inherit"
               variant="body2"
             >
-              Complete Flows
+              汪师傅的技术向往
             </Typography>
           </Grid>
           <Grid
@@ -147,13 +147,13 @@ const Header = props => {
               gutterBottom
               variant="h3"
             >
-              300+
+              教程
             </Typography>
             <Typography
               color="inherit"
               variant="body2"
             >
-              Components
+              面向小白的编程入门
             </Typography>
           </Grid>
           <Grid
@@ -162,17 +162,18 @@ const Header = props => {
             md={6}
             xs={12}
           >
-            <div>
-              <img
-                alt="React"
-                src="/images/react.png"
-              />
-            </div>
+            <Typography
+              color="inherit"
+              gutterBottom
+              variant="h3"
+            >
+              博文
+            </Typography>
             <Typography
               color="inherit"
               variant="body2"
             >
-              React Hooks API
+              汪师傅的随笔
             </Typography>
           </Grid>
         </Grid>

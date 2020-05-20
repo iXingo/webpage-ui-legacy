@@ -47,13 +47,12 @@ const PluginsSupport = props => {
             <Typography
               gutterBottom
               variant="h3"
+              style={{width:214}}
             >
-              Support for Plugins
+              东风未肯入东门，看看今天啥新闻。
             </Typography>
             <Typography variant="subtitle2">
-              The kit provides support for multiple third-party plugins right
-              out of the box like Chart.js, Dropzone.js, Kanban Plugin and many
-              more.
+              总有一个记忆让我们铭记于心，总有一种力量让我们泪流满面。回顾过去，一起重温那些令人动容的瞬间；展望未来，我们将走得更加铿锵有力。小人物大力量，跟着小人物汪师傅，看看他眼里的大新闻。
             </Typography>
           </Grid>
           <Grid
@@ -64,8 +63,8 @@ const PluginsSupport = props => {
             xs={12}
           >
             <img
-              alt="User flows"
-              src="/images/presentation/plugins_support.png"
+              alt="东风未肯入东门，看看今天啥新闻。"
+              src="https://img.ixingo.cn/pic/undraw_video_influencer_9oyy.svg"
             />
           </Grid>
         </Grid>
