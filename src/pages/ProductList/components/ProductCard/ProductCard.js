@@ -4,7 +4,7 @@ import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
 import {Card, CardActions, CardContent, Divider, Grid, Typography} from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import GetAppIcon from '@material-ui/icons/GetApp';
+// import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -60,7 +60,7 @@ const ProductCard = props => {
             </Typography>
           </Grid>
           <Grid className={classes.statsItem} item>
-            <GetAppIcon className={classes.statsIcon}/>
+            {/*<GetAppIcon className={classes.statsIcon}/>*/}
             <Typography display="inline" variant="body2">
               {/*{product.totalDownloads} */}
               查看更多

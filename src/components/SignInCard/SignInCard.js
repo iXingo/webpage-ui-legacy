@@ -28,6 +28,10 @@ const schema = {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
+    maxWidth: 800,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: "auto"
   },
   name: {
     marginTop: theme.spacing(3),
@@ -176,19 +180,19 @@ const SignInCard = (props) => {
             className={classes.form}
             onSubmit={handleSignIn}
           >
-            <Typography
-              className={classes.title}
-              variant="h2"
-            >
-              登录后查看/发表评论
-            </Typography>
+            {/*<Typography*/}
+            {/*  className={classes.title}*/}
+            {/*  variant="h2"*/}
+            {/*>*/}
+            {/*  登录后查看/发表评论*/}
+            {/*</Typography>*/}
 
-            <Typography
-              color="textSecondary"
-              gutterBottom
-            >
-              为什么要登录？登录后可以进行评论以及可以获得更佳的个性化体验。
-            </Typography>
+            {/*<Typography*/}
+            {/*  color="textSecondary"*/}
+            {/*  gutterBottom*/}
+            {/*>*/}
+            {/*  为什么要登录？登录后可以进行评论以及可以获得更佳的个性化体验。*/}
+            {/*</Typography>*/}
             <Typography
               align="center"
               className={classes.sugestion}
