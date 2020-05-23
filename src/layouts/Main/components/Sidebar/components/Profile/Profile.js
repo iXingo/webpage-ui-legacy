@@ -35,7 +35,6 @@ const Profile = props => {
   if (!currentUser) {
     return (
       <div
-        {...rest}
         className={clsx(classes.root, className)}
       >
         <Avatar

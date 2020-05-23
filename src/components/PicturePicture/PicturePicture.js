@@ -130,8 +130,8 @@ const PicturePicture = props => {
                 </Button>
                 <RouterLink
                   color="textPrimary"
-                  component={RouterLink}
-                  to="/profile/1/timeline"
+                  // component={RouterLink}
+                  to="/index"
                   variant="h6">
                 </RouterLink>
               </div>
