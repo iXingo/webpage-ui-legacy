@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductList = props => {
+const Service = props => {
 
   const classes = useStyles();
   const [products] = useState(mockData);
@@ -51,4 +51,4 @@ const ProductList = props => {
   );
 };
 
-export default ProductList;
+export default Service;

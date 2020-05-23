@@ -1,67 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {makeStyles} from '@material-ui/styles';
-// import Grid from '@material-ui/core/Grid';
-import {MediaSection,} from '../../components';
-// import Paper from '@material-ui/core/Paper';
+import { makeStyles } from '@material-ui/styles';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: theme.palette.background.default,
-    // height: theme.spacing(80)
-  },
-  grid: {
-    height: '100%'
-  },
+import { Page } from '../../components';
+import {
+  Header,
+  FAQ,
+  PluginsSupport,
+  SourceFiles,
+  UserFlows
+} from './components';
 
-  content: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  mainGrid: {
-    display: 'flex',
-    justifyContent: 'center',
-    // flexGrow:1,
-    // margin: 'auto',
-    // padding: theme.spacing(3),
-    padding: '0 16px',
-    textAlign: 'justify',
-    backgroundColor: '#1a73e8',
-
-  },
-  contentGrid: {
-    marginTop: 20,
-    display: 'flex',
-    justifyContent: 'center',
-    // flexGrow:1,
-    // margin: 'auto',
-    // padding: theme.spacing(3),
-    padding: '0 16px',
-    textAlign: 'justify',
-    backgroundColor: 'paimary',
-  },
-  friendtime: {
-    padding: '15px 0',
-  },
-  friend: {
-    paddingTop: 20
-  },
+const useStyles = makeStyles(() => ({
+  root: {}
 }));
 
-const About = props => {
-
+const About = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <MediaSection {...props}/>
-    </div>
+    <Page
+      className={classes.root}
+      title="关于星狗网 | 星狗网, 看见好时光"
+    >
+      <Header />
+      <UserFlows />
+      <PluginsSupport />
+      <SourceFiles />
+      <FAQ />
+    </Page>
   );
 };
 
-About.propTypes = {
-  history: PropTypes.object
-};
-
 export default About;
-  

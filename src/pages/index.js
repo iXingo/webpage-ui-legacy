@@ -3,7 +3,7 @@ export {default as SignUp} from './SignUp';
 export {default as NotFound} from './NotFound';
 export {default as Agreement} from './Agreement';
 export {default as Home} from './Home';
-export {default as ProductList} from './ProductList';
+export {default as Service} from './Service';
 export {default as Project} from './Project';
 export {default as ResetPasswd} from './ResetPasswd';
 export {default as SinglePost} from './SinglePost';
@@ -21,6 +21,5 @@ export {default as Course} from './Course';
 export {default as Privacy} from './Privacy';
 export {default as Copyright} from './Copyright';
 export {default as Settings} from './Settings';
-export {default as Presentation} from './Presentation';
 
 

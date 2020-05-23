@@ -16,14 +16,14 @@ import {
   Post as PostsPage,
   Tech as TechPage,
   Privacy as PrivacyPage,
-  ProductList as ProductListPage,
+  Service as ServicePage,
   Project as ProjectPage,
   ResetPasswd as ResetPasswdPage,
   SignIn as SignInPage,
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
   SinglePost as SinglePostPage,
-  Presentation as PresentationPage,
+  About as AboutPage,
   Course as CoursePage,
 } from './pages';
 import {General, Notifications, Security, Subscription} from "./pages/Settings/components";
@@ -38,7 +38,7 @@ class Routes extends Component {
           to="/index"
         />
         <RouteWithLayout
-          component={ProductListPage}
+          component={ServicePage}
           exact
           layout={MainLayout}
           path="/services"
@@ -171,7 +171,7 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={PresentationPage}
+          component={AboutPage}
           exact
           layout={MainLayout}
           path="/about"

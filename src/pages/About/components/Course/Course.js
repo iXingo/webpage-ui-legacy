@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const UserFlows = props => {
+const Course = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -73,8 +73,8 @@ const UserFlows = props => {
   );
 };
 
-UserFlows.propTypes = {
+Course.propTypes = {
   className: PropTypes.string
 };
 
-export default UserFlows;
+export default Course;

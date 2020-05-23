@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const ProductCard = props => {
+const ServiceCard = props => {
   const {className, product, ...rest} = props;
 
   const classes = useStyles();
@@ -72,9 +72,9 @@ const ProductCard = props => {
   );
 };
 
-ProductCard.propTypes = {
+ServiceCard.propTypes = {
   className: PropTypes.string,
   product: PropTypes.object.isRequired
 };
 
-export default ProductCard;
+export default ServiceCard;

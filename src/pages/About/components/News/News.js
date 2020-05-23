@@ -6,7 +6,7 @@ import { Typography, Grid } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.white
   },
   inner: {
     padding: theme.spacing(6, 3),
@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const SourceFiles = props => {
+const News = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -49,10 +49,10 @@ const SourceFiles = props => {
               variant="h3"
               style={{width:214}}
             >
-              今日不与旧时同，陈年好友情更浓。
+              东风未肯入东门，看看今天啥新闻。
             </Typography>
             <Typography variant="subtitle2">
-              不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。走得远了，也许会遇到一个人，像樵夫，像隐士，像路人，出现在你与高山流水之间，短短几句话，使你大惊失色，引为终生莫逆。现在，请和汪师傅一起走近他们，看见那些正在进行或者被岁月尘封的故事。
+              总有一个记忆让我们铭记于心，总有一种力量让我们泪流满面。回顾过去，一起重温那些令人动容的瞬间；展望未来，我们将走得更加铿锵有力。小人物大力量，跟着小人物汪师傅，看看他眼里的大新闻。
             </Typography>
           </Grid>
           <Grid
@@ -63,8 +63,8 @@ const SourceFiles = props => {
             xs={12}
           >
             <img
-              alt="今日不与旧时同，陈年好友情更浓。"
-              src="https://img.ixingo.cn/pic/undraw_children_4rtb.svg"
+              alt="东风未肯入东门，看看今天啥新闻。"
+              src="https://img.ixingo.cn/pic/undraw_video_influencer_9oyy.svg"
             />
           </Grid>
         </Grid>
@@ -73,8 +73,8 @@ const SourceFiles = props => {
   );
 };
 
-SourceFiles.propTypes = {
+News.propTypes = {
   className: PropTypes.string
 };
 
-export default SourceFiles;
+export default News;
