@@ -40,8 +40,8 @@ class App extends Component {
     });
   }
 
-  loadCurrentUser(next) {
-    const {history} = this.props;
+  loadCurrentUser() {
+    // const {history} = this.props;
     this.setState({
       isLoading: true
     });
@@ -56,11 +56,7 @@ class App extends Component {
           message: '星狗网 Web App',
           description: "欢迎回来！恭喜您！您已经成功登录！",
         });
-        if(next) {
-          history.push(next);
-        }else{
-          history.push('/index');
-        }
+        // history.push('/index');
       }).catch(error => {
         this.setState({
           isLoading: false,

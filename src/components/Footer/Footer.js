@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
 import {Link, Typography} from '@material-ui/core';
+import Grid from "@material-ui/core/Grid";
+import Divider from "@material-ui/core/Divider";
 // import TypeWriter from 'react-typewriter';
 
 
 const useStyles = makeStyles(theme => ({
-  rootTop: {
-  },
+  rootTop: {},
   rootBottom: {
     paddingLeft: theme.spacing(4),
     paddingRight: theme.spacing(4),
@@ -25,17 +26,25 @@ const useStyles = makeStyles(theme => ({
   footer: {
     textAlign: 'center',
     color: 'white',
+  },
+  footlink :{
+    fontSize: 14,
+    fontWeight: 400,
+    paddingTop: 20,
+    paddingLeft: theme.spacing(4),
+    paddingRight: theme.spacing(4),
+    paddingBottom: 20,
   }
 }));
 
 const Footer = props => {
-  const {className, ...rest} = props;
+  const {className} = props;
 
   const classes = useStyles();
 
   return (
     <div>
-      <div {...rest} className={clsx(classes.rootTop, className)}>
+      <div className={clsx(classes.rootTop, className)}>
         <div className={classes.footCopyright}>
           <Typography variant="body1" className={classes.footer}>
             <a href={"/about"}
@@ -79,7 +88,73 @@ const Footer = props => {
           </Typography>
         </div>
       </div>
-      <div {...rest} className={clsx(classes.rootBottom, className)}>
+
+      <div className={clsx(classes.footlink, className)}>
+        <Grid container spacing={4} className={classes.root}>
+          <Grid item xs={12} md={4}>
+            <Typography  gutterBottom variant='h6' style={{color: 'black'}}>
+              服务指南
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"服务协议"}>📋</span> <a href={"/user-agreement"} style={{textDecoration: 'underline'}}>服务协议</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"隐私政策"}>🔑</span> <a href={"/privacy"} style={{textDecoration: 'underline'}}>隐私政策</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"版权保护投诉指引"}>⚔️</span> <a href={"/copyright"} style={{textDecoration: 'underline'}}>版权保护投诉指引</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"开放平台"}>🧾</span> <a href={"https://github.com/iXingo/WebPageUI.git"} style={{textDecoration: 'underline'}}>开放平台</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"商务洽谈"}>🛋</span> <a href={"https://weibo.com/ixingo"} style={{textDecoration: 'underline'}}>商务洽谈</a>
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Typography  gutterBottom variant='h6' style={{color: 'black'}}>
+              导航链接
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"好友"}>🧍</span> <a href={"/friends"} style={{textDecoration: 'underline'}}>好友</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"服务"}>🍽</span> <a href={"/services"} style={{textDecoration: 'underline'}}>服务</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"技术"}>💻</span> <a href={"/tech"} style={{textDecoration: 'underline'}}>技术</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"教程"}>👨‍💻</span> <a href={"/courses"} style={{textDecoration: 'underline'}}>教程</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"博文"}>🏙</span> <a href={"/post"} style={{textDecoration: 'underline'}}>博文</a>
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Typography  gutterBottom variant='h6' style={{color: 'black'}}>
+              社交/媒体
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"微博"}>👀</span> <a href={"/index"} style={{textDecoration: 'underline'}}>微博</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"Twitter"}>📦</span> <a href={"/index"} style={{textDecoration: 'underline'}}>Twitter</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"Instagram"}>📇</span> <a href={"/index"} style={{textDecoration: 'underline'}}>Instagram</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"牛客网"}>📑</span> <a href={"/index"} style={{textDecoration: 'underline'}}>牛客网</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"bilibili"}>🧷</span> <a href={"/index"} style={{textDecoration: 'underline'}}>bilibili</a>
+            </Typography>
+          </Grid>
+        </Grid>
+      </div>
+      <Divider/>
+      <div className={clsx(classes.rootBottom, className)}>
         <Typography variant="body1">
           &copy;{' '}
           <Link component="a" href="http://shawn.wang/" target="_blank" style={{paddingRight: 5}}>
@@ -104,7 +179,7 @@ const Footer = props => {
         <Typography variant="caption" style={{marginTop: 10, color: 'black', fontSize: 12}}>
           ICP证: 皖ICP备15011098号
         </Typography>
-        <img alt={'星狗网'} src={"https://img.ixingo.cn/pic/LOGO.png"} style={{width:150}}/>
+        <img alt={'星狗网'} src={"https://img.ixingo.cn/pic/LOGO.png"} style={{width: 150}}/>
       </div>
     </div>
   );

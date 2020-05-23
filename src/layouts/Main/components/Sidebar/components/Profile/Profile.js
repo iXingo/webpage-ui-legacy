@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Profile = props => {
-  const {className, onClose, currentUser, ...rest} = props;
+  const {className, onClose, currentUser} = props;
 
   const classes = useStyles();
 
@@ -57,7 +57,6 @@ const Profile = props => {
   } else {
     return (
       <div
-        {...rest}
         className={clsx(classes.root, className)}
       >
         <Avatar
