@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     width: 64,
     margin: '25px auto',
     // border: `1px solid ${theme.palette.divider}`,
-    borderRadius: '5px',
+    // borderRadius: '5px',
     overflow: 'hidden',
     display: 'flex',
     alignItems: 'center',
