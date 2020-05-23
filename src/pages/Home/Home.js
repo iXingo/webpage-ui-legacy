@@ -20,13 +20,11 @@ import {
 
 
 const useStyles = makeStyles(theme => ({
-  mainTitle: {
+  main: {
     background: 'url(https://github.githubassets.com/images/modules/site/heroes/simple-codelines.svg), #2b3137',
     width: '100%',
     maxWidth: '100%',
     color: 'hsla(0,0%,100%,.6)',
-  },
-  main: {
     padding: '210px 10px 120px'
   },
   website: {
@@ -256,7 +254,7 @@ const Home = props => {
     <React.Fragment>
       <CssBaseline/>
       <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
-        <Container className={classes.mainTitle}>
+        <Container className={classes.main}>
           {/*<div className={classes.main}>*/}
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
             星狗网
