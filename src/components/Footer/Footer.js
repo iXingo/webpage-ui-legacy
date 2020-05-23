@@ -125,7 +125,7 @@ const Footer = props => {
               <span role={"img"} aria-label={"教程"}>👨‍💻</span> <a href={"/courses"} style={{textDecoration: 'underline'}}>教程</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"博文"}>🏙</span> <a href={"/post"} style={{textDecoration: 'underline'}}>博文</a>
+              <span role={"img"} aria-label={"博文"}>🏙</span> <a href={"/posts"} style={{textDecoration: 'underline'}}>博文</a>
             </Typography>
           </Grid>
           <Grid item xs={12} md={4}>

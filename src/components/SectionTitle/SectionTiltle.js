@@ -11,7 +11,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
   root: {
     padding: '20px 0px',
-    backgroundColor: '#07304c',
+    backgroundColor: '#1a73e8',
   },
   mainTitle: {
     width: '100%',
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
   firstLine: {
     margin: 'auto',
-    fontSize: 20,
+    fontSize: 36,
     paddingTop: 20,
     color: 'white',
     fontWeight: 500,
@@ -55,29 +55,8 @@ const useStyles = makeStyles(theme => ({
     padding: '20px 20px 0'
   },
   picture: {
-    height: 260,
+    height: 200,
   },
-  buttonContent: {
-    padding: '12px 32px',
-    fontSize: 14,
-    color: '#1074e7',
-    backgroundColor: 'hsla(0,0%,100%,0)',
-    borderColor: 'rgba(16,116,231,.5)',
-    whiteSpace: 'nowrap',
-    verticalAlign: 'middle',
-    cursor: 'pointer',
-    border: '1px solid #1074e7',
-    borderRadius: 3,
-    transition: '.2s',
-  },
-  button: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: '0 auto',
-    textAlign: 'center'
-  },
-
-
 }));
 
 
