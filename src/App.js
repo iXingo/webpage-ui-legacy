@@ -52,10 +52,7 @@ class App extends Component {
           isAuthenticated: true,
           isLoading: false
         });
-        notification.success({
-          message: '星狗网 Web App',
-          description: "欢迎回来！恭喜您！您已经成功登录！",
-        });
+        console.log("登录成功！");
         // history.push('/index');
       }).catch(error => {
         this.setState({
