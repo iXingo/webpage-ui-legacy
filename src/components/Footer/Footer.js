@@ -47,6 +47,12 @@ const Footer = props => {
       <div className={clsx(classes.rootTop, className)}>
         <div className={classes.footCopyright}>
           <Typography variant="body1" className={classes.footer}>
+            &copy; All Rights Reserved. 所有权利保留。&copy; Copyright 2018-2020 (iXingo)
+          </Typography>
+          <Typography variant="body1" className={classes.footer}>
+            &copy; 本站由@程序员汪师傅开发，设计并维护
+          </Typography>
+          <Typography variant="body1" className={classes.footer}>
             <a href={"/about"}
                style={{color: 'white', textDecoration: 'underline'}}>关于星狗网站</a> |&nbsp;
             <a href={"/about-me"}
@@ -75,16 +81,7 @@ const Footer = props => {
                style={{color: 'white', textDecoration: 'underline'}}>安徽省通信管理局</a>
           </Typography>
           <Typography variant="body1" className={classes.footer}>
-            ICP证: 皖ICP备15011098号
-          </Typography>
-          <Typography variant="body1" className={classes.footer}>
             违法和不良信息举报电话：12321
-          </Typography>
-          <Typography variant="body1" className={classes.footer}>
-            星狗网络&nbsp;&nbsp;版权所有
-          </Typography>
-          <Typography variant="body1" className={classes.footer}>
-            Copyright 2018 - 2020 iXingo. All Rights Reserved. 所有权利保留。本站由@程序员汪师傅开发，设计并维护
           </Typography>
         </div>
       </div>
