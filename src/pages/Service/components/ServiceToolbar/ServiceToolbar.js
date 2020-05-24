@@ -12,6 +12,7 @@ const useStyles = makeStyles(theme => ({
     height: '64px',
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     marginTop: theme.spacing(1)
   },
   spacer: {
@@ -52,7 +53,7 @@ const ServiceToolbar = props => {
       <div className={classes.row}>
         <SearchInput
           className={classes.searchInput}
-          placeholder="检索服务"
+          placeholder="检索服务(开发中)"
         />
       </div>
     </div>

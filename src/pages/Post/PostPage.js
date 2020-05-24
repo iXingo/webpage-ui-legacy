@@ -12,6 +12,9 @@ const postSection = {
 };
 
 const PostPage = props => {
+
+  document.title = "汪师傅的生活日常 | 看见，好时光";
+
   return (
     <div>
       <SectionTitle  context={postSection}/>

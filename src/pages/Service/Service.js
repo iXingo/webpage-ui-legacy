@@ -7,9 +7,10 @@ import {Grid} from '@material-ui/core';
 
 import {ProductCard, ProductsToolbar} from './components';
 import mockData from './data';
+import SectionTitle from "../../components/SectionTitle/SectionTiltle";
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  service: {
     padding: theme.spacing(3)
   },
   content: {
@@ -27,26 +28,31 @@ const Service = props => {
 
   const classes = useStyles();
   const [products] = useState(mockData);
+  const serviceSection = {
+    image: 'https://img.ixingo.cn/pic/undraw_operating_system_4lr6.svg',
+    title: '🛵 服务',
+    content: '结合汪师傅在编程， 图片处理， 视频制作方面的一点小小的兴趣，星狗网推出一系列服务，可以方便的实现你想要的效果。',
+    linkUrl: '',
+    linkText: '汪师傅',
+  };
 
   document.title = "汪师傅提供的服务列表 | 看见，好时光";
 
   return (
-    <div className={classes.root}>
-      <ProductsToolbar/>
-      <div className={classes.content}>
-        <Grid container spacing={3}>
-          {products.map(product => (
-            <Grid item key={product.id} lg={4} md={6} xs={12}>
-              <ProductCard product={product}/>
-            </Grid>
-          ))}
-        </Grid>
+    <div >
+      <SectionTitle  context={serviceSection}/>
+      <div className={classes.service}>
+        <ProductsToolbar/>
+        <div className={classes.content}>
+          <Grid container spacing={3}>
+            {products.map(product => (
+              <Grid item key={product.id} lg={4} md={6} xs={12}>
+                <ProductCard product={product}/>
+              </Grid>
+            ))}
+          </Grid>
+        </div>
       </div>
-      {/*<div className={classes.pagination}>*/}
-      {/*  <Typography variant="caption">1-6 of 20</Typography>*/}
-      {/*  <IconButton><ChevronLeftIcon/></IconButton>*/}
-      {/*  <IconButton><ChevronRightIcon/></IconButton>*/}
-      {/*</div>*/}
     </div>
   );
 };

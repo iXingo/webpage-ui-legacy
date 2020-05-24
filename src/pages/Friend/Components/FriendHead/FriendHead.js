@@ -76,7 +76,8 @@ const useStyles = makeStyles(theme => ({
   },
   headimage: {
     height: 320,
-    backgroundImage: 'url(images/img/undraw_programming_2svr.svg)',
+    backgroundSize: 'cover',
+    backgroundImage: 'url(https://img.ixingo.cn/pic/undraw_hire_te5y.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPositionX: 'center',
   },

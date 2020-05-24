@@ -8,14 +8,13 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     flexWrap: 'wrap',
     marginRight: 10,
-    color: '#1a73e8'
   },
   chip: {
     margin: theme.spacing(1),
   },
   tags: {
-    color: 'black',
-    fontWeight: 500
+    fontWeight: 500,
+    color: '#1a73e8',
   }
 }));
 
@@ -24,7 +23,7 @@ const Tag = props => {
 
   return (
     <div className={classes.root}>
-      <LocalOfferOutlinedIcon colorPrimary/>
+      <LocalOfferOutlinedIcon colorDisabled/>
       <Typography variant="h6" className={classes.tags}>
         {props.tag.name}
       </Typography>

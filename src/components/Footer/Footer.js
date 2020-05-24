@@ -133,19 +133,19 @@ const Footer = props => {
               社交/媒体
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"微博"}>👀</span> <a href={"/index"} style={{textDecoration: 'underline'}}>微博</a>
+              <span role={"img"} aria-label={"微博"}>👀</span> <a href={"https://weibo.com/ixingo"} style={{textDecoration: 'underline'}}>微博</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"Twitter"}>📦</span> <a href={"/index"} style={{textDecoration: 'underline'}}>Twitter</a>
+              <span role={"img"} aria-label={"LinkedIn"}>📦</span> <a href={"https://www.linkedin.com/in/ixingo/"} style={{textDecoration: 'underline'}}>LinkedIn</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"Instagram"}>📇</span> <a href={"/index"} style={{textDecoration: 'underline'}}>Instagram</a>
+              <span role={"img"} aria-label={"StackOverFlow"}>📇</span> <a href={"/index"} style={{textDecoration: 'underline'}}>StackOverFlow</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"牛客网"}>📑</span> <a href={"/index"} style={{textDecoration: 'underline'}}>牛客网</a>
+              <span role={"img"} aria-label={"牛客网"}>📑</span> <a href={"https://www.nowcoder.com/profile/531527"} style={{textDecoration: 'underline'}}>牛客网</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"bilibili"}>🧷</span> <a href={"/index"} style={{textDecoration: 'underline'}}>bilibili</a>
+              <span role={"img"} aria-label={"哔哩哔哩"}>🧷</span> <a href={"https://space.bilibili.com/4130475"} style={{textDecoration: 'underline'}}>哔哩哔哩</a>
             </Typography>
           </Grid>
         </Grid>

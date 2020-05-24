@@ -14,6 +14,9 @@ const courseSection = {
 };
 
 const CoursePage = props => {
+
+  document.title = "和汪师傅一起学编程 | 看见，好时光";
+
   return (
     <div>
       <SectionTitle  context={courseSection}/>
