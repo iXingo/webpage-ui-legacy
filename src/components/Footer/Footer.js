@@ -116,13 +116,16 @@ const Footer = props => {
               <span role={"img"} aria-label={"好友"}>🧍</span> <a href={"/friends"} style={{textDecoration: 'underline'}}>好友</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"服务"}>🍽</span> <a href={"/services"} style={{textDecoration: 'underline'}}>服务</a>
+              <span role={"img"} aria-label={"计划"}>🚀</span> <a href={"/projects"} style={{textDecoration: 'underline'}}>计划</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"技术"}>💻</span> <a href={"/tech"} style={{textDecoration: 'underline'}}>技术</a>
+              <span role={"img"} aria-label={"服务"}>🛵</span> <a href={"/services"} style={{textDecoration: 'underline'}}>服务</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"教程"}>👨‍💻</span> <a href={"/courses"} style={{textDecoration: 'underline'}}>教程</a>
+              <span role={"img"} aria-label={"技术"}>👨‍💻</span> <a href={"/tech"} style={{textDecoration: 'underline'}}>技术</a>
+            </Typography>
+            <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
+              <span role={"img"} aria-label={"教程"}>👨‍🏫</span> <a href={"/courses"} style={{textDecoration: 'underline'}}>教程</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
               <span role={"img"} aria-label={"博文"}>🏙</span> <a href={"/posts"} style={{textDecoration: 'underline'}}>博文</a>
