@@ -60,42 +60,42 @@ const useStyles = makeStyles(theme => ({
 
 const cards = [
   {
-    picture: "http://wpimg.ixingo.cn/wp-content/uploads/2015/01/hello.png",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Simon Shi",
     content: "Simon与汪师傅相识于2011年。"
   },
   {
-    picture: "http://wx2.sinaimg.cn/mw690/954835c1ly8fn1hpbrypyj216o16o75r.jpg",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Heaven Xia",
     content: "Heaven与汪师傅相识于2015。"
   },
   {
-    picture: "http://wx1.sinaimg.cn/mw690/954835c1ly8fka1ip5yucj216o153aba.jpg",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Doctor Xiong",
     content: "Xiong与汪师傅相识于2007年。"
   },
   {
-    picture: "http://ww3.sinaimg.cn/mw690/954835c1jw8f35v4sq1uvj20ro0rpt9z.jpg",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Justin Qian",
-    content: "Qian与汪师傅相识于2011年。"
+    content: "Justin与汪师傅相识于2011年。"
   },
   {
-    picture: "http://wpimg.ixingo.cn/wp-content/uploads/2015/01/hello.png",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Jacob Zhang",
     content: "Jacob与汪师傅相识于2011年。"
   },
   {
-    picture: "http://wx2.sinaimg.cn/mw690/954835c1ly8fn1hpbrypyj216o16o75r.jpg",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Flag Hong",
     content: "Flag与汪师傅相识于2011年。"
   },
   {
-    picture: "http://wx1.sinaimg.cn/mw690/954835c1ly8fka1ip5yucj216o153aba.jpg",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Sevn Sun",
     content: "Sevn与汪师傅相识于2015年。"
   },
   {
-    picture: "http://ww3.sinaimg.cn/mw690/954835c1jw8f35v4sq1uvj20ro0rpt9z.jpg",
+    picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Yongye Li",
     content: "Yongye与汪师傅相识于2008年。"
   }
