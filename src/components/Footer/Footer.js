@@ -135,7 +135,7 @@ const Footer = props => {
               <span role={"img"} aria-label={"牛客网"}>🐮️</span> <a href={"https://www.nowcoder.com/profile/531527"} style={{textDecoration: 'underline'}}>牛客网</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"哔哩哔哩"}>👯‍♀️️</span> <a href={"https://space.bilibili.com/4130475"} style={{textDecoration: 'underline'}}>哔哩哔哩</a>
+              <span role={"img"} aria-label={"哔哩哔哩"}>🍻️</span> <a href={"https://space.bilibili.com/4130475"} style={{textDecoration: 'underline'}}>哔哩哔哩</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
               <span role={"img"} aria-label={"知乎"}>🔎️</span> <a href={"https://www.zhihu.com/people/ixingo"} style={{textDecoration: 'underline'}}>知乎</a>
