@@ -52,7 +52,6 @@ const Privacy = () => {
     <div className={classes.root}>
       <Grid
         container
-        spacing={10}
         lg={12}
         xs={12}
         sm={12}

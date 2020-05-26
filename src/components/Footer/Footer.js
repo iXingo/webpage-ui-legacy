@@ -104,10 +104,10 @@ const Footer = props => {
               <span role={"img"} aria-label={"版权保护投诉指引"}>⚔️</span> <a href={"/copyright"} style={{textDecoration: 'underline'}}>版权保护投诉指引</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"开放平台"}>🧾</span> <a href={"https://github.com/iXingo/WebPageUI.git"} style={{textDecoration: 'underline'}}>开放平台</a>
+              <span role={"img"} aria-label={"开源平台"}>🧾</span> <a href={"https://github.com/iXingo/WebPageUI.git"} style={{textDecoration: 'underline'}}>开放平台</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"商务洽谈"}>🤝️</span> <a href={"https://weibo.com/ixingo"} style={{textDecoration: 'underline'}}>商务洽谈</a>
+              <span role={"img"} aria-label={"商务洽谈"}>🤝️</span> <a href={"https://www.weibo.com/u/3567520377"} style={{textDecoration: 'underline'}}>商务洽谈</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
               <span role={"img"} aria-label={"关于@程序员汪师傅"}>👨‍🎓️</span> <a href={"/about-me"} style={{textDecoration: 'underline'}}>关于汪师傅</a>
