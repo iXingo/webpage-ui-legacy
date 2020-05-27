@@ -48,10 +48,10 @@ const Footer = props => {
       <div className={clsx(classes.rootTop, className)}>
         <div className={classes.footCopyright}>
           <Typography variant="body1" className={classes.footer}>
-            &copy; All Rights Reserved. 所有权利保留。&copy; Copyright 2018-2020 (iXingo)
+            &copy; All Rights Reserved. &copy; Copyright 2018 - 2020 所有权利保留。
           </Typography>
           <Typography variant="body1" className={classes.footer}>
-            &copy; 本站由@程序员汪师傅开发，设计并维护
+            &copy; 本站由 @程序员汪师傅 开发设计并维护
           </Typography>
           <Typography variant="body1" className={classes.footer}>
             <a href={"/about"}
@@ -141,7 +141,7 @@ const Footer = props => {
               <span role={"img"} aria-label={"知乎"}>🔎️</span> <a href={"https://www.zhihu.com/people/ixingo"} style={{textDecoration: 'underline'}}>知乎</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"V2EX"}>🌏️</span> <a href={"https://v2ex.com/member/iXingo"} style={{textDecoration: 'underline'}}>V2EX</a>
+              <span role={"img"} aria-label={"V2EX"}>🌏️</span> <a href={"https://www.v2ex.com/?r=iXingo"} style={{textDecoration: 'underline'}}>V2EX</a>
             </Typography>
           </Grid>
 

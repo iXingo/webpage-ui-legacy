@@ -132,8 +132,11 @@ const useStyles = makeStyles(theme => ({
 
 const PostHeader = props => {
 
+  document.title = props.post.title?props.post.title:"星狗网" + " | 看见，好时光";
+
   const classes = useStyles();
   if (!props.post.createdBy) return <Instagram/>;
+
   return (
     <div>
       <Typography className={classes.title} variant="h1">
