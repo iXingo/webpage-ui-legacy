@@ -64,7 +64,7 @@ const FriendHeader = props => {
           {friend.description}
         </Typography>
         <Typography overline gutterBottom variant='caption' style={{padding: '20px 0', color: 'black', fontWeight: 300}}>
-          【{friend.name}】和 汪师傅 相识大约有：<CountUp />
+          【{friend.name}】和 汪师傅 相识大约已有：<CountUp />
         </Typography>
         {/*<Alert severity="success">This is a success message!</Alert>*/}
         {/*<Button variant="outlined" size="large" color="inherit" >*/}
