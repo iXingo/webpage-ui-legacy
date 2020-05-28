@@ -132,7 +132,13 @@ const useStyles = makeStyles(theme => ({
 
 const PostHeader = props => {
 
-  document.title = props.post.title?props.post.title:"星狗网" + " | 看见，好时光";
+
+  let postTitle  = "加载中... | 看见，好时光";
+  if(props.post.title){
+    postTitle = props.post.title +  "| 看见，好时光";
+  }
+
+  document.title = postTitle;
 
   const classes = useStyles();
   if (!props.post.createdBy) return <Instagram/>;

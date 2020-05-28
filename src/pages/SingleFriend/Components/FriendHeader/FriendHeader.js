@@ -46,7 +46,11 @@ const FriendHeader = props => {
   // const Alert = (props) => {
   //   return <MuiAlert elevation={6} variant="filled" {...props} />;
   // }
-  document.title = "好友: " + this.state.friend.name?this.state.friend.name:"加载中..." + " | 星狗网";
+  let friendTitle  = "加载中... | 看见，好时光";
+  if(friend.name){
+    friendTitle = friend.name +  "| 看见，好时光";
+  }
+  document.title = friendTitle;
 
   return (
     <Grid container className={classes.main}>
