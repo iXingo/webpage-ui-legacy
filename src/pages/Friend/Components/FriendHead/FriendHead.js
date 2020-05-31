@@ -74,10 +74,10 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     justifyContent: 'center',
   },
-  headimage: {
-    height: 320,
+  headImage: {
+    height: 400,
     backgroundSize: 'cover',
-    backgroundImage: 'url(https://img.ixingo.cn/pic/undraw_hire_te5y.svg)',
+    backgroundImage: 'url(https://img.ixingo.cn/pic/undraw_having_fun_iais.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPositionX: 'center',
   },
@@ -99,7 +99,7 @@ const FriendHead = props => {
       <CssBaseline/>
       {/* Hero unit */}
       <Grid container className={classes.mainGrid}>
-        <Grid container item xs={12} md={12} className={classes.headimage}/>
+        <Grid container item xs={12} md={12} className={classes.headImage}/>
         <Grid item xs={10} md={8} className={classes.title}>
           <Typography gutterBottom variant="h5" component="h2" className={classes.pro}>
             汪师傅和他的朋友们

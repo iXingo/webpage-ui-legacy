@@ -219,6 +219,13 @@ class Routes extends Component {
           path="/settings/security"
           {...this.props}
         />
+        <RouteWithLayout
+          component={Notifications}
+          exact
+          layout={MainLayout}
+          path="/project/windows"
+          {...this.props}
+        />
         <Redirect to="/not-found"/>
       </Switch>
     );

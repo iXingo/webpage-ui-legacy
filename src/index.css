@@ -68,10 +68,20 @@ p img {
     /* box-shadow: 0 0 3px 1px rgba(51, 51, 51, 0.5); */
     transition: 0.3s;
 }
-
-p img:hover {
-    box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5);
+p code {
+    /*font-size: 12px;*/
+    font-family: Consolas, monospace, serif;
+    color: #dd0055;
+    padding: 0 4px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background: #fafafa;
+    white-space: normal;
 }
+
+/*p img:hover {*/
+/*    box-shadow: 0 3px 15px 3px rgba(51, 51, 51, 0.5);*/
+/*}*/
 
 img {
     width: 100%;
@@ -81,7 +91,7 @@ li {
     font-size: 14px;
     letter-spacing: -0.05px;
     line-height: 20px;
-    color: #1a73e8;
+    color: grey;
 }
 
 p {

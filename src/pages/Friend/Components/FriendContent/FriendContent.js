@@ -31,13 +31,13 @@ const useStyles = makeStyles(theme => ({
     },
     avatar: {
       margin: 'auto',
-      width: 300,
-      height: 300,
+      width: 200,
+      height: 200,
     },
     bigAvatar: {
       margin: 10,
-      width: 300,
-      height: 300,
+      width: 200,
+      height: 200,
     },
     name: {
       textAlign: 'center',
@@ -50,44 +50,7 @@ const useStyles = makeStyles(theme => ({
     },
     intro: {
       fontSize: 14,
-    },
-    appBar: {
-      position: 'relative',
-    },
-    title: {
-      marginLeft: theme.spacing(2),
-      flex: 1,
-      color: 'white'
-    },
-    pro: {
-      marginTop: 64,
-      marginBottom: 20,
-      fontSize: 54,
-      textAlign: 'center',
-      justifyContent: 'center',
-      padding: 10,
-      fontWeight: 300,
-      lineHeight: '50px',
-      color: '#1a73e8',
-    },
-    subpro: {
-      textAlign: 'center',
-      fontWeight: 300
-    },
-    grid: {
-      textAlign: 'center',
-      justifyContent: 'center',
-    },
-    headimage: {
-      height: 450,
-      backgroundImage: 'url(images/img/undraw_programming_2svr.svg)',
-      backgroundRepeat: 'no-repeat',
-      backgroundPositionX: 'center',
-    },
-    mainGrid: {
-      justifyContent: 'center',
-      textAlign: 'center',
-    },
+    }
   })
 );
 

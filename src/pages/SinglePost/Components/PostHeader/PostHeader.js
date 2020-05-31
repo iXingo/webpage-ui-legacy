@@ -132,8 +132,17 @@ const useStyles = makeStyles(theme => ({
 
 const PostHeader = props => {
 
+
+  let postTitle  = "加载中... | 看见，好时光";
+  if(props.post.title){
+    postTitle = props.post.title +  "| 看见，好时光";
+  }
+
+  document.title = postTitle;
+
   const classes = useStyles();
   if (!props.post.createdBy) return <Instagram/>;
+
   return (
     <div>
       <Typography className={classes.title} variant="h1">
