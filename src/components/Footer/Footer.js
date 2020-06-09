@@ -51,7 +51,7 @@ const Footer = props => {
             &copy; All Rights Reserved. &copy; Copyright 2018 - 2020 所有权利保留。
           </Typography>
           <Typography variant="body1" className={classes.footer}>
-            &copy; 本站由 @程序员汪师傅 开发设计并维护
+            &copy; 本站由 @程序员汪师傅 开发设计并维护。
           </Typography>
           <Typography variant="body1" className={classes.footer}>
             <a href={"/about"}
