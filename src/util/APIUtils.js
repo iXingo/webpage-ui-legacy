@@ -206,6 +206,14 @@ export function addComment(CommentRequest) {
   });
 }
 
+
+export function deleteComment(commentId) {
+  return request({
+    url: API_BASE_URL + "/comment?commentId=" + commentId,
+    method: 'DELETE',
+  });
+}
+
 export function addReply(replyRequest) {
   return request({
     url: API_BASE_URL + "/reply/comment/",

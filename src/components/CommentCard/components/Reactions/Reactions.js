@@ -9,16 +9,21 @@ import {
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 // import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
+import {deleteComment} from "../../../../util/APIUtils";
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    flexDirection: 'row-reverse',
     alignItems: 'center'
   },
   likeButton: {},
   likedButton: {
     color: colors.red[600]
+  },
+  deleteButton: {
+    marginLeft: 20
   },
   replyButton: {
     marginLeft: 'auto'
@@ -29,25 +34,37 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Reactions = props => {
-  const { post, className, ...rest } = props;
+  const { comment, className, ...rest } = props;
   const classes = useStyles();
 
   const handleReply = () => {
     alert("暂时无法回复, 功能还在开发中!");
-  }
+  };
+
+  const handleDelete = commentId => {
+    deleteComment(commentId);
+  };
+
+
   return (
     <div
       {...rest}
       className={clsx(classes.root, className)}
     >
       <Button
-        className={classes.replyButton}
-        size="small"
-        variant="contained"
-        onClick={handleReply}
+        className={classes.deleteButton}
+        variant="outlinedPrimary"
+        onClick={() => handleDelete(comment.id)}
       >
-        <ReplyIcon className={classes.replyIcon}/>
-        回复
+        <ReplyIcon className={classes.replyIcon}/>删除评论
+      </Button>
+
+      <Button
+        className={classes.replyButton}
+        variant="outlined"
+        onClick={() => handleReply()}
+      >
+        <ReplyIcon className={classes.replyIcon}/>回复
       </Button>
     </div>
   );
