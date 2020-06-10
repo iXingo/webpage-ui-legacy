@@ -9,6 +9,7 @@ import {
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 // import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import {deleteComment} from "../../../../util/APIUtils";
 
 
@@ -23,10 +24,10 @@ const useStyles = makeStyles(theme => ({
     color: colors.red[600]
   },
   deleteButton: {
-    marginLeft: 20
+    marginLeft: 'auto'
   },
   replyButton: {
-    marginLeft: 'auto'
+    marginLeft: 20
   },
   replyIcon: {
     marginRight: theme.spacing(1)
@@ -52,19 +53,19 @@ const Reactions = props => {
       className={clsx(classes.root, className)}
     >
       <Button
-        className={classes.deleteButton}
-        variant="outlinedPrimary"
-        onClick={() => handleDelete(comment.id)}
-      >
-        <ReplyIcon className={classes.replyIcon}/>删除评论
-      </Button>
-
-      <Button
         className={classes.replyButton}
         variant="outlined"
         onClick={() => handleReply()}
       >
         <ReplyIcon className={classes.replyIcon}/>回复
+      </Button>
+
+      <Button
+        className={classes.deleteButton}
+        variant="outlinedPrimary"
+        onClick={() => handleDelete(comment.id)}
+      >
+        <DeleteOutlineIcon className={classes.replyIcon}/>删除评论
       </Button>
     </div>
   );
