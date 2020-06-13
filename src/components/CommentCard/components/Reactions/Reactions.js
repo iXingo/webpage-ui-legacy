@@ -10,7 +10,6 @@ import {
 // import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import {deleteComment} from "../../../../util/APIUtils";
 
 
 const useStyles = makeStyles(theme => ({
