@@ -124,7 +124,7 @@ class Routes extends Component {
         <RouteWithLayout
           component={NotFoundPage}
           exact
-          layout={MainLayout}
+          layout={MinimalLayout}
           path="/not-found"
           {...this.props}
         />
@@ -173,7 +173,7 @@ class Routes extends Component {
         <RouteWithLayout
           component={AboutPage}
           exact
-          layout={MainLayout}
+          layout={MinimalLayout}
           path="/about"
           {...this.props}
         />
