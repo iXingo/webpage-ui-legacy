@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Reactions = props => {
-  const { comment, className, ...rest } = props;
+  const { comment, handleDeleteComment, className, ...rest } = props;
   const classes = useStyles();
 
   const handleReply = () => {
@@ -43,7 +43,7 @@ const Reactions = props => {
   };
 
   const handleDelete = commentId => {
-    deleteComment(commentId);
+    handleDeleteComment(commentId)
   };
 
 

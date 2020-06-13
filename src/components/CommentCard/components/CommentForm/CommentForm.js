@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const CommentForm = props => {
-  const {post, currentUser, className, handleComment, ...rest} = props;
+  const {post, currentUser, className, handleComment, handleDeleteComment,...rest} = props;
   const classes = useStyles();
   const [value, setValue] = useState('');
   const handleChange = event => {

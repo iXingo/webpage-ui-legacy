@@ -149,7 +149,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const PostMain = props => {
-  const { handleComment } = props;
+  const { handleComment, handleDeleteComment } = props;
   const classes = useStyles();
 
   return (
@@ -183,7 +183,7 @@ const PostMain = props => {
             </Alert>
             <Divider/>
             <Typography className={classes.commentTitle} variant="h4" align={"center"}><strong>评论</strong>见真知</Typography>
-            <CommentCard className={classes.comment} comment={props.post} handleComment={handleComment} {...props}/>
+            <CommentCard className={classes.comment} comment={props.post} handleComment={handleComment} handleDeleteComment={handleDeleteComment} {...props}/>
           </Grid>
         </Grid>
       </div>

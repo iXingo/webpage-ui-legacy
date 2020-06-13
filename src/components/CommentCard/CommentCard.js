@@ -85,7 +85,7 @@ const useStyles = makeStyles(theme => ({
 
 const CommentCard = props => {
 
-  const {post, handleComment, currentUser, className, ...rest} = props;
+  const {post, handleComment, handleDeleteComment, currentUser, className, ...rest} = props;
   const classes = useStyles();
 
   const VerifiedCommter = () => {
@@ -109,6 +109,7 @@ const CommentCard = props => {
       <CommentForm className={classes.commentForm}
                    post={props.post}
                    handleComment={handleComment}
+                   handleDeleteComment={handleDeleteComment}
                    currentUser={currentUser}
       />
       {post.comments && (
@@ -186,6 +187,7 @@ const CommentCard = props => {
                   <Reactions
                     className={classes.reactions}
                     comment={comment}
+                    handleDeleteComment={handleDeleteComment}
                   />
                   <Divider className={classes.divider}/>
                   {comment.replies && (

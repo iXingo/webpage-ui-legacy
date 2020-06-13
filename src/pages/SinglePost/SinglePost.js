@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {addComment, getPost} from '../../util/APIUtils';
+import {addComment, deleteComment, getPost} from '../../util/APIUtils';
 import {PostMain} from './Components';
 import {notification} from "antd";
 
@@ -14,12 +14,13 @@ class SinglePost extends Component {
     };
     this.loadPost = this.loadPost.bind(this);
     this.handleComment = this.handleComment.bind(this);
+    this.handleDeleteComment = this.handleDeleteComment.bind(this);
   }
 
 
   loadPost(id) {
-    let promise = getPost(id);
     let {history} = this.props;
+    let promise = getPost(id);
     if (!promise) {
       return;
     }
@@ -45,9 +46,9 @@ class SinglePost extends Component {
 
   }
 
-  handleComment(value){
+  handleComment(value) {
     let {currentUser} = this.props;
-    if(!currentUser){
+    if (!currentUser) {
       alert("先登录啊~~~");
       return;
     }
@@ -64,26 +65,26 @@ class SinglePost extends Component {
           console.log(response);
           value = "";
           const newComment =
-          {
-            "id": response.commentId,
-            "content": commentRequest.content + "\n【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】",
-            "source": "默认评论框",
-            "status": 1,
-            "creationDateTime": new Date().toUTCString(),
-            "commenter": {
-              "id": currentUser.id,
-              "username": currentUser.username,
-              "name": currentUser.name,
-              "sex": currentUser.sex,
-              "headUrl": currentUser.headUrl,
-              "isVerified": currentUser.isVerified,
-              "verifiedContent": currentUser.verifiedContent,
-              "introduction": currentUser.introduction
-            },
-            "replies": null
-          };
+            {
+              "id": response.commentId,
+              "content": commentRequest.content + "\n【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】",
+              "source": "默认评论框",
+              "status": 1,
+              "creationDateTime": new Date().toUTCString(),
+              "commenter": {
+                "id": currentUser.id,
+                "username": currentUser.username,
+                "name": currentUser.name,
+                "sex": currentUser.sex,
+                "headUrl": currentUser.headUrl,
+                "isVerified": currentUser.isVerified,
+                "verifiedContent": currentUser.verifiedContent,
+                "introduction": currentUser.introduction
+              },
+              "replies": null
+            };
           let postWithNewComment = {};
-          postWithNewComment= Object.assign(postWithNewComment, this.state.post);
+          postWithNewComment = Object.assign(postWithNewComment, this.state.post);
           postWithNewComment.comments.push(newComment);
           this.setState({
             post: postWithNewComment,
@@ -94,6 +95,45 @@ class SinglePost extends Component {
       notification.success({
         message: '星狗网 Web App',
         description: "评论失败！" + error.message,
+      });
+      console.log(error);
+    });
+  }
+
+  handleDeleteComment(commentId) {
+    let {currentUser} = this.props;
+    if(!commentId){
+      alert("当前评论正在审核， 不支持删除操作！");
+      return;
+    }
+    if (!currentUser) {
+      alert("先登录啊~~~");
+      return;
+    }
+    deleteComment(commentId)
+      .then(response => {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "删除评论成功！在审核后生效， 请稍后刷新后查看！",
+          });
+          console.log(response);
+          let cms = this.state.post.comments;
+          let newComments = cms.filter(comment => comment.id !== commentId);
+          if(!newComments){
+            newComments = [];
+          }
+          let newPost = {};
+          newPost = Object.assign(newPost, this.state.post);
+          newPost.comments = newComments;
+          this.setState({
+            post: newPost,
+            isLoading: false
+          });
+        },
+      ).catch(error => {
+      notification.success({
+        message: '星狗网 Web App',
+        description: "删除评论失败！" + error.message,
       });
       console.log(error);
     });
@@ -124,7 +164,10 @@ class SinglePost extends Component {
     const {post} = this.state;
     return (
       <div>
-        <PostMain post={post} handleComment={this.handleComment} {...this.props}/>
+        <PostMain post={post}
+                  handleComment={this.handleComment}
+                  handleDeleteComment={this.handleDeleteComment}
+                  {...this.props}/>
       </div>
     );
   }
