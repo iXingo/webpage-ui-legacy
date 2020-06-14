@@ -3,6 +3,7 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
   root: {
+    paddingLeft: 5,
     paddingRight: 10,
   },
   verified: {
