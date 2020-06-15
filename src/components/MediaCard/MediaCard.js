@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {Instagram} from "react-content-loader";
 import {withRouter} from 'react-router-dom';
+import Avatar from "@material-ui/core/Avatar";
 
 
 const useStyles = makeStyles(theme => ({
@@ -47,6 +48,29 @@ const useStyles = makeStyles(theme => ({
   },
   summary: {
     padding: '20px 0',
+  },
+  small: {
+    width: theme.spacing(3),
+    height: theme.spacing(3),
+  },
+  medium: {
+    width: theme.spacing(6),
+    height: theme.spacing(6),
+  },
+  large: {
+    width: theme.spacing(7),
+    height: theme.spacing(7),
+  },
+  avatar: {
+    paddingTop: 20,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  mata:{
+    paddingLeft: 20,
+    display: 'flex',
+    flexDirection: 'column',
   }
 }));
 
@@ -80,6 +104,17 @@ const MediaCard = props => {
               <Typography gutterBottom variant="h3" component="h2" color="primary">
                 {post.title}
               </Typography>
+              <div className={classes.avatar}>
+                  <Avatar alt={post.createdBy.name} src={post.createdBy.headUrl} className={classes.medium} />
+                <div className={classes.mata}>
+                  <Typography variant="h6" style={{color: 'grey'}}>
+                    {post.createdBy.name}
+                  </Typography>
+                  <Typography variant="h6" style={{color: 'grey'}}>
+                    {post.creationDateTime}
+                  </Typography>
+                </div>
+              </div>
               <Typography variant="h5" className={classes.summary}>
                 {post.summary}
               </Typography>
