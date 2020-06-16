@@ -133,9 +133,9 @@ const useStyles = makeStyles(theme => ({
 const PostHeader = props => {
 
 
-  let postTitle  = "加载中... | 看见，好时光";
-  if(props.post.title){
-    postTitle = props.post.title +  "| 看见，好时光";
+  let postTitle = "加载中... | 看见，好时光";
+  if (props.post.title) {
+    postTitle = props.post.title + "| 看见，好时光";
   }
 
   document.title = postTitle;
@@ -173,7 +173,9 @@ const PostHeader = props => {
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
         {props.post.tags.map(tag => (
-          <Chip label={tag.name} component="a" href="chip" clickable variant="outlined" size={"small"}/>
+          <div style={{paddingRight: 10}}>
+            <Chip label={tag.name} component="a" href="chip" clickable variant="outlined" size={"small"}/>
+          </div>
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>
