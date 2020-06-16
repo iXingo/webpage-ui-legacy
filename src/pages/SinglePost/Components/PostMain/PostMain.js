@@ -8,6 +8,8 @@ import PostHeader from '../PostHeader';
 import {CommentCard} from "../../../../components";
 import Alert from "@material-ui/lab/Alert";
 import AlertTitle from "@material-ui/lab/AlertTitle";
+import QRCode from 'qrcode.react';
+
 
 
 
@@ -182,6 +184,17 @@ const PostMain = props => {
               所有信息来源为星狗网的信息仅代表汪师傅个人观点, 与汪师傅本人所在的组织/团体/公司等任何其他实体均无关。
             </Alert>
             <Divider/>
+
+            <div style={{margin: 20}}>
+              <Typography variant="h4" align={"center"}>
+                <QRCode value={"https://www.ixingo.com.cn/post/" + props.post.id} />
+              </Typography>
+              <Typography variant="h6" align={"center"}>
+                本文二维码
+              </Typography>
+            </div>
+            <Divider/>
+
             <Typography className={classes.commentTitle} variant="h4" align={"center"}><strong>评论</strong>见真知</Typography>
             <CommentCard className={classes.comment} comment={props.post} handleComment={handleComment} handleDeleteComment={handleDeleteComment} {...props}/>
           </Grid>

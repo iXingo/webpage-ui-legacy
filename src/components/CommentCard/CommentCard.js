@@ -23,6 +23,7 @@ import {Instagram} from "@material-ui/icons";
 import Grow from "@material-ui/core/Grow";
 import SignInCard from "../SignInCard";
 import Chip from "@material-ui/core/Chip";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -79,6 +80,9 @@ const useStyles = makeStyles(theme => ({
   },
   veriedIcon : {
     paddingLeft: 5
+  },
+  caption: {
+    padding: 5
   }
 
 }));
@@ -112,6 +116,9 @@ const CommentCard = props => {
                    handleDeleteComment={handleDeleteComment}
                    currentUser={currentUser}
       />
+      <Typography className={classes.caption} variant="caption">
+        * 星狗网对文章评论采用审核和缓存机制, 因此评论的添加和删除操作可能会有延迟.
+      </Typography>
       {post.comments && (
         <Grow
           in={true}
