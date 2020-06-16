@@ -23,7 +23,8 @@ import {Instagram} from "@material-ui/icons";
 import Grow from "@material-ui/core/Grow";
 import SignInCard from "../SignInCard";
 import Chip from "@material-ui/core/Chip";
-import Grid from "@material-ui/core/Grid";
+import CodeBlock from "../CodeBlock";
+import ReactMarkdown from "react-markdown";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -82,7 +83,12 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 5
   },
   caption: {
-    padding: 5
+    padding: 10,
+    marginBottom: 20
+  },
+  comments: {
+    marginTop: 30,
+    marginBottom: 30
   }
 
 }));
@@ -116,6 +122,9 @@ const CommentCard = props => {
                    handleDeleteComment={handleDeleteComment}
                    currentUser={currentUser}
       />
+      <Typography className={classes.caption} variant="caption" style={{color: '#1a73e8'}}>
+        评论区现已支持 MARKDOWN 语法.
+      </Typography>
       <Typography className={classes.caption} variant="caption">
         * 星狗网对文章评论采用审核和缓存机制, 因此评论的添加和删除操作可能会有延迟.
       </Typography>
@@ -180,7 +189,10 @@ const CommentCard = props => {
                     className={classes.message}
                     variant="body1"
                   >
-                    {comment.content}
+                    <ReactMarkdown source={comment.content}
+                                   renderers={{code: CodeBlock}}
+                                   key={comment.id}
+                    />
                   </Typography>
                   {post.media && (
                     <CardActionArea className={classes.mediaArea}>

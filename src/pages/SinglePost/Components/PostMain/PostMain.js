@@ -141,7 +141,7 @@ const useStyles = makeStyles(theme => ({
     color: '#1a73e8'
   },
   comment: {
-    marginBottom: 20
+    marginBottom: 40
   },
   end: {
     marginTop: 20,
