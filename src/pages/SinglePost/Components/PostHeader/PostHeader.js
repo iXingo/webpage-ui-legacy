@@ -6,7 +6,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import {Typography} from '@material-ui/core';
-import {Tag, Verify} from '../../../../components';
+import {Verify} from '../../../../components';
 import {Instagram} from 'react-content-loader'
 
 
@@ -173,7 +173,7 @@ const PostHeader = props => {
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
         {props.post.tags.map(tag => (
-          <Tag tag={tag}/>
+          <Chip label={tag.name} component="a" href="chip" clickable variant="outlined" size={"small"}/>
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>

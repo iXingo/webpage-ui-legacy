@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import {Instagram} from "react-content-loader";
 import {withRouter} from 'react-router-dom';
 import Avatar from "@material-ui/core/Avatar";
+import Chip from "@material-ui/core/Chip";
 
 
 const useStyles = makeStyles(theme => ({
@@ -61,6 +62,11 @@ const useStyles = makeStyles(theme => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
+  tags: {
+    display: 'flex',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+  },
   avatar: {
     paddingTop: 20,
     display: 'flex',
@@ -93,7 +99,7 @@ const MediaCard = props => {
   return (
     <Grid container>
       {posts.map(post => (
-        <Grid item key={props.card} xs={12} md={6} className={classes.cardGrids}>
+        <Grid item key={props.card} xs={12} md={4} className={classes.cardGrids}>
           <Card className={classes.cards} onClick={() => openPost(String(post.id))}>
             <CardMedia
               className={classes.cardMedias}
@@ -107,16 +113,23 @@ const MediaCard = props => {
               <div className={classes.avatar}>
                   <Avatar alt={post.createdBy.name} src={post.createdBy.headUrl} className={classes.medium} />
                 <div className={classes.mata}>
-                  <Typography variant="h6" style={{color: 'grey'}}>
-                    {post.createdBy.name}
+                  <Typography variant="h6" style={{color: 'black', fontWeight: 500}}>
+                    <span role={"img"} aria-label={"作者"}>👨‍🎓 </span> 作者: {post.createdBy.name}
                   </Typography>
                   <Typography variant="h6" style={{color: 'grey'}}>
-                    {post.creationDateTime}
+                    <span role={"img"} aria-label={"发表时间"}>⌚ </span> 发布于: {post.creationDateTime}
                   </Typography>
                 </div>
               </div>
               <Typography variant="h5" className={classes.summary}>
                 {post.summary}
+              </Typography>
+              <Typography variant="h6" gutterBottom className={classes.tags}>
+                {post.tags.map(tag => (
+                  <div style={{paddingRight: 10}}>
+                    <Chip label={tag.name} component="a" href="/index" clickable variant="outlined" size={"small"}/>
+                  </div>
+                ))}
               </Typography>
             </CardContent>
             <CardActions className={classes.cardContents}>

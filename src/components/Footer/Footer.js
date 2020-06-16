@@ -151,7 +151,7 @@ const Footer = props => {
               导航链接
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
-              <span role={"img"} aria-label={"好友"}>🧍</span> <a href={"/friends"} style={{textDecoration: 'underline'}}>好友: 汪师傅和他的朋友们</a>
+              <span role={"img"} aria-label={"好友"}>👨‍🚀</span> <a href={"/friends"} style={{textDecoration: 'underline'}}>好友: 汪师傅和他的朋友们</a>
             </Typography>
             <Typography  gutterBottom variant='h6' style={{fontSize: 14, fontWeight:400, marginBottom: 2, color: 'black'}} color="textSecondary">
               <span role={"img"} aria-label={"计划"}>🚀</span> <a href={"/projects"} style={{textDecoration: 'underline'}}>计划: Project X</a>
