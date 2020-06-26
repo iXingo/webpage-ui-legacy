@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 // import Grid from '@material-ui/core/Grid';
-import {MediaSection, PictureText, TextPicture} from '../../components';
+import {ImageSection, MediaSection, PictureText, TextPicture} from '../../components';
 // import {Container} from "@material-ui/core";
 // import Paper from '@material-ui/core/Paper';
 
@@ -51,8 +51,8 @@ const useStyles = makeStyles(theme => ({
 
 
 const year2011 = {
-  sectionMain: '汪师傅在二零一一',
-  sectionTitle: '2011，初入校园。',
+  sectionMain: '此页面正在开发中',
+  sectionTitle: '恭喜你， 你正在浏览未开发完成的页面',
   sectionContent: '2011年，年轻青涩的汪师傅走出家乡，走向校园。',
 
   image: 'https://img.ixingo.cn/wangxin-2011.JPG',
@@ -106,6 +106,11 @@ const AboutMe = props => {
       <TextPicture context={year2011} {...props} />
       <PictureText context={year2012} {...props} />
       <TextPicture context={year2013} {...props} />
+
+      <ImageSection context={year2011}/>
+      <ImageSection context={year2011}/>
+      <ImageSection context={year2011}/>
+      <ImageSection context={year2011}/>
 
     </div>
   );

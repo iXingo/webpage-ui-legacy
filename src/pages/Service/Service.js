@@ -8,6 +8,8 @@ import {Grid} from '@material-ui/core';
 import {ProductCard, ProductsToolbar} from './components';
 import mockData from './data';
 import SectionTitle from "../../components/SectionTitle/SectionTiltle";
+import Album from "../../components/Album";
+import TitleAction from "../../components/TitleAction";
 
 const useStyles = makeStyles(theme => ({
   service: {
@@ -42,6 +44,7 @@ const Service = props => {
     <div >
       <SectionTitle  context={serviceSection}/>
       <div className={classes.service}>
+
         <ProductsToolbar/>
         <div className={classes.content}>
           <Grid container spacing={3}>
@@ -53,6 +56,9 @@ const Service = props => {
           </Grid>
         </div>
       </div>
+
+      <TitleAction/>
+
     </div>
   );
 };

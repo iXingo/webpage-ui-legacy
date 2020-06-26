@@ -3,9 +3,9 @@ import uuid from 'uuid/v1';
 export default [
   {
     id: uuid(),
-    title: 'Winform程序制作',
+    title: 'Windows程序制作',
     description:
-      'Winform是使用Windows窗体程序开发平台, 汪师傅提供基于Winform的小程序开发服务。 应用案例: 某公司年会抽奖平台。',
+      'Winform是使用Windows窗体程序开发平台, 汪师傅提供基于Winform的Windows小程序开发服务。 应用案例: 某公司年会抽奖平台。',
     imageUrl: 'https://img.ixingo.cn/pic/windows.png',
     totalDownloads: '594',
     url: '/index'

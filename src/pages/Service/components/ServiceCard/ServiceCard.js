@@ -7,7 +7,8 @@ import AccessTimeIcon from '@material-ui/icons/AccessTime';
 // import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: {
+  },
   imageContainer: {
     height: 64,
     width: 64,
@@ -21,6 +22,9 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     width: '100%'
+  },
+  description: {
+    height: 64,
   },
   statsItem: {
     display: 'flex',
@@ -46,7 +50,7 @@ const ServiceCard = props => {
         <Typography align="center" gutterBottom variant="h4">
           {product.title}
         </Typography>
-        <Typography align="center" variant="body1">
+        <Typography align="center" variant="body1" className={classes.description} >
           {product.description}
         </Typography>
       </CardContent>
@@ -54,16 +58,16 @@ const ServiceCard = props => {
       <CardActions>
         <Grid container justify="space-between">
           <Grid className={classes.statsItem} item>
-            <AccessTimeIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
-              Powered By @程序员汪师傅
+              查看更多
             </Typography>
           </Grid>
           <Grid className={classes.statsItem} item>
             {/*<GetAppIcon className={classes.statsIcon}/>*/}
+            <AccessTimeIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
               {/*{product.totalDownloads} */}
-              查看更多
+              Powered By @程序员汪师傅
             </Typography>
           </Grid>
         </Grid>

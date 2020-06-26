@@ -80,7 +80,6 @@ const BigImage = props => {
   return (
     <React.Fragment>
       <CssBaseline/>
-      <ContentTitle context={props.context}/>
       <img src={"https://img.ixingo.cn/wang-xin-alone.png"} style={{width: '100%', paddingTop: 40}} alt={'wangxin'}/>
     </React.Fragment>
   );
