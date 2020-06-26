@@ -8,7 +8,6 @@ import {Grid} from '@material-ui/core';
 import {ProductCard, ProductsToolbar} from './components';
 import mockData from './data';
 import SectionTitle from "../../components/SectionTitle/SectionTiltle";
-import Album from "../../components/Album";
 import TitleAction from "../../components/TitleAction";
 
 const useStyles = makeStyles(theme => ({

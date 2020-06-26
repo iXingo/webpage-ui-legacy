@@ -2,7 +2,6 @@ import React from 'react';
 // import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import {withRouter} from 'react-router-dom';
-import {ContentTitle} from '../../components';
 
 
 // const useStyles = makeStyles(theme => ({
