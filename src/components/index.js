@@ -44,6 +44,7 @@ export {default as CommentCard} from './CommentCard';
 export {default as SignedIn} from './SignedIn';
 export {default as Page} from './Page';
 export {default as TitleAction} from './TitleAction';
+export {default as TitleContent} from './TitleContent';
 export {default as ImageSection} from './ImageSection';
 
 

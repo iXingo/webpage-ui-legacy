@@ -20,16 +20,16 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     padding: 10,
     lineHeight: 1.5,
-    fontWeight: 400,
   },
   secondLine: {
-    fontSize: 36,
+    fontSize: 48,
     margin: 'auto',
     color: 'black',
     paddingTop: 20,
     lineHeight: 1.5,
     [theme.breakpoints.down('md')]: {
       width: 300,
+      fontSize: 21,
     },
   },
   thirdLine: {
@@ -37,13 +37,16 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     margin: 'auto',
-    fontSize: 16,
+    color: 'black',
+    fontSize: 21,
     paddingTop: 40,
     paddingBottom: 40,
     fontWeight: 400,
     lineHeight: 1.5,
     textAlign: 'center',
-    maxWidth: 500
+    [theme.breakpoints.down('md')]: {
+      fontSize: 16,
+    },
   },
   svgIcon: {
     height: 30,
@@ -59,7 +62,7 @@ const useStyles = makeStyles(theme => ({
 //   );
 // }
 
-const ContentTitle = props => {
+const TitleContent = props => {
 
   const classes = useStyles();
 
@@ -68,15 +71,12 @@ const ContentTitle = props => {
       <CssBaseline/>
       <Container className={classes.mainTitle}>
         <div className={classes.main}>
-          <Typography variant="h6" gutterBottom color="textSecondary" align="center" className={classes.firstLine}>
-            {props.context.sectionMain}
-          </Typography>
           {/* <TypeWriter typing={0.5}> */}
           <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
             {props.context.sectionTitle}
           </Typography>
           {/* </TypeWriter> */}
-          <Typography variant="h4" gutterBottom color="textSecondary" align="center" className={classes.thirdLine}>
+          <Typography variant="h4" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
             {props.context.sectionContent}
           </Typography>
         </div>
@@ -86,4 +86,4 @@ const ContentTitle = props => {
 };
 
 
-export default withRouter(ContentTitle);
+export default withRouter(TitleContent);

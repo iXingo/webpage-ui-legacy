@@ -48,7 +48,7 @@ const FriendHeader = props => {
   // }
   let friendTitle  = "加载中... | 看见，好时光";
   if(friend.name){
-    friendTitle = friend.name +  "| 看见，好时光";
+    friendTitle = friend.name +  " | 看见，好时光";
   }
   document.title = friendTitle;
 
