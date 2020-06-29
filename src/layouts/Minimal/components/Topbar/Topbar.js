@@ -9,7 +9,7 @@ import {AppBar, Toolbar} from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
   root: {
-    boxShadow: '0 2px 6px 0 rgba(å0,0,0,.12), inset 0 -1px 0 0 #dadce0',
+    // boxShadow: '0 2px 6px 0 rgba(å0,0,0,.12), inset 0 -1px 0 0 #dadce0',
     backgroundColor: '#1a73e8'
     // backdropFilter: 'saturate(180%) blur(20px)',
     // backgroundColor: 'rgba(26,115,232,1)',

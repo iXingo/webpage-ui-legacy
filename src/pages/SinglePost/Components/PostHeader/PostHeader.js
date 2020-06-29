@@ -7,7 +7,9 @@ import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import {Typography} from '@material-ui/core';
 import {Verify} from '../../../../components';
-import {Instagram} from 'react-content-loader'
+import {Instagram} from 'react-content-loader';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
 
 
 const useStyles = makeStyles(theme => ({
@@ -143,6 +145,9 @@ const PostHeader = props => {
   const classes = useStyles();
   if (!props.post.createdBy) return <Instagram/>;
 
+  moment.locale();
+
+
   return (
     <div>
       <Typography className={classes.title} variant="h1">
@@ -195,7 +200,7 @@ const PostHeader = props => {
         </strong>
         发表于格林威治时间
         <strong style={{color: '#1a73e8'}}>
-          {props.post.creationDateTime}
+          {moment(props.post.creationDateTime).format('LLLL')}
         </strong>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>

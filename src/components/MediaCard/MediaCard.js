@@ -2,7 +2,8 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-// import CardActionArea from '@material-ui/core/CardActionArea';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -48,7 +49,10 @@ const useStyles = makeStyles(theme => ({
     padding: 10,
   },
   summary: {
+    color: '#5f6368',
     padding: '20px 0',
+    fontWeight: 400,
+    fontSize: 16
   },
   small: {
     width: theme.spacing(3),
@@ -77,6 +81,7 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 20,
     display: 'flex',
     flexDirection: 'column',
+    fontSize: 14,
   }
 }));
 
@@ -96,6 +101,8 @@ const MediaCard = props => {
     return <Instagram/>;
   }
 
+  moment.locale();
+
   return (
     <Grid container>
       {posts.map(post => (
@@ -114,10 +121,12 @@ const MediaCard = props => {
                   <Avatar alt={post.createdBy.name} src={post.createdBy.headUrl} className={classes.medium} />
                 <div className={classes.mata}>
                   <Typography variant="h6" style={{color: 'black', fontWeight: 500}}>
-                    <span role={"img"} aria-label={"作者"}>👨‍🎓 </span> 作者: {post.createdBy.name}
+                    {/*<span role={"img"} aria-label={"作者"}>👨‍🎓 </span> 作者: */}
+                    {post.createdBy.name}
                   </Typography>
                   <Typography variant="h6" style={{color: 'grey'}}>
-                    <span role={"img"} aria-label={"发表时间"}>⌚ </span> 发布于: {post.creationDateTime}
+                    {/*<span role={"img"} aria-label={"发表时间"}>⌚ </span> 发布于: */}
+                    {moment(post.creationDateTime).format('LLLL')}
                   </Typography>
                 </div>
               </div>
