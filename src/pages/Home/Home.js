@@ -6,7 +6,6 @@ import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
 import TypeWriter from 'react-typewriter';
 import Slide from '@material-ui/core/Slide';
-import Typical from 'react-typical'
 import {
   ButtonPictureContent,
   CardPicture,
@@ -289,16 +288,6 @@ const Home = props => {
         <PictureTextLink context={studySection} {...props}  />
         {/*<BigImage context={endSection} {...props}  />*/}
         <SignedIn context={signin} {...props} />
-
-        <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
-                    className={classes.secondLine}>
-          汪师傅是
-          <Typical
-            steps={['Engineer', 2000, 'Programmer', 2000,'Coder', 2000,'Master', 2000]}
-            loop={Infinity}
-            wrapper="p"
-          />
-        </Typography>
       </React.Fragment>
   );
 };
