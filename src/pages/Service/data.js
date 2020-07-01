@@ -8,7 +8,7 @@ export default [
       'Winform是使用Windows窗体程序开发平台, 汪师傅提供基于Winform的Windows小程序开发服务。 应用案例: 某公司年会抽奖平台。',
     imageUrl: 'https://img.ixingo.cn/pic/windows.png',
     totalDownloads: '594',
-    url: '/index'
+    url: '/service/windows'
   },
   {
     id: uuid(),

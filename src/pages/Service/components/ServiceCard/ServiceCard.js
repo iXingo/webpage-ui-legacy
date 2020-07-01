@@ -4,6 +4,8 @@ import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
 import {Card, CardActions, CardContent, Divider, Grid, Typography} from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import Link from "@material-ui/core/Link";
+import Button from "@material-ui/core/Button";
 // import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme => ({
@@ -59,7 +61,9 @@ const ServiceCard = props => {
         <Grid container justify="space-between">
           <Grid className={classes.statsItem} item>
             <Typography display="inline" variant="body2">
-              查看更多
+              <Link component="a" href={product.url} target="_blank" style={{paddingRight: 5}}>
+                查看详情 →
+              </Link>
             </Typography>
           </Grid>
           <Grid className={classes.statsItem} item>

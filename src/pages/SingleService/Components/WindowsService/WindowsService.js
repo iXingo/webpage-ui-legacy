@@ -2,7 +2,6 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import SectionTitle from "../../../../components/SectionTitle";
 import {TitleContent} from "../../../../components";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   image: {
@@ -42,11 +41,9 @@ const WindowsService = props => {
 
   return (
       <div >
-        <img src={'https://developer.github.com/assets/images/hero-circuit-bg.svg'} alt={'Developer'} className={classes.image}/>
-        <Grid container >
-          <SectionTitle  context={serviceSection}/>
-          <TitleContent context={title}/>
-        </Grid>
+        <img src={'https://img.ixingo.cn/pic/hero-circuit-bg.svg'} alt={'Developer'} className={classes.image}/>
+        <SectionTitle  context={serviceSection}/>
+        <TitleContent context={title}/>
 
       </div>
   );
