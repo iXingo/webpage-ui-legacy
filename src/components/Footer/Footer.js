@@ -196,7 +196,9 @@ const Footer = props => {
           本网站构建并托管于百度智能云BCC， 静态文件使用七牛云进行CDN加速， 短信服务由腾讯云提供支持， DNS域名解析服务由阿里云万网提供， 微信公众号平台基于新浪云SAE进行构建。
         </Typography>
         <Typography variant="caption" style={{marginTop: 10, color: 'black', fontSize: 12}}>
-          ICP证: 皖ICP备15011098号
+          <Link component="a" href="http://www.beian.miit.gov.cn/" target="_blank" style={{paddingRight: 5}}>
+            ICP证: 皖ICP备15011098号
+          </Link>
         </Typography>
         <img alt={'星狗网'} src={"https://img.ixingo.cn/pic/LOGO.png"} style={{width: 150}}/>
       </div>

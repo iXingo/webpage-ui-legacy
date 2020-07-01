@@ -1,62 +1,55 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Grid, Typography} from '@material-ui/core';
-import Button from "@material-ui/core/Button";
-import {withRouter} from "react-router-dom";
+import SectionTitle from "../../../../components/SectionTitle";
+import {TitleContent} from "../../../../components";
+import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    padding: theme.spacing(4),
+  image: {
+    [theme.breakpoints.down('md')]: {
+      margin: '0 auto 0 50%',
+      width: 1200,
+      transform: 'translateX(-50%)'
+    },
   },
   content: {
-    paddingTop: 100,
-    textAlign: 'center'
+    marginTop: theme.spacing(2)
   },
-  image: {
-    marginTop: 20,
-    display: 'inline-block',
-    maxWidth: '100%',
-    height: 400
-  },
-  buttonContent: {
-    marginTop: 20,
-    padding: '15px 32px',
-    fontSize: 14,
-    color: '#1074e7',
-    backgroundColor: 'hsla(0,0%,100%,0)',
-    borderColor: 'rgba(16,116,231,.5)',
-    whiteSpace: 'nowrap',
-    verticalAlign: 'middle',
-    cursor: 'pointer',
-    border: '1px solid #1074e7',
-    borderRadius: 3,
-    transition: '.2s',
-  },
+  pagination: {
+    marginTop: theme.spacing(3),
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end'
+  }
 }));
 
 const WindowsService = props => {
 
   const classes = useStyles();
+  const serviceSection = {
+    image: 'https://img.ixingo.cn/pic/undraw_operating_system_4lr6.svg',
+    title: '🛵 服务',
+    content: '结合汪师傅在编程， 图片处理， 视频制作方面的一点小小的兴趣，星狗网推出一系列服务，可以方便的实现你想要的效果。',
+    linkUrl: '',
+    linkText: '汪师傅',
+  };
+  const title = {
+    sectionTitle: '在您熟悉的平台上运行您自己的应用。',
+    sectionContent: '您最熟悉的Windows平台上，我们通过编程解放您最繁琐的需求。这些小程序可以通过自动化流程将您从一些频繁处理的工作流程中解放出来。',
+  };
+
+  document.title = "汪师傅提供的服务列表 | 看见，好时光";
 
   return (
-    <div className={classes.root}>
-      <Grid container justify="center" spacing={4}>
-        <Grid item lg={6} xs={12}>
-          <div className={classes.content}>
-            <Typography variant="h1">401: 您可能需要登录才能访问该页面</Typography>
-            <Typography variant="subtitle2">您正在访问受限的资源,因为某些原因该页面的安全性需要得到保证,因此您需要登录才能进行下一步操作。</Typography>
-            <Typography
-              variant="subtitle2">此页面可能记录了一个受保护的资源,系统管理员汪师傅设置了该页面必须在登录条件下才能被访问,您可以尝试联系汪师傅以获得关于此页面的更多详细帮助。
-            </Typography>
-            <Button className={classes.buttonContent} onClick={() => handleLogin()}>
-              点此登录 →
-            </Button>
-            <img alt="请登录" className={classes.image} src="https://img.ixingo.cn/undraw_coding_6mjf.svg"/>
-          </div>
+      <div >
+        <img src={'https://developer.github.com/assets/images/hero-circuit-bg.svg'} alt={'Developer'} className={classes.image}/>
+        <Grid container >
+          <SectionTitle  context={serviceSection}/>
+          <TitleContent context={title}/>
         </Grid>
-      </Grid>
-    </div>
+
+      </div>
   );
 };
 
-export default withRouter(WindowsService);
+export default WindowsService;

@@ -27,6 +27,7 @@ import {
   Course as CoursePage,
 } from './pages';
 import {General, Notifications, Security, Subscription} from "./pages/Settings/components";
+import WindowsService from "./pages/SingleService/Components/WindowsService";
 
 class Routes extends Component {
   render() {
@@ -220,10 +221,10 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={Notifications}
+          component={WindowsService}
           exact
-          layout={MainLayout}
-          path="/project/windows"
+          layout={MinimalLayout}
+          path="/service/windows"
           {...this.props}
         />
         <Redirect to="/not-found"/>

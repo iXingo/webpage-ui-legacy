@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: 'auto',
     maxWidth: '100%',
-    minHeight: 240
+    // minHeight: 240
   },
   button: {
     width: 200,

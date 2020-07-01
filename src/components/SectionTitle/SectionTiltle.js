@@ -28,6 +28,12 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     fontWeight: 500,
     lineHeight: 1.5,
+    [theme.breakpoints.down('md')]: {
+      display: 'flex',
+      fontSize: 24,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
     // display: 'flex',
     // justifyContent: 'center',
     // alignItems: 'center'

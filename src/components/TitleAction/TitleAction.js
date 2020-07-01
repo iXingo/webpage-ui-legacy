@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
+import {Link} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     heroContent: {
@@ -38,7 +39,9 @@ const TitleAction = props => {
                         </Grid>
                         <Grid item>
                             <Button variant="outlined" color="primary">
-                                直接联系
+                                <Link component="a" href="https://www.weibo.com/ixingo" target="_blank" style={{paddingRight: 5}}>
+                                    直接联系
+                                </Link>
                             </Button>
                         </Grid>
                     </Grid>
