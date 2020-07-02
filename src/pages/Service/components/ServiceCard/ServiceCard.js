@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
 import {Card, CardActions, CardContent, Divider, Grid, Typography} from '@material-ui/core';
-import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import Link from "@material-ui/core/Link";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 // import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme => ({
@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   statsIcon: {
-    color: theme.palette.icon,
+    color: theme.palette.main,
     marginRight: theme.spacing(1)
   }
 }));
@@ -68,10 +68,9 @@ const ServiceCard = props => {
           </Grid>
           <Grid className={classes.statsItem} item>
             {/*<GetAppIcon className={classes.statsIcon}/>*/}
-            <AccessTimeIcon className={classes.statsIcon}/>
+            <VerifiedUserIcon className={classes.statsIcon}/>
             <Typography display="inline" variant="body2">
-              {/*{product.totalDownloads} */}
-              Powered By @程序员汪师傅
+              Powered By {product.serviceProvider}
             </Typography>
           </Grid>
         </Grid>

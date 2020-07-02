@@ -12,7 +12,7 @@ export default {
     contrastText: white,
     dark: colors.indigo[900],
     // main: colors.indigo[500],
-    main: '#1a73e8',
+    main: main,
     light: colors.indigo[100]
   },
   secondary: {
@@ -55,5 +55,6 @@ export default {
     paper: white
   },
   icon: colors.blueGrey[600],
-  divider: colors.grey[200]
+  divider: colors.grey[200],
+  user: main
 };
