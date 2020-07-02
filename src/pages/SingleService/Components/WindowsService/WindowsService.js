@@ -62,7 +62,7 @@ const WindowsService = props => {
         <img src={'https://developer.apple.com/app-store/tell-us/images/hero-large.jpg'} alt={'Developer'} className={classes.focus}/>
 
         <TitleContent context={title2}/>
-        <img src={'https://img.ixingo.cn/image/wangshifu.jpeg'} alt={'Developer'} className={classes.focus}/>
+        <img src={'https://img.ixingo.cn/img/wangshifu.jpeg'} alt={'Developer'} className={classes.focus}/>
         <SectionBlock/>
 
       </div>
