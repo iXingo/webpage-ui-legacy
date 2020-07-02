@@ -46,6 +46,7 @@ export {default as Page} from './Page';
 export {default as TitleAction} from './TitleAction';
 export {default as TitleContent} from './TitleContent';
 export {default as ImageSection} from './ImageSection';
+export {default as SectionBlock} from './SectionBlock';
 
 
 
