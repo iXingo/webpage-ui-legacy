@@ -14,15 +14,15 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '200px 10px 0'
+    padding: '20px 10px 0'
   },
   firstLine: {
-    fontSize: 16,
+    fontSize: 10,
     padding: 10,
     lineHeight: 1.5,
   },
   secondLine: {
-    fontSize: 48,
+    fontSize: 40,
     margin: 'auto',
     color: 'black',
     paddingTop: 20,
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     margin: 'auto',
     color: 'black',
-    fontSize: 21,
+    fontSize: 18,
     paddingTop: 40,
     paddingBottom: 40,
     fontWeight: 400,
