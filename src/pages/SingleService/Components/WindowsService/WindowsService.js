@@ -6,7 +6,19 @@ import SectionBlock from "../../../../components/SectionBlock";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    textAlign: "center"
+    textAlign: "center",
+    paddingTop: 200
+  },
+  icon: {
+    height: 64,
+    width: 64,
+    margin: '25px auto',
+    // border: `1px solid ${theme.palette.divider}`,
+    // borderRadius: '5px',
+    overflow: 'hidden',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   image: {
     overflowX: 'hidden',
@@ -52,10 +64,11 @@ const WindowsService = props => {
     sectionContent: '最重要的是，这一切由你最熟悉的程序员汪师傅倾力打造，而现在都唾手可得。',
   };
 
-  document.title = "汪师傅提供的服务列表 | 看见，好时光";
+  document.title = "Windows程序制作 | 看见，好时光";
 
   return (
       <div className={classes.root}>
+        <img alt="Product" className={classes.icon} src={'https://img.ixingo.cn/pic/windows.png'}/>
         <img src={'https://img.ixingo.cn/pic/hero-circuit-bg.svg'} alt={'Developer'} className={classes.image}/>
         <SectionTitle  context={serviceSection}/>
         <TitleContent context={title1}/>
