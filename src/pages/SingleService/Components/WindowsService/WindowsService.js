@@ -1,6 +1,5 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import SectionTitle from "../../../../components/SectionTitle";
 import {TitleContent} from "../../../../components";
 import SectionBlock from "../../../../components/SectionBlock";
 import Grid from "@material-ui/core/Grid";
@@ -72,13 +71,13 @@ const useStyles = makeStyles(theme => ({
 const WindowsService = props => {
 
   const classes = useStyles();
-  const serviceSection = {
-    image: 'https://img.ixingo.cn/pic/undraw_operating_system_4lr6.svg',
-    title: '🛵 服务',
-    content: '结合汪师傅在编程， 图片处理， 视频制作方面的一点小小的兴趣，星狗网推出一系列服务，可以方便的实现你想要的效果。',
-    linkUrl: '',
-    linkText: '汪师傅',
-  };
+  // const serviceSection = {
+  //   image: 'https://img.ixingo.cn/pic/undraw_operating_system_4lr6.svg',
+  //   title: '🛵 服务',
+  //   content: '结合汪师傅在编程， 图片处理， 视频制作方面的一点小小的兴趣，星狗网推出一系列服务，可以方便的实现你想要的效果。',
+  //   linkUrl: '',
+  //   linkText: '汪师傅',
+  // };
 
   const title = {
     sectionTitle: '隆重推出：Windows程序制作服务',
@@ -108,7 +107,7 @@ const WindowsService = props => {
         <TitleContent context={title}/>
         <img src={'https://img.ixingo.cn/img/wangshifu.jpeg'} alt={'Developer'} className={classes.focus}/>
       </div>
-      <Grid container spacing={4}>
+      <Grid container>
         <Grid item xs={12} md={4} className={classes.item}>
           <img src={'https://developer.apple.com/assets/elements/icons/wwdr/today.svg'} alt={''}
                className={classes.img}/>
