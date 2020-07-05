@@ -4,11 +4,12 @@ import {TitleContent} from "../../../../components";
 import SectionBlock from "../../../../components/SectionBlock";
 import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
+import SectionContent from "../../../../components/SectionContent";
 
 const useStyles = makeStyles(theme => ({
   root: {
     textAlign: "center",
-    paddingTop: 100,
+    paddingTop: 50,
     [theme.breakpoints.up('md')]: {
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -57,15 +58,18 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center"
   },
   item: {
-    padding: '10px auto',
-    textAlign: 'left'
+    padding: '10px 30px',
+    textAlign: 'left',
+    [theme.breakpoints.down('md')]: {
+      padding: '10px 50px',
+    },
   },
   img: {
     height: 56,
     width: "auto",
     margin: '3px auto 9px',
     textAlign: 'left'
-  }
+  },
 }));
 
 const WindowsService = props => {
@@ -105,9 +109,21 @@ const WindowsService = props => {
       <div className={classes.title}>
         <img alt="Product" className={classes.icon} src={'https://img.ixingo.cn/pic/windows.png'}/>
         <TitleContent context={title}/>
-        <img src={'https://img.ixingo.cn/img/wangshifu.jpeg'} alt={'Developer'} className={classes.focus}/>
+        <img src={'https://developer.apple.com/app-clips/images/hero-lockup-small_2x.png'} alt={'Developer'} className={classes.focus}/>
       </div>
-      <Grid container>
+
+
+      <Grid container className={classes.container}>
+        <Grid item xs={12} md={6} className={classes.item}>
+          <SectionContent context={title1}/>
+          <SectionContent context={title2}/>
+        </Grid>
+        <Grid item xs={12} md={6} className={classes.item}>
+          <SectionContent context={title2}/>
+        </Grid>
+      </Grid>
+
+      <Grid container className={classes.container}>
         <Grid item xs={12} md={4} className={classes.item}>
           <img src={'https://developer.apple.com/assets/elements/icons/wwdr/today.svg'} alt={''}
                className={classes.img}/>

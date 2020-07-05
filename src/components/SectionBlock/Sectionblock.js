@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
     margin: '3px auto 9px'
   },
   item: {
-    padding: '10px auto'
+    padding: '10px 30px',
+    textAlign: 'left',
   },
   firstLine:{
     color: 'black',
