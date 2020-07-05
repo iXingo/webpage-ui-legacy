@@ -103,7 +103,7 @@ const WindowsService = props => {
   };
 
   const title2 = {
-    sectionTitle: '汪师傅亲手打造',
+    sectionTitle: '汪师傅亲手打造。',
     sectionContent: '最重要的是，这一切由你最熟悉的程序员汪师傅倾力打造，而现在都唾手可得。',
   };
 

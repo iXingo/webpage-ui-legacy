@@ -17,11 +17,6 @@ const useStyles = makeStyles(theme => ({
     padding: '20px 10px 0'
   },
   firstLine: {
-    fontSize: 10,
-    padding: 10,
-    lineHeight: 1.5,
-  },
-  secondLine: {
     fontSize: 40,
     margin: 'auto',
     color: 'black',
@@ -32,10 +27,8 @@ const useStyles = makeStyles(theme => ({
       fontSize: 21,
     },
   },
-  thirdLine: {
+  secondLine: {
     display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
     margin: 'auto',
     color: 'black',
     fontSize: 18,
@@ -43,7 +36,6 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 40,
     fontWeight: 400,
     lineHeight: 1.5,
-    textAlign: 'center',
     [theme.breakpoints.down('md')]: {
       fontSize: 16,
     },
@@ -72,11 +64,11 @@ const TitleContent = props => {
       <Container className={classes.mainTitle}>
         <div className={classes.main}>
           {/* <TypeWriter typing={0.5}> */}
-          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.secondLine}>
+          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.firstLine}>
             {props.context.sectionTitle}
           </Typography>
           {/* </TypeWriter> */}
-          <Typography variant="h4" gutterBottom color="inherit" align="center" className={classes.thirdLine}>
+          <Typography variant="h4" gutterBottom color="inherit" align="center" className={classes.secondLine}>
             {props.context.sectionContent}
           </Typography>
         </div>
