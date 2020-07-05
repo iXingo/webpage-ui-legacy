@@ -5,6 +5,7 @@ import SectionBlock from "../../../../components/SectionBlock";
 import Grid from "@material-ui/core/Grid";
 import {Typography} from "@material-ui/core";
 import SectionContent from "../../../../components/SectionContent";
+import Divider from "@material-ui/core/Divider";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -70,6 +71,10 @@ const useStyles = makeStyles(theme => ({
     margin: '3px auto 9px',
     textAlign: 'left'
   },
+  divider : {
+    marginTop: 40,
+    marginBottom: 100,
+  }
 }));
 
 const WindowsService = props => {
@@ -112,6 +117,7 @@ const WindowsService = props => {
         <img src={'https://developer.apple.com/app-clips/images/hero-lockup-small_2x.png'} alt={'Developer'} className={classes.focus}/>
       </div>
 
+      <Divider className={classes.divider}/>
 
       <Grid container className={classes.container}>
         <Grid item xs={12} md={6} className={classes.item}>
@@ -122,6 +128,8 @@ const WindowsService = props => {
           <SectionContent context={title2}/>
         </Grid>
       </Grid>
+
+      <Divider className={classes.divider}/>
 
       <Grid container className={classes.container}>
         <Grid item xs={12} md={4} className={classes.item}>
@@ -193,9 +201,13 @@ const WindowsService = props => {
       </Grid>
       {/*<img src={'https://img.ixingo.cn/pic/hero-circuit-bg.svg'} alt={'Developer'} className={classes.image}/>*/}
       {/*<SectionTitle  context={serviceSection}/>*/}
+
+      <Divider className={classes.divider}/>
+
       <TitleContent context={title1}/>
       <img src={'https://developer.apple.com/app-store/tell-us/images/hero-large.jpg'} alt={'Developer'}
            className={classes.focus}/>
+
 
       <TitleContent context={title2}/>
       <img src={'https://img.ixingo.cn/img/wangshifu.jpeg'} alt={'Developer'} className={classes.focus}/>
