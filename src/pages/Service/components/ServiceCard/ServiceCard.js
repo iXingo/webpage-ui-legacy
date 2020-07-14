@@ -61,7 +61,7 @@ const ServiceCard = props => {
         <Grid container justify="space-between">
           <Grid className={classes.statsItem} item>
             <Typography display="inline" variant="body2">
-              <Link component="a" href={product.url} target="_blank" style={{paddingRight: 5}}>
+              <Link component="a" href={product.url} style={{paddingRight: 5}}>
                 查看详情 →
               </Link>
             </Typography>
