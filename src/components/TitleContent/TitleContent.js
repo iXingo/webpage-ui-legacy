@@ -36,6 +36,8 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 40,
     fontWeight: 400,
     lineHeight: 1.5,
+    textAlign: 'center',
+    justifyContent: 'center',
     [theme.breakpoints.down('md')]: {
       fontSize: 16,
     },
