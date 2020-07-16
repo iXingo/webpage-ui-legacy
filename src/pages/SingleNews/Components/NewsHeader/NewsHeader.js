@@ -6,7 +6,7 @@ import DoneIcon from '@material-ui/icons/Done';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
 import {Typography} from '@material-ui/core';
-import {Tag, Verify} from '../../../../components';
+import {Verify} from '../../../../components';
 import {Instagram} from 'react-content-loader'
 
 
@@ -86,11 +86,6 @@ const useStyles = makeStyles(theme => ({
     padding: '0 30px',
     textAlign: 'justify'
   },
-  title: {
-    color: '#1a73e8',
-    textAlign: 'center',
-    margin: '30px 0'
-  },
   field: {
     width: '70%'
   },
@@ -130,9 +125,6 @@ const NewsHeader = props => {
   if (!props.news.createdBy) return <Instagram/>;
   return (
     <div>
-      <Typography className={classes.title} variant="h1">
-        {props.news.title}
-      </Typography>
       <Typography className={classes.author} variant="h5">
         <strong>新闻报道：</strong>
         <Chip
@@ -152,12 +144,14 @@ const NewsHeader = props => {
       </Typography>
       <Divider/>
       <Typography variant="h6" gutterBottom className={classes.abstrat}>
-        <strong>本文摘要：</strong>{props.news.summary}
+        <strong>新闻摘要：</strong>{props.news.summary}
       </Typography>
       <Typography variant="h6" gutterBottom className={classes.tags}>
-        <strong>本文标签：</strong>
+        <strong>新闻标签：</strong>
         {props.news.tags.map(tag => (
-          <Tag tag={tag}/>
+          <div style={{paddingRight: 10}}>
+            <Chip label={tag.name} component="a" href="chip" clickable variant="outlined" size={"small"}/>
+          </div>
         ))}
       </Typography>
       <Typography variant="h6" className={classes.tip}>

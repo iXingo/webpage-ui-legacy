@@ -2,14 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
-import {Typography} from '@material-ui/core';
-import PostContent from '../PostPage';
-import PostHeader from '../PostHeader';
+import NewsContent from "../NewsContent";
+import {Typography} from "@material-ui/core";
+import {Instagram} from "react-content-loader";
+import moment from 'moment';
+import 'moment/locale/zh-cn';
 
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.default,
+    backgroundColor: theme.palette.background.default.white,
+    padding: 20,
     // height: theme.spacing(80)
   },
   grid: {
@@ -60,8 +63,6 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     paddingTop: theme.spacing(5),
     paddingBototm: theme.spacing(2),
-    paddingLeft: theme.spacing(2),
-    paddingRight: theme.spacing(2)
   },
   logoImage: {
     marginLeft: theme.spacing(4)
@@ -85,9 +86,9 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'justify'
   },
   title: {
-    color: '#1a73e8',
-    textAlign: 'center',
-    margin: '30px 0'
+    fontSize: 22,
+    lineHeight: 1.4,
+    marginBottom: 14,
   },
   field: {
     width: '70%'
@@ -101,10 +102,9 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
   },
   author: {
-    margin: '10px 0',
-    display: 'flex',
-    alignItems: 'center',
-    flexWrap: 'wrap',
+    color: 'rgba(0,0,0,0.3)',
+     fontWeight: 500,
+    marginBottom: 20
   },
   avatar: {
     display: 'inline-block',
@@ -123,6 +123,33 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: '#1a73e8',
     color: 'white',
     fontSize: 12,
+  },
+  newsImage: {
+    flexGrow: 0,
+    maxWidth: '66.666667%',
+    flexBasis: '66.666667%',
+    textAlign: 'center'
+  },
+  newsTitle: {
+    marginTop: 20,
+    [theme.breakpoints.up('md')]: {
+      margin: '0 auto',
+      maxWidth: 980
+    }
+  },
+  authorInfo: {
+    padding: '10px 0',
+    fontSize: 12
+  },
+  summary: {
+    marginTop: 10,
+    padding: 10,
+    maxWidth: '100%',
+    display: 'inline-block',
+    verticalAlign: 'top',
+    backgroundColor: 'rgb(246, 246, 246)',
+    boxSizing: 'border-box !important',
+    overflowWrap: 'break-word !important',
   }
 }));
 
@@ -130,26 +157,36 @@ const NewsMain = props => {
 
   const classes = useStyles();
 
+  moment.locale();
+
+  if (!props.news.createdBy) return <Instagram/>;
   return (
     <div className={classes.root}>
-      <div className={classes.quote} style={{backgroundImage: `url(${props.news.picUrl})`,}}>
-        <div className={classes.quoteInner}>
-          {/* <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
-          <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography> */}
-          <div className={classes.person}>
-            <Typography className={classes.name} variant="body1"><span className={classes.copyright}>&copy; Copyright 2020</span></Typography>
-            <Typography className={classes.bio} variant="body2"><span className={classes.copyright}>Designed by Shawn Wang in Pudong New Area.</span></Typography>
-          </div>
-        </div>
+      <div className={classes.newsTitle}>
+        <Typography className={classes.title} >
+          {props.news.title}
+        </Typography>
+        <Typography className={classes.author} >
+          {props.news.createdBy.name} <a style={{color: '#576b95', padding: '0 8px'}}>星狗网</a> {moment(props.news.creationDateTime).format('LLLL')}
+        </Typography>
+        <img src={props.news.picUrl} alt={props.news.title}/>
+        <Typography className={classes.authorInfo} >
+          作者 ｜ {props.news.createdBy.name} ｜ {props.news.createdBy.verifiedContent}
+        </Typography>
+        <Typography className={classes.summary} >
+          <strong>导读:</strong> {props.news.summary}
+        </Typography>
       </div>
+
       <div className={classes.content}>
         <Grid container className={classes.mainGrid}>
           {/* Main content */}
-          <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostHeader post={props.news} {...props}/>
-          </Grid>
-          <Grid item xs={12} md={8} className={classes.singlepost}>
-            <PostContent post={props.news} {...props}/>
+
+          {/*<Grid item xs={12} md={8} className={classes.singleNews}>*/}
+          {/*  <NewsHeader post={props.news} {...props}/>*/}
+          {/*</Grid>*/}
+          <Grid item xs={12} md={8} className={classes.singleNews}>
+            <NewsContent post={props.news} {...props}/>
           </Grid>
         </Grid>
       </div>

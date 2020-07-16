@@ -11,7 +11,7 @@ class SingleNews extends Component {
       news: "",
       isLoading: false
     };
-    this.loadNews = this.loadPost.bind(this);
+    this.loadNews = this.loadNews.bind(this);
   }
 
 
@@ -27,7 +27,7 @@ class SingleNews extends Component {
     promise
       .then(response => {
         this.setState({
-          post: response,
+          news: response,
           isLoading: false
         });
         if (response.code === 400) {

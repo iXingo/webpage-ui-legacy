@@ -23,6 +23,7 @@ import {
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
   SinglePost as SinglePostPage,
+  SingleNews as SingleNewsPage,
   About as AboutPage,
   Course as CoursePage,
 } from './pages';
@@ -78,6 +79,13 @@ class Routes extends Component {
           exact
           layout={MainLayout}
           path="/sign-in"
+          {...this.props}
+        />
+        <RouteWithLayout
+          component={SingleNewsPage}
+          exact
+          layout={MinimalLayout}
+          path="/news/:id"
           {...this.props}
         />
         <RouteWithLayout

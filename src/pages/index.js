@@ -11,6 +11,7 @@ export {default as Friend} from './Friend';
 export {default as NotAuth} from './NotAuth';
 export {default as Profile} from './Profile';
 export {default as SingleFriend} from './SingleFriend';
+export {default as SingleNews} from './SingleNews';
 export {default as About} from './About';
 export {default as AboutMe} from './AboutMe';
 export {default as News} from './News';
