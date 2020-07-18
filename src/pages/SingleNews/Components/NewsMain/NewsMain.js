@@ -12,7 +12,7 @@ import 'moment/locale/zh-cn';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default.white,
-    padding: 20,
+    // padding: 10,
     // height: theme.spacing(80)
   },
   grid: {
@@ -82,13 +82,16 @@ const useStyles = makeStyles(theme => ({
     // flexGrow:1,
     // margin: 'auto',
     // padding: theme.spacing(3),
-    padding: '0 16px',
+    padding: '0 10px',
     textAlign: 'justify'
   },
   title: {
     fontSize: 22,
     lineHeight: 1.4,
     marginBottom: 14,
+    [theme.breakpoints.up('md')]: {
+      fontSize: 42,
+    }
   },
   field: {
     width: '70%'
@@ -144,12 +147,11 @@ const useStyles = makeStyles(theme => ({
   summary: {
     marginTop: 10,
     padding: 10,
-    maxWidth: '100%',
     display: 'inline-block',
     verticalAlign: 'top',
     backgroundColor: 'rgb(246, 246, 246)',
-    boxSizing: 'border-box !important',
-    overflowWrap: 'break-word !important',
+    // boxSizing: 'border-box !important',
+    // overflowWrap: 'break-word !important',
   }
 }));
 
@@ -162,30 +164,24 @@ const NewsMain = props => {
   if (!props.news.createdBy) return <Instagram/>;
   return (
     <div className={classes.root}>
-      <div className={classes.newsTitle}>
-        <Typography className={classes.title} >
-          {props.news.title}
-        </Typography>
-        <Typography className={classes.author} >
-          {props.news.createdBy.name} <a style={{color: '#576b95', padding: '0 8px'}}>星狗网</a> {moment(props.news.creationDateTime).format('LLLL')}
-        </Typography>
-        <img src={props.news.picUrl} alt={props.news.title}/>
-        <Typography className={classes.authorInfo} >
-          作者 ｜ {props.news.createdBy.name} ｜ {props.news.createdBy.verifiedContent}
-        </Typography>
-        <Typography className={classes.summary} >
-          <strong>导读:</strong> {props.news.summary}
-        </Typography>
-      </div>
-
       <div className={classes.content}>
         <Grid container className={classes.mainGrid}>
-          {/* Main content */}
-
-          {/*<Grid item xs={12} md={8} className={classes.singleNews}>*/}
-          {/*  <NewsHeader post={props.news} {...props}/>*/}
-          {/*</Grid>*/}
           <Grid item xs={12} md={8} className={classes.singleNews}>
+            <div>
+              <Typography className={classes.title} >
+                {props.news.title}
+              </Typography>
+              <Typography className={classes.author} >
+                {props.news.createdBy.name} <a style={{color: '#576b95', padding: '0 8px'}}>星狗网</a> {moment(props.news.creationDateTime).format('LLLL')}
+              </Typography>
+              <img src={props.news.picUrl} alt={props.news.title}/>
+              <Typography className={classes.authorInfo} >
+                作者 ｜ {props.news.createdBy.name} ｜ {props.news.createdBy.verifiedContent}
+              </Typography>
+              <Typography className={classes.summary} >
+                <strong>导读:</strong> {props.news.summary}
+              </Typography>
+            </div>
             <NewsContent post={props.news} {...props}/>
           </Grid>
         </Grid>

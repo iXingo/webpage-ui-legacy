@@ -1,7 +1,7 @@
 import Marquee from 'react-marquee';
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Verify} from '../../components'
+import {Divider} from "@material-ui/core";
 
 
 const useStyles = makeStyles(theme => ({
@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
   prefix: {
     height: 18,
     padding: '0 10px',
-    color: '#1a73e8',
+    // color: '#1a73e8',
+    color: 'white',
     background: 'darkgrey',
   }
 }));
@@ -29,14 +30,14 @@ const MarqueeText = props => {
 
   return (
     <div className={classes.marque}>
-      <Verify></Verify>
       <div className={classes.prefix}>
-        NEWS:
+        NEWS
       </div>
       <Marquee loop={true} hoverToStop={true} text="
           😃 您当前登录的是星狗网。 🌹️ 星狗网是南京航空航天大学计算机科学与技术学院软件工程专业学生汪欣搭建的一个专注于资讯、娱乐、生活、心情技术分享新兴网络平台。
           😋️ 您当前登录的是星狗网。 🇨🇳️ 星狗网是南京航空航天大学计算机科学与技术学院软件工程专业学生汪欣搭建的一个专注于资讯、娱乐、生活、心情技术分享新兴网络平台。
         "/>
+        <Divider/>
     </div>
   );
 };
