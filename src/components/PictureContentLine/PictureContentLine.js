@@ -132,7 +132,7 @@ const PictureContentLine = props => {
                 <CardActions className={classes.readmore}>
                   <Typography size="small" color="primary">
                     <Link color="primary" component={RouterLink} to={card.link} underline="hover"
-                          variant="h6"> 更多关于"{card.title}"的信息...</Link>
+                          variant="h6"> 进一步了解"{card.title}"的信息...</Link>
                   </Typography>
                   <Typography size="small" color="primary">
                     <Link color="primary" component={RouterLink} to={card.link} underline="hover"

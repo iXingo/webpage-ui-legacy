@@ -62,7 +62,7 @@ const ServiceCard = props => {
           <Grid className={classes.statsItem} item>
             <Typography display="inline" variant="body2">
               <Link component="a" href={product.url} style={{paddingRight: 5}}>
-                查看详情 →
+                进一步了解 →
               </Link>
             </Typography>
           </Grid>

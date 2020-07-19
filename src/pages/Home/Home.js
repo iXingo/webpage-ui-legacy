@@ -80,7 +80,7 @@ const contributionSection = {
   textTitle: '星狗网的前世与今生',
   textContent: '2013年的暑期，汪师傅注册了第一个域名"wangxin.ml"(因为.ml与.cf是免费注册的域名服务)，并且在主机屋（免费使用的网站托管服务）使用Wordpress（一个基于PHP开发的全球流行的建站程序）搭建了星狗网的第一个版本',
   linkUrl: '',
-  linkText: '更多关于星狗网的故事',
+  linkText: '进一步了解星狗网的故事',
 };
 
 

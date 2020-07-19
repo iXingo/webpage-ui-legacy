@@ -1,6 +1,8 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Grid, Typography} from '@material-ui/core';
+import {Grid, IconButton, Typography} from '@material-ui/core';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
+import {withRouter} from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -10,6 +12,11 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 100,
     textAlign: 'center'
   },
+  contentHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingBototm: theme.spacing(2),
+  },
   image: {
     marginTop: 50,
     display: 'inline-block',
@@ -18,11 +25,22 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const NotFound = () => {
+const NotFound = props => {
+
+
+  const {history} = props;
+  const handleBack = () => {
+    history.goBack();
+  };
 
   const classes = useStyles();
   return (
     <div className={classes.root}>
+      <div className={classes.contentHeader}>
+        <IconButton onClick={handleBack}>
+          <ArrowBackIcon/>
+        </IconButton>
+      </div>
       <Grid container justify="center" spacing={4}>
         <Grid item lg={6} xs={12}>
           <div className={classes.content}>
@@ -39,4 +57,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default withRouter(NotFound);
