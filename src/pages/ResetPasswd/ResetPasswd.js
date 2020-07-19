@@ -12,50 +12,15 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.default,
-    height: theme.spacing(80)
+    height: theme.spacing(80),
+
   },
-  grid: {
-    height: '100%'
-  },
-  quoteContainer: {
-    [theme.breakpoints.down('md')]: {
-      display: 'none'
-    }
-  },
-  quote: {
-    backgroundColor: theme.palette.neutral,
-    height: '35vh',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundImage: 'url(https://img.ixingo.cn/sign-up.jpg)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
-  },
-  quoteInner: {
-    textAlign: 'center',
-    flexBasis: '600px'
-  },
-  quoteText: {
-    // color: theme.palette.white,
-    color: '#1a73e8',
-    fontWeight: 300
-  },
-  name: {
-    marginTop: theme.spacing(3),
-    // color: theme.palette.white
-    color: '#1a73e8',
-  },
-  bio: {
-    // color: theme.palette.white
-    color: '#1a73e8',
-  },
+
   contentContainer: {},
   content: {
-    height: '35vh',
     display: 'flex',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    textAlign: 'center'
   },
   contentHeader: {
     display: 'flex',
@@ -65,23 +30,6 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2)
   },
-  logoImage: {
-    marginLeft: theme.spacing(4)
-  },
-  contentBody: {
-    flexGrow: 1,
-    display: 'flex',
-    alignItems: 'center',
-    [theme.breakpoints.down('md')]: {
-      justifyContent: 'center'
-    }
-  },
-  title: {
-    marginTop: theme.spacing(3)
-  },
-  textField: {
-    marginTop: theme.spacing(2)
-  },
   reset: {
     marginTop: theme.spacing(6),
     paddingLeft: '16px',
@@ -89,7 +37,9 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    textAlign: 'center',
     flexDirection: 'column',
+    minWidth: 375
   },
   signUpButton: {
     margin: theme.spacing(4, 0),
@@ -113,36 +63,6 @@ const ResetPasswd = props => {
 
   return (
     <div className={classes.root}>
-      <div className={classes.quote}>
-        <div className={classes.quoteInner}>
-          <Typography
-            className={classes.quoteText}
-            variant="h1"
-          >
-            汪师傅:
-          </Typography>
-          <Typography
-            className={classes.quoteText}
-            variant="h1"
-          >
-            看见，好时光
-          </Typography>
-          <div className={classes.person}>
-            <Typography
-              className={classes.name}
-              variant="body1"
-            >
-              &copy; Copyright 2020
-            </Typography>
-            <Typography
-              className={classes.bio}
-              variant="body2"
-            >
-              Designed by Shawn Wang in Pudong New Area.
-            </Typography>
-          </div>
-        </div>
-      </div>
       <div className={classes.content}>
         <div className={classes.contentHeader}>
           <IconButton onClick={handleBack}>
@@ -151,13 +71,14 @@ const ResetPasswd = props => {
         </div>
 
         <div className={classes.reset}>
-          <Typography variant="h6">请您勿需担心，关于您和您的一切都不会丢失。</Typography>
+          <Typography variant="h2" style={{marginTop: 40}}>请您勿需担心，</Typography>
+          <Typography variant="h5" style={{marginBottom: 120}}>关于您和您的一切都不会丢失。</Typography>
           <TextField className={classes.field}
                      id="standard-full-width"
                      label="请输入您注册星狗网所使用的邮箱"
                      InputProps={{
                        startAdornment: (
-                         <InputAdornment position="staßrt">
+                         <InputAdornment position="start">
                            <AccountCircle/>
                          </InputAdornment>
                        ),

@@ -51,7 +51,7 @@ const FeaturedCardReversed = props => {
           {card.description}
         </Typography>
         <Button variant="outlined" size="large" color="inherit" onClick={clickUrl}>
-          查看更多...
+          进一步了解 →
         </Button>
       </Grid>
     </Grid>
