@@ -10,6 +10,7 @@ import {Verify} from '../../../../components';
 import {Instagram} from 'react-content-loader';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
+import Badge from "@material-ui/core/Badge";
 
 
 const useStyles = makeStyles(theme => ({
@@ -167,9 +168,20 @@ const PostHeader = props => {
       </Typography>
       <Typography variant="h6" className={classes.author}>
         <strong>作者简介：</strong>
-        <Avatar alt="文章作者" src={props.post.createdBy.headUrl} className={classes.avatar}/>
-        <strong>  {props.post.createdBy.name}</strong> <Verify/><span
-        className={classes.info}>{props.post.createdBy.verifiedContent}</span>
+        <Badge
+            overlap="circle"
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'right',
+            }}
+            className={classes.avatar}
+            badgeContent={<Verify  style={{height: 10, width: 10}}/>}
+        >
+          <Avatar alt="文章作者" src={props.post.createdBy.headUrl} />
+        </Badge>
+        {/*<Avatar alt="文章作者" src={props.post.createdBy.headUrl} className={classes.avatar}/>*/}
+        {/*<strong>  {props.post.createdBy.name}</strong> <Verify/>*/}
+        <span className={classes.info}>{props.post.createdBy.verifiedContent}</span>
       </Typography>
       <Divider/>
       <Typography variant="h6" gutterBottom className={classes.abstrat}>

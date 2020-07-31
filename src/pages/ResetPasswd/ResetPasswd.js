@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
@@ -7,6 +7,8 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
+import {passwdReset} from "../../util/APIUtils";
+import {notification} from "antd";
 
 
 const useStyles = makeStyles(theme => ({
@@ -41,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     minWidth: 375
   },
-  signUpButton: {
+  resetButton: {
     margin: theme.spacing(4, 0),
     width: '80%'
   },
@@ -55,48 +57,79 @@ const ResetPasswd = props => {
   const {history} = props;
 
   const classes = useStyles();
+  const [value, setValue] = useState('');
 
 
   const handleBack = () => {
     history.goBack();
   };
 
-  return (
-    <div className={classes.root}>
-      <div className={classes.content}>
-        <div className={classes.contentHeader}>
-          <IconButton onClick={handleBack}>
-            <ArrowBackIcon/>
-          </IconButton>
-        </div>
+  const handleChange = event => {
+    event.persist();
+    setValue(event.target.value);
+    console.log(event.target.value);
+  };
 
-        <div className={classes.reset}>
-          <Typography variant="h2" style={{marginTop: 40}}>请您勿需担心，</Typography>
-          <Typography variant="h5" style={{marginBottom: 120}}>关于您和您的一切都不会丢失。</Typography>
-          <TextField className={classes.field}
-                     id="standard-full-width"
-                     label="请输入您注册星狗网所使用的邮箱"
-                     InputProps={{
-                       startAdornment: (
-                         <InputAdornment position="start">
-                           <AccountCircle/>
-                         </InputAdornment>
-                       ),
-                     }}
-          />
-          <Button
-            className={classes.signUpButton}
-            color="primary"
-            fullWidth
-            size="large"
-            type="submit"
-            variant="contained"
-          >
-            立即找回密码
-          </Button>
+  const resetPaswd = event => {
+    event.preventDefault();
+    const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (!pattern.test(value)) {
+      notification["error"]({
+        message: '星狗网 Web App',
+        description: "邮箱格式不正确！"
+      });
+      return;
+    }
+    passwdReset(value).then(r => {
+          const type = r.code === 200 ? "success" : "error";
+          notification[type]({
+                message: '星狗网 Web App',
+                description: "服务器接收重置密码请求成功！" + r.data
+              }
+          )
+        }
+    );
+  }
+
+  return (
+      <div className={classes.root}>
+        <div className={classes.content}>
+          <div className={classes.contentHeader}>
+            <IconButton onClick={handleBack}>
+              <ArrowBackIcon/>
+            </IconButton>
+          </div>
+
+          <div className={classes.reset}>
+            <Typography variant="h2" style={{marginTop: 40}}>请您勿需担心，</Typography>
+            <Typography variant="h5" style={{marginBottom: 120}}>关于您和您的一切都不会丢失。</Typography>
+            <TextField className={classes.field}
+                       id="standard-full-width"
+                       label="请输入您注册星狗网所使用的邮箱"
+                       InputProps={{
+                         startAdornment: (
+                             <InputAdornment position="start">
+                               <AccountCircle/>
+                             </InputAdornment>
+                         ),
+                       }}
+                       onChange={handleChange}
+                       value={value}
+            />
+            <Button
+                className={classes.resetButton}
+                color="primary"
+                fullWidth
+                size="large"
+                type="submit"
+                variant="contained"
+                onClick={resetPaswd}
+            >
+              立即找回密码
+            </Button>
+          </div>
         </div>
       </div>
-    </div>
   );
 };
 

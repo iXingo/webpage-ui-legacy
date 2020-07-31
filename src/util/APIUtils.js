@@ -13,14 +13,14 @@ const request = (options) => {
   options = Object.assign({}, defaults, options);
 
   return fetch(options.url, options)
-    .then(response =>
-      response.json().then(json => {
-        if (!response.ok) {
-          return Promise.reject(json);
-        }
-        return json;
-      })
-    );
+      .then(response =>
+          response.json().then(json => {
+            if (!response.ok) {
+              return Promise.reject(json);
+            }
+            return json;
+          })
+      );
 };
 
 export function getAllPolls(page, size) {
@@ -68,6 +68,13 @@ export function signup(signupRequest) {
 export function checkUsernameAvailability(username) {
   return request({
     url: API_BASE_URL + "/user/checkUsernameAvailability?username=" + username,
+    method: 'GET'
+  });
+}
+
+export function passwdReset(email) {
+  return request({
+    url: API_BASE_URL + "/user/passwd/reset?email=" + email,
     method: 'GET'
   });
 }
@@ -198,6 +205,13 @@ export function getProject(id) {
   });
 }
 
+export function getAllProjects(id) {
+  return request({
+    url: API_BASE_URL + "/post/project/all",
+    method: 'GET'
+  });
+}
+
 export function addComment(CommentRequest) {
   return request({
     url: API_BASE_URL + "/comment/post",
@@ -206,10 +220,17 @@ export function addComment(CommentRequest) {
   });
 }
 
+export function joinProject(projectId) {
+  return request({
+    url: API_BASE_URL + "/project/member/" + projectId,
+    method: 'GET',
+  });
+}
+
 
 export function deleteComment(commentId) {
   return request({
-    url: API_BASE_URL + "/comment?commentId=" + commentId,
+    url: API_BASE_URL + "/comment/" + commentId,
     method: 'DELETE',
   });
 }
