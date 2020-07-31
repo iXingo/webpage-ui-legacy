@@ -5,6 +5,7 @@ export {default as Agreement} from './Agreement';
 export {default as Home} from './Home';
 export {default as Service} from './Service';
 export {default as Project} from './Project';
+export {default as PasswdReset} from './PasswdReset';
 export {default as ResetPasswd} from './ResetPasswd';
 export {default as SinglePost} from './SinglePost';
 export {default as Friend} from './Friend';

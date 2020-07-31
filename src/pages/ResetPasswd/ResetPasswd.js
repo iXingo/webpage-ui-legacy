@@ -1,28 +1,52 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import validate from 'validate.js';
 import {makeStyles} from '@material-ui/styles';
 import {Button, IconButton, TextField, Typography} from '@material-ui/core';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import {notification} from 'antd';
+import {resetPasswd} from '../../util/APIUtils';
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
-import InputAdornment from '@material-ui/core/InputAdornment';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import {passwdReset} from "../../util/APIUtils";
-import {notification} from "antd";
 
+const schema = {
+  password1: {
+    presence: {allowEmpty: false, message: 'is required'},
+    length: {
+      // minimum: 6,
+      maximum: 128
+    }
+  },
+  password2: {
+    presence: {allowEmpty: false, message: 'is required'},
+    length: {
+      // minimum: 6,
+      maximum: 128
+    }
+  }
+};
 
 const useStyles = makeStyles(theme => ({
   root: {
-    backgroundColor: theme.palette.background.default,
-    height: theme.spacing(80),
-
+    // backgroundColor: theme.palette.background.default,
+    maxWidth: 800,
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: 'auto',
   },
-
+  name: {
+    marginTop: theme.spacing(3),
+    // color: theme.palette.white,
+    color: '#1a73e8',
+  },
+  bio: {
+    // color: theme.palette.white,
+    color: '#1a73e8',
+  },
   contentContainer: {},
   content: {
     display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center'
+    flexDirection: 'column'
   },
   contentHeader: {
     display: 'flex',
@@ -32,67 +56,147 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: theme.spacing(2),
     paddingRight: theme.spacing(2)
   },
-  reset: {
-    marginTop: theme.spacing(6),
-    paddingLeft: '16px',
-    paddingRight: '16px',
-    display: 'flex',
+  logoImage: {
+    marginLeft: theme.spacing(4)
+  },
+  contentBody: {
     alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center',
-    flexDirection: 'column',
-    minWidth: 375
+    [theme.breakpoints.down('md')]: {
+      justifyContent: 'center'
+    },
+    margin: '120px auto',
+  },
+  form: {
+    paddingLeft: 100,
+    paddingRight: 100,
+    paddingBottom: 125,
+    flexBasis: 700,
+    [theme.breakpoints.down('sm')]: {
+      paddingLeft: theme.spacing(2),
+      paddingRight: theme.spacing(2)
+    }
+  },
+  title: {
+    marginTop: theme.spacing(3)
+  },
+  socialButtons: {
+    marginTop: theme.spacing(3),
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  socialIcon: {
+    marginRight: theme.spacing(1)
+  },
+  suggestion: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2)
+  },
+  textField: {
+    marginTop: theme.spacing(2)
   },
   resetButton: {
-    margin: theme.spacing(4, 0),
-    width: '80%'
+    margin: theme.spacing(2, 0)
   },
-  field: {
-    width: '80%'
-  }
+  tips: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  },
 }));
 
-const ResetPasswd = props => {
+const ResetPasswd = (props) => {
+
+  const {computedMatch: {params}} = props;
+
+  const {email, code} = params;
 
   const {history} = props;
 
   const classes = useStyles();
-  const [value, setValue] = useState('');
 
+  const [formState, setFormState] = useState({
+    isValid: false,
+    values: {},
+    touched: {},
+    errors: {}
+  });
+
+  useEffect(() => {
+    const errors = validate(formState.values, schema);
+    setFormState(formState => ({
+      ...formState,
+      isValid: !errors,
+      errors: errors || {}
+    }));
+  }, [formState.values]);
+
+  const handleChange = event => {
+    event.persist();
+    setFormState(formState => ({
+      ...formState,
+      values: {
+        ...formState.values,
+        [event.target.name]:
+            event.target.type === 'checkbox'
+                ? event.target.checked
+                : event.target.value
+      },
+      touched: {
+        ...formState.touched,
+        [event.target.name]: true
+      }
+    }));
+    console.log(formState.errors);
+  };
 
   const handleBack = () => {
     history.goBack();
   };
 
-  const handleChange = event => {
-    event.persist();
-    setValue(event.target.value);
-    console.log(event.target.value);
+  const handleReset = event => {
+    // history.push('/');
+    event.preventDefault();
+    const values = formState.values;
+    const {password1, password2} = values;
+    if(password1 && password1 && !password1===password2){
+      notification.error({
+        message: '星狗网 Web App',
+        description: '两次密码输入不一致！'
+      });
+    }
+    const resetPasswdRequest = Object.assign({}, values);
+    resetPasswdRequest.email = email;
+    resetPasswdRequest.resetCode = code;
+    resetPasswd(resetPasswdRequest)
+        .then(response => {
+          if(response.code===200){
+            notification.success({
+              message: '星狗网 Web App',
+              description: response.data
+            });
+          }else{
+            notification.error({
+              message: '星狗网 Web App',
+              description: response.data
+            });
+          }
+        })
+        .catch(error => {
+          notification.error({
+            message: '星狗网 Web App',
+            description: error.message || '对不起，好像发生了什么事情，请您稍后重试！'
+          });
+        });
   };
 
-  const resetPaswd = event => {
-    event.preventDefault();
-    const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-    if (!pattern.test(value)) {
-      notification["error"]({
-        message: '星狗网 Web App',
-        description: "邮箱格式不正确！"
-      });
-      return;
-    }
-    passwdReset(value).then(r => {
-          const type = r.code === 200 ? "success" : "error";
-          notification[type]({
-                message: '星狗网 Web App',
-                description: "服务器接收重置密码请求成功！" + r.data
-              }
-          )
-        }
-    );
-  }
+  const hasError = field => !!(formState.touched[field] && formState.errors[field]);
 
   return (
       <div className={classes.root}>
+
         <div className={classes.content}>
           <div className={classes.contentHeader}>
             <IconButton onClick={handleBack}>
@@ -100,33 +204,60 @@ const ResetPasswd = props => {
             </IconButton>
           </div>
 
-          <div className={classes.reset}>
-            <Typography variant="h2" style={{marginTop: 40}}>请您勿需担心，</Typography>
-            <Typography variant="h5" style={{marginBottom: 120}}>关于您和您的一切都不会丢失。</Typography>
-            <TextField className={classes.field}
-                       id="standard-full-width"
-                       label="请输入您注册星狗网所使用的邮箱"
-                       InputProps={{
-                         startAdornment: (
-                             <InputAdornment position="start">
-                               <AccountCircle/>
-                             </InputAdornment>
-                         ),
-                       }}
-                       onChange={handleChange}
-                       value={value}
-            />
-            <Button
-                className={classes.resetButton}
-                color="primary"
-                fullWidth
-                size="large"
-                type="submit"
-                variant="contained"
-                onClick={resetPaswd}
+          <div className={classes.contentBody}>
+            <form
+                className={classes.form}
+                onSubmit={handleReset}
             >
-              立即找回密码
-            </Button>
+              <Typography
+                  align="center"
+                  className={classes.suggestion}
+                  color="primary"
+                  variant="h1"
+              >
+                重置密码， 安全无虞。
+              </Typography>
+
+              <TextField
+                  className={classes.textField}
+                  error={hasError('password1')}
+                  fullWidth
+                  helperText={
+                    hasError('password1') ? formState.errors.password2[0] : null
+                  }
+                  label="密码"
+                  name="password1"
+                  onChange={handleChange}
+                  type="password"
+                  value={formState.values.password1 || ''}
+                  variant="outlined"
+              />
+              <TextField
+                  className={classes.textField}
+                  error={hasError('password2')}
+                  fullWidth
+                  helperText={
+                    hasError('password2') ? formState.errors.password2[0] : null
+                  }
+                  label="请重复您的密码"
+                  name="password2"
+                  onChange={handleChange}
+                  type="password"
+                  value={formState.values.password2 || ''}
+                  variant="outlined"
+              />
+              <Button
+                  className={classes.resetButton}
+                  color="primary"
+                  disabled={!formState.isValid}
+                  fullWidth
+                  size="large"
+                  type="submit"
+                  variant="contained"
+              >
+                重置密码
+              </Button>
+            </form>
           </div>
         </div>
       </div>

@@ -79,6 +79,14 @@ export function passwdReset(email) {
   });
 }
 
+export function resetPasswd(resetRequest) {
+  return request({
+    url: API_BASE_URL + "/user/reset/passwd",
+    method: 'POST',
+    body: JSON.stringify(resetRequest)
+  });
+}
+
 export function checkEmailAvailability(email) {
   return request({
     url: API_BASE_URL + "/user/checkEmailAvailability?email=" + email,

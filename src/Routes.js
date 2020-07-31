@@ -18,6 +18,7 @@ import {
   Privacy as PrivacyPage,
   Service as ServicePage,
   Project as ProjectPage,
+  PasswdReset as PasswdResetPage,
   ResetPasswd as ResetPasswdPage,
   SignIn as SignInPage,
   SignUp as SignUpPage,
@@ -138,11 +139,18 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-          component={ResetPasswdPage}
+          component={PasswdResetPage}
           exact
           layout={MinimalLayout}
           path="/reset-passwd"
           {...this.props}
+        />
+        <RouteWithLayout
+            component={ResetPasswdPage}
+            exact
+            layout={MinimalLayout}
+            path="/pass_reset/:email/:code"
+            {...this.props}
         />
         <RouteWithLayout
           component={AgreementPage}
