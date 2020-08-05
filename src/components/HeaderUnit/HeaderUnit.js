@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {notification} from 'antd';
+import {joinProject} from "../../util/APIUtils";
 
 
 const useStyles = makeStyles(theme => ({
@@ -43,23 +44,34 @@ const useStyles = makeStyles(theme => ({
 
 const HeaderUnit = props => {
 
-  const {project, history} = props;
+  const {project, history, currentUser} = props;
   const classes = useStyles();
 
-  const joinProject = (name) => {
-    const notificationType = "success";
-    notification[notificationType]({
-      message: '星狗网 Web App',
-      description: '加入计划【' + name + '】成功！',
-    });
+  const join = (project) => {
+    if(!currentUser){
+      notification.error({
+        message: '星狗网 Web App',
+        description: '您未登录！',
+      });
+      return;
+    }
+    joinProject(project.id).then( response =>
+      notification.success({
+        message: '星狗网 Web App',
+        description: '祝贺！加入计划【' + project.name + '】成功！',
+      })
+    ).catch(error =>
+      notification.error({
+        message: '星狗网 Web App',
+        description: '加入计划【' + project.id + '】失败！请联系 @程序员汪师傅',
+      }))
   };
 
-  const inspectProject = (name) => {
-    const notificationType = "success";
+  const inspect = (project) => {
     history.push("/index");
-    notification[notificationType]({
+    notification.success({
       message: '星狗网 Web App',
-      description: '您正在查看【' + name + '】计划！',
+      description: '您正在查看【' + project.name + '】计划！但是我还没开发完成',
     });
   };
 
@@ -77,12 +89,12 @@ const HeaderUnit = props => {
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
-                <Button variant="outlined" color="primary" onClick={() => inspectProject(project.name)}>
+                <Button variant="outlined" color="primary" onClick={() => inspect(project)}>
                   查看计划介绍
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant="contained" color="primary" onClick={() => joinProject(project.name)}>
+                <Button variant="contained" color="primary" onClick={() => join(project)}>
                   加入该计划
                 </Button>
               </Grid>
