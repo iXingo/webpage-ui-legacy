@@ -14,30 +14,25 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const tutorialSteps = [
   {
-    label: '我的青春消亡史',
-    imgPath:
-      'https://img.ixingo.cn/wangxin.jpg',
+    label: '琪叔婚礼，好友相聚',
+    imgPath: 'https://img.ixingo.cn/news/banner-nanjing-wedding.png',
   },
   {
-    label: 'Python讲解',
-    imgPath:
-      'https://img.ixingo.cn/shanghai.jpg',
+    label: '夜观天象，双星半月',
+    imgPath: 'https://img.ixingo.cn/news/banner-shanghai-stars.png',
   },
   {
-    label: '测试文章',
-    imgPath:
-      'https://img.ixingo.cn/shanghai2.jpg',
+    label: '7月，蓝天遇见白云',
+    imgPath: 'https://img.ixingo.cn/news/shanghai-clould-7.png',
   },
   {
-    label: '每个人',
-    imgPath:
-      'https://img.ixingo.cn/friends.jpg',
-  },
-  {
-    label: '这实验室',
-    imgPath:
-      'http://wpimg.ixingo.cn/wp-content/uploads/2015/07/new.jpg',
-  },
+    label: '2020，新年约旧友',
+    imgPath: 'https://img.ixingo.cn/news/banner-2020-new-year.png',
+  }
+  // {
+  //   label: '7月，上海蓝天白云',
+  //   imgPath: 'https://img.ixingo.cn/news/shanghai-clould-7.png',
+  // },
 ];
 
 const useStyles = makeStyles(theme => ({
