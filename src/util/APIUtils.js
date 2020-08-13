@@ -231,7 +231,7 @@ export function addComment(CommentRequest) {
 export function joinProject(projectId) {
   return request({
     url: API_BASE_URL + "/project/member/" + projectId,
-    method: 'GET',
+    method: 'POST',
   });
 }
 
