@@ -105,6 +105,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  tip : {
+    marginTop: 30,
+    marginBottom: 60
+  }
 }));
 
 const ResetPasswd = (props) => {
@@ -177,6 +181,7 @@ const ResetPasswd = (props) => {
               message: '星狗网 Web App',
               description: response.data
             });
+            history.push('/sign-in');
           }else{
             notification.error({
               message: '星狗网 Web App',
@@ -216,6 +221,14 @@ const ResetPasswd = (props) => {
                   variant="h1"
               >
                 重置密码， 安全无虞。
+              </Typography>
+              <Typography
+                align="center"
+                className={classes.tip}
+                color="textSecondary"
+                variant="h5"
+              >
+                <span role={"img"} aria-label={"博文"} className={classes.emoji}>🔐</span> 您正在选择充值您的登录密码。如果这不是您的操作，可能您的账号已经泄露， 请联系@程序员汪师傅处理此事。
               </Typography>
 
               <TextField
