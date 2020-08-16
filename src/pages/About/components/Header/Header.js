@@ -60,7 +60,7 @@ const Header = props => {
           gutterBottom
           variant="h1"
         >
-          星狗网 - 看见,好时光.
+          星狗网 | 看见，好时光 。
         </Typography>
         <Typography
           align="center"
