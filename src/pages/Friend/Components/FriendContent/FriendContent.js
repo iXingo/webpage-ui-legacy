@@ -50,6 +50,12 @@ const useStyles = makeStyles(theme => ({
     },
     intro: {
       fontSize: 14,
+    },
+    title: {
+      textAlign: 'center',
+      fontSize: 14,
+      color: 'black',
+      margin: '10px 0'
     }
   })
 );
@@ -81,6 +87,9 @@ const People = props => {
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" className={classes.name}>
               {friend.name}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p" className={classes.title}>
+              {friend.title}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p" className={classes.intro}>
               {friend.description}
