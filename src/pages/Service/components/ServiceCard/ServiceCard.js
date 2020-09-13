@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
+import {Link as RouterLink} from 'react-router-dom';
 import {Card, CardActions, CardContent, Divider, Grid, Typography} from '@material-ui/core';
 import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 import Link from "@material-ui/core/Link";
@@ -61,9 +62,9 @@ const ServiceCard = props => {
         <Grid container justify="space-between">
           <Grid className={classes.statsItem} item>
             <Typography display="inline" variant="body2">
-              <Link component="a" href={product.url} style={{paddingRight: 5}}>
+              <RouterLink to={product.url} style={{paddingRight: 5}}>
                 进一步了解 →
-              </Link>
+              </RouterLink>
             </Typography>
           </Grid>
           <Grid className={classes.statsItem} item>
