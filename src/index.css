@@ -141,3 +141,14 @@ h6 {
     letter-spacing: -0.05px;
     line-height: 20px;
 }
+
+blockquote {
+    padding: 20px;
+    background-color: #fafafa;
+    border-left: 6px solid #1a73e8;
+    word-break: break-word;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+    margin: 0 0 20px;
+}
