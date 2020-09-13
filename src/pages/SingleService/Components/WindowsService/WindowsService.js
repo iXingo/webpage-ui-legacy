@@ -205,7 +205,7 @@ const WindowsService = props => {
       <Divider className={classes.divider}/>
 
       <TitleContent context={title1}/>
-      <img src={'https://developer.apple.com/app-store/tell-us/images/hero-large.jpg'} alt={'Developer'}
+      <img src={'https://img.ixingo.cn/service/hero-large.jpg'} alt={'Developer'}
            className={classes.focus}/>
 
 
