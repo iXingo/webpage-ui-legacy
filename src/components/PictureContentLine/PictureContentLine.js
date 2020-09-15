@@ -62,42 +62,50 @@ const cards = [
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Simon Shi",
-    content: "Simon与汪师傅相识于2011年。"
+    content: "Simon与汪师傅相识于2011年。",
+    description: "Simon Shi与汪师傅曾经是对门宿舍的同班同学， 并且在之后的学习和考研过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Heaven Xia",
-    content: "Heaven与汪师傅相识于2015。"
+    content: "Heaven与汪师傅相识于2015。",
+    description: "Simon Shi与汪师傅曾经是研究生同门同学， 并且在工作之后的前两年成为室友，在此过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Doctor Xiong",
-    content: "Xiong与汪师傅相识于2007年。"
+    content: "Xiong与汪师傅相识于2007年。",
+    description: "Doctor Xiong与汪师傅曾经是高中同学，并且是前后桌，在此过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Justin Qian",
-    content: "Justin与汪师傅相识于2011年。"
+    content: "Justin与汪师傅相识于2011年。",
+    description: "Justin Qian与汪师傅曾经是大学同学与室友，并且在共同的学习和生活过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Jacob Zhang",
-    content: "Jacob与汪师傅相识于2011年。"
+    content: "Jacob与汪师傅相识于2011年。",
+    description: "Jacob Zhang与汪师傅曾经是大学同学/室友，并且在共同的学习、生活、社团工作过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Flag Hong",
-    content: "Flag与汪师傅相识于2011年。"
+    content: "Flag与汪师傅相识于2011年。",
+    description: "Flag Hong与汪师傅曾经是大学同学/室友，并且在共同的学习、生活、考研过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Sevn Sun",
-    content: "Sevn与汪师傅相识于2015年。"
+    content: "Sevn与汪师傅相识于2015年。",
+    description: "Sevn Sun与汪师傅曾经是研究生同门/室友，并且在共同的学习、生活过程中结下了深厚的友谊。"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Yongye Li",
-    content: "Yongye与汪师傅相识于2008年。"
+    content: "Yongye与汪师傅相识于2008年。",
+    description: "Sevn Sun与汪师傅曾经是高中同桌，并且在共同的学习过程中结下了深厚的友谊。"
   }
 ];
 
@@ -125,14 +133,15 @@ const PictureContentLine = props => {
                     {card.title}
                   </Typography>
                   <Typography color="textSecondary">
-                    {card.content}
+                    {card.content}  <br/>
+                    {card.description}
                   </Typography>
                 </CardContent>
                 <Divider/>
                 <CardActions className={classes.readmore}>
                   <Typography size="small" color="primary">
                     <Link color="primary" component={RouterLink} to={card.link} underline="hover"
-                          variant="h6"> 进一步了解"{card.title}"的信息...</Link>
+                          variant="caption"> 进一步了解"{card.title}"的信息...</Link>
                   </Typography>
                   <Typography size="small" color="primary">
                     <Link color="primary" component={RouterLink} to={card.link} underline="hover"
