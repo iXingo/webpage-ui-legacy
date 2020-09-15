@@ -16,6 +16,7 @@ import {
   Carousel,
   Subscribe,
 } from '../../components';
+import ContentTitle from "../../components/ContentTitle";
 // import Divider from '@material-ui/core/Divider';
 // import NotAuth from '../NotAuth';
 
@@ -126,7 +127,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const cards = [1, 2, 3];
 
 
 // const featuredPosts = [
@@ -165,7 +166,23 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 //   imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
 //   url: '/friends',
 // };
+const newsSectionWork= {
+    sectionMain: '工作新闻',
+    sectionTitle: '技术新潮流',
+    sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
+}
 
+const newsSectionLife= {
+  sectionMain: '生活新闻',
+  sectionTitle: '生活新风尚',
+  sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
+}
+
+const newsSectionFriend= {
+  sectionMain: '好友',
+  sectionTitle: '好友新动向',
+  sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
+}
 
 const News = props => {
 
@@ -250,7 +267,22 @@ const News = props => {
           {/*</Grid>*/}
 
           {/*<Title/>*/}
+          <ContentTitle context={newsSectionWork}/>
+          <Grid container spacing={4} className={classes.cardGrids}>
+            {cards.map(card => (
+              <BigMediaCard card={card} {...props}/>
+            ))}
+          </Grid>
 
+          <ContentTitle context={newsSectionLife}/>
+          <Grid container spacing={4} className={classes.cardGrids}>
+            {cards.map(card => (
+              <BigMediaCard card={card} {...props}/>
+            ))}
+          </Grid>
+
+
+          <ContentTitle context={newsSectionFriend}/>
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
               <BigMediaCard card={card} {...props}/>
