@@ -226,6 +226,18 @@ const FriendPage = props => {
             </span>
           </div>
 
+          {/*<div style={{position: 'relative', width: '100%'}}>*/}
+          {/*  <img src={"https://img.ixingo.cn/web/suzhou.jpeg"} alt={''}/>*/}
+          {/*  <span className={classes.float}>*/}
+          {/*    <div className={classes.title}>*/}
+          {/*      与远见卓识的你一起在生活中勇攀高峰。*/}
+          {/*    </div>*/}
+          {/*    <div className={classes.content}>*/}
+          {/*    为 Apple 的创新产品构建坚实基础。作为团队中的一员，你将与世界一流的研究人员交流与合作，利用顶尖计算、存储和分析工具解决机器学习领域中极具挑战性的难题。在 Apple，你的团队可以在硬件、软件、算法等所有领域全面创新，一切机会尽在眼前。工作领域包括后端工程、数据科学、平台工程和系统工程。*/}
+          {/*    </div>*/}
+          {/*  </span>*/}
+          {/*</div>*/}
+
 
           <div>
             <Paper className={classes.list}>
