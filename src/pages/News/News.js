@@ -166,22 +166,29 @@ const cards = [1, 2, 3];
 //   imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
 //   url: '/friends',
 // };
-const newsSectionWork= {
-    sectionMain: '工作新闻',
+const techSection= {
+    sectionMain: '技术新闻',
     sectionTitle: '技术新潮流',
-    sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
+    sectionContent: '那帮大佬又搞出什么玩意儿了，我真的学不动了。'
 }
 
-const newsSectionLife= {
+const lifeSection= {
   sectionMain: '生活新闻',
   sectionTitle: '生活新风尚',
-  sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
+  sectionContent: '最近有啥好玩的，有啥好看的，有啥新东西。'
 }
 
-const newsSectionFriend= {
+const friendSection= {
   sectionMain: '好友',
   sectionTitle: '好友新动向',
-  sectionContent: '来都来了，为什么不顺势注册一波呢? 帅/好看的人都已经注册了, 而丑的人还正在犹豫...'
+  sectionContent: '这些优秀的年轻人们又闹出了什么新花样。'
+}
+
+
+const workSection= {
+  sectionMain: '工作',
+  sectionTitle: '工作新动态',
+  sectionContent: '作为一名社畜，工作以及公司又有啥新动静。'
 }
 
 const News = props => {
@@ -223,80 +230,36 @@ const News = props => {
         </Typography>
         <main>
 
-          {/* Main featured post */}
           <Carousel/>
 
-          {/*<Expansion/>*/}
-
-
-          {/*<Paper className={classes.list}>*/}
-          {/*  <MainFeaturedPost card={card1} {...props}/>*/}
-          {/*</Paper>*/}
-
-          {/*<Paper className={classes.list}>*/}
-          {/*  <FeaturedCardReversed card={card2} {...props}/>*/}
-          {/*</Paper>*/}
-
-          {/*<Paper className={classes.list}>*/}
-          {/*  <FeaturedCard card={card1} {...props}/>*/}
-          {/*</Paper>*/}
-
-
-          {/*<Paper className={classes.list}>*/}
-          {/*  <FeaturedList/>*/}
-          {/*</Paper>*/}
-
-          {/*<div className={classes.list}>*/}
-          {/*  <FeaturedContent/>*/}
-          {/*</div>*/}
-
-
-          {/*/!* End main featured post *!/*/}
-          {/*<PostCard/>*/}
-          {/*/!* Sub featured posts *!/*/}
-          {/*<Grid container spacing={4}>*/}
-          {/*  {featuredPosts.map(post => (*/}
-          {/*    <SmallPostCard post={post} {...props}/>*/}
-          {/*  ))}*/}
-          {/*</Grid>*/}
-          {/*/!* End hero unit *!/*/}
-          {/*<Grid container spacing={4} className={classes.cardGrids}>*/}
-          {/*  {cards.map(card => (*/}
-          {/*    <MediaCard card={card} {...props}/>*/}
-          {/*  ))}*/}
-          {/*</Grid>*/}
-
-          {/*<Title/>*/}
-          <ContentTitle context={newsSectionWork}/>
+          <ContentTitle context={techSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
               <BigMediaCard card={card} {...props}/>
             ))}
           </Grid>
 
-          <ContentTitle context={newsSectionLife}/>
+          <ContentTitle context={lifeSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
               <BigMediaCard card={card} {...props}/>
             ))}
           </Grid>
 
-
-          <ContentTitle context={newsSectionFriend}/>
+          <ContentTitle context={friendSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards.map(card => (
               <BigMediaCard card={card} {...props}/>
             ))}
           </Grid>
 
-          {/*<Grid container spacing={4} className={classes.cardGrid}>*/}
-          {/*  <Grid item xs={12} md={6}>*/}
-          {/*    <SummaryCard/>*/}
-          {/*  </Grid>*/}
-          {/*  <Grid item xs={12} md={6}>*/}
-          {/*    <SummaryCard/>*/}
-          {/*  </Grid>*/}
-          {/*</Grid>*/}
+          <ContentTitle context={workSection}/>
+          <Grid container spacing={4} className={classes.cardGrids}>
+            {cards.map(card => (
+              <BigMediaCard card={card} {...props}/>
+            ))}
+          </Grid>
+
         </main>
       </Container>
       {/* Footer */}

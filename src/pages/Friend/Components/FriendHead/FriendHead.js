@@ -51,7 +51,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 20,
   },
   pro: {
-    // marginTop: 64,
+    marginTop: 64,
     // marginBottom: 20,
     fontSize: 54,
     textAlign: 'center',
@@ -62,13 +62,16 @@ const useStyles = makeStyles(theme => ({
   },
 
   subpro: {
+    marginTop: 20,
     textAlign: 'center',
-    fontWeight: 500,
+    fontWeight: 400,
     color: 'black',
   },
   subtext: {
+    marginTop: 20,
     textAlign: 'center',
     color: 'gray',
+    fontWeight: 400
   },
   id: {
     textAlign: 'center',

@@ -6,6 +6,7 @@ import FriendList from './Components/FriendList';
 import {makeStyles} from '@material-ui/core/styles';
 import NotAuth from '../NotAuth';
 import ContentTitle from "../../components/ContentTitle/ContentTitle";
+import FriendPage from "./FriendPage";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -37,6 +38,7 @@ const Friend = props => {
   return (
     <div>
       <CssBaseline/>
+      <FriendPage />
       <FriendHead {...props}/>
 
       <ContentTitle context={SchoolFriend}/>

@@ -148,7 +148,7 @@ const PostHeader = props => {
 
   moment.locale();
 
-
+  console.log(props.post.creationDateTime)
   return (
     <div>
       <Typography className={classes.title} variant="h1">
