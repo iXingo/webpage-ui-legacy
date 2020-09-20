@@ -2,3 +2,4 @@ node_modules
 .idea
 build
 src\constants\index.js
+.DS_Store
