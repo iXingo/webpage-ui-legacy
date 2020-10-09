@@ -169,15 +169,15 @@ const PostHeader = props => {
       <Typography variant="h6" className={classes.author}>
         <strong>作者简介：</strong>
         <Badge
-            overlap="circle"
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'right',
-            }}
-            className={classes.avatar}
-            badgeContent={<Verify  style={{height: 10, width: 10}}/>}
+          overlap="circle"
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+          }}
+          className={classes.avatar}
+          badgeContent={<Verify style={{height: 10, width: 10}}/>}
         >
-          <Avatar alt="文章作者" src={props.post.createdBy.headUrl} />
+          <Avatar alt="文章作者" src={props.post.createdBy.headUrl}/>
         </Badge>
         {/*<Avatar alt="文章作者" src={props.post.createdBy.headUrl} className={classes.avatar}/>*/}
         {/*<strong>  {props.post.createdBy.name}</strong> <Verify/>*/}

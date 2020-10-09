@@ -106,7 +106,7 @@ const useStyles = makeStyles(theme => ({
   },
   author: {
     color: 'rgba(0,0,0,0.3)',
-     fontWeight: 500,
+    fontWeight: 500,
     marginBottom: 20
   },
   avatar: {
@@ -168,17 +168,20 @@ const NewsMain = props => {
         <Grid container className={classes.mainGrid}>
           <Grid item xs={12} md={8} className={classes.singleNews}>
             <div>
-              <Typography className={classes.title} >
+              <Typography className={classes.title}>
                 {props.news.title}
               </Typography>
-              <Typography className={classes.author} >
-                {props.news.createdBy.name} <a style={{color: '#576b95', padding: '0 8px'}}>星狗网</a> {moment(props.news.creationDateTime).format('LLLL')}
+              <Typography className={classes.author}>
+                {props.news.createdBy.name} <a style={{
+                color: '#576b95',
+                padding: '0 8px'
+              }}>星狗网</a> {moment(props.news.creationDateTime).format('LLLL')}
               </Typography>
               <img src={props.news.picUrl} alt={props.news.title}/>
-              <Typography className={classes.authorInfo} >
+              <Typography className={classes.authorInfo}>
                 作者 ｜ {props.news.createdBy.name} ｜ {props.news.createdBy.verifiedContent}
               </Typography>
-              <Typography className={classes.summary} >
+              <Typography className={classes.summary}>
                 <strong>导读:</strong> {props.news.summary}
               </Typography>
             </div>

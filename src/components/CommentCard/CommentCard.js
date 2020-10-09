@@ -1,24 +1,23 @@
 import React from 'react';
-import {Link as RouterLink} from 'react-router-dom';
+import {Link as RouterLink, withRouter} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
 import {makeStyles} from '@material-ui/styles';
-import {withRouter} from "react-router-dom";
 import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardActionArea,
-  CardMedia,
   Avatar,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardHeader,
+  CardMedia,
+  Divider,
   Link,
-  Typography,
-  Divider
+  Typography
 } from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
-import {Reactions, ReplyBubble, CommentForm} from './components';
+import {CommentForm, Reactions, ReplyBubble} from './components';
 import {Instagram} from "@material-ui/icons";
 import Grow from "@material-ui/core/Grow";
 import SignInCard from "../SignInCard";
@@ -79,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     backgroundPosition: '0 -50px',
     marginLeft: 2,
   },
-  veriedIcon : {
+  veriedIcon: {
     paddingLeft: 5
   },
   caption: {

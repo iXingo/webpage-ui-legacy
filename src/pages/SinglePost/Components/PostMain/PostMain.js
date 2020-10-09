@@ -153,54 +153,54 @@ const PostMain = props => {
   const classes = useStyles();
 
   return (
-      <div className={classes.root}>
-        <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
-          <div className={classes.quoteInner}>
-            {/* <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
+    <div className={classes.root}>
+      <div className={classes.quote} style={{backgroundImage: `url(${props.post.picUrl})`,}}>
+        <div className={classes.quoteInner}>
+          {/* <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
           <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography> */}
-            <div className={classes.person}>
-              <Typography className={classes.name} variant="body1"><span className={classes.copyright}>&copy; Copyright 2020</span></Typography>
-              <Typography className={classes.bio} variant="body2"><span className={classes.copyright}>Designed by Shawn Wang in Pudong New Area.</span></Typography>
-            </div>
+          <div className={classes.person}>
+            <Typography className={classes.name} variant="body1"><span className={classes.copyright}>&copy; Copyright 2020</span></Typography>
+            <Typography className={classes.bio} variant="body2"><span className={classes.copyright}>Designed by Shawn Wang in Pudong New Area.</span></Typography>
           </div>
         </div>
-        <div className={classes.content}>
-          <Grid container className={classes.mainGrid}>
-            {/* Main content */}
-            <Grid item xs={12} md={8} className={classes.singlePost}>
-              <PostHeader post={props.post} {...props}/>
-            </Grid>
-            <Grid item xs={12} md={8} className={classes.singlePost}>
-              <PostContent post={props.post} {...props}> </PostContent>
-              <Divider/>
-              <Typography className={classes.end} variant="subtitle2" align={"center"}>- 全文结束 -</Typography>
-              <Divider/>
-              <Alert variant="filled" severity="info">
-                <AlertTitle variant="filled">版权声明</AlertTitle>
-                凡本网注明“来源：星狗网”的所有作品，均为汪师傅合法拥有版权或有权使用的作品，未经汪师傅授权不得转载、摘编或利用其它方式使用上述作品。已经汪师傅授权使用作品的，应在授权范围内使用，并注明“来源：星狗网”。违反上述声明者，汪师傅将追究其相关法律责任。
-                凡本网注明“来源：XXX（非星狗网）”的作品，均转载自其它媒体，转载目的在于传递更多信息，并不代表汪师傅赞同其观点和对其真实性负责。
-                所有信息来源为星狗网的信息仅代表汪师傅个人观点, 与汪师傅本人所在的组织/团体/公司等任何其他实体均无关。
-              </Alert>
-              <Divider/>
-
-              <div style={{margin: 20}}>
-                <Typography variant="h4" align={"center"}>
-                  <QRCode value={"https://www.ixingo.com.cn/post/" + props.post.id}/>
-                </Typography>
-                <Typography variant="h6" align={"center"}>
-                  本文二维码
-                </Typography>
-              </div>
-              <Divider/>
-
-              <Typography className={classes.commentTitle} variant="h4"
-                          align={"center"}><strong>评论</strong>见真知</Typography>
-              <CommentCard className={classes.comment} comment={props.post} handleComment={handleComment}
-                           handleDeleteComment={handleDeleteComment} {...props}/>
-            </Grid>
-          </Grid>
-        </div>
       </div>
+      <div className={classes.content}>
+        <Grid container className={classes.mainGrid}>
+          {/* Main content */}
+          <Grid item xs={12} md={8} className={classes.singlePost}>
+            <PostHeader post={props.post} {...props}/>
+          </Grid>
+          <Grid item xs={12} md={8} className={classes.singlePost}>
+            <PostContent post={props.post} {...props}> </PostContent>
+            <Divider/>
+            <Typography className={classes.end} variant="subtitle2" align={"center"}>- 全文结束 -</Typography>
+            <Divider/>
+            <Alert variant="filled" severity="info">
+              <AlertTitle variant="filled">版权声明</AlertTitle>
+              凡本网注明“来源：星狗网”的所有作品，均为汪师傅合法拥有版权或有权使用的作品，未经汪师傅授权不得转载、摘编或利用其它方式使用上述作品。已经汪师傅授权使用作品的，应在授权范围内使用，并注明“来源：星狗网”。违反上述声明者，汪师傅将追究其相关法律责任。
+              凡本网注明“来源：XXX（非星狗网）”的作品，均转载自其它媒体，转载目的在于传递更多信息，并不代表汪师傅赞同其观点和对其真实性负责。
+              所有信息来源为星狗网的信息仅代表汪师傅个人观点, 与汪师傅本人所在的组织/团体/公司等任何其他实体均无关。
+            </Alert>
+            <Divider/>
+
+            <div style={{margin: 20}}>
+              <Typography variant="h4" align={"center"}>
+                <QRCode value={"https://www.ixingo.com.cn/post/" + props.post.id}/>
+              </Typography>
+              <Typography variant="h6" align={"center"}>
+                本文二维码
+              </Typography>
+            </div>
+            <Divider/>
+
+            <Typography className={classes.commentTitle} variant="h4"
+                        align={"center"}><strong>评论</strong>见真知</Typography>
+            <CommentCard className={classes.comment} comment={props.post} handleComment={handleComment}
+                         handleDeleteComment={handleDeleteComment} {...props}/>
+          </Grid>
+        </Grid>
+      </div>
+    </div>
   );
 };
 

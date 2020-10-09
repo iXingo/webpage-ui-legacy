@@ -2,8 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import {withRouter} from 'react-router-dom';
-import {Link as RouterLink} from 'react-router-dom';
+import {Link as RouterLink, withRouter} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grow from '@material-ui/core/Grow';
 import Button from '@material-ui/core/Button';
@@ -85,11 +84,11 @@ const PicturePicture = props => {
   const classes = useStyles();
   const {history} = props;
 
-  const clickLeft = () =>{
+  const clickLeft = () => {
     history.push(props.context.linkUrlLeft);
   }
 
-  const clickRight = () =>{
+  const clickRight = () => {
     history.push(props.context.linkUrlRight);
   }
 

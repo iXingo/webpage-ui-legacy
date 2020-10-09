@@ -23,13 +23,13 @@ const Friend = props => {
   if (!props.isAuthenticated) return <NotAuth/>;
 
 
-  const SchoolFriend= {
+  const SchoolFriend = {
     sectionMain: '学生时代',
     sectionTitle: '君子淡如水，岁久情愈真。',
     sectionContent: '从学生时代相识的旧友伙伴，久经考验的好友。'
   }
 
-  const SocietyFriend= {
+  const SocietyFriend = {
     sectionMain: '工作生涯',
     sectionTitle: '山河不足重，重在遇知已。',
     sectionContent: '初入江湖的新知， 在这山长水远的江湖遇见的同行人。'
@@ -38,7 +38,7 @@ const Friend = props => {
   return (
     <div>
       <CssBaseline/>
-      <FriendPage />
+      <FriendPage/>
       <FriendHead {...props}/>
 
       <ContentTitle context={SchoolFriend}/>

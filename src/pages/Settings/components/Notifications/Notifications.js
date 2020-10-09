@@ -1,19 +1,19 @@
-import React, { Fragment } from 'react';
+import React, {Fragment} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardActions,
-  Grid,
-  FormControlLabel,
-  Checkbox,
-  Typography,
   Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  Checkbox,
+  colors,
   Divider,
-  colors
+  FormControlLabel,
+  Grid,
+  Typography
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Notifications = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
 
@@ -41,8 +41,8 @@ const Notifications = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader title="Notifications" />
-      <Divider />
+      <CardHeader title="Notifications"/>
+      <Divider/>
       <CardContent>
         <form>
           <Grid
@@ -79,7 +79,7 @@ const Notifications = props => {
                 label="Email alerts"
               />
               <FormControlLabel
-                control={<Checkbox color="primary" />}
+                control={<Checkbox color="primary"/>}
                 label="Push Notifications"
               />
               <FormControlLabel
@@ -149,7 +149,7 @@ const Notifications = props => {
           </Grid>
         </form>
       </CardContent>
-      <Divider />
+      <Divider/>
       <CardActions>
         <Button
           className={classes.saveButton}

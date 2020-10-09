@@ -100,7 +100,8 @@ const PictureItems = props => {
       <CssBaseline/>
       <ContentTitleReversed context={props.context}/>
       <div className={classes.button}>
-        <Button variant="outlined" color="primary" className={classes.buttonContent} onClick={() => handleLink(props.context.linkUrl)} >
+        <Button variant="outlined" color="primary" className={classes.buttonContent}
+                onClick={() => handleLink(props.context.linkUrl)}>
           {props.context.linkText} →
         </Button>
       </div>

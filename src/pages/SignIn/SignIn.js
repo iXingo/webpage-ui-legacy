@@ -154,7 +154,7 @@ const useStyles = makeStyles(theme => ({
 const SignIn = (props) => {
 
   const {computedMatch: {params}} = props;
-  console.log('params:'+params['next']);
+  console.log('params:' + params['next']);
   const {history, currentUser} = props;
   if (currentUser) {
     const notificationType = "success";

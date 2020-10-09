@@ -1,18 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardActions,
-  Grid,
-  Button,
-  Divider,
-  TextField,
-  colors
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, Card, CardActions, CardContent, CardHeader, colors, Divider, Grid, TextField} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -26,7 +16,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Security = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
 
@@ -49,8 +39,8 @@ const Security = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader title="Change password" />
-      <Divider />
+      <CardHeader title="Change password"/>
+      <Divider/>
       <CardContent>
         <form>
           <Grid
@@ -92,7 +82,7 @@ const Security = props => {
           </Grid>
         </form>
       </CardContent>
-      <Divider />
+      <Divider/>
       <CardActions>
         <Button
           className={classes.saveButton}

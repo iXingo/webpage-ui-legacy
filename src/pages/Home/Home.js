@@ -150,7 +150,7 @@ const selfSection = {
   image: 'https://img.ixingo.cn/peiqi.png',
   title: '社会人，汪师傅。',
   content: '汪欣（Shawn Wang），汪师傅，男，汉族，安徽六安人，2018年4月参加工作，是一名程序员，研究生，党员；现就职于NVIDIA中国，从事软件研发工作。\n' +
-      '简单概括一下汪师傅的生平就是：生于安徽，求学江苏，搬砖上海。',
+    '简单概括一下汪师傅的生平就是：生于安徽，求学江苏，搬砖上海。',
   linkUrl: '/about-me',
   linkText: '关于社会人汪师傅',
 };
@@ -232,11 +232,11 @@ const signin = {
 
 const SvgIcon = () => {
   return (
-      <svg style={{width: 20, height: 20}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-        <path
-            d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z"
-            fill="currentColor" fillRule="evenodd"/>
-      </svg>
+    <svg style={{width: 20, height: 20}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+      <path
+        d="M20 40c11 0 20-9 20-20S31 0 20 0 0 9 0 20s9 20 20 20zm0-2c-9.9 0-18-8.1-18-18S10.1 2 20 2s18 8.1 18 18-8.1 18-18 18zm9.3-18L15 28.8V11.1L29.3 20z"
+        fill="currentColor" fillRule="evenodd"/>
+    </svg>
   );
 };
 
@@ -251,44 +251,44 @@ const Home = props => {
   // }
 
   return (
-      <React.Fragment>
-        <CssBaseline/>
-        <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
-          <Container className={classes.main}>
-            {/*<div className={classes.main}>*/}
-            <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
-              星狗网
+    <React.Fragment>
+      <CssBaseline/>
+      <Slide direction="up" in={true} mountOnEnter unmountOnExit timeout={800}>
+        <Container className={classes.main}>
+          {/*<div className={classes.main}>*/}
+          <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.website}>
+            星狗网
+          </Typography>
+          <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
+            程序人生的寂静欢喜。
+          </Typography>
+          <TypeWriter typing={1}>
+            <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
+                        className={classes.secondLine}>
+              车马很慢，书信很远。汪师傅，一个（伪）文艺派程序员，在这个漫长而复杂的人生做一些短暂简单，且微不足道的思考。
             </Typography>
-            <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
-              程序人生的寂静欢喜。
-            </Typography>
-            <TypeWriter typing={1}>
-              <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
-                          className={classes.secondLine}>
-                车马很慢，书信很远。汪师傅，一个（伪）文艺派程序员，在这个漫长而复杂的人生做一些短暂简单，且微不足道的思考。
-              </Typography>
-            </TypeWriter>
-            <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
-              <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
-            </Typography>
-            {/*</div>*/}
-          </Container>
-        </Slide>
-        <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.tipsLine}>
-          ↓ 向下滑动以继续浏览
-        </Typography>
-        <PictureTextLink context={contributionSection} {...props}  />
-        <PictureItems context={newsSection} {...props} />
-        <PicturePicture context={blogSection} {...props} />
-        <CardPicture context={planSection} {...props}  />
-        <PictureText context={selfSection} {...props} />
-        <PictureContentLine context={friendSection} {...props}  />
-        <TextPicture context={goodSection} {...props} />
-        <ButtonPictureContent context={programmerSection} {...props}  />
-        <PictureTextLink context={studySection} {...props}  />
-        {/*<BigImage context={endSection} {...props}  />*/}
-        <SignedIn context={signin} {...props} />
-      </React.Fragment>
+          </TypeWriter>
+          <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
+            <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
+          </Typography>
+          {/*</div>*/}
+        </Container>
+      </Slide>
+      <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.tipsLine}>
+        ↓ 向下滑动以继续浏览
+      </Typography>
+      <PictureTextLink context={contributionSection} {...props}  />
+      <PictureItems context={newsSection} {...props} />
+      <PicturePicture context={blogSection} {...props} />
+      <CardPicture context={planSection} {...props}  />
+      <PictureText context={selfSection} {...props} />
+      <PictureContentLine context={friendSection} {...props}  />
+      <TextPicture context={goodSection} {...props} />
+      <ButtonPictureContent context={programmerSection} {...props}  />
+      <PictureTextLink context={studySection} {...props}  />
+      {/*<BigImage context={endSection} {...props}  />*/}
+      <SignedIn context={signin} {...props} />
+    </React.Fragment>
   );
 };
 

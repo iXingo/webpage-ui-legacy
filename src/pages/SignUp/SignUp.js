@@ -191,7 +191,7 @@ const SignUp = props => {
     const {username, email} = formState.values;
     checkEmailAvailability(email)
       .then(response => {
-        if (response.code===200) {
+        if (response.code === 200) {
           console.log("恭喜！您的邮箱可用");
         } else {
           notification.error({
@@ -200,15 +200,15 @@ const SignUp = props => {
           });
         }
       }).catch(error => {
-        notification.error({
-          message: '星狗网 Web App',
-          description: "有错误!" + error.message,
-        });
+      notification.error({
+        message: '星狗网 Web App',
+        description: "有错误!" + error.message,
+      });
     });
 
     checkUsernameAvailability(username)
       .then(response => {
-        if (response.code===200) {
+        if (response.code === 200) {
           console.log("恭喜您，您的Id可用～");
         } else {
           notification.error({
@@ -217,32 +217,32 @@ const SignUp = props => {
           });
         }
       }).catch(error => {
-        notification.error({
-          message: '星狗网 Web App',
-          description: "有错误!" + error.message,
-        });
+      notification.error({
+        message: '星狗网 Web App',
+        description: "有错误!" + error.message,
+      });
     });
 
 
     signup(signupRequest)
       .then(response => {
-        if (response.code===200) {
+        if (response.code === 200) {
           notification.success({
             message: '星狗网 Web App',
             description: "谢谢！您已经成功注册！现在请打开邮箱进行验证吧！",
           });
           history.push("/sign-in");
-        }else{
+        } else {
           notification.error({
             message: '星狗网 Web App',
             description: response.message || '对不起，好像发生了一些错误，请您重新再试！'
           });
         }
       }).catch(error => {
-        notification.error({
-          message: '星狗网 Web App',
-          description: error.message || '对不起，好像发生了一些错误，请您重新再试！'
-        });
+      notification.error({
+        message: '星狗网 Web App',
+        description: error.message || '对不起，好像发生了一些错误，请您重新再试！'
+      });
     });
   };
 

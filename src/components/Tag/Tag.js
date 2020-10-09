@@ -2,6 +2,7 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import LocalOfferOutlinedIcon from '@material-ui/icons/LocalOfferOutlined';
 import {Typography} from "@material-ui/core";
+
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',

@@ -7,7 +7,7 @@ import {BrowserRouter} from 'react-router-dom';
 
 import {createBrowserHistory} from 'history';
 
-const browserHistory = createBrowserHistory( {
+const browserHistory = createBrowserHistory({
   basename: process.env.PUBLIC_URL
 });
 

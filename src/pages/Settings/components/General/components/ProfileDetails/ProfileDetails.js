@@ -1,15 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Card,
-  CardContent,
-  CardActions,
-  Avatar,
-  Typography,
-  Button
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Avatar, Button, Card, CardActions, CardContent, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -32,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ProfileDetails = props => {
-  const { profile, className, ...rest } = props;
+  const {profile, className, ...rest} = props;
 
   const classes = useStyles();
 

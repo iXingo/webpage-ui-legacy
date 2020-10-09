@@ -3,30 +3,29 @@ import {Redirect, Switch, withRouter} from 'react-router-dom';
 import {Album as AlbumPage, RouteWithLayout} from './components';
 import {Main as MainLayout, Minimal as MinimalLayout} from './layouts';
 import {
-  // About as AboutPage,
+  About as AboutPage,
   AboutMe as AboutMePage,
   Activate as ActivatePage,
   Agreement as AgreementPage,
   Copyright as CopyrightPage,
+  Course as CoursePage,
   Friend as FriendPage,
   Home as HomePage,
   News as NewsPage,
   NotAuth as NotAuthPage,
   NotFound as NotFoundPage,
-  Post as PostsPage,
-  Tech as TechPage,
-  Privacy as PrivacyPage,
-  Service as ServicePage,
-  Project as ProjectPage,
   PasswdReset as PasswdResetPage,
+  Post as PostsPage,
+  Privacy as PrivacyPage,
+  Project as ProjectPage,
   ResetPasswd as ResetPasswdPage,
+  Service as ServicePage,
   SignIn as SignInPage,
   SignUp as SignUpPage,
   SingleFriend as SingleFriendPage,
-  SinglePost as SinglePostPage,
   SingleNews as SingleNewsPage,
-  About as AboutPage,
-  Course as CoursePage,
+  SinglePost as SinglePostPage,
+  Tech as TechPage,
 } from './pages';
 import {General, Notifications, Security, Subscription} from "./pages/Settings/components";
 import WindowsService from "./pages/SingleService/Components/WindowsService";
@@ -146,11 +145,11 @@ class Routes extends Component {
           {...this.props}
         />
         <RouteWithLayout
-            component={ResetPasswdPage}
-            exact
-            layout={MinimalLayout}
-            path="/pass_reset/:email/:code"
-            {...this.props}
+          component={ResetPasswdPage}
+          exact
+          layout={MinimalLayout}
+          path="/pass_reset/:email/:code"
+          {...this.props}
         />
         <RouteWithLayout
           component={AgreementPage}

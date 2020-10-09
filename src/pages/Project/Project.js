@@ -50,7 +50,7 @@ const Project = props => {
   document.title = "汪师傅的X计划 | 看见，好时光";
   return (
     <React.Fragment>
-      <SectionTitle  context={projectSection}/>
+      <SectionTitle context={projectSection}/>
       {projects.map(project => (
         <HeaderUnit project={project} {...props} />
       ))

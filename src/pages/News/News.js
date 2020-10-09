@@ -11,11 +11,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
-import {
-  BigMediaCard,
-  Carousel,
-  Subscribe,
-} from '../../components';
+import {BigMediaCard, Carousel, Subscribe,} from '../../components';
 import ContentTitle from "../../components/ContentTitle";
 // import Divider from '@material-ui/core/Divider';
 // import NotAuth from '../NotAuth';
@@ -166,26 +162,26 @@ const cards = [1, 2, 3];
 //   imgUrl: 'https://img.ixingo.cn/undraw_special_event_4aj8.svg',
 //   url: '/friends',
 // };
-const techSection= {
-    sectionMain: '技术新闻',
-    sectionTitle: '技术新潮流',
-    sectionContent: '那帮大佬又搞出什么玩意儿了，我真的学不动了。'
+const techSection = {
+  sectionMain: '技术新闻',
+  sectionTitle: '技术新潮流',
+  sectionContent: '那帮大佬又搞出什么玩意儿了，我真的学不动了。'
 }
 
-const lifeSection= {
+const lifeSection = {
   sectionMain: '生活新闻',
   sectionTitle: '生活新风尚',
   sectionContent: '最近有啥好玩的，有啥好看的，有啥新东西。'
 }
 
-const friendSection= {
+const friendSection = {
   sectionMain: '好友',
   sectionTitle: '好友新动向',
   sectionContent: '这些优秀的年轻人们又闹出了什么新花样。'
 }
 
 
-const workSection= {
+const workSection = {
   sectionMain: '工作',
   sectionTitle: '工作新动态',
   sectionContent: '作为一名社畜，工作以及公司又有啥新动静。'

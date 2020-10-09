@@ -105,7 +105,7 @@ const CardPicture = props => {
       <CssBaseline/>
       <ContentTitle context={props.context}/>
       <Grid container justify="center" alignItems="center" className={classes.content}>
-        <Grid item xs={12} md={4} >
+        <Grid item xs={12} md={4}>
           <div className={classes.items}>
             <div className={classes.mainOne}>
               <Typography variant="h6" gutterBottom color="inherit" className={classes.firstLine}>

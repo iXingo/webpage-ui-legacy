@@ -4,7 +4,6 @@ import {Grid} from '@material-ui/core';
 // import {Grid, IconButton, Typography} from '@material-ui/core';
 // import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 // import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-
 import {ProductCard, ProductsToolbar} from './components';
 import mockData from './data';
 import SectionTitle from "../../components/SectionTitle/SectionTiltle";
@@ -40,8 +39,8 @@ const Service = props => {
   document.title = "汪师傅提供的服务列表 | 看见，好时光";
 
   return (
-    <div >
-      <SectionTitle  context={serviceSection}/>
+    <div>
+      <SectionTitle context={serviceSection}/>
       <div className={classes.service}>
 
         <ProductsToolbar/>

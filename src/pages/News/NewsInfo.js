@@ -78,7 +78,7 @@ class NewsInfo extends Component {
 
   render() {
     return (
-      this.state.news.map( singleNews => (
+      this.state.news.map(singleNews => (
         <BigMediaCarcd posts={singleNews}/>
       ))
     );

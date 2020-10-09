@@ -28,16 +28,16 @@ class SinglePost extends Component {
       isLoading: true
     });
     promise
-        .then(response => {
-          this.setState({
-            post: response,
-            isLoading: false
-          });
-          if (response.code === 400) {
-            history.push("/not-found");
-          }
-          document.title = this.state.post.title + " | 星狗网";
-        }).catch(error => {
+      .then(response => {
+        this.setState({
+          post: response,
+          isLoading: false
+        });
+        if (response.code === 400) {
+          history.push("/not-found");
+        }
+        document.title = this.state.post.title + " | 星狗网";
+      }).catch(error => {
       this.setState({
         isLoading: false
       });
@@ -57,41 +57,41 @@ class SinglePost extends Component {
       content: value
     }
     addComment(commentRequest)
-        .then(response => {
-              notification.success({
-                message: '星狗网 Web App',
-                description: "评论成功！经审核后可见!",
-              });
-              console.log(response);
-              value = "";
-              const newComment =
-                  {
-                    "id": response.commentId,
-                    "content": commentRequest.content + "\n【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】",
-                    "source": "默认评论框",
-                    "status": 1,
-                    "creationDateTime": new Date().toUTCString(),
-                    "commenter": {
-                      "id": currentUser.id,
-                      "username": currentUser.username,
-                      "name": currentUser.name,
-                      "sex": currentUser.sex,
-                      "headUrl": currentUser.headUrl,
-                      "isVerified": currentUser.isVerified,
-                      "verifiedContent": currentUser.verifiedContent,
-                      "introduction": currentUser.introduction
-                    },
-                    "replies": null
-                  };
-              let postWithNewComment = {};
-              postWithNewComment = Object.assign(postWithNewComment, this.state.post);
-              postWithNewComment.comments.push(newComment);
-              this.setState({
-                post: postWithNewComment,
-                isLoading: false
-              });
-            },
-        ).catch(error => {
+      .then(response => {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "评论成功！经审核后可见!",
+          });
+          console.log(response);
+          value = "";
+          const newComment =
+            {
+              "id": response.commentId,
+              "content": commentRequest.content + "\n【当前评论仅你个人可见, 经程序自动审核后方能他人可见,请稍后刷新查看】",
+              "source": "默认评论框",
+              "status": 1,
+              "creationDateTime": new Date().toUTCString(),
+              "commenter": {
+                "id": currentUser.id,
+                "username": currentUser.username,
+                "name": currentUser.name,
+                "sex": currentUser.sex,
+                "headUrl": currentUser.headUrl,
+                "isVerified": currentUser.isVerified,
+                "verifiedContent": currentUser.verifiedContent,
+                "introduction": currentUser.introduction
+              },
+              "replies": null
+            };
+          let postWithNewComment = {};
+          postWithNewComment = Object.assign(postWithNewComment, this.state.post);
+          postWithNewComment.comments.push(newComment);
+          this.setState({
+            post: postWithNewComment,
+            isLoading: false
+          });
+        },
+      ).catch(error => {
       notification.success({
         message: '星狗网 Web App',
         description: "评论失败！" + error.message,
@@ -111,26 +111,26 @@ class SinglePost extends Component {
       return;
     }
     deleteComment(commentId)
-        .then(response => {
-              notification.success({
-                message: '星狗网 Web App',
-                description: "删除评论成功！在审核后生效， 请稍后刷新后查看！",
-              });
-              console.log(response);
-              let cms = this.state.post.comments;
-              let newComments = cms.filter(comment => comment.id !== commentId);
-              if (!newComments) {
-                newComments = [];
-              }
-              let newPost = {};
-              newPost = Object.assign(newPost, this.state.post);
-              newPost.comments = newComments;
-              this.setState({
-                post: newPost,
-                isLoading: false
-              });
-            },
-        ).catch(error => {
+      .then(response => {
+          notification.success({
+            message: '星狗网 Web App',
+            description: "删除评论成功！在审核后生效， 请稍后刷新后查看！",
+          });
+          console.log(response);
+          let cms = this.state.post.comments;
+          let newComments = cms.filter(comment => comment.id !== commentId);
+          if (!newComments) {
+            newComments = [];
+          }
+          let newPost = {};
+          newPost = Object.assign(newPost, this.state.post);
+          newPost.comments = newComments;
+          this.setState({
+            post: newPost,
+            isLoading: false
+          });
+        },
+      ).catch(error => {
       notification.success({
         message: '星狗网 Web App',
         description: "删除评论失败！" + error.message,
@@ -163,12 +163,12 @@ class SinglePost extends Component {
   render() {
     const {post} = this.state;
     return (
-        <div>
-          <PostMain post={post}
-                    handleComment={this.handleComment}
-                    handleDeleteComment={this.handleDeleteComment}
-                    {...this.props}/>
-        </div>
+      <div>
+        <PostMain post={post}
+                  handleComment={this.handleComment}
+                  handleDeleteComment={this.handleDeleteComment}
+                  {...this.props}/>
+      </div>
     );
   }
 

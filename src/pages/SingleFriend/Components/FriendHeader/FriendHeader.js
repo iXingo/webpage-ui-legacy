@@ -46,9 +46,9 @@ const FriendHeader = props => {
   // const Alert = (props) => {
   //   return <MuiAlert elevation={6} variant="filled" {...props} />;
   // }
-  let friendTitle  = "加载中... | 看见，好时光";
-  if(friend.name){
-    friendTitle = friend.name +  " | 看见，好时光";
+  let friendTitle = "加载中... | 看见，好时光";
+  if (friend.name) {
+    friendTitle = friend.name + " | 看见，好时光";
   }
   document.title = friendTitle;
 
@@ -67,8 +67,9 @@ const FriendHeader = props => {
         <Typography overline gutterBottom variant='h5' style={{padding: '20px 0', color: '#546e7a', fontWeight: 300}}>
           {friend.description}
         </Typography>
-        <Typography overline gutterBottom variant='caption' style={{padding: '20px 0', color: 'black', fontWeight: 300}}>
-          【{friend.name}】和 汪师傅 相识大约已有：<CountUp />
+        <Typography overline gutterBottom variant='caption'
+                    style={{padding: '20px 0', color: 'black', fontWeight: 300}}>
+          【{friend.name}】和 汪师傅 相识大约已有：<CountUp/>
         </Typography>
         {/*<Alert severity="success">This is a success message!</Alert>*/}
         {/*<Button variant="outlined" size="large" color="inherit" >*/}

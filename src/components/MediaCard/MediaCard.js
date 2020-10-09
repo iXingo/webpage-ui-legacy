@@ -77,7 +77,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
     alignItems: 'center'
   },
-  mata:{
+  mata: {
     paddingLeft: 20,
     display: 'flex',
     flexDirection: 'column',
@@ -118,7 +118,7 @@ const MediaCard = props => {
                 {post.title}
               </Typography>
               <div className={classes.avatar}>
-                  <Avatar alt={post.createdBy.name} src={post.createdBy.headUrl} className={classes.medium} />
+                <Avatar alt={post.createdBy.name} src={post.createdBy.headUrl} className={classes.medium}/>
                 <div className={classes.mata}>
                   <Typography variant="h6" style={{color: 'black', fontWeight: 500}}>
                     {/*<span role={"img"} aria-label={"作者"}>👨‍🎓 </span> 作者: */}

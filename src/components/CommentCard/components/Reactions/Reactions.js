@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Button,
-  colors
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, colors} from '@material-ui/core';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 // import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ReplyIcon from '@material-ui/icons/Reply';
@@ -34,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Reactions = props => {
-  const { comment, handleDeleteComment, className, ...rest } = props;
+  const {comment, handleDeleteComment, className, ...rest} = props;
   const classes = useStyles();
 
   const handleReply = () => {

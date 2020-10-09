@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     margin: '3px auto 9px',
     textAlign: 'left'
   },
-  divider : {
+  divider: {
     marginTop: 40,
     marginBottom: 100,
   }
@@ -114,7 +114,8 @@ const WindowsService = props => {
       <div className={classes.title}>
         <img alt="Product" className={classes.icon} src={'https://img.ixingo.cn/pic/windows.png'}/>
         <TitleContent context={title}/>
-        <img src={'https://developer.apple.com/app-clips/images/hero-lockup-small_2x.png'} alt={'Developer'} className={classes.focus}/>
+        <img src={'https://developer.apple.com/app-clips/images/hero-lockup-small_2x.png'} alt={'Developer'}
+             className={classes.focus}/>
       </div>
 
       <Divider className={classes.divider}/>
@@ -150,7 +151,7 @@ const WindowsService = props => {
             服务指南
           </Typography>
           <Typography gutterBottom variant='h6' align={'left'}
-                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0',lineHeight: 2}}>
+                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0', lineHeight: 2}}>
             您最熟悉的Windows平台上，我们通过编程解放您最繁琐的需求。这些小程序可以通过自动化流程将您从一些频繁处理的工作流程中解放出来。
           </Typography>
         </Grid>
@@ -161,7 +162,7 @@ const WindowsService = props => {
             服务指南
           </Typography>
           <Typography gutterBottom variant='h6' align={'left'}
-                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0',lineHeight: 2}}>
+                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0', lineHeight: 2}}>
             您最熟悉的Windows平台上，我们通过编程解放您最繁琐的需求。这些小程序可以通过自动化流程将您从一些频繁处理的工作流程中解放出来。
           </Typography>
         </Grid>
@@ -172,7 +173,7 @@ const WindowsService = props => {
             服务指南
           </Typography>
           <Typography gutterBottom variant='h6' align={'left'}
-                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0',lineHeight: 2}}>
+                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0', lineHeight: 2}}>
             您最熟悉的Windows平台上，我们通过编程解放您最繁琐的需求。这些小程序可以通过自动化流程将您从一些频繁处理的工作流程中解放出来。
           </Typography>
         </Grid>
@@ -183,7 +184,7 @@ const WindowsService = props => {
             服务指南
           </Typography>
           <Typography gutterBottom variant='h6' align={'left'}
-                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0',lineHeight: 2}}>
+                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0', lineHeight: 2}}>
             您最熟悉的Windows平台上，我们通过编程解放您最繁琐的需求。这些小程序可以通过自动化流程将您从一些频繁处理的工作流程中解放出来。
           </Typography>
         </Grid>
@@ -194,7 +195,7 @@ const WindowsService = props => {
             服务指南
           </Typography>
           <Typography gutterBottom variant='h6' align={'left'}
-                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0',lineHeight: 2}}>
+                      style={{color: 'black', fontSize: 11, margin: '20px, 0, 0', lineHeight: 2}}>
             您最熟悉的Windows平台上，我们通过编程解放您最繁琐的需求。这些小程序可以通过自动化流程将您从一些频繁处理的工作流程中解放出来。
           </Typography>
         </Grid>

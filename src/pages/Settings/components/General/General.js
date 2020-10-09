@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Grid } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Grid} from '@material-ui/core';
 
 import axios from '../../../../util/axios';
-import { ProfileDetails, GeneralSettings } from './components';
+import {GeneralSettings, ProfileDetails} from './components';
 
 const useStyles = makeStyles(() => ({
   root: {}
 }));
 
 const General = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
   const [profile, setProfile] = useState(null);
@@ -53,7 +53,7 @@ const General = props => {
         xl={3}
         xs={12}
       >
-        <ProfileDetails profile={profile} />
+        <ProfileDetails profile={profile}/>
       </Grid>
       <Grid
         item
@@ -62,7 +62,7 @@ const General = props => {
         xl={9}
         xs={12}
       >
-        <GeneralSettings profile={profile} />
+        <GeneralSettings profile={profile}/>
       </Grid>
     </Grid>
   );

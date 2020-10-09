@@ -1,17 +1,11 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Tabs, Tab, Divider, colors } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {colors, Divider, Tab, Tabs} from '@material-ui/core';
 
-import { Page } from '../../components';
-import {
-  Header,
-  General,
-  Subscription,
-  Notifications,
-  Security
-} from './components';
+import {Page} from '../../components';
+import {General, Header, Notifications, Security, Subscription} from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,27 +26,27 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Settings = props => {
-  const { match, history } = props;
+  const {match, history} = props;
   const classes = useStyles();
-  const { tab } = match.params;
+  const {tab} = match.params;
 
   const handleTabsChange = (event, value) => {
     history.push(value);
   };
 
   const tabs = [
-    { value: 'general', label: 'General' },
-    { value: 'subscription', label: 'Subscription' },
-    { value: 'notifications', label: 'Notifications' },
-    { value: 'security', label: 'Security' }
+    {value: 'general', label: 'General'},
+    {value: 'subscription', label: 'Subscription'},
+    {value: 'notifications', label: 'Notifications'},
+    {value: 'security', label: 'Security'}
   ];
 
   if (!tab) {
-    return <Redirect to="/settings/general" />;
+    return <Redirect to="/settings/general"/>;
   }
 
   if (!tabs.find(t => t.value === tab)) {
-    return <Redirect to="/not-found" />;
+    return <Redirect to="/not-found"/>;
   }
 
   return (
@@ -60,7 +54,7 @@ const Settings = props => {
       className={classes.root}
       title="Settings"
     >
-      <Header />
+      <Header/>
       <Tabs
         className={classes.tabs}
         onChange={handleTabsChange}
@@ -76,12 +70,12 @@ const Settings = props => {
           />
         ))}
       </Tabs>
-      <Divider className={classes.divider} />
+      <Divider className={classes.divider}/>
       <div className={classes.content}>
-        {tab === 'general' && <General />}
-        {tab === 'subscription' && <Subscription />}
-        {tab === 'notifications' && <Notifications />}
-        {tab === 'security' && <Security />}
+        {tab === 'general' && <General/>}
+        {tab === 'subscription' && <Subscription/>}
+        {tab === 'notifications' && <Notifications/>}
+        {tab === 'security' && <Security/>}
       </div>
     </Page>
   );

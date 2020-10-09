@@ -81,55 +81,55 @@ const PasswdReset = props => {
       return;
     }
     passwdReset(value).then(r => {
-          const type = r.code === 200 ? "success" : "error";
-          notification[type]({
-                message: '星狗网 Web App',
-                description: "服务器接收重置密码请求成功！" + r.data
-              }
-          )
-        }
+        const type = r.code === 200 ? "success" : "error";
+        notification[type]({
+            message: '星狗网 Web App',
+            description: "服务器接收重置密码请求成功！" + r.data
+          }
+        )
+      }
     );
   }
 
   return (
-      <div className={classes.root}>
-        <div className={classes.content}>
-          <div className={classes.contentHeader}>
-            <IconButton onClick={handleBack}>
-              <ArrowBackIcon/>
-            </IconButton>
-          </div>
+    <div className={classes.root}>
+      <div className={classes.content}>
+        <div className={classes.contentHeader}>
+          <IconButton onClick={handleBack}>
+            <ArrowBackIcon/>
+          </IconButton>
+        </div>
 
-          <div className={classes.reset}>
-            <Typography variant="h2" style={{marginTop: 40}}>请您勿需担心，</Typography>
-            <Typography variant="h5" style={{marginBottom: 120}}>关于您和您的一切都不会丢失。</Typography>
-            <TextField className={classes.field}
-                       id="standard-full-width"
-                       label="请输入您注册星狗网所使用的邮箱"
-                       InputProps={{
-                         startAdornment: (
-                             <InputAdornment position="start">
-                               <AccountCircle/>
-                             </InputAdornment>
-                         ),
-                       }}
-                       onChange={handleChange}
-                       value={value}
-            />
-            <Button
-                className={classes.resetButton}
-                color="primary"
-                fullWidth
-                size="large"
-                type="submit"
-                variant="contained"
-                onClick={resetPaswd}
-            >
-              立即找回密码
-            </Button>
-          </div>
+        <div className={classes.reset}>
+          <Typography variant="h2" style={{marginTop: 40}}>请您勿需担心，</Typography>
+          <Typography variant="h5" style={{marginBottom: 120}}>关于您和您的一切都不会丢失。</Typography>
+          <TextField className={classes.field}
+                     id="standard-full-width"
+                     label="请输入您注册星狗网所使用的邮箱"
+                     InputProps={{
+                       startAdornment: (
+                         <InputAdornment position="start">
+                           <AccountCircle/>
+                         </InputAdornment>
+                       ),
+                     }}
+                     onChange={handleChange}
+                     value={value}
+          />
+          <Button
+            className={classes.resetButton}
+            color="primary"
+            fullWidth
+            size="large"
+            type="submit"
+            variant="contained"
+            onClick={resetPaswd}
+          >
+            立即找回密码
+          </Button>
         </div>
       </div>
+    </div>
   );
 };
 

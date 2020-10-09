@@ -1,14 +1,8 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 
-import { Page } from '../../components';
-import {
-  Header,
-  FAQ,
-  PluginsSupport,
-  SourceFiles,
-  UserFlows
-} from './components';
+import {Page} from '../../components';
+import {FAQ, Header, PluginsSupport, SourceFiles, UserFlows} from './components';
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -22,11 +16,11 @@ const About = () => {
       className={classes.root}
       title="关于星狗网 | 星狗网, 看见好时光"
     >
-      <Header />
-      <UserFlows />
-      <PluginsSupport />
-      <SourceFiles />
-      <FAQ />
+      <Header/>
+      <UserFlows/>
+      <PluginsSupport/>
+      <SourceFiles/>
+      <FAQ/>
     </Page>
   );
 };

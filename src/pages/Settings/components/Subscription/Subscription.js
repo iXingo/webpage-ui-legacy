@@ -1,17 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import {Link as RouterLink} from 'react-router-dom';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Divider,
-  Link,
-  Typography
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, Card, CardContent, CardHeader, Divider, Link, Typography} from '@material-ui/core';
 
 import axios from '../../../../util/axios';
 
@@ -56,7 +48,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Subscription = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
   const [subscription, setSubscription] = useState(null);
@@ -97,10 +89,10 @@ const Subscription = props => {
             Upgrade plan
           </Button>
         }
-        classes={{ action: classes.action }}
+        classes={{action: classes.action}}
         title="Manage your subscription"
       />
-      <Divider />
+      <Divider/>
       <CardContent>
         <Card>
           <CardContent className={classes.overview}>
@@ -128,7 +120,7 @@ const Subscription = props => {
               <Typography variant="overline">{subscription.name}</Typography>
             </div>
           </CardContent>
-          <Divider />
+          <Divider/>
           <CardContent className={classes.details}>
             <div>
               <Typography variant="body1">
@@ -155,7 +147,7 @@ const Subscription = props => {
               )}
             </div>
           </CardContent>
-          <Divider />
+          <Divider/>
         </Card>
         <Typography
           className={classes.notice}

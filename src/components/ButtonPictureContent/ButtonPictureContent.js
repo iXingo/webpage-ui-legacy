@@ -87,7 +87,7 @@ const ButtonPictureContent = props => {
       <CssBaseline/>
       <ContentTitle context={props.context}/>
       <div className={classes.button}>
-        <Button className={classes.buttonContent} onClick={()=> handleLink(props.context.linkUrl)}>
+        <Button className={classes.buttonContent} onClick={() => handleLink(props.context.linkUrl)}>
           {props.context.linkText} →
         </Button>
       </div>

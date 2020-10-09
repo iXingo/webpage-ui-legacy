@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
-import { Typography, Grid } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Grid, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Friend = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
 
@@ -47,7 +47,7 @@ const Friend = props => {
             <Typography
               gutterBottom
               variant="h3"
-              style={{width:214}}
+              style={{width: 214}}
             >
               今日不与旧时同，陈年好友情更浓。
             </Typography>

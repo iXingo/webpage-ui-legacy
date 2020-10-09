@@ -10,15 +10,15 @@ const HoverCard = () => {
     shiftY: 0
   }
   return (
-      <ReactHover
-          options={optionsCursorTrueWithMargin}>
-        {/*<ReactHover.Trigger type='trigger'>*/}
-        {/*  /!*<TriggerComponent />*!/*/}
-        {/*</ReactHover.Trigger>*/}
-        <ReactHover.Hover type='hover'>
-          <UserCard />
-        </ReactHover.Hover>
-      </ReactHover>
+    <ReactHover
+      options={optionsCursorTrueWithMargin}>
+      {/*<ReactHover.Trigger type='trigger'>*/}
+      {/*  /!*<TriggerComponent />*!/*/}
+      {/*</ReactHover.Trigger>*/}
+      <ReactHover.Hover type='hover'>
+        <UserCard/>
+      </ReactHover.Hover>
+    </ReactHover>
   );
 }
 

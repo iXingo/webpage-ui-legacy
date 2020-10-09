@@ -48,14 +48,14 @@ const HeaderUnit = props => {
   const classes = useStyles();
 
   const join = (project) => {
-    if(!currentUser){
+    if (!currentUser) {
       notification.error({
         message: '星狗网 Web App',
         description: '您未登录！',
       });
       return;
     }
-    joinProject(project.id).then( response =>
+    joinProject(project.id).then(response =>
       notification.success({
         message: '星狗网 Web App',
         description: '祝贺！加入计划【' + project.name + '】成功！',

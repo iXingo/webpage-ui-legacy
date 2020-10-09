@@ -1,14 +1,8 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import {makeStyles} from '@material-ui/styles';
-import {
-  Avatar, Button,
-  Divider,
-  Input,
-  Paper,
-  Tooltip
-} from '@material-ui/core';
+import {Avatar, Button, Divider, Input, Paper, Tooltip} from '@material-ui/core';
 import CommentIcon from "@material-ui/icons/Comment";
 import {notification} from "antd";
 
@@ -33,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   fileInput: {
     display: 'none'
   },
-  commentButton:{
+  commentButton: {
     marginLeft: 'auto'
   },
   commentIcon: {
@@ -42,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const CommentForm = props => {
-  const {post, currentUser, className, handleComment, handleDeleteComment,...rest} = props;
+  const {post, currentUser, className, handleComment, handleDeleteComment, ...rest} = props;
   const classes = useStyles();
   const [value, setValue] = useState('');
   const handleChange = event => {
@@ -52,7 +46,7 @@ const CommentForm = props => {
   };
 
   const handle = (value) => {
-    if(!value){
+    if (!value) {
       notification.error({
         message: '星狗网 Web App',
         description: "评论不能为空～",

@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     padding: '10px 30px',
     textAlign: 'left',
   },
-  firstLine:{
+  firstLine: {
     color: 'black',
     fontSize: 17
   },
@@ -42,8 +42,9 @@ const SectionBlock = props => {
   return (
     <Grid container className={classes.root}>
       <Grid item xs={12} md={4} className={classes.item}>
-        <img src={'https://developer.apple.com/assets/elements/icons/wwdr/today.svg'} alt={''} className={classes.image}/>
-        <Typography gutterBottom variant='h6' align={'center'} className={classes.firstLine} >
+        <img src={'https://developer.apple.com/assets/elements/icons/wwdr/today.svg'} alt={''}
+             className={classes.image}/>
+        <Typography gutterBottom variant='h6' align={'center'} className={classes.firstLine}>
           服务指南
         </Typography>
         <Typography gutterBottom variant='h6' align={'center'} className={classes.secondLine}>
@@ -51,8 +52,9 @@ const SectionBlock = props => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={4} className={classes.item}>
-        <img src={'https://developer.apple.com/assets/elements/icons/wwdr/arcade.svg'} alt={''} className={classes.image}/>
-        <Typography gutterBottom variant='h6' align={'center'} className={classes.firstLine} >
+        <img src={'https://developer.apple.com/assets/elements/icons/wwdr/arcade.svg'} alt={''}
+             className={classes.image}/>
+        <Typography gutterBottom variant='h6' align={'center'} className={classes.firstLine}>
           服务指南
         </Typography>
         <Typography gutterBottom variant='h6' align={'center'}
@@ -61,8 +63,9 @@ const SectionBlock = props => {
         </Typography>
       </Grid>
       <Grid item xs={12} md={4} className={classes.item}>
-        <img src={'https://developer.apple.com/assets/elements/icons/wwdr-unified/chat_bubble.svg'} alt={''} className={classes.image}/>
-        <Typography gutterBottom variant='h6' align={'center'} className={classes.firstLine} >
+        <img src={'https://developer.apple.com/assets/elements/icons/wwdr-unified/chat_bubble.svg'} alt={''}
+             className={classes.image}/>
+        <Typography gutterBottom variant='h6' align={'center'} className={classes.firstLine}>
           服务指南
         </Typography>
         <Typography gutterBottom variant='h6' align={'center'} className={classes.secondLine}>

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/styles';
-import { Typography, Grid, Button } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Button, Grid, Typography} from '@material-ui/core';
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 const useStyles = makeStyles(theme => ({
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Header = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
 
@@ -67,7 +67,9 @@ const Header = props => {
           component="h2"
           variant="subtitle1"
         >
-          星狗网是汪欣同学自主开发的一个专注于科技和生活分享的网站，在这里你会看到汪欣同学在关于程序设计（前端，后端，数据处理），工作， 生活和文艺方面的所有分享。欢迎关注@程序员汪师傅 一起交流分享，共同进步！A Material Design Full Stack App built with Spring Boot, Spring Security, JWT, MySQL, Redis, React, Bootstrap and Ant Design.
+          星狗网是汪欣同学自主开发的一个专注于科技和生活分享的网站，在这里你会看到汪欣同学在关于程序设计（前端，后端，数据处理），工作， 生活和文艺方面的所有分享。欢迎关注@程序员汪师傅 一起交流分享，共同进步！A
+          Material Design Full Stack App built with Spring Boot, Spring Security, JWT, MySQL, Redis, React, Bootstrap
+          and Ant Design.
         </Typography>
         <div className={classes.buttons}>
           <Button

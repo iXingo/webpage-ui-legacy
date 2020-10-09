@@ -192,7 +192,8 @@ const Footer = props => {
                           className={classes.link}
                           color="textSecondary">
                 <span role={"img"} aria-label={"StackOverFlow"} className={classes.emoji}>💣️</span>
-                <a href={"https://stackoverflow.com/users/6028692/ixingo"} style={{textDecoration: 'underline'}}>StackOverFlow</a>
+                <a href={"https://stackoverflow.com/users/6028692/ixingo"}
+                   style={{textDecoration: 'underline'}}>StackOverFlow</a>
               </Typography>
               <Typography gutterBottom variant='h6'
                           className={classes.link}

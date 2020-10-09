@@ -2,14 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import uuid from 'uuid/v1';
-import { makeStyles } from '@material-ui/styles';
-import {
-  Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText
-} from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {List, ListItem, ListItemIcon, ListItemText, Typography} from '@material-ui/core';
 import ContactSupportIcon from '@material-ui/icons/ContactSupportOutlined';
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const FAQ = props => {
-  const { className, ...rest } = props;
+  const {className, ...rest} = props;
 
   const classes = useStyles();
 
@@ -73,13 +67,13 @@ const FAQ = props => {
             {faqs.map(faq => (
               <ListItem key={uuid()}>
                 <ListItemIcon>
-                  <ContactSupportIcon />
+                  <ContactSupportIcon/>
                 </ListItemIcon>
                 <ListItemText
                   primary={faq.title}
-                  primaryTypographyProps={{ variant: 'h5' }}
+                  primaryTypographyProps={{variant: 'h5'}}
                   secondary={faq.description}
-                  secondaryTypographyProps={{ variant: 'body1' }}
+                  secondaryTypographyProps={{variant: 'body1'}}
                 />
               </ListItem>
             ))}

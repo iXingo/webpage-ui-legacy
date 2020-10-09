@@ -46,15 +46,15 @@ class App extends Component {
       isLoading: true
     });
     getCurrentUser()
-        .then(response => {
-          this.setState({
-            currentUser: response,
-            isAuthenticated: true,
-            isLoading: false
-          });
-          console.log("登录成功！");
-          // history.push('/index');
-        }).catch(error => {
+      .then(response => {
+        this.setState({
+          currentUser: response,
+          isAuthenticated: true,
+          isLoading: false
+        });
+        console.log("登录成功！");
+        // history.push('/index');
+      }).catch(error => {
       this.setState({
         isLoading: false,
       });
@@ -98,16 +98,16 @@ class App extends Component {
   render() {
     document.title = "星狗网 | 看见，好时光";
     return (
-        <ThemeProvider theme={theme}>
-          <ScrollToTop>
-            <Routes isAuthenticated={this.state.isAuthenticated}
-                    currentUser={this.state.currentUser}
-                    handleLogin={this.handleLogin}
-                    handleLogout={this.handleLogout}
-                    loadCurrentUser={this.loadCurrentUser}
-                    {...this.props}/>
-          </ScrollToTop>
-        </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <ScrollToTop>
+          <Routes isAuthenticated={this.state.isAuthenticated}
+                  currentUser={this.state.currentUser}
+                  handleLogin={this.handleLogin}
+                  handleLogout={this.handleLogout}
+                  loadCurrentUser={this.loadCurrentUser}
+                  {...this.props}/>
+        </ScrollToTop>
+      </ThemeProvider>
     );
   }
 }

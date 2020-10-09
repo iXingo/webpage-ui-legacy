@@ -18,7 +18,7 @@ const TechPage = props => {
   document.title = "汪师傅的技术笔记 | 看见，好时光";
   return (
     <div>
-      <SectionTitle  context={techSection}/>
+      <SectionTitle context={techSection}/>
       <BigMediaCarcd posts={props.posts}/>
     </div>
   );

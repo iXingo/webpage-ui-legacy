@@ -4,7 +4,7 @@ import Timer from "react-compound-timer";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    color : 'black',
+    color: 'black',
     fontSize: 16,
     padding: 5,
     fontWeight: 500,
@@ -26,10 +26,10 @@ const CountUp = props => {
       >
         {() => (
           <React.Fragment>
-            <Timer.Days /> 天，
-            <Timer.Hours /> 小时，
-            <Timer.Minutes /> 分钟，
-            <Timer.Seconds /> 秒。
+            <Timer.Days/> 天，
+            <Timer.Hours/> 小时，
+            <Timer.Minutes/> 分钟，
+            <Timer.Seconds/> 秒。
           </React.Fragment>
         )}
       </Timer>

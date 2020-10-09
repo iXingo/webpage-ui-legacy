@@ -17,7 +17,7 @@ const PostPage = props => {
 
   return (
     <div>
-      <SectionTitle  context={postSection}/>
+      <SectionTitle context={postSection}/>
       <BigMediaCarcd posts={props.posts}/>
     </div>
   );

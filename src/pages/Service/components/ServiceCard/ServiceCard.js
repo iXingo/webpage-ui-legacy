@@ -10,8 +10,7 @@ import VerifiedUserIcon from '@material-ui/icons/VerifiedUser';
 // import GetAppIcon from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-  },
+  root: {},
   imageContainer: {
     height: 64,
     width: 64,
@@ -53,7 +52,7 @@ const ServiceCard = props => {
         <Typography align="center" gutterBottom variant="h4">
           {product.title}
         </Typography>
-        <Typography align="center" variant="body1" className={classes.description} >
+        <Typography align="center" variant="body1" className={classes.description}>
           {product.description}
         </Typography>
       </CardContent>

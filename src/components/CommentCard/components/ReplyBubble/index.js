@@ -1,1 +1,1 @@
-export { default } from './ReplyBubble';
+export {default} from './ReplyBubble';

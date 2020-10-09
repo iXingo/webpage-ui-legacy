@@ -133,7 +133,7 @@ const PictureContentLine = props => {
                     {card.title}
                   </Typography>
                   <Typography color="textSecondary">
-                    {card.content}  <br/>
+                    {card.content} <br/>
                     {card.description}
                   </Typography>
                 </CardContent>
@@ -154,7 +154,7 @@ const PictureContentLine = props => {
         </Grid>
         <Typography paragraph gutterBottom color="textSecondary" align="center" className={classes.info}>
           * 更多好友信息展示与申请收录请关注<Link color="primary" component={RouterLink} to={'/friends'} underline="hover"
-                           variant="h6">好友</Link>频道，当前仅随机显示部分好友。
+                                  variant="h6">好友</Link>频道，当前仅随机显示部分好友。
         </Typography>
       </Container>
     </React.Fragment>

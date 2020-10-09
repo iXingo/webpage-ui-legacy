@@ -30,21 +30,22 @@ const SignedIn = props => {
   const classes = useStyles();
   const {currentUser} = props;
 
-  if(!currentUser) {
+  if (!currentUser) {
     return (
-        <React.Fragment>
-          <CssBaseline/>
-          <ContentTitle context={props.context} {...props} />
-          <SignInCard {...props}/>
-        </React.Fragment>
+      <React.Fragment>
+        <CssBaseline/>
+        <ContentTitle context={props.context} {...props} />
+        <SignInCard {...props}/>
+      </React.Fragment>
     );
-  }else{
+  } else {
     return (
-        <React.Fragment>
-          <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.user}>
-            欢迎您，亲爱的 <Avatar alt={currentUser.name} src={currentUser.headUrl} className={classes.avatar}/>{currentUser.name}, 请尽请浏览！
-          </Typography>
-        </React.Fragment>
+      <React.Fragment>
+        <Typography variant="h6" gutterBottom color="inherit" align="center" className={classes.user}>
+          欢迎您，亲爱的 <Avatar alt={currentUser.name} src={currentUser.headUrl}
+                          className={classes.avatar}/>{currentUser.name}, 请尽请浏览！
+        </Typography>
+      </React.Fragment>
     );
   }
 };

@@ -19,7 +19,7 @@ const CoursePage = props => {
 
   return (
     <div>
-      <SectionTitle  context={courseSection}/>
+      <SectionTitle context={courseSection}/>
       <BigMediaCarcd posts={props.posts}/>
     </div>
   );

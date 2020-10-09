@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
+import {makeStyles} from '@material-ui/styles';
 import {
   Button,
   Card,
   CardActions,
   CardContent,
   CardHeader,
-  Grid,
+  colors,
   Divider,
+  Grid,
   Switch,
   TextField,
-  Typography,
-  colors
+  Typography
 } from '@material-ui/core';
 
 import SuccessSnackbar from '../SuccessSnackbar';
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const GeneralSettings = props => {
-  const { profile, className, ...rest } = props;
+  const {profile, className, ...rest} = props;
 
   const classes = useStyles();
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -74,8 +74,8 @@ const GeneralSettings = props => {
       className={clsx(classes.root, className)}
     >
       <form onSubmit={handleSubmit}>
-        <CardHeader title="Profile" />
-        <Divider />
+        <CardHeader title="Profile"/>
+        <Divider/>
         <CardContent>
           <Grid
             container
@@ -154,7 +154,7 @@ const GeneralSettings = props => {
                 onChange={handleChange}
                 select
                 // eslint-disable-next-line react/jsx-sort-props
-                SelectProps={{ native: true }}
+                SelectProps={{native: true}}
                 value={values.state}
                 variant="outlined"
               >
@@ -221,7 +221,7 @@ const GeneralSettings = props => {
             </Grid>
           </Grid>
         </CardContent>
-        <Divider />
+        <Divider/>
         <CardActions>
           <Button
             className={classes.saveButton}

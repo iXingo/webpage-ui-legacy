@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+import React, {useEffect} from 'react';
+import {Helmet} from 'react-helmet';
 import PropTypes from 'prop-types';
 
 import useRouter from '../../util/useRouter';
@@ -9,7 +9,7 @@ const NODE_ENV = process.env.NODE_ENV;
 const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_MEASUREMENT_ID;
 
 const Page = props => {
-  const { title, children, ...rest } = props;
+  const {title, children, ...rest} = props;
 
   const router = useRouter();
 

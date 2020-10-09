@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/styles';
-import { Snackbar, SnackbarContent, colors } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {colors, Snackbar, SnackbarContent} from '@material-ui/core';
 import CheckCircleIcon from '@material-ui/icons/CheckCircleOutlined';
 
 const useStyles = makeStyles(theme => ({
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const SuccessSnackbar = props => {
-  const { open, onClose } = props;
+  const {open, onClose} = props;
 
   const classes = useStyles();
 
@@ -36,7 +36,7 @@ const SuccessSnackbar = props => {
         className={classes.content}
         message={
           <span className={classes.message}>
-            <CheckCircleIcon className={classes.icon} />
+            <CheckCircleIcon className={classes.icon}/>
             Successfully saved changes!
           </span>
         }
@@ -53,7 +53,8 @@ SuccessSnackbar.propTypes = {
 
 SuccessSnackbar.defaultProps = {
   open: true,
-  onClose: () => {}
+  onClose: () => {
+  }
 };
 
 export default SuccessSnackbar;

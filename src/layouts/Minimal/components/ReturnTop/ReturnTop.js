@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
     zIndex: 1100,
     position: 'fixed'
   },
-  button : {
+  button: {
     height: 50,
     width: 50,
     backgroundColor: "#ddd"
@@ -24,7 +24,7 @@ const useStyles = makeStyles(() => ({
 const ReturnTop = props => {
 
   const classes = useStyles();
-  const scrollToTop = ()=> {
+  const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       left: 0,
@@ -34,8 +34,8 @@ const ReturnTop = props => {
 
   return (
     <div className={classes.returnToTop} onClick={scrollToTop}>
-      <IconButton className={classes.button} >
-        <ArrowUpwardIcon color="secondary" />
+      <IconButton className={classes.button}>
+        <ArrowUpwardIcon color="secondary"/>
       </IconButton>
     </div>
   );

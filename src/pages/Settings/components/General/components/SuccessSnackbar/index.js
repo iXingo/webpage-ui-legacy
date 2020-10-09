@@ -1,1 +1,1 @@
-export { default } from './SuccessSnackbar';
+export {default} from './SuccessSnackbar';

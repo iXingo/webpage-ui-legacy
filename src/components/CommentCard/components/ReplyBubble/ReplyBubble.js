@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import { makeStyles } from '@material-ui/styles';
-import { Avatar, Link, Typography } from '@material-ui/core';
+import {makeStyles} from '@material-ui/styles';
+import {Avatar, Link, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ReplyBubble = props => {
-  const { reply, className, ...rest } = props;
+  const {reply, className, ...rest} = props;
   moment.locale();
 
   const classes = useStyles();
