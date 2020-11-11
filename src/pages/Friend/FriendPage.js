@@ -158,8 +158,8 @@ const FriendPage = props => {
           <div className={classes.text}>
             <Typography variant="caption" gutterBottom color="inherit" align="center"
                         className={classes.sectionContent}>
-              在这里，机器学习与人工智能团队致力于为各款 Apple 产品打造不凡体验，帮助数百万人实现超乎想象的精彩。由于所有 Apple
-              设备都非常注重软硬件的完全一体化，促使这个团队的研究人员与工程师更加高效地紧密协作，以提升用户体验并保护用户的数据。加入我们，通过你开发的产品和发表的研究成果，为世界带去你的影响力。
+              山河不足重，重在遇知己。 汪师傅自2011年起就离开安徽，走上“求学”与“打工”之路。 当然这一路走来，当然得益于有很多好朋友的关心帮助， 也许你不经意的问候，就已经温暖汪师傅孤独的内心。
+              但是汪师傅从来不是一个善于表达的人，也有着属于自己的偏执和执拗的性格。但是，有些事，也许你早已忘记，可是我依然还记得。
             </Typography>
           </div>
 
@@ -171,8 +171,8 @@ const FriendPage = props => {
             </Typography>
             <Typography variant="caption" gutterBottom color="inherit" align="center"
                         className={classes.sectionContent}>
-              为 Apple 的创新产品构建坚实基础。作为团队中的一员，你将与世界一流的研究人员交流与合作，利用顶尖计算、存储和分析工具解决机器学习领域中极具挑战性的难题。在
-              Apple，你的团队可以在硬件、软件、算法等所有领域全面创新，一切机会尽在眼前。工作领域包括后端工程、数据科学、平台工程和系统工程。
+              汪师傅从来也不是一个更加坚强的人，也有属于自己脆弱的时光。但是，一些简单的瞬间却也早已温暖汪师傅的心。不管如何，也许你自己不觉得，但是在汪师傅的心里， 已经单方面宣布你是我的好朋友。
+              感谢那些绝望的思绪中带给汪师傅的那些希望的曙光。
             </Typography>
             <Typography size="small" color="primary" className={classes.sectionLink}>
               <Link color="primary" component={RouterLink} to={'/index'} underline="hover"
@@ -188,8 +188,7 @@ const FriendPage = props => {
             </Typography>
             <Typography variant="caption" gutterBottom color="inherit" align="center"
                         className={classes.sectionContent}>
-              为 Apple 的创新产品构建坚实基础。作为团队中的一员，你将与世界一流的研究人员交流与合作，利用顶尖计算、存储和分析工具解决机器学习领域中极具挑战性的难题。在
-              Apple，你的团队可以在硬件、软件、算法等所有领域全面创新，一切机会尽在眼前。工作领域包括后端工程、数据科学、平台工程和系统工程。
+              每一张照片背后的瞬间，都有故事。镜头前面的汪师傅和镜头背后的你都会被铭记。
             </Typography>
             <Typography size="small" color="primary" className={classes.sectionLink}>
               <Link color="primary" component={RouterLink} to={'/index'} underline="hover"
@@ -200,12 +199,12 @@ const FriendPage = props => {
           <img src={"https://img.ixingo.cn/web/sunrise.jpeg"} alt={'wangxin'} className={classes.image}/>
           <div className={classes.text}>
             <Typography variant="h1" gutterBottom color="inherit" align="center" className={classes.sectionTitle}>
-              那些绝望的思绪，和那些希望的曙光。
+              世界很大，星空很远
             </Typography>
             <Typography variant="caption" gutterBottom color="inherit" align="center"
                         className={classes.sectionContent}>
-              为 Apple 的创新产品构建坚实基础。作为团队中的一员，你将与世界一流的研究人员交流与合作，利用顶尖计算、存储和分析工具解决机器学习领域中极具挑战性的难题。在
-              Apple，你的团队可以在硬件、软件、算法等所有领域全面创新，一切机会尽在眼前。工作领域包括后端工程、数据科学、平台工程和系统工程。
+              汪师傅其实是一个不善言辞，但是又曾经挑战自己的人。以至于陷入人际交往中的迷惘，当然，随着岁月的变迁，汪师傅才逐渐明白赢回自我，遵从内心的重要。这个世界并不是需要讨好别人才能赢得尊重。
+              你越重视别人反而会赢得轻视。只尊重并珍视那些尊重并珍视自己的人。
             </Typography>
             <Typography size="small" color="primary" className={classes.sectionLink}>
               <Link color="primary" component={RouterLink} to={'/index'} underline="hover"
@@ -221,23 +220,10 @@ const FriendPage = props => {
                 与远见卓识的你一起，在生活中勇攀高峰。
               </div>
               <div className={classes.content}>
-              为 Apple 的创新产品构建坚实基础。作为团队中的一员，你将与世界一流的研究人员交流与合作，利用顶尖计算、存储和分析工具解决机器学习领域中极具挑战性的难题。在 Apple，你的团队可以在硬件、软件、算法等所有领域全面创新，一切机会尽在眼前。工作领域包括后端工程、数据科学、平台工程和系统工程。
+              现在就开始，汪师傅愿意与远见卓识的你一起，共同在生活中挑战那些失望与迷茫。
               </div>
             </span>
           </div>
-
-          {/*<div style={{position: 'relative', width: '100%'}}>*/}
-          {/*  <img src={"https://img.ixingo.cn/web/suzhou.jpeg"} alt={''}/>*/}
-          {/*  <span className={classes.float}>*/}
-          {/*    <div className={classes.title}>*/}
-          {/*      与远见卓识的你一起在生活中勇攀高峰。*/}
-          {/*    </div>*/}
-          {/*    <div className={classes.content}>*/}
-          {/*    为 Apple 的创新产品构建坚实基础。作为团队中的一员，你将与世界一流的研究人员交流与合作，利用顶尖计算、存储和分析工具解决机器学习领域中极具挑战性的难题。在 Apple，你的团队可以在硬件、软件、算法等所有领域全面创新，一切机会尽在眼前。工作领域包括后端工程、数据科学、平台工程和系统工程。*/}
-          {/*    </div>*/}
-          {/*  </span>*/}
-          {/*</div>*/}
-
 
           <div>
             <Paper className={classes.list}>
