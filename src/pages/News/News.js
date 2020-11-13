@@ -34,16 +34,6 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
-  mainFeaturedPost: {
-    position: 'relative',
-    backgroundColor: theme.palette.grey[800],
-    color: theme.palette.common.white,
-    backgroundImage: 'url(https://source.unsplash.com/user/erondu)',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-    marginBottom: theme.spacing(2),
-  },
   overlay: {
     position: 'absolute',
     top: 0,
