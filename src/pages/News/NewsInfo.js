@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {getAllPosts} from '../../util/APIUtils';
-import BigMediaCarcd from "../../components/MediaCard/MediaCard";
+import {getAllNews} from '../../util/APIUtils';
+import News from "./News";
+import {Instagram} from "react-content-loader";
+import {ContentLoading} from "../../components";
 
 class NewsInfo extends Component {
 
@@ -8,20 +10,14 @@ class NewsInfo extends Component {
     super(props);
     this.state = {
       news: [],
-      page: 0,
-      size: 10,
-      totalElements: 0,
-      totalPages: 0,
-      last: true,
       isLoading: false
     };
     this.loadNewsList = this.loadNewsList.bind(this);
-    this.handleLoadMore = this.handleLoadMore.bind(this);
   }
 
 
   loadNewsList() {
-    let promise = getAllPosts();
+    let promise = getAllNews();
     if (!promise) {
       return;
     }
@@ -33,11 +29,6 @@ class NewsInfo extends Component {
         const news = this.state.news.slice();
         this.setState({
           news: news.concat(response),
-          page: response.page,
-          size: response.size,
-          totalElements: response.totalElements,
-          totalPages: response.totalPages,
-          last: response.last,
           isLoading: false
         })
       }).catch(error => {
@@ -59,28 +50,25 @@ class NewsInfo extends Component {
     if (this.props.isAuthenticated !== nextProps.isAuthenticated) {
       // Reset State
       this.setState({
-        posts: [],
-        page: 0,
-        size: 10,
-        totalElements: 0,
-        totalPages: 0,
-        last: true,
-        currentVotes: [],
+        news: [],
         isLoading: false
       });
       this.loadNewsList();
     }
   }
 
-  handleLoadMore() {
-    this.loadNewsList();
-  }
 
   render() {
+    if(!this.state.news){
+      return (
+        <div>
+          <Instagram />
+          <ContentLoading/>
+        </div>
+      );
+    }
     return (
-      this.state.news.map(singleNews => (
-        <BigMediaCarcd posts={singleNews}/>
-      ))
+      <News cards={this.state.news}/>
     );
   }
 

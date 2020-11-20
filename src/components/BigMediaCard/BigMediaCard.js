@@ -51,23 +51,24 @@ const useStyles = makeStyles(theme => ({
 const MediaCard = props => {
 
   const classes = useStyles();
+  const {post} = props;
 
   return (
     <Grid item key={props.card} xs={12} sm={6} md={4}>
       <Card className={classes.cards}>
         <CardMedia
           className={classes.cardMedias}
-          image="https://img.ixingo.cn/master-wang-in-night.jpeg"
+          image={post.picUrl}
           // title={props.post.title}
         />
         <CardContent className={classes.cardContents}>
           <Typography gutterBottom variant="h3" component="h2" color="primary">
-            汪师傅在2020元旦前往苏州、杭州分别会晤大学好友Jacob Zhang，Simon Shi以及Justin Qian
+            {post.title}
             {/*{props.post.title}*/}
           </Typography>
           <Typography variant="h5" className={classes.summary}>
-            {/*{props.post.summary}*/}
-            2020年1月1日， 汪师傅先后前往苏州和杭州实现元旦旅行。期间分别会晤了Jacob Zhang，Simon Shi以及Justin Qian三位好友，并分别与他们
+            {post.summary}
+            {/*2020年1月1日， 汪师傅先后前往苏州和杭州实现元旦旅行。期间分别会晤了Jacob Zhang，Simon Shi以及Justin Qian三位好友，并分别与他们*/}
           </Typography>
         </CardContent>
         <CardActions>

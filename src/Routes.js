@@ -11,7 +11,7 @@ import {
   Course as CoursePage,
   Friend as FriendPage,
   Home as HomePage,
-  News as NewsPage,
+  NewsInfo as NewsPage,
   NotAuth as NotAuthPage,
   NotFound as NotFoundPage,
   PasswdReset as PasswdResetPage,
