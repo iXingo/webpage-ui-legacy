@@ -208,7 +208,7 @@ export function getNews(id) {
 
 export function getAllNews() {
   return request({
-    url: API_BASE_URL + "/post/news/",
+    url: API_BASE_URL + "/post/news/all",
     method: 'GET'
   });
 }

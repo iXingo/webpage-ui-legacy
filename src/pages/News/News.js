@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
 import {BigMediaCard, Carousel, Subscribe, ContentTitle} from '../../components';
+import {Instagram} from "react-content-loader";
 
 
 const useStyles = makeStyles(theme => ({
@@ -137,9 +138,12 @@ const News = props => {
 
   const classes = useStyles();
   const {cards} = props;
-  debugger;
-
   document.title = "星狗新闻，小人物的大新闻 | 星狗网， 看见好时光";
+  if(cards.length === 0){
+    return(
+      <Instagram/>
+    );
+  }
 
   return (
     <React.Fragment>
@@ -172,28 +176,28 @@ const News = props => {
 
           <ContentTitle context={techSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
+            {cards[0].map(card => (
               <BigMediaCard post={card} {...props}/>
             ))}
           </Grid>
 
           <ContentTitle context={lifeSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
+            {cards[1].map(card => (
               <BigMediaCard post={card} {...props}/>
             ))}
           </Grid>
 
           <ContentTitle context={friendSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
+            {cards[2].map(card => (
               <BigMediaCard post={card} {...props}/>
             ))}
           </Grid>
 
           <ContentTitle context={workSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
-            {cards.map(card => (
+            {cards[3].map(card => (
               <BigMediaCard post={card} {...props}/>
             ))}
           </Grid>
