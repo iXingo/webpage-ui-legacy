@@ -126,7 +126,7 @@ const MediaCard = props => {
                   </Typography>
                   <Typography variant="h6" style={{color: 'grey'}}>
                     {/*<span role={"img"} aria-label={"发表时间"}>⌚ </span> 发布于: */}
-                    {moment(post.creationDateTime).format('LLLL')}
+                    {moment(Number.parseInt(post.creationDateTime,10)).format('LLLL')}
                   </Typography>
                 </div>
               </div>

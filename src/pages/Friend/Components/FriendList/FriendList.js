@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {getAllFriends} from '../../../../util/APIUtils';
 import FriendContent from '../FriendContent';
-import {Typography} from "@material-ui/core";
-import Loading from "react-loading-components";
 import {Instagram} from "react-content-loader";
+import {ContentLoading} from "../../../../components";
 
 class FriendList extends Component {
 
@@ -80,9 +79,7 @@ class FriendList extends Component {
   render() {
     if (this.state.friends.length === 0) return (
       <div>
-        <Typography variant='h5'>
-          <Loading type='oval' width={18} height={18} fill='#f44242'/>请稍候～ 汪师傅正在为您马不停蹄地、疯狂地读取数据中...
-        </Typography>
+        <ContentLoading />
         <Instagram/>
       </div>
     );

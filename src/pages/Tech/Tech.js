@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {getAllTechPosts} from '../../util/APIUtils';
 import TechPage from "./TechPage";
 import {Instagram} from "react-content-loader";
-import Loading from 'react-loading-components';
 import {Typography} from "@material-ui/core";
 import {withRouter} from "react-router-dom";
+import {ContentLoading} from "../../components";
 
 
 class Tech extends Component {
@@ -87,8 +87,8 @@ class Tech extends Component {
       <div>
         <Typography variant='h5'>
           <TechPage posts={this.state.posts} {...this.props}/>
-          <Loading type='oval' width={18} height={18} fill='#f44242'/>请稍候～ 汪师傅正在为您马不停蹄地、疯狂地读取数据中...
-        </Typography>
+          <ContentLoading />
+          </Typography>
         <Instagram/>
       </div>
     );

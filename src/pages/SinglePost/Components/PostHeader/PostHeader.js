@@ -210,9 +210,9 @@ const PostHeader = props => {
         <strong style={{color: '#1a73e8'}}>
           {props.post.source}
         </strong>
-        发表于格林威治时间
+        发表于上海时间
         <strong style={{color: '#1a73e8'}}>
-          {moment(props.post.creationDateTime).format('LLLL')}
+          {moment(Number.parseInt(props.post.creationDateTime,10)).format('LLLL')}
         </strong>。
       </Typography>
       <Divider style={{margin: "5px 0"}}/>

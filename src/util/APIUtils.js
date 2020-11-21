@@ -206,6 +206,13 @@ export function getNews(id) {
   });
 }
 
+export function getAllNews() {
+  return request({
+    url: API_BASE_URL + "/post/news/",
+    method: 'GET'
+  });
+}
+
 export function getProject(id) {
   return request({
     url: API_BASE_URL + "/post/project/" + id,

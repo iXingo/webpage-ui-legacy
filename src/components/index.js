@@ -48,7 +48,7 @@ export {default as TitleContent} from './TitleContent';
 export {default as ImageSection} from './ImageSection';
 export {default as SectionBlock} from './SectionBlock';
 export {default as SectionContent} from './SectionContent';
-
+export {default as ContentLoading} from './ContentLoading';
 
 
 
