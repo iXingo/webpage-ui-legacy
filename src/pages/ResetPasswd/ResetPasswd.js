@@ -229,7 +229,7 @@ const ResetPasswd = (props) => {
               variant="h5"
             >
               <span role={"img"} aria-label={"博文"}
-                    className={classes.emoji}>🔐</span> 您正在选择充值您的登录密码。如果这不是您的操作，可能您的账号已经泄露， 请联系@程序员汪师傅处理此事。
+                    className={classes.emoji}>🔐</span> 您正在选择重置您的登录密码。如果这不是您的操作，可能您的账号已经泄露， 请联系@程序员汪师傅处理此事。
             </Typography>
 
             <TextField
