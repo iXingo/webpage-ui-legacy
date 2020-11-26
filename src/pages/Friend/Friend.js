@@ -19,9 +19,6 @@ const useStyles = makeStyles(theme => ({
 const Friend = props => {
 
   const classes = useStyles();
-  document.title = "汪师傅和他的朋友们 | 看见，好时光";
-  if (!props.isAuthenticated) return <NotAuth/>;
-
 
   const SchoolFriend = {
     sectionMain: '学生时代',
@@ -35,7 +32,12 @@ const Friend = props => {
     sectionContent: '初入江湖的新知， 在这山长水远的江湖遇见的同行人。'
   }
 
-  return (
+  document.title = "汪师傅和他的朋友们 | 看见，好时光";
+  debugger;
+  if (!props.isAuthenticated) {
+    return (<NotAuth next={"/friends"} {...props}/>);
+  }
+  else return (
     <div>
       <CssBaseline/>
       <FriendPage/>

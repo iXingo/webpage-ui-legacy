@@ -106,8 +106,7 @@ const useStyles = makeStyles(theme => ({
 
 const SignInCard = (props) => {
 
-  const {history} = props;
-
+  const {history,next} = props;
   const classes = useStyles();
 
   const [formState, setFormState] = useState({
@@ -147,14 +146,17 @@ const SignInCard = (props) => {
 
   const handleSignIn = event => {
     event.preventDefault();
-    // history.push('/');
     const values = formState.values;
     const loginRequest = Object.assign({}, values);
     login(loginRequest)
       .then(response => {
         localStorage.setItem(ACCESS_TOKEN, response.accessToken);
         console.log(history);
-        props.handleLogin();
+        if(next){
+          props.handleLogin(next);
+          console.log("Next=>",next)
+        }
+        else props.handleLogin();
       }).catch(error => {
       if (error.status === 401) {
         notification.error({

@@ -40,8 +40,8 @@ class App extends Component {
     });
   }
 
-  loadCurrentUser() {
-    // const {history} = this.props;
+  loadCurrentUser(next) {
+    const {history} = this.props;
     this.setState({
       isLoading: true
     });
@@ -52,8 +52,10 @@ class App extends Component {
           isAuthenticated: true,
           isLoading: false
         });
-        console.log("登录成功！");
-        // history.push('/index');
+        if(next) {
+          history.push(next);
+          console.log("登录成功！=>", next);
+        }else history.push('/index');
       }).catch(error => {
       this.setState({
         isLoading: false,

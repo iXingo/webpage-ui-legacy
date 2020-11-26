@@ -153,16 +153,14 @@ const useStyles = makeStyles(theme => ({
 
 const SignIn = (props) => {
 
-  const {computedMatch: {params}} = props;
-  console.log('params:' + params['next']);
-  const {history, currentUser} = props;
+  const {history, currentUser, next} = props;
   if (currentUser) {
     const notificationType = "success";
     notification[notificationType]({
       message: '星狗网 Web App',
-      description: '您已经是登录状态啦！不需要登录哦～为您跳转到到首页看看吧～',
+      description: '您已经是登录状态啦！不需要登录哦～',
     });
-    history.push('/index');
+
   }
 
   const classes = useStyles();
@@ -209,14 +207,15 @@ const SignIn = (props) => {
 
   const handleSignIn = event => {
     event.preventDefault();
-    // history.push('/');
     const values = formState.values;
     const loginRequest = Object.assign({}, values);
     login(loginRequest)
       .then(response => {
         localStorage.setItem(ACCESS_TOKEN, response.accessToken);
         console.log(history);
-        props.handleLogin(params['next']);
+        if(next){
+          props.handleLogin(next);
+          history.push(next);}
       }).catch(error => {
       if (error.status === 401) {
         notification.error({

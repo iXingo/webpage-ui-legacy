@@ -28,14 +28,14 @@ const useStyles = makeStyles(theme => ({
 const SignedIn = props => {
 
   const classes = useStyles();
-  const {currentUser} = props;
+  const {currentUser,next} = props;
 
   if (!currentUser) {
     return (
       <React.Fragment>
         <CssBaseline/>
         <ContentTitle context={props.context} {...props} />
-        <SignInCard {...props}/>
+        <SignInCard next={next} {...props}/>
       </React.Fragment>
     );
   } else {
