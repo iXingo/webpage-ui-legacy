@@ -48,10 +48,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const MediaCard = props => {
+const BigMediaCard = props => {
 
   const classes = useStyles();
-  const {post} = props;
+  const {post,history} = props;
+  const openNews = ()=> {
+    history.push("post/" + post.id);
+  };
 
   return (
     <Grid item key={props.card} xs={12} sm={6} md={4}>
@@ -59,7 +62,6 @@ const MediaCard = props => {
         <CardMedia
           className={classes.cardMedias}
           image={post.picUrl}
-          // title={props.post.title}
         />
         <CardContent className={classes.cardContents}>
           <Typography gutterBottom variant="h3" component="h2" color="primary">
@@ -72,14 +74,16 @@ const MediaCard = props => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button size="small" color="primary" onClick={() => openNews()}>
             查看全文 →
           </Button>
         </CardActions>
       </Card>
     </Grid>
   );
+
+
 };
 
 
-export default MediaCard;
+export default BigMediaCard;
