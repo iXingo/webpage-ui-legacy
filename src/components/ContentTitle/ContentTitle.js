@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     color: 'hsla(0,0%,100%,.6)',
   },
   main: {
-    padding: '200px 10px 0'
+    padding: '100px 10px 0'
   },
   firstLine: {
     fontSize: 16,
@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20,
     lineHeight: 1.5,
     [theme.breakpoints.down('md')]: {
-      width: 300,
+      width: 240,
     },
   },
   thirdLine: {

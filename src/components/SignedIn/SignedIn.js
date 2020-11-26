@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     display: 'inline-block',
   },
   user: {
-    marginTop: 100,
+    marginTop: 50,
     marginBottom: 30,
     display: 'flex',
     alignItems: 'center',
