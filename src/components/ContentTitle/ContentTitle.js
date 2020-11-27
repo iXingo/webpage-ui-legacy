@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 20,
     lineHeight: 1.5,
     [theme.breakpoints.down('md')]: {
-      width: 240,
+      width: 300,
     },
   },
   thirdLine: {

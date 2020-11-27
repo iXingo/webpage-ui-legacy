@@ -65,7 +65,7 @@ const useStyles = makeStyles(theme => ({
   },
   emoji: {
     fontSize: 14,
-    paddingRight: 3
+    paddingRight: 6
   }
 }));
 

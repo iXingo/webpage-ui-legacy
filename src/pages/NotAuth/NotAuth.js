@@ -7,7 +7,7 @@ import {SignedIn} from "../../components";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    padding: theme.spacing(4),
+    padding: theme.spacing(1),
   },
   content: {
     paddingTop: 100,
@@ -72,7 +72,7 @@ const NotAuth = props => {
   }
   else return (
     <div className={classes.root}>
-      <Grid container justify="center" spacing={4}>
+      <Grid container justify="center">
         <Grid item lg={6} xs={12}>
           <SignedIn next={next} context={signin} {...props}/>
         </Grid>

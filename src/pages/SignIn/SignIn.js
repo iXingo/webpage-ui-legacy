@@ -153,14 +153,14 @@ const useStyles = makeStyles(theme => ({
 
 const SignIn = (props) => {
 
-  const {history, currentUser, next} = props;
+  const {history, currentUser} = props;
   if (currentUser) {
     const notificationType = "success";
     notification[notificationType]({
       message: '星狗网 Web App',
       description: '您已经是登录状态啦！不需要登录哦～',
     });
-
+    history.push('/index');
   }
 
   const classes = useStyles();
@@ -213,9 +213,7 @@ const SignIn = (props) => {
       .then(response => {
         localStorage.setItem(ACCESS_TOKEN, response.accessToken);
         console.log(history);
-        if(next){
-          props.handleLogin(next);
-          history.push(next);}
+        props.handleLogin();
       }).catch(error => {
       if (error.status === 401) {
         notification.error({
