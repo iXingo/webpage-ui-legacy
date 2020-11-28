@@ -214,14 +214,6 @@ const studySection = {
   linkUrl: '/tech'
 };
 
-// const endSection = {
-//   sectionMain: '一些有趣简单的代码程序',
-//   sectionTitle: '一曲肝肠断， 天涯何处觅知音',
-//   sectionContent: '不管你今后如何重要，总会有一天从热闹中逃亡，孤舟单骑，只想与高山流水对晤。是有你的世界在哪里。 不要因为走了太久而忘了我们为什么出发。',
-//
-//   image: 'https://img.ixingo.cn/undraw_code_review_l1q9.svg'
-//
-// };
 
 const signin = {
   sectionMain: '登录/注册, 与汪师傅分享你的知识与见闻',
@@ -243,12 +235,8 @@ const SvgIcon = () => {
 
 const Home = props => {
 
-  // const { currentUser } = props;
   const classes = useStyles();
-
-  // if(!currentUser){
-  //   return <NotAuth />;
-  // }
+  document.title = "首页 | 星狗网， 看见好时光";
 
   return (
     <React.Fragment>
