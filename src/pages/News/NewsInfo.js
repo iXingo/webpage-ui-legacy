@@ -59,10 +59,10 @@ class NewsInfo extends Component {
 
 
   render() {
-    if(!this.state.news){
+    if (!this.state.news) {
       return (
         <div>
-          <Instagram />
+          <Instagram/>
           <ContentLoading/>
         </div>
       );

@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid} from '@material-ui/core';
-// import {Grid, IconButton, Typography} from '@material-ui/core';
-// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-// import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import {ProductCard, ProductsToolbar} from './components';
 import mockData from './data';
 import SectionTitle from "../../components/SectionTitle/SectionTiltle";

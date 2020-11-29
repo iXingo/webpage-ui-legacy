@@ -2,7 +2,6 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Link, Typography} from '@material-ui/core';
 import {Link as RouterLink} from 'react-router-dom';
-
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import CollectionsIcon from '@material-ui/icons/Collections';
 import ChatIcon from '@material-ui/icons/Chat';

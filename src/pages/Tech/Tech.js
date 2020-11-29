@@ -87,8 +87,8 @@ class Tech extends Component {
       <div>
         <Typography variant='h5'>
           <TechPage posts={this.state.posts} {...this.props}/>
-          <ContentLoading />
-          </Typography>
+          <ContentLoading/>
+        </Typography>
         <Instagram/>
       </div>
     );

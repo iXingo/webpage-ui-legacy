@@ -87,7 +87,7 @@ class Course extends Component {
       <div>
         <Typography variant='h5'>
           <CoursePage posts={this.state.posts} {...this.props}/>
-          <ContentLoading />
+          <ContentLoading/>
         </Typography>
         <Instagram/>
       </div>

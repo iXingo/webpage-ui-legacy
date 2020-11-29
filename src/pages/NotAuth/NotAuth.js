@@ -69,8 +69,7 @@ const NotAuth = props => {
         </Grid>
       </div>
     );
-  }
-  else return (
+  } else return (
     <div className={classes.root}>
       <Grid container justify="center">
         <Grid item lg={6} xs={12}>

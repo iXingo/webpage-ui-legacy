@@ -1,5 +1,5 @@
 import React from 'react';
-import BigMediaCarcd from "../../components/MediaCard";
+import MediaCard from "../../components/MediaCard";
 import SectionTitle from "../../components/SectionTitle/SectionTiltle";
 
 
@@ -19,7 +19,7 @@ const TechPage = props => {
   return (
     <div>
       <SectionTitle context={techSection}/>
-      <BigMediaCarcd posts={props.posts}/>
+      <MediaCard posts={props.posts}/>
     </div>
   );
 };

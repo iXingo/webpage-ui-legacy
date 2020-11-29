@@ -35,8 +35,7 @@ const Friend = props => {
   document.title = "汪师傅和他的朋友们 | 看见，好时光";
   if (!props.isAuthenticated) {
     return (<NotAuth next={"/friends"} {...props}/>);
-  }
-  else return (
+  } else return (
     <div>
       <CssBaseline/>
       <FriendPage/>

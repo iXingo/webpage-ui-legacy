@@ -79,7 +79,7 @@ class FriendList extends Component {
   render() {
     if (this.state.friends.length === 0) return (
       <div>
-        <ContentLoading />
+        <ContentLoading/>
         <Instagram/>
       </div>
     );

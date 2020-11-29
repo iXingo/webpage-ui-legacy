@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 import {Button, IconButton, TextField, Typography} from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-
 import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import {passwdReset} from "../../util/APIUtils";

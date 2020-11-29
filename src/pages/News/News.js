@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import {withRouter} from 'react-router-dom';
-import {BigMediaCard, Carousel, Subscribe, ContentTitle} from '../../components';
+import {BigMediaCard, Carousel, ContentTitle, Subscribe} from '../../components';
 import {Instagram} from "react-content-loader";
 
 
@@ -139,8 +139,8 @@ const News = props => {
   const classes = useStyles();
   const {cards} = props;
   document.title = "星狗新闻，小人物的大新闻 | 星狗网， 看见好时光";
-  if(cards.length === 0){
-    return(
+  if (cards.length === 0) {
+    return (
       <Instagram/>
     );
   }

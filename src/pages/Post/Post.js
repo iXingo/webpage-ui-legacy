@@ -87,7 +87,7 @@ class Post extends Component {
       <div>
         <Typography variant='h5'>
           <PostPage posts={this.state.posts} {...this.props}/>
-          <ContentLoading />
+          <ContentLoading/>
         </Typography>
         <Instagram/>
       </div>

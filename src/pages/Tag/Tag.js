@@ -87,7 +87,7 @@ class Tag extends Component {
       <div>
         <Typography variant='h5'>
           <TagPage posts={this.state.posts} {...this.props}/>
-          <ContentLoading />
+          <ContentLoading/>
         </Typography>
         <Instagram/>
       </div>

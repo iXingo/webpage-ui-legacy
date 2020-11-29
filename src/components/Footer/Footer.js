@@ -71,7 +71,6 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = props => {
   const {className} = props;
-
   const classes = useStyles();
 
   return (
