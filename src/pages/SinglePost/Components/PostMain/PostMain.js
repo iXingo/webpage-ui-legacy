@@ -159,7 +159,7 @@ const PostMain = props => {
           {/* <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
           <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography> */}
           <div className={classes.person}>
-            <Typography className={classes.name} variant="body1"><span className={classes.copyright}>&copy; Copyright 2020</span></Typography>
+            <Typography className={classes.name} variant="body1"><span className={classes.copyright}>&copy; Copyright 2021</span></Typography>
             <Typography className={classes.bio} variant="body2"><span className={classes.copyright}>Designed by Shawn Wang in Pudong New Area.</span></Typography>
           </div>
         </div>

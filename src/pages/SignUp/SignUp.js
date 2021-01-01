@@ -279,7 +279,7 @@ const SignUp = props => {
                   className={classes.name}
                   variant="body1"
                 >
-                  &copy; Copyright 2020
+                  &copy; Copyright 2021
                 </Typography>
                 <Typography
                   className={classes.bio}

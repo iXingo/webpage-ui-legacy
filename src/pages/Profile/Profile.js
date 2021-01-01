@@ -58,7 +58,7 @@ const Profile = props => {
           <Typography className={classes.quoteText} variant="h1">汪师傅:</Typography>
           <Typography className={classes.quoteText} variant="h1">看见，好时光</Typography>
           <div className={classes.person}>
-            <Typography className={classes.name} variant="body1">&copy; Copyright 2020</Typography>
+            <Typography className={classes.name} variant="body1">&copy; Copyright 2021</Typography>
             <Typography className={classes.bio} variant="body2">Designed by Shawn Wang in Pudong New Area</Typography>
           </div>
         </div>

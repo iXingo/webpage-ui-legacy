@@ -78,7 +78,7 @@ const Footer = props => {
       <div className={clsx(classes.rootTop, className)}>
         <div className={classes.footCopyright}>
           <Typography variant="body1" className={classes.footer}>
-            &copy; All Rights Reserved. &copy; Copyright 2018 - 2020 所有权利保留。
+            &copy; All Rights Reserved. &copy; Copyright 2018 - 2021 所有权利保留。
           </Typography>
           <Typography variant="body1" className={classes.footer}>
             &copy; 本站由 @程序员汪师傅 开发设计并维护。
@@ -276,7 +276,7 @@ const Footer = props => {
           星狗网 | 看见，好时光。
         </Typography>
         <Typography variant="caption" display="block">
-          &copy; Copyright 2020. All rights Reserved. Created with love by Shawn Wang at NVIDIA.
+          &copy; Copyright 2021. All rights Reserved. Created with love by Shawn Wang at NVIDIA.
         </Typography>
         <Typography variant="caption" display="block">
           A Material Design Full Stack App Powered by Spring Boot, Spring Security, JWT, MySQL, Redis, React,
@@ -284,7 +284,7 @@ const Footer = props => {
           and Ant Design.
         </Typography>
         <Typography variant="caption" display="block">
-          &copy; Copyright 2020. 所有权利保留。本网站由汪师傅进行开发维护， 所有权利与解释权归汪师傅所有， 未经允许或授权， 严禁转载， 复制， 刻录与分发。
+          &copy; Copyright 2021. 所有权利保留。本网站由汪师傅进行开发维护， 所有权利与解释权归汪师傅所有， 未经允许或授权， 严禁转载， 复制， 刻录与分发。
           所有权利是指本网站所上载的信息与内容， 网站源代码不包含在此项权利申明中， 在遵守法律的前提下， 开发者可以在开源许可范围内自由使用， 分发， 修改以及商业使用。
         </Typography>
         <Typography variant="caption" display="block">
