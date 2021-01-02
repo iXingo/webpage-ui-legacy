@@ -76,7 +76,7 @@ const contributionSection = {
   sectionTitle: '小楼昨夜又东风，本站开发测试中。',
   sectionContent: '所有内容和功能正在不断变化中，欢迎提供意见和建议。',
 
-  image: 'https://img.ixingo.cn/undraw_new_decade_n4qd.svg',
+  image: 'https://img.ixingo.cn/upload/undraw_happy_2021_h01d.svg',
   textTitle: '星狗网的前世与今生',
   textContent: '2013年的暑期，汪师傅注册了第一个域名"wangxin.ml"(因为.ml与.cf是免费注册的域名服务)，并且在主机屋（免费使用的网站托管服务）使用Wordpress（一个基于PHP开发的全球流行的建站程序）搭建了星狗网的第一个版本',
   linkUrl: 'post/8015190302399725568',
@@ -265,17 +265,17 @@ const Home = props => {
       <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.tipsLine}>
         ↓ 向下滑动以继续浏览
       </Typography>
-      <PictureTextLink context={contributionSection} {...props}  />
-      <PictureItems context={newsSection} {...props} />
-      <PicturePicture context={blogSection} {...props} />
-      <CardPicture context={planSection} {...props}  />
-      <PictureText context={selfSection} {...props} />
-      <PictureContentLine context={friendSection} {...props}  />
-      <TextPicture context={goodSection} {...props} />
-      <ButtonPictureContent context={programmerSection} {...props}  />
-      <PictureTextLink context={studySection} {...props}  />
+      <PictureTextLink context={contributionSection} {...props}  />      <div style={{marginBottom: 200}}/>
+      <PictureItems context={newsSection} {...props} /> <div style={{marginBottom: 200}}/>
+      <PicturePicture context={blogSection} {...props} /> <div style={{marginBottom: 200}}/>
+      <CardPicture context={planSection} {...props}  /> <div style={{marginBottom: 200}}/>
+      <PictureText context={selfSection} {...props} /> <div style={{marginBottom: 200}}/>
+      <PictureContentLine context={friendSection} {...props}  /> <div style={{marginBottom: 200}}/>
+      <TextPicture context={goodSection} {...props} /> <div style={{marginBottom: 200}}/>
+      <ButtonPictureContent context={programmerSection} {...props}  /> <div style={{marginBottom: 200}}/>
+      <PictureTextLink context={studySection} {...props}  /><div style={{marginBottom: 200}}/>
       {/*<BigImage context={endSection} {...props}  />*/}
-      <SignedIn context={signin} {...props} />
+      <SignedIn context={signin} {...props} style={{marginTop: 200, marginBottom: 200}}/> <div style={{marginBottom: 200}}/>
     </React.Fragment>
   );
 };
