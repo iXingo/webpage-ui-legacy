@@ -73,6 +73,25 @@ const Footer = props => {
   const {className} = props;
   const classes = useStyles();
 
+  const loc = document.location;
+  console.log("location: =>",loc.hostname);
+  let version;
+  if (loc.hostname.indexOf("ixingo.cn")!==-1){
+    version = '1'
+  }else if(loc.hostname.indexOf("xindog.com")!==-1){
+    version = '2'
+  }else if(loc.hostname.indexOf("wang-xin.cn")!==-1){
+    version = '3'
+  }else if(loc.hostname.indexOf("zhuangbility.org.cn")!==-1){
+    version = '7'
+  } else if(loc.hostname.indexOf("ixingo.com.cn")!==-1){
+    version = '7'
+  }else if(loc.hostname.indexOf("localhost")!==-1){
+    version = '0'
+  }else {
+    version = '❌服务端错误'
+  }
+
   return (
     <div className={classes.root}>
       <div className={clsx(classes.rootTop, className)}>
@@ -291,8 +310,8 @@ const Footer = props => {
           本网站构建并托管于百度智能云BCC， 静态文件使用七牛云进行CDN加速， 短信服务由腾讯云提供支持， DNS域名解析服务由阿里云万网提供， 微信公众号平台基于新浪云SAE进行构建。
         </Typography>
         <Typography variant="caption" style={{marginTop: 10, color: 'black', fontSize: 12}}>
-          <Link component="a" href="http://www.beian.miit.gov.cn/" target="_blank" style={{paddingRight: 5}}>
-            ICP证: 皖ICP备15011098号
+          <Link component="a" href="https://beian.miit.gov.cn" target="_blank" style={{paddingRight: 5}}>
+            ICP证: 皖ICP备15011098-{version}号
           </Link>
         </Typography>
         <img alt={'星狗网'} src={"https://img.ixingo.cn/pic/LOGO.png"} style={{width: 150}}/>
