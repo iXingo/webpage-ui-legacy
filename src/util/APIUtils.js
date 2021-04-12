@@ -155,21 +155,21 @@ export function getUserCreatedPosts(username, page, size) {
 
 export function getAllPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?typeId=1&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/all?typeId=0&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function getAllTechPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?typeId=2&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/all?typeId=6&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function getAllCoursePosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?typeId=3&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/all?typeId=6&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
