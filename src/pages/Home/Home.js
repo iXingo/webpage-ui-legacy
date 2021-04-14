@@ -250,12 +250,12 @@ const Home = props => {
           <Typography variant="h1" gutterBottom color="primary" align="center" className={classes.firstLine}>
             程序人生的寂静欢喜。
           </Typography>
-          <TypeWriter typing={1}>
-            <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
-                        className={classes.secondLine}>
-              车马很慢，书信很远。汪师傅，一个（伪）文艺派程序员，在这个漫长而复杂的人生做一些短暂简单，且微不足道的思考。
-            </Typography>
-          </TypeWriter>
+          <Typography variant="subtitle1" gutterBottom color="inherit" align="center"
+                      className={classes.secondLine}>
+            <TypeWriter typing={1} maxdelay={100} mindelay={20}>
+                车马很慢，书信很远。汪师傅，一个（伪）文艺派程序员，在这个漫长而复杂的人生做一些短暂简单，且微不足道的思考。
+            </TypeWriter>
+          </Typography>
           <Typography variant="h4" gutterBottom color="primary" align="center" className={classes.thirdLine}>
             <SvgIcon/> 与其在别处仰望， 不如在这里并肩。
           </Typography>

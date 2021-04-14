@@ -58,16 +58,16 @@ const FriendHeader = props => {
         <img alt="Cover" className={classes.mainImg} src={friend.pictureUrl}/>
       </Grid>
       <Grid item xs={12} md={5} className={classes.profile}>
-        <Typography overline gutterBottom variant='body1' style={{padding: '10px 0', color: 'black'}}>
+        <Typography gutterBottom variant='body1' style={{padding: '10px 0', color: 'black'}}>
           好友
         </Typography>
-        <Typography overline gutterBottom variant='body1' style={{padding: '10px 0', color: '#1a73e8', fontSize: 60}}>
+        <Typography gutterBottom variant='body1' style={{padding: '10px 0', color: '#1a73e8', fontSize: 60}}>
           {friend.name}
         </Typography>
-        <Typography overline gutterBottom variant='h5' style={{padding: '20px 0', color: '#546e7a', fontWeight: 300}}>
+        <Typography gutterBottom variant='h5' style={{padding: '20px 0', color: '#546e7a', fontWeight: 300}}>
           {friend.description}
         </Typography>
-        <Typography overline gutterBottom variant='caption'
+        <Typography gutterBottom variant='caption'
                     style={{padding: '20px 0', color: 'black', fontWeight: 300}}>
           【{friend.name}】和 汪师傅 相识大约已有：<CountUp/>
         </Typography>

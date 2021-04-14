@@ -106,7 +106,7 @@ const MediaCard = props => {
   return (
     <Grid container>
       {posts.map(post => (
-        <Grid item key={props.card} xs={12} md={4} className={classes.cardGrids}>
+        <Grid item key={post.id} xs={12} md={4} className={classes.cardGrids}>
           <Card className={classes.cards} onClick={() => openPost(String(post.id))}>
             <CardMedia
               className={classes.cardMedias}
@@ -135,7 +135,7 @@ const MediaCard = props => {
               </Typography>
               <Typography variant="h6" gutterBottom className={classes.tags}>
                 {post.tags.map(tag => (
-                  <div style={{paddingRight: 10}}>
+                  <div style={{paddingRight: 10}} key={tag.id}>
                     <Chip label={tag.name} component="a" href="/index" clickable variant="outlined" size={"small"}/>
                   </div>
                 ))}

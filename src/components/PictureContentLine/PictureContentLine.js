@@ -63,49 +63,57 @@ const cards = [
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Simon Shi",
     content: "Simon与汪师傅相识于2011年。",
-    description: "Simon Shi与汪师傅曾经是对门宿舍的同班同学， 并且在之后的学习和考研过程中结下了深厚的友谊。"
+    description: "Simon Shi与汪师傅曾经是对门宿舍的同班同学， 并且在之后的学习和考研过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Heaven Xia",
     content: "Heaven与汪师傅相识于2015。",
-    description: "Simon Shi与汪师傅曾经是研究生同门同学， 并且在工作之后的前两年成为室友，在此过程中结下了深厚的友谊。"
+    description: "Simon Shi与汪师傅曾经是研究生同门同学， 并且在工作之后的前两年成为室友，在此过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Doctor Xiong",
     content: "Xiong与汪师傅相识于2007年。",
-    description: "Doctor Xiong与汪师傅曾经是高中同学，并且是前后桌，在此过程中结下了深厚的友谊。"
+    description: "Doctor Xiong与汪师傅曾经是高中同学，并且是前后桌，在此过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Justin Qian",
     content: "Justin与汪师傅相识于2011年。",
-    description: "Justin Qian与汪师傅曾经是大学同学与室友，并且在共同的学习和生活过程中结下了深厚的友谊。"
+    description: "Justin Qian与汪师傅曾经是大学同学与室友，并且在共同的学习和生活过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Jacob Zhang",
     content: "Jacob与汪师傅相识于2011年。",
-    description: "Jacob Zhang与汪师傅曾经是大学同学/室友，并且在共同的学习、生活、社团工作过程中结下了深厚的友谊。"
+    description: "Jacob Zhang与汪师傅曾经是大学同学/室友，并且在共同的学习、生活、社团工作过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Flag Hong",
     content: "Flag与汪师傅相识于2011年。",
-    description: "Flag Hong与汪师傅曾经是大学同学/室友，并且在共同的学习、生活、考研过程中结下了深厚的友谊。"
+    description: "Flag Hong与汪师傅曾经是大学同学/室友，并且在共同的学习、生活、考研过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Sevn Sun",
     content: "Sevn与汪师傅相识于2015年。",
-    description: "Sevn Sun与汪师傅曾经是研究生同门/室友，并且在共同的学习、生活过程中结下了深厚的友谊。"
+    description: "Sevn Sun与汪师傅曾经是研究生同门/室友，并且在共同的学习、生活过程中结下了深厚的友谊。",
+    link: "friend/001"
   },
   {
     picture: "https://img.ixingo.cn/default_head_pic.png",
     title: "Yongye Li",
     content: "Yongye与汪师傅相识于2008年。",
-    description: "Sevn Sun与汪师傅曾经是高中同桌，并且在共同的学习过程中结下了深厚的友谊。"
+    description: "Sevn Sun与汪师傅曾经是高中同桌，并且在共同的学习过程中结下了深厚的友谊。",
+    link: "friend/001"
   }
 ];
 
@@ -121,7 +129,7 @@ const PictureContentLine = props => {
         {/* End hero unit */}
         <Grid container spacing={4}>
           {cards.map(card => (
-            <Grid item key={card} xs={12} sm={6} md={3}>
+            <Grid item key={card.title} xs={12} sm={6} md={3}>
               <Card className={classes.card}>
                 <CardMedia
                   className={classes.cardMedia}

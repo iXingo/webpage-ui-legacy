@@ -85,7 +85,7 @@ class FriendList extends Component {
     );
     return (
       this.state.friends.map(friend => (
-        <FriendContent friend={friend} {...this.props}/>
+        <FriendContent friend={friend} key={friend.id} {...this.props}/>
       ))
     );
   }

@@ -52,7 +52,7 @@ const Project = props => {
     <React.Fragment>
       <SectionTitle context={projectSection}/>
       {projects.map(project => (
-        <HeaderUnit project={project} {...props} />
+        <HeaderUnit project={project}  key={project.id}{...props} />
       ))
       }
     </React.Fragment>

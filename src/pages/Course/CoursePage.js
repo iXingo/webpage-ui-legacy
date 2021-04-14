@@ -1,5 +1,5 @@
 import React from 'react';
-import BigMediaCarcd from "../../components/MediaCard";
+import BigMediaCard from "../../components/MediaCard";
 import SectionTitle from "../../components/SectionTitle/SectionTiltle";
 
 
@@ -20,7 +20,7 @@ const CoursePage = props => {
   return (
     <div>
       <SectionTitle context={courseSection}/>
-      <BigMediaCarcd posts={props.posts}/>
+      <BigMediaCard posts={props.posts}/>
     </div>
   );
 };

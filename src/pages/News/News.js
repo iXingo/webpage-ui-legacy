@@ -184,7 +184,7 @@ const News = props => {
           <ContentTitle context={lifeSection}/>
           <Grid container spacing={4} className={classes.cardGrids}>
             {cards[1].map(card => (
-              <BigMediaCard post={card} {...props}/>
+              <BigMediaCard post={card} key={card.id}{...props}/>
             ))}
           </Grid>
 
