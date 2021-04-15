@@ -86,20 +86,23 @@ const CommentForm = props => {
           onKeyDown={handleKeyDown}
         />
       </Paper>
+      <div>
       <Tooltip title="评论发射">
-        <Button
-          className={classes.commentButton}
-          size="small"
-          variant="contained"
-          color={value.length > 0 ? 'primary' : 'default'}
-          disabled={value.length <= 0}
-          onClick={() => handle(value)}
-        >
-          <CommentIcon className={classes.commentIcon}/>
-          评论
-        </Button>
+        <span >
+          <Button
+            className={classes.commentButton}
+            size="small"
+            variant="contained"
+            color={value.length > 0 ? 'primary' : 'default'}
+            disabled={value.length <= 0}
+            onClick={() => handle(value)}
+          >
+            <CommentIcon className={classes.commentIcon}/>
+            评论
+          </Button>
+          </span>
       </Tooltip>
-
+      </div>
       <Divider className={classes.divider}/>
     </div>
   );
