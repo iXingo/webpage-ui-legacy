@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {makeStyles} from '@material-ui/styles';
 // import Grid from '@material-ui/core/Grid';
-import {ImageSection, MediaSection, PictureText, TextPicture} from '../../components';
+import {ImageSection,
+  // MediaSection,
+  PictureText,
+  TextPicture} from '../../components';
 // import {Container} from "@material-ui/core";
 // import Paper from '@material-ui/core/Paper';
 
@@ -95,7 +98,7 @@ const AboutMe = props => {
   return (
     <div className={classes.root}>
 
-      <MediaSection {...props}/>
+      {/*<MediaSection {...props}/>*/}
 
       {/*<Container>*/}
       {/*  <img src={"https://img.ixingo.cn/wang-xin-1.png"} style={{width: '100%', paddingTop: 40}} alt={'wangxin'}/>*/}
