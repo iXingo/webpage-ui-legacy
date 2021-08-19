@@ -156,21 +156,21 @@ export function getUserCreatedPosts(username, page, size) {
 
 export function getAllPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?typeId=1&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/posts/?typeId=1&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function getAllTechPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?typeId=2&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/posts/?typeId=2&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function getAllCoursePosts(page, size) {
   return request({
-    url: API_BASE_URL + "/post/all?typeId=3&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/posts/?typeId=3&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
@@ -178,7 +178,7 @@ export function getAllCoursePosts(page, size) {
 
 export function getPost(id) {
   return request({
-    url: API_BASE_URL + "/post/" + id,
+    url: API_BASE_URL + "/posts/" + id,
     method: 'GET'
   });
 }
@@ -202,28 +202,28 @@ export function getFriend(id) {
 
 export function getNews(id) {
   return request({
-    url: API_BASE_URL + "/post/news/" + id,
+    url: API_BASE_URL + "/news/" + id,
     method: 'GET'
   });
 }
 
 export function getAllNews() {
   return request({
-    url: API_BASE_URL + "/post/news/all",
+    url: API_BASE_URL + "/news/recent",
     method: 'GET'
   });
 }
 
 export function getProject(id) {
   return request({
-    url: API_BASE_URL + "/post/project/" + id,
+    url: API_BASE_URL + "/projects/" + id,
     method: 'GET'
   });
 }
 
-export function getAllProjects(id) {
+export function getAllProjects() {
   return request({
-    url: API_BASE_URL + "/post/project/all",
+    url: API_BASE_URL + "/projects",
     method: 'GET'
   });
 }
