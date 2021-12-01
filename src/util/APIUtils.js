@@ -29,14 +29,14 @@ export function getAllPolls(page, size) {
   size = size || POLL_LIST_SIZE;
 
   return request({
-    url: API_BASE_URL + "/polls?page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/poll?page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function createPoll(pollData) {
   return request({
-    url: API_BASE_URL + "/polls",
+    url: API_BASE_URL + "/poll",
     method: 'POST',
     body: JSON.stringify(pollData)
   });
@@ -44,7 +44,7 @@ export function createPoll(pollData) {
 
 export function castVote(voteData) {
   return request({
-    url: API_BASE_URL + "/polls/" + voteData.pollId + "/votes",
+    url: API_BASE_URL + "/poll/" + voteData.pollId + "/votes",
     method: 'POST',
     body: JSON.stringify(voteData)
   });
@@ -126,7 +126,7 @@ export function getUserCreatedPolls(username, page, size) {
   size = size || POLL_LIST_SIZE;
 
   return request({
-    url: API_BASE_URL + "/user/" + username + "/polls?page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/user/" + username + "/poll?page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
@@ -136,7 +136,7 @@ export function getUserVotedPolls(username, page, size) {
   size = size || POLL_LIST_SIZE;
 
   return request({
-    url: API_BASE_URL + "/user/" + username + "/votes?page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/user/" + username + "/vote?page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
@@ -156,21 +156,21 @@ export function getUserCreatedPosts(username, page, size) {
 
 export function getAllPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/posts/?typeId=1&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/?typeId=1&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function getAllTechPosts(page, size) {
   return request({
-    url: API_BASE_URL + "/posts/?typeId=2&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/?typeId=2&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
 
 export function getAllCoursePosts(page, size) {
   return request({
-    url: API_BASE_URL + "/posts/?typeId=3&page=" + page + "&size=" + size,
+    url: API_BASE_URL + "/post/?typeId=3&page=" + page + "&size=" + size,
     method: 'GET'
   });
 }
@@ -178,7 +178,7 @@ export function getAllCoursePosts(page, size) {
 
 export function getPost(id) {
   return request({
-    url: API_BASE_URL + "/posts/" + id,
+    url: API_BASE_URL + "/post/" + id,
     method: 'GET'
   });
 }
@@ -216,14 +216,14 @@ export function getAllNews() {
 
 export function getProject(id) {
   return request({
-    url: API_BASE_URL + "/projects/" + id,
+    url: API_BASE_URL + "/project/" + id,
     method: 'GET'
   });
 }
 
 export function getAllProjects() {
   return request({
-    url: API_BASE_URL + "/projects",
+    url: API_BASE_URL + "/project",
     method: 'GET'
   });
 }
