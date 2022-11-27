@@ -28,7 +28,7 @@
     "react-router-dom": "^6.0.0",
     "react-scripts": "^1.1.5",
     "react-swipeable-views": "^0.14.0",
-    "react-syntax-highlighter": "^11.0.3",
+    "react-syntax-highlighter": "^15.0.0",
     "react-typewriter": "^0.4.1",
     "validate.js": "^0.13.1"
   },
