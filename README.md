@@ -1,15 +1,19 @@
-# WebPageUI
+# webpage-ui
+
 ![Node CI](https://github.com/iXingo/WebPageUI/workflows/Node%20CI/badge.svg)
 
-The WebPage-UI Repository.
-This is a front end project powered by `React` javascript framwork and `Material Design` UI framework.
-[It's still on develepment]
+The webpage-ui Repository.
+This is a front-end project powered by the `react` javascript framework and the `Material Design UI framework.
+[It's still in development]
 
-## LiveDemo
-A live demo can be found at [https://ixingo.cn](https://www.ixingo.cn)
+## Live Demo
+A live demo can be found at this link: [https://ixingo.cn](https://www.ixingo.cn)
 
 ## Document
+Under construction.
 
 ## Develop
+npm install
 
 ## License
+MIT
