@@ -12,7 +12,7 @@ A live demo can be found at this link: [https://ixingo.cn](https://www.ixingo.cn
 ## Document
 Under construction.
 
-## Develop
+## Development
 npm install
 
 ## License
