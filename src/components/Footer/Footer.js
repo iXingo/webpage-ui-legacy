@@ -311,7 +311,7 @@ const Footer = props => {
         </Typography>
         <Typography variant="caption" style={{marginTop: 10, color: 'black', fontSize: 12}}>
           <Link component="a" href="https://beian.miit.gov.cn" target="_blank" style={{paddingRight: 5}}>
-            ICP证: 皖ICP备15011098-{version}号
+            ICP证: 沪ICP备2023002059号-3号
           </Link>
         </Typography>
         <img alt={'星狗网'} src={"https://img.ixingo.cn/pic/LOGO.png"} style={{width: 150}}/>
