@@ -3,6 +3,7 @@ const {
   fixBabelImports,
   addLessLoader, addDecoratorsLegacy, disableEsLint, addBundleVisualizer, adjustWorkbox, addPostcssPlugins,
 } = require("customize-cra");
+const autoprefixer = require("autoprefixer");
 
 module.exports = override(
     fixBabelImports("import", {
@@ -18,11 +19,10 @@ module.exports = override(
           "@layout-footer-background": "#FFFFFF"
         },
     }),
-    // 添加 PostCSS 插件
     addPostcssPlugins([
-        require('autoprefixer')({
-            browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 9', 'iOS >= 8', 'Android >= 4']
-        })
+        autoprefixer({
+            overrideBrowserslist: ['last 2 versions', 'not ie <= 11'],
+        }),
     ]),
 
     (config) => {
