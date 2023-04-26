@@ -72,26 +72,6 @@ const useStyles = makeStyles(theme => ({
 const Footer = props => {
   const {className} = props;
   const classes = useStyles();
-
-  const loc = document.location;
-  console.log("location: =>",loc.hostname);
-  let version;
-  if (loc.hostname.indexOf("ixingo.cn")!==-1){
-    version = '1'
-  }else if(loc.hostname.indexOf("xindog.com")!==-1){
-    version = '2'
-  }else if(loc.hostname.indexOf("wang-xin.cn")!==-1){
-    version = '3'
-  }else if(loc.hostname.indexOf("zhuangbility.org.cn")!==-1){
-    version = '7'
-  } else if(loc.hostname.indexOf("ixingo.com.cn")!==-1){
-    version = '7'
-  }else if(loc.hostname.indexOf("localhost")!==-1){
-    version = '0'
-  }else {
-    version = '❌服务端错误'
-  }
-
   return (
     <div className={classes.root}>
       <div className={clsx(classes.rootTop, className)}>
