@@ -190,7 +190,7 @@ const PostHeader = props => {
       <Typography variant="h6" gutterBottom className={classes.tags}>
         <strong>本文标签：</strong>
         {props.post.tags.map(tag => (
-          <div style={{paddingRight: 10}}>
+          <div style={{paddingRight: 10}} key={tag.name}>
             <Chip label={tag.name} component="a" href="chip" clickable variant="outlined" size={"small"}/>
           </div>
         ))}
