@@ -12126,9 +12126,9 @@ react-compound-timer@^1.2.0:
   integrity sha512-BEFT0Z/+vusfAy4Ci1+G5lr8mI+dk3ddRJuu1DIYA5xGS+5P+M0o4krHmFMKgHuaIY9H3xx0KCvf3ilb1+HFWA==
 
 react-content-loader@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-7.0.0.tgz#785780d10ff40bb5f54ba220ed51e4ad76f13507"
-  integrity sha512-xaBwpO7eiJyEc4ndym+g6wcruV9W2y3DKqbw4U48QFBsv0IeAVZO+aCUb8GptlDLWM8n5zi2HcFSGlj5r+53Tg==
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/react-content-loader/-/react-content-loader-7.0.1.tgz#cbad14e857c365bbe3c9a064e987276a26787c16"
+  integrity sha512-3w4Gdzfv+pX+RxVK82sRwM/xvwatfhmU2oBJxu9Lx9bK6Ftj+RSEThGLZ6llMZxKknwwyIe7ftrzXoT2GbA6Dw==
 
 react-dev-utils@^12.0.1:
   version "12.0.1"
